@@ -1,0 +1,17 @@
+{
+    "name": "swissup/theme-frontend-breeze-blank",
+    "description": "Blank theme for all Breeze based themes",
+    "type": "magento2-theme",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    },
+    "require": {
+        "swissup/module-breeze": "*"
+    }
+}
