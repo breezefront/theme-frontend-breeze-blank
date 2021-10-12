@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="skip_to_content" destination="header.panel" before="-"/>
+        <referenceBlock name="cookie-status-check" remove="true"/>
+
+        <!-- cleanup top toolbar links -->
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+        <referenceBlock name="my-account-link" remove="true"/>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="authorization-link" remove="true"/>
+        <referenceBlock name="wish-list-link" remove="true"/>
+
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="header_account" template="Magento_Theme::html/header/my-account.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="header_wishlist" template="Magento_Theme::html/header/wishlist.phtml" />
+        </referenceContainer>
+
+        <move element="minicart" destination="header-wrapper" after="header_wishlist"/>
+
+        <!-- <move element="header_account" destination="header-wrapper" after="top.search" />
+        <move element="header_wishlist" destination="header-wrapper" after="header_account" /> -->
+
+        <!-- <move element="navigation.sections" destination="header-wrapper" after="logo" /> -->
+        <!-- <move element="my-account-link" destination="header-wrapper"/>
+        <move element="wish-list-link" destination="header-wrapper" after="my-account-link"/>
+        <move element="register-link" destination="header-wrapper"/>
+        <move element="authorization-link" destination="header-wrapper"/> -->
+
+        <!-- Navigation -->
+        <referenceBlock name="navigation.sections" remove="true"/>
+        <move element="catalog.topnav" destination="header.container" after="-"/>
+        <!-- <move element="catalog.topnav" destination="header-wrapper" after="logo"/> -->
+    </body>
+</page>

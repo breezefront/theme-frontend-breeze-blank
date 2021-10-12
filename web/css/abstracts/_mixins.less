@@ -1,0 +1,49 @@
+.breeze-dropdown {
+    & when (@critical) {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    & when not (@critical) {
+        transition: opacity 150ms, transform 150ms, visibility 150ms 0s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        .right(0);
+        transform-origin: top;
+        transform: scale(.95);
+        z-index: 40;
+        visibility: hidden;
+        background: var(--bg-main);
+        border: 1px solid var(--gray-200);
+        border-radius: @1;
+        padding: @2;
+        width: @44;
+        display: block !important; // override inline style to enable amination
+
+        &.visible {
+            z-index: 41;
+            opacity: 1;
+            pointer-events: all;
+            visibility: visible;
+            transition-duration: 75ms;
+            transform: scale(1);
+        }
+
+        .item {
+            display: block;
+            padding: @1 @2;
+            border-radius: @1;
+            &:hover {
+                background: var(--gray-100);
+            }
+        }
+    }
+}
+
+.breeze-icon(@icon, @size: @6 @6) {
+    & when not (@critical) {
+        background-color: currentColor;
+        -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        -webkit-mask-size: @size;
+    }
+}

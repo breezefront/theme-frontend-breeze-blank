@@ -1,0 +1,18 @@
+.dropdown.options .dropdown {
+    &:extend(.breeze-dropdown);
+    &[aria-hidden="false"] {
+        &:extend(.breeze-dropdown.visible);
+    }
+    .switcher-option a {
+        &:extend(.breeze-dropdown .item all);
+    }
+}
+
+& when not (@critical) {
+    .dropdown.options {
+        position: relative;
+        .toggle {
+            cursor: pointer;
+        }
+    }
+}

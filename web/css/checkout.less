@@ -1,0 +1,18 @@
+@bundle: 'checkout';
+// @defer: false;
+// @critical: true;
+
+// move to external file
+@screen__sm: 640px;
+@screen__md: 768px;
+@screen__lg: 1024px;
+@screen__xl: 1280px;
+@screen__xxl: 1536px;
+
+//@magento_import '_breeze.less'; // Module styles
+@import '_styles.less';           // Theme styles
+
+@import '_bundles.less';
+
+//@magento_import '_breeze-extend.less'; // Minor modules customizations
+@import (optional) '_extend.less';       // Minor theme customizations

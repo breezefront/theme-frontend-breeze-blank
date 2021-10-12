@@ -1,0 +1,17 @@
+& when (@critical) {
+    html {
+        color:       var(--color);
+        font-family: var(--font-family);
+        font-size:   var(--font-size);
+        line-height: var(--line-height);
+    }
+    code, kbd, pre, samp {
+        font-family: var(--font-family-mono);
+    }
+
+    h1 {
+        .text-4xl();
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+}

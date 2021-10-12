@@ -1,0 +1,34 @@
+& when (@critical) {
+    .header.panel,
+    .header.links,
+    .header.content {
+        display: flex;
+        gap: @4;
+    }
+
+    .header.panel {
+        &:extend(.container);
+        justify-content: flex-end;
+    }
+
+    .header.content {
+        &:extend(.container);
+        align-items: center;
+    }
+
+    .page-header {
+        .switcher .label {
+            &:extend(.sr-only);
+        }
+
+        .logo {
+            flex-shrink: 0;
+            + * {
+                margin-left: auto;
+            }
+            + .navigation {
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,211 @@
+.navigation {
+    .submenu {
+        &:extend(.breeze-dropdown);
+        &.shown {
+            &:extend(.breeze-dropdown.visible);
+        }
+    }
+    li > a {
+        &:extend(.breeze-dropdown .item all);
+    }
+}
+
+& when (@critical) {
+    .nav-toggle {
+        flex-shrink: 0;
+        flex-grow: 0;
+        display: flex;
+        align-items: center;
+        .margin-right(-@2);
+
+        span {
+            &:extend(.sr-only);
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: @12;
+            height: @12;
+        }
+    }
+
+    .navigation {
+        > ul {
+            .page-header > & {
+                &:extend(.container);
+            }
+        }
+
+        li {
+            position: relative;
+        }
+
+        .parent > a {
+            .padding-right(@6);
+        }
+    }
+
+    @media @media-md-down {
+        .navigation {
+            position: fixed;
+            visibility: hidden;
+        }
+    }
+
+    @media @media-md {
+        .nav-toggle {
+            display: none;
+        }
+
+        .navigation {
+            > ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: @2;
+            }
+        }
+    }
+}
+
+& when not (@critical) {
+    .nav-toggle {
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        &::after {
+            z-index: 39;
+            .breeze-icon(@icon-menu);
+            .nav-open & {
+                .breeze-icon(@icon-x);
+                color: var(--bg-main);
+                opacity: .8;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 38;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 300ms;
+            background: var(--black);
+            &:extend(.inset-0);
+
+            .nav-open & {
+                opacity: .6;
+                pointer-events: all;
+            }
+        }
+    }
+
+    .navigation {
+        li > a {
+            position: relative;
+            &:hover {
+                background: var(--gray-100);
+            }
+        }
+
+        .parent {
+            > a {
+                .ui-icon,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    .right(@1);
+                    width: @5;
+                    height: @6;
+                    &:extend(.transition);
+                    .breeze-icon(@icon-chevron, @3 @3);
+                }
+                .ui-icon {
+                    -webkit-mask-size: @4 @4;
+                }
+            }
+        }
+    }
+
+    @media @media-md-down {
+        .navigation {
+            top: 0;
+            bottom: 0;
+            .left(0);
+            width: @96;
+            z-index: 40;
+            max-width: ~"calc(100% - @{16})";
+            background: var(--bg-main);
+            transform: translateX(-100%);
+            transition: transform 400ms, visibility 400ms 0s;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: auto;
+            padding: @4;
+
+            .nav-open & {
+                transform: translateX(0);
+                visibility: visible;
+            }
+
+            li > a {
+                padding: @2;
+            }
+
+            .submenu {
+                padding: 0 0 0 @4;
+                width: auto;
+                top: -9999px;
+                border: 0;
+                box-shadow: none;
+                background: none;
+                transform: scale(1);
+                transition: opacity 400ms, visibility 400ms 0s !important;
+                &.shown {
+                    position: static;
+                    transform: scale(1);
+                }
+            }
+
+            .parent > a::after {
+                display: none;
+            }
+            .opened > a .ui-icon {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    @media @media-md {
+        .navigation {
+            transition: none;
+            .opened > a {
+                background: var(--gray-100);
+            }
+
+            .parent {
+                > a {
+                    .ui-icon {
+                        display: none;
+                    }
+                    &::after {
+                        transition: none;
+                    }
+                }
+                &.level-top > a::after {
+                    transform: rotate(90deg);
+                }
+            }
+
+            .submenu {
+                width: @52;
+                top: ~"calc(100% + @{1})";
+                .left(-@2);
+                .right(auto);
+
+                .submenu {
+                    top: -@0-5;
+                    left: ~"calc(100% - @{4})";
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+& when (@critical) {
+    .container {
+        width: 100%;
+        max-width: var(--container-max-width);
+        margin: var(--container-margin);
+        padding: var(--container-padding);
+    }
+
+    @media (min-width: @sm) {
+        :root {
+            --container-max-width: @sm;
+        }
+    }
+
+    @media (min-width: @md) {
+        :root {
+            --container-max-width: @md;
+        }
+    }
+
+    @media (min-width: @lg) {
+        :root {
+            --container-max-width: @lg;
+        }
+    }
+
+    @media (min-width: @xl) {
+        :root {
+            --container-max-width: @xl;
+        }
+    }
+
+    @media (min-width: @xxl) {
+        :root {
+            --container-max-width: @xxl;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+& when (@critical) {
+    .message.global {
+        background: var(--yellow-400);
+        text-align: center;
+
+        .content {
+            &:extend(.container);
+            padding: @2;
+        }
+    }
+}

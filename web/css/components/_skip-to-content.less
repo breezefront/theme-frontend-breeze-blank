@@ -1,0 +1,29 @@
+& when (@critical) {
+    .action.skip {
+        &:not(:focus-within) {
+            &:extend(.sr-only);
+        }
+    }
+}
+
+& when not (@critical) {
+    .action.skip {
+        .page-header & {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 40;
+            text-align: center;
+            background: #fff;
+            &:hover {
+                background: var(--gray-50);
+            }
+            &:focus-within {
+                outline: none;
+                border-bottom: 1px solid var(--gray-200);
+                padding: @2;
+            }
+        }
+    }
+}
