@@ -13,6 +13,19 @@
         position: relative;
         .toggle {
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            &::after {
+                content: '';
+                height: @5;
+                width: @5;
+                transform: rotate(90deg);
+                transition: transform 300ms;
+                .breeze-icon(@icon-chevron, @3 @3);
+            }
+            &.active::after {
+                transform: rotate(-90deg);
+            }
         }
     }
 }
