@@ -8,6 +8,20 @@
     }
 }
 
+& when (@critical) {
+    .dropdown.options {
+        .toggle {
+            display: flex;
+            &::after {
+                content: '';
+                height: @5;
+                width: @5;
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
 & when not (@critical) {
     .dropdown.options {
         position: relative;
@@ -16,10 +30,6 @@
             display: flex;
             align-items: center;
             &::after {
-                content: '';
-                height: @5;
-                width: @5;
-                transform: rotate(90deg);
                 &:extend(.transition);
                 .breeze-icon(@icon-chevron, @3 @3);
             }
