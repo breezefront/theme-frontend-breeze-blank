@@ -14,6 +14,20 @@
     .header.content {
         &:extend(.container);
         align-items: center;
+
+        .wishlist {
+            a {
+                &::after {
+                    content: '';
+                    display: block;
+                    width: @6;
+                    height: @6;
+                }
+                .text {
+                    &:extend(.sr-only);
+                }
+            }
+        }
     }
 
     .page-header {
@@ -33,6 +47,16 @@
             }
             + .navigation {
                 margin: 0 auto;
+            }
+        }
+    }
+}
+
+& when not (@critical) {
+    .header.content {
+        .wishlist {
+            a::after {
+                .breeze-icon(@icon-heart);
             }
         }
     }
