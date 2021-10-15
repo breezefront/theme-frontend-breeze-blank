@@ -6,8 +6,7 @@
     }
 
     & when not (@critical) {
-        transition: opacity 150ms, transform 150ms, visibility 150ms 0s;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:extend(.transition);
         .right(0);
         transform-origin: top;
         transform: scale(.95);
@@ -25,7 +24,6 @@
             opacity: 1;
             pointer-events: all;
             visibility: visible;
-            transition-duration: 75ms;
             transform: scale(1);
         }
 

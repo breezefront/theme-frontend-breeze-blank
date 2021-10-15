@@ -31,9 +31,8 @@
 }
 
 .transition {
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition: opacity var(--transition-duration), transform var(--transition-duration), visibility var(--transition-duration) 0s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
 }
 
 .text-xs {
