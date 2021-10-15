@@ -1,18 +1,19 @@
 & when not (@critical) {
+    body._has-modal {
+        overflow: hidden;
+    }
+
     .modal-popup {
-        position: absolute;
+        &:extend(.inset-0);
+        position: fixed;
+        z-index: 900;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
         padding: @7;
         visibility: hidden;
-        z-index: 900;
-        &:extend(.inset-0);
-        &:not(._show) {
-            -webkit-transition: visibility 0s .3s;
-            transition: visibility 0s .3s;
-        }
+        pointer-events: none;
 
         &._show {
             visibility: visible;
@@ -31,6 +32,7 @@
         max-width: 500px;
         max-height: 85vh;
         background: var(--bg-main);
+        pointer-events: auto;
 
         &:extend(.transition);
         opacity: 0;
@@ -48,6 +50,7 @@
 
         .modal-content {
             overflow: auto;
+            overscroll-behavior: contain;
             padding: @4 0;
         }
 
@@ -59,11 +62,11 @@
     }
 
     .modals-overlay {
-        position: fixed;
+        &:extend(.transition);
         &:extend(.inset-0);
+        position: fixed;
         background: var(--black);
         opacity: 0;
-        &:extend(.transition);
 
         ._show ~ & {
             opacity: .6;
