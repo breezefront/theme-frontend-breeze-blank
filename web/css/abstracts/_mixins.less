@@ -3,6 +3,13 @@
         opacity: 0;
         position: absolute;
         pointer-events: none;
+        padding: @2;
+        width: @44;
+
+        .item {
+            display: block;
+            padding: @1 @2;
+        }
     }
 
     & when not (@critical) {
@@ -15,8 +22,6 @@
         background: var(--bg-main);
         border: 1px solid var(--gray-200);
         border-radius: @1;
-        padding: @2;
-        width: @44;
         display: block !important; // override inline style to enable amination
 
         &.visible {
@@ -28,8 +33,6 @@
         }
 
         .item {
-            display: block;
-            padding: @1 @2;
             border-radius: @1;
             &:hover {
                 background: var(--gray-100);

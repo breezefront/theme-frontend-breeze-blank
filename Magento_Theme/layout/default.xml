@@ -20,6 +20,9 @@
         <referenceBlock name="authorization-link" remove="true"/>
         <referenceBlock name="wish-list-link" remove="true"/>
 
+        <referenceContainer name="header.container">
+            <container name="navigation.wrapper" after="-" htmlTag="div" htmlClass="navigation-wrapper"/>
+        </referenceContainer>
         <referenceContainer name="header-wrapper">
             <block class="Magento\Framework\View\Element\Template" name="header_account" template="Magento_Theme::html/header/my-account.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="header_wishlist" template="Magento_Theme::html/header/wishlist.phtml" />
@@ -38,7 +41,7 @@
 
         <!-- Navigation -->
         <referenceBlock name="navigation.sections" remove="true"/>
-        <move element="catalog.topnav" destination="header.container" after="-"/>
+        <move element="catalog.topnav" destination="navigation.wrapper"/>
         <!-- <move element="catalog.topnav" destination="header-wrapper" after="logo"/> -->
     </body>
 </page>

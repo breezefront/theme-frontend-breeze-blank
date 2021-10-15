@@ -30,13 +30,17 @@
         }
     }
 
-    .navigation {
-        > ul {
-            .page-header > & {
-                &:extend(.container);
-            }
+    .navigation-wrapper {
+        .navigation {
+            &:extend(.container);
         }
 
+        .navigation > ul {
+            .margin-left(-@2);
+        }
+    }
+
+    .navigation {
         li {
             position: relative;
         }
