@@ -36,10 +36,20 @@
 
         &:extend(.transition);
         opacity: 0;
-        transform: translateY(10px);
+        @media @media-md-down {
+            transform: translateY(10px);
+        }
+        @media @media-md {
+            transform: scale(0.97);
+        }
 
         ._show & {
-            transform: translateY(0);
+            @media @media-md-down {
+               transform: translateY(0);
+            }
+            @media @media-md {
+                transform: scale(1);
+            }
             opacity: 1;
         }
 
