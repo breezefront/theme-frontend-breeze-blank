@@ -13,39 +13,34 @@
         <move element="skip_to_content" destination="header.panel" before="-"/>
         <referenceBlock name="cookie-status-check" remove="true"/>
 
-        <!-- cleanup top toolbar links -->
-        <referenceBlock name="catalog.compare.link" remove="true"/>
-        <referenceBlock name="my-account-link" remove="true"/>
-        <referenceBlock name="header" remove="true"/>
-        <!-- <referenceBlock name="register-link" remove="true"/> -->
-        <!-- <referenceBlock name="authorization-link" remove="true"/> -->
-        <referenceBlock name="wish-list-link" remove="true"/>
-
         <referenceContainer name="header.container">
             <container name="navigation.wrapper" after="-" htmlTag="div" htmlClass="navigation-wrapper"/>
         </referenceContainer>
+
+        <!-- Cleanup and move top links to header account dropdown -->
+        <referenceBlock name="header" remove="true"/> <!-- Welcome message -->
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+        <move element="top.links" destination="header.account"/>
         <referenceContainer name="header-wrapper">
             <block class="Swissup\Breeze\Block\Theme\Dropdown" name="header.account">
                 <arguments>
-                    <argument name="title" xsi:type="string">My Account</argument>
+                    <argument name="title" xsi:type="string" translate="true">My Account</argument>
                     <argument name="icon" xsi:type="string"><![CDATA[<svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>]]></argument>
-                    <argument name="url" xsi:type="string">customer/account</argument>
-                    <argument name="content" xsi:type="string">block::top.links</argument>
+                    <argument name="href" xsi:type="url" path="customer/account"/>
+                    <argument name="chevron" xsi:type="boolean">false</argument>
                 </arguments>
             </block>
-            <block class="Magento\Framework\View\Element\Template" name="header_wishlist" template="Magento_Theme::html/header/wishlist.phtml" />
+            <block class="Swissup\Breeze\Block\Theme\Dropdown" name="header.wishlist">
+                <arguments>
+                    <argument name="title" xsi:type="string" translate="true">Wishlist</argument>
+                    <argument name="icon" xsi:type="string"><![CDATA[<svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>]]></argument>
+                    <argument name="href" xsi:type="url" path="wishlist"/>
+                    <argument name="chevron" xsi:type="boolean">false</argument>
+                </arguments>
+            </block>
         </referenceContainer>
 
         <move element="minicart" destination="header-wrapper" after="header_wishlist"/>
-
-        <!-- <move element="header_account" destination="header-wrapper" after="top.search" />
-        <move element="header_wishlist" destination="header-wrapper" after="header_account" /> -->
-
-        <!-- <move element="navigation.sections" destination="header-wrapper" after="logo" /> -->
-        <!-- <move element="my-account-link" destination="header-wrapper"/>
-        <move element="wish-list-link" destination="header-wrapper" after="my-account-link"/>
-        <move element="register-link" destination="header-wrapper"/>
-        <move element="authorization-link" destination="header-wrapper"/> -->
 
         <!-- Navigation -->
         <referenceBlock name="navigation.sections" remove="true"/>

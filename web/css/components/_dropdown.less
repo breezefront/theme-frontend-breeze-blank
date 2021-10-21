@@ -14,14 +14,20 @@
             display: flex;
             align-items: center;
             white-space: nowrap;
-            .padding-right(@5);
-            &::after {
-                content: '';
-                position: absolute;
-                right: 0;
-                height: @5;
-                width: @5;
-                transform: rotate(90deg);
+            gap: @1;
+        }
+
+        &:not(.no-chevron) {
+            .toggle {
+                .padding-right(@5);
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    height: @5;
+                    width: @5;
+                    transform: rotate(90deg);
+                }
             }
         }
     }
@@ -32,12 +38,16 @@
         position: relative;
         .toggle {
             cursor: pointer;
-            &::after {
-                &:extend(.transition);
-                .breeze-icon(@icon-chevron, @3 @3);
-            }
-            &.active::after {
-                transform: rotate(-90deg);
+        }
+        &:not(.no-chevron) {
+            .toggle {
+                &::after {
+                    &:extend(.transition);
+                    .breeze-icon(@icon-chevron, @3 @3);
+                }
+                &.active::after {
+                    transform: rotate(-90deg);
+                }
             }
         }
     }
