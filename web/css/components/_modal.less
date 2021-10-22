@@ -52,23 +52,29 @@
             }
             opacity: 1;
         }
+    }
 
-        .modal-header,
-        .modal-footer {
-            flex-shrink: 0;
-        }
+    .modal-header,
+    .modal-footer {
+        flex-shrink: 0;
+    }
 
-        .modal-content {
-            overflow: auto;
-            overscroll-behavior: contain;
-            padding: @4 0;
+    .modal-header {
+        .action-close {
+            &:extend(.button-x all);
         }
+    }
 
-        .modal-footer {
-            display: flex;
-            justify-content: flex-end;
-            gap: @2;
-        }
+    .modal-content {
+        overflow: auto;
+        overscroll-behavior: contain;
+        padding: @4 0;
+    }
+
+    .modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: @2;
     }
 
     .modals-overlay {

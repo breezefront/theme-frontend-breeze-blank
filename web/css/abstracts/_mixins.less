@@ -19,9 +19,10 @@
         transform: scale(.95);
         z-index: 40;
         visibility: hidden;
+        margin-top: @0-5;
         background: var(--bg-main);
         border: 1px solid var(--gray-200);
-        border-radius: @1;
+        border-radius: 0;
         display: block !important; // override inline style to enable amination
 
         &.visible {
@@ -33,7 +34,7 @@
         }
 
         .item {
-            border-radius: @1;
+            border-radius: 0;
             &:hover {
                 background: var(--gray-100);
             }
