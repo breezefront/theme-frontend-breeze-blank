@@ -5,4 +5,13 @@
         <meta name="format-detection" content="telephone=no"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
     </head>
+    <body>
+        <referenceBlock name="breeze.css">
+            <arguments>
+                <argument name="bundles" xsi:type="array">
+                    <item name="default" xsi:type="array"/>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
 </page>
