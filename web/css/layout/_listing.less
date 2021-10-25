@@ -106,6 +106,81 @@
             }
         }
     }
+
+    .products .product-item {
+        .price-box {
+            margin: @1 0 @2;
+        }
+
+        .product-item-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: @2;
+        }
+
+        .actions-secondary {
+            display: flex;
+            color: var(--gray-400);
+            gap: @0-5;
+        }
+
+        .towishlist,
+        .tocompare {
+            span {
+                &:extend(.sr-only);
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: @8;
+                height: @8;
+            }
+        }
+    }
+
+    .products-grid .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: @2;
+
+        .product-item {
+            padding: @2;
+            width: ~"calc(33.33% - @{2})";
+            max-width: 250px;
+        }
+        .product-item-info {
+            position: relative;
+        }
+        .product-item-details {
+            margin-top: @2;
+        }
+        .product-item-actions {
+            justify-content: space-between;
+        }
+    }
+
+    .products-list .products {
+        .product-item + .product-item {
+            margin-top: @3;
+            padding-top: @3;
+            border-top: 1px solid var(--gray-200);
+        }
+        .product-item-actions {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .product-item-info {
+            display: flex;
+            gap: @2;
+        }
+        .product-item-photo {
+            max-width: 35%;
+        }
+        .product-item-description {
+            margin-top: @2;
+        }
+    }
 }
 
 & when not (@critical) {
@@ -131,6 +206,15 @@
             .previous::before {
                 .modrtl(transform, rotate(-90deg), rotate(90deg));
             }
+        }
+    }
+
+    .products .product-item {
+        .towishlist::before {
+            .breeze-icon(@icon-heart);
+        }
+        .tocompare::before {
+            .breeze-icon(@icon-scale);
         }
     }
 }
