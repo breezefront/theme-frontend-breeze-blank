@@ -13,10 +13,6 @@
         <move element="skip_to_content" destination="header.panel" before="-"/>
         <referenceBlock name="cookie-status-check" remove="true"/>
 
-        <referenceContainer name="header.container">
-            <container name="navigation.wrapper" after="-" htmlTag="div" htmlClass="navigation-wrapper"/>
-        </referenceContainer>
-
         <!-- Cleanup and move top links to header account dropdown -->
         <referenceBlock name="header" remove="true"/> <!-- Welcome message -->
         <referenceBlock name="catalog.compare.link" remove="true"/>
@@ -40,11 +36,14 @@
             </block>
         </referenceContainer>
 
-        <move element="minicart" destination="header-wrapper" after="header_wishlist"/>
+        <move element="minicart" destination="header-wrapper" after="header.wishlist"/>
 
         <!-- Navigation -->
-        <referenceBlock name="navigation.sections" remove="true"/>
+        <referenceContainer name="header.container">
+            <container name="navigation.wrapper" after="-" htmlTag="div" htmlClass="navigation-wrapper"/>
+        </referenceContainer>
         <move element="catalog.topnav" destination="navigation.wrapper"/>
         <!-- <move element="catalog.topnav" destination="header-wrapper" after="logo"/> -->
+        <referenceBlock name="navigation.sections" remove="true"/>
     </body>
 </page>
