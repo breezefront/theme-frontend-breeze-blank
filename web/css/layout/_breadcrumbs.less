@@ -5,5 +5,26 @@
             display: flex;
             gap: @2;
         }
+        li {
+            display: flex;
+            align-items: center;
+            gap: @1;
+            &::after {
+                content: '';
+                width: @4;
+                height: @4;
+            }
+            &:last-child::after {
+                display: none;
+            }
+        }
+    }
+}
+
+& when not (@critical) {
+    .breadcrumbs {
+        li::after {
+            .breeze-icon(@icon-chevron, @3);
+        }
     }
 }
