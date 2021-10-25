@@ -3,9 +3,19 @@
         .block-title {
             display: none;
         }
-        @media @media-sm {
-            .label {
+        .label {
+            span {
                 .sr-only();
+            }
+        }
+        @media @media-sm-down {
+            .label {
+                &::after {
+                    content: '';
+                    display: block;
+                    width: @6;
+                    height: @6;
+                }
             }
         }
     }
@@ -19,6 +29,8 @@
             .control {
                 display: block;
                 z-index: 40;
+                left: 0;
+                right: 0;
             }
             .actions {
                 display: flex;
@@ -27,13 +39,11 @@
 
         .control {
             position: relative;
-            display: none;
             padding: @4;
             background: var(--white);
             position: absolute;
             top: 100%;
-            left: 0;
-            right: 0;
+            .left(-9999px);
 
             @media @media-sm {
                 background: transparent;
@@ -83,6 +93,12 @@
 
 & when not (@critical) {
     .minisearch {
+        .label {
+            &::after {
+                cursor: pointer;
+                .breeze-icon(@icon-search);
+            }
+        }
         .action.search {
             &::after {
                 .breeze-icon(@icon-search);
