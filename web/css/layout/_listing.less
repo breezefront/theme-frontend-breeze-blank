@@ -146,8 +146,12 @@
 
         .product-item {
             padding: @2;
-            width: ~"calc(33.33% - @{2})";
             max-width: 240px;
+            width: ~"calc(50% - @{2})";
+
+            @media @media-sm {
+                width: ~"calc(33.33% - @{2})";
+            }
         }
         .product-item-info {
             position: relative;
