@@ -1,0 +1,60 @@
+& when (@critical) {
+    .product-reviews-summary {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: @1;
+    }
+    .rating-summary {
+        .label {
+            &:extend(.sr-only);
+        }
+    }
+    .rating-result {
+        position: relative;
+        width: 5 * @5;
+        height: @6;
+
+        &::before {
+            opacity: .1;
+        }
+
+        > span {
+            position: relative;
+            display: block;
+
+            span {
+                &:extend(.sr-only);
+            }
+        }
+
+        &::before,
+        > span::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100%;
+            height: @6;
+        }
+    }
+    .reviews-actions {
+        display: flex;
+        align-items: center;
+        gap: @2;
+        a {
+            .text-sm();
+        }
+    }
+}
+
+& when not (@critical) {
+    .rating-result::before,
+    .rating-result > span::before {
+        .breeze-icon(@icon-s-star, @5);
+        -webkit-mask-repeat: repeat-x;
+        -webkit-mask-position: 0 50%;
+    }
+    .rating-result > span::before {
+        color: var(--yellow-400);
+    }
+}
