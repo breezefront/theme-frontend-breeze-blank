@@ -5,6 +5,7 @@
         pointer-events: none;
         padding: @2;
         width: @44;
+        .right(0);
 
         .item {
             display: block;
@@ -15,7 +16,6 @@
     & when not (@critical) {
         &:extend(.transition);
         &:extend(.shadow-lg);
-        .right(0);
         transform-origin: top;
         transform: scale(.95);
         z-index: 40;
