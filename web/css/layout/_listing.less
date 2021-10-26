@@ -147,13 +147,22 @@
         .product-item {
             padding: @2;
             width: ~"calc(33.33% - @{2})";
-            max-width: 250px;
+            max-width: 240px;
         }
         .product-item-info {
             position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         .product-item-details {
             margin-top: @2;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-item-inner {
+            margin-top: auto;
         }
         .product-item-actions {
             justify-content: space-between;
@@ -172,7 +181,7 @@
         }
         .product-item-info {
             display: flex;
-            gap: @2;
+            gap: @3;
         }
         .product-item-photo {
             max-width: 35%;
