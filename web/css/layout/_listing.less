@@ -116,7 +116,14 @@
         }
     }
 
-    .products .product-item {
+    // Styles for content and sidebar (grid and list)
+    .product-items {
+        .product-item-info {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            gap: @2;
+        }
         .product-item-details {
             flex: 1 1;
             display: flex;
@@ -129,13 +136,11 @@
             align-items: center;
             gap: @1;
         }
-
         .actions-secondary {
             display: flex;
             color: var(--gray-400);
             gap: @0-5;
         }
-
         .towishlist,
         .tocompare {
             span {
@@ -148,58 +153,93 @@
                 height: @8;
             }
         }
-    }
 
-    .products-grid .products {
-        display: flex;
-        flex-wrap: wrap;
-        gap: @2;
-
-        .product-item {
-            padding: @2;
-            max-width: 240px;
-            width: ~"calc(50% - @{2})";
-
-            @media @media-sm {
-                width: ~"calc(33.33% - @{2})";
+        .sidebar & {
+            .product-item {
+                + .product-item {
+                    margin-top: @3;
+                }
+            }
+            .product-item-info .action.delete {
+                position: absolute;
+                .right(@0-5);
+                top: @0-5;
             }
         }
-        .product-item-info {
-            position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: @2;
-        }
-        .product-item-inner {
-            margin-top: auto;
-            padding-top: @1;
-        }
-        .product-item-actions {
-            justify-content: space-between;
-        }
-    }
 
-    .products-list .products {
-        .product-item + .product-item {
-            margin-top: @3;
-            padding-top: @3;
-            border-top: 1px solid var(--gray-200);
+        // Compare Products and Recent Orders
+        &.product-items-names {
+            .product-item {
+                display: flex;
+                align-items: center;
+                gap: @2;
+
+                + .product-item {
+                    margin-top: @0-5;
+                }
+            }
+
+            strong {
+                font-weight: normal;
+            }
+
+            // Recent Orders
+            .choice {
+                .label {
+                    &:extend(.sr-only);
+                }
+                .control {
+                    display: flex;
+                }
+            }
         }
-        .product-item-actions {
-            flex-direction: column;
-            align-items: flex-start;
-            margin: @1 0;
-        }
-        .product-item-info {
+
+        // Grid listing
+        .products-grid & {
             display: flex;
-            gap: @3;
+            flex-wrap: wrap;
+            gap: @2;
+
+            .product-item {
+                padding: @2;
+                max-width: 240px;
+                width: ~"calc(50% - @{2})";
+
+                @media @media-sm {
+                    width: ~"calc(33.33% - @{2})";
+                }
+            }
+            .product-item-info {
+                height: 100%;
+                flex-direction: column;
+            }
+            .product-item-inner {
+                margin-top: auto;
+                padding-top: @1;
+            }
+            .product-item-actions {
+                justify-content: space-between;
+            }
         }
-        .product-item-photo {
-            max-width: 35%;
-        }
-        .product-item-description {
-            margin-top: @2;
+
+        // List listing
+        .products-list & {
+            .product-item + .product-item {
+                margin-top: @3;
+                padding-top: @3;
+                border-top: 1px solid var(--gray-200);
+            }
+            .product-item-actions {
+                flex-direction: column;
+                align-items: flex-start;
+                margin: @1 0;
+            }
+            .product-item-photo {
+                max-width: 35%;
+            }
+            .product-item-description {
+                margin-top: @2;
+            }
         }
     }
 }
@@ -230,7 +270,7 @@
         }
     }
 
-    .products .product-item {
+    .product-items {
         .towishlist::before {
             .breeze-icon(@icon-heart);
         }
