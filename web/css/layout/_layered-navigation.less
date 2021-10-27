@@ -5,5 +5,48 @@
             align-items: center;
             gap: @1;
         }
+        .filter-label {
+            font-weight: 500;
+        }
+        .filter-value {
+            opacity: .6;
+        }
+        .filter-actions {
+            margin: @1 0;
+            opacity: .6;
+            .text-align(right);
+            .text-sm();
+        }
+        .filter-content {
+            > .filter-subtitle {
+                &:extend(.sr-only);
+            }
+        }
+        .items a {
+            display: flex;
+            gap: @1;
+            align-items: center;
+        }
+        .filter-options {
+            &-title {
+                margin: @4 0 @3;
+                font-weight: 500;
+            }
+        }
+        .count {
+            .text-sm();
+            white-space: nowrap;
+            font-weight: 300;
+            opacity: .5;
+            &::before {
+                content: '(';
+            }
+            &::after {
+                content: ')';
+            }
+        }
+        .filter-count-label {
+            &:extend(.sr-only);
+        }
     }
 }

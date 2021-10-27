@@ -1,0 +1,58 @@
+& when (@critical) {
+    .swatch-attribute {
+        margin-bottom: @1-5;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    .swatch-attribute-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: @1-5;
+    }
+    .swatch-option {
+        .text-xs();
+        color: var(--gray-600);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        min-width: @8;
+        height: @8;
+        padding: 0 @1;
+        background: var(--gray-100);
+        position: relative;
+        outline: none;
+
+        &::before {
+            content: '';
+            position: absolute;
+            &:extend(.inset-0);
+            box-shadow: 0 0 0 1px inset var(--gray-200);
+            mix-blend-mode: darken;
+        }
+
+        &:focus,
+        &.selected {
+            &::before {
+                box-shadow: 0 0 0 2px inset var(--white);
+                mix-blend-mode: normal;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                &:extend(.inset-0);
+                box-shadow: 0 0 0 1px inset var(--red-500);
+            }
+        }
+
+        &.selected {
+            &::before {
+                box-shadow: 0 0 0 3px inset var(--white);
+            }
+        }
+    }
+    input.swatch-input {
+        display: none;
+    }
+}
