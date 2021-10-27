@@ -4,9 +4,18 @@
         flex-wrap: wrap;
         align-items: center;
         gap: @3;
-        margin: @5 0;
+        margin: 0 0 @5;
 
-        label {
+        .toolbar ~ & {
+            margin-top: @5;
+        }
+
+        > .pager {
+            display: contents;
+        }
+
+        label,
+        .limiter-text {
             white-space: nowrap;
         }
         select {
@@ -61,7 +70,7 @@
         }
 
         @media @media-sm-down {
-            .toolbar-amount {
+            .modes ~ .toolbar-amount {
                 order: 100;
                 width: 100%;
             }
