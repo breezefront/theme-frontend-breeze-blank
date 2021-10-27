@@ -22,11 +22,6 @@
                 &:extend(.sr-only);
             }
         }
-        .items a {
-            display: flex;
-            gap: @1;
-            align-items: center;
-        }
         .filter-options {
             &-title {
                 margin: @4 0 @3;
@@ -38,6 +33,8 @@
             white-space: nowrap;
             font-weight: 300;
             opacity: .5;
+            .margin-left(@1);
+
             &::before {
                 content: '(';
             }
