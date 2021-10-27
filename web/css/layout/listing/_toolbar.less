@@ -1,0 +1,145 @@
+& when (@critical) {
+    .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: @3;
+        margin: 0 0 @5;
+
+        .toolbar ~ & {
+            margin-top: @5;
+        }
+
+        > .pager {
+            display: contents;
+        }
+
+        label,
+        .limiter-text {
+            white-space: nowrap;
+        }
+        select {
+            max-width: 170px;
+        }
+
+        .sorter,
+        .limiter {
+            display: flex;
+            align-items: center;
+            gap: @2;
+            .margin-left(auto);
+        }
+        .sorter-action {
+            color: var(--gray-400);
+            span {
+                &:extend(.sr-only);
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: @6;
+                height: @6;
+            }
+        }
+        .modes {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--gray-400);
+        }
+        .modes-label {
+            &:extend(.sr-only);
+        }
+        .mode-grid {
+            .border-right(1px solid var(--gray-400));
+        }
+        .mode-grid,
+        .mode-list {
+            padding: @2;
+            &:not(.active) {
+                color: var(--gray-400);
+            }
+            span {
+                &:extend(.sr-only);
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: @6;
+                height: @6;
+            }
+        }
+
+        @media @media-sm-down {
+            .modes ~ .toolbar-amount {
+                order: 100;
+                width: 100%;
+            }
+        }
+
+        .pages {
+            display: flex;
+            align-items: center;
+            .label {
+                &:extend(.sr-only);
+            }
+            .items {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: @2;
+
+                a,
+                .page {
+                    display: flex;
+                    padding: @1 @2;
+                }
+
+                .current .page {
+                    background: var(--gray-200);
+                }
+            }
+            .previous,
+            .next {
+                display: flex;
+                align-items: center;
+                color: var(--gray-500);
+                span {
+                    &:extend(.sr-only);
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    width: @6;
+                    height: @6;
+                }
+            }
+        }
+    }
+}
+
+& when not (@critical) {
+    .toolbar {
+        .pages .previous::before,
+        .pages .next::before,
+        .sorter-action::before {
+            .breeze-icon(@icon-arrow-up);
+        }
+        .sort-desc::before {
+            transform: rotate(180deg);
+        }
+        .mode-grid::before {
+            .breeze-icon(@icon-view-grid);
+        }
+        .mode-list::before {
+            .breeze-icon(@icon-view-list);
+        }
+        .pages {
+            .next::before {
+                .modrtl(transform, rotate(90deg), rotate(-90deg));
+            }
+            .previous::before {
+                .modrtl(transform, rotate(-90deg), rotate(90deg));
+            }
+        }
+    }
+}
