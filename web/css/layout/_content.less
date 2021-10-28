@@ -1,4 +1,11 @@
 & when (@critical) {
+    :root {
+        --sidebar-width: 180px;
+        @media @media-lg {
+            --sidebar-width: 220px;
+        }
+    }
+
     .page-main {
         &:extend(.container);
     }
@@ -21,13 +28,13 @@
         @media @media-md {
             .page-layout-3columns &,
             .page-layout-2columns-left & {
-                grid-template-columns: 220px 1fr;
+                grid-template-columns: var(--sidebar-width) 1fr;
                 grid-template-areas: "sidebar main"
                                      "additional main";
             }
 
             .page-layout-2columns-right & {
-                grid-template-columns: 1fr 220px;
+                grid-template-columns: 1fr var(--sidebar-width);
                 grid-template-areas: "main sidebar"
                                      "main additional";
             }
@@ -35,7 +42,7 @@
 
         @media @media-lg {
             .page-layout-3columns & {
-                grid-template-columns: 220px 1fr 220px;
+                grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
                 grid-template-areas: "sidebar main additional"
             }
         }
