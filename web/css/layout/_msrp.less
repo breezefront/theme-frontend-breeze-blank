@@ -1,0 +1,30 @@
+.map-popup {
+    &:extend(.breeze-dropdown);
+    &.active {
+        &:extend(.breeze-dropdown.visible);
+    }
+}
+
+& when (@critical) {
+    .map-old-price .price-wrapper {
+        text-decoration: line-through;
+    }
+    .map-fallback-price {
+        display: none;
+    }
+}
+
+& when not (@critical) {
+    .map-popup {
+        transition: opacity var(--transition-duration), visibility var(--transition-duration) 0s;
+        width: 100%;
+        .right(auto);
+        .left(0);
+    }
+    .map-form-addtocart {
+        margin: @2 0;
+    }
+    .actual-price {
+        font-weight: 500;
+    }
+}

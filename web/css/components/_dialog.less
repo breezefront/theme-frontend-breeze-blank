@@ -1,0 +1,16 @@
+& when not (@critical) {
+    .ui-dialog {
+        &.popup {
+            @media @media-sm {
+                width: @96;
+            }
+
+            .action.close {
+                &:extend(.button-x all);
+                z-index: 41;
+                .right(@2);
+                top: @2;
+            }
+        }
+    }
+}
