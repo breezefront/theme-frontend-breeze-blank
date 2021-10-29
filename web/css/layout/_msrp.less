@@ -12,6 +12,10 @@
     .map-fallback-price {
         display: none;
     }
+    .map-show-info,
+    .minimal-price-link {
+        &:extend(.link-common all);
+    }
 }
 
 & when not (@critical) {
