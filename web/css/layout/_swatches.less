@@ -74,4 +74,24 @@
         padding: @1;
         min-width: @8;
     }
+    .product-item-info-image-loading {
+        .product-item-photo {
+            &::before {
+                content: '';
+                &:extend(.spinner);
+                border-color: var(--color-main);
+                border-top-color: transparent;
+                opacity: .3;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-top: -@3;
+                .margin-left(-@2-5);
+            }
+            img,
+            picture {
+                opacity: .5;
+            }
+        }
+    }
 }
