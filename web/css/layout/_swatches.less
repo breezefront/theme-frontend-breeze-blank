@@ -56,3 +56,22 @@
         display: none;
     }
 }
+
+.swatch-option-tooltip {
+    &:extend(.breeze-dropdown);
+    &[style*="block"] {
+        &:extend(.breeze-dropdown.visible);
+    }
+}
+
+& when not (@critical) {
+    .swatch-option-tooltip {
+        .text-sm();
+        .right(auto);
+        transform-origin: bottom;
+        width: auto;
+        text-align: center;
+        padding: @1;
+        min-width: @8;
+    }
+}
