@@ -1,0 +1,43 @@
+[data-mage-init*='"collapsible":'] {
+    [data-trigger] {
+        &:extend(.breeze-dropdown-toggler);
+
+        &[aria-expanded]::after {
+            &:extend(.breeze-dropdown-toggler .icon);
+        }
+        &[aria-expanded="true"]::after {
+            &:extend(.breeze-dropdown-toggler .icon.active);
+        }
+    }
+}
+
+& when (@critical) {
+    [data-mage-init*='"collapsible":']:not([data-mage-init*='"active":true']) {
+        [data-role=content] {
+            display: block !important;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+    [data-mage-init*='"collapsible":'].no-chevron {
+        [data-trigger][aria-expanded="true"]::after {
+            opacity: 0;
+        }
+    }
+}
+
+& when not (@critical) {
+    [data-mage-init*='"collapsible":'] {
+        [data-role=content] {
+            &:extend(.transition);
+            &[aria-hidden=false] {
+                height: auto;
+                visibility: visible;
+                opacity: 1;
+                overflow: visible;
+            }
+        }
+    }
+}

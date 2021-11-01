@@ -42,3 +42,29 @@
         }
     }
 }
+
+.breeze-dropdown-toggler {
+    & when (@critical) {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+
+        .icon {
+            content: '';
+            height: @5;
+            width: @5;
+            transform: rotate(90deg);
+        }
+    }
+    & when not (@critical) {
+        cursor: pointer;
+        .icon {
+            &:extend(.transition);
+            .breeze-icon(@icon-chevron, @3);
+
+            &.active {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
