@@ -197,7 +197,12 @@
                 position: absolute;
                 bottom: @1;
                 .right(0);
-                color: var(--gray-300);
+                a {
+                    display: inline-flex;
+                    &::before {
+                        color: var(--gray-300);
+                    }
+                }
             }
             .action.edit,
             .action.delete {
