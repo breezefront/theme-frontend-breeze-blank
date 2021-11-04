@@ -10,7 +10,7 @@
 
 <?php
     $visibleFilters = array_filter($block->getFilters(), function ($filter) {
-        return $filter->getItemsCount();
+        return $filter->getItemsCount() > 0;
     });
     $activeFilters = $block->getLayer()->getState()->getFilters();
 
