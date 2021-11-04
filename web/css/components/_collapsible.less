@@ -2,10 +2,16 @@
     [data-trigger] {
         &:extend(.breeze-dropdown-toggler);
 
-        &[aria-expanded]::after {
+        &::after {
             &:extend(.breeze-dropdown-toggler .icon);
         }
         &[aria-expanded="true"]::after {
+            &:extend(.breeze-dropdown-toggler .icon.active);
+        }
+    }
+
+    &[data-mage-init*='"active":true'] {
+        [data-trigger]:not([aria-expanded])::after {
             &:extend(.breeze-dropdown-toggler .icon.active);
         }
     }
@@ -19,11 +25,6 @@
             opacity: 0;
             overflow: hidden;
             visibility: hidden;
-        }
-    }
-    [data-mage-init*='"collapsible":'].no-chevron {
-        [data-trigger][aria-expanded="true"]::after {
-            opacity: 0;
         }
     }
 }
