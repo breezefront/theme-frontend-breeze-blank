@@ -26,14 +26,6 @@
         border-radius: 0;
         display: block !important; // override inline style to enable amination
 
-        &.visible {
-            z-index: 41;
-            opacity: 1;
-            pointer-events: all;
-            visibility: visible;
-            transform: scale(1);
-        }
-
         .item {
             border-radius: 0;
             &:hover {
@@ -43,6 +35,15 @@
     }
 }
 
+.breeze-dropdown-visible {
+    & when not (@critical) {
+        z-index: 41;
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+        transform: scale(1);
+    }
+}
 .breeze-dropdown-toggler {
     & when (@critical) {
         display: flex;
