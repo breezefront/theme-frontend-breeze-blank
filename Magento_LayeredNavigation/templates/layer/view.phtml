@@ -9,7 +9,9 @@
 <?php if (!$block->canShowBlock()) : return; endif; ?>
 
 <?php
-    $visibleFilters = array_filter($block->getFilters(), fn ($filter) => $filter->getItemsCount());
+    $visibleFilters = array_filter($block->getFilters(), function ($filter) {
+        return $filter->getItemsCount();
+    });
     $activeFilters = $block->getLayer()->getState()->getFilters();
 
     $isExpanded = $block->getExpanded();
