@@ -92,9 +92,9 @@
             z-index: 38;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 300ms;
             background: var(--black);
             &:extend(.inset-0);
+            &:extend(.transition);
 
             .nav-open & {
                 opacity: .6;
@@ -140,8 +140,7 @@
             max-width: ~"calc(100vw - @{16})";
             background: var(--bg-main);
             transform: translateX(-100%);
-            transition: transform 400ms, visibility 400ms 0s;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            .transition();
             overscroll-behavior: contain;
             overflow: auto;
             padding: @4;
@@ -163,7 +162,6 @@
                 box-shadow: none;
                 background: none;
                 transform: scale(1);
-                transition: opacity 400ms, visibility 400ms 0s !important;
                 &.shown {
                     position: static;
                     transform: scale(1);
