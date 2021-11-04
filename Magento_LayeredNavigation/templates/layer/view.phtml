@@ -1,0 +1,64 @@
+<?php
+/**
+ * Category layered navigation
+ *
+ * @var $block \Magento\LayeredNavigation\Block\Navigation
+ */
+?>
+
+<?php if (!$block->canShowBlock()) : return; endif; ?>
+
+<?php
+    $visibleFilters = array_filter($block->getFilters(), fn ($filter) => $filter->getItemsCount());
+    $activeFilters = $block->getLayer()->getState()->getFilters();
+
+    $isExpanded = $block->getExpanded();
+    if ($isExpanded === 'auto') {
+        $isExpanded = count($visibleFilters) <= 7;
+    }
+
+    $name = $block->getNameInLayout();
+    $parentName = $this->getLayout()->getParentName($name);
+    if (strpos($parentName, 'sidebar') === false) {
+        $isExpanded = false;
+    }
+?>
+
+<div class="block filter">
+    <input type="checkbox" id="filter-checkbox" class="filter-checkbox" style="display:none" />
+    <div class="block-title filter-title">
+        <label for="filter-checkbox" tabindex="0">
+            <strong><?= $block->escapeHtml(__('Shop By')) ?></strong>
+            <?php if ($activeFilters) : ?>
+                <span class="count"><?= count($activeFilters) ?></span>
+            <?php endif; ?>
+        </label>
+    </div>
+
+    <div class="block-content filter-content">
+        <?= $block->getChildHtml('state') ?>
+
+        <?php if ($activeFilters) : ?>
+            <div class="block-actions filter-actions">
+                <a href="<?= $block->escapeUrl($block->getClearUrl()) ?>" class="action clear filter-clear"><span><?= $block->escapeHtml(__('Clear All')) ?></span></a>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($visibleFilters) : ?>
+            <label for="filter-checkbox" tabindex="0" role="heading" aria-level="2" class="block-subtitle filter-subtitle"><span><?= $block->escapeHtml(__('Shopping Options')) ?></span></label>
+            <ul class="filter-options" id="narrow-by-list">
+        <?php endif ?>
+
+        <?php foreach ($visibleFilters as $i => $filter) : ?>
+            <li class="filter-<?= $filter->getRequestVar() ?><?= $isExpanded ? ' initially-active active' : '' ?>"
+                data-mage-init='{"collapsible":{"active":<?= $isExpanded ? 'true' : 'false' ?>}}'>
+                <span role="heading" aria-level="3" class="filter-options-title" data-trigger="true" data-role="title"><?= $block->escapeHtml(__($filter->getName())) ?></span>
+                <div class="filter-options-content" data-role="content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter) ?></div>
+            </li>
+        <?php endforeach; ?>
+
+        <?php if ($visibleFilters) : ?>
+            </ul>
+        <?php endif; ?>
+    </div>
+</div>
