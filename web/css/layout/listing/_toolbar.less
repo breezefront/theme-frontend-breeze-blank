@@ -19,13 +19,17 @@
             white-space: nowrap;
         }
         select {
-            max-width: 170px;
+            max-width: 130px;
+            @media @media-md {
+                max-width: 170px;
+            }
         }
 
         .sorter,
         .limiter {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
             gap: @2;
             .margin-left(auto);
         }
