@@ -1,0 +1,58 @@
+& when (@critical) {
+    .message {
+        display: flex;
+        align-items: flex-start;
+        gap: @1;
+        padding: @3 @4;
+        margin: @3 0;
+
+        a {
+            &:extend(.link-common all);
+        }
+
+        &.success,
+        &.notice,
+        &.error {
+            &::before {
+                flex-shrink: 0;
+                content: '';
+                width: @6;
+                height: @6;
+            }
+        }
+    }
+}
+
+& when not (@critical) {
+    .message {
+        border: 1px solid var(--message-border-color);
+        background: var(--message-background);
+        color: var(--message-color);
+        padding: @3 @4;
+
+        &.success {
+            --message-border-color: var(--green-300);
+            --message-background: var(--green-200);
+            --message-color: var(--green-700);
+            &::before {
+                .breeze-icon(@icon-s-check, @5);
+            }
+        }
+        &.notice {
+            --message-border-color: var(--yellow-200);
+            --message-background: var(--yellow-100);
+            --message-color: var(--yellow-600);
+            &::before {
+                .breeze-icon(@icon-s-information-circle, @5)
+            }
+        }
+        &.error {
+            --message-border-color: var(--red-200);
+            --message-background: var(--red-100);
+            --message-color: var(--red-600);
+            &::before {
+                .breeze-icon(@icon-s-exclamation-circle, @5)
+            }
+        }
+    }
+}
