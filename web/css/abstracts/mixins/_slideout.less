@@ -1,0 +1,69 @@
+.breeze-slideout {
+    & when (@critical) {
+        position: fixed;
+        visibility: hidden;
+    }
+
+    & when not (@critical) {
+        .transition();
+        .left(0);
+        top: 0;
+        bottom: 0;
+        width: @96;
+        z-index: 40;
+        max-width: ~"calc(100vw - @{16})";
+        background: var(--bg-main);
+        transform: translateX(-100%);
+        overscroll-behavior: contain;
+        overflow: auto;
+        padding: @4;
+    }
+}
+
+.breeze-slideout-visible {
+    & when not (@critical) {
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+.breeze-slideout-overlay {
+    & when not (@critical) {
+        .inset-0();
+        .transition();
+        content: '';
+        position: fixed;
+        z-index: 38;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 300ms;
+        background: var(--black);
+    }
+}
+
+.breeze-slideout-overlay-visible {
+    & when not (@critical) {
+        opacity: .6;
+        pointer-events: all;
+    }
+}
+
+.breeze-slideout-close {
+    & when not (@critical) {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        border: 1px solid var(--gray-300);
+        border-radius: 50%;
+        top: @3;
+        .right(@5);
+        &::after {
+            content: '';
+            display: block;
+            width: @6;
+            height: @6;
+            opacity: .2;
+            .breeze-icon(@icon-x, @4);
+        }
+    }
+}

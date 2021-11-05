@@ -10,6 +10,21 @@
     }
 }
 
+@media @media-md-down {
+    .navigation-wrapper {
+        .breeze-slideout();
+        .nav-open & {
+            .breeze-slideout-visible();
+        }
+    }
+    .nav-toggle::before {
+        .breeze-slideout-overlay();
+        .nav-open & {
+            .breeze-slideout-overlay-visible();
+        }
+    }
+}
+
 & when (@critical) {
     .nav-toggle {
         flex-shrink: 0;
@@ -50,13 +65,6 @@
         }
     }
 
-    @media @media-md-down {
-        .navigation-wrapper {
-            position: fixed;
-            visibility: hidden;
-        }
-    }
-
     @media @media-md {
         .nav-toggle {
             display: none;
@@ -84,21 +92,6 @@
                 .breeze-icon(@icon-x);
                 color: var(--bg-main);
                 opacity: .8;
-            }
-        }
-        &::before {
-            content: '';
-            position: fixed;
-            z-index: 38;
-            opacity: 0;
-            pointer-events: none;
-            background: var(--black);
-            &:extend(.inset-0);
-            &:extend(.transition);
-
-            .nav-open & {
-                opacity: .6;
-                pointer-events: all;
             }
         }
     }
@@ -132,24 +125,6 @@
 
     @media @media-md-down {
         .navigation-wrapper {
-            top: 0;
-            bottom: 0;
-            .left(0);
-            width: @96;
-            z-index: 40;
-            max-width: ~"calc(100vw - @{16})";
-            background: var(--bg-main);
-            transform: translateX(-100%);
-            .transition();
-            overscroll-behavior: contain;
-            overflow: auto;
-            padding: @4;
-
-            .nav-open & {
-                transform: translateX(0);
-                visibility: visible;
-            }
-
             li > a {
                 padding: @2;
             }
@@ -179,7 +154,6 @@
 
     @media @media-md {
         .navigation-wrapper {
-            transition: none;
             .opened > a {
                 background: var(--gray-100);
             }

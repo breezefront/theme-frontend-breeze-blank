@@ -1,3 +1,23 @@
+@media @media-md-down {
+    .block.filter {
+        .filter-content {
+            .breeze-slideout();
+            &-close {
+                .breeze-slideout-close();
+            }
+        }
+        .filter-checkbox:checked ~ .filter-content {
+            .breeze-slideout-visible();
+        }
+        .filter-title label::after {
+            .breeze-slideout-overlay();
+        }
+        .filter-checkbox:checked ~ .filter-title label::after {
+            .breeze-slideout-overlay-visible();
+        }
+    }
+}
+
 @media @media-md {
     .column.main {
         .block.filter {
@@ -230,33 +250,6 @@
                     }
                 }
             }
-            .filter-content {
-                position: fixed;
-                top: 0;
-                left: 0;
-                padding: @12 @6;
-                bottom: 0;
-                overflow: auto;
-                overscroll-behavior: contain;
-                background: #fff;
-                z-index: 40;
-                width: @96;
-                max-width: 85%;
-                visibility: hidden;
-                transform: translateX(-100%);
-                .transition();
-
-                &-close::after {
-                    content: '';
-                    display: block;
-                    width: @6;
-                    height: @6;
-                }
-            }
-            .filter-checkbox:checked ~ .filter-content {
-                transform: translateX(0);
-                visibility: visible;
-            }
         }
     }
     .page-with-filter {
@@ -284,22 +277,6 @@
 }
 
 & when not (@critical) {
-    // overlay for slideout navigation
-    .block.filter {
-        .filter-title {
-            label::after {
-                content: '';
-                position: fixed;
-                z-index: 38;
-                opacity: 0;
-                pointer-events: none;
-                transition: opacity 300ms;
-                background: var(--black);
-                &:extend(.inset-0);
-            }
-        }
-    }
-
     @media @media-md-down {
         .block.filter {
             .filter-title {
@@ -310,22 +287,8 @@
                     }
                 }
             }
-            .filter-checkbox:checked ~ .filter-title label::after {
-                opacity: .6;
-                pointer-events: all;
-            }
-            .filter-content-close {
-                display: block;
-                cursor: pointer;
-                position: absolute;
-                border: 1px solid var(--gray-300);
-                border-radius: 50%;
-                top: @3;
-                .right(@5);
-                &::after {
-                    .breeze-icon(@icon-x, @4);
-                    opacity: .2;
-                }
+            .filter-content {
+                padding: @12 @6;
             }
         }
     }
