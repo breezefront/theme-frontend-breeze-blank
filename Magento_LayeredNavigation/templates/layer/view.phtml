@@ -38,6 +38,7 @@
     </div>
 
     <div class="block-content filter-content">
+        <label for="filter-checkbox" tabindex="0" class="filter-content-close"><span><?= $block->escapeHtml(__('Close')) ?></span></label>
         <?= $block->getChildHtml('state') ?>
 
         <?php if ($activeFilters) : ?>
@@ -47,7 +48,7 @@
         <?php endif; ?>
 
         <?php if ($visibleFilters) : ?>
-            <label for="filter-checkbox" tabindex="0" role="heading" aria-level="2" class="block-subtitle filter-subtitle"><span><?= $block->escapeHtml(__('Shopping Options')) ?></span></label>
+            <strong role="heading" aria-level="2" class="block-subtitle filter-subtitle"><span><?= $block->escapeHtml(__('Shopping Options')) ?></span></strong>
             <ul class="filter-options" id="narrow-by-list">
         <?php endif ?>
 

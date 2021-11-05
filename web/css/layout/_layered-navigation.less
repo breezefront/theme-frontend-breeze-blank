@@ -52,8 +52,9 @@
                     display: none;
                 }
             }
-            &-content {
-                > .filter-subtitle span {
+            &-content-close {
+                display: none;
+                span {
                     &:extend(.sr-only);
                 }
             }
@@ -61,6 +62,9 @@
                 ~ .filter-options {
                     margin-top: @3;
                 }
+            }
+            &-subtitle {
+                display: none;
             }
             &-options {
                 > li {
@@ -144,12 +148,8 @@
                 }
                 .filter-actions {
                     display: inline-flex;
-                    // margin: @1 0 @3 0;
                 }
 
-                .filter-subtitle {
-                    display: none;
-                }
                 .filter-options {
                     display: flex;
                     flex-wrap: wrap;
@@ -224,8 +224,10 @@
                     top: 0;
                     margin: 0;
                     max-width: @36;
-                    overflow: hidden;
                     white-space: nowrap;
+                    label {
+                        overflow: hidden;
+                    }
                 }
             }
             .filter-content {
@@ -240,10 +242,11 @@
                 z-index: 40;
                 width: @96;
                 max-width: 85%;
+                visibility: hidden;
                 transform: translateX(-100%);
                 .transition();
 
-                .filter-subtitle::after {
+                &-close::after {
                     content: '';
                     display: block;
                     width: @6;
@@ -252,6 +255,7 @@
             }
             .filter-checkbox:checked ~ .filter-content {
                 transform: translateX(0);
+                visibility: visible;
             }
         }
     }
@@ -310,18 +314,17 @@
                 opacity: .6;
                 pointer-events: all;
             }
-            .filter-content {
-                .filter-subtitle {
-                    cursor: pointer;
-                    position: absolute;
-                    border: 1px solid var(--gray-300);
-                    border-radius: 50%;
-                    top: @3;
-                    .right(@5);
-                    &::after {
-                        .breeze-icon(@icon-x, @4);
-                        opacity: .2;
-                    }
+            .filter-content-close {
+                display: block;
+                cursor: pointer;
+                position: absolute;
+                border: 1px solid var(--gray-300);
+                border-radius: 50%;
+                top: @3;
+                .right(@5);
+                &::after {
+                    .breeze-icon(@icon-x, @4);
+                    opacity: .2;
                 }
             }
         }
