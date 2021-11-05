@@ -28,24 +28,11 @@
 }
 
 .breeze-slideout-overlay {
-    & when not (@critical) {
-        .inset-0();
-        .transition();
-        content: '';
-        position: fixed;
-        z-index: 38;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 300ms;
-        background: var(--black);
-    }
+    .breeze-overlay();
 }
 
 .breeze-slideout-overlay-visible {
-    & when not (@critical) {
-        opacity: .6;
-        pointer-events: all;
-    }
+    .breeze-overlay-visible();
 }
 
 .breeze-slideout-close {

@@ -1,3 +1,10 @@
+.modals-overlay {
+    .breeze-overlay();
+    ._show ~ & {
+        .breeze-overlay-visible();
+    }
+}
+
 & when not (@critical) {
     body._has-modal {
         overflow: hidden;
@@ -75,17 +82,5 @@
         display: flex;
         justify-content: flex-end;
         gap: @2;
-    }
-
-    .modals-overlay {
-        &:extend(.transition);
-        &:extend(.inset-0);
-        position: fixed;
-        background: var(--black);
-        opacity: 0;
-
-        ._show ~ & {
-            opacity: .6;
-        }
     }
 }
