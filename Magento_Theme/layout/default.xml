@@ -31,11 +31,11 @@
         <move element="minicart" destination="header-wrapper" after="header.wishlist"/>
 
         <!-- Navigation -->
+        <referenceBlock name="navigation.sections" remove="true"/>
         <referenceContainer name="header.container">
             <container name="navigation.wrapper" after="-" htmlTag="div" htmlClass="navigation-wrapper"/>
         </referenceContainer>
         <move element="catalog.topnav" destination="navigation.wrapper"/>
-        <!-- <move element="catalog.topnav" destination="header-wrapper" after="logo"/> -->
-        <referenceBlock name="navigation.sections" remove="true"/>
+        <!-- <move element="navigation.wrapper" destination="header-wrapper" after="logo"/> -->
     </body>
 </page>
