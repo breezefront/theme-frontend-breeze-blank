@@ -1,11 +1,11 @@
 .button-x {
     .float(right);
-    padding: 0;
-    background: transparent;
-    color: inherit;
+    .button-reset();
     opacity: .7;
-    &:not(:focus) {
-        border-color: transparent;
+    cursor: pointer;
+    &:focus {
+        outline: 2px solid var(--blue-600);
+        outline-offset: 1px;
     }
     &::before {
         display: block;
@@ -25,12 +25,12 @@
     padding: @1 @2;
 }
 .button-reset {
+    --button-focus-border-color: transparent;
+    --button-focus-box-shadow: 0 0 0 2px var(--button-focus-border-color);
     padding: 0;
     background: transparent;
     color: inherit;
-    &:not(:focus) {
-        border-color: transparent;
-    }
+    border-color: transparent;
 }
 
 .input-xs {
