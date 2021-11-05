@@ -188,12 +188,18 @@
 }
 
 & when (@critical) {
+    fieldset {
+        margin-bottom: @8;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
     form {
         legend {
             .text-xl();
             width: 100%;
             float: left;
-            margin: @6 0 @5;
+            margin: 0 0 @5;
             border-bottom: 1px solid var(--gray-200);
         }
         .actions-toolbar {
@@ -209,7 +215,7 @@
     }
     .field {
         + .field {
-            margin-top: @2;
+            margin-top: @3;
         }
         .addon {
             display: flex;
