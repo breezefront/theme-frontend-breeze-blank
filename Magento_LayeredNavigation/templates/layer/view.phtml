@@ -26,19 +26,15 @@
     }
 ?>
 
-<div class="block filter">
-    <input type="checkbox" id="filter-checkbox" class="filter-checkbox" style="display:none" />
-    <div class="block-title filter-title">
-        <label for="filter-checkbox" tabindex="0">
-            <strong><?= $block->escapeHtml(__('Shop By')) ?></strong>
-            <?php if ($activeFilters) : ?>
-                <span class="count"><?= count($activeFilters) ?></span>
-            <?php endif; ?>
-        </label>
+<div class="block filter" data-mage-init='{"slideout":{"toggler":".filter-title","panel":".filter-content"}}'>
+    <div class="block-title filter-title" tabindex="0">
+        <strong><?= $block->escapeHtml(__('Shop By')) ?></strong>
+        <?php if ($activeFilters) : ?>
+            <span class="count"><?= count($activeFilters) ?></span>
+        <?php endif; ?>
     </div>
 
     <div class="block-content filter-content">
-        <label for="filter-checkbox" tabindex="0" class="filter-content-close"><span><?= $block->escapeHtml(__('Close')) ?></span></label>
         <?= $block->getChildHtml('state') ?>
 
         <?php if ($activeFilters) : ?>

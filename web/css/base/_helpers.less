@@ -8,6 +8,9 @@
 }
 
 & when not (@critical) {
+    .button-close {
+        &:extend(.button-x all);
+    }
     @keyframes rotate {
         from {
             -webkit-transform: rotate(0deg);

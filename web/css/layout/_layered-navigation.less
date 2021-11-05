@@ -2,18 +2,18 @@
     .block.filter {
         .filter-content {
             .breeze-slideout();
+            .active& {
+                .breeze-slideout-visible();
+            }
             &-close {
                 .breeze-slideout-close();
             }
         }
-        .filter-checkbox:checked ~ .filter-content {
-            .breeze-slideout-visible();
-        }
-        .filter-title label::after {
+        .filter-title::after {
             .breeze-slideout-overlay();
-        }
-        .filter-checkbox:checked ~ .filter-title label::after {
-            .breeze-slideout-overlay-visible();
+            .active& {
+                .breeze-slideout-overlay-visible();
+            }
         }
     }
 }
@@ -210,17 +210,15 @@
     @media @media-md-down {
         .block.filter {
             .filter-title {
-                label {
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: @1;
-                    &::before {
-                        content: '';
-                        width: @6;
-                        height: @6;
-                        flex-shrink: 0;
-                    }
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: @1;
+                &::before {
+                    content: '';
+                    width: @6;
+                    height: @6;
+                    flex-shrink: 0;
                 }
                 .count {
                     .text-sm();
@@ -244,9 +242,7 @@
                     margin: 0;
                     max-width: @36;
                     white-space: nowrap;
-                    label {
-                        overflow: hidden;
-                    }
+                    overflow: hidden;
                 }
             }
             .filter-current-subtitle {
@@ -288,12 +284,10 @@
     @media @media-md-down {
         .block.filter {
             .filter-title {
-                label {
-                    cursor: pointer;
-                    -webkit-tap-highlight-color: transparent;
-                    &::before {
-                        .breeze-icon(@icon-s-filter, @5);
-                    }
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+                &::before {
+                    .breeze-icon(@icon-s-filter, @5);
                 }
             }
             .filter-content {

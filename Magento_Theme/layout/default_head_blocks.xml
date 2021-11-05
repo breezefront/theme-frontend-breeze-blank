@@ -13,5 +13,16 @@
                 </argument>
             </arguments>
         </referenceBlock>
+        <referenceBlock name="breeze.js">
+            <arguments>
+                <argument name="bundles" xsi:type="array">
+                    <item name="default" xsi:type="array">
+                        <item name="items" xsi:type="array">
+                            <item name="theme-breeze-blank" xsi:type="string">js/breeze/theme-blank</item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
     </body>
 </page>
