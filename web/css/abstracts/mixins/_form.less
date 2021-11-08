@@ -3,10 +3,6 @@
     .button-reset();
     opacity: .7;
     cursor: pointer;
-    &:focus {
-        outline: 2px solid var(--blue-600);
-        outline-offset: 1px;
-    }
     &::before {
         display: block;
         content: '';
@@ -27,6 +23,10 @@
 .button-reset {
     --button-focus-border-color: transparent;
     --button-focus-box-shadow: 0 0 0 2px var(--button-focus-border-color);
+    &:focus {
+        outline: 2px solid var(--blue-600);
+        outline-offset: 1px;
+    }
     padding: 0;
     background: transparent;
     color: inherit;
