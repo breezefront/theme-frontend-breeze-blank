@@ -1,0 +1,26 @@
+& when (@critical) {
+    .privacy-policy {
+        --sidebar-width: 250px;
+
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "sidebar"
+                             "main";
+
+        @media @media-md {
+            grid-template-columns: var(--sidebar-width) 1fr;
+            grid-template-areas: "sidebar main";
+        }
+
+        gap: @4;
+        row-gap: @4;
+
+        > .privacy-policy-content {
+            grid-area: main;
+        }
+        > .block-collapsible-nav {
+            grid-area: sidebar;
+        }
+    }
+}
