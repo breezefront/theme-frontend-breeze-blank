@@ -1,11 +1,13 @@
-& when (@critical) {
-    .container {
+.container {
+    & when (@critical) {
         width: 100%;
         max-width: var(--container-max-width);
         margin: var(--container-margin);
         padding: var(--container-padding);
     }
+}
 
+& when (@critical) {
     @media (min-width: @sm) {
         :root {
             --container-max-width: @sm;
