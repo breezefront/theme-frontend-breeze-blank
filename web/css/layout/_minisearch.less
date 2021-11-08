@@ -1,3 +1,17 @@
+.minisearch {
+    .search-autocomplete {
+        &:extend(.breeze-dropdown);
+        &:not(:empty) {
+            .active& {
+                &:extend(.breeze-dropdown-visible);
+            }
+        }
+        [role="listbox"] li {
+            &:extend(.breeze-dropdown .item all);
+        }
+    }
+}
+
 & when (@critical) {
     .header .block-search {
         .block-title {
@@ -102,6 +116,20 @@
         .action.search {
             &::before {
                 .breeze-icon(@icon-search);
+            }
+        }
+        .search-autocomplete {
+            .right(auto);
+
+            [role="listbox"] {
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: @1;
+                }
+                .amount {
+                    opacity: .5;
+                }
             }
         }
     }
