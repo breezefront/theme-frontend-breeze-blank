@@ -1,10 +1,8 @@
 .minisearch {
     .search-autocomplete {
         &:extend(.breeze-dropdown);
-        &:not(:empty) {
-            .active& {
-                &:extend(.breeze-dropdown-visible);
-            }
+        &:not(:empty):not([style*="display:none"]):not([style*="display: none"]) {
+            &:extend(.breeze-dropdown-visible);
         }
         [role="listbox"] li {
             &:extend(.breeze-dropdown .item all);
