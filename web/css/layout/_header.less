@@ -6,6 +6,20 @@
         gap: @4;
     }
 
+    .header.links {
+        a .counter {
+            .text-sm();
+            opacity: .6;
+            white-space: nowrap;
+            &::before {
+                content: '(';
+            }
+            &::after {
+                content: ')';
+            }
+        }
+    }
+
     .header.panel {
         &:extend(.container);
         justify-content: flex-end;
