@@ -1,0 +1,54 @@
+& when (@critical) {
+    .sidebar + .sidebar,
+    .page-main .block + .block {
+        margin-top: @6;
+    }
+    .block {
+        > .title,
+        .block-title {
+            .text-lg();
+            line-height: @6;
+            padding: @2 0;
+            margin-bottom: @1;
+            font-weight: 500;
+
+            .counter {
+                .text-sm();
+                opacity: .6;
+                white-space: nowrap;
+            }
+        }
+        .subtitle {
+            display: none;
+        }
+        .actions-toolbar {
+            display: flex;
+            align-items: center;
+            gap: @2;
+            margin-top: @2;
+        }
+    }
+
+    .block .action.delete,
+    .block .action.remove {
+        display: inline-flex;
+        align-items: center;
+        .margin-left(auto);
+        color: var(--gray-500);
+        span {
+            &:extend(.sr-only);
+        }
+        &::before {
+            content: '';
+            width: @5;
+            height: @5;
+        }
+    }
+}
+
+& when not (@critical) {
+    .block .action.delete::before,
+    .block .action.remove::before {
+        .breeze-icon(@icon-x, @4);
+    }
+}
