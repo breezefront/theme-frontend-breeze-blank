@@ -1,0 +1,21 @@
+& when (@critical) {
+    .search-suggestions {
+        display: flex;
+        gap: @4;
+
+        @media @media-sm-down {
+            flex-direction: column;
+        }
+
+        .block {
+            min-width: 180px;
+            + .block {
+                margin: 0;
+            }
+        }
+
+        a {
+            &:extend(.link-common all);
+        }
+    }
+}
