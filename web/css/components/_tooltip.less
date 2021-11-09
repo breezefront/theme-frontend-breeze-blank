@@ -1,0 +1,37 @@
+.tooltip.wrapper {
+    .tooltip.content {
+        &:extend(.breeze-dropdown);
+    }
+    &:hover,
+    &:focus {
+        .tooltip.content {
+            &:extend(.breeze-dropdown-visible);
+        }
+    }
+}
+
+& when (@critical) {
+    .tooltip.wrapper {
+        position: relative;
+        .tooltip.content {
+            .right(auto);
+            .left(0);
+        }
+    }
+}
+
+& when not (@critical) {
+    .tooltip.wrapper {
+        --dropdown-width: @64;
+        --dropdown-padding: @2 @3;
+        .tooltip.toggle {
+            cursor: help;
+        }
+        .subtitle {
+            .text-lg();
+            font-weight: 400;
+            display: block;
+            margin-bottom: @2;
+        }
+    }
+}
