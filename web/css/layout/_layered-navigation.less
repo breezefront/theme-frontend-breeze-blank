@@ -195,9 +195,13 @@
                         display: block !important;
                         height: auto;
                         width: @52;
-                        // .right(auto);
-                        // .left(50%);
-                        // .margin-left(-@24);
+                        .right(auto);
+                        .left(-9999px);
+                        .margin-left(-@24);
+
+                        &[aria-hidden=false] {
+                            .left(50%);
+                        }
 
                         > :first-child {
                             margin: 0;
