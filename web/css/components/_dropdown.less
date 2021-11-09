@@ -29,3 +29,20 @@
         position: relative;
     }
 }
+
+& when not (@critical) {
+    .dropdown.options {
+        .block-title {
+            padding: 0;
+        }
+    }
+
+    :root {
+        --dropdown-padding: @2;
+        --dropdown-width: @44;
+        .dropdown-xl {
+            --dropdown-padding: @3 @4;
+            --dropdown-width: @80;
+        }
+    }
+}

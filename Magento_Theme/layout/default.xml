@@ -9,6 +9,7 @@
         <referenceBlock name="header" remove="true"/> <!-- Welcome message -->
         <referenceBlock name="catalog.compare.link" remove="true"/>
         <move element="top.links" destination="header.account"/>
+        <!-- <move element="wishlist_sidebar" destination="header.wishlist"/> --> <!-- todo -->
         <referenceContainer name="header-wrapper">
             <block class="Swissup\Breeze\Block\Theme\Dropdown" name="header.account">
                 <arguments>
@@ -23,7 +24,7 @@
                     <argument name="title" xsi:type="string" translate="true">Wishlist</argument>
                     <argument name="icon" xsi:type="string"><![CDATA[<svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>]]></argument>
                     <argument name="href" xsi:type="url" path="wishlist"/>
-                    <argument name="css_class" xsi:type="string">no-chevron wishlist-dropdown</argument>
+                    <argument name="css_class" xsi:type="string">no-chevron wishlist-dropdown dropdown-xl</argument>
                 </arguments>
             </block>
         </referenceContainer>
