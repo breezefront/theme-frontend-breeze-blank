@@ -73,8 +73,8 @@
                 <height>700</height>
             </image>
             <image id="product_page_image_small" type="thumbnail">
-                <width>90</width>
-                <height>90</height>
+                <width>88</width>
+                <height>110</height>
             </image>
             <image id="product_swatch_image_large" type="image"/>
             <image id="product_swatch_image_medium" type="image">
@@ -183,6 +183,15 @@
             </image>
         </images>
     </media>
+    <vars module="Magento_Catalog">
+        <var name="gallery">
+            <var name="allowfullscreen">true</var>
+            <var name="keyboard">true</var>
+            <var name="loop">true</var>
+            <var name="nav">true</var> <!-- true/false -->
+            <var name="navdir">vertical</var> <!-- horizontal/vertical -->
+        </var>
+    </vars>
     <vars module="Swissup_Breeze">
         <var name="enabled">1</var>
         <var name="turbo">1</var>

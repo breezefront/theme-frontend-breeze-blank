@@ -33,12 +33,6 @@
             span {
                 &:extend(.sr-only);
             }
-            &::before {
-                content: '';
-                display: block;
-                width: @8;
-                height: @8;
-            }
         }
 
         .sidebar & {
@@ -122,17 +116,6 @@
             .product-item-description {
                 margin-top: @2;
             }
-        }
-    }
-}
-
-& when not (@critical) {
-    .product-items {
-        .towishlist::before {
-            .breeze-icon(@icon-heart);
-        }
-        .tocompare::before {
-            .breeze-icon(@icon-scale);
         }
     }
 }
