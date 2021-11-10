@@ -16,19 +16,39 @@
     .minimal-price-link {
         &:extend(.link-common all);
     }
+    .map-show-info {
+        .margin-right(@1);
+    }
 }
 
 & when not (@critical) {
     .map-popup {
+        &:extend(.dropdown-xl);
         transition: opacity var(--transition-duration), visibility var(--transition-duration) 0s;
         width: 100%;
         .right(auto);
         .left(0);
+        .action.tocart {
+            width: 100%;
+        }
     }
     .map-form-addtocart {
         margin: @2 0;
     }
     .actual-price {
         font-weight: 500;
+    }
+    .additional-addtocart-box {
+        margin: @2 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: @2;
+
+        &:empty {
+            display: none;
+        }
+        > div {
+            max-width: ~"calc(50% - @{1})";
+        }
     }
 }
