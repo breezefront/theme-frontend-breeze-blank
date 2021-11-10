@@ -45,55 +45,41 @@
         }
     }
 
+    table {
+        .text-align(left);
+        width: 100%;
+        caption {
+            &:extend(.sr-only);
+        }
+        tr {
+            border-bottom: 1px solid var(--gray-100);
+        }
+        th {
+            font-weight: 500;
+        }
+        td, th {
+            vertical-align: top;
+            padding: @3 @2;
+            &:first-child {
+                .padding-left(0);
+            }
+            &:last-child {
+                .padding-right(0);
+            }
+            @media @media-xs-down {
+                word-break: break-word;
+            }
+        }
+        thead tr {
+            border-bottom-color: var(--gray-200);
+        }
+        tbody:last-child tr:last-child {
+            border-bottom: 0;
+        }
+    }
+
     .cms-content {
         .text-lg();
-        h2 {
-            .text-3xl();
-            margin-bottom: @3;
-        }
-        p,
-        ul,
-        ol,
-        table {
-            margin-bottom: @3;
-        }
-        ol, ul {
-            padding-left: @5;
-            li::marker {
-                color: var(--gray-400);
-            }
-        }
-        ul {
-            list-style: disc;
-        }
-        ol {
-            list-style: auto;
-        }
-        a {
-            &:extend(.link-common all);
-        }
-        table {
-            .text-align(left);
-            width: 100%;
-            tr {
-                border-bottom: 1px solid var(--gray-100);
-            }
-            th {
-                font-weight: 500;
-            }
-            td, th {
-                vertical-align: baseline;
-                padding: @3 @2;
-                @media @media-xs-down {
-                    word-break: break-word;
-                }
-            }
-            thead tr {
-                border-bottom-color: var(--gray-200);
-            }
-            tbody tr:last-child {
-                border-bottom: 0;
-            }
-        }
+        &:extend(.prose all);
     }
 }

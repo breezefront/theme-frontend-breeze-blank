@@ -63,3 +63,31 @@
         text-decoration: underline;
     }
 }
+
+.prose {
+    h2 {
+        .text-3xl();
+        margin-bottom: @3;
+    }
+    p,
+    ul,
+    ol,
+    table {
+        margin-bottom: @3;
+    }
+    ol, ul {
+        padding-left: @5;
+        li::marker {
+            color: var(--gray-400);
+        }
+    }
+    ul {
+        list-style: disc;
+    }
+    ol {
+        list-style: auto;
+    }
+    a {
+        &:extend(.link-common all);
+    }
+}
