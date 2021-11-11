@@ -189,7 +189,7 @@
             <var name="keyboard">true</var>
             <var name="loop">true</var>
             <var name="nav">true</var> <!-- true/false -->
-            <var name="navdir">vertical</var> <!-- horizontal/vertical -->
+            <var name="navdir">horizontal</var> <!-- horizontal/vertical -->
         </var>
     </vars>
     <vars module="Swissup_Breeze">
