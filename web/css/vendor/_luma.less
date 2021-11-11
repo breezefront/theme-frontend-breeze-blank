@@ -8,6 +8,8 @@
 @screen__l: @lg;
 @screen__xl: @xl;
 
+@active__color: ~"var(--blue-600)";
+
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {}
 
 & when (@media-target = 'mobile'), (@media-target = 'all') {
