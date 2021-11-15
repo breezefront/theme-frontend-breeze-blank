@@ -1,4 +1,22 @@
 & when (@critical) {
+    :root {
+        --listing-grid-item-max-width: 400px;
+        --listing-grid-item-gap: @2;
+        --listing-grid-item-padding: @2;
+        --listing-grid-item-width: 100/2%;
+        @media @media-sm {
+            --listing-grid-item-width: 100/3%;
+        }
+        @media @media-xl {
+            --listing-grid-item-width: 100/4%;
+        }
+    }
+    .page-layout-1column {
+        @media @media-xl {
+            --listing-grid-item-width: 100/5%;
+        }
+    }
+
     // Styles for content and sidebar (grid and list)
     .product-items {
         .product-item-photo {
@@ -79,16 +97,12 @@
         .products-grid & {
             display: flex;
             flex-wrap: wrap;
-            gap: @2;
+            gap: var(--listing-grid-item-gap);
 
             .product-item {
-                padding: @2;
-                max-width: 240px;
-                width: ~"calc(50% - @{2})";
-
-                @media @media-sm {
-                    width: ~"calc(33.33% - @{2})";
-                }
+                padding: var(--listing-grid-item-padding);
+                max-width: var(--listing-grid-item-max-width);
+                width: ~"calc(var(--listing-grid-item-width) - var(--listing-grid-item-gap))";
             }
             .product-item-info {
                 height: 100%;
