@@ -32,10 +32,6 @@
             grid-template-areas: "media title"
                                  "media main"
                                  "details details";
-
-            .product.info.detailed {
-                margin-top: @2;
-            }
         }
     }
 
@@ -117,6 +113,10 @@
         }
     }
 
+    .input-text.qty {
+        max-width: @16;
+    }
+
     .product-social-links {
         margin: @2 0;
         .product-addto-links {
@@ -129,8 +129,10 @@
         }
     }
 
-    .input-text.qty {
-        max-width: @16;
+    @media @media-md {
+        .product.info.detailed {
+            margin: @4 0;
+        }
     }
 
     .product.attribute {
