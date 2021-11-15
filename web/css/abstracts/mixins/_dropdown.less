@@ -54,20 +54,35 @@
         gap: @1;
 
         .icon {
-            content: '';
-            height: @5;
-            width: @5;
-            transform: rotate(90deg);
+            .breeze-dropdown-toggler-icon();
             &.active {
-                transform: rotate(-90deg);
+                .breeze-dropdown-toggler-icon-active();
             }
         }
     }
     & when not (@critical) {
         cursor: pointer;
         .icon {
-            &:extend(.transition);
-            .breeze-icon(@icon-chevron, @3);
+            .breeze-dropdown-toggler-icon();
         }
+    }
+}
+
+.breeze-dropdown-toggler-icon {
+    & when (@critical) {
+        content: '';
+        height: @5;
+        width: @5;
+        transform: rotate(90deg);
+    }
+    & when not (@critical) {
+        .transition();
+        .breeze-icon(@icon-chevron, @3);
+    }
+}
+
+.breeze-dropdown-toggler-icon-active {
+    & when (@critical) {
+        transform: rotate(-90deg);
     }
 }
