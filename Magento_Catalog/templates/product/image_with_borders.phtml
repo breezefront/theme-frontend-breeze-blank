@@ -1,0 +1,13 @@
+<?php /** @var $block \Magento\Catalog\Block\Product\Image */ ?>
+
+<img class="<?= $escaper->escapeHtmlAttr($block->getClass()) ?>"
+    <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
+        <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
+    <?php endforeach; ?>
+    src="<?= $escaper->escapeUrl($block->getImageUrl()) ?>"
+    srcset=""
+    sizes=""
+    loading="lazy"
+    width="<?= $escaper->escapeHtmlAttr($block->getWidth()) ?>"
+    height="<?= $escaper->escapeHtmlAttr($block->getHeight()) ?>"
+    alt="<?= $escaper->escapeHtmlAttr($block->getLabel()) ?>"/>
