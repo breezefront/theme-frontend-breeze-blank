@@ -1,0 +1,97 @@
+.breeze-tabs {
+    & when (@critical) {
+        display: flow-root;
+    }
+}
+
+.breeze-tab-toggler {
+    @media @tab-accordion__media {
+        &::after {
+            .breeze-dropdown-toggler-icon();
+        }
+    }
+
+    & when (@critical) {
+        height: @12;
+        padding: 0 @4;
+        display: flex;
+        align-items: center;
+        color: var(--tab-toggler-color);
+        border-bottom: 2px solid var(--tab-toggler-border-color);
+
+        @media @tab-accordion__media {
+            justify-content: space-between;
+            border-bottom: 1px solid var(--tab-content-border-color);
+        }
+
+        @media @tab-horizontal__media {
+            .float(left);
+            .margin-right(-1px);
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .counter {
+            opacity: .6;
+            padding: @0-5 @2;
+            background: rgba(0, 0, 0, 0.08);
+        }
+    }
+    & when not (@critical) {
+        cursor: pointer;
+        &:hover {
+            --tab-toggler-color: var(--tab-toggler-hover-color);
+            --tab-toggler-border-color: var(--tab-toggler-hover-border-color);
+        }
+    }
+}
+
+.breeze-tab-toggler-active {
+    &::after {
+        .breeze-dropdown-toggler-icon-active();
+    }
+    & when (@critical) {
+        --tab-toggler-color: var(--tab-toggler-active-color);
+        --tab-toggler-border-color: var(--tab-toggler-active-border-color);
+        z-index: 2;
+
+        @media @tab-accordion__media {
+            border-bottom: 2px solid var(--tab-toggler-border-color);
+        }
+    }
+    & when not (@critical) {
+        &:hover {
+            --tab-toggler-color: var(--tab-toggler-active-color);
+            --tab-toggler-border-color: var(--tab-toggler-active-border-color);
+        }
+    }
+}
+
+.breeze-tab-content {
+    & when (@critical) {
+        padding: @3 @4;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+
+        @media @tab-horizontal__media {
+            .float(right);
+            .margin-left(-100%);
+            width: 100%;
+            margin-top: ~"calc(@{12} - 1px)";
+            border-top: 1px solid var(--tab-content-border-color);
+        }
+    }
+
+    & when not (@critical) {
+        &:extend(.transition);
+    }
+}
+
+.breeze-tab-content-active {
+    & when (@critical) {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+}
