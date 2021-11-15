@@ -8,7 +8,7 @@
         },
 
         /** [create description] */
-        _create: function () {
+        create: function () {
             this.toggler = this.element.find(this.options.toggler);
             this.panel = this.element.find(this.options.panel);
             this.focusTrap = this.createFocusTrap(this.panel);
