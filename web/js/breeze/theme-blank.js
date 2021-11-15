@@ -38,6 +38,12 @@
             });
         },
 
+        /** [destroy description] */
+        destroy: function () {
+            this.close();
+            this._super();
+        },
+
         /** [toggle description] */
         toggle: function () {
             if (this.element.hasClass(this.options.active)) {
