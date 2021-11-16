@@ -246,7 +246,11 @@
         &.choice {
             display: flex;
             gap: @1-5;
-            align-items: center;
+            align-items: flex-start;
+            [type="radio"],
+            [type="checkbox"] {
+                margin-top: @1;
+            }
         }
         .control {
             position: relative;
