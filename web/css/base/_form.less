@@ -217,10 +217,11 @@
         display: flex;
         gap: @2;
     }
+    button + .field,
+    .field + .field {
+        margin-top: @3;
+    }
     .field {
-        + .field {
-            margin-top: @3;
-        }
         .field + .field {
             margin-top: @0-5;
         }
