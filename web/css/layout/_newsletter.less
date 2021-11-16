@@ -1,8 +1,13 @@
 & when (@critical) {
     .page-footer .block.newsletter {
+        margin-bottom: @2;
+        .title {
+            &:extend(.sr-only);
+        }
         .form {
             display: flex;
             justify-content: center;
+            gap: @2;
             .text-align(left);
         }
         label .label {

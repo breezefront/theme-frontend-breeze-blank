@@ -4,6 +4,7 @@
     <body>
         <move element="skip_to_content" destination="header.panel" before="-"/>
         <referenceBlock name="cookie-status-check" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
 
         <!-- Cleanup and move top links to header account dropdown -->
         <referenceBlock name="header" remove="true"/> <!-- Welcome message -->
