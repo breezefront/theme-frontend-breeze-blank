@@ -1,0 +1,16 @@
+& when (@critical) {
+    .samples {
+        a {
+            &:extend(.link-common all);
+        }
+    }
+    .product-options-wrapper {
+        legend.links-title {
+            &:extend(.sr-only);
+        }
+    }
+    .field.downloads .price-container:before {
+        content: ' + ';
+        display: inline;
+    }
+}

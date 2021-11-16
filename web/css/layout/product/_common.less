@@ -1,0 +1,188 @@
+& when (@critical) {
+    .product-info-wrapper {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title"
+                             "media"
+                             "main"
+                             "details";
+        gap: @4;
+
+        .page-title-wrapper {
+            grid-area: title;
+            margin-bottom: @2;
+            h1 {
+                margin: 0;
+            }
+        }
+        .product-info-main {
+            grid-area: main;
+        }
+        .product.media {
+            grid-area: media;
+        }
+        .product-details-wrapper {
+            grid-area: details;
+        }
+
+        @media @media-md {
+            row-gap: 0;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "media title"
+                                 "media main"
+                                 "details details";
+        }
+    }
+
+    .product-info-main {
+        display: flex;
+        flex-direction: column;
+        gap: @2;
+    }
+
+    .product-info-price {
+        display: flex;
+        flex-direction: column;
+        gap: @2;
+        .price-box {
+            .text-2xl();
+        }
+    }
+
+    .prices-tier {
+        margin: @2 0;
+        li {
+            line-height: @7;
+        }
+        a {
+            &:extend(.link-common all);
+        }
+    }
+
+    .product-info-stock-sku {
+        display: flex;
+        align-items: center;
+        gap: @2;
+        .stock {
+            padding: @0-5 @2;
+            &.available {
+                background: var(--green-100);
+                color: var(--green-600);
+            }
+        }
+        .sku {
+            display: flex;
+            align-items: center;
+            gap: @1;
+        }
+    }
+
+    .product-add-form {
+        margin: @2 0;
+        form {
+            > div + div {
+                margin-top: @2;
+            }
+        }
+        .product-options-wrapper {
+            margin-bottom: @2;
+        }
+        .product-options-bottom {
+            margin-top: @4;
+        }
+    }
+
+    .box-tocart {
+        .fieldset {
+            display: flex;
+            align-items: flex-start;
+            gap: @2;
+            .field.qty {
+                margin: 0;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                gap: @2;
+                .control {
+                    margin: 0;
+                }
+            }
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: @2;
+            }
+        }
+    }
+
+    .input-text.qty {
+        max-width: @16;
+    }
+
+    .product-social-links {
+        margin: @2 0;
+        .product-addto-links {
+            display: flex;
+            gap: @3;
+            a {
+                &:extend(.link-common all);
+                color: var(--gray-500);
+            }
+        }
+    }
+
+    .product.info.detailed {
+        clear: both;
+    }
+    @media @media-md {
+        .product-details-wrapper {
+            margin: @4 0;
+        }
+    }
+
+    .product.attribute {
+        &:extend(.prose all);
+    }
+
+    @media @media-lg {
+        .product.info {
+            #product-review-container {
+                float: right;
+                width: 56%;
+            }
+            .review-add {
+                float: left;
+                width: 42%;
+            }
+        }
+    }
+
+    .block.related {
+        .action.select {
+            &:extend(.button-reset all);
+            &:extend(.link-common all);
+        }
+    }
+
+    .towishlist,
+    .tocompare {
+        display: flex;
+        align-items: center;
+        &::before {
+            content: '';
+            width: @8;
+            height: @8;
+        }
+    }
+}
+
+& when not (@critical) {
+    .towishlist::before {
+        .breeze-icon(@icon-heart);
+    }
+    .tocompare::before {
+        .breeze-icon(@icon-scale);
+    }
+}
