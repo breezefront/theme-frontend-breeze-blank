@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.form.options">
+            <container name="bundle.wrapper" htmlTag="div" htmlClass="bundle-wrapper"/>
+        </referenceBlock>
+        <move element="bundle.options.container" destination="product.details.wrapper" before="-"/>
+        <move element="bundle.product.options.wrapper" destination="bundle.wrapper" before="-"/>
+        <move element="bundle.summary" destination="bundle.wrapper"/>
+    </body>
+</page>
