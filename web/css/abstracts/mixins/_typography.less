@@ -70,14 +70,14 @@
 }
 
 .prose {
-    h2 {
-        .text-3xl();
-        margin-bottom: @3;
+    a {
+        &:extend(.link-common all);
     }
     p,
     ul,
     ol,
-    table {
+    table,
+    figure {
         margin-bottom: @3;
     }
     ol, ul {
@@ -92,7 +92,42 @@
     ol {
         list-style: auto;
     }
-    a {
-        &:extend(.link-common all);
+    blockquote {
+        margin: @6 0;
+        padding-left: @4;
+        .border-left(4px solid var(--gray-200));
+        font-style: italic;
+        font-weight: 500;
+    }
+    code {
+        font-weight: 600;
+        &::before,
+        &::after {
+            content: "`";
+        }
+    }
+    pre {
+        margin: @4 0;
+        padding: @4;
+        overflow-x: auto;
+        background: var(--gray-200);
+        code {
+            font-weight: 400;
+            &:before,
+            &:after {
+                content: '';
+            }
+        }
+    }
+    hr {
+        margin: @8 0;
+    }
+    figcaption {
+        margin-top: @2;
+        color: var(--gray-600);
+    }
+    .lead {
+        .text-xl();
+        color: var(--gray-700);
     }
 }
