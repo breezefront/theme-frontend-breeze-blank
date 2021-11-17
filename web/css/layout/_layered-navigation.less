@@ -51,6 +51,7 @@
                 }
                 .action.remove {
                     opacity: .3;
+                    &:extend(.sidebar .block .action.remove all);
                 }
             }
             &-value {
@@ -287,6 +288,11 @@
 }
 
 & when not (@critical) {
+    .block.filter {
+        .action.remove {
+            &:extend(.sidebar .block .action.remove all);
+        }
+    }
     @media @media-md-down {
         .block.filter {
             .filter-title {

@@ -47,8 +47,8 @@
         }
     }
 
-    .block .action.delete,
-    .block .action.remove {
+    .sidebar .block .action.delete,
+    .sidebar .block .action.remove {
         display: inline-flex;
         align-items: center;
         .margin-left(auto);
@@ -85,8 +85,8 @@
 }
 
 & when not (@critical) {
-    .block .action.delete::before,
-    .block .action.remove::before {
+    .sidebar .block .action.delete::before,
+    .sidebar .block .action.remove::before {
         .breeze-icon(@icon-x, @4);
     }
 }
