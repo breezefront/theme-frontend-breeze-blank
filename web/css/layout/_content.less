@@ -1,8 +1,10 @@
 & when (@critical) {
     :root {
         --sidebar-width: 180px;
+        --sidebar-gap: @4;
         @media @media-lg {
             --sidebar-width: 220px;
+            --sidebar-gap: @8;
         }
     }
 
@@ -24,7 +26,8 @@
         grid-template-areas: "main"
                              "sidebar"
                              "additional";
-        gap: @4;
+
+        gap: var(--sidebar-gap);
         row-gap: 0;
 
         @media @media-md {
