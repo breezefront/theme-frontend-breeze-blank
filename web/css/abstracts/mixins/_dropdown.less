@@ -12,8 +12,8 @@
     }
 
     & when not (@critical) {
-        &:extend(.transition);
-        &:extend(.shadow-lg);
+        .transition();
+        .shadow-lg();
         padding: var(--dropdown-padding);
         width: var(--dropdown-width);
         transform-origin: top;
