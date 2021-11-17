@@ -1,16 +1,29 @@
 & when (@critical) {
+    @block__indent: var(--block-indent, @6);
+    @block-title__padding: var(--block-title-padding, @2 0);
+    @block-title__margin: var(--block-title-margin, 0);
+    @block-title__background: var(--block-title-background, none);
+    @block-title__border: var(--block-title-border, 0);
+    @block-title__border-width: var(--block-title-border-width, 0);
+    @block-content__padding: var(--block-content-padding, 0);
+    @block-content__background: var(--block-content-background, none);
+    @block-content__border: var(--block-content-border, 0);
+    @block-content__border-width: var(--block-content-border-width, 0);
+
     .sidebar + .sidebar,
     .page-main .block + .block {
-        margin-top: @6;
+        margin-top: @block__indent;
     }
     .block {
         > .title,
         .block-title {
             .text-lg();
-            line-height: @6;
-            padding: @2 0;
-            margin-bottom: @1;
             font-weight: 500;
+            margin: @block-title__margin;
+            padding: @block-title__padding;
+            background: @block-title__background;
+            border: @block-title__border;
+            border-width: @block-title__border-width;
         }
         .block-title {
             a {
@@ -26,6 +39,29 @@
         }
         .subtitle {
             display: none;
+        }
+        .block-content {
+            display: flow-root;
+            padding: @block-content__padding;
+            background: @block-content__background;
+            border: @block-content__border;
+            border-width: @block-content__border-width;
+        }
+        .box {
+            margin-bottom: @2;
+            @media @media-md {
+                width: 48%;
+                float: left;
+                max-width: 400px;
+                .margin(0 2% 0 0);
+                &:last-child {
+                    margin: 0;
+                }
+            }
+            &-title {
+                display: block;
+                margin-bottom: @2;
+            }
         }
     }
 
@@ -60,26 +96,6 @@
             content: '';
             width: @5;
             height: @5;
-        }
-    }
-
-    .block-content {
-        display: flow-root;
-        .box {
-            margin-bottom: @2;
-            @media @media-md {
-                width: 48%;
-                float: left;
-                max-width: 400px;
-                .margin(0 2% 0 0);
-                &:last-child {
-                    margin: 0;
-                }
-            }
-            &-title {
-                display: block;
-                margin-bottom: @2;
-            }
         }
     }
 }

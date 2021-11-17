@@ -1,0 +1,18 @@
+& when (@critical) {
+    @media @media-md-down {
+        .account .page-main .columns {
+            padding-top: @12; // spacing for collapsible nav
+        }
+    }
+
+    .account {
+        .main {
+            .block {
+                --block-title-padding: @2 @4;
+                --block-content-padding: @4;
+                --block-title-margin: 0;
+                --block-title-background: var(--gray-100);
+            }
+        }
+    }
+}
