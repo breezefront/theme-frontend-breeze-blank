@@ -69,6 +69,33 @@
     }
 }
 
+.responsive-table {
+    display: block;
+    thead {
+        display: none;
+    }
+    tbody,
+    tr,
+    td {
+        display: block;
+    }
+    tr {
+        margin-bottom: @3;
+        padding-bottom: @3;
+    }
+    td,
+    th {
+        padding: @1 0;
+        &[data-th]::before {
+            .padding-right(10px);
+            content: attr(data-th) ': ';
+            display: inline-block;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+    }
+}
+
 .breeze-prose {
     a {
         .link-common();

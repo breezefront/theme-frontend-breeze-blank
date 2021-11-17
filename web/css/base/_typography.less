@@ -96,15 +96,19 @@
             &:last-child {
                 .padding-right(0);
             }
-            @media @media-xs-down {
-                word-break: break-word;
-            }
         }
         thead tr {
             border-bottom-color: var(--gray-200);
         }
         tbody:last-child tr:last-child {
             border-bottom: 0;
+        }
+    }
+
+    @media @media-md-down {
+        .mobile-table,
+        .table:not(.totals):not(.cart):not(.table-comparison) {
+            .responsive-table();
         }
     }
 
