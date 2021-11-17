@@ -12,7 +12,8 @@
 
         &.success,
         &.notice,
-        &.error {
+        &.error,
+        &.info, {
             &::before {
                 flex-shrink: 0;
                 content: '';
@@ -38,10 +39,11 @@
                 .breeze-icon(@icon-s-check, @5);
             }
         }
+        &.info,
         &.notice {
-            --message-border-color: var(--yellow-200);
-            --message-background: var(--yellow-100);
-            --message-color: var(--yellow-600);
+            --message-border-color: var(--blue-200);
+            --message-background: var(--blue-100);
+            --message-color: var(--blue-600);
             &::before {
                 .breeze-icon(@icon-s-information-circle, @5)
             }
