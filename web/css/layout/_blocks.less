@@ -41,6 +41,12 @@
         }
     }
 
+    .actions-toolbar {
+        .action.back {
+            display: none;
+        }
+    }
+
     .block .action.delete,
     .block .action.remove {
         display: inline-flex;
@@ -64,9 +70,10 @@
             @media @media-md {
                 width: 48%;
                 float: left;
-                margin: 0;
-                &:nth-child(even) {
-                    float: right;
+                max-width: 400px;
+                .margin(0 2% 0 0);
+                &:last-child {
+                    margin: 0;
                 }
             }
             &-title {

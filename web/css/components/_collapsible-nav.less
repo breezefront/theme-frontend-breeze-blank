@@ -14,6 +14,16 @@
 
 & when (@critical) {
     .block-collapsible-nav {
+        .text-base();
+        @media @media-md-down {
+            .sidebar & {
+                background: var(--bg-main);
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+        }
+
         > .title {
             @media @media-md {
                 .sr-only();
@@ -25,22 +35,49 @@
                 padding: 0;
                 margin: 0;
             }
-            a {
+            a,
+            strong {
                 display: block;
-                padding: @0-5;
+                padding: @1 0;
                 color: inherit;
+            }
+            .delimiter {
+                display: block;
+                border-top: 1px solid var(--gray-200);
+                margin-top: @3;
+                margin-bottom: @3;
             }
 
             @media @media-md-down {
                 display: none;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 10px;
+                    margin-top: -5px;
+                    box-shadow: 0 10px 10px var(--bg-main);
+                }
                 &.active {
                     display: block;
                 }
             }
             @media @media-md {
+                padding: @3 0;
                 background: var(--gray-100);
-                a {
+                a,
+                strong {
                     padding: @1-5 @3;
+                    .border-left(3px solid transparent);
+                }
+                .current {
+                    strong {
+                        border-color: var(--blue-600);
+                    }
+                }
+                .delimiter {
+                    margin-left: @3;
+                    margin-right: @3;
                 }
             }
         }
