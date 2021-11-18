@@ -19,14 +19,14 @@
 
 @media-xs:  ~"(min-width: @{xs})";
 @media-sm:  ~"(min-width: @{sm})";
-@media-md:  ~"(min-width: @{md})";
-@media-lg:  ~"(min-width: @{lg})";
+@media-md:  ~"print, (min-width: @{md})";
+@media-lg:  ~"print, (min-width: @{lg})";
 @media-xl:  ~"(min-width: @{xl})";
 @media-xxl: ~"(min-width: @{xxl})";
 
-@media-xs-down: ~"(max-width: @{xxs-max})";
-@media-sm-down: ~"(max-width: @{xs-max})";
-@media-md-down: ~"(max-width: @{sm-max})";
+@media-xs-down: ~"screen and (max-width: @{xxs-max})";
+@media-sm-down: ~"screen and (max-width: @{xs-max})";
+@media-md-down: ~"screen and (max-width: @{sm-max})";
 @media-lg-down: ~"(max-width: @{md-max})";
 @media-xl-down: ~"(max-width: @{lg-max})";
 @media-xxl-down: ~"(max-width: @{xl-max})";

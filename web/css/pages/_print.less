@@ -1,0 +1,26 @@
+& when (@critical) {
+    @media print {
+        @page {
+            size: auto;
+            margin: 0;
+        }
+
+        body {
+            margin: 1cm;
+        }
+
+        .page-header,
+        .page-footer {
+            display: none;
+        }
+
+        .logo {
+            display: inline-block;
+            margin-bottom: 0.5cm;
+        }
+
+        .hidden-print {
+            display: none !important;
+        }
+    }
+}
