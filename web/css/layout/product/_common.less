@@ -165,24 +165,4 @@
             &:extend(.link-common all);
         }
     }
-
-    .towishlist,
-    .tocompare {
-        display: flex;
-        align-items: center;
-        &::before {
-            content: '';
-            width: @8;
-            height: @8;
-        }
-    }
-}
-
-& when not (@critical) {
-    .towishlist::before {
-        .breeze-icon(@icon-heart);
-    }
-    .tocompare::before {
-        .breeze-icon(@icon-scale);
-    }
 }

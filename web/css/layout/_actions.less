@@ -1,0 +1,25 @@
+& when (@critical) {
+    .towishlist,
+    .tocompare,
+    .action.print {
+        display: inline-flex;
+        align-items: center;
+        &::before {
+            content: '';
+            width: @8;
+            height: @8;
+        }
+    }
+}
+
+& when not (@critical) {
+    .towishlist::before {
+        .breeze-icon(@icon-heart);
+    }
+    .tocompare::before {
+        .breeze-icon(@icon-scale);
+    }
+    .action.print::before {
+        .breeze-icon(@icon-printer);
+    }
+}
