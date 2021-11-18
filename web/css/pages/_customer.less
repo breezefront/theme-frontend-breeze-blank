@@ -16,6 +16,18 @@
         }
     }
 
+    .form-edit-account,
+    .form-address-edit {
+        > .fieldset {
+            @media @media-md {
+                float: left;
+                width: 48%;
+                max-width: 420px;
+                .margin-right(2%);
+            }
+        }
+    }
+
     .form-edit-account {
         .fieldset {
             &:not([style]) {
@@ -23,12 +35,6 @@
             }
             &.info {
                 display: block;
-                @media @media-md {
-                    float: left;
-                    width: 48%;
-                    max-width: 420px;
-                    .margin-right(2%);
-                }
             }
         }
     }

@@ -216,12 +216,13 @@
         display: flex;
         gap: @2;
     }
+    .nested > .field,
     button + .field,
     .field + .field {
         margin-top: @3;
     }
     .field {
-        .field + .field {
+        .choice + .choice {
             margin-top: @0-5;
         }
         .addon {
@@ -271,6 +272,13 @@
                 .right(@0-5);
                 top: @2-5;
                 z-index: 11;
+            }
+        }
+        &.street {
+            .control {
+                label {
+                    &:extend(.sr-only);
+                }
             }
         }
     }
