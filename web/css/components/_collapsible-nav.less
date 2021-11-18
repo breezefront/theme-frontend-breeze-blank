@@ -35,11 +35,13 @@
                 padding: 0;
                 margin: 0;
             }
-            a,
-            strong {
-                display: block;
-                padding: @1 0;
-                color: inherit;
+            .item {
+                > a,
+                > strong {
+                    display: block;
+                    padding: @1 0;
+                    color: inherit;
+                }
             }
             .delimiter {
                 display: block;
@@ -65,13 +67,17 @@
             @media @media-md {
                 padding: @3 0;
                 background: var(--gray-100);
-                a,
-                strong {
-                    padding: @1-5 @3;
-                    .border-left(3px solid transparent);
+
+                .item {
+                    > a,
+                    > strong {
+                        padding: @1-5 @3;
+                        .border-left(3px solid transparent);
+                    }
                 }
                 .current {
-                    strong {
+                    > a,
+                    > strong {
                         border-color: var(--blue-600);
                     }
                 }
