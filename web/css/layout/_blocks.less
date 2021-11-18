@@ -1,30 +1,30 @@
-@block__indent: var(--block-indent, @6);
-@block-title__padding: var(--block-title-padding, @2 0);
-@block-title__margin: var(--block-title-margin, 0);
-@block-title__color: var(--block-title-color, inherit);
-@block-title__background: var(--block-title-background, none);
-@block-title__border: var(--block-title-border, 0);
-@block-title__border-width: var(--block-title-border-width, 0);
-@block-content__padding: var(--block-content-padding, 0);
-@block-content__background: var(--block-content-background, none);
-@block-content__border: var(--block-content-border, 0);
-@block-content__border-width: var(--block-content-border-width, 0);
+@block__indent: @6;
+@block-title__padding: @2 0;
+@block-title__margin: 0;
+@block-title__color: inherit;
+@block-title__background: none;
+@block-title__border: 0;
+@block-title__border-width: 0;
+@block-content__padding: 0;
+@block-content__background: none;
+@block-content__border: 0;
+@block-content__border-width: 0;
 
 & when (@critical) {
     .sidebar + .sidebar,
     .page-main .block + .block,
     .page-main .block + script + .block {
-        margin-top: @block__indent;
+        margin-top: var(--block-indent, @block__indent);
     }
     .block {
         > .title,
         .block-title {
             .text-lg();
             font-weight: 500;
-            margin: @block-title__margin;
-            padding: @block-title__padding;
-            border: @block-title__border;
-            border-width: @block-title__border-width;
+            margin: var(--block-title-margin, @block-title__margin);
+            padding: var(--block-title-padding, @block-title__padding);
+            border: var(--block-title-border, @block-title__border);
+            border-width: var(--block-title-border-width, @block-title__border-width);
         }
         .block-title {
             a {
@@ -42,9 +42,9 @@
         }
         .block-content {
             display: flow-root;
-            padding: @block-content__padding;
-            border: @block-content__border;
-            border-width: @block-content__border-width;
+            padding: var(--block-content-padding, @block-content__padding);
+            border: var(--block-content-border, @block-content__border);
+            border-width: var(--block-content-border-width, @block-content__border-width);
         }
         .box {
             margin-bottom: @2;
@@ -102,8 +102,8 @@
     .block {
         > .title,
         .block-title {
-            color: @block-title__color;
-            background: @block-title__background;
+            color: var(--block-title-color, @block-title__color);
+            background: var(--block-title-background, @block-title__background);
         }
         .block-title {
             .counter {
@@ -111,7 +111,7 @@
             }
         }
         .block-content {
-            background: @block-content__background;
+            background: var(--block-content-color, @block-content__background);
         }
     }
     .sidebar .block .action.delete,

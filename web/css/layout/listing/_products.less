@@ -1,9 +1,10 @@
+@listing-grid-item__indent: @4;
+@listing-grid-item__max-width: 400px;
+@listing-grid-item__padding: 0;
+@listing-grid-item__width: 100/2%;
+
 & when (@critical) {
     :root {
-        --listing-grid-item-max-width: 400px;
-        --listing-grid-item-gap: @2;
-        --listing-grid-item-padding: 0;
-        --listing-grid-item-width: 100/2%;
         @media @media-sm {
             --listing-grid-item-width: 100/3%;
         }
@@ -97,12 +98,12 @@
         .products-grid & {
             display: flex;
             flex-wrap: wrap;
-            gap: var(--listing-grid-item-gap);
+            gap: var(--listing-grid-item-indent, @listing-grid-item__indent);
 
             .product-item {
-                padding: var(--listing-grid-item-padding);
-                max-width: var(--listing-grid-item-max-width);
-                width: ~"calc(var(--listing-grid-item-width) - var(--listing-grid-item-gap))";
+                padding: var(--listing-grid-item-padding, @listing-grid-item__padding);
+                max-width: var(--listing-grid-item-max-width, @listing-grid-item__max-width);
+                width: ~"calc(var(--listing-grid-item-width, @{listing-grid-item__width}) - var(--listing-grid-item-indent, @{listing-grid-item__indent}))";
             }
             .product-item-info {
                 height: 100%;
