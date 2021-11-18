@@ -18,7 +18,11 @@
 
     .form-edit-account {
         .fieldset {
+            &:not([style]) {
+                display: none;
+            }
             &.info {
+                display: block;
                 @media @media-md {
                     float: left;
                     width: 48%;
