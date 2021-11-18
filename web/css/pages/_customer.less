@@ -15,4 +15,53 @@
             }
         }
     }
+
+    .form-edit-account {
+        .fieldset {
+            &.info {
+                @media @media-md {
+                    float: left;
+                    width: 48%;
+                    max-width: 420px;
+                    .margin-right(2%);
+                }
+            }
+        }
+    }
+
+    [data-role="password-strength-meter"] {
+        display: none;
+    }
+
+    .page-title-wrapper {
+        .order-status {
+            display: inline-block;
+            border: 2px solid var(--color-divider);
+            padding: @1-5 @3;
+            + .order-date {
+                .margin-left(@2);
+            }
+        }
+        .order-date {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+    .order-links {
+        display: flex;
+        margin-bottom: @2;
+        > .item {
+            padding: @2 @3;
+            background-color: var(--gray-100);
+            &.current {
+                background-color: var(--gray-200);
+            }
+        }
+    }
+    .order-details-items {
+        margin: @2 0;
+        .order-title {
+            display: none;
+        }
+    }
 }
