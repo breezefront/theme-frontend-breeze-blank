@@ -19,6 +19,12 @@
     }
 
     // Styles for content and sidebar (grid and list)
+    .product-item-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: @1;
+    }
     .product-items {
         .product-item-photo {
             position: relative;
@@ -35,12 +41,6 @@
             flex-direction: column;
             gap: @1;
             width: 100%;
-        }
-        .product-item-actions {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: @1;
         }
         .actions-secondary {
             display: flex;
