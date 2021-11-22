@@ -191,7 +191,9 @@
 
 & when (@critical) {
     fieldset {
-        margin-bottom: @8;
+        + * {
+            margin-bottom: @8;
+        }
         &:last-child {
             margin-bottom: 0;
         }
