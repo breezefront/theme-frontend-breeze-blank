@@ -138,91 +138,95 @@
             padding: 0 @1;
             margin: @4 -@1;
         }
-        .minicart-items {
-            li.product + li {
-                margin-top: @4;
-                padding-top: @4;
-                border-top: 1px solid var(--color-divider);
-            }
-            li.product > div.product {
-                position: relative;
-                display: flex;
-                align-items: flex-start;
-                gap: @3;
-            }
+    }
 
-            .product-image-container {
-                display: block;
+    .minicart-items {
+        li.product-item + li {
+            margin-top: @4;
+            padding-top: @4;
+            border-top: 1px solid var(--color-divider);
+        }
+        li.product-item > div.product {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            gap: @3;
+        }
+
+        .product-image-container {
+            display: block;
+            border: 1px solid var(--color-divider);
+        }
+        .product-item-photo,
+        .product-image-container {
+            flex-shrink: 0;
+        }
+        .subtotal,
+        .price-container {
+            margin: @1 0;
+        }
+        .details-qty {
+            color: var(--color-muted);
+            margin: @1 0;
+            display: flex;
+            align-items: center;
+            gap: @1-5;
+
+            .label,
+            .value {
+                &:extend(.text-sm);
             }
-            .product-item-photo {
-                border: 1px solid var(--color-divider);
-                flex-shrink: 0;
-            }
-            .price-container {
-                margin: @1 0;
-            }
-            .qty {
+            .item-qty {
+                &:extend(.input-xs);
                 color: var(--color-muted);
-                margin: @1 0;
-                display: flex;
-                align-items: center;
-                gap: @1-5;
-
-                .label {
-                    &:extend(.text-sm);
-                }
-                .item-qty {
-                    &:extend(.input-xs);
-                    color: var(--color-muted);
-                    width: @10;
-                    border-color: transparent;
-                    .margin-left(-@1);
-                }
-                .update-cart-item {
-                    &:extend(.button-xs);
-                    span {
-                        &:extend(.sr-only);
-                    }
-                    &::before {
-                        content: '';
-                        display: block;
-                        width: @4;
-                        height: @4;
-                        .breeze-icon(@icon-check, @4);
-                    }
-                }
+                width: @10;
+                border-color: transparent;
+                .margin-left(-@1);
             }
-            .actions {
-                display: flex;
-                gap: @0-5;
-                position: absolute;
-                bottom: @1;
-                .right(0);
-                a {
-                    display: flex;
-                    &::before {
-                        color: var(--gray-300);
-                    }
-                }
-            }
-            .action.edit,
-            .action.delete {
+            .update-cart-item {
+                &:extend(.button-xs);
                 span {
                     &:extend(.sr-only);
                 }
                 &::before {
                     content: '';
                     display: block;
-                    width: @6;
-                    height: @6;
+                    width: @4;
+                    height: @4;
+                    .breeze-icon(@icon-check, @4);
                 }
             }
-            .action.edit::before {
-                .breeze-icon(@icon-pencil, @5);
+        }
+        .actions {
+            display: flex;
+            gap: @0-5;
+            position: absolute;
+            bottom: @1;
+            .right(0);
+            a {
+                display: flex;
+                &::before {
+                    color: var(--gray-300);
+                }
             }
-            .action.delete::before {
-                .breeze-icon(@icon-trash, @5);
+        }
+        .action.edit,
+        .action.delete {
+            span {
+                &:extend(.sr-only);
             }
+            &::before {
+                content: '';
+                display: block;
+                width: @6;
+                height: @6;
+            }
+        }
+        .action.edit::before {
+            .breeze-icon(@icon-pencil, @5);
+        }
+        .action.delete::before {
+            .breeze-icon(@icon-trash, @5);
         }
     }
 }
