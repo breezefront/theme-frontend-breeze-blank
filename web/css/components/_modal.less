@@ -39,7 +39,7 @@
         display: flex;
         flex-direction: column;
         padding: 0;
-        width: 95%;
+        width: 100%;
         max-width: var(--modal-max-width);
         max-height: var(--modal-max-height);
         background: var(--bg-main);
@@ -68,6 +68,11 @@
             }
             opacity: 1;
         }
+
+        .block-title {
+            .text-2xl();
+            margin-bottom: @1;
+        }
     }
 
     .modal-header,
@@ -85,10 +90,12 @@
     .modal-header {
         .action-close {
             &:extend(.button-x all);
+            background: var(--bg-main);
         }
     }
 
     .modal-content {
+        margin-top: -@6;
         overflow: auto;
         overscroll-behavior: contain;
         &:last-child {
