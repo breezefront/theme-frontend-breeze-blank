@@ -1,0 +1,16 @@
+& when (@critical) {
+    .pagebuilder {
+        &-mobile {
+            &-hidden {
+                @media @media-md-down {
+                    display: none;
+                }
+            }
+            &-only {
+                @media @media-md {
+                    display: none;
+                }
+            }
+        }
+    }
+}
