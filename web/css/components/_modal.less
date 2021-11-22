@@ -34,19 +34,20 @@
     }
 
     .modal-inner-wrap {
+        --modal-max-width: 500px;
+        --modal-max-height: 85vh;
         display: flex;
         flex-direction: column;
         padding: 0;
         width: 95%;
-        max-width: 500px;
-        max-height: 85vh;
+        max-width: var(--modal-max-width);
+        max-height: var(--modal-max-height);
         background: var(--bg-main);
         pointer-events: auto;
         .shadow-xl-around();
 
-        .modal-xl &,
-        .popup-authentication & {
-            max-width: 850px;
+        .modal-xl & {
+            --modal-max-width: 850px;
         }
 
         &:extend(.transition);
