@@ -80,14 +80,18 @@
                 a.action {
                     color: var(--color-muted);
                     opacity: .5;
-                    span {
-                        &:extend(.sr-only);
-                    }
                     &::before {
                         content: '';
                         display: block;
                         width: @6;
                         height: @6;
+                    }
+                }
+                a.action-edit,
+                a.action-delete,
+                a.action-towishlist {
+                    span {
+                        &:extend(.sr-only);
                     }
                 }
             }
