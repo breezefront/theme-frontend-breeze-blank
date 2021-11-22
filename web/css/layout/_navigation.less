@@ -1,8 +1,17 @@
 .navigation {
     .submenu {
         &:extend(.breeze-dropdown);
-        &.shown {
+        &.shown,
+        &[aria-expanded="true"]:not([aria-hidden]) {
             &:extend(.breeze-dropdown-visible);
+        }
+        // shopping cart page
+        body:not(.breeze) & {
+            &[aria-expanded="true"]:not([aria-hidden]) {
+                .submenu {
+                    &:extend(.breeze-dropdown-visible);
+                }
+            }
         }
     }
     li > a {
@@ -145,9 +154,21 @@
                 box-shadow: none;
                 background: none;
                 transform: scale(1);
-                &.shown {
-                    position: static;
+                body:not(.breeze) &,
+                &.shown,
+                &[aria-expanded="true"]:not([aria-hidden]) {
+                    position: static !important;
                     transform: scale(1);
+                }
+                body:not(.breeze) & {
+                    .ui-icon {
+                        display: none;
+                    }
+                    &[aria-expanded="true"]:not([aria-hidden]) {
+                        .submenu {
+                            display: block !important;
+                        }
+                    }
                 }
             }
 
@@ -187,8 +208,8 @@
                 .right(auto);
 
                 .submenu {
-                    top: -@0-5;
-                    left: ~"calc(100% - @{4})";
+                    top: -@0-5 !important;
+                    left: ~"calc(100% - @{4}) !important";
                 }
             }
         }

@@ -24,7 +24,10 @@
         background: var(--bg-main);
         border: 1px solid var(--gray-200);
         border-radius: 0;
-        display: block !important; // override inline style to enable amination
+
+        .breeze & {
+            display: block !important; // override inline style to enable amination
+        }
 
         .item {
             cursor: pointer;
