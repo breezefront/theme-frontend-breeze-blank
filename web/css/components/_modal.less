@@ -1,4 +1,5 @@
-.modals-overlay {
+.modals-overlay,
+.modal-custom-overlay {
     .breeze-overlay();
     ._show ~ & {
         .breeze-overlay-visible();
@@ -10,7 +11,8 @@
         overflow: hidden;
     }
 
-    .modal-popup {
+    .modal-popup,
+    .modal-custom {
         &:extend(.inset-0);
         position: fixed;
         z-index: 900;
