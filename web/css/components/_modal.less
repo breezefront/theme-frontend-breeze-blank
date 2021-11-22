@@ -34,12 +34,17 @@
     .modal-inner-wrap {
         display: flex;
         flex-direction: column;
-        padding: @4;
+        padding: 0;
         width: 95%;
         max-width: 500px;
         max-height: 85vh;
         background: var(--bg-main);
         pointer-events: auto;
+
+        .modal-xl &,
+        .popup-authentication & {
+            max-width: 850px;
+        }
 
         &:extend(.transition);
         opacity: 0;
@@ -62,8 +67,15 @@
     }
 
     .modal-header,
+    .modal-content,
+    .modal-footer {
+        padding: 0 @4;
+    }
+
+    .modal-header,
     .modal-footer {
         flex-shrink: 0;
+        padding-top: @4;
     }
 
     .modal-header {
@@ -75,10 +87,13 @@
     .modal-content {
         overflow: auto;
         overscroll-behavior: contain;
-        padding: @4 0;
+        &:last-child {
+            padding-bottom: @4;
+        }
     }
 
     .modal-footer {
+        padding-bottom: @4;
         display: flex;
         justify-content: flex-end;
         gap: @2;
