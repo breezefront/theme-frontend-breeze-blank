@@ -147,10 +147,23 @@
         color: var(--red-600);
     }
 
+    .action.primary {
+        &:extend(button all);
+    }
+
     [data-content-type="row"],
     .cms-no-route .main,
     .cms-page-view .main {
         .text-lg();
         &:extend(.breeze-prose all);
+    }
+}
+
+& when not (@critical) {
+    .action.primary {
+        &:extend(button all);
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
