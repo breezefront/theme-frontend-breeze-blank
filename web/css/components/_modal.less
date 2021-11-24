@@ -7,8 +7,11 @@
 }
 
 & when not (@critical) {
-    body._has-modal {
-        overflow: hidden;
+    body.breeze {
+        &._has-modal,
+        &._has-modal-custom {
+            overflow: hidden;
+        }
     }
 
     .modal-popup,
