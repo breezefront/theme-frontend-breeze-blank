@@ -16,6 +16,15 @@
 
     .modal-popup,
     .modal-custom {
+        --modal-max-width: 500px;
+        --modal-max-height: 85vh;
+        --modal-padding-x: @4;
+        --modal-padding-y: var(--modal-padding-x);
+
+        @media @media-md {
+            --modal-padding-x: @8;
+        }
+
         &:extend(.inset-0);
         position: fixed;
         z-index: 900;
@@ -23,7 +32,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        padding: @7;
+        padding: @24 @7 @7;
         visibility: hidden;
         pointer-events: none;
 
@@ -37,14 +46,13 @@
     }
 
     .modal-inner-wrap {
-        --modal-max-width: 500px;
-        --modal-max-height: 85vh;
         display: flex;
         flex-direction: column;
         padding: 0;
         width: 100%;
         max-width: var(--modal-max-width);
         max-height: var(--modal-max-height);
+        max-height: -webkit-fill-available;
         background: var(--bg-main);
         pointer-events: auto;
         .shadow-xl-around();
@@ -81,33 +89,36 @@
     .modal-header,
     .modal-content,
     .modal-footer {
-        padding: 0 @4;
+        padding: 0 var(--modal-padding-x);
     }
 
     .modal-header,
     .modal-footer {
         flex-shrink: 0;
-        padding-top: @4;
+        padding-top: var(--modal-padding-y);
+        position: relative;
     }
 
     .modal-header {
         .action-close {
             &:extend(.button-x all);
             background: var(--bg-main);
+            position: absolute;
+            top: var(--modal-padding-y);
+            .right(var(--modal-padding-x));
         }
     }
 
     .modal-content {
-        margin-top: -@6;
         overflow: auto;
         overscroll-behavior: contain;
         &:last-child {
-            padding-bottom: @4;
+            padding-bottom: var(--modal-padding-y);
         }
     }
 
     .modal-footer {
-        padding-bottom: @4;
+        padding-bottom: var(--modal-padding-y);
         display: flex;
         justify-content: flex-end;
         gap: @2;
