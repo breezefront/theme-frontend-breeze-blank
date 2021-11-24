@@ -1,0 +1,99 @@
+& when (@critical) {
+    .shipping-address {
+        &-item {
+            &s {
+                display: flex;
+                flex-wrap: wrap;
+                gap: @4;
+            }
+
+            position: relative;
+            padding: @2;
+            width: ~"calc(50% - @{2})";
+            border: 2px solid var(--gray-100);
+
+            .action {
+                position: absolute;
+                bottom: @2;
+                .right(@2);
+            }
+            .action-select-shipping-item {
+                opacity: 0;
+            }
+            &:hover {
+                .action-select-shipping-item {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .shipping-policy-block {
+        position: absolute;
+        top: ~"calc(var(--checkout-step-padding-y) + @{1})";
+        right: ~"calc(var(--checkout-step-padding-x) + @{1})";
+    }
+    .table-checkout-shipping-method {
+        thead {
+            display: none;
+        }
+        .col-method:first-child {
+            text-align: center;
+        }
+    }
+}
+
+& when not (@critical) {
+    .table-checkout-shipping-method {
+        .row {
+            cursor: pointer;
+        }
+    }
+
+    .shipping-address {
+        &-item {
+            &.selected-item {
+                border-color: var(--blue-500);
+                &::after {
+                    color: var(--blue-600);
+                    .breeze-icon(@icon-check);
+                    position: absolute;
+                    bottom: @2;
+                    .right(@2);
+                    content: '';
+                    width: @6;
+                    height: @10;
+                }
+            }
+
+            .action {
+                &:extend(.transition);
+            }
+
+            .edit-address-link {
+                &:extend(.button-reset all);
+                .right(@2);
+                top: @2;
+                width: @6;
+                height: @6;
+                opacity: .6;
+                background: var(--bg-main);
+
+                &::before {
+                    .breeze-icon(@icon-pencil, @5);
+                    content: '';
+                    width: @6;
+                    height: @6;
+                    display: block;
+                }
+                span {
+                    &:extend(.sr-only);
+                }
+            }
+        }
+    }
+
+    .new-address-popup {
+        margin-top: @4;
+    }
+}

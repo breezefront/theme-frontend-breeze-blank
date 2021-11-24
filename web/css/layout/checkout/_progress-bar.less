@@ -1,0 +1,24 @@
+.opc-progress-bar {
+    &:extend(.breeze-breadcrumbs-container all);
+    li {
+        &:extend(.breeze-breadcrumbs-item all);
+    }
+}
+
+& when (@critical) {
+    .opc-progress-bar {
+        color: var(--color-muted);
+        margin-bottom: @4;
+        ._active {
+            color: var(--color-main);
+            font-weight: bold;
+        }
+        ._complete {
+            &:extend(.link-common all);
+            cursor: pointer;
+        }
+        li::after {
+            color: var(--color-muted);
+        }
+    }
+}

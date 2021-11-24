@@ -1,0 +1,26 @@
+& when (@critical) {
+    .opc .checkout-shipping-address {
+        padding-bottom: 0;
+    }
+
+    .fieldset.address {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: @2;
+        row-gap: @3;
+
+        select {
+            overflow: hidden; // fix scrollbar in safari on mobile view
+        }
+
+        > .field {
+            margin: 0 !important;
+            width: ~"calc(50% - @{1})";
+
+            &.choice,
+            &.street {
+                width: 100%;
+            }
+        }
+    }
+}

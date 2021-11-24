@@ -1,0 +1,97 @@
+& when (@critical) {
+    .opc-estimated-wrapper {
+        .showcart {
+            &:extend(.button-reset all);
+        }
+    }
+    @media @media-md-down {
+        .opc-estimated-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-main);
+            padding: var(--checkout-step-padding-y) var(--checkout-step-padding-x);
+            margin-bottom: @4;
+
+            .estimated-block {
+                .text-lg();
+            }
+            .estimated-price {
+                font-weight: 500;
+            }
+
+
+        }
+    }
+    @media @media-md {
+        .opc-estimated-wrapper {
+            display: none;
+        }
+    }
+
+    .opc-summary-wrapper {
+        .action-edit {
+            &:extend(.button-reset all);
+            &:extend(.link-common all);
+            text-transform: capitalize;
+        }
+        .shipping-information {
+            display: flex;
+            gap: @2;
+            color: var(--gray-700);
+            padding-top: @3;
+            border-top: 1px solid var(--gray-100);
+
+            > div {
+                width: ~"calc(50% - @{1})";
+            }
+
+            &-title {
+                font-weight: 500;
+                margin-bottom: @1-5;
+            }
+        }
+
+        .table-totals {
+            margin-top: @1;
+        }
+        .totals-tax,
+        .totals:not(.grand) {
+            color: var(--gray-700);
+            border: 0;
+            th, td {
+                font-weight: 400;
+                padding-top: @1;
+                padding-bottom: @1;
+            }
+        }
+        .grand.totals {
+            .text-xl();
+        }
+    }
+
+    .opc-block-summary {
+        display: flex;
+        flex-direction: column;
+        gap: @2;
+        margin-bottom: @2;
+
+        .title {
+            order: -10;
+        }
+        .items-in-cart {
+            order: -5;
+            margin-top: -@2;
+            > .title {
+                .text-sm();
+                text-transform: uppercase;
+                strong {
+                    font-weight: 450;
+                }
+            }
+            ol.minicart-items {
+                max-height: 26vh;
+            }
+        }
+    }
+}

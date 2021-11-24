@@ -1,0 +1,99 @@
+& when (@critical) {
+    .page-layout-checkout {
+        --container-max-width: 980px;
+
+        .page-header,
+        .nav-toggle {
+            display: none;
+        }
+        .page-main {
+            padding-top: @4;
+            @media @media-lg {
+                padding-top: @10;
+            }
+        }
+    }
+
+    .checkout-container {
+        --sidebar-width: 320px;
+        --sidebar-gap: @4;
+
+        --checkout-step-padding-x: @4;
+        --checkout-step-padding-y: var(--checkout-step-padding-x);
+
+        @media @media-md {
+            --checkout-step-padding-x: @8;
+        }
+
+        @media @media-lg {
+            --sidebar-width: 380px;
+            --sidebar-gap: @10;
+        }
+
+        display: flow-root;
+    }
+
+    .opc {
+        .actions-toolbar {
+            justify-content: flex-end;
+        }
+
+        .step-title,
+        .field-select-billing .label,
+        &-block-summary > .title {
+            .text-xl();
+            display: block;
+            font-weight: 500;
+            margin-bottom: @3;
+        }
+
+        > li {
+            padding: var(--checkout-step-padding-y) var(--checkout-step-padding-x);
+            position: relative;
+        }
+
+        @media @media-md {
+            &-wrapper {
+                float: left;
+                margin-bottom: @4;
+                width: ~"calc(100% - var(--sidebar-width) - var(--sidebar-gap))";
+            }
+
+            &-sidebar.modal-custom {
+                position: sticky;
+                z-index: initial;
+                top: @4;
+                padding: 0;
+                width: var(--sidebar-width);
+                float: right;
+                visibility: visible;
+                pointer-events: all;
+                .modal-inner-wrap {
+                    opacity: 1;
+                    transform: none;
+                    box-shadow: none;
+                    max-height: none;
+                }
+                .modal-content {
+                    margin: 0;
+                    padding: var(--checkout-step-padding-y) var(--checkout-step-padding-x);
+                }
+                [data-role="focusable-start"],
+                [data-role="focusable-end"],
+                .modal-header,
+                .modal-footer {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+& when not (@critical) {
+    .page-layout-checkout {
+        background: var(--gray-100);
+    }
+    .opc {
+        background: var(--bg-main);
+    }
+}

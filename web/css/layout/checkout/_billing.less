@@ -1,0 +1,79 @@
+& when (@critical) {
+    // hide the mess of useless elements on the top of billing step
+    .checkout-payment-method {
+        .form.payments {
+            > .fieldset {
+                > br,
+                > hr,
+                > .legend {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Spacing between afterMethods blocks
+    .opc-payment ~ div {
+        margin-top: @6;
+    }
+
+    .payment-method {
+        &-title {
+            padding: @2 0;
+        }
+        &-content {
+            .padding(@2 0 0 @6);
+            display: none;
+
+            ._active & {
+                display: block;
+            }
+        }
+        .fieldset {
+            margin-bottom: @4;
+        }
+        .checkout-billing-address {
+            margin-bottom: @4;
+        }
+    }
+
+    .field-select-billing {
+        margin-bottom: @4;
+    }
+    .billing-address-details {
+        .padding(@2 0 0 @5);
+        .action {
+            margin-top: @1;
+        }
+    }
+
+    .payment-option {
+        &-title.field.choice {
+            align-items: center;
+            gap: @0-5;
+        }
+        &-content {
+            padding-top: @2;
+        }
+    }
+
+    .form-discount label {
+        &:extend(.sr-only);
+    }
+
+    .checkout-agreements {
+        &-block {
+            .field + .field {
+                margin-top: @1;
+            }
+        }
+    }
+    .agreements-modal {
+        .modal-inner-wrap {
+            --modal-max-width: 850px;
+        }
+    }
+    .checkout-agreements-item-content {
+        &:extend(.breeze-prose all);
+    }
+}
