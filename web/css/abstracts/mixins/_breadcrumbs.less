@@ -1,0 +1,29 @@
+.breeze-breadcrumbs-container {
+    & when (@critical) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: @2;
+    }
+}
+
+.breeze-breadcrumbs-item {
+    & when (@critical) {
+        display: flex;
+        align-items: center;
+        gap: @1;
+        &::after {
+            content: '';
+            width: @4;
+            height: @4;
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+
+    & when not (@critical) {
+        &::after {
+            .breeze-icon(@icon-chevron, @3);
+        }
+    }
+}
