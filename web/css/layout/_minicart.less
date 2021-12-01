@@ -165,8 +165,19 @@
         li.product-item > div.product {
             position: relative;
             display: flex;
+            flex-wrap: wrap;
             align-items: flex-start;
             gap: @3;
+
+            > :nth-child(1) {
+                max-width: 30%;
+            }
+            > :nth-child(2) {
+                max-width: 65%;
+            }
+            .message {
+                width: 100%;
+            }
         }
 
         .product-image-container {
