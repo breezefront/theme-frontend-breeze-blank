@@ -11,7 +11,7 @@
                 --block-title-padding: @2 @4;
                 --block-content-padding: @4;
                 --block-title-margin: 0;
-                --block-title-background: var(--gray-100);
+                --block-title-bg: var(--muted-bg);
             }
         }
     }
@@ -46,7 +46,7 @@
     .page-title-wrapper {
         .order-status {
             display: inline-block;
-            border: 2px solid var(--color-divider);
+            border: 2px solid @divider__color;
             padding: @1-5 @3;
             + .order-date {
                 .margin-left(@2);
@@ -62,9 +62,9 @@
         margin-bottom: @2;
         > .item {
             padding: @2 @3;
-            background-color: var(--gray-100);
+            background-color: @muted__background;
             &.current {
-                background-color: var(--gray-200);
+                --divider-alpha: .2;
             }
         }
     }

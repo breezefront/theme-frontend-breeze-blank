@@ -15,13 +15,13 @@
             top: 0;
             z-index: 40;
             text-align: center;
-            background: #fff;
+            background: @base__background;
             &:hover {
-                background: var(--gray-50);
+                text-decoration: underline;
             }
             &:focus-within {
                 outline: none;
-                border-bottom: 1px solid var(--color-divider);
+                border-bottom: 1px solid @divider__color;
                 padding: @2;
             }
         }

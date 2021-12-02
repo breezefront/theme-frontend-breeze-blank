@@ -67,8 +67,8 @@
         .stock {
             padding: @0-5 @2;
             &.available {
-                background: var(--green-100);
-                color: var(--green-600);
+                background: @success__background;
+                color: @success__color;
             }
         }
         .sku {
@@ -128,13 +128,18 @@
             gap: @3;
             a {
                 &:extend(.link-common all);
-                color: var(--color-muted);
+                color: @muted__color;
             }
         }
     }
 
     .product.info.detailed {
         clear: both;
+    }
+    @media @media-md-down {
+        .additional-attributes th {
+            display: none !important;
+        }
     }
     @media @media-md {
         .product-details-wrapper {

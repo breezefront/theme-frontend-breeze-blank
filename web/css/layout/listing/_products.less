@@ -49,7 +49,8 @@
         }
         .actions-secondary {
             display: flex;
-            color: var(--gray-400);
+            --muted-alpha: .4;
+            color: @muted__color;
             gap: @0-5;
         }
         .towishlist,
@@ -128,7 +129,10 @@
             .product-item + .product-item {
                 margin-top: @3;
                 padding-top: @3;
-                border-top: 1px solid var(--color-divider);
+                border-top: 1px solid @divider__color;
+            }
+            .product-item-info {
+                gap: @3;
             }
             .product-item-actions {
                 margin: @1 0;

@@ -91,9 +91,19 @@
 
 & when not (@critical) {
     .page-layout-checkout {
-        background: var(--gray-100);
+        background: @muted__background;
     }
     .opc {
-        background: var(--bg-main);
+        background: @base__background;
+        @media @media-md {
+            &-sidebar.modal-custom {
+                .modal-inner-wrap {
+                    background: @base__background;
+                }
+                .minicart-items-wrapper::after {
+                    background: linear-gradient(~"rgba(var(--base-bg), 0)", ~"rgba(var(--base-bg), 1)");
+                }
+            }
+        }
     }
 }

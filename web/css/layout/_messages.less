@@ -33,14 +33,14 @@
 & when not (@critical) {
     .message {
         border: 1px solid var(--message-border-color);
-        background: var(--message-background);
+        background: var(--message-bg);
         color: var(--message-color);
         padding: @3 @4;
 
         &.success {
-            --message-border-color: var(--green-200);
-            --message-background: var(--green-100);
-            --message-color: var(--green-600);
+            --message-border-color: @success__background;
+            --message-bg: @success__background;
+            --message-color: @success__color;
             &::before {
                 .breeze-icon(@icon-s-check, @5);
             }
@@ -48,17 +48,17 @@
         &.info,
         &.warning,
         &.notice {
-            --message-border-color: var(--blue-200);
-            --message-background: var(--blue-100);
-            --message-color: var(--blue-600);
+            --message-border-color: @info__background;
+            --message-bg: @info__background;
+            --message-color: @info__color;
             &::before {
                 .breeze-icon(@icon-s-information-circle, @5)
             }
         }
         &.error {
-            --message-border-color: var(--red-200);
-            --message-background: var(--red-100);
-            --message-color: var(--red-600);
+            --message-border-color: @danger__background;
+            --message-bg: @danger__background;
+            --message-color: @danger__color;
             &::before {
                 .breeze-icon(@icon-s-exclamation-circle, @5)
             }

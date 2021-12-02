@@ -21,8 +21,8 @@
         z-index: 40;
         visibility: hidden;
         margin-top: @0-5;
-        background: var(--bg-main);
-        border: 1px solid var(--gray-200);
+        background: @z-layer__background;
+        border: 1px solid @divider__color;
         border-radius: 0;
 
         .breeze & {
@@ -30,10 +30,11 @@
         }
 
         .item {
+            --divider-alpha: .05;
             cursor: pointer;
             border-radius: 0;
             &:hover {
-                background: var(--gray-100);
+                background: @divider__color;
             }
         }
     }

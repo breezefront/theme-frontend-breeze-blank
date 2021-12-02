@@ -21,7 +21,7 @@
 }
 
 .focus-ring {
-    outline: 2px solid var(--blue-600);
+    outline: 2px solid @ring__color;
     outline-offset: 1px;
 }
 
@@ -63,9 +63,11 @@
 }
 
 .link-common {
-    color: var(--blue-600);
+    color: @link__color;
+    text-decoration: @link__text-decoration;
     &:hover {
-        text-decoration: underline;
+        --link-alpha: 1;
+        text-decoration: @link__hover__text-decoration;
     }
 }
 
@@ -92,7 +94,7 @@
             .padding-right(10px);
             content: attr(data-th) ': ';
             display: inline-block;
-            color: var(--color-muted);
+            color: @muted__color;
             font-weight: 500;
         }
     }
@@ -112,11 +114,15 @@
     figure {
         margin-bottom: @3;
     }
+    section {
+        margin-bottom: @4;
+    }
     ol, ul {
         padding-left: @5;
     }
     li::marker {
-        color: var(--gray-400);
+        --muted-alpha: .4;
+        color: @muted__color;
     }
     ul {
         list-style: disc;
@@ -127,7 +133,7 @@
     blockquote {
         margin: @6 0;
         padding-left: @4;
-        .border-left(4px solid var(--gray-200));
+        .border-left(4px solid @divider__color);
         font-style: italic;
         font-weight: 500;
     }
@@ -142,7 +148,7 @@
         margin: @4 0;
         padding: @4;
         overflow-x: auto;
-        background: var(--gray-200);
+        background: @muted__background;
         code {
             font-weight: 400;
             &:before,
@@ -156,10 +162,41 @@
     }
     figcaption {
         margin-top: @2;
-        color: var(--color-muted);
+        color: @muted__color;
     }
     .lead {
         .text-xl();
-        color: var(--gray-700);
+        color: @muted__color;
+    }
+}
+
+.breeze-prose-reset {
+    a {
+        --link-alpha: 1;
+        --link-color: var(--base-color);
+
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    p,
+    ul,
+    ol,
+    table,
+    figure {
+        margin-bottom: 0 !important;
+    }
+    ol, ul {
+        padding-left: 0 !important;
+    }
+    li::marker {
+        color: initial !important;
+    }
+    ul {
+        list-style: none !important;
+    }
+    ol {
+        list-style: none !important;
     }
 }

@@ -99,7 +99,7 @@
             .breeze-icon(@icon-menu);
             .nav-open & {
                 .breeze-icon(@icon-x);
-                color: var(--bg-main);
+                color: @base__background;
                 opacity: .8;
             }
         }
@@ -107,9 +107,10 @@
 
     .navigation {
         li > a {
+            --divider-alpha: .05;
             position: relative;
             &:hover {
-                background: var(--gray-100);
+                background: @divider__color;
             }
         }
 
@@ -119,8 +120,10 @@
                 &::after {
                     content: '';
                     position: absolute;
-                    .right(@1);
-                    width: @5;
+                    .right(@0-5);
+                    top: 50%;
+                    margin-top: -@6/2;
+                    width: @6;
                     height: @6;
                     &:extend(.transition);
                     .breeze-icon(@icon-chevron, @3);
@@ -184,7 +187,8 @@
     @media @media-md {
         .navigation-wrapper {
             .opened > a {
-                background: var(--gray-100);
+                --divider-alpha: .05;
+                background: @divider__color;
             }
 
             .parent {

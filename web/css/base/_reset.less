@@ -89,9 +89,6 @@
         font-family: inherit;
         font-size: 100%;
         line-height: inherit;
-        color: inherit;
-        margin: 0;
-        padding: 0;
     }
 
     button,
@@ -173,6 +170,8 @@
 
     input::placeholder,
     textarea::placeholder {
+        --muted-alpha: .4;
+        color: @muted__color;
         opacity: 1;
     }
 
@@ -210,19 +209,6 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        background-color: var(--form-field-bg);
-        color: var(--form-field-color);
-        padding: @2 @3;
-        border: var(--form-field-border-width) solid var(--form-field-border-color);
-        border-radius: var(--form-field-border-radius);
-        outline: none;
-        position: relative;
-        width: 100%;
-
-        &:disabled {
-            opacity: .5;
-            cursor: not-allowed;
-        }
     }
 
     [type=checkbox],
@@ -234,9 +220,9 @@
         background-origin: border-box;
         flex-shrink: 0;
         min-width: 0;
-        height: @4;
-        width: @4;
-        color: var(--form-field-focus-border-color);
+        height: @checkbox__size;
+        width: @checkbox__size;
+        color: @checkbox__color;
     }
 
     [type=image] {
@@ -253,13 +239,6 @@
     input[type='button'] {
         --spinner-size: @5;
         --spinner-border-color: var(--button-color);
-        min-width: 0;
-        width: auto;
-        border: var(--button-border-width) solid var(--button-border-color);
-        background-color: var(--button-bg);
-        color: var(--button-color);
-        padding-right: @5;
-        padding-left: @5;
     }
 
     select {
@@ -284,7 +263,7 @@
 
     [type=checkbox]:focus,
     [type=radio]:focus {
-        box-shadow: var(--form-checkbox-focus-box-shadow);
+        box-shadow: @checkbox__focus__shadow;
     }
 
     [type=file] {
@@ -299,36 +278,6 @@
 }
 
 & when not (@critical) {
-    input,
-    button,
-    textarea,
-    select {
-        &:focus {
-            z-index: 10;
-            outline: 2px solid transparent;
-            outline-offset: 2px;
-        }
-    }
-
-    input,
-    textarea,
-    select {
-        &:focus {
-            box-shadow: var(--form-field-focus-box-shadow);
-            border-color: var(--form-field-focus-border-color);
-        }
-    }
-
-    button,
-    input[type='submit'],
-    input[type='reset'],
-    input[type='button'] {
-        &:focus {
-            box-shadow: var(--button-focus-box-shadow);
-            border-color: var(--button-focus-border-color);
-        }
-    }
-
     select {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
         background-position: right @2 center;

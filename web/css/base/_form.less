@@ -1,3 +1,28 @@
+input,
+textarea,
+select {
+    &:extend(.breeze-input all);
+}
+
+button,
+.action.primary,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+    &:extend(.breeze-button all);
+}
+
+.action.primary,
+input[type='submit'] {
+    &:extend(.breeze-button-primary all);
+}
+
+button:not(.primary):not(.select),
+input[type='reset'],
+input[type='button'] {
+    &:extend(.breeze-button-secondary all);
+}
+
 .field-tooltip-content {
     &:extend(.breeze-dropdown);
     &[aria-hidden="false"] {
@@ -30,11 +55,14 @@
             width: 100%;
             margin: 0 0 @5;
             padding: 0 0 @0-5;
-            border-bottom: 1px solid var(--color-divider);
+            border-bottom: 1px solid @divider__color;
 
             + br {
                 display: none;
             }
+        }
+        .label + br {
+            display: none;
         }
         .actions-toolbar {
             margin-top: @5;
@@ -81,7 +109,7 @@
                 gap: @1;
                 &::after {
                     content: '*';
-                    color: var(--red-600);
+                    color: @danger__color;
                 }
             }
         }
@@ -89,20 +117,22 @@
             display: flex;
             gap: @1-5;
             align-items: flex-start;
+            line-height: var(--line-height);
             clear: left;
             position: relative;
             > [type="radio"],
             > [type="checkbox"] {
-                margin-top: @1;
+                margin-top: ~"calc(var(--line-height) / 2 - @{checkbox__size} / 2)";
             }
             .field-tooltip {
-                margin-top: @0-5;
+                margin-top: ~"calc(var(--line-height) / 2 - @{4-5} / 2)";
             }
             div.mage-error {
                 .right(0);
                 .padding-left(@2);
+                margin-top: 0;
                 position: absolute;
-                background: var(--bg-main);
+                background: @base__background;
                 z-index: 11;
             }
         }
@@ -119,7 +149,7 @@
             .field-tooltip {
                 position: absolute;
                 .right(@1);
-                top: @2-5;
+                top:~"calc(var(--line-height) / 2 - @{1} / 2)";
                 z-index: 11;
             }
         }
@@ -146,7 +176,7 @@
         }
     }
     .field-tooltip-action {
-        color: var(--color-muted);
+        color: @muted__color;
         &,
         &::before {
             display: block;
@@ -173,7 +203,7 @@
     div.field-error {
         margin-top: @0-5;
         font-size: .9rem;
-        color: var(--red-600);
+        color: @danger__color;
     }
     .field-tooltip {
         --dropdown-width: @72;

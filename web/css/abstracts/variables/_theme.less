@@ -1,0 +1,65 @@
+@font-sans:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+@font-mono:  ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+@ring__color: ~"rgba(var(--ring-color), var(--ring-alpha, 1))";
+@headings__color: ~"rgba(var(--headings-color), var(--headings-alpha, 1))";
+@link__color: ~"rgba(var(--link-color), var(--link-alpha))";
+@link__text-decoration: none;
+@link__hover__text-decoration: underline;
+
+// -- Base colors --
+@brand__color: ~"rgba(var(--brand-color), var(--brand-alpha, 1))";
+@danger__color: ~"rgba(var(--danger-color), var(--danger-alpha, 1))";
+@info__color: ~"rgba(var(--info-color), var(--info-alpha, 1))";
+@success__color: ~"rgba(var(--success-color), var(--success-alpha, 1))";
+@danger__background: ~"rgba(var(--danger-color), var(--danger-bg-alpha, .1))";
+@info__background: ~"rgba(var(--info-color), var(--info-bg-alpha, .1))";
+@success__background: ~"rgba(var(--success-color), var(--success-bg-alpha, .1))";
+
+@base__color: ~"rgba(var(--base-color), var(--base-alpha, 1))";
+@muted__color: ~"rgba(var(--base-color), var(--muted-alpha, .6))";
+@divider__color: ~"rgba(var(--base-color), var(--divider-alpha, .1))";
+@base__background: ~"rgba(var(--base-bg), var(--base-bg-alpha, 1))";
+@muted__background: ~"rgba(var(--muted-bg), var(--muted-bg-alpha, 1))";
+@z-layer__background: ~"rgba(var(--z-layer-bg), var(--z-layer-bg-alpha, 1))";
+@z-overlay__background: ~"rgba(var(--z-overlay-bg), var(--z-overlay-bg-alpha, .8))";
+
+// -- Forms --
+@input__color: ~"rgba(var(--input-color), var(--input-alpha))";
+@input__background: ~"rgb(var(--input-bg))";
+@input__border-width: 1px;
+@input__border-color: ~"rgba(var(--input-border-color), var(--input-border-alpha))";
+@input__border: @input__border-width solid @input__border-color;
+@input__border-radius: 0;
+@input__shadow: ~"0 0 0 var(--input-shadow-spread) @{input__border-color}";
+@checkbox__size: @4;
+@checkbox__color: ~"rgb(var(--input-focus-border-color))";
+@checkbox__focus__shadow: ~"0 0 0 2px rgb(var(--base-bg)), 0 0 0 4px rgb(var(--input-focus-border-color))";
+
+@button__color: ~"rgb(var(--button-color))";
+@button__background: ~"rgba(var(--button-bg), var(--button-bg-alpha))";
+@button__border-width: 1px;
+@button__border-color: ~"rgba(var(--button-border-color), var(--button-border-alpha))";
+@button__border: @button__border-width solid @button__border-color;
+@button__border-radius: 0;
+@button__shadow: ~"0 0 0 1px @{button__border-color}";
+@button__text-decoration: none;
+@button__hover__text-decoration: none;
+
+// -- Blocks --
+@block__indent: @6;
+@block-title__padding: var(--block-title-padding, @2 0);
+@block-title__margin: var(--block-title-margin, 0);
+@block-title__color: ~"rgba(var(--block-title-color), var(--block-title-alpha, 1))";
+@block-title__background: ~"rgb(var(--block-title-bg))";
+@block-title__border: var(--block-title-border, 0);
+@block-title__border-width: var(--block-title-border-width, 0);
+@block-content__padding: var(--block-content-padding, 0);
+@block-content__background: ~"rgb(var(--block-content-bg))";
+@block-content__border: var(--block-content-border, 0);
+@block-content__border-width: var(--block-content-border-width, 0);
+
+// -- Tabs --
+@tab-horizontal__media: @media-md;
+@tab-accordion__media: @media-md-down;

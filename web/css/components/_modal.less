@@ -53,7 +53,7 @@
         max-width: var(--modal-max-width);
         max-height: var(--modal-max-height);
         max-height: -webkit-fill-available;
-        background: var(--bg-main);
+        background: @z-layer__background;
         pointer-events: auto;
         .shadow-xl-around();
 
@@ -102,7 +102,7 @@
     .modal-header {
         .action-close {
             &:extend(.button-x all);
-            background: var(--bg-main);
+            background: @base__background;
             position: absolute;
             top: var(--modal-padding-y);
             .right(var(--modal-padding-x));

@@ -19,7 +19,7 @@
     }
     .swatch-option {
         .text-xs();
-        color: var(--color-muted);
+        color: @muted__color;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -27,36 +27,14 @@
         min-width: @8;
         height: @8;
         padding: 0 @1;
-        background: var(--gray-100);
+        background: @muted__background;
         position: relative;
-        outline: none;
 
         &::before {
             content: '';
             position: absolute;
             &:extend(.inset-0);
-            box-shadow: 0 0 0 1px inset var(--color-divider);
-            mix-blend-mode: darken;
-        }
-
-        &:focus,
-        &.selected {
-            &::before {
-                box-shadow: 0 0 0 2px inset var(--white);
-                mix-blend-mode: normal;
-            }
-            &::after {
-                content: '';
-                position: absolute;
-                &:extend(.inset-0);
-                box-shadow: 0 0 0 1px inset var(--red-500);
-            }
-        }
-
-        &.selected {
-            &::before {
-                box-shadow: 0 0 0 3px inset var(--white);
-            }
+            box-shadow: 0 0 0 1px inset @divider__color;
         }
     }
     input.swatch-input {
@@ -81,12 +59,20 @@
         padding: @1;
         min-width: @8;
     }
+    .swatch-option {
+        &.selected {
+            &::before {
+                box-shadow: 0 0 0 2px inset @brand__color,
+                            0 0 0 3px inset @white;
+            }
+        }
+    }
     .product-item-info-image-loading {
         .product-item-photo {
             &::before {
                 content: '';
                 &:extend(.spinner);
-                border-color: var(--color-main);
+                border-color: @base__color;
                 border-top-color: transparent;
                 opacity: .3;
                 position: absolute;

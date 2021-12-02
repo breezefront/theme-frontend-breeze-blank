@@ -16,32 +16,35 @@
         padding: 0 @4;
         display: flex;
         align-items: center;
-        color: var(--tab-toggler-color);
-        border-bottom: 2px solid var(--tab-toggler-border-color);
+        color: @muted__color;
 
         @media @tab-accordion__media {
             justify-content: space-between;
-            border-bottom: 1px solid var(--tab-content-border-color);
+            border-bottom: 1px solid @divider__color;
+            &:nth-last-child(2) {
+                border-bottom-color: transparent;
+            }
         }
 
         @media @tab-horizontal__media {
             .float(left);
-            .margin-right(-1px);
+            .margin-right(@4);
             position: relative;
             white-space: nowrap;
         }
 
         .counter {
-            opacity: .6;
+            opacity: .8;
             padding: @0-5 @2;
-            background: rgba(0, 0, 0, 0.08);
+            background: @muted__background;
         }
     }
     & when not (@critical) {
         cursor: pointer;
         &:hover {
-            --tab-toggler-color: var(--tab-toggler-hover-color);
-            --tab-toggler-border-color: var(--tab-toggler-hover-border-color);
+            --muted-alpha: .9;
+            --muted-bg-alpha: .5;
+            background: @muted__background;
         }
     }
 }
@@ -51,18 +54,16 @@
         .breeze-dropdown-toggler-icon-active();
     }
     & when (@critical) {
-        --tab-toggler-color: var(--tab-toggler-active-color);
-        --tab-toggler-border-color: var(--tab-toggler-active-border-color);
         z-index: 2;
-
         @media @tab-accordion__media {
-            border-bottom: 2px solid var(--tab-toggler-border-color);
+            border-bottom-color: transparent;
         }
     }
     & when not (@critical) {
+        --muted-alpha: .9;
+        background: @muted__background;
         &:hover {
-            --tab-toggler-color: var(--tab-toggler-active-color);
-            --tab-toggler-border-color: var(--tab-toggler-active-border-color);
+            --muted-bg-alpha: 1;
         }
     }
 }
@@ -79,7 +80,6 @@
             .margin-left(-100%);
             width: 100%;
             margin-top: ~"calc(@{12} - 1px)";
-            border-top: 1px solid var(--tab-content-border-color);
         }
     }
 

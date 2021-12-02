@@ -9,7 +9,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: var(--bg-main);
+            background: @base__background;
             padding: var(--checkout-step-padding-y) var(--checkout-step-padding-x);
             margin-bottom: @4;
 
@@ -38,9 +38,9 @@
         .shipping-information {
             display: flex;
             gap: @2;
-            color: var(--gray-700);
+            color: @muted__color;
             padding-top: @3;
-            border-top: 1px solid var(--gray-100);
+            border-top: 1px solid @divider__color;
 
             > div {
                 width: ~"calc(50% - @{1})";
@@ -57,7 +57,7 @@
         }
         .totals-tax,
         .totals:not(.grand) {
-            color: var(--gray-700);
+            color: @muted__color;
             border: 0;
             th, td {
                 font-weight: 400;

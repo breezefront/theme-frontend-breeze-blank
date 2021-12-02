@@ -1,3 +1,113 @@
+.breeze-input {
+    & when (@critical) {
+        outline: none;
+        position: relative;
+        padding: @2 @3;
+        width: 100%;
+
+        color: @input__color;
+        background: @input__background;
+        border: @input__border;
+        border-radius: @input__border-radius;
+        box-shadow: @input__shadow;
+
+        &:disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+
+    & when not (@critical) {
+        &:focus {
+            --input-border-color: var(--input-focus-border-color);
+            --input-shadow-spread: var(--input-focus-shadow-spread);
+            z-index: 10;
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+        }
+    }
+}
+
+.breeze-button {
+    & when (@critical) {
+        outline: none;
+        position: relative;
+        display: inline-block;
+        padding: @2 @5;
+
+        color: @button__color;
+        background: @button__background;
+        border: @button__border;
+        border-radius: @button__border-radius;
+        box-shadow: @button__shadow;
+        text-decoration: @button__text-decoration !important;
+
+        &:disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+
+    & when not (@critical) {
+        .transition();
+
+        &:hover {
+            --button-bg-alpha: var(--button-hover-bg-alpha, .95);
+            text-decoration: @button__hover__text-decoration !important;
+        }
+        &:focus-visible {
+            --button-border-alpha: 1;
+            z-index: 10;
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+        }
+    }
+}
+
+.breeze-button-primary {
+    & when (@critical) {
+        --link-color: var(--button-color);
+        --link-alpha: 1;
+    }
+}
+
+.breeze-button-secondary {
+    & when (@critical) {
+        --link-color: var(--button-color);
+        --link-alpha: 1;
+        --button-bg: var(--button-secondary-bg);
+        --button-color: var(--button-secondary-color);
+        --button-border-color: var(--button-secondary-border-color);
+    }
+}
+
+.breeze-button-link {
+    & when (@critical) {
+        --button-bg: transparent;
+        --button-color: var(--link-color);
+        text-decoration: @link__text-decoration !important;
+    }
+
+    & when not (@critical) {
+        &:hover {
+            text-decoration: @link__hover__text-decoration !important;
+        }
+    }
+}
+
+.button-reset {
+    --button-bg: var(--base-bg);
+    --button-border-color: var(--base-bg);
+    &:focus {
+        outline: 2px solid @ring__color;
+        outline-offset: 1px;
+    }
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    border: 0;
+    .text-align(left);
+}
 .button-x {
     .float(right);
     .button-reset();
@@ -19,19 +129,6 @@
 .button-xs {
     .text-xs();
     padding: @1 @2;
-}
-.button-reset {
-    --button-focus-border-color: transparent;
-    --button-focus-box-shadow: 0 0 0 2px var(--button-focus-border-color);
-    &:focus {
-        outline: 2px solid var(--blue-600);
-        outline-offset: 1px;
-    }
-    padding: 0;
-    background: transparent;
-    color: inherit;
-    border: 0;
-    .text-align(left);
 }
 
 .input-xs {

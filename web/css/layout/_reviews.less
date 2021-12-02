@@ -63,8 +63,7 @@
         }
     }
     .review-control-vote {
-        position: relative;
-        color: var(--gray-300);
+        color: @divider__color;
         height: @6;
         width: 5 * @6;
 
@@ -95,7 +94,7 @@
                 + .review-item {
                     margin-top: @4;
                     padding-top: @4;
-                    border-top: 1px solid var(--color-divider);
+                    border-top: 1px solid @divider__color;
                 }
             }
             &-title {
@@ -131,7 +130,7 @@
         -webkit-mask-position: 0 50%;
     }
     .rating-result > span::before {
-        color: var(--yellow-400);
+        color: ~"rgb(var(--yellow))";
     }
     .review-control-vote {
         &::before,
@@ -150,7 +149,7 @@
         }
         label {
             cursor: pointer;
-            color: var(--yellow-400);
+            color: ~"rgb(var(--yellow))";
             height: @6;
             left: 0;
             &::before {

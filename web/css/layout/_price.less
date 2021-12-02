@@ -1,11 +1,11 @@
 & when (@critical) {
     .special-price {
-        color: var(--red-500);
+        color: @danger__color;
         .price-label {
             &:extend(.sr-only);
         }
     }
     .old-price {
-        color: var(--gray-400);
+        color: @muted__color;
     }
 }

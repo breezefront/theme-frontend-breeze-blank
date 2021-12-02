@@ -8,13 +8,13 @@
         z-index: 38;
         opacity: 0;
         pointer-events: none;
-        background: var(--black);
+        background: @z-overlay__background;
     }
 }
 
 .breeze-overlay-visible {
     & when not (@critical) {
-        opacity: .6;
+        opacity: 1;
         pointer-events: all;
         visibility: visible;
     }
