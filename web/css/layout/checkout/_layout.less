@@ -2,15 +2,13 @@
     .page-layout-checkout {
         --container-max-width: 980px;
 
-        .page-header,
+        .page-title-wrapper,
         .nav-toggle {
             display: none;
         }
-        .page-main {
-            padding-top: @4;
-            @media @media-lg {
-                padding-top: @10;
-            }
+        .header.content {
+            justify-content: center;
+            --container-padding: @4 @2 @1 @2;
         }
     }
 
@@ -31,6 +29,10 @@
         }
 
         display: flow-root;
+
+        .messages {
+            clear: both;
+        }
     }
 
     .opc {
@@ -54,7 +56,8 @@
 
         @media @media-md {
             &-wrapper {
-                float: left;
+                .float(left);
+                .clear(left);
                 margin-bottom: @4;
                 width: ~"calc(100% - var(--sidebar-width) - var(--sidebar-gap))";
             }

@@ -1,7 +1,12 @@
 & when (@critical) {
     .authentication-wrapper {
+        position: relative;
         float: right;
-        margin-top: -@14;
+        top: -@2-5;
+        .right(0);
+        + * {
+            clear: left;
+        }
     }
     .opc {
         .form-login {
