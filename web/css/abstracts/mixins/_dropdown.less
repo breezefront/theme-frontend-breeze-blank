@@ -4,11 +4,6 @@
         position: absolute;
         pointer-events: none;
         .right(0);
-
-        .item {
-            display: block;
-            padding: @1 @2;
-        }
     }
 
     & when not (@critical) {
@@ -28,15 +23,6 @@
         .breeze & {
             display: block !important; // override inline style to enable amination
         }
-
-        .item {
-            --divider-alpha: .05;
-            cursor: pointer;
-            border-radius: 0;
-            &:hover {
-                background: @divider__color;
-            }
-        }
     }
 }
 
@@ -47,6 +33,21 @@
         pointer-events: all;
         visibility: visible;
         transform: scale(1);
+    }
+}
+
+.breeze-dropdown-item {
+    & when (@critical) {
+        display: block;
+        padding: @1 @2;
+    }
+    & when not (@critical) {
+        --divider-alpha: .05;
+        cursor: pointer;
+        border-radius: 0;
+        &:hover {
+            background: @divider__color;
+        }
     }
 }
 

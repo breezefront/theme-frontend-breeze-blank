@@ -14,12 +14,12 @@
     }
 
     .dropdown {
-        &:extend(.breeze-dropdown);
+        &:extend(.breeze-dropdown all);
         &[aria-hidden="false"] {
             &:extend(.breeze-dropdown-visible);
         }
         li a {
-            &:extend(.breeze-dropdown .item all);
+            &:extend(.breeze-dropdown-item all);
         }
     }
 }

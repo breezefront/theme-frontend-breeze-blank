@@ -1,11 +1,11 @@
 .minisearch {
     .search-autocomplete {
-        &:extend(.breeze-dropdown);
+        &:extend(.breeze-dropdown all);
         &:not(:empty):not([style*="display:none"]):not([style*="display: none"]) {
             &:extend(.breeze-dropdown-visible);
         }
         [role="listbox"] li {
-            &:extend(.breeze-dropdown .item all);
+            &:extend(.breeze-dropdown-item all);
         }
     }
 }

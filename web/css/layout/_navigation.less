@@ -1,6 +1,6 @@
 .navigation {
     .submenu {
-        &:extend(.breeze-dropdown);
+        &:extend(.breeze-dropdown all);
         &.shown,
         &[aria-expanded="true"]:not([aria-hidden]) {
             &:extend(.breeze-dropdown-visible);
@@ -15,7 +15,7 @@
         }
     }
     li > a {
-        &:extend(.breeze-dropdown .item all);
+        &:extend(.breeze-dropdown-item all);
     }
 }
 
