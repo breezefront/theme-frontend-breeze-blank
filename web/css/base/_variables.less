@@ -1,7 +1,7 @@
 & when (@critical) {
     :root {
-        --black: red(@black), green(@black), blue(@black);
-        --white: red(@white), green(@white), blue(@white);
+        --black: @rgb-black;
+        --white: @rgb-white;
 
         --gray-50:  @rgb-gray-50;
         --gray-100: @rgb-gray-100;
@@ -25,11 +25,11 @@
         --success-color: @rgb-success;
 
         --base-alpha: 1;
-        --base-color: var(--gray-900);
-        --base-bg: var(--white);
-        --muted-bg: var(--gray-100);
-        --z-layer-bg: var(--base-bg);
-        --z-overlay-bg: var(--black);
+        --base-color: @rgb-base;
+        --base-bg: @rgb-base-bg;
+        --muted-bg: @rgb-muted-bg;
+        --z-layer-bg: @rgb-z-layer-bg;
+        --z-overlay-bg: @rgb-z-overlay-bg;
 
         --ring-color: @rgb-ring;
 
@@ -39,20 +39,20 @@
         --block-title-color: @rgb-block-title;
 
         --input-alpha: 1;
-        --input-color: var(--base-color);
-        --input-bg: var(--base-bg);
+        --input-color: @rgb-input;
+        --input-bg: @rgb-input-bg;
         --input-border-alpha: 1;
-        --input-border-color: var(--gray-400);
-        --input-focus-border-color: var(--brand-color);
+        --input-border-color: @rgb-input-border;
+        --input-focus-border-color: @rgb-input-focus-border;
         --input-focus-shadow-spread: 1px;
 
-        --button-color: var(--white);
+        --button-color: @rgb-button;
         --button-bg: var(--brand-color);
         --button-bg-alpha: .85;
         --button-border-alpha: 0;
         --button-border-color: var(--button-bg);
-        --button-secondary-color: var(--gray-500);
-        --button-secondary-bg: var(--gray-200);
+        --button-secondary-color: @rgb-button-secondary;
+        --button-secondary-bg: @rgb-button-secondary-bg;
         --button-secondary-border-color: var(--button-secondary-bg);
 
         --font-family: @font-sans;
@@ -67,26 +67,26 @@
         --spinner-border-color: var(--brand-color);
 
         @media @media-dark {
-            --gray-800: @rgb-gray-850;
+            --gray-800: @dark-rgb-gray-800;
             --brand-alpha: .8;
             --danger-alpha: .8;
             --info-alpha: .8;
             --success-alpha: .8;
-            --base-color: var(--gray-400);
-            --base-bg: var(--gray-900);
-            --muted-bg: var(--gray-800);
-            --z-layer-bg: var(--gray-800);
+            --base-color: @dark-rgb-base;
+            --base-bg: @dark-rgb-base-bg;
+            --muted-bg: @dark-rgb-muted-bg;
+            --z-layer-bg: @dark-rgb-z-layer-bg;
             --z-overlay-bg-alpha: .65;
 
-            --headings-color: var(--gray-300);
-            --block-title-color: var(--gray-300);
+            --headings-color: @dark-rgb-headings;
+            --block-title-color: @dark-rgb-block-title;
 
-            --input-border-color: var(--gray-700);
+            --input-border-color: @dark-rgb-input-border;
 
             --button-bg-alpha: .4;
             --button-hover-bg-alpha: .5;
-            --button-secondary-color: var(--gray-400);
-            --button-secondary-bg: var(--gray-700);
+            --button-secondary-color: @dark-rgb-button;
+            --button-secondary-bg: @dark-rgb-button-secondary-bg;
         }
     }
 }

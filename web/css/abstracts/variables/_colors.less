@@ -1,7 +1,10 @@
 // DO NOT USE THESE VARIABLES DIRECTLY. FOR OVERRIDE IN CUSTOM THEME ONLY.
 //
 // Use approriate less or css variables instead:
-//  @base__background or ~"rgba(var(--base-bg), 1)"
+//  @brand__color or ~"rgba(var(--brand-color), var(--brand-alpha, 1))"
+
+@rgb-black: red(@black), green(@black), blue(@black);
+@rgb-white: red(@white), green(@white), blue(@white);
 
 @rgb-gray-50:  red(@gray-50),  green(@gray-50),  blue(@gray-50);
 @rgb-gray-100: red(@gray-100), green(@gray-100), blue(@gray-100);
@@ -12,7 +15,6 @@
 @rgb-gray-600: red(@gray-600), green(@gray-600), blue(@gray-600);
 @rgb-gray-700: red(@gray-700), green(@gray-700), blue(@gray-700);
 @rgb-gray-800: red(@gray-800), green(@gray-800), blue(@gray-800);
-@rgb-gray-850: red(@gray-850), green(@gray-850), blue(@gray-850);
 @rgb-gray-900: red(@gray-900), green(@gray-900), blue(@gray-900);
 
 @rgb-blue:   red(@blue-600),   green(@blue-600),   blue(@blue-600);
@@ -27,5 +29,29 @@
 
 @rgb-ring: var(--brand-color);
 @rgb-link: var(--blue);
-@rgb-headings: var(--gray-900);
-@rgb-block-title: var(--gray-900);
+@rgb-base: var(--gray-900);
+@rgb-base-bg: var(--white);
+@rgb-muted-bg: var(--gray-100);
+@rgb-headings: var(--rgb-base);
+@rgb-block-title: var(--rgb-base);
+@rgb-input: var(--base-color);
+@rgb-input-bg: var(--base-bg);
+@rgb-input-border: var(--gray-400);
+@rgb-input-focus-border: var(--brand-color);
+@rgb-button: var(--white);
+@rgb-button-secondary: var(--gray-500);
+@rgb-button-secondary-bg: var(--gray-200);
+@rgb-z-layer-bg: var(--base-bg);
+@rgb-z-overlay-bg: var(--black);
+
+// -- Dark theme --
+@dark-rgb-gray-800: red(@gray-850), green(@gray-850), blue(@gray-850);
+@dark-rgb-base: var(--gray-400);
+@dark-rgb-base-bg: var(--gray-900);
+@dark-rgb-muted-bg: var(--gray-800);
+@dark-rgb-headings: var(--gray-300);
+@dark-rgb-block-title: var(--gray-300);
+@dark-rgb-input-border: var(--gray-700);
+@dark-rgb-button: var(--gray-400);
+@dark-rgb-button-secondary-bg: var(--gray-700);
+@dark-rgb-z-layer-bg: var(--muted-bg);
