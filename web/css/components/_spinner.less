@@ -1,3 +1,8 @@
+& when (@critical) {
+    .loading-mask {
+        display: none;
+    }
+}
 & when not (@critical) {
     .loading-mask {
         &:extend(.inset-0);
