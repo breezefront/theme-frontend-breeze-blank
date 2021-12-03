@@ -25,6 +25,10 @@
             outline: 2px solid transparent;
             outline-offset: 2px;
         }
+        &:-webkit-autofill {
+            -webkit-box-shadow: @input__shadow, 0 0 0 30px @muted__background inset;
+            -webkit-text-fill-color: @input__color;
+        }
     }
 }
 

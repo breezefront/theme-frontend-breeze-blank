@@ -32,7 +32,7 @@
 @input__border-color: ~"rgba(var(--input-border-color), var(--input-border-alpha))";
 @input__border: @input__border-width solid @input__border-color;
 @input__border-radius: 0;
-@input__shadow: ~"0 0 0 var(--input-shadow-spread) @{input__border-color}";
+@input__shadow: ~"0 0 0 var(--input-shadow-spread, 0) @{input__border-color}";
 @checkbox__size: @4;
 @checkbox__color: ~"rgb(var(--input-focus-border-color))";
 @checkbox__focus__shadow: ~"0 0 0 2px rgb(var(--base-bg)), 0 0 0 4px rgb(var(--input-focus-border-color))";
