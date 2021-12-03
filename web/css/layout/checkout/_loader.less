@@ -1,0 +1,18 @@
+& when (@critical) {
+    .page-wrapper {
+        .loading-mask {
+            // Show local loader with delay. Decreases flickering on fast internet speed.
+            transition: 0s visibility 1200ms linear;
+        }
+    }
+    .loading-mask[style*="block"],
+    .loading-mask:not([style]) {
+        ~ .opc-wrapper,
+        ~ .page-wrapper {
+            .loading-mask {
+                visibility: hidden;
+                transition: none;
+            }
+        }
+    }
+}
