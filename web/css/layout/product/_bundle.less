@@ -1,102 +1,107 @@
-.bundle-options-container {
-    .product-add-form {
-        display: none;
+& when (@critical) {
+    .bundle-options-container {
+        .product-add-form {
+            display: none;
+        }
     }
 }
-.bundle-wrapper {
-    display: flex;
-    gap: @4;
-    flex-direction: column;
 
-    @media @media-md {
-        align-items: flex-start;
-        flex-direction: row;
-
-        > div {
-            width: 50%;
-        }
-
-        .block-bundle-summary {
-            position: sticky;
-            top: 0;
-            right: 0;
-        }
-    }
-}
-.fieldset-bundle-options .title,
-.block-bundle-summary .title,
-.block-bundle-summary .subtitle {
-    .text-2xl();
-    font-weight: 500;
-    margin-bottom: @4;
-    padding: @3 0;
-    border-bottom: 1px solid @divider__color;
-}
-.product-options-wrapper {
-    .action.back {
-        &:extend(.button-reset all);
-        &:extend(.link-common all);
-    }
-    .field {
-        &.option {
-            > .label {
-                font-weight: 500;
-            }
-            + .field {
-                margin-top: @6;
-            }
-        }
-        &.qty {
-            margin-top: @2;
-        }
-    }
-}
-.block-bundle-summary {
-    .content {
+& when not (@critical) {
+    .bundle-wrapper {
         display: flex;
-        flex-direction: column;
         gap: @4;
-    }
-
-    .product.name,
-    .stock {
-        display: none;
-    }
-    .product-image-photo {
-        margin-bottom: @3;
-    }
-    .product-details {
-        display: flex;
         flex-direction: column;
-        gap: @2;
-    }
-    .price-box {
-        &:extend(.product-info-price .price-box all);
-    }
 
-    .bundle-summary {
-        order: -1;
-    }
-    .subtitle {
-        display: none;
-    }
-    .bundle.items {
-        li {
-            margin-top: @1-5;
+        @media @media-md {
+            align-items: flex-start;
+            flex-direction: row;
+
+            > div {
+                width: 50%;
+            }
+
+            .block-bundle-summary {
+                position: sticky;
+                top: 0;
+                right: 0;
+            }
         }
     }
-
-    @media @media-md {
+    .fieldset-bundle-options .title,
+    .block-bundle-summary .title,
+    .block-bundle-summary .subtitle {
+        .text-2xl();
+        font-weight: 500;
+        margin-bottom: @4;
+        padding: @3 0;
+        border-bottom: 1px solid @divider__color;
+    }
+    .product-options-wrapper {
+        .action.back {
+            &:extend(.button-reset all);
+            &:extend(.link-common all);
+        }
+        .field {
+            &.option {
+                > .label {
+                    font-weight: 500;
+                }
+                + .field {
+                    margin-top: @6;
+                }
+            }
+            &.qty {
+                margin-top: @2;
+            }
+        }
+    }
+    .block-bundle-summary {
         .content {
+            display: flex;
+            flex-direction: column;
+            gap: @4;
+        }
+
+        .product.name,
+        .stock {
+            display: none;
+        }
+        .product-image-photo {
+            margin-bottom: @3;
+        }
+        .product-details {
+            display: flex;
+            flex-direction: column;
             gap: @2;
         }
+        .price-box {
+            &:extend(.product-info-price .price-box all);
+        }
+
         .bundle-summary {
-            order: initial;
+            order: -1;
         }
         .subtitle {
-            display: block;
-            border: 0;
-            padding: 0;
+            display: none;
+        }
+        .bundle.items {
+            li {
+                margin-top: @1-5;
+            }
+        }
+
+        @media @media-md {
+            .content {
+                gap: @2;
+            }
+            .bundle-summary {
+                order: initial;
+            }
+            .subtitle {
+                display: block;
+                border: 0;
+                padding: 0;
+            }
         }
     }
 }

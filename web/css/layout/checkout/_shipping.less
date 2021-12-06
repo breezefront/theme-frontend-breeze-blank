@@ -20,11 +20,6 @@
             .action-select-shipping-item {
                 opacity: 0;
             }
-            &:hover {
-                .action-select-shipping-item {
-                    opacity: 1;
-                }
-            }
         }
     }
 
@@ -88,6 +83,12 @@
                 }
                 span {
                     &:extend(.sr-only);
+                }
+            }
+
+            &:hover {
+                .action-select-shipping-item {
+                    opacity: 1;
                 }
             }
         }
