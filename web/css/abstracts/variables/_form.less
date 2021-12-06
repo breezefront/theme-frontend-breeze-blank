@@ -1,0 +1,21 @@
+@input__color: ~"rgba(var(--input-color), var(--input-alpha))";
+@input__background: ~"rgb(var(--input-bg))";
+@input__border-width: 1px;
+@input__border-color: ~"rgba(var(--input-border-color), var(--input-border-alpha))";
+@input__border: @input__border-width solid @input__border-color;
+@input__border-radius: 0;
+@input__shadow: ~"0 0 0 var(--input-shadow-spread, 0) @{input__border-color}";
+
+@checkbox__size: @4;
+@checkbox__color: ~"rgb(var(--input-focus-border-color))";
+@checkbox__focus__shadow: ~"0 0 0 2px rgb(var(--base-bg)), 0 0 0 4px rgb(var(--input-focus-border-color))";
+
+@button__color: ~"rgb(var(--button-color))";
+@button__background: ~"rgba(var(--button-bg), var(--button-bg-alpha))";
+@button__border-width: 1px;
+@button__border-color: ~"rgba(var(--button-border-color), var(--button-border-alpha))";
+@button__border: @button__border-width solid @button__border-color;
+@button__border-radius: 0;
+@button__shadow: ~"0 0 0 1px @{button__border-color}";
+@button__text-decoration: none;
+@button__hover__text-decoration: none;

@@ -102,9 +102,8 @@
 .button-reset {
     --button-bg: var(--base-bg);
     --button-border-color: var(--base-bg);
-    &:focus {
-        outline: 2px solid @ring__color;
-        outline-offset: 1px;
+    &:focus-visible {
+        .focus-ring();
     }
     padding: 0;
     background: transparent;
