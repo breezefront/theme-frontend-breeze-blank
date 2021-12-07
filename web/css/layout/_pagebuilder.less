@@ -55,6 +55,14 @@
 
     [data-content-type="row"] {
         &:extend(.breeze-prose all);
+        &[data-appearance="contained"] {
+            &:extend(.container);
+        }
+        .row-full-width-inner {
+            &:extend(.container);
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 
     [data-content-type="buttons"] {
