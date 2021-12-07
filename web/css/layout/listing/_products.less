@@ -49,9 +49,11 @@
         }
         .actions-secondary {
             display: flex;
-            --muted-alpha: .4;
-            color: @muted__color;
             gap: @0-5;
+            a {
+                --muted-alpha: .4;
+                color: @muted__color;
+            }
         }
         .towishlist,
         .tocompare {
@@ -142,6 +144,22 @@
             }
             .product-item-description {
                 margin-top: @2;
+            }
+        }
+    }
+}
+
+& when not (@critical) {
+    .product-item-name a:hover {
+        text-decoration: underline;
+    }
+    .product-items {
+        .actions-secondary {
+            a {
+                &:extend(.transition);
+                &:hover {
+                    --muted-alpha: .6;
+                }
             }
         }
     }

@@ -177,3 +177,16 @@
         }
     }
 }
+
+& when not (@critical) {
+    .product-social-links {
+        .product-addto-links {
+            a {
+                &:extend(.transition);
+                &:hover {
+                    --muted-alpha: .8;
+                }
+            }
+        }
+    }
+}

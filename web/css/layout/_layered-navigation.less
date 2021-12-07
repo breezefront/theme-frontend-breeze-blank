@@ -293,6 +293,9 @@
 
 & when not (@critical) {
     .block.filter {
+        a:hover {
+            text-decoration: underline;
+        }
         .action.remove {
             &:extend(.sidebar .block .action.remove all);
         }

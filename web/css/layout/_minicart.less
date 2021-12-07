@@ -238,12 +238,7 @@
             a {
                 display: flex;
                 --muted-alpha: .2;
-                &:hover {
-                    --muted-alpha: .3;
-                }
-                &::before {
-                    color: @muted__color;
-                }
+                color: @muted__color;
             }
         }
         .action.edit,
@@ -263,6 +258,19 @@
         }
         .action.delete::before {
             .breeze-icon(@icon-trash, @5);
+        }
+    }
+}
+
+& when not (@critical) {
+    .minicart-items {
+        .actions {
+            a {
+                &:extend(.transition);
+            }
+            a:hover {
+                --muted-alpha: .4;
+            }
         }
     }
 }
