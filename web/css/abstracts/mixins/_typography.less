@@ -104,7 +104,7 @@
 }
 
 .breeze-prose {
-    a {
+    a:not(.product-item-link):not(.action) {
         .link-common();
     }
     p,
@@ -117,18 +117,19 @@
     section {
         margin-bottom: @4;
     }
-    ol, ul {
+    ul,
+    ol:not(.product-items) {
         padding-left: @5;
-    }
-    li::marker {
-        --muted-alpha: .4;
-        color: @muted__color;
     }
     ul {
         list-style: disc;
     }
-    ol {
+    ol:not(.product-items) {
         list-style: auto;
+    }
+    li::marker {
+        --muted-alpha: .4;
+        color: @muted__color;
     }
     blockquote {
         margin: @6 0;
