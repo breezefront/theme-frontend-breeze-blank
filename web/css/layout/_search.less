@@ -19,4 +19,17 @@
             &:extend(.link-common all);
         }
     }
+    .search-terms {
+        display: flex;
+        flex-wrap: wrap;
+        gap: @4;
+    }
+}
+
+& when not (@critical) {
+    .search-terms {
+        a:hover {
+            text-decoration: underline;
+        }
+    }
 }
