@@ -141,9 +141,11 @@
         .product-item {
             &-photo {
                 float: left;
+                max-width: 30%;
             }
             &-details {
                 float: left;
+                max-width: ~"calc(70% - @{3})";
                 .margin-left(@3);
             }
             &-name {
