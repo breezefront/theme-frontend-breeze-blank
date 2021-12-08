@@ -5,7 +5,9 @@
         <referenceBlock name="breeze.css">
             <arguments>
                 <argument name="bundles" xsi:type="array">
-                    <item name="checkout" xsi:type="array"/>
+                    <item name="checkout" xsi:type="array">
+                        <item name="deferred" xsi:type="boolean">true</item>
+                    </item>
                 </argument>
             </arguments>
         </referenceBlock>
