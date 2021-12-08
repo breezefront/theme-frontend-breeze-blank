@@ -13,6 +13,32 @@
         }
     }
 
+    .customer-account-login {
+        &.narrow-page.page-layout-1column {
+            .page-main {
+                --container-max-width: @lg;
+            }
+        }
+    }
+    @media @media-md {
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            flex-direction: row;
+
+            > .block {
+                padding: 0 @6;
+                flex-grow: 1;
+                flex-basis: 0;
+                margin: 0 !important;
+
+                .block-title {
+                    .text-2xl();
+                }
+            }
+        }
+    }
+
     .account {
         .main {
             .block {
