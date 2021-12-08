@@ -18,7 +18,8 @@
         &[aria-hidden="false"] {
             &:extend(.breeze-dropdown-visible);
         }
-        li a {
+        > li > a,
+        > ul > li > a {
             &:extend(.breeze-dropdown-item all);
         }
     }
@@ -34,12 +35,30 @@
     .dropdown.options {
         .block-title {
             padding: 0;
+            margin-bottom: @2;
+        }
+        .subtitle {
+            display: block;
+            margin-bottom: @3;
+            color: @muted__color;
+        }
+        .product-item + .product-item {
+            margin-top: @4;
+        }
+        .actions-toolbar {
+            justify-content: center;
+            margin-top: @4
         }
     }
 
     :root {
         --dropdown-padding: @2;
         --dropdown-width: @44;
+    }
+
+    .dropdown-lg {
+        --dropdown-padding: @3 @4;
+        --dropdown-width: @72;
     }
 
     .dropdown-xl {
