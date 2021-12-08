@@ -1,14 +1,12 @@
 & when (@critical) {
-    .checkout-onepage-success {
-        &:extend(.breeze-page-narrow all);
-    }
-
     .checkout-success {
         &:extend(.breeze-prose all);
-        text-align: center;
-        .actions-toolbar {
-            margin-top: @10;
-            justify-content: center;
+        .page-narrow & {
+            text-align: center;
+            .actions-toolbar {
+                margin-top: @10;
+                justify-content: center;
+            }
         }
     }
 }

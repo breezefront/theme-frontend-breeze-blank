@@ -1,11 +1,7 @@
 & when (@critical) {
-    .catalogsearch-advanced-index,
-    .contact-index-index,
-    .customer-account-create,
-    .customer-account-forgotpassword,
-    .customer-account-login,
-    .sales-guest-form,
-    .search-term-popular {
-        &:extend(.breeze-page-narrow all);
+    .narrow-page {
+        &.page-layout-1column {
+            &:extend(.breeze-page-narrow all);
+        }
     }
 }
