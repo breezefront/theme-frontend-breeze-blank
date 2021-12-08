@@ -152,6 +152,12 @@
     .slick-next {
         right: 0;
     }
+
+    [data-appearance="carousel"] {
+        .product-items {
+            &:extend(.products-grid .product-items all);
+        }
+    }
 }
 
 & when not (@critical) {
