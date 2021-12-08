@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <packages>
+        <package>swissup/breeze</package>
+        <package>swissup/theme-frontend-breeze-blank</package>
+    </packages>
+
+    <fields>
+        <field name="theme" title="Select Theme">
+            <option title="Breeze Blank">swissup/theme-frontend-breeze-blank</option>
+        </field>
+    </fields>
+
+    <commands>
+        <conditions>
+            <param name="theme">swissup/theme-frontend-breeze-blank</param>
+        </conditions>
+        <include path="commands/config.xml"/>
+        <include path="commands/cms_page.xml"/>
+    </commands>
+</config>
