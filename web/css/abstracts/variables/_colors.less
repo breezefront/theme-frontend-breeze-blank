@@ -45,10 +45,14 @@
 @rgb-z-overlay-bg: var(--black);
 
 // -- Dark theme --
-@dark-rgb-gray-800: red(#161d2f), green(#161d2f), blue(#161d2f);
-@dark-rgb-blue: red(#8ca6ee), green(#8ca6ee), blue(#8ca6ee);
-@dark-rgb-red: red(#ec8e8e), green(#ec8e8e), blue(#ec8e8e);
-@dark-rgb-green: red(#1ebe58), green(#1ebe58), blue(#1ebe58);
+@dark-gray-800: lighten(@gray-900, 2.5%);
+@dark-blue: lighten(@blue-700, 25%);
+@dark-green: lighten(@green-700, 35%);
+@dark-red: lighten(@red-700, 30%);
+@dark-rgb-gray-800: red(@dark-gray-800), green(@dark-gray-800), blue(@dark-gray-800);
+@dark-rgb-blue: red(@dark-blue), green(@dark-blue), blue(@dark-blue);
+@dark-rgb-red: red(@dark-red), green(@dark-red), blue(@dark-red);
+@dark-rgb-green: red(@dark-green), green(@dark-green), blue(@dark-green);
 @dark-rgb-base: var(--gray-400);
 @dark-rgb-base-bg: var(--gray-900);
 @dark-rgb-muted-bg: var(--gray-800);
