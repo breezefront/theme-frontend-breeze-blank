@@ -15,14 +15,59 @@
                 <width>110</width>
                 <height>160</height>
             </image>
+
+            <!-- Product grid listing -->
             <image id="category_page_grid" type="small_image">
                 <width>300</width>
                 <height>375</height>
             </image>
+            <image id="category_page_grid-230" type="small_image">
+                <width>230</width>
+                <height>287</height>
+            </image>
+            <image id="category_page_grid-260" type="small_image">
+                <width>260</width>
+                <height>325</height>
+            </image>
+            <image id="category_page_grid-330" type="small_image">
+                <width>330</width>
+                <height>412</height>
+            </image>
+            <image id="category_page_grid-380" type="small_image">
+                <width>380</width>
+                <height>475</height>
+            </image>
+            <image id="category_page_grid-460" type="small_image">
+                <width>460</width>
+                <height>575</height>
+            </image>
+            <image id="category_page_grid-600" type="small_image">
+                <width>600</width>
+                <height>750</height>
+            </image>
+
+            <!-- Product list listing -->
             <image id="category_page_list" type="small_image">
                 <width>300</width>
                 <height>375</height>
             </image>
+            <image id="category_page_list-260" type="small_image">
+                <width>260</width>
+                <height>325</height>
+            </image>
+            <image id="category_page_list-380" type="small_image">
+                <width>380</width>
+                <height>475</height>
+            </image>
+            <image id="category_page_list-520" type="small_image">
+                <width>520</width>
+                <height>650</height>
+            </image>
+            <image id="category_page_list-600" type="small_image">
+                <width>600</width>
+                <height>750</height>
+            </image>
+
             <image id="customer_account_my_tags_tag_view" type="small_image">
                 <width>100</width>
                 <height>100</height>
@@ -195,5 +240,11 @@
     <vars module="Swissup_Breeze">
         <var name="enabled">1</var>
         <var name="turbo">1</var>
+        <var name="sizes">
+            <var name="category_page_grid">(min-width: 1536px) 300px, (min-width: 1024px) 230px, (min-width: 768px) 165px, (min-width: 640px) 190px, calc(50vw - 2rem)</var>
+            <var name="category_page_grid-1column">(min-width: 1536px) 285px, (min-width: 1280px) 235px, (min-width: 1024px) 300px, (min-width: 768px) 230px, (min-width: 640px) 190px, calc(50vw - 2rem)</var>
+            <var name="category_page_grid-3columns">(min-width: 1536px) 235px, (min-width: 1280px) 170px, (min-width: 1024px) 150px, (min-width: 768px) 165px, (min-width: 640px) 190px, calc(50vw - 2rem)</var>
+            <var name="category_page_list">(min-width: 1280px) 300px, (min-width: 1024px) 260px, (min-width: 768px) 190px, 35vw</var>
+        </var>
     </vars>
 </view>

@@ -5,8 +5,6 @@
         <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
     <?php endforeach; ?>
     src="<?= $escaper->escapeUrl($block->getImageUrl()) ?>"
-    srcset=""
-    sizes=""
     loading="lazy"
     width="<?= $escaper->escapeHtmlAttr($block->getWidth()) ?>"
     height="<?= $escaper->escapeHtmlAttr($block->getHeight()) ?>"
