@@ -141,16 +141,17 @@
         .product-item {
             &-photo {
                 float: left;
-                max-width: 30%;
+                max-width: 40%;
             }
             &-details {
                 float: left;
-                max-width: ~"calc(70% - @{3})";
+                max-width: ~"calc(60% - @{3})";
                 .margin-left(@3);
             }
             &-name {
+                .text-lg();
                 display: inline-block;
-                margin-bottom: @1;
+                margin-bottom: @2;
             }
         }
         .field.qty {
