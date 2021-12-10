@@ -21,27 +21,27 @@
                 <width>300</width>
                 <height>375</height>
             </image>
-            <image id="category_page_grid-230" type="small_image">
+            <image id="category_page_grid-srcset-230" type="small_image">
                 <width>230</width>
                 <height>287</height>
             </image>
-            <image id="category_page_grid-260" type="small_image">
+            <image id="category_page_grid-srcset-260" type="small_image">
                 <width>260</width>
                 <height>325</height>
             </image>
-            <image id="category_page_grid-330" type="small_image">
+            <image id="category_page_grid-srcset-330" type="small_image">
                 <width>330</width>
                 <height>412</height>
             </image>
-            <image id="category_page_grid-380" type="small_image">
+            <image id="category_page_grid-srcset-380" type="small_image">
                 <width>380</width>
                 <height>475</height>
             </image>
-            <image id="category_page_grid-460" type="small_image">
+            <image id="category_page_grid-srcset-460" type="small_image">
                 <width>460</width>
                 <height>575</height>
             </image>
-            <image id="category_page_grid-600" type="small_image">
+            <image id="category_page_grid-srcset-600" type="small_image">
                 <width>600</width>
                 <height>750</height>
             </image>
@@ -51,19 +51,19 @@
                 <width>300</width>
                 <height>375</height>
             </image>
-            <image id="category_page_list-260" type="small_image">
+            <image id="category_page_list-srcset-260" type="small_image">
                 <width>260</width>
                 <height>325</height>
             </image>
-            <image id="category_page_list-380" type="small_image">
+            <image id="category_page_list-srcset-380" type="small_image">
                 <width>380</width>
                 <height>475</height>
             </image>
-            <image id="category_page_list-520" type="small_image">
+            <image id="category_page_list-srcset-520" type="small_image">
                 <width>520</width>
                 <height>650</height>
             </image>
-            <image id="category_page_list-600" type="small_image">
+            <image id="category_page_list-srcset-600" type="small_image">
                 <width>600</width>
                 <height>750</height>
             </image>
