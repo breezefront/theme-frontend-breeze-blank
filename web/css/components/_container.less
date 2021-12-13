@@ -1,22 +1,22 @@
 & when (@critical) {
     :root {
-        --container-margin: 0 auto;
-        --container-max-width: none;
-        --container-padding: @1-5 @2;
+        --container-margin: @container__margin;
+        --container-max-width: @container__max-width;
+        --container-padding: @container__padding;
         @media @media-sm {
-            --container-max-width: @sm;
+            --container-max-width: @container__media-sm__max-width;
         }
         @media @media-md {
-            --container-max-width: @md;
+            --container-max-width: @container__media-md__max-width;
         }
         @media @media-lg {
-            --container-max-width: @lg;
+            --container-max-width: @container__media-lg__max-width;
         }
         @media @media-xl {
-            --container-max-width: @xl;
+            --container-max-width: @container__media-xl__max-width;
         }
         @media @media-xxl {
-            --container-max-width: @xxl;
+            --container-max-width: @container__media-xxl__max-width;
         }
     }
 
