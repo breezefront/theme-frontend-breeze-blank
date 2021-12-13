@@ -5,6 +5,7 @@
             <item>
                 <item name="title">Breeze Blank Homepage</item>
                 <item name="identifier">home</item>
+                <item name="page_layout">cms-full-width</item>
                 <item name="content" helper="Swissup\Marketplace\Installer\Helper\Renderer::render">
                     <param name="path" type="path">content/cms_page/home.html</param>
                 </item>

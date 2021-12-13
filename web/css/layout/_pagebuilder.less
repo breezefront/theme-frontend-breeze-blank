@@ -35,6 +35,16 @@
 }
 
 & when (@critical) {
+    .page-layout-cms-full-width {
+        .page-main {
+            max-width: none;
+            margin: 0;
+            padding: 0;
+        }
+        .page-title-wrapper .page-title {
+            &:extend(.container);
+        }
+    }
     .pagebuilder {
         &-mobile {
             &-hidden {
@@ -55,11 +65,7 @@
 
     [data-content-type="row"] {
         &:extend(.breeze-prose all);
-        &[data-appearance="contained"] {
-            &:extend(.container);
-            padding: 0;
-        }
-        .row-full-width-inner {
+        [data-element="inner"] {
             &:extend(.container);
             padding-top: 0;
             padding-bottom: 0;
