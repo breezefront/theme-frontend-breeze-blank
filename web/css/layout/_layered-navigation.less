@@ -112,23 +112,27 @@
                         margin: @2 0 @3;
                     }
                 }
-                .count {
-                    .text-sm();
-                    white-space: nowrap;
-                    font-weight: 300;
-                    opacity: .5;
-                    .margin-left(@1);
-
-                    &::before {
-                        content: '(';
-                    }
-                    &::after {
-                        content: ')';
-                    }
-                }
                 .filter-count-label {
                     &:extend(.sr-only);
                 }
+            }
+        }
+        dt {
+           padding: @1 0;
+        }
+        .content .count,
+        .filter-options .count {
+            .text-sm();
+            white-space: nowrap;
+            font-weight: 300;
+            opacity: .5;
+            .margin-left(@1);
+
+            &::before {
+                content: '(';
+            }
+            &::after {
+                content: ')';
             }
         }
         .initially-active.active .filter-options-title::after {
