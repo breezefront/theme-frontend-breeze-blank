@@ -81,6 +81,7 @@
                 <width>1400</width>
                 <height>1400</height>
             </image>
+
             <image id="product_page_image_small" type="thumbnail">
                 <width>88</width>
                 <height>110</height>
@@ -119,6 +120,10 @@
                 <width>300</width>
                 <height>375</height>
             </image>
+            <image id="cart_page_product_thumbnail" type="small_image">
+                <width>300</width>
+                <height>375</height>
+            </image>
             <image id="cart_cross_sell_products" type="small_image">
                 <width>300</width>
                 <height>375</height>
@@ -148,11 +153,6 @@
             <image id="product_small_image-srcset-280" type="small_image">
                 <width>280</width>
                 <height>280</height>
-            </image>
-
-            <image id="cart_page_product_thumbnail" type="small_image">
-                <width>300</width>
-                <height>375</height>
             </image>
 
             <image id="customer_account_my_tags_tag_view" type="small_image">
