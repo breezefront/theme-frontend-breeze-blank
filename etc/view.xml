@@ -128,7 +128,7 @@
                 <width>300</width>
                 <height>375</height>
             </image>
-            <image id="product_swatch_image_medium" type="image">
+            <image id="product_swatch_image_medium" type="small_image">
                 <width>300</width>
                 <height>375</height>
             </image>
