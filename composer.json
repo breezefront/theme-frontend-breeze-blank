@@ -2,7 +2,7 @@
     "name": "swissup/theme-frontend-breeze-blank",
     "description": "Blank theme for all Breeze based themes",
     "type": "magento2-theme",
-    "version": "1.0.0",
+    "version": "0.9.0",
     "license": [
         "OSL-3.0"
     ],
