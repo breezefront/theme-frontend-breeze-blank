@@ -45,19 +45,19 @@
 
         <?php if ($visibleFilters) : ?>
             <strong role="heading" aria-level="2" class="block-subtitle filter-subtitle"><span><?= $block->escapeHtml(__('Shopping Options')) ?></span></strong>
-            <ul class="filter-options" id="narrow-by-list">
+            <div class="filter-options" id="narrow-by-list">
         <?php endif ?>
 
         <?php foreach ($visibleFilters as $i => $filter) : ?>
-            <li class="filter-<?= $filter->getRequestVar() ?><?= $isExpanded ? ' initially-active active' : '' ?>"
+            <div class="filter-options-item filter-<?= $filter->getRequestVar() ?><?= $isExpanded ? ' initially-active active' : '' ?>"
                 data-mage-init='{"collapsible":{"active":<?= $isExpanded ? 'true' : 'false' ?>,"dialog":true}}'>
-                <span role="heading" aria-level="3" class="filter-options-title" data-trigger="true" data-role="title"><?= $block->escapeHtml(__($filter->getName())) ?></span>
+                <div role="heading" aria-level="2" class="filter-options-title" data-trigger="true" data-role="title"><?= $block->escapeHtml(__($filter->getName())) ?></div>
                 <div class="filter-options-content" data-role="content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter) ?></div>
-            </li>
+            </div>
         <?php endforeach; ?>
 
         <?php if ($visibleFilters) : ?>
-            </ul>
+            </div>
         <?php endif; ?>
     </div>
 </div>
