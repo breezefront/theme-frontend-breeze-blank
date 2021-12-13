@@ -284,6 +284,7 @@
     <vars module="Swissup_Breeze">
         <var name="enabled">1</var>
         <var name="turbo">1</var>
+        <var name="responsive_images">1</var>
         <var name="sizes">
             <var name="category_page_grid">(min-width: 1536px) 300px, (min-width: 1024px) 230px, (min-width: 768px) 165px, (min-width: 640px) 190px, calc(50vw - 2rem)</var>
             <var name="category_page_grid-1column">(min-width: 1536px) 285px, (min-width: 1280px) 235px, (min-width: 1024px) 300px, (min-width: 768px) 230px, (min-width: 640px) 190px, calc(50vw - 2rem)</var>
