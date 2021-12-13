@@ -69,34 +69,36 @@
         --scrollbar-bg: var(--gray-100);
         --scrollbar-color: var(--gray-300);
 
-        @media @media-dark {
-            --gray-800: @dark-rgb-gray-800;
-            --green: @dark-rgb-green;
-            --blue: @dark-rgb-blue;
-            --red: @dark-rgb-red;
-            --muted-alpha: .8;
-            --brand-alpha: 1;
-            --danger-alpha: 1;
-            --info-alpha: 1;
-            --success-alpha: 1;
-            --base-color: @dark-rgb-base;
-            --base-bg: @dark-rgb-base-bg;
-            --muted-bg: @dark-rgb-muted-bg;
-            --z-layer-bg: @dark-rgb-z-layer-bg;
-            --z-overlay-bg-alpha: .65;
+        & when (@respect-color-scheme = true) {
+            @media @media-dark {
+                --gray-800: @dark-rgb-gray-800;
+                --green: @dark-rgb-green;
+                --blue: @dark-rgb-blue;
+                --red: @dark-rgb-red;
+                --muted-alpha: .8;
+                --brand-alpha: 1;
+                --danger-alpha: 1;
+                --info-alpha: 1;
+                --success-alpha: 1;
+                --base-color: @dark-rgb-base;
+                --base-bg: @dark-rgb-base-bg;
+                --muted-bg: @dark-rgb-muted-bg;
+                --z-layer-bg: @dark-rgb-z-layer-bg;
+                --z-overlay-bg-alpha: .65;
 
-            --headings-color: @dark-rgb-headings;
-            --block-title-color: @dark-rgb-block-title;
+                --headings-color: @dark-rgb-headings;
+                --block-title-color: @dark-rgb-block-title;
 
-            --input-border-color: @dark-rgb-input-border;
+                --input-border-color: @dark-rgb-input-border;
 
-            --button-bg-alpha: .4;
-            --button-hover-bg-alpha: .5;
-            --button-secondary-color: @dark-rgb-button;
-            --button-secondary-bg: @dark-rgb-button-secondary-bg;
+                --button-bg-alpha: .4;
+                --button-hover-bg-alpha: .5;
+                --button-secondary-color: @dark-rgb-button;
+                --button-secondary-bg: @dark-rgb-button-secondary-bg;
 
-            --scrollbar-bg: var(--gray-800);
-            --scrollbar-color: var(--gray-700);
+                --scrollbar-bg: var(--gray-800);
+                --scrollbar-color: var(--gray-700);
+            }
         }
     }
 }
