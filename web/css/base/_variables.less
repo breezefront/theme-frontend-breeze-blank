@@ -69,6 +69,10 @@
         --scrollbar-bg: var(--gray-100);
         --scrollbar-color: var(--gray-300);
 
+        @media (prefers-reduced-motion) {
+            --transition-duration: 20ms;
+        }
+
         & when (@respect-color-scheme = true) {
             @media @media-dark {
                 --gray-800: @dark-rgb-gray-800;
