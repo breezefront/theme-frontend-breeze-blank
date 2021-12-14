@@ -1,0 +1,13 @@
+.lib-css(
+    @_property,
+    @_value,
+    @_prefix: 0
+) when not (@_value = '')
+    and not (@_value = false)
+    and not (extract(@_value, 1) = false)
+    and not (extract(@_value, 2) = false)
+    and not (extract(@_value, 3) = false)
+    and not (extract(@_value, 4) = false)
+    and not (extract(@_value, 5) = false) {
+    @{_property}: @_value;
+}

@@ -43,6 +43,12 @@
                     min-width: 80px;
                     max-width: 170px;
                 }
+
+                & when (@respect-color-scheme = true) {
+                    @media @media-dark {
+                        .lib-css(filter, @logo__dark__filter);
+                    }
+                }
             }
             + * {
                 margin-left: auto;
