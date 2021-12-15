@@ -65,12 +65,14 @@
         --spinner-size: @6;
         --spinner-border-width: 2px;
         --spinner-border-color: var(--brand-color);
+        --spinner-duration: .6s;
 
         --scrollbar-bg: var(--gray-100);
         --scrollbar-color: var(--gray-300);
 
         @media (prefers-reduced-motion) {
             --transition-duration: 20ms;
+            --spinner-duration: 5s;
         }
 
         & when (@respect-color-scheme = true) {
