@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <config>
     <packages>
+        <package>swissup/breeze-blank</package>
         <package>swissup/theme-frontend-breeze-blank</package>
     </packages>
 
