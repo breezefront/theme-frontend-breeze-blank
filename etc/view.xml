@@ -288,11 +288,13 @@
         <var name="sizes">
             <var name="category_page_grid">(min-width: 1536px) 300px, (min-width: 1024px) 230px, (min-width: 768px) 165px, (min-width: 640px) 190px, calc(50vw - 2rem)</var>
             <var name="category_page_grid-1column">(min-width: 1536px) 285px, (min-width: 1280px) 235px, (min-width: 1024px) 300px, (min-width: 768px) 230px, (min-width: 640px) 190px, calc(50vw - 2rem)</var>
+            <var name="category_page_grid-cms-full-width">use:category_page_grid-1column</var>
             <var name="category_page_grid-3columns">(min-width: 1536px) 235px, (min-width: 1280px) 170px, (min-width: 1024px) 150px, (min-width: 768px) 165px, (min-width: 640px) 190px, calc(50vw - 2rem)</var>
             <var name="category_page_list">(min-width: 1280px) 300px, (min-width: 1024px) 260px, (min-width: 768px) 190px, 35vw</var>
             <var name="product_page_image_medium">(min-width: 1536px) 700px, (min-width: 1280px) 615px, (min-width: 1024px) 490px, (min-width: 768px) 360px, (min-width: 640px) 625px, calc(100vw - 4rem)</var>
             <var name="product_page_image_small">88px</var>
             <var name="cart_page_product_thumbnail">(min-width: 1536px) 300px, (min-width: 1280px) 230px, (min-width: 1024px) 140px, (min-width: 640px) 170px, 40%</var>
+            <var name="new_products_content_widget_grid">use:category_page_grid</var>
         </var>
     </vars>
 </view>
