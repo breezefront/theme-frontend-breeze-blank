@@ -47,13 +47,13 @@
         --input-focus-shadow-spread: 1px;
 
         --button-color: @rgb-button;
-        --button-bg: var(--brand-color);
+        --button-bg: @rgb-button-bg;
         --button-bg-alpha: .85;
         --button-border-alpha: 0;
-        --button-border-color: var(--button-bg);
+        --button-border-color: @rgb-button-border;
         --button-secondary-color: @rgb-button-secondary;
         --button-secondary-bg: @rgb-button-secondary-bg;
-        --button-secondary-border-color: var(--button-secondary-bg);
+        --button-secondary-border-color: @rgb-button-secondary-border;
 
         --font-family: @font-sans;
         --font-size: @4;
@@ -64,11 +64,11 @@
 
         --spinner-size: @6;
         --spinner-border-width: 2px;
-        --spinner-border-color: var(--brand-color);
+        --spinner-border-color: @rgb-spinner;
         --spinner-duration: .6s;
 
-        --scrollbar-bg: var(--gray-100);
-        --scrollbar-color: var(--gray-300);
+        --scrollbar-bg: @rgb-scrollbar-bg;
+        --scrollbar-color: @rgb-scrollbar;
 
         @media (prefers-reduced-motion) {
             --transition-duration: 20ms;
@@ -102,8 +102,8 @@
                 --button-secondary-color: @dark-rgb-button;
                 --button-secondary-bg: @dark-rgb-button-secondary-bg;
 
-                --scrollbar-bg: var(--gray-800);
-                --scrollbar-color: var(--gray-700);
+                --scrollbar-bg: @dark-rgb-scrollbar-bg;
+                --scrollbar-color: @dark-rgb-scrollbar;
             }
         }
     }
