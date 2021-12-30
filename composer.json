@@ -10,7 +10,7 @@
         ]
     },
     "require": {
-        "swissup/module-breeze": "*",
+        "swissup/module-breeze": "^1.8.1",
         "swissup/module-rtl": "*"
     }
 }
