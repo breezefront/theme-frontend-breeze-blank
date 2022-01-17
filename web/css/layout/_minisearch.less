@@ -11,6 +11,11 @@
 }
 
 & when (@critical) {
+    @media @media-sm {
+        .block-search {
+            position: relative;
+        }
+    }
     .header .block-search {
         .block-title {
             display: none;
@@ -78,9 +83,9 @@
         .actions {
             display: none;
             position: absolute;
-            top: 100%;
-            .right(@6);
-            z-index: 11;
+            top: ~"calc(100% + @{6})";
+            .right(@4);
+            z-index: 41;
             @media @media-sm {
                 display: flex;
                 position: static;
@@ -90,6 +95,10 @@
         .action.search {
             &:extend(.button-reset all);
             .margin-left(-@8);
+
+            @media @media-sm-down {
+                display: none; // must be hidden on mobile view (fix for blur event)
+            }
 
             span {
                 &:extend(.sr-only);

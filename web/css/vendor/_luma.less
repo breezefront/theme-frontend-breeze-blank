@@ -10,7 +10,15 @@
 
 @layout__max-width: @container__media-xxl__max-width;
 @active__color: @brand__color;
+
+@form-element-input__background: @input__background;
+@form-element-input__border-color: @input__border-color;
+@form-element-input__border-radius: @input__border-radius;
 @button-primary__background: @button__background;
+
+.lib-visually-hidden() {
+    .sr-only();
+}
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {}
 
