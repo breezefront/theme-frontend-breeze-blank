@@ -28,6 +28,9 @@
         width: 100%;
         .right(auto);
         .left(0);
+        &.active {
+            z-index: 950; /* Move above modal since map can be triggered within the modal */
+        }
         .action.tocart {
             width: 100%;
         }
