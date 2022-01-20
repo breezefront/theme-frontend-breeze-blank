@@ -73,9 +73,6 @@
         .showcart {
             --spinner-size: @4;
         }
-        .message {
-            margin-top: @1;
-        }
     }
 
     .block-minicart {
@@ -143,10 +140,14 @@
         > .minicart-items {
             &:extend(.breeze-scrollbar all);
             max-height: 35vh;
+            height: 100%;
             overflow: auto;
             overscroll-behavior: contain;
             padding: 0 @1 @1-5;
             .margin(0 0 0 -@1);
+        }
+        .message {
+            margin-top: @1;
         }
         &::after {
             pointer-events: none;
@@ -178,7 +179,11 @@
                 max-width: 30%;
             }
             > :nth-child(2) {
-                max-width: ~"calc(70% - @{3})";
+                &:not(:last-child) {
+                    // used at checkout page
+                    max-width: ~"calc(70% - @{3})";
+                }
+                flex-grow: 1;
             }
             .message {
                 width: 100%;
@@ -236,7 +241,7 @@
             display: flex;
             gap: @0-5;
             position: absolute;
-            bottom: @1;
+            bottom: @2;
             .right(0);
             a {
                 display: flex;
