@@ -33,6 +33,10 @@
 
                 .item {
                     .breeze-dropdown-item();
+
+                    & when not (@critical) {
+                        display: flex;
+                    }
                 }
             }
         }
@@ -194,6 +198,9 @@
 
                     a {
                         display: block;
+                    }
+                    .item > a {
+                        flex-grow: 1;
                     }
 
                     &-title {
