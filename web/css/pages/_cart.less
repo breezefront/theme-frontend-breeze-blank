@@ -38,9 +38,11 @@
             flex-direction: row;
             align-items: flex-start;
 
-            > * {
-                width: ~"calc(100% - var(--sidebar-width))";
-                .padding-right(2%);
+            .checkout-cart-index & {
+                > * {
+                    width: ~"calc(100% - var(--sidebar-width))";
+                    .padding-right(2%);
+                }
             }
         }
 
