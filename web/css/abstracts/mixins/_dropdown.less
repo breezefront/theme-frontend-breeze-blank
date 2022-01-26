@@ -57,19 +57,9 @@
         display: flex;
         align-items: center;
         gap: @0-5;
-
-        .icon {
-            .breeze-dropdown-toggler-icon();
-            &.active {
-                .breeze-dropdown-toggler-icon-active();
-            }
-        }
     }
     & when not (@critical) {
         cursor: pointer;
-        .icon {
-            .breeze-dropdown-toggler-icon();
-        }
     }
 }
 
