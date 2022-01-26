@@ -76,7 +76,7 @@
         }
     }
 
-    .table-wrapper {
+    .table-wrapper:not(.grouped) {
         overflow-x: auto;
         position: relative;
     }
@@ -134,7 +134,7 @@
 
     @media @media-md-down {
         .mobile-table,
-        .table:not(.table-totals):not(.totals):not(.cart):not(.table-comparison) {
+        .table:not(.table-totals):not(.totals):not(.cart):not(.table-comparison):not(.grouped) {
             .responsive-table();
         }
     }
