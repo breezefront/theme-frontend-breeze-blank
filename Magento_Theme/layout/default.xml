@@ -45,7 +45,7 @@
                 </block>
             </container>
         </referenceContainer>
-        <move element="catalog.topnav" destination="navigation.wrapper"/>
+        <move element="store.menu" destination="navigation.wrapper"/>
         <!-- <move element="navigation.wrapper" destination="header-wrapper" after="logo"/> -->
     </body>
 </page>
