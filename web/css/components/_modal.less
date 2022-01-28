@@ -6,6 +6,15 @@
     }
 }
 
+& when (@critical) {
+    .modal-slide,
+    .modal-popup,
+    .modal-custom {
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
 & when not (@critical) {
     body.breeze {
         &._has-modal,
@@ -34,8 +43,6 @@
         align-items: center;
         justify-content: flex-end;
         padding: @24 @7 @7;
-        visibility: hidden;
-        pointer-events: none;
 
         &._show {
             visibility: visible;
