@@ -1,10 +1,39 @@
 & when (@critical) {
+    .hide,
     .no-display,
     .abs-no-display {
         display: none !important;
     }
+    .show {
+        display: initial !important;
+    }
     .abs-visually-hidden {
         &:extend(.sr-only);
+    }
+
+    @media @media-xs {
+      .xs-hide { display: none !important }
+      .xs-show { display: initial !important }
+    }
+    @media @media-sm {
+      .sm-hide { display: none !important }
+      .sm-show { display: initial !important }
+    }
+    @media @media-md {
+      .md-hide { display: none !important }
+      .md-show { display: initial !important }
+    }
+    @media @media-lg {
+      .lg-hide { display: none !important }
+      .lg-show { display: initial !important }
+    }
+    @media @media-xl {
+      .xl-hide { display: none !important }
+      .xl-show { display: initial !important }
+    }
+    @media @media-xxl {
+      .xxl-hide { display: none !important }
+      .xxl-show { display: initial !important }
     }
 }
 
