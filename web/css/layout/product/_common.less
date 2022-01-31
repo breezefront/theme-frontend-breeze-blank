@@ -5,8 +5,7 @@
         grid-template-columns: 1fr;
         grid-template-areas: "title"
                              "media"
-                             "main"
-                             "details";
+                             "main";
         gap: @4;
 
         .page-title-wrapper {
@@ -22,16 +21,12 @@
         .product.media {
             grid-area: media;
         }
-        .product-details-wrapper {
-            grid-area: details;
-        }
 
         @media @media-md {
             row-gap: 0;
             grid-template-columns: 1fr 1fr;
             grid-template-areas: "media title"
-                                 "media main"
-                                 "details details";
+                                 "media main";
         }
     }
 
@@ -148,7 +143,7 @@
         }
     }
     @media @media-md {
-        .product-details-wrapper {
+        .product.info.detailed {
             margin: @4 0;
         }
     }
