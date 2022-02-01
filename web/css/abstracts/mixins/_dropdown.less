@@ -13,7 +13,7 @@
         width: var(--dropdown-width);
         transform-origin: top;
         transform: scale(.95);
-        z-index: 40;
+        z-index: 100;
         visibility: hidden;
         margin-top: @0-5;
         background: @z-layer__background;
@@ -29,7 +29,7 @@
 
 .breeze-dropdown-visible {
     & when not (@critical) {
-        z-index: 41;
+        z-index: 101;
         opacity: 1;
         pointer-events: all;
         visibility: visible;
