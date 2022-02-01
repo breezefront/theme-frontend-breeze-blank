@@ -192,6 +192,23 @@ input[type='button'] {
             &:extend(.sr-only);
         }
     }
+    .ui-datepicker-trigger {
+        &:extend(.button-reset);
+        position: absolute !important;
+        .right(@2);
+        top:~"calc(50% - @{6} / 2)";
+        color: @muted__color;
+
+        &::before {
+            content: '';
+            display: block;
+            width: @6;
+            height: @6;
+        }
+        span {
+            &:extend(.sr-only);
+        }
+    }
     .control.captcha-image {
         margin-top: @2;
         display: flex;
@@ -214,6 +231,16 @@ input[type='button'] {
     .field-tooltip-action {
         &::before {
             .breeze-icon(@icon-question-mark-circle, @5);
+        }
+    }
+    .ui-datepicker {
+        .ui-datepicker-calendar td {
+            padding: 0;
+        }
+        &-trigger {
+            &::before {
+                .breeze-icon(@icon-calendar, @6);
+            }
         }
     }
 }
