@@ -109,9 +109,32 @@
         }
     }
     .order-details-items {
+        &:extend(.account .main .block);
         margin: @2 0;
         .order-title {
-            display: none;
+            &:extend(.block .block-title);
+            .order-links ~ & {
+                display: none;
+            }
+            @media @media-md {
+                display: none;
+            }
+        }
+        @media @media-md-down {
+            .table-wrapper {
+                padding: @block-content__padding;
+                .order-links ~ & {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+& when not (@critical) {
+    .order-details-items {
+        .order-title {
+            &:extend(.block .block-title);
         }
     }
 }
