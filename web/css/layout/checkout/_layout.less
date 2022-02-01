@@ -33,6 +33,13 @@
         .messages {
             clear: both;
         }
+
+        .action {
+            &.continue,
+            &.checkout {
+                &:extend(.button-lg);
+            }
+        }
     }
 
     .opc {
