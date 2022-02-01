@@ -13,10 +13,15 @@
     }
 
     // Spacing between afterMethods blocks
-    .opc-payment ~ div {
-        margin: @6 0 0;
-        + div {
-            margin: @1 0 0;
+    .opc-payment {
+        ~ div {
+            margin: @6 0 0;
+            + div {
+                margin: @1 0 0;
+            }
+        }
+        ~ .checkout-billing-address {
+            margin: @6 0;
         }
     }
 
