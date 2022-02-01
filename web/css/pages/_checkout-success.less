@@ -1,6 +1,11 @@
 & when (@critical) {
     .checkout-success {
-        &:extend(.breeze-prose all);
+        p {
+            &:extend(.breeze-prose p);
+        }
+        a {
+            &:extend(.link-common all);
+        }
         .page-narrow & {
             text-align: center;
             .actions-toolbar {
