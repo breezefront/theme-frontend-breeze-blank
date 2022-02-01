@@ -11,7 +11,7 @@
 }
 
 & when (@critical) {
-    @media @media-sm {
+    @media @media-md {
         .block-search {
             position: relative;
         }
@@ -25,7 +25,7 @@
                 &:extend(.sr-only);
             }
         }
-        @media @media-sm-down {
+        @media @media-md-down {
             .label {
                 &::before {
                     content: '';
@@ -64,7 +64,7 @@
             margin: 0 !important;
             .left(-9999px);
 
-            @media @media-sm {
+            @media @media-md {
                 background: transparent;
                 position: static;
                 display: block;
@@ -86,7 +86,7 @@
             position: absolute;
             top: ~"calc(100% + @{6})";
             .right(@4);
-            @media @media-sm {
+            @media @media-md {
                 display: flex;
                 position: static;
             }
@@ -96,7 +96,7 @@
             &:extend(.button-reset all);
             .margin-left(-@8);
 
-            @media @media-sm-down {
+            @media @media-md-down {
                 display: none; // must be hidden on mobile view (fix for blur event)
             }
 
