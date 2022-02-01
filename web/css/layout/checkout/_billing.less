@@ -14,7 +14,10 @@
 
     // Spacing between afterMethods blocks
     .opc-payment ~ div {
-        margin-top: @6;
+        margin: @6 0 0;
+        + div {
+            margin: @1 0 0;
+        }
     }
 
     .payment-method {
