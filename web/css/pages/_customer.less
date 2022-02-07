@@ -120,6 +120,22 @@
                 display: none;
             }
         }
+        tbody tr { // tbody is created per product
+            &:not(:last-child) {
+                border-bottom: 0;
+            }
+            + tr { // bundle items
+                td:first-child {
+                    .padding-left(@4);
+                }
+                td {
+                    padding-top: @1;
+                }
+                &:not(:last-child) {
+                    padding-bottom: @1;
+                }
+            }
+        }
         @media @media-md-down {
             .table-wrapper {
                 padding: @block-content__padding;
