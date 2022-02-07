@@ -5,7 +5,6 @@
         <referenceBlock name="product.info.form.options">
             <container name="bundle.wrapper" htmlTag="div" htmlClass="bundle-wrapper"/>
         </referenceBlock>
-        <move element="bundle.options.container" destination="product.details.wrapper" before="-"/>
         <move element="bundle.product.options.wrapper" destination="bundle.wrapper" before="-"/>
         <move element="bundle.summary" destination="bundle.wrapper"/>
     </body>
