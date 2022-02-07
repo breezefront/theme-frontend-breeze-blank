@@ -1,0 +1,514 @@
+//
+// Reset
+// ---------------------------------------------
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+
+    td {
+        vertical-align: top;
+    }
+}
+
+//
+// Typography
+// ---------------------------------------------
+
+.email-non-inline() {
+    * {
+        text-size-adjust: none !important;
+        -ms-text-size-adjust: none !important;
+        -webkit-text-size-adjust: none !important;
+    }
+
+    img {
+        -ms-interpolation-mode: bicubic;
+    }
+
+    table,
+    td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+    }
+}
+
+body {
+    color: @base__color;
+    font-family: @font-sans;
+    font-weight: normal;
+    font-size: @4;
+    line-height: @6;
+    .text-align(left);
+}
+
+strong {
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: @2;
+}
+
+h1 {
+    .text-3xl();
+    font-weight: bold;
+    margin-bottom: @4;
+}
+h2 {
+    .text-2xl();
+    margin-bottom: @3;
+}
+h3 {
+    .text-xl();
+    margin-bottom: @2;
+}
+h4,
+h5,
+h6 {
+    .text-lg();
+    margin-bottom: @1;
+}
+
+th,
+td {
+    font-family: @font-sans;
+}
+
+a:not(.button-primary):not(.button) {
+    color: @link__color;
+    text-decoration: @link__text-decoration;
+    img {
+        vertical-align: top;
+    }
+}
+
+p,
+dl,
+ul,
+ol {
+    margin: 0 0 @3;
+}
+
+dt + dd {
+    margin: 0;
+    .padding-left(@1);
+}
+
+p + br {
+    display: none;
+}
+
+.email-non-inline() {
+    a:not(.button-primary):not(.button):visited {
+        color: @link__visited__color !important;
+    }
+
+    a:not(.button-primary):not(.button):hover {
+        color: @link__hover__color !important;
+        text-decoration: @link__hover__text-decoration !important;
+    }
+
+    a:not(.button-primary):not(.button):active {
+        color: @link__active__color !important;
+        text-decoration: @link__hover__text-decoration !important;
+    }
+
+    .no-link a:not(.button-primary):not(.button) {
+        color: @base__color !important;
+        cursor: default !important;
+        text-decoration: none !important;
+    }
+}
+
+//
+// Layout
+// ---------------------------------------------
+
+html,
+body {
+    background-color: @email__background-color;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.wrapper-inner {
+    padding-bottom: @email-content__padding__l;
+    width: 100%;
+}
+
+.main {
+    margin: 0 auto;
+    .text-align(left);
+    width: @email-body__width;
+}
+
+.header {
+    padding: @email-body__padding;
+}
+
+.main-content {
+    background-color: @email-content__background-color;
+    padding: @email-body__padding;
+}
+
+.footer {
+    padding: @email-body__padding;
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    html,
+    body {
+        background-color: @email-content__background-color;
+        width: 100% !important;
+    }
+
+    .main {
+        max-width: 100% !important;
+        min-width: 240px;
+        width: auto !important;
+    }
+}
+
+//
+//  Buttons
+//  ---------------------------------------------
+
+a.button,
+.button-primary {
+    display: inline-block;
+    padding: @button__padding;
+    color: @button__color;
+    background: @button__background;
+    border: @button__border;
+    border-radius: @button__border-radius;
+    text-decoration: @button__text-decoration !important;
+}
+
+.button {
+    & > tr > td {
+        padding-bottom: @indent__s;
+    }
+
+    .inner-wrapper {
+        td {
+            .lib-css(border-radius, @button__border-radius, 1);
+            background-color: @button-primary__background;
+
+            a {
+                .lib-css(border-radius, @button__border-radius, 1);
+                border: 1px solid @button-primary__background;
+                color: @button-primary__color;
+                display: inline-block;
+                padding: @button__padding;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.email-non-inline() {
+    .button {
+        .inner-wrapper {
+            td:hover {
+                background-color: @button-primary__hover__background !important;
+            }
+
+            a:active,
+            td:active {
+                background-color: @button-primary__active__background !important;
+            }
+        }
+
+        a:active,
+        a:hover,
+        a:visited {
+            border: 1px solid @button-primary__hover__background;
+            color: @button-primary__hover__color !important;
+            text-decoration: none !important;
+        }
+    }
+
+    .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+        .button {
+            .inner-wrapper {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+//
+//  Messages
+//  ---------------------------------------------
+
+.message-info,
+.message-gift {
+    width: @table__width;
+
+    td {
+        padding: @email-content__padding__base;
+    }
+}
+
+//
+// Contact Us
+// ---------------------------------------------
+
+.message-details {
+    strong {
+        .margin-right(@indent__s);
+    }
+    td {
+        padding-bottom: @indent__xs;
+    }
+}
+
+//
+// Order Details
+// ---------------------------------------------
+
+.order-details {
+    width: @table__width;
+
+    .address-details,
+    .method-info {
+        .padding(@email-content__padding__base @email-content__padding__base @email-content__padding__base 0);
+        width: 50%;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .order-details {
+        .address-details,
+        .method-info {
+            display: block;
+            padding: @email-content__padding__base 0 !important;
+            width: auto !important;
+        }
+    }
+}
+
+.email-items {
+    width: @table__width;
+
+    tfoot {
+        > tr {
+            > th,
+            > td {
+                background-color: @email__background-color;
+            }
+        }
+    }
+
+    > thead,
+    > tbody {
+        > tr {
+            > th {
+                padding: @email-content__padding__base;
+            }
+
+            > td {
+                padding: @email-content__padding__base;
+
+                &.message-gift {
+                    border-top: none;
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    > tbody {
+        > tr {
+            > th,
+            > td {
+                border-top: 1px solid @divider__color;
+            }
+
+            & + tr {
+                > th,
+                > td {
+                    border-top: 0;
+                }
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .product-name {
+        font-weight: 500;
+        margin-bottom: @email-content__padding__s;
+    }
+
+    .has-extra .sku {
+        margin-bottom: @email-content__padding__base;
+    }
+
+    .item-info {
+        dl {
+            margin-bottom: 0;
+            .padding-left(@email-content__padding__m);
+
+            dt,
+            dd {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            dd {
+                .padding-left(@email-content__padding__base);
+            }
+        }
+    }
+
+    .item-qty {
+        text-align: center;
+    }
+
+    .item-price,
+    .item-subtotal {
+        .text-align(right);
+    }
+
+    .item-extra {
+        padding-top: 0;
+    }
+
+    .order-totals {
+        > tr {
+            > th {
+                font-weight: 400;
+            }
+
+            > th,
+            > td {
+                padding: @email-content__padding__base;
+                .text-align(right);
+            }
+
+            & + tr {
+                th,
+                td {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        .price {
+            white-space: nowrap;
+        }
+    }
+}
+
+//
+// Bundle Items
+// ---------------------------------------------
+
+.email-items {
+    .bundle-option-label {
+        > td {
+            .padding(0 @email-content__padding__base 0 @email-content__padding__l);
+        }
+    }
+
+    .bundle-option-value {
+        > td {
+            .padding(0 @email-content__padding__base @email-content__padding__base);
+
+            &.item-info {
+                .padding(0 @email-content__padding__base @email-content__padding__base @email-content__padding__xl);
+            }
+        }
+    }
+
+    tr.bundle-option-value + tr {
+        > td.item-extra {
+            padding-top: @email-content__padding__base;
+        }
+    }
+}
+
+//
+// Customer emails
+// ---------------------------------------------
+
+.email-credentials {
+    width: 100%;
+
+    tr + tr {
+        th,
+        td {
+            padding-bottom: @indent__s;
+        }
+    }
+}
+
+.email-features {
+    width: 100%;
+    margin-top: @6;
+
+    td {
+        width: 50%;
+
+        table {
+            width: 100%;
+
+            td {
+                .padding-right(@indent__s);
+                width: 30px;
+
+                h3 {
+                    margin: 0;
+                }
+            }
+
+            td + td {
+                .padding-right(@indent__m);
+                width: auto;
+            }
+        }
+    }
+
+    tr + tr > td {
+        padding-top: @indent__base;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .email-features {
+        &,
+        > tbody {
+            > tr {
+                > td {
+                    clear: both;
+                    display: block;
+                    padding-top: @indent__base;
+                    width: auto !important;
+                }
+            }
+        }
+    }
+}

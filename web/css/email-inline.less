@@ -1,4 +1,12 @@
-.body {
-    margin: 0;
-    padding: 0;
-}
+@import (reference) 'abstracts/_all.less';
+@import (reference) 'abstracts/variables/_email.less';
+
+@import 'email/_base.less';
+@import 'email/_extend.less'; // Custom theme entry point
+@import 'email/_custom.less'; // Minor customizations for any derived theme
+
+//@magento_import (reference) 'breeze/_email.less';
+
+@import (reference) 'vendor/_luma.less';
+
+@import (reference) 'abstracts/variables/_system.less';
