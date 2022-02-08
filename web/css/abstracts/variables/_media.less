@@ -5,12 +5,12 @@
 @xl:  1280px;
 @xxl: 1536px;
 
-@xxs-max: @xs - 0.02;
-@xs-max: @sm - 0.02;
-@sm-max: @md - 0.02;
-@md-max: @lg - 0.02;
-@lg-max: @xl - 0.02;
-@xl-max: @xxl - 0.02;
+@xxs-max: (@xs - 0.02);
+@xs-max: (@sm - 0.02);
+@sm-max: (@md - 0.02);
+@md-max: (@lg - 0.02);
+@lg-max: (@xl - 0.02);
+@xl-max: (@xxl - 0.02);
 
 @media-xs:  ~"(min-width: @{xs})";
 @media-sm:  ~"(min-width: @{sm})";
