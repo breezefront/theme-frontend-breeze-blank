@@ -175,17 +175,19 @@ body {
     padding: @email-body__padding;
 }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
-    html,
-    body {
-        background-color: @email-content__background-color;
-        width: 100% !important;
-    }
+.email-non-inline() {
+    @media @media-sm-down {
+        html,
+        body {
+            background-color: @email-content__background-color;
+            width: 100% !important;
+        }
 
-    .main {
-        max-width: 100% !important;
-        min-width: 240px;
-        width: auto !important;
+        .main {
+            max-width: 100% !important;
+            min-width: 240px;
+            width: auto !important;
+        }
     }
 }
 
@@ -248,7 +250,7 @@ a.button,
         }
     }
 
-    .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    @media @media-xs-down {
         .button {
             .inner-wrapper {
                 width: 100% !important;
@@ -297,13 +299,15 @@ a.button,
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
-    .order-details {
-        .address-details,
-        .method-info {
-            display: block;
-            padding: @email-content__padding__base 0 !important;
-            width: auto !important;
+.email-non-inline() {
+    @media @media-xs-down {
+        .order-details {
+            .address-details,
+            .method-info {
+                display: block;
+                padding: @email-content__padding__base 0 !important;
+                width: auto !important;
+            }
         }
     }
 }
@@ -497,16 +501,17 @@ a.button,
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
-    .email-features {
-        &,
-        > tbody {
-            > tr {
-                > td {
-                    clear: both;
-                    display: block;
-                    padding-top: @indent__base;
-                    width: auto !important;
+.email-non-inline() {
+    @media @media-xs-down {
+        .email-features {
+            > tbody {
+                > tr {
+                    > td {
+                        clear: both;
+                        display: block;
+                        padding-top: @indent__base;
+                        width: auto !important;
+                    }
                 }
             }
         }
