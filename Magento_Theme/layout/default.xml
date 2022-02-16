@@ -6,6 +6,9 @@
         <referenceBlock name="cookie-status-check" remove="true"/>
         <referenceBlock name="report.bugs" remove="true"/>
         <referenceBlock name="sale.reorder.sidebar" remove="true"/>
+        <referenceBlock name="main_css_preloader" remove="true"/>
+        <referenceBlock name="critical_css_block" remove="true"/>
+        <referenceBlock name="css_rel_preload_script" remove="true"/>
 
         <!-- Cleanup and move top links to header account dropdown -->
         <referenceBlock name="header" remove="true"/> <!-- Welcome message -->
