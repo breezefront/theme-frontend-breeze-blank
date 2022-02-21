@@ -21,6 +21,8 @@
                     <item name="default" xsi:type="array">
                         <item name="items" xsi:type="array">
                             <item name="theme-breeze-blank" xsi:type="string">js/breeze/theme-blank</item>
+                            <item name="theme-breeze-extend" xsi:type="string">js/breeze/extend</item>
+                            <item name="theme-breeze-custom" xsi:type="string">js/breeze/custom</item>
                         </item>
                     </item>
                 </argument>
