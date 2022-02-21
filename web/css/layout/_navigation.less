@@ -54,13 +54,16 @@
         }
     }
 
-    .navigation-wrapper {
-        .navigation {
-            &:extend(.container);
-        }
+    .page-wrapper,
+    .page-header {
+        > .navigation-wrapper {
+            .navigation {
+                &:extend(.container);
+            }
 
-        .navigation > ul {
-            .margin-left(-@2);
+            .navigation > ul {
+                .margin-left(-@2);
+            }
         }
     }
 
