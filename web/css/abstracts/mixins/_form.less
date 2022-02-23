@@ -61,6 +61,8 @@
         }
         &:focus-visible {
             --button-border-alpha: 1;
+            .lib-css(background, @button__focus__background);
+            .lib-css(color, @button__focus__color);
             z-index: 10;
             outline: 2px solid transparent;
             outline-offset: 2px;
