@@ -20,7 +20,7 @@
     & when not (@critical) {
         &:focus {
             --input-border-color: var(--input-focus-border-color);
-            --input-shadow-spread: var(--input-focus-shadow-spread);
+            --input-shadow-spread: @input__focus__shadow-spread;
             outline: 2px solid transparent;
             outline-offset: 2px;
         }
