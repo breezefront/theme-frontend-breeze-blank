@@ -1,3 +1,6 @@
+@navigation__media-desktop: @media-md;
+@navigation__media-mobile: @media-md-down;
+
 .navigation {
     .submenu {
         &:extend(.breeze-dropdown all);
@@ -19,7 +22,7 @@
     }
 }
 
-@media @media-md-down {
+@media @navigation__media-mobile {
     .navigation-wrapper {
         .breeze-slideout();
         .nav-open & {
@@ -35,6 +38,11 @@
 }
 
 & when (@critical) {
+    :root {
+        // this prop is used by menu.js component
+        --navigation-media-mobile: @navigation__media-mobile;
+    }
+
     .nav-toggle {
         flex-shrink: 0;
         flex-grow: 0;
@@ -77,7 +85,7 @@
         }
     }
 
-    @media @media-md {
+    @media @navigation__media-desktop {
         [data-action="toggle-nav"] {
             display: none;
         }
@@ -139,7 +147,7 @@
         }
     }
 
-    @media @media-md-down {
+    @media @navigation__media-mobile {
         .navigation-wrapper {
             .navigation {
                 clear: both;
@@ -188,7 +196,7 @@
         }
     }
 
-    @media @media-md {
+    @media @navigation__media-desktop {
         .navigation-wrapper {
             .opened > a {
                 --divider-alpha: .05;
