@@ -13,14 +13,15 @@
         }
     }
 
-    .customer-account-login {
-        &.narrow-page.page-layout-1column {
-            .page-main {
-                --container-max-width: @lg;
+    @media @media-md {
+        .customer-account-login {
+            &.narrow-page.page-layout-1column {
+                .page-main {
+                    --container-max-width: @lg;
+                }
             }
         }
-    }
-    @media @media-md {
+
         .login-container {
             display: flex;
             flex-direction: column;
