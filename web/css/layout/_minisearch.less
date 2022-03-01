@@ -1,3 +1,6 @@
+@minisearch__media-desktop: @media-md;
+@minisearch__media-mobile: @media-md-down;
+
 .minisearch {
     .search-autocomplete {
         &:extend(.breeze-dropdown all);
@@ -11,7 +14,7 @@
 }
 
 & when (@critical) {
-    @media @media-md {
+    @media @minisearch__media-desktop {
         .block-search {
             position: relative;
         }
@@ -25,7 +28,7 @@
                 &:extend(.sr-only);
             }
         }
-        @media @media-md-down {
+        @media @minisearch__media-mobile {
             .label {
                 &::before {
                     content: '';
@@ -64,7 +67,7 @@
             margin: 0 !important;
             .left(-9999px);
 
-            @media @media-md {
+            @media @minisearch__media-desktop {
                 background: transparent;
                 position: static;
                 display: block;
@@ -86,7 +89,7 @@
             position: absolute;
             top: ~"calc(100% + @{6})";
             .right(@4);
-            @media @media-md {
+            @media @minisearch__media-desktop {
                 display: flex;
                 position: static;
             }
@@ -96,7 +99,7 @@
             &:extend(.button-reset all);
             .margin-left(-@8);
 
-            @media @media-md-down {
+            @media @minisearch__media-mobile {
                 display: none; // must be hidden on mobile view (fix for blur event)
             }
 
