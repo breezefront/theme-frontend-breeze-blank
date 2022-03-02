@@ -1,6 +1,8 @@
+@rgb-navigation: @rgb-base;
 @navigation__media-desktop: @media-sm;
 @navigation__media-mobile: @media-sm-down;
 @navigation__media-wrap: ~"(min-width: @{sm}) and (max-width: @{md-max})";
+@navigation-top-level__font-weight: false;
 
 .navigation {
     .submenu {
@@ -93,6 +95,14 @@
     }
 
     .navigation {
+        --base-color: @rgb-navigation;
+        --z-layer-color: @rgb-navigation;
+        color: @base__color;
+
+        a.level-top {
+            .lib-css(font-weight, @navigation-top-level__font-weight);
+        }
+
         li {
             position: relative;
         }
