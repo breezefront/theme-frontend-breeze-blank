@@ -2,6 +2,9 @@
 @minisearch__media-desktop: @media-sm;
 @minisearch__media-mobile: @media-sm-down;
 @minisearch__top: 100%;
+@minisearch-input__border-color-rgb: false;
+@minisearch-input__background-rgb: false;
+@minisearch__padding: @4;
 
 .minisearch {
     .search-autocomplete {
@@ -46,9 +49,11 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        .lib-css(--input-border-color, @minisearch-input__border-color-rgb);
+        .lib-css(--input-bg, @minisearch-input__background-rgb);
 
         .control {
-            padding: @4;
+            padding: @minisearch__padding;
             background: @base__background;
             position: absolute;
             top: @minisearch__top;
@@ -108,6 +113,8 @@
     .minisearch {
         .label {
             &::before {
+                position: relative;
+                z-index: 41;
                 cursor: pointer;
                 .breeze-icon(@icon-search);
             }
