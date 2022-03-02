@@ -46,19 +46,6 @@
         align-items: center;
         justify-content: flex-end;
 
-        &.active {
-            .control {
-                display: block;
-                z-index: 40;
-                left: 0;
-                right: 0;
-            }
-            .actions {
-                display: flex;
-                z-index: 41;
-            }
-        }
-
         .control {
             position: relative;
             padding: @4;
@@ -128,6 +115,18 @@
         .action.search {
             &::before {
                 .breeze-icon(@icon-search);
+            }
+        }
+        &.active {
+            .control {
+                display: block;
+                z-index: 40;
+                left: 0;
+                right: 0;
+            }
+            .actions {
+                display: flex;
+                z-index: 41;
             }
         }
         .search-autocomplete {
