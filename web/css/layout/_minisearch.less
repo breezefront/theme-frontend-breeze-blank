@@ -1,5 +1,6 @@
 @minisearch__media-desktop: @media-md;
 @minisearch__media-mobile: @media-md-down;
+@minisearch__top: 100%;
 
 .minisearch {
     .search-autocomplete {
@@ -63,7 +64,7 @@
             padding: @4;
             background: @base__background;
             position: absolute;
-            top: 100%;
+            top: @minisearch__top;
             margin: 0 !important;
             .left(-9999px);
 
