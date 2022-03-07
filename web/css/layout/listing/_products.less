@@ -13,6 +13,17 @@
         }
     }
 
+    .product-image-photo,
+    .product.media .main-image,
+    .product.media .thumbnails img {
+        .lib-css(filter, @product-image__filter);
+        .lib-css(border-radius, @product-image__border-radius);
+    }
+    .product.media .thumbnails .item,
+    .product.media .thumbnails a::after {
+        .lib-css(border-radius, @product-image__border-radius);
+    }
+
     // Styles for content and sidebar (grid and list)
     .product-item-actions {
         display: flex;
