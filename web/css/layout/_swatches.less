@@ -1,6 +1,6 @@
 & when (@critical) {
     .swatch-attribute {
-        margin-bottom: @1-5;
+        margin-bottom: @swatch-options__margin-bottom;
         &:last-child {
             margin: 0;
         }
@@ -9,13 +9,13 @@
         font-weight: 500;
         .margin-right(@1);
         ~ .swatch-attribute-options {
-            margin-top: @1;
+            margin-top: @swatch-options__margin-top;
         }
     }
     .swatch-attribute-options {
         display: flex;
         flex-wrap: wrap;
-        gap: @1-5;
+        gap: @swatch__gap;
     }
     .swatch-option {
         .text-xs();
@@ -24,17 +24,22 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        min-width: @8;
-        height: @8;
+        min-width: @swatch__size;
+        height: @swatch__size;
         padding: 0 @1;
         background: @muted__background;
         position: relative;
+        .lib-css(border-radius, @swatch__border-radius);
 
         &::before {
             content: '';
             position: absolute;
-            &:extend(.inset-0);
             box-shadow: 0 0 0 1px inset @divider__color;
+            .lib-css(border-radius, @swatch__border-radius);
+            top: @swatch__border-offset;
+            bottom: @swatch__border-offset;
+            left: @swatch__border-offset;
+            right: @swatch__border-offset;
         }
     }
     input.swatch-input {
