@@ -80,21 +80,29 @@
     }
 
     .product-add-form {
-        margin: @2 0;
+        .lib-css(margin, @product-add-form__margin);
         form {
             > div + div {
                 margin-top: @2;
             }
         }
         .product-options-wrapper {
-            margin-bottom: @2;
+            .lib-css(margin, @product-options-wrapper__margin);
+            .lib-css(padding, @product-options-wrapper__padding);
+            .lib-css(border, @product-options-wrapper__border);
+            .lib-css(border-width, @product-options-wrapper__border-width);
         }
         .product-options-bottom {
-            margin-top: @4;
+            .lib-css(margin, @product-options-bottom__margin);
         }
     }
 
     .box-tocart {
+        .lib-css(margin, @product-box-tocart__margin);
+        .lib-css(padding, @product-box-tocart__padding);
+        .lib-css(border, @product-box-tocart__border);
+        .lib-css(border-width, @product-box-tocart__border-width);
+
         .fieldset {
             display: flex;
             align-items: flex-start;
