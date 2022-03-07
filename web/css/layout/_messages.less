@@ -5,6 +5,10 @@
         gap: @1;
         padding: @3 @4;
         margin-bottom: @3;
+        border: 1px solid var(--message-border-color);
+
+        .lib-css(border-radius, @message__border-radius);
+        .lib-css(border-width, @message__border-width);
 
         .field + &,
         .control & {
@@ -32,7 +36,6 @@
 
 & when not (@critical) {
     .message {
-        border: 1px solid var(--message-border-color);
         background: var(--message-bg);
         color: var(--message-color);
         padding: @3 @4;
