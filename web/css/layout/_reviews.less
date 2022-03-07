@@ -43,6 +43,7 @@
         a {
             &:extend(.link-common all);
             .text-sm();
+            .lib-css(--link-color, @review-action__color);
         }
     }
 
@@ -130,7 +131,7 @@
         -webkit-mask-position: 0 50%;
     }
     .rating-result > span {
-        color: ~"rgb(var(--yellow))";
+        color: @rating__color;
     }
     .review-control-vote {
         &::before,
@@ -149,7 +150,7 @@
         }
         label {
             cursor: pointer;
-            color: ~"rgb(var(--yellow))";
+            color: @rating__color;
             height: @6;
             .left(0);
             &::before {
