@@ -5,3 +5,10 @@
         -webkit-mask-size: @size @size;
     }
 }
+.breeze-icon(@icon, @width: @6, @height: @6) {
+    & when not (@critical) {
+        background-color: currentColor;
+        -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        -webkit-mask-size: @width @height;
+    }
+}
