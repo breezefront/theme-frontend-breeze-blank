@@ -1,7 +1,7 @@
 & when (@critical) {
     @media @media-md-down {
         .account .page-main .columns {
-            padding-top: @12; // spacing for collapsible nav
+            padding-top: @14; // spacing for collapsible nav
         }
     }
 
@@ -45,10 +45,21 @@
     .account {
         .main {
             .block {
-                --block-title-padding: @2 @4;
-                --block-content-padding: @4;
-                --block-title-margin: 0;
-                --block-title-bg: var(--muted-bg);
+                .block-title {
+                    .lib-css(line-height, @account-block-title__line-height);
+                    .lib-css(font-size, @account-block-title__font-size);
+                    .lib-css(margin, @account-block-title__margin);
+                    .lib-css(padding, @account-block-title__padding);
+                    .lib-css(border, @account-block-title__border);
+                    .lib-css(border-width, @account-block-title__border-width);
+                    .lib-css(background, @account-block-title__background);
+                    strong {
+                        .lib-css(font-weight, @account-block-title__font-weight);
+                    }
+                }
+                .block-content {
+                    .lib-css(padding, @account-block-content__padding);
+                }
             }
         }
     }

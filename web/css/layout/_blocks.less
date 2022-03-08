@@ -7,12 +7,15 @@
     .block {
         > .title,
         .block-title {
-            .text-lg();
-            font-weight: 500;
-            margin: @block-title__margin;
-            padding: @block-title__padding;
-            border: @block-title__border;
-            border-width: @block-title__border-width;
+            .lib-css(line-height, @block-title__line-height);
+            .lib-css(font-size, @block-title__font-size);
+            .lib-css(margin, @block-title__margin);
+            .lib-css(padding, @block-title__padding);
+            .lib-css(border, @block-title__border);
+            .lib-css(border-width, @block-title__border-width);
+            strong {
+                .lib-css(font-weight, @block-title__font-weight);
+            }
         }
         .block-title {
             a {
@@ -30,9 +33,9 @@
         }
         .block-content {
             display: flow-root;
-            padding: @block-content__padding;
-            border: @block-content__border;
-            border-width: @block-content__border-width;
+            .lib-css(padding, @block-content__padding);
+            .lib-css(border, @block-content__border);
+            .lib-css(border-width, @block-content__border-width);
         }
         .box {
             margin-bottom: @3;
@@ -51,6 +54,49 @@
                 display: block;
                 margin-bottom: @2;
             }
+        }
+
+        .main & {
+            .block-title {
+                .lib-css(line-height, @content-block-title__line-height);
+                .lib-css(font-size, @content-block-title__font-size);
+                .lib-css(margin, @content-block-title__margin);
+                .lib-css(padding, @content-block-title__padding);
+                .lib-css(border, @content-block-title__border);
+                .lib-css(border-width, @content-block-title__border-width);
+            }
+            .block-content {
+                .lib-css(padding, @content-block-content__padding);
+                .lib-css(border, @content-block-content__border);
+                .lib-css(border-width, @content-block-content__border-width);
+            }
+        }
+    }
+
+    .catalog-product-view .main > .block {
+        .block-title {
+            .lib-css(line-height, @hero-block-title__line-height);
+            .lib-css(font-size, @hero-block-title__font-size);
+            .lib-css(margin, @hero-block-title__margin);
+            .lib-css(padding, @hero-block-title__padding);
+            .lib-css(border, @hero-block-title__border);
+            .lib-css(border-width, @hero-block-title__border-width);
+            .lib-css(text-align, @hero-block-title__text-align);
+
+            & when not (@hero-block-title-icon__mask = false) {
+                &::before {
+                    content: '';
+                    display: @hero-block-title-icon__display;
+                    margin: @hero-block-title-icon__margin;
+                    width: @hero-block-title-icon__width;
+                    height: @hero-block-title-icon__height;
+                }
+            }
+        }
+        .block-content {
+            .lib-css(padding, @hero-block-content__padding);
+            .lib-css(border, @hero-block-content__border);
+            .lib-css(border-width, @hero-block-content__border-width);
         }
     }
 
@@ -105,8 +151,8 @@
     .block {
         > .title,
         .block-title {
-            color: @block-title__color;
-            background: @block-title__background;
+            .lib-css(color, @block-title__color);
+            .lib-css(background, @block-title__background);
         }
         .block-title {
             .counter {
@@ -114,7 +160,14 @@
             }
         }
         .block-content {
-            background: @block-content__background;
+            .lib-css(background, @block-content__background);
+        }
+
+        .main & {
+            .block-title {
+                .lib-css(background, @content-block-title__background);
+                .lib-css(color, @content-block-title__color);
+            }
         }
     }
     .sidebar .block .action.delete,
@@ -122,6 +175,18 @@
         color: @muted__color;
         &::before {
             .breeze-icon(@icon-x, @4);
+        }
+    }
+    .catalog-product-view .main > .block {
+        .block-title {
+            .lib-css(color, @hero-block-title__color);
+            .lib-css(background, @hero-block-title__background);
+
+            & when not (@hero-block-title-icon__mask = false) {
+                &::before {
+                    .breeze-icon(@hero-block-title-icon__mask, 48px, 9px);
+                }
+            }
         }
     }
 }
