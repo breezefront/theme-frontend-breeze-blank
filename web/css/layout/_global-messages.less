@@ -2,11 +2,20 @@
     .message.global {
         color: #222;
         background: ~"rgb(var(--yellow))";
-        text-align: center;
+        margin: 0;
+        border-radius: 0;
 
         .content {
             &:extend(.container);
             padding: @2;
+        }
+
+        .actions {
+            margin-top: @3;
+        }
+
+        &.noscript {
+            text-align: center;
         }
     }
 }
