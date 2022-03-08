@@ -1,6 +1,12 @@
 .breeze-tabs {
     & when (@critical) {
-        display: flow-root;
+        @media @tab-horizontal__media {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .lib-css(justify-content, @tab__horizontal__justify-content);
+            .lib-css(margin, @tab__horizontal__margin);
+        }
     }
 }
 
@@ -12,11 +18,14 @@
     }
 
     & when (@critical) {
-        height: @12;
-        padding: 0 @4;
+        order: -1;
         display: flex;
         align-items: center;
-        color: @muted__color;
+        .lib-css(padding, @tab-toggler__padding);
+        .lib-css(color, @tab-toggler__color);
+        .lib-css(background, @tab-toggler__background);
+        .lib-css(font-size, @tab-toggler__font-size);
+        .lib-css(font-weight, @tab-toggler__font-weight);
 
         @media @tab-accordion__media {
             justify-content: space-between;
@@ -27,8 +36,10 @@
         }
 
         @media @tab-horizontal__media {
-            .float(left);
-            .margin-right(@4);
+            .margin(@tab-toggler__horizontal__margin);
+            .lib-css(padding, @tab-toggler__horizontal__padding);
+            .lib-css(border, @tab-toggler__horizontal__border);
+            .lib-css(border-width, @tab-toggler__horizontal__border-width);
             position: relative;
             white-space: nowrap;
         }
@@ -36,7 +47,8 @@
         .counter {
             opacity: .8;
             padding: @0-5 @2;
-            background: @muted__background;
+            .lib-css(background, @tab-counter__background);
+            .lib-css(display, @tab-counter__display);
         }
     }
     & when not (@critical) {
@@ -44,7 +56,8 @@
         &:hover {
             --muted-alpha: .9;
             --muted-bg-alpha: .5;
-            background: @muted__background;
+            .lib-css(background, @tab-toggler__hover__background);
+            .lib-css(color, @tab-toggler__hover__color);
         }
     }
 }
@@ -58,10 +71,14 @@
         @media @tab-accordion__media {
             border-bottom-color: transparent;
         }
+        @media @tab-horizontal__media {
+            .lib-css(border-color, @tab-toggler__horizontal-active__border-color);
+        }
     }
     & when not (@critical) {
         --muted-alpha: .9;
-        background: @muted__background;
+        .lib-css(background, @tab-toggler__active__background);
+        .lib-css(color, @tab-toggler__active__color);
         &:hover {
             --muted-bg-alpha: 1;
         }
@@ -70,16 +87,19 @@
 
 .breeze-tab-content {
     & when (@critical) {
-        padding: @3 @4;
         display: none;
         visibility: hidden;
         opacity: 0;
+        .lib-css(padding, @tab-content__padding);
+        .lib-css(border, @tab-content__border);
+        .lib-css(border-width, @tab-content__border-width);
 
         @media @tab-horizontal__media {
-            .float(right);
-            .margin-left(-100%);
             width: 100%;
-            margin-top: ~"calc(@{12} - 1px)";
+            .lib-css(margin, @tab-content__horizontal__margin);
+            .lib-css(padding, @tab-content__horizontal__padding);
+            .lib-css(border, @tab-content__horizontal__border);
+            .lib-css(border-width, @tab-content__horizontal__border-width);
         }
     }
 
