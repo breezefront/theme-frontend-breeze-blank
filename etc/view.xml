@@ -294,6 +294,7 @@
             <var name="product_page_image_medium">(min-width: 1536px) 700px, (min-width: 1280px) 615px, (min-width: 1024px) 490px, (min-width: 768px) 360px, (min-width: 640px) 625px, calc(100vw - 4rem)</var>
             <var name="product_page_image_small">88px</var>
             <var name="cart_page_product_thumbnail">(min-width: 1536px) 300px, (min-width: 1280px) 230px, (min-width: 1024px) 140px, (min-width: 640px) 170px, 40%</var>
+            <var name="cart_cross_sell_products">use:category_page_grid-1column</var>
             <var name="new_products_content_widget_grid">use:category_page_grid</var>
         </var>
     </vars>
