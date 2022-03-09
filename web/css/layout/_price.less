@@ -1,11 +1,24 @@
 & when (@critical) {
+    .price-box {
+        .lib-css(color, @price__color);
+        .product.item & {
+            .lib-css(color, @price__listing__color);
+        }
+    }
     .special-price {
-        color: @danger__color;
+        .lib-css(color, @price-special__color);
         .price-label {
             &:extend(.sr-only);
         }
     }
     .old-price {
-        color: @muted__color;
+        .lib-css(color, @price-old__color);
+        .lib-css(text-decoration, @price-old__text-decoration);
+
+        & when (@price-old-label__display = none) {
+            .price-label {
+                &:extend(.sr-only);
+            }
+        }
     }
 }

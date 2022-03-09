@@ -1,6 +1,7 @@
 & when (@critical) {
     :root {
         --listing-grid-gap: @listing-grid__gap;
+        --listing-grid-row-gap: @listing-grid__row-gap;
         --listing-grid-columns: @listing-grid__columns;
         @media @media-sm {
             --listing-grid-columns: @listing-grid__media-sm__columns;
@@ -122,6 +123,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: var(--listing-grid-gap);
+            row-gap: var(--listing-grid-row-gap);
 
             .product-item {
                 padding: var(--listing-grid-item-padding, @listing-grid-item__padding);

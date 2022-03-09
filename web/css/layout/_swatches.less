@@ -2,7 +2,10 @@
     .swatch-attribute {
         margin-bottom: @swatch-options__margin-bottom;
         &:last-child {
-            margin: 0;
+            margin: 0 !important;
+        }
+        .product.item & {
+            .lib-css(margin-bottom, @swatch-options__listing__margin-bottom);
         }
     }
     .swatch-attribute-label {
@@ -45,6 +48,18 @@
             left: @swatch__border-offset;
             right: @swatch__border-offset;
         }
+
+        .product.item & {
+            .lib-css(font-size, @swatch__listing__font-size);
+            .lib-css(min-width, @swatch__listing__size);
+            .lib-css(height, @swatch__listing__size);
+            &::before {
+                .lib-css(top, @swatch__listing__border-offset);
+                .lib-css(bottom, @swatch__listing__border-offset);
+                .lib-css(left, @swatch__listing__border-offset);
+                .lib-css(right, @swatch__listing__border-offset);
+            }
+        }
     }
     input.swatch-input {
         position: absolute;
@@ -52,6 +67,11 @@
         .left(-9999px);
         .actions-primary & {
             display: none; // disable validation in product listing
+        }
+    }
+    .product.item {
+        [class^="swatch-opt-"] {
+            .lib-css(margin, @swatch-wrapper__listing__margin);
         }
     }
 }
