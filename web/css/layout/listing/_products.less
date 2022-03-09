@@ -10,6 +10,9 @@
         }
     }
     .page-layout-1column {
+        @media @media-lg {
+            .lib-css(--listing-grid-columns, @listing-grid__media-lg-1column__columns);
+        }
         @media @media-xl {
             --listing-grid-columns: @listing-grid__media-xl-1column__columns;
         }
