@@ -1,8 +1,10 @@
 & when (@critical) {
-    .sidebar + .sidebar,
     .page-main .block + .block,
     .page-main .block + script + .block {
         margin-top: @block__indent;
+    }
+    .sidebar-main .block:last-child {
+        margin-bottom: @block__indent;
     }
     .block {
         > .title,
