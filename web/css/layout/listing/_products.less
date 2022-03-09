@@ -1,15 +1,17 @@
 & when (@critical) {
     :root {
+        --listing-grid-gap: @listing-grid__gap;
+        --listing-grid-columns: @listing-grid__columns;
         @media @media-sm {
-            --listing-grid-item-width: @listing-grid-item__media-sm__width;
+            --listing-grid-columns: @listing-grid__media-sm__columns;
         }
         @media @media-xl {
-            --listing-grid-item-width: @listing-grid-item__media-xl__width;
+            --listing-grid-columns: @listing-grid__media-xl__columns;
         }
     }
     .page-layout-1column {
         @media @media-xl {
-            --listing-grid-item-width: @listing-grid-item__media-xl-1column__width;
+            --listing-grid-columns: @listing-grid__media-xl-1column__columns;
         }
     }
 
@@ -116,12 +118,13 @@
         .products-grid & {
             display: flex;
             flex-wrap: wrap;
-            gap: var(--listing-grid-item-indent, @listing-grid-item__indent);
+            justify-content: space-between;
+            gap: var(--listing-grid-gap);
 
             .product-item {
                 padding: var(--listing-grid-item-padding, @listing-grid-item__padding);
                 max-width: var(--listing-grid-item-max-width, @listing-grid-item__max-width);
-                width: ~"calc(var(--listing-grid-item-width, @{listing-grid-item__width}) - var(--listing-grid-item-indent, @{listing-grid-item__indent}))";
+                width: ~"calc(100% / var(--listing-grid-columns) - var(--listing-grid-gap) * (var(--listing-grid-columns) - 1) / var(--listing-grid-columns))";
             }
             .product-item-info {
                 height: 100%;
