@@ -144,9 +144,9 @@
         // List listing
         .products-list & {
             .product-item + .product-item {
-                margin-top: @3;
-                padding-top: @3;
-                border-top: 1px solid @divider__color;
+                margin-top: @listing-list__gap;
+                padding-top: @listing-list__gap;
+                .lib-css(border-top, @listing-list__divider);
                 .sidebar & {
                     border: 0;
                     margin-top: @1-5;
@@ -154,7 +154,7 @@
                 }
             }
             .product-item-info {
-                gap: @3;
+                gap: @listing-list-item__gap;
                 > :first-child {
                     max-width: 35%;
                 }
