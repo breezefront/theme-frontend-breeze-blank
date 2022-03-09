@@ -38,19 +38,19 @@
                 <width>300</width>
                 <height>375</height>
             </image>
-            <image id="category_page_list-srcset-260" type="small_image">
+            <image id="category_page_list-srcset-1" type="small_image">
                 <width>260</width>
                 <height>325</height>
             </image>
-            <image id="category_page_list-srcset-380" type="small_image">
+            <image id="category_page_list-srcset-2" type="small_image">
                 <width>380</width>
                 <height>475</height>
             </image>
-            <image id="category_page_list-srcset-520" type="small_image">
+            <image id="category_page_list-srcset-3" type="small_image">
                 <width>520</width>
                 <height>650</height>
             </image>
-            <image id="category_page_list-srcset-600" type="small_image">
+            <image id="category_page_list-srcset-4" type="small_image">
                 <width>600</width>
                 <height>750</height>
             </image>
@@ -61,23 +61,23 @@
                 <width>700</width>
                 <height>700</height>
             </image>
-            <image id="product_page_image_medium-srcset-490" type="image">
+            <image id="product_page_image_medium-srcset-1" type="image">
                 <width>490</width>
                 <height>490</height>
             </image>
-            <image id="product_page_image_medium-srcset-615" type="image">
+            <image id="product_page_image_medium-srcset-2" type="image">
                 <width>615</width>
                 <height>615</height>
             </image>
-            <image id="product_page_image_medium-srcset-980" type="image">
+            <image id="product_page_image_medium-srcset-3" type="image">
                 <width>980</width>
                 <height>980</height>
             </image>
-            <image id="product_page_image_medium-srcset-1230" type="image">
+            <image id="product_page_image_medium-srcset-4" type="image">
                 <width>1230</width>
                 <height>1230</height>
             </image>
-            <image id="product_page_image_medium-srcset-1400" type="image">
+            <image id="product_page_image_medium-srcset-5" type="image">
                 <width>1400</width>
                 <height>1400</height>
             </image>
@@ -86,7 +86,7 @@
                 <width>88</width>
                 <height>110</height>
             </image>
-            <image id="product_page_image_small-srcset-176" type="thumbnail">
+            <image id="product_page_image_small-srcset-1" type="thumbnail">
                 <width>176</width>
                 <height>220</height>
             </image>
@@ -150,7 +150,7 @@
                 <width>140</width>
                 <height>140</height>
             </image>
-            <image id="product_small_image-srcset-280" type="small_image">
+            <image id="product_small_image-srcset-1" type="small_image">
                 <width>280</width>
                 <height>280</height>
             </image>
