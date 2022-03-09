@@ -2,10 +2,13 @@
     .swatch-attribute {
         margin-bottom: @swatch-options__margin-bottom;
         &:last-child {
-            margin: 0 !important;
+            margin: 0;
         }
         .product.item & {
             .lib-css(margin-bottom, @swatch-options__listing__margin-bottom);
+            &:last-child {
+                margin: 0;
+            }
         }
     }
     .swatch-attribute-label {
