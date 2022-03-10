@@ -3,6 +3,8 @@
         --listing-grid-gap: @listing-grid__gap;
         --listing-grid-row-gap: @listing-grid__row-gap;
         --listing-grid-columns: @listing-grid__columns;
+        --listing-grid-item-padding: @listing-grid-item__padding;
+        --listing-grid-item-margin: @listing-grid-item__margin;
         @media @media-sm {
             --listing-grid-columns: @listing-grid__media-sm__columns;
         }
@@ -131,9 +133,22 @@
             row-gap: var(--listing-grid-row-gap);
 
             .product-item {
-                padding: var(--listing-grid-item-padding, @listing-grid-item__padding);
+                .lib-css(box-shadow, @listing-grid-item__box-shadow);
+                .lib-css(background, @listing-grid-item__background);
+                .lib-css(border-radius, @listing-grid-item__border-radius);
+                padding: var(--listing-grid-item-padding);
+                margin: var(--listing-grid-item-margin);
                 max-width: var(--listing-grid-item-max-width, @listing-grid-item__max-width);
-                width: ~"calc(100% / var(--listing-grid-columns) - var(--listing-grid-gap) * (var(--listing-grid-columns) - 1) / var(--listing-grid-columns))";
+                width: ~"calc((100% - var(--listing-grid-item-margin) * var(--listing-grid-columns) * 2 - var(--listing-grid-gap) * (var(--listing-grid-columns) - 1)) / var(--listing-grid-columns))";
+
+                &:hover,
+                &:focus-within {
+                    z-index: 10;
+                    .lib-css(--listing-grid-item-padding, @listing-grid-item__hover__padding);
+                    .lib-css(--listing-grid-item-margin, @listing-grid-item__hover__margin);
+                    .lib-css(box-shadow, @listing-grid-item__hover__box-shadow);
+                    .lib-css(background, @listing-grid-item__hover__background);
+                }
             }
             .product-item-info {
                 height: 100%;
