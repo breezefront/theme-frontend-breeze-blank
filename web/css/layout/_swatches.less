@@ -35,6 +35,7 @@
         padding: 0 @1;
         background: @muted__background;
         position: relative;
+        margin: abs(@swatch__border-offset);
         .lib-css(border-radius, @swatch__border-radius);
 
         &-link-layered {
@@ -56,6 +57,9 @@
             .lib-css(font-size, @swatch__listing__font-size);
             .lib-css(min-width, @swatch__listing__size);
             .lib-css(height, @swatch__listing__size);
+            & when not (@swatch__listing__border-offset = false) {
+                margin: abs(@swatch__listing__border-offset);
+            }
             &::before {
                 .lib-css(top, @swatch__listing__border-offset);
                 .lib-css(bottom, @swatch__listing__border-offset);
