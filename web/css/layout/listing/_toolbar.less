@@ -25,6 +25,13 @@
             }
         }
 
+        label,
+        .toolbar-amount,
+        .limiter-text {
+            .lib-css(color, @toolbar__color);
+        }
+
+
         .sorter,
         .limiter {
             display: flex;
@@ -49,7 +56,8 @@
         .modes {
             display: flex;
             align-items: center;
-            border: 1px solid @divider__color;
+            .lib-css(border, @toolbar-modes__border);
+            .lib-css(border-radius, @toolbar-modes__border-radius);
             a {
                 --muted-alpha: .3;
                 color: @muted__color;
@@ -59,7 +67,9 @@
             &:extend(.sr-only);
         }
         .mode-grid {
-            .border-right(1px solid @divider__color);
+            & when not (@toolbar-modes__border = false) {
+                .border-right(@toolbar-modes__border);
+            }
         }
         .mode-grid,
         .mode-list {
