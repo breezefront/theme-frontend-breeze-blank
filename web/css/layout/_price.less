@@ -5,6 +5,13 @@
             .lib-css(color, @price__listing__color);
         }
     }
+    .normal-price {
+        & when (@price-normal-label__display = none) {
+            .price-label {
+                &:extend(.sr-only);
+            }
+        }
+    }
     .special-price {
         .lib-css(color, @price-special__color);
         .price-label {
