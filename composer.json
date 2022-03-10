@@ -2,7 +2,7 @@
     "name": "swissup/theme-frontend-breeze-blank",
     "description": "Clean, lightning-fast breeze-powered theme.",
     "type": "magento2-theme",
-    "version": "0.12.2",
+    "version": "0.12.3",
     "license": "OSL-3.0",
     "autoload": {
         "files": [
