@@ -11,6 +11,10 @@
         @media @media-xl {
             --listing-grid-columns: @listing-grid__media-xl__columns;
         }
+
+        & when (@listing-grid-item-swatches__position = absolute) {
+            --swatches-over-image: true;
+        }
     }
     .page-layout-1column {
         @media @media-lg {
@@ -42,6 +46,11 @@
     .product-item-details {
         dl a {
             &:extend(.link-common all);
+        }
+    }
+    .actions-primary {
+        .action {
+            white-space: nowrap;
         }
     }
     .actions-secondary {
@@ -134,25 +143,32 @@
 
             .product-item {
                 .lib-css(box-shadow, @listing-grid-item__box-shadow);
-                .lib-css(background, @listing-grid-item__background);
-                .lib-css(border-radius, @listing-grid-item__border-radius);
-                padding: var(--listing-grid-item-padding);
+                position: relative;
                 margin: var(--listing-grid-item-margin);
                 max-width: var(--listing-grid-item-max-width, @listing-grid-item__max-width);
                 width: ~"calc((100% - var(--listing-grid-item-margin) * var(--listing-grid-columns) * 2 - var(--listing-grid-gap) * (var(--listing-grid-columns) - 1)) / var(--listing-grid-columns))";
 
                 &:hover,
                 &:focus-within {
-                    z-index: 10;
-                    .lib-css(--listing-grid-item-padding, @listing-grid-item__hover__padding);
+                    overflow: visible;
                     .lib-css(--listing-grid-item-margin, @listing-grid-item__hover__margin);
-                    .lib-css(box-shadow, @listing-grid-item__hover__box-shadow);
-                    .lib-css(background, @listing-grid-item__hover__background);
                 }
             }
             .product-item-info {
-                height: 100%;
+                // height: 100%; // ????
                 flex-direction: column;
+                .lib-css(background, @listing-grid-item__background);
+                .lib-css(border-radius, @listing-grid-item__border-radius);
+                border: var(--listing-grid-item-padding) solid @listing-grid-item__background;
+            }
+            .product-item:hover,
+            .product-item:focus-within {
+                .product-item-info {
+                    z-index: 10;
+                    .lib-css(--listing-grid-item-padding, @listing-grid-item__hover__padding);
+                    .lib-css(box-shadow, @listing-grid-item__hover__box-shadow);
+                    .lib-css(background, @listing-grid-item__hover__background);
+                }
             }
             .product-item-inner {
                 margin-top: auto;
@@ -160,6 +176,30 @@
                 display: flex;
                 flex-direction: column;
                 gap: @1;
+            }
+
+            // Name and price in a single line
+            & when (@listing-grid-item__price-aside-name = true) {
+                .product-item-details {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-content: flex-start;
+                    > * {
+                        width: 100%;
+                        order: 10;
+                    }
+                    .price-box,
+                    .product-item-name {
+                        order: -1;
+                    }
+                    .product-item-name {
+                        max-width: 70%;
+                    }
+                    .price-box {
+                        max-width: 30%;
+                        .text-align(right);
+                    }
+                }
             }
         }
 

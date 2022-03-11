@@ -10,7 +10,10 @@
 @listing-grid__media-lg-1column__columns: false;
 @listing-grid__media-xl-1column__columns: 5;
 
+@listing-grid-item__price-aside-name: false;
+
 @listing-grid-item__max-width: 400px;
+@listing-grid-item__max-height: false;
 @listing-grid-item__padding: 0px;
 @listing-grid-item__margin: -@listing-grid-item__padding;
 @listing-grid-item__border-radius: @product-image__border-radius;
@@ -21,6 +24,25 @@
 @listing-grid-item__hover__padding: @listing-grid-item__padding;
 @listing-grid-item__hover__margin: -@listing-grid-item__hover__padding;
 
+@listing-grid-item-swatches__position: static;
+
+@listing-grid-item-actions-primary__position: static;
+@listing-grid-item-actions-primary__opacity: 0;
+@listing-grid-item-actions-primary__top: 33%;
+@listing-grid-item-actions-primary__left: 50%;
+@listing-grid-item-actions-primary__right: false;
+@listing-grid-item-actions-primary__transform: translateX(-50%) translateY(40%);
+@listing-grid-item-actions-primary__visible__transform: translateX(-50%);
+
+@listing-grid-item-actions-secondary__position: static;
+@listing-grid-item-actions-secondary__flex-direction: column;
+@listing-grid-item-actions-secondary__opacity: 0;
+@listing-grid-item-actions-secondary__top: @1;
+@listing-grid-item-actions-secondary__left: false;
+@listing-grid-item-actions-secondary__right: @1;
+@listing-grid-item-actions-secondary__transform: false;
+@listing-grid-item-actions-secondary__visible__transform: false;
+
 // ----------------------------------------------
 // Preset: static-card;
 // Copy and uncomment these variables into yout theme to apply
@@ -29,16 +51,15 @@
 // @listing-grid-item__box-shadow: @shadow-lg-around;
 // @listing-grid-item__padding: @3;
 // @listing-grid-item__margin: 0px;
-// @listing-grid-item__border-radius: @1;
 // @listing-grid-item__hover__margin: 0px;
 
 // ----------------------------------------------
 // Preset: hover-card;
 // Copy and uncomment these variables into yout theme to apply
 // ----------------------------------------------
-// @listing-grid-item__border-radius: @1;
-// @listing-grid-item__hover__box-shadow: @shadow-lg-around;
+// @listing-grid-item__max-height: 40%; // percent of the item width
 // @listing-grid-item__hover__padding: @3;
+// @listing-grid-item__hover__box-shadow: @shadow-lg-around;
 
 @listing-list__gap: @3;
 @listing-list__divider: 1px solid @divider__color;

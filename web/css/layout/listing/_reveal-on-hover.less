@@ -1,0 +1,127 @@
+& when (@critical) {
+    .products-grid .product-item {
+        // overflowed item that reveal its content on hover
+        & when not (@listing-grid-item__max-height = false) {
+            height: 0;
+            padding-bottom: @listing-grid-item__max-height;
+            overflow: hidden;
+            &::after {
+                pointer-events: none;
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: @4;
+                background: linear-gradient(~"rgba(var(--z-layer-bg), 0)", ~"rgba(var(--z-layer-bg), 1)");
+            }
+
+            & when (@listing-grid-item-actions-primary__position = static) {
+                .actions-primary {
+                    opacity: 0;
+                    &:extend(.transition);
+                }
+                &:hover,
+                &:focus-within {
+                    .actions-primary {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            & when (@listing-grid-item-actions-secondary__position = static) {
+                .actions-secondary {
+                    opacity: 0;
+                    &:extend(.transition);
+                }
+                &:hover,
+                &:focus-within {
+                    .actions-secondary {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            & when (@listing-grid-item-swatches__position = static) {
+                [class^="swatch-opt-"] {
+                    opacity: 0;
+                    &:extend(.transition);
+                }
+                &:hover,
+                &:focus-within {
+                    [class^="swatch-opt-"] {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        // absolutely positioned primary button
+        & when (@listing-grid-item-actions-primary__position = absolute) {
+            .actions-primary {
+                position: absolute;
+                .lib-css(opacity, @listing-grid-item-actions-primary__opacity);
+                .lib-css(transform, @listing-grid-item-actions-primary__transform);
+                .lib-css(top, @listing-grid-item-actions-primary__top);
+                .left(@listing-grid-item-actions-primary__left);
+                .right(@listing-grid-item-actions-primary__right);
+                &:extend(.transition);
+            }
+            &:hover,
+            &:focus-within {
+                .actions-primary {
+                    opacity: 1;
+                    .lib-css(transform, @listing-grid-item-actions-primary__visible__transform);
+                }
+            }
+        }
+
+        // absolutely positioned secondary buttons
+        & when (@listing-grid-item-actions-secondary__position = absolute) {
+            .actions-secondary {
+                position: absolute;
+                .lib-css(opacity, @listing-grid-item-actions-secondary__opacity);
+                .lib-css(top, @listing-grid-item-actions-secondary__top);
+                .lib-css(flex-direction, @listing-grid-item-actions-secondary__flex-direction);
+                .lib-css(transform, @listing-grid-item-actions-secondary__transform);
+                .right(@listing-grid-item-actions-secondary__right);
+                .left(@listing-grid-item-actions-secondary__left);
+                &:extend(.transition);
+            }
+            &:hover,
+            &:focus-within {
+                .actions-secondary {
+                    opacity: 1;
+                    .lib-css(transform, @listing-grid-item-actions-secondary__visible__transform);
+                }
+            }
+        }
+
+        & when (@listing-grid-item-swatches__position = absolute) {
+            .product-item-photo {
+                overflow: hidden;
+            }
+            [class^="swatch-opt-"] {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0 !important;
+                padding: @3;
+                --z-layer-bg-alpha: .85;
+                background: @z-layer__background;
+                transform: translateY(50%);
+                opacity: 0;
+                &:extend(.transition);
+            }
+            &:hover,
+            &:focus-within {
+                [class^="swatch-opt-"] {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+        }
+    }
+}

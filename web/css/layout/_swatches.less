@@ -22,6 +22,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: @swatch__gap;
+
+        .products-grid & {
+            .lib-css(justify-content, @swatch-options__listing__justify-content);
+        }
     }
     .swatch-option {
         .text-xs();
