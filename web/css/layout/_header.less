@@ -27,11 +27,21 @@
 
     .header.content {
         &:extend(.container);
+        .lib-css(padding-top, @header-content__padding-top);
+        .lib-css(padding-bottom, @header-content__padding-bottom);
         align-items: center;
         position: relative;
     }
 
     .page-header {
+        .lib-css(border, @header__border);
+        .lib-css(border-width, @header__border-width);
+
+        .panel.wrapper {
+            .lib-css(color, @header-panel__color);
+            .lib-css(background, @header-panel__background);
+        }
+
         .switcher .label {
             &:extend(.sr-only);
         }
@@ -71,6 +81,12 @@
 }
 
 & when not (@critical) {
+    .page-header {
+        .panel.wrapper {
+            .lib-css(--ring-color, @header-panel--ring-color);
+            .lib-css(--ring-alpha, @header-panel--ring-alpha);
+        }
+    }
     .header.links {
         .dropdown & {
             flex-direction: column;
@@ -78,9 +94,9 @@
         }
     }
     .account-dropdown > .action::before {
-        .breeze-icon(@icon-user-circle);
+        .breeze-icon(@header-account__icon);
     }
     .wishlist-dropdown > .action::before {
-        .breeze-icon(@icon-heart);
+        .breeze-icon(@header-wishlist__icon);
     }
 }
