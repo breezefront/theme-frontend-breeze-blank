@@ -9,15 +9,54 @@
 
 & when (@critical) {
     .breadcrumbs {
+        .lib-css(background, @breadcrumbs__background);
+        .lib-css(border, @breadcrumbs__border);
+        .lib-css(border-width, @breadcrumbs__border-width);
+        .lib-css(color, @breadcrumbs__color);
+        .lib-css(font-size, @breadcrumbs__font-size);
         min-height: @breadcrumbs__min-height;
+
         ul {
             &:extend(.container);
+            .lib-css(padding-top, @breadcrumbs__padding-top);
+            .lib-css(padding-bottom, @breadcrumbs__padding-bottom);
+        }
+
+        strong {
+            .lib-css(font-weight, @breadcrumbs-item__active__font-weight);
+        }
+
+        & when not (@breadcrumbs-item-home__icon = false) {
+            .home {
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: @breadcrumbs-item-home__width;
+                    height: @breadcrumbs-item-home__height;
+                }
+                a {
+                    position: relative;
+                    z-index: 2;
+                    text-indent: -9999px;
+                    width: @breadcrumbs-item-home__width;
+                    height: @breadcrumbs-item-home__height;
+                }
+            }
         }
     }
 }
 
 & when not (@critical) {
-    .breadcrumbs a:hover {
-        text-decoration: underline;
+    .breadcrumbs {
+        a:hover {
+            .lib-css(text-decoration, @breadcrumbs-item__hover__text-decoration);
+        }
+
+        & when not (@breadcrumbs-item-home__icon = false) {
+            .home::before {
+                .breeze-icon(@breadcrumbs-item-home__icon, @breadcrumbs-item-home__width, @breadcrumbs-item-home__height);
+            }
+        }
     }
 }
