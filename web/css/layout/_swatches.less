@@ -84,8 +84,10 @@
         [class^="swatch-opt-"] {
             .lib-css(margin, @swatch-wrapper__listing__margin);
 
-            @media @swatch-wrapper__listing__media-hidden {
-                display: none;
+            & when not (@swatch-wrapper__listing__media-hidden = false) {
+                @media @swatch-wrapper__listing__media-hidden {
+                    display: none;
+                }
             }
         }
     }
