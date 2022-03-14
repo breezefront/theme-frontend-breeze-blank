@@ -5,7 +5,7 @@
             margin: 0;
         }
         .product.item & {
-            .lib-css(margin-bottom, @swatch-options__listing__margin-bottom);
+            .lib-css(margin-bottom, @listing-swatch-options__margin-bottom);
             &:last-child {
                 margin: 0;
             }
@@ -24,7 +24,7 @@
         gap: @swatch__gap;
 
         .products-grid & {
-            .lib-css(justify-content, @swatch-options__listing__justify-content);
+            .lib-css(justify-content, @listing-swatch-options__justify-content);
         }
     }
     .swatch-option {
@@ -58,17 +58,17 @@
         }
 
         .product.item & {
-            .lib-css(font-size, @swatch__listing__font-size);
-            .lib-css(min-width, @swatch__listing__size);
-            .lib-css(height, @swatch__listing__size);
-            & when not (@swatch__listing__border-offset = false) {
-                margin: abs(@swatch__listing__border-offset);
+            .lib-css(font-size, @listing-swatch__font-size);
+            .lib-css(min-width, @listing-swatch__size);
+            .lib-css(height, @listing-swatch__size);
+            & when not (@listing-swatch__border-offset = false) {
+                margin: abs(@listing-swatch__border-offset);
             }
             &::before {
-                .lib-css(top, @swatch__listing__border-offset);
-                .lib-css(bottom, @swatch__listing__border-offset);
-                .lib-css(left, @swatch__listing__border-offset);
-                .lib-css(right, @swatch__listing__border-offset);
+                .lib-css(top, @listing-swatch__border-offset);
+                .lib-css(bottom, @listing-swatch__border-offset);
+                .lib-css(left, @listing-swatch__border-offset);
+                .lib-css(right, @listing-swatch__border-offset);
             }
         }
     }
@@ -82,10 +82,10 @@
     }
     .product.item {
         [class^="swatch-opt-"] {
-            .lib-css(margin, @swatch-wrapper__listing__margin);
+            .lib-css(margin, @listing-swatch-wrapper__margin);
 
-            & when not (@swatch-wrapper__listing__media-hidden = false) {
-                @media @swatch-wrapper__listing__media-hidden {
+            & when not (@listing-swatch-wrapper__media-hidden = false) {
+                @media @listing-swatch-wrapper__media-hidden {
                     display: none;
                 }
             }
