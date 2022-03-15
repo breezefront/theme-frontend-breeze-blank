@@ -60,5 +60,13 @@
         </referenceContainer>
         <move element="store.menu" destination="navigation.wrapper"/>
         <!-- <move element="navigation.wrapper" destination="header-wrapper" after="logo"/> -->
+
+        <!-- Footer -->
+        <referenceContainer name="footer-container">
+            <container name="footer-top" htmlTag="div" htmlClass="footer-top"/>
+            <container name="footer-middle" htmlTag="div" htmlClass="footer-middle"/>
+            <container name="footer-bottom" htmlTag="div" htmlClass="footer-bottom"/>
+        </referenceContainer>
+        <move element="footer" destination="footer-middle"/>
     </body>
 </page>
