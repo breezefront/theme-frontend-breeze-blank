@@ -1,0 +1,116 @@
+.breeze-block-sidebar {
+    > .title,
+    .block-title {
+        &:extend(.breeze-block-sidebar-title all);
+    }
+    .block-content {
+        &:extend(.breeze-block-sidebar-content all);
+    }
+}
+.breeze-block-sidebar-title {
+    & when (@critical) {
+        .lib-css(line-height, @block-title__line-height);
+        .lib-css(font-size, @block-title__font-size);
+        .lib-css(margin, @block-title__margin);
+        .lib-css(padding, @block-title__padding);
+        .lib-css(border, @block-title__border);
+        .lib-css(border-width, @block-title__border-width);
+        strong {
+            .lib-css(font-weight, @block-title__font-weight);
+        }
+    }
+    & when not (@critical) {
+        .lib-css(color, @block-title__color);
+        .lib-css(background, @block-title__background);
+    }
+}
+.breeze-block-sidebar-content {
+    & when (@critical) {
+        display: flow-root;
+        .lib-css(padding, @block-content__padding);
+        .lib-css(border, @block-content__border);
+        .lib-css(border-width, @block-content__border-width);
+    }
+    & when not (@critical) {
+        .lib-css(background, @block-content__background);
+    }
+}
+
+.breeze-block-content {
+    > .title,
+    .block-title {
+        &:extend(.breeze-block-content-title all);
+    }
+    .block-content {
+        &:extend(.breeze-block-content-content all);
+    }
+}
+.breeze-block-content-title {
+    & when (@critical) {
+        .lib-css(line-height, @content-block-title__line-height);
+        .lib-css(font-size, @content-block-title__font-size);
+        .lib-css(margin, @content-block-title__margin);
+        .lib-css(padding, @content-block-title__padding);
+        .lib-css(border, @content-block-title__border);
+        .lib-css(border-width, @content-block-title__border-width);
+    }
+    & when not (@critical) {
+        .lib-css(background, @content-block-title__background);
+        .lib-css(color, @content-block-title__color);
+    }
+}
+.breeze-block-content-content {
+    & when (@critical) {
+        .lib-css(padding, @content-block-content__padding);
+        .lib-css(border, @content-block-content__border);
+        .lib-css(border-width, @content-block-content__border-width);
+    }
+}
+
+// Hero blocks
+.breeze-block-hero {
+    .block-title {
+        &:extend(.breeze-block-hero-title all);
+    }
+    .block-content {
+        &:extend(.breeze-block-hero-content all);
+    }
+}
+.breeze-block-hero-title {
+    & when (@critical) {
+        .lib-css(line-height, @hero-block-title__line-height);
+        .lib-css(font-size, @hero-block-title__font-size);
+        .lib-css(margin, @hero-block-title__margin);
+        .lib-css(padding, @hero-block-title__padding);
+        .lib-css(border, @hero-block-title__border);
+        .lib-css(border-width, @hero-block-title__border-width);
+        .lib-css(text-align, @hero-block-title__text-align);
+
+        & when not (@hero-block-title-icon__mask = false) {
+            &::before {
+                content: '';
+                display: @hero-block-title-icon__display;
+                margin: @hero-block-title-icon__margin;
+                width: @hero-block-title-icon__width;
+                height: @hero-block-title-icon__height;
+            }
+        }
+    }
+    & when not (@critical) {
+        .lib-css(color, @hero-block-title__color);
+        .lib-css(background, @hero-block-title__background);
+
+        & when not (@hero-block-title-icon__mask = false) {
+            &::before {
+                .breeze-icon(@hero-block-title-icon__mask, 48px, 9px);
+            }
+        }
+    }
+}
+.breeze-block-hero-content {
+    & when (@critical) {
+        .lib-css(padding, @hero-block-content__padding);
+        .lib-css(border, @hero-block-content__border);
+        .lib-css(border-width, @hero-block-content__border-width);
+    }
+}
