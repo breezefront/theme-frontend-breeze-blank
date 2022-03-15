@@ -50,12 +50,20 @@
 & when not (@critical) {
     .breadcrumbs {
         a:hover {
+            .lib-css(color, @breadcrumbs-item__hover__color);
             .lib-css(text-decoration, @breadcrumbs-item__hover__text-decoration);
         }
 
         & when not (@breadcrumbs-item-home__icon = false) {
-            .home::before {
-                .breeze-icon(@breadcrumbs-item-home__icon, @breadcrumbs-item-home__width, @breadcrumbs-item-home__height);
+            .home {
+                &::before {
+                    .breeze-icon(@breadcrumbs-item-home__icon, @breadcrumbs-item-home__width, @breadcrumbs-item-home__height);
+                }
+                &:hover {
+                    &::before {
+                        .lib-css(color, @breadcrumbs-item__hover__color);
+                    }
+                }
             }
         }
     }
