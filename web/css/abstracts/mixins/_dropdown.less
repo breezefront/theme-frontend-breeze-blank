@@ -4,6 +4,7 @@
         position: absolute;
         pointer-events: none;
         .right(0);
+        top: -9999px;
     }
 
     & when not (@critical) {
@@ -36,6 +37,7 @@
         pointer-events: all;
         visibility: visible;
         transform: scale(1);
+        top: auto;
     }
 }
 
