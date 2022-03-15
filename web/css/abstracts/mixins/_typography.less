@@ -201,3 +201,18 @@
         list-style: none !important;
     }
 }
+
+.invert-colors {
+    color: @base__color;
+
+    --base-color: @rgb-white;
+    --base-alpha: .85;
+    --link-color: @rgb-white;
+    --link-alpha: .9;
+    --ring-color: @rgb-white;
+    --ring-alpha: .7;
+
+    a {
+        --base-alpha: .7;
+    }
+}

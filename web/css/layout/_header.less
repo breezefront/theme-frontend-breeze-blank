@@ -39,6 +39,10 @@
         .lib-css(border-width, @header__border-width);
 
         .panel.wrapper {
+            & when (@header-panel__dark) {
+                &:extend(.invert-colors all);
+            }
+
             .lib-css(color, @header-panel__color);
             .lib-css(background, @header-panel__background);
         }
@@ -87,12 +91,6 @@
 }
 
 & when not (@critical) {
-    .page-header {
-        .panel.wrapper {
-            .lib-css(--ring-color, @header-panel--ring-color);
-            .lib-css(--ring-alpha, @header-panel--ring-alpha);
-        }
-    }
     .header.links {
         .dropdown & {
             flex-direction: column;
