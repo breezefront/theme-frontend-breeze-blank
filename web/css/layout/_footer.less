@@ -127,13 +127,34 @@
 
 & when not (@critical) {
     .footer-top {
-        .lib-css(background, @footer-top__background);
+        & when (@footer-top__background-max-width = false) {
+            .lib-css(background, @footer-top__background);
+        }
+        & when not (@footer-top__background-max-width = false) {
+            @media (max-width: @footer-top__background-max-width) {
+                .lib-css(background, @footer-top__background);
+            }
+        }
     }
     .footer-middle {
-        .lib-css(background, @footer-middle__background);
+        & when (@footer-middle__background-max-width = false) {
+            .lib-css(background, @footer-middle__background);
+        }
+        & when not (@footer-middle__background-max-width = false) {
+            @media (max-width: @footer-middle__background-max-width) {
+                .lib-css(background, @footer-middle__background);
+            }
+        }
     }
     .footer-bottom {
-        .lib-css(background, @footer-bottom__background);
+        & when (@footer-bottom__background-max-width = false) {
+            .lib-css(background, @footer-bottom__background);
+        }
+        & when not (@footer-bottom__background-max-width = false) {
+            @media (max-width: @footer-bottom__background-max-width) {
+                .lib-css(background, @footer-bottom__background);
+            }
+        }
     }
     .page-footer {
         .block.newsletter {
