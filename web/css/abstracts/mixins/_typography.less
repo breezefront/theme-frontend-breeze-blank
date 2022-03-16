@@ -117,14 +117,14 @@
     section {
         margin-bottom: @4;
     }
-    ul,
-    ol:not(.product-items) {
+    ul:not(.unstyled),
+    ol:not(.product-items):not(.unstyled) {
         .padding-left(@5);
     }
-    ul {
+    ul:not(.unstyled) {
         list-style: disc;
     }
-    ol:not(.product-items) {
+    ol:not(.product-items):not(.unstyled) {
         list-style: auto;
     }
     li::marker {
