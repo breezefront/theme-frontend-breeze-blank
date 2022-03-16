@@ -71,7 +71,8 @@
         max-height: -webkit-fill-available;
         background: @z-layer__background;
         pointer-events: auto;
-        .shadow-xl-around();
+        .lib-css(border-radius, @modal__border-radius);
+        .lib-css(box-shadow, @modal__box-shadow);
 
         .modal-xl & {
             --modal-max-width: 850px;
