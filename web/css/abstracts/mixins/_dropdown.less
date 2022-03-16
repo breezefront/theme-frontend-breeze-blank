@@ -8,6 +8,8 @@
     }
 
     & when not (@critical) {
+        --base-color: @rgb-base;
+        --link-color: @rgb-link;
         --ring-color: @rgb-ring;
         .transition();
         padding: var(--dropdown-padding);
