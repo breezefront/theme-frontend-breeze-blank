@@ -173,6 +173,17 @@
             }
         }
     }
+
+    @media @media-md-down {
+        .pagebuilder-column-group {
+            row-gap: @4;
+            flex-wrap: wrap;
+        }
+        .pagebuilder-column {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+    }
 }
 
 & when not (@critical) {
