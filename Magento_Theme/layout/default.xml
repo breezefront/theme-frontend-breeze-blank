@@ -20,6 +20,15 @@
             </arguments>
         </referenceBlock>
 
+        <!-- CMS block inside header panel -->
+        <referenceContainer name="header.panel">
+            <block class="Magento\Cms\Block\Block" name="header_panel_info" after="skip_to_content">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header_panel_info</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
         <!-- Cleanup and move top links to header account dropdown -->
         <referenceBlock name="header" remove="true"/> <!-- Welcome message -->
         <referenceBlock name="catalog.compare.link" remove="true"/>

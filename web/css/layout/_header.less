@@ -47,6 +47,26 @@
             .lib-css(background, @header-panel__background);
         }
 
+        .header-panel-info {
+            .lib-css(font-weight, @header-panel-info__font-weight);
+            .lib-css(margin, @header-panel-info__margin);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            column-gap: @3;
+
+            .icon {
+                width: @5;
+                height: @5;
+            }
+            a {
+                color: currentColor;
+                display: flex;
+                align-items: center;
+                gap: @1;
+            }
+        }
+
         .switcher .label {
             &:extend(.sr-only);
         }
