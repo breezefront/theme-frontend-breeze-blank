@@ -22,6 +22,7 @@
     @media @media-md {
       .md-hide { display: none !important }
       .md-show { display: initial !important }
+      .md-a-right { .text-align(right); }
     }
     @media @media-lg {
       .lg-hide { display: none !important }
@@ -34,6 +35,15 @@
     @media @media-xxl {
       .xxl-hide { display: none !important }
       .xxl-show { display: initial !important }
+    }
+
+    @media @media-md-down {
+        .md-down-a-center {
+            text-align: center;
+            img, svg {
+                margin: 0 auto;
+            }
+        }
     }
 }
 
