@@ -110,16 +110,29 @@
         .lib-css(background, @checkout__background);
     }
     .opc {
-        background: @base__background;
+        .lib-css(background, @checkout-opc__background);
+        .lib-css(box-shadow, @checkout-opc__box-shadow);
+        .lib-css(border, @checkout-opc__border);
+        .lib-css(border-radius, @checkout-opc__border-radius);
         @media @media-md {
             &-sidebar.modal-custom {
                 .modal-inner-wrap {
-                    background: @base__background;
+                    .lib-css(background, @checkout-sidebar__background);
+                    .lib-css(box-shadow, @checkout-sidebar__box-shadow);
+                    .lib-css(border, @checkout-sidebar__border);
+                    .lib-css(border-radius, @checkout-sidebar__border-radius);
                 }
                 .minicart-items-wrapper::after {
                     background: linear-gradient(~"rgba(var(--base-bg), 0)", ~"rgba(var(--base-bg), 1)");
                 }
             }
+        }
+
+        &-estimated-wrapper {
+            .lib-css(background, @checkout-sidebar__background);
+            .lib-css(box-shadow, @checkout-sidebar__box-shadow);
+            .lib-css(border, @checkout-sidebar__border);
+            .lib-css(border-radius, @checkout-sidebar__border-radius);
         }
     }
 }
