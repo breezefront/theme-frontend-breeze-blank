@@ -108,8 +108,8 @@
         .link-common();
     }
     p,
-    ul:not(.unstyled),
-    ol:not(.unstyled),
+    :where(ul:not(.unstyled)),
+    :where(ol:not(.unstyled)),
     table,
     figure {
         margin-bottom: @3;
@@ -117,14 +117,14 @@
     section {
         margin-bottom: @4;
     }
-    ul:not(.unstyled),
-    ol:not(.product-items):not(.unstyled) {
+    :where(ul:not(.unstyled)),
+    :where(ol:not(.product-items):not(.unstyled)) {
         .padding-left(@5);
     }
-    ul:not(.unstyled) {
+    :where(ul:not(.unstyled)) {
         list-style: disc;
     }
-    ol:not(.product-items):not(.unstyled) {
+    :where(ol:not(.product-items):not(.unstyled)) {
         list-style: auto;
     }
     li::marker {
