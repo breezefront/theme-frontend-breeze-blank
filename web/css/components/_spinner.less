@@ -15,6 +15,10 @@
         align-items: center;
         justify-content: center;
 
+        body > & {
+            position: fixed !important;
+        }
+
         .loader {
             &:extend(.spinner);
             flex-shrink: 0;
