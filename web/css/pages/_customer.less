@@ -13,12 +13,17 @@
         }
     }
 
+    .login-container {
+        .actions-toolbar {
+            .lib-css(margin, @login-container-actions__margin);
+        }
+    }
+
     @media @media-md {
         .login-container {
             display: flex;
             gap: @12;
-            flex-direction: column;
-            flex-direction: row;
+            flex-direction: @login-container__flex-direction;
 
             > .block {
                 padding: 0;
