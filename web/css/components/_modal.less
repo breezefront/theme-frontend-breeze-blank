@@ -42,7 +42,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        padding: @24 @7 @7;
+        padding: @7;
+
+        @media (min-height: 500px) {
+            padding-top: @24;
+        }
 
         &._show {
             visibility: visible;
@@ -64,7 +68,8 @@
     .modal-inner-wrap {
         display: flex;
         flex-direction: column;
-        padding: 0;
+        padding: 0 !important;
+        margin: 0 !important;
         width: 100%;
         max-width: var(--modal-max-width);
         max-height: var(--modal-max-height);
