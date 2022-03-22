@@ -4,7 +4,7 @@
         &:last-child {
             margin: 0;
         }
-        .product.item & {
+        .product-item & {
             .lib-css(margin-bottom, @listing-swatch-options__margin-bottom);
             &:last-child {
                 margin: 0;
@@ -57,7 +57,7 @@
             right: @swatch__border-offset;
         }
 
-        .product.item & {
+        .product-item & {
             .lib-css(font-size, @listing-swatch__font-size);
             .lib-css(min-width, @listing-swatch__size);
             .lib-css(height, @listing-swatch__size);
@@ -80,7 +80,7 @@
             display: none; // disable validation in product listing
         }
     }
-    .product.item {
+    .product-item {
         [class^="swatch-opt-"] {
             .lib-css(margin, @listing-swatch-wrapper__margin);
 
