@@ -106,6 +106,22 @@
     }
 }
 
+.breeze-button-ghost {
+    & when (@critical) {
+        --button-bg: var(--base-color);
+        --button-bg-alpha: 0;
+        --button-color: var(--base-color);
+        --button-border-color: var(--base-color);
+        --button-border-alpha: var(--base-alpha);
+    }
+
+    & when not (@critical) {
+        &:hover {
+            --button-bg-alpha: .1;
+        }
+    }
+}
+
 .button-reset {
     --button-bg: var(--base-bg);
     --button-border-color: var(--base-bg);

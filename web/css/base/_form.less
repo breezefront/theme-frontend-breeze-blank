@@ -23,6 +23,14 @@ input[type='button'] {
     &:extend(.breeze-button-secondary all);
 }
 
+button,
+.pagebuilder-button-primary,
+.pagebuilder-button-secondary {
+    .button-ghost & {
+        &:extend(.breeze-button-ghost all);
+    }
+}
+
 .field-tooltip-content {
     &:extend(.breeze-dropdown all);
     &[aria-hidden="false"] {
