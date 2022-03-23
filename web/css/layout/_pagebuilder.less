@@ -63,6 +63,12 @@
         font-weight: 500;
     }
 
+    [data-content-type] {
+        strong {
+            font-weight: 700;
+        }
+    }
+
     [data-content-type="row"] {
         &:extend(.breeze-prose all);
         [data-element="inner"] {
@@ -174,6 +180,10 @@
         }
     }
 
+    .cols-gap .pagebuilder-column-group {
+        gap: @4;
+    }
+
     @media @media-md-down {
         .pagebuilder-column-group {
             row-gap: @4;
@@ -193,5 +203,12 @@
     }
     .slick-prev::before {
         transform: rotate(180deg);
+    }
+
+    #html-body {
+        [data-show-button="hover"]:hover button {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 }

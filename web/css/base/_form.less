@@ -17,7 +17,7 @@ input[type='submit'] {
     &:extend(.breeze-button-primary all);
 }
 
-button:not(.primary):not(.select),
+:where(button:not(.primary):not(.pagebuilder-button-link):not(.pagebuilder-button-primary):not(.select)),
 input[type='reset'],
 input[type='button'] {
     &:extend(.breeze-button-secondary all);
