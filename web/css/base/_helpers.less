@@ -1,7 +1,6 @@
 & when (@critical) {
-    .invert {
-        filter: invert(1);
-    }
+    .filter-invert { filter: invert(1); }
+    .color-invert { &:extend(.invert-colors all); }
 
     .gap { gap: @2; }
     .flex-wrap { flex-wrap: wrap; }
