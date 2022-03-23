@@ -136,13 +136,19 @@
         .sr-only();
     }
 }
-.button-xs {
+.breeze-button-xs {
     .text-xs();
     padding: @1 @2;
 }
-.button-lg {
+.breeze-button-lg {
     .text-lg();
     font-weight: 500;
+    .lib-css(padding, @button__lg__padding);
+}
+.breeze-button-xl {
+    .text-xl();
+    font-weight: 500;
+    .lib-css(padding, @button__xl__padding);
 }
 
 .input-xs {

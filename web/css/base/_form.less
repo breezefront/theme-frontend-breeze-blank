@@ -31,6 +31,16 @@ input[type='button'] {
 }
 
 & when (@critical) {
+    button,
+    .pagebuilder-button-primary,
+    .pagebuilder-button-secondary {
+        .button-lg & {
+            &:extend(.breeze-button-lg);
+        }
+        .button-xl & {
+            &:extend(.breeze-button-xl);
+        }
+    }
     fieldset {
         margin-bottom: @8;
         &:last-child {
