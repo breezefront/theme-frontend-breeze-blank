@@ -102,6 +102,21 @@
         display: none;
     }
 
+    .form-wishlist-items {
+        .qty > label,
+        .comment-box > label {
+            &:extend(.sr-only);
+        }
+        div:empty,
+        .product-reviews-summary {
+            display: none;
+        }
+        .box-tocart {
+            border: 0;
+            padding: 0;
+        }
+    }
+
     .page-title-wrapper {
         .order-status {
             display: inline-block;
