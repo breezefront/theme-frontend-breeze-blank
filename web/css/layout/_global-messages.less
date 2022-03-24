@@ -14,6 +14,17 @@
             margin-top: @3;
         }
 
+        &.cookie {
+            .lib-css(position, @global-cookie-message__position);
+            .lib-css(z-index, @global-cookie-message__z-index);
+            .lib-css(top, @global-cookie-message__top);
+            .lib-css(bottom, @global-cookie-message__bottom);
+            .lib-css(left, @global-cookie-message__left);
+            .lib-css(right, @global-cookie-message__right);
+            .lib-css(border-radius, @global-cookie-message__border-radius);
+            .lib-css(box-shadow, @global-cookie-message__box-shadow);
+        }
+
         &.noscript {
             text-align: center;
         }
