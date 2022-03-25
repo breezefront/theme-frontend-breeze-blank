@@ -79,25 +79,25 @@
                     order: 10;
                 }
             }
-            label .label {
-                & when (@footer-newsletter-input-icon = false) {
-                    display: none;
+            label {
+                .label {
+                    &:extend(.sr-only);
                 }
+
                 & when not (@footer-newsletter-input-icon = false) {
-                    z-index: 1;
-                    position: absolute;
-                    pointer-events: none;
-                    color: transparent;
-                    .left(@footer-newsletter-input-icon__left);
-                    top: @footer-newsletter-input-icon__top;
                     &::before {
-                        color: @gray-500;
                         content: '';
-                        display: block;
+                        z-index: 1;
+                        position: absolute;
+                        pointer-events: none;
+                        color: @gray-500;
+                        .left(@footer-newsletter-input-icon__left);
+                        top: @footer-newsletter-input-icon__top;
                         width: @footer-newsletter-input-icon__width;
                         height: @footer-newsletter-input-icon__height;
                     }
-                    + input {
+
+                    input {
                         .padding-left(@footer-newsletter-input-icon__left * 1.3 + @footer-newsletter-input-icon__width);
                     }
                 }
@@ -161,11 +161,9 @@
     }
     .page-footer {
         .block.newsletter {
-            label .label {
-                & when not (@footer-newsletter-input-icon = false) {
-                    &::before {
-                        .breeze-icon(@footer-newsletter-input-icon, @footer-newsletter-input-icon__width, @footer-newsletter-input-icon__height);
-                    }
+            & when not (@footer-newsletter-input-icon = false) {
+                label::before {
+                    .breeze-icon(@footer-newsletter-input-icon, @footer-newsletter-input-icon__width, @footer-newsletter-input-icon__height);
                 }
             }
         }
