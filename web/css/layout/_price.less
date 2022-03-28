@@ -12,6 +12,11 @@
             }
         }
     }
+    .minimal-price-link {
+        & when (@price-minimal__display = none) {
+            &:extend(.sr-only);
+        }
+    }
     .special-price {
         .lib-css(color, @price-special__color);
         .price-label {
