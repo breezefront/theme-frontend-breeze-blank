@@ -9,6 +9,10 @@
 .catalog-product-view .main > .block {
     &:extend(.breeze-block-hero all);
 }
+.cms-index-index .main .block,
+.cms-index-index .main .block-hero {
+    &:extend(.breeze-block-hero-cms all);
+}
 
 & when (@critical) {
     .page-main .block + .block,
