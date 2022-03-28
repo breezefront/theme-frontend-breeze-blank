@@ -37,6 +37,9 @@
     }
 
     .page-footer {
+        & when (@footer__at-bottom) {
+            margin-top: auto;
+        }
         .switcher {
             margin-bottom: @2;
             .label {
