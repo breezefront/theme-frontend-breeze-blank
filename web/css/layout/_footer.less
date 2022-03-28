@@ -82,7 +82,7 @@
                     order: 10;
                 }
             }
-            label {
+            .control > label {
                 .label {
                     &:extend(.sr-only);
                 }
@@ -165,7 +165,7 @@
     .page-footer {
         .block.newsletter {
             & when not (@footer-newsletter-input-icon = false) {
-                label::before {
+                .control > label::before {
                     .breeze-icon(@footer-newsletter-input-icon, @footer-newsletter-input-icon__width, @footer-newsletter-input-icon__height);
                 }
             }
