@@ -1,11 +1,18 @@
 & when (@critical) {
+    .checkout-onepage-success {
+        .column.main {
+            p {
+                &:extend(.breeze-prose p);
+            }
+            a {
+                &:extend(.link-common all);
+            }
+        }
+        #registration br {
+            display: none;
+        }
+    }
     .checkout-success {
-        p {
-            &:extend(.breeze-prose p);
-        }
-        a {
-            &:extend(.link-common all);
-        }
         .page-narrow & {
             text-align: center;
             .actions-toolbar {
