@@ -1,10 +1,12 @@
 & when (@critical) {
-    .loading-mask {
+    .loading-mask,
+    .load.indicator {
         display: none;
     }
 }
 & when not (@critical) {
-    .loading-mask {
+    .loading-mask,
+    .load.indicator {
         &:extend(.inset-0);
         margin: auto;
         position: fixed;
@@ -14,7 +16,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
 
+    .loading-mask {
         body > & {
             position: fixed !important;
         }
@@ -29,6 +33,18 @@
             }
         }
     }
+
+    .load.indicator {
+        &::before {
+            content: '';
+            display: block;
+            &:extend(.spinner);
+        }
+        span {
+            display: none;
+        }
+    }
+
     ._block-content-loading {
         position: relative;
     }

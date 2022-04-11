@@ -1,0 +1,60 @@
+& when (@critical) {
+    .paypal-review {
+        &:extend(.breeze-block-boxed all);
+        max-width: none;
+
+        .block-order-details-view {
+            .block-content {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: @6;
+
+                .box {
+                    margin: 0;
+                }
+
+                @media @media-sm {
+                    flex-direction: row;
+                }
+            }
+        }
+        .box-order-billing-address {
+            img[src*="paypalobjects.com"] {
+                width: 39px;
+            }
+        }
+        &-discount,
+        &-items {
+            margin: @4 0;
+        }
+        .discount {
+            .title {
+                &:extend(.link-common all);
+                .text-base();
+                strong {
+                    font-weight: 400;
+                }
+                border: 1px solid @divider__color;
+                border-width: 1px 0;
+                margin-bottom: @4;
+            }
+        }
+        .paypal-review-title {
+            &:extend(.breeze-block-sidebar-title all);
+            a {
+                .text-sm();
+                &:extend(.link-common all);
+                .margin-left(@2);
+            }
+        }
+        .cart.items {
+            tfoot .mark ~ td {
+                .text-align(right);
+            }
+        }
+        .actions-toolbar {
+            justify-content: flex-end;
+        }
+    }
+}
