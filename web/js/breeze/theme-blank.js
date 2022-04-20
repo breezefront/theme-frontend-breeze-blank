@@ -70,12 +70,12 @@
 
     $(document).on('breeze:load', function () {
         if ($('body').var('--swatches-over-image')) {
-            $('.products-grid [class^="swatch-opt-"]').each(function () {
-                $(this).appendTo($(this).closest('.product-item-info').find('.product-item-photo'));
-            });
+            $.async('.products-grid .product-item-details [class^="swatch-opt-"]', function (el) {
+                $(el).appendTo($(el).closest('.product-item-info').find('.product-item-photo'));
+            })
             $(document).on('click', 'a [class^="swatch-opt-"]', function (e) {
                 e.preventDefault();
             });
         }
-    })
+    });
 })();
