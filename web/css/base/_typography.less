@@ -173,12 +173,3 @@
         &:extend(.breeze-prose all);
     }
 }
-
-& when not (@critical) {
-    * {
-        outline: none;
-        &:focus-visible {
-            .focus-ring();
-        }
-    }
-}

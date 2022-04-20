@@ -236,6 +236,57 @@
         vertical-align: middle;
     }
 
+    [type=range] {
+        --brand-alpha: 0.9;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: @4;
+        background-color: transparent;
+        appearance: none;
+
+        &::-webkit-slider-runnable-track {
+            width: 100%;
+            height: @1;
+            color: transparent;
+            cursor: pointer;
+            background-color: @divider__color;
+            border-color: transparent;
+            border-radius: 9999px;
+        }
+
+        &::-moz-range-track {
+            width: 100%;
+            height: @1;
+            color: transparent;
+            cursor: pointer;
+            background-color: @divider__color;
+            border-color: transparent;
+            border-radius: 9999px;
+        }
+
+        &::-webkit-slider-thumb {
+            width: @4;
+            height: @4;
+            margin-top: -@1-5;
+            background-color: @brand__color;
+            border: 0;
+            border-radius: 9999px;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        &::-moz-range-thumb {
+            width: @4;
+            height: @4;
+            margin-top: -@1-5;
+            background-color: @brand__color;
+            border: 0;
+            border-radius: 9999px;
+            appearance: none;
+        }
+    }
+
     button,
     input[type='submit'],
     input[type='reset'],
@@ -281,6 +332,13 @@
 }
 
 & when not (@critical) {
+    * {
+        outline: none;
+    }
+    :where(:focus-visible) {
+        .focus-ring();
+    }
+
     select {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
         background-position: right @2 center;
@@ -335,6 +393,28 @@
     [type=file] {
         &:focus {
             outline: 1px auto -webkit-focus-ring-color
+        }
+    }
+
+    [type=range] {
+        &:focus,
+        &:focus-visible {
+            outline: 0;
+        }
+
+        &:focus {
+            &::-webkit-slider-thumb {
+                box-shadow: ~"0 0 0 1px @{z-layer__background}, 0 0 0 0.25rem rgba(var(--brand-color), 0.2)";
+            }
+            &::-moz-range-thumb {
+                box-shadow: ~"0 0 0 1px @{z-layer__background}, 0 0 0 0.25rem rgba(var(--brand-color), 0.2)";
+            }
+            &::-webkit-slider-thumb {
+                .transition(); // do not pair with -moz
+            }
+            &::-moz-range-thumb {
+                &:extend(.transition);
+            }
         }
     }
 }
