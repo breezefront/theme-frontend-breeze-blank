@@ -82,6 +82,11 @@
                             .lib-css(--button-bg-alpha, @listing-grid-item-tocart__hover--bg-alpha);
                         }
                     }
+                    .stock {
+                        &:extend(.breeze-button);
+                        &:extend(.products-grid .product-item .product-item-details .actions-primary .tocart);
+                        color: @muted__color;
+                    }
                 }
             }
             @media @media-hover {
