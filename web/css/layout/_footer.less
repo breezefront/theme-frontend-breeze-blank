@@ -15,7 +15,7 @@
         .lib-css(margin, @footer-top__margin);
         .lib-css(padding, @footer-top__padding);
 
-        & when (@footer-top__dark) {
+        & when (@footer-top__dark), (@footer__dark) {
             &:extend(.invert-colors all);
         }
     }
@@ -23,7 +23,7 @@
         .lib-css(margin, @footer-middle__margin);
         .lib-css(padding, @footer-middle__padding);
 
-        & when (@footer-middle__dark) {
+        & when (@footer-middle__dark), (@footer__dark) {
             &:extend(.invert-colors all);
         }
     }
@@ -31,7 +31,7 @@
         .lib-css(margin, @footer-bottom__margin);
         .lib-css(padding, @footer-bottom__padding);
 
-        & when (@footer-bottom__dark) {
+        & when (@footer-bottom__dark), (@footer__dark) {
             &:extend(.invert-colors all);
         }
     }
@@ -163,6 +163,7 @@
         }
     }
     .page-footer {
+        .lib-css(background, @footer__background);
         .block.newsletter {
             & when not (@footer-newsletter-input-icon = false) {
                 .control > label::before {
