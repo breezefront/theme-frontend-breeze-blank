@@ -99,12 +99,6 @@
         --z-layer-color: @rgb-navigation;
         color: @base__color;
 
-        .page-header & {
-            & when (@header__dark) {
-                &:extend(.invert-colors all);
-            }
-        }
-
         a.level-top {
             .lib-css(font-weight, @navigation-top-level__font-weight);
         }
@@ -124,6 +118,12 @@
         }
 
         .navigation {
+            .page-header & {
+                & when (@header__dark) {
+                    .invert-colors();
+                }
+            }
+
             > ul {
                 display: flex;
                 flex-wrap: wrap;
