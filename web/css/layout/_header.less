@@ -35,6 +35,10 @@
     }
 
     .page-header {
+        & when (@header__dark) {
+            &:extend(.invert-colors all);
+        }
+
         .lib-css(background, @header__background);
         .lib-css(border, @header__border);
         .lib-css(border-width, @header__border-width);
