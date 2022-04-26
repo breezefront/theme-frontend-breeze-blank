@@ -117,13 +117,13 @@
             display: none;
         }
 
-        .navigation {
-            .page-header & {
-                & when (@header__dark) {
-                    .invert-colors();
-                }
+        .page-header li .level-top {
+            & when (@header__dark) {
+                .invert-colors();
             }
+        }
 
+        .navigation {
             > ul {
                 display: flex;
                 flex-wrap: wrap;
