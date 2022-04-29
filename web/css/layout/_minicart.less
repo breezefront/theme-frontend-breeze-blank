@@ -6,8 +6,11 @@
             &:extend(.breeze-dropdown-visible);
         }
     }
-    .action.showcart::before {
-        .breeze-icon(@icon-shopping-bag, @minicart-icon__width, @minicart-icon__height);
+    .action.showcart {
+        &:extend(.breeze-dropdown-toggler);
+        &::before {
+            .breeze-icon(@icon-shopping-bag, @minicart-icon__width, @minicart-icon__height);
+        }
     }
 }
 
@@ -16,10 +19,6 @@
         position: relative;
         .action.showcart {
             position: relative;
-            display: flex;
-            align-items: center;
-
-            .lib-css(gap, @minicart-toggler__gap);
             .lib-css(background, @minicart-toggler__background);
             .lib-css(border, @minicart-toggler__border);
             .lib-css(border-radius, @minicart-toggler__border-radius);
@@ -62,7 +61,6 @@
             & when (@minicart-counter__mode = compact), (@minicart-counter__mode = inline) {
                 .counter.qty {
                     display: flex;
-                    justify-content: center;
                     align-items: center;
 
                     &:not(.empty) {
@@ -90,13 +88,11 @@
             }
 
             & when (@minicart-counter__mode = inline) {
-                gap: @0-5;
                 .lib-css(font-size, @minicart-counter__mode-inline__font-size);
                 .lib-css(font-weight, @minicart-counter__mode-inline__font-weight);
 
                 .text,
                 .counter.qty {
-                    text-align: center;
                     min-width: @minicart-counter__mode-inline__min-width;
                 }
                 .counter.qty.empty {
