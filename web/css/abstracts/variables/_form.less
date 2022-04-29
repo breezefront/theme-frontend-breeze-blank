@@ -12,7 +12,7 @@
 @select__padding-right: @10;
 
 @checkbox__size: @4;
-@checkbox__border-radius: 0;
+@checkbox__border-radius: @input__border-radius;
 @checkbox__color: ~"rgb(var(--input-focus-border-color))";
 @checkbox__focus__shadow: ~"0 0 0 2px rgb(var(--base-bg)), 0 0 0 4px rgb(var(--input-focus-border-color))";
 
@@ -23,7 +23,7 @@
 @button__border-width: @input__border-width;
 @button__border-color: ~"rgba(var(--button-border-color), var(--button-border-alpha))";
 @button__border: @button__border-width solid @button__border-color;
-@button__border-radius: 0;
+@button__border-radius: @input__border-radius;
 @button__padding: @2 @5;
 @button__shadow: ~"0 0 0 1px @{button__border-color}";
 @button__text-decoration: none;
