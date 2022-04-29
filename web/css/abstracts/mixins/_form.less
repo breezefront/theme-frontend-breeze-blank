@@ -36,11 +36,15 @@
     & when (@critical) {
         outline: none;
         position: relative;
-        display: inline-block;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: @1;
 
         .lib-css(font-weight, @button__font-weight);
         .lib-css(font-size, @button__font-size);
         .lib-css(text-transform, @button__text-transform);
+        .lib-css(text-shadow, @button__text-shadow);
 
         padding: @button__padding;
         color: @button__color;
@@ -63,11 +67,14 @@
         &:hover {
             --button-bg-alpha: var(--button-hover-bg-alpha);
             text-decoration: @button__hover__text-decoration !important;
+            .lib-css(background, @button__hover__background);
+            .lib-css(border-color, @button__hover__border-color);
         }
         &:focus-visible {
             --button-border-alpha: 1;
             .lib-css(background, @button__focus__background);
             .lib-css(color, @button__focus__color);
+            .lib-css(border-color, @button__focus__border-color);
             z-index: 10;
             outline: 2px solid transparent;
             outline-offset: 2px;
