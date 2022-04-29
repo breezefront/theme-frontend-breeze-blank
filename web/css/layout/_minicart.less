@@ -105,6 +105,13 @@
                 .counter.qty:not(.empty) ~ .text {
                     display: none;
                 }
+
+                @media @media-md-down {
+                    .text,
+                    .counter.qty {
+                        display: none;
+                    }
+                }
             }
         }
     }
