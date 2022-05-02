@@ -18,11 +18,13 @@
     }
 
     & when not (@critical) {
-        &:focus {
+        &:focus,
+        &:focus-visible {
             --input-border-color: var(--input-focus-border-color);
+            --input-outline-color: var(--input-border-color);
             --input-shadow-spread: @input__focus__shadow-spread;
-            outline: 2px solid transparent;
-            outline-offset: 2px;
+            outline: @input__focus__outline;
+            outline-offset: @input__focus__outline-offset;
             .lib-css(background-color, @input__focus__background);
         }
         &:-webkit-autofill {
@@ -77,8 +79,8 @@
             .lib-css(color, @button__focus__color);
             .lib-css(border-color, @button__focus__border-color);
             z-index: 10;
-            outline: 2px solid transparent;
-            outline-offset: 2px;
+            outline: @button__focus__outline;
+            outline-offset: @button__focus__outline-offset;
         }
     }
 }
@@ -126,6 +128,9 @@
     & when not (@critical) {
         &:hover {
             --button-bg-alpha: .1;
+        }
+        &:focus-visible {
+            --button-outline-color: var(--button-border-color);
         }
     }
 }

@@ -8,6 +8,8 @@
 @input__shadow: ~"0 0 0 var(--input-shadow-spread, 0) @{input__border-color}";
 @input__focus__background: false;
 @input__focus__shadow-spread: 1px;
+@input__focus__outline: 2px solid ~"rgba(var(--input-outline-color), var(--input-outline-alpha))";
+@input__focus__outline-offset: 2px;
 
 @select__padding-right: @10;
 
@@ -35,6 +37,8 @@
 @button__focus__color: false;
 @button__focus__background: false;
 @button__focus__border-color: @button__focus__background;
+@button__focus__outline: 2px solid ~"rgba(var(--button-outline-color), var(--button-outline-alpha))";
+@button__focus__outline-offset: 2px;
 
 @button__lg__font-weight: 500;
 @button__lg__padding: false;
