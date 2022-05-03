@@ -89,8 +89,18 @@
         }
 
         .action.search {
-            &:extend(.button-reset all);
-            .margin-left(-@8);
+            & when (@minisearch-button__reset) {
+                &:extend(.button-reset all);
+                .margin-left(-@8);
+            }
+            & when not (@minisearch-button__reset) {
+                width: @16;
+                .margin-left(-@16);
+            }
+
+            &:disabled {
+                .lib-css(opacity, @minisearch-button__disabled__opacity);
+            }
 
             @media @minisearch__media-mobile {
                 display: none; // must be hidden on mobile view (fix for blur event)
