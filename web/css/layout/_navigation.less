@@ -1,9 +1,3 @@
-@rgb-navigation: @rgb-base;
-@navigation__media-desktop: @media-sm;
-@navigation__media-mobile: @media-sm-down;
-@navigation__media-wrap: ~"(min-width: @{sm}) and (max-width: @{md-max})";
-@navigation-top-level__font-weight: false;
-
 .navigation {
     .submenu {
         &:extend(.breeze-dropdown all);
@@ -101,6 +95,10 @@
 
         a.level-top {
             .lib-css(font-weight, @navigation-top-level__font-weight);
+            .lib-css(font-size, @navigation-top-level__font-size);
+            .lib-css(letter-spacing, @navigation-top-level__letter-spacing);
+            .lib-css(text-shadow, @navigation-top-level__text-shadow);
+            .padding(@navigation-top-level__padding);
         }
 
         li {
@@ -109,6 +107,9 @@
 
         .parent > a {
             .padding-right(@6);
+            &.level-top {
+                .padding-right(@navigation-top-level-caret__padding);
+            }
         }
     }
 
@@ -172,6 +173,7 @@
                     height: @6;
                     &:extend(.transition);
                     .breeze-icon(@icon-chevron, @3);
+                    .lib-css(opacity, @navigation-caret__opacity);
                 }
                 .ui-icon {
                     -webkit-mask-size: @4 @4;
