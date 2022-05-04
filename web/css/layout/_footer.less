@@ -14,26 +14,14 @@
     .footer-top {
         .lib-css(margin, @footer-top__margin);
         .lib-css(padding, @footer-top__padding);
-
-        & when (@footer-top__dark), (@footer__dark) {
-            &:extend(.invert-colors all);
-        }
     }
     .footer-middle {
         .lib-css(margin, @footer-middle__margin);
         .lib-css(padding, @footer-middle__padding);
-
-        & when (@footer-middle__dark), (@footer__dark) {
-            &:extend(.invert-colors all);
-        }
     }
     .footer-bottom {
         .lib-css(margin, @footer-bottom__margin);
         .lib-css(padding, @footer-bottom__padding);
-
-        & when (@footer-bottom__dark), (@footer__dark) {
-            &:extend(.invert-colors all);
-        }
     }
 
     .page-footer {
@@ -133,37 +121,45 @@
 
 & when not (@critical) {
     .footer-top {
-        & when (@footer-top__background-max-width = false) {
-            .lib-css(background, @footer-top__background);
-        }
-        & when not (@footer-top__background-max-width = false) {
-            @media (max-width: @footer-top__background-max-width) {
-                .lib-css(background, @footer-top__background);
+        .lib-css(background, @footer-top__background);
+
+        & when (@footer-top__dark) {
+            &:extend(.invert-colors all);
+            & when (@footer-top__background = false) {
+                .lib-css(background, @theme__dark-color);
             }
         }
     }
     .footer-middle {
-        & when (@footer-middle__background-max-width = false) {
-            .lib-css(background, @footer-middle__background);
-        }
-        & when not (@footer-middle__background-max-width = false) {
-            @media (max-width: @footer-middle__background-max-width) {
-                .lib-css(background, @footer-middle__background);
+        .lib-css(background, @footer-middle__background);
+
+        & when (@footer-middle__dark) {
+            &:extend(.invert-colors all);
+            & when (@footer-middle__background = false) {
+                .lib-css(background, @theme__dark-color);
             }
         }
     }
     .footer-bottom {
-        & when (@footer-bottom__background-max-width = false) {
-            .lib-css(background, @footer-bottom__background);
-        }
-        & when not (@footer-bottom__background-max-width = false) {
-            @media (max-width: @footer-bottom__background-max-width) {
-                .lib-css(background, @footer-bottom__background);
+        .lib-css(background, @footer-bottom__background);
+
+        & when (@footer-bottom__dark) {
+            &:extend(.invert-colors all);
+            & when (@footer-bottom__background = false) {
+                .lib-css(background, @theme__dark-color);
             }
         }
     }
     .page-footer {
         .lib-css(background, @footer__background);
+
+        & when (@footer__dark) {
+            &:extend(.invert-colors all);
+            & when (@footer__background = false) {
+                .lib-css(background, @theme__dark-color);
+            }
+        }
+
         .block.newsletter {
             & when not (@footer-newsletter-input-icon = false) {
                 .control > label::before {
