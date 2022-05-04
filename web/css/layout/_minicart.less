@@ -89,8 +89,10 @@
             }
 
             & when (@minicart-counter__mode = inline) {
-                justify-content: center;
-                .lib-css(min-width, @minicart-counter__mode-inline__min-width);
+                @media @media-md {
+                    justify-content: center;
+                    .lib-css(min-width, @minicart-counter__mode-inline__min-width);
+                }
                 .lib-css(font-size, @minicart-counter__mode-inline__font-size);
                 .lib-css(font-weight, @minicart-counter__mode-inline__font-weight);
 
