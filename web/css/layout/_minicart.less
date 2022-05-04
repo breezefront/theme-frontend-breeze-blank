@@ -78,6 +78,7 @@
                 .text,
                 .counter.qty {
                     min-width: @minicart-counter__mode-compact__min-width;
+                    justify-content: center;
                 }
 
                 .counter.qty {
@@ -93,10 +94,13 @@
                 .lib-css(font-size, @minicart-counter__mode-inline__font-size);
                 .lib-css(font-weight, @minicart-counter__mode-inline__font-weight);
 
+                ._block-content-loading {
+                    position: static;
+                }
                 .counter.qty.empty {
                     display: none;
                 }
-                .counter.qty:not(.empty) ~ .text {
+                .text:not(.empty) {
                     display: none;
                 }
 
