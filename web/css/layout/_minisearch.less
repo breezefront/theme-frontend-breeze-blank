@@ -94,8 +94,14 @@
                 .margin-left(-@8);
             }
             & when not (@minisearch-button__reset) {
+                .lib-css(--button-color, @minisearch-button--color);
+                .lib-css(--button-bg, @minisearch-button--background);
                 width: @16;
                 .margin-left(-@16);
+            }
+
+            &:focus-visible {
+                .lib-css(--button-bg, @minisearch-button--focus--background);
             }
 
             &:disabled {
