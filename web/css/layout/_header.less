@@ -38,6 +38,9 @@
     .page-header {
         & when (@header__dark) {
             &:extend(.invert-colors all);
+            & when (@header__background = false) {
+                .lib-css(background, @theme__dark-color);
+            }
         }
 
         .lib-css(background, @header__background);
@@ -47,6 +50,9 @@
         .panel.wrapper {
             & when (@header-panel__dark) {
                 &:extend(.invert-colors all);
+                & when (@header-panel__background = false) {
+                    .lib-css(background, @theme__dark-color);
+                }
             }
 
             .lib-css(color, @header-panel__color);
@@ -90,9 +96,11 @@
                     max-width: 170px;
                 }
 
-                & when (@respect-color-scheme = true) {
-                    @media @media-dark {
-                        .lib-css(filter, @logo__dark__filter);
+                & when (@header__dark = false) {
+                    & when (@respect-color-scheme = true) {
+                        @media @media-dark {
+                            .lib-css(filter, @logo__dark__filter);
+                        }
                     }
                 }
             }

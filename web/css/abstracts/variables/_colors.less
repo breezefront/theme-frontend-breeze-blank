@@ -22,7 +22,7 @@
 @rgb-red:    red(@red-700),    green(@red-700),    blue(@red-700);
 @rgb-yellow: red(@yellow-400), green(@yellow-400), blue(@yellow-400);
 
-@rgb-brand:   var(--blue);
+@rgb-brand:   red(@theme__brand-color), green(@theme__brand-color), blue(@theme__brand-color);
 @rgb-danger:  var(--red);
 @rgb-success: var(--green);
 @rgb-info:    var(--blue);
@@ -63,10 +63,12 @@
 @dark-blue: lighten(@blue-700, 25%);
 @dark-green: lighten(@green-700, 35%);
 @dark-red: lighten(@red-700, 30%);
+@dark-brand: lighten(@theme__brand-color, 25%);
 @dark-rgb-gray-800: red(@dark-gray-800), green(@dark-gray-800), blue(@dark-gray-800);
 @dark-rgb-blue: red(@dark-blue), green(@dark-blue), blue(@dark-blue);
 @dark-rgb-red: red(@dark-red), green(@dark-red), blue(@dark-red);
 @dark-rgb-green: red(@dark-green), green(@dark-green), blue(@dark-green);
+@dark-rgb-brand: red(@dark-brand), green(@dark-brand), blue(@dark-brand);
 @dark-rgb-base: var(--gray-400);
 @dark-rgb-base-bg: var(--gray-900);
 @dark-rgb-muted-bg: var(--gray-800);
