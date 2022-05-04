@@ -22,6 +22,7 @@
 @button__font-size: false;
 @button__color: ~"rgb(var(--button-color))";
 @button__background: ~"rgba(var(--button-bg), var(--button-bg-alpha))";
+@button__background-alpha: .85;
 @button__border-width: @input__border-width;
 @button__border-color: ~"rgba(var(--button-border-color), var(--button-border-alpha))";
 @button__border: @button__border-width solid @button__border-color;
@@ -32,12 +33,14 @@
 @button__text-transform: false;
 @button__text-shadow: false;
 @button__hover__background: false;
+@button__hover__background-alpha: .95;
 @button__hover__border-color: @button__hover__background;
 @button__hover__text-decoration: none;
 @button__focus__color: false;
 @button__focus__background: false;
 @button__focus__border-color: @button__focus__background;
 @button__focus__outline: 2px solid ~"rgba(var(--button-outline-color), var(--button-outline-alpha))";
+@button__focus__outline-alpha: 0;
 @button__focus__outline-offset: 2px;
 
 @button__lg__font-weight: 500;
