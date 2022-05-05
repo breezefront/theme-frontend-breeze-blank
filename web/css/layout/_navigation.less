@@ -101,11 +101,13 @@
             .padding(@navigation-item-level0__padding);
         }
 
-        .active,
-        .has-active {
-            > a.level-top {
-                --divider-alpha: .05;
-                .lib-css(background, @navigation-item-level0__active__background);
+        @media @navigation__media-desktop {
+            .active,
+            .has-active {
+                > a.level-top {
+                    --divider-alpha: .05;
+                    .lib-css(background, @navigation-item-level0__active__background);
+                }
             }
         }
 
