@@ -44,14 +44,15 @@
 .breeze-dropdown-item {
     & when (@critical) {
         display: block;
-        padding: @1 @2;
+        .lib-css(padding, @dropdown-item__padding);
         .lib-css(border-radius, @dropdown-item__border-radius);
     }
     & when not (@critical) {
-        --divider-alpha: .05;
+        .lib-css(--divider-alpha, @dropdown-item__hover__background-alpha);
         cursor: pointer;
         &:hover {
-            background: @divider__color;
+            .lib-css(color, @dropdown-item__hover__color);
+            .lib-css(background, @dropdown-item__hover__background);
         }
     }
 }
