@@ -94,11 +94,11 @@
         color: @base__color;
 
         a.level-top {
-            .lib-css(font-weight, @navigation-top-level__font-weight);
-            .lib-css(font-size, @navigation-top-level__font-size);
-            .lib-css(letter-spacing, @navigation-top-level__letter-spacing);
-            .lib-css(text-shadow, @navigation-top-level__text-shadow);
-            .padding(@navigation-top-level__padding);
+            .lib-css(font-weight, @navigation-item-level0__font-weight);
+            .lib-css(font-size, @navigation-item-level0__font-size);
+            .lib-css(letter-spacing, @navigation-item-level0__letter-spacing);
+            .lib-css(text-shadow, @navigation-item-level0__text-shadow);
+            .padding(@navigation-item-level0__padding);
         }
 
         li {
@@ -108,7 +108,7 @@
         .parent > a {
             .padding-right(@6);
             &.level-top {
-                .padding-right(@navigation-top-level-caret__padding);
+                .padding-right(@navigation-caret-level0__padding);
             }
         }
     }
@@ -230,8 +230,7 @@
     @media @navigation__media-desktop {
         .navigation-wrapper {
             .opened > a {
-                --divider-alpha: .05;
-                background: @divider__color;
+                .lib-css(background, @navigation-item__opened__background);
             }
 
             .parent {
