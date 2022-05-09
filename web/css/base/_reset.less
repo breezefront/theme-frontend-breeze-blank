@@ -178,6 +178,7 @@
         cursor: pointer;
     }
 
+    svg,
     img,
     video,
     canvas,
@@ -185,20 +186,15 @@
     iframe,
     embed,
     object {
-        display: block;
+        display: inline-block;
         vertical-align: middle;
     }
 
+    svg,
     img,
     video {
         max-width: 100%;
         height: auto;
-    }
-
-    svg,
-    figure img,
-    label img {
-        display: inline-block;
     }
 
     [hidden] {
