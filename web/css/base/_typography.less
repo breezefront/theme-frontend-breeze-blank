@@ -75,13 +75,29 @@
         }
     }
 
-    svg.icon {
+    .icon {
+        flex-shrink: 0;
+    }
+    svg.icon,
+    .icon > svg {
+        fill: currentColor;
         width: @6;
         height: @6;
-        &.small {
-            width: @4;
-            height: @4;
-        }
+    }
+    svg.icon.small,
+    .icon.small > svg {
+        width: @4;
+        height: @4;
+    }
+    svg.icon.big,
+    .icon.big > svg {
+        width: @7;
+        height: @7;
+    }
+    .icon.rounded {
+        border-radius: 999px;
+        background: @muted__background;
+        padding: @3;
     }
 
     .table-wrapper:not(.grouped) {
