@@ -102,13 +102,14 @@
     .footer.content {
         &:extend(.container);
         .lib-css(padding-top, @footer-content__padding-top);
+        .lib-css(padding-top, @footer-content__padding-bottom);
         .lib-css(background, @footer-content__background);
         .lib-css(text-align, @footer-content__text-align);
     }
     .footer.links {
         display: flex;
         flex-wrap: wrap;
-        column-gap: @2;
+        column-gap: @footer-links__gap;
         justify-content: center;
         a:hover {
             text-decoration: underline;
