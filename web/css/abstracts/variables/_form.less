@@ -30,7 +30,7 @@
 @button__border: @button__border-width solid @button__border-color;
 @button__border-radius: @input__border-radius;
 @button__padding: @2 @5;
-@button__shadow: ~"0 0 0 1px @{button__border-color}";
+@button__shadow: false;
 @button__text-decoration: none;
 @button__text-transform: false;
 @button__text-shadow: false;
@@ -41,8 +41,8 @@
 @button__focus__color: false;
 @button__focus__background: false;
 @button__focus__border-color: @button__focus__background;
-@button__focus__outline: 2px solid ~"rgba(var(--button-outline-color), var(--button-outline-alpha))";
-@button__focus__outline-alpha: 0;
+@button__focus__outline: 2px solid @ring__color;
+@button__focus__outline-alpha: 1;
 @button__focus__outline-offset: 2px;
 
 @button__lg__font-weight: 500;
