@@ -49,9 +49,10 @@
         color: var(--message-color);
 
         &.success {
-            --message-border-color: @success__background;
-            --message-bg: @success__background;
-            --message-color: @success__color;
+            --message-border-color: @message-success__background;
+            --message-bg: @message-success__background;
+            --message-bg-alpha: @message-success__background-alpha;
+            --message-color: @message-success__color;
             &::before {
                 .breeze-icon(@icon-s-check, @5);
             }
@@ -59,17 +60,19 @@
         &.info,
         &.warning,
         &.notice {
-            --message-border-color: @info__background;
-            --message-bg: @info__background;
-            --message-color: @info__color;
+            --message-border-color: @message-info__background;
+            --message-bg: @message-info__background;
+            --message-bg-alpha: @message-info__background-alpha;
+            --message-color: @message-info__color;
             &::before {
                 .breeze-icon(@icon-s-information-circle, @5)
             }
         }
         &.error {
-            --message-border-color: @danger__background;
-            --message-bg: @danger__background;
-            --message-color: @danger__color;
+            --message-border-color: @message-error__background;
+            --message-bg: @message-error__background;
+            --message-bg-alpha: @message-error__background-alpha;
+            --message-color: @message-error__color;
             &::before {
                 .breeze-icon(@icon-s-exclamation-circle, @5)
             }
