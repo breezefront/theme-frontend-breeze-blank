@@ -7,8 +7,17 @@
         margin-bottom: @3;
         border: 1px solid var(--message-border-color);
 
+        .lib-css(font-size, @message__font-size);
+        .lib-css(font-weight, @message__font-weight);
+        .lib-css(text-transform, @message__text-transform);
         .lib-css(border-radius, @message__border-radius);
         .lib-css(border-width, @message__border-width);
+
+        & when (@message__text-align = center) {
+            > div {
+                margin: 0 auto;
+            }
+        }
 
         .field + &,
         .control & {
@@ -38,7 +47,6 @@
     .message {
         background: var(--message-bg);
         color: var(--message-color);
-        padding: @3 @4;
 
         &.success {
             --message-border-color: @success__background;
