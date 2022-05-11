@@ -45,6 +45,14 @@
             &:extend(.container);
         }
     }
+    body:not(.page-layout-cms-full-width) {
+        .main > [data-content-type="row"] [data-element="inner"] {
+            // prevent doubled container styles because .page-main is a container
+            padding: 0;
+            margin: 0;
+            max-width: none;
+        }
+    }
     .pagebuilder {
         &-mobile {
             &-hidden {
