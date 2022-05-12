@@ -55,6 +55,10 @@
 
         /** [open description] */
         open: function () {
+            if (this.panel.css('visibility') !== 'hidden') {
+                return;
+            }
+
             $.breeze.scrollbar.hide();
             this.panel.one('transitionend', this.focusTrap.activate);
             this.element.addClass(this.options.active);
