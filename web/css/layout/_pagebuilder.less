@@ -15,13 +15,9 @@
 
 [data-content-type="tabs"] {
     .tab-header {
-        > a {
-            &:extend(.breeze-tab-toggler all);
-        }
+        &:extend(.breeze-tab-toggler all);
         &.active {
-            > a {
-                &:extend(.breeze-tab-toggler-active all);
-            }
+            &:extend(.breeze-tab-toggler-active all);
         }
     }
     .tabs-content {
@@ -109,7 +105,7 @@
         }
         .tab-header {
             > a {
-                &:extend(.breeze-prose-reset a all);
+                color: inherit;
                 &:hover {
                     text-decoration: none;
                 }
