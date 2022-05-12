@@ -41,6 +41,7 @@
         /** [destroy description] */
         destroy: function () {
             this.close();
+            this.closeBtn.remove();
             this._super();
         },
 
