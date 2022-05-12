@@ -46,7 +46,6 @@
         .lib-css(font-weight, @button__font-weight);
         .lib-css(font-size, @button__font-size);
         .lib-css(text-transform, @button__text-transform);
-        .lib-css(text-shadow, @button__text-shadow);
         .lib-css(box-shadow, @button__shadow);
 
         padding: @button__padding;
@@ -89,6 +88,7 @@
     & when (@critical) {
         --link-color: var(--button-color);
         --link-alpha: 1;
+        .lib-css(text-shadow, @button__text-shadow);
     }
 }
 
@@ -99,7 +99,6 @@
         --button-bg: var(--button-secondary-bg);
         --button-color: var(--button-secondary-color);
         --button-border-color: var(--button-secondary-border-color);
-        text-shadow: none;
     }
 }
 
@@ -109,7 +108,6 @@
         --button-border-color: transparent;
         --button-color: var(--link-color);
         text-decoration: @link__text-decoration !important;
-        text-shadow: none;
     }
 
     & when not (@critical) {
