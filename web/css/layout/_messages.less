@@ -25,7 +25,7 @@
         }
 
         a {
-            &:extend(.link-common all);
+            text-decoration: underline !important;
         }
 
         &.warning,
@@ -47,6 +47,13 @@
     .message {
         background: var(--message-bg);
         color: var(--message-color);
+
+        a {
+            color: var(--message-color) !important;
+            &:hover {
+                text-decoration: none !important;
+            }
+        }
 
         &.success {
             --message-border-color: @message-success__background;
