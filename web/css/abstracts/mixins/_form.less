@@ -179,9 +179,20 @@
     .lib-css(padding, @button__xl__padding);
 }
 
+.breeze-input-xs,
 .input-xs {
     .text-xs();
     padding: @1;
     width: auto;
     flex-grow: 0;
+}
+.breeze-input-lg {
+    .text-lg();
+    .lib-css(font-weight, @input__lg__font-weight);
+    .lib-css(padding, @input__lg__padding);
+}
+.breeze-input-xl {
+    .text-xl();
+    .lib-css(font-weight, @input__xl__font-weight);
+    .lib-css(padding, @input__xl__padding);
 }
