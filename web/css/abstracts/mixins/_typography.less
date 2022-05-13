@@ -102,6 +102,16 @@
         .text-align(right);
     }
 }
+.striped-table {
+    > tbody {
+        > tr {
+            border-bottom: 0;
+            &:nth-child(odd) {
+                background: @muted__background;
+            }
+        }
+    }
+}
 
 .breeze-prose {
     :where(a:not(.product-item-link):not(.action)) {
