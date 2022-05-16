@@ -149,7 +149,11 @@
             gap: @3;
             a {
                 &:extend(.link-common all);
-                color: @muted__color;
+                .padding(@product-addto-link__padding);
+                .lib-css(color, @product-addto-link__color);
+                .lib-css(background, @product-addto-link__background);
+                .lib-css(border, @product-addto-link__border);
+                .lib-css(border-radius, @product-addto-link__border-radius);
             }
         }
     }

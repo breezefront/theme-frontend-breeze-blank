@@ -61,7 +61,11 @@
         gap: @0-5;
         a {
             --muted-alpha: .4;
-            color: @muted__color;
+            .padding(@listing-grid-item-actions-secondary-link__padding);
+            .lib-css(color, @listing-grid-item-actions-secondary-link__color);
+            .lib-css(background, @listing-grid-item-actions-secondary-link__background);
+            .lib-css(border, @listing-grid-item-actions-secondary-link__border);
+            .lib-css(border-radius, @listing-grid-item-actions-secondary-link__border-radius);
         }
     }
     .product-items {
