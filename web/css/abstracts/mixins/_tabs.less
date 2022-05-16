@@ -39,7 +39,9 @@
             .margin(@tab-toggler__horizontal__margin);
             .lib-css(padding, @tab-toggler__horizontal__padding);
             .lib-css(border, @tab-toggler__horizontal__border);
-            .lib-css(border-width, @tab-toggler__horizontal__border-width);
+            & when not (@tab-toggler__horizontal__border-width = false) {
+                border-width: @tab-toggler__horizontal__border-width !important;
+            }
             position: relative;
             white-space: nowrap;
         }
