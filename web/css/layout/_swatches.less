@@ -12,7 +12,7 @@
         }
     }
     .swatch-attribute-label {
-        font-weight: 500;
+        font-weight: @swatch-label__font-weight;
         .margin-right(@1);
         ~ .swatch-attribute-options {
             margin-top: @swatch-options__margin-top;
@@ -28,7 +28,8 @@
         }
     }
     .swatch-option {
-        .text-xs();
+        .lib-css(font-size, @swatch__font-size);
+        .lib-css(font-weight, @swatch__font-weight);
         color: @muted__color;
         display: flex;
         align-items: center;
@@ -59,6 +60,7 @@
 
         .product-item & {
             .lib-css(font-size, @listing-swatch__font-size);
+            .lib-css(font-weight, @listing-swatch__font-weight);
             .lib-css(min-width, @listing-swatch__size);
             .lib-css(height, @listing-swatch__size);
             & when not (@listing-swatch__border-offset = false) {
