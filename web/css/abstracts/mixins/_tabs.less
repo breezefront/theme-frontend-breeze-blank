@@ -26,6 +26,7 @@
         .lib-css(background, @tab-toggler__background);
         .lib-css(font-size, @tab-toggler__font-size);
         .lib-css(font-weight, @tab-toggler__font-weight);
+        .lib-css(text-transform, @tab-toggler__text-transform);
 
         @media @tab-accordion__media {
             justify-content: space-between;
@@ -42,6 +43,7 @@
             & when not (@tab-toggler__horizontal__border-width = false) {
                 border-width: @tab-toggler__horizontal__border-width !important;
             }
+            .lib-css(border-radius, @tab-toggler__horizontal__border-radius);
             position: relative;
             white-space: nowrap;
         }
