@@ -6,6 +6,16 @@
         font-size:   var(--font-size);
         line-height: var(--line-height);
     }
+
+    ::selection {
+        .lib-css(color, @selection__color);
+        .lib-css(background, @selection__background);
+    }
+    ::-moz-selection {
+        .lib-css(color, @selection__color);
+        .lib-css(background, @selection__background);
+    }
+
     code, kbd, pre, samp {
         font-family: var(--font-family-mono);
     }
