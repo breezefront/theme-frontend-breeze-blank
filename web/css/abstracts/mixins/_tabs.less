@@ -46,7 +46,8 @@
                 border-width: @tab-toggler__horizontal__border-width !important;
             }
             .lib-css(border-radius, @tab-toggler__horizontal__border-radius);
-            position: relative;
+            .lib-css(position, @tab-toggler__horizontal__position);
+            .lib-css(z-index, @tab-toggler__horizontal__z-index);
             white-space: nowrap;
         }
 
@@ -107,6 +108,8 @@
 
         @media @tab-horizontal__media {
             width: 100%;
+            .lib-css(position, @tab-content__horizontal__position);
+            .lib-css(z-index, @tab-content__horizontal__z-index);
             .lib-css(margin, @tab-content__horizontal__margin);
             .lib-css(padding, @tab-content__horizontal__padding);
             .lib-css(border, @tab-content__horizontal__border);
