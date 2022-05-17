@@ -70,6 +70,19 @@
         <move element="store.menu" destination="navigation.wrapper"/>
         <!-- <move element="navigation.wrapper" destination="header-wrapper" after="logo"/> -->
 
+        <!-- Before Footer -->
+        <referenceContainer name="page.bottom.container">
+            <container name="before-footer.top-wrapper" htmlTag="div">
+                <container name="before-footer.top" htmlTag="div" htmlClass="container"/>
+            </container>
+            <container name="before-footer.middle-wrapper" htmlTag="div">
+                <container name="before-footer.middle" htmlTag="div" htmlClass="container"/>
+            </container>
+            <container name="before-footer.bottom-wrapper" htmlTag="div">
+                <container name="before-footer.bottom" htmlTag="div" htmlClass="container"/>
+            </container>
+        </referenceContainer>
+
         <!-- Footer -->
         <referenceContainer name="footer-container">
             <container name="footer-top" htmlTag="div" htmlClass="footer-top"/>
