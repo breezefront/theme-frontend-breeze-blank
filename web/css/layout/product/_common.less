@@ -148,12 +148,16 @@
             display: flex;
             gap: @3;
             a {
-                &:extend(.link-common all);
                 .padding(@product-addto-link__padding);
                 .lib-css(color, @product-addto-link__color);
                 .lib-css(background, @product-addto-link__background);
                 .lib-css(border, @product-addto-link__border);
                 .lib-css(border-radius, @product-addto-link__border-radius);
+                &:hover {
+                    .lib-css(color, @product-addto-link__hover__color);
+                    .lib-css(background, @product-addto-link__hover__background);
+                    .lib-css(text-decoration, @product-addto-link__hover__text-decoration);
+                }
             }
         }
     }
