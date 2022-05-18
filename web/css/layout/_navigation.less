@@ -14,7 +14,7 @@
             }
         }
     }
-    li > a {
+    :where(li[class*=level]) > a {
         &:extend(.breeze-dropdown-item all);
     }
 }
