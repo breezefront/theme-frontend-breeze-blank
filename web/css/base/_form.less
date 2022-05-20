@@ -13,11 +13,12 @@ input[type='button'] {
 }
 
 .action.primary,
+.action-primary,
 input[type='submit'] {
     &:extend(.breeze-button-primary all);
 }
 
-:where(button:not(.primary):not(.pagebuilder-button-link):not(.pagebuilder-button-primary):not(.select)),
+:where(button:not(.action-primary):not(.primary):not(.pagebuilder-button-link):not(.pagebuilder-button-primary):not(.select)),
 input[type='reset'],
 input[type='button'] {
     &:extend(.breeze-button-secondary all);
