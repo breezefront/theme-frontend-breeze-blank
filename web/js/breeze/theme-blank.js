@@ -77,7 +77,7 @@
         if ($('body').var('--swatches-over-image')) {
             $.async([
                 '.products-grid .product-item-details [class^="swatch-opt-"]',
-                '.slick-list .product-item-details [class^="swatch-opt-"]',
+                '[data-appearance="carousel"] .product-item-details [class^="swatch-opt-"]',
             ].join(','), function (el) {
                 $(el).appendTo($(el).closest('.product-item-info').find('.product-item-photo'));
             })
