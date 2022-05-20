@@ -1,5 +1,5 @@
 & when (@critical) {
-    .products-grid .product-item {
+    :where(.products-grid, .slick-list) .product-item {
         // overflowed item that reveal its content on hover
         & when not (@listing-grid-item__max-height = false) {
             height: 0;
@@ -85,7 +85,7 @@
                     }
                     .stock {
                         &:extend(.breeze-button);
-                        &:extend(.products-grid .product-item .product-item-details .actions-primary .tocart);
+                        &:extend(:where(.products-grid, .slick-list) .product-item .product-item-details .actions-primary .tocart);
                         color: @muted__color;
                     }
                 }

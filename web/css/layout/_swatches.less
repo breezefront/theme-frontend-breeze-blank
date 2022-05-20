@@ -23,7 +23,7 @@
         flex-wrap: wrap;
         gap: @swatch__gap;
 
-        .products-grid & {
+        :where(.products-grid, .slick-list) & {
             .lib-css(justify-content, @listing-swatch-options__justify-content);
         }
     }

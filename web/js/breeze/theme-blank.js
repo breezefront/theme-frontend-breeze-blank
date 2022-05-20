@@ -75,7 +75,10 @@
 
     $(document).on('breeze:load', function () {
         if ($('body').var('--swatches-over-image')) {
-            $.async('.products-grid .product-item-details [class^="swatch-opt-"]', function (el) {
+            $.async([
+                '.products-grid .product-item-details [class^="swatch-opt-"]',
+                '.slick-list .product-item-details [class^="swatch-opt-"]',
+            ].join(','), function (el) {
                 $(el).appendTo($(el).closest('.product-item-info').find('.product-item-photo'));
             })
             $(document).on('click', 'a [class^="swatch-opt-"]', function (e) {
