@@ -17,7 +17,7 @@
 }
 
 & when (@critical) {
-    .page-main .block + .block,
+    :where(.page-main, .page-bottom) .block + .block,
     .page-main .block + script + .block {
         margin-top: @block__indent;
     }
