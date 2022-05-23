@@ -27,6 +27,16 @@
         }
     }
 
+    .product-image-container {
+        display: block;
+        max-width: 100%;
+        .lib-css(border, @product-image-container__border);
+        .lib-css(border-radius, @product-image__border-radius);
+        .product-image-wrapper {
+            padding: 0 !important;
+        }
+    }
+
     .product-image-photo,
     .product.media .main-image,
     .product.media .thumbnails img {
