@@ -85,5 +85,9 @@
                 e.preventDefault();
             });
         }
+
+        $('.breeze-carousel .products-grid').pagebuilderCarousel({
+            arrows: true
+        });
     });
 })();
