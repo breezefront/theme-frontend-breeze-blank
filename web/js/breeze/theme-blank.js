@@ -86,8 +86,10 @@
             });
         }
 
-        $('.breeze-carousel .products-grid').pagebuilderCarousel({
-            arrows: true
+        $.async('.breeze-carousel .products-grid', (el) => {
+            $(el).pagebuilderCarousel({
+                arrows: true
+            });
         });
     });
 })();
