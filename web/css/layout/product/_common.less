@@ -142,6 +142,7 @@
         max-width: @16;
     }
 
+    .product-addto-links,
     .product-social-links {
         display: flex;
         align-items: center;
@@ -149,7 +150,7 @@
         column-gap: @3;
         row-gap: @2;
         margin: @2 0;
-        a {
+        > a {
             .padding(@product-addto-link__padding);
             .lib-css(color, @product-addto-link__color);
             .lib-css(background, @product-addto-link__background);
@@ -160,12 +161,6 @@
                 .lib-css(background, @product-addto-link__hover__background);
                 .lib-css(text-decoration, @product-addto-link__hover__text-decoration);
             }
-        }
-        .product-addto-links {
-            display: flex;
-            flex-wrap: wrap;
-            column-gap: @3;
-            row-gap: @2;
         }
     }
 
