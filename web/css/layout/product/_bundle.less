@@ -30,6 +30,10 @@
                 .right(0);
             }
         }
+
+        .product-addto-links {
+            display: none;
+        }
     }
     .fieldset-bundle-options .title,
     .block-bundle-summary .title,
@@ -79,7 +83,7 @@
             gap: @2;
         }
         .price-box {
-            &:extend(.product-info-price .price-box all);
+            .text-2xl();
         }
 
         .bundle-summary {
