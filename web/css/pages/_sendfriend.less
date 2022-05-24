@@ -1,0 +1,23 @@
+& when (@critical) {
+    .recipients {
+        .fieldset {
+            display: flex;
+            gap: @3;
+            .field {
+                margin: 0;
+                max-width: 200px;
+            }
+        }
+    }
+    #recipients-options {
+        > .fields {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: @3;
+            .actions-toolbar {
+                margin: @6-5 0 0;
+                order: 999;
+            }
+        }
+    }
+}
