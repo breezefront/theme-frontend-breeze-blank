@@ -1,7 +1,8 @@
 & when (@critical) {
     .towishlist,
     .tocompare,
-    .action.print {
+    .action.print,
+    .action.mailto {
         display: inline-flex;
         align-items: center;
         &::before {
@@ -22,5 +23,8 @@
     }
     .action.print::before {
         .breeze-icon(@icon-printer);
+    }
+    .action.mailto::before {
+        .breeze-icon(@icon-mail);
     }
 }
