@@ -1,0 +1,15 @@
+<if args="isAllowed()">
+    <a if="imageExists($row())"
+       class="product-item-photo"
+       attr="href: $row().url">
+        <span class="product-image-container"
+              data-bind="style: {width: getWidth($row()) / 2 + 'px'}">
+            <span class="product-image-wrapper"
+                  data-bind="style: {'padding-bottom': getHeight($row())/getWidth($row()) * 100 + '%'}">
+                <img class="product-image-photo"
+                     data-bind="attr: {src: getImageUrl($row()),
+                                       alt: getLabel($row()), title: getLabel($row())}" />
+            </span>
+        </span>
+    </a>
+</if>
