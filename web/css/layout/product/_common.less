@@ -146,7 +146,9 @@
         margin: @2 0;
         .product-addto-links {
             display: flex;
-            gap: @3;
+            flex-wrap: wrap;
+            column-gap: @3;
+            row-gap: @2;
             a {
                 .padding(@product-addto-link__padding);
                 .lib-css(color, @product-addto-link__color);
