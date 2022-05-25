@@ -1,0 +1,64 @@
+& when (@critical) and (@boxed-page = true) {
+    :where(body:not(.narrow-page-reset)) .checkout-success,
+    :where(body:not(.narrow-page-reset)) #registration,
+    .form.form-orders-search,
+    .form.search.advanced,
+    .form.password.forget,
+    .form.password.reset,
+    .form.send.confirmation,
+    .form-create-account {
+        &:extend(.breeze-block-boxed all);
+    }
+
+    & when (@boxed-page-login = true) {
+        .login-container {
+            &:extend(.breeze-block-boxed all);
+            max-width: none;
+            .block > .block-title {
+                .lib-css(padding, @block-title__padding);
+                .lib-css(margin, @block-title__margin);
+            }
+        }
+    }
+
+    & when (@boxed-page-contact = true) {
+        .column.main .form.contact {
+            &:extend(.breeze-block-boxed all);
+        }
+    }
+
+    & when (@boxed-page-404 = true) {
+        .page-layout-1column.cms-no-route .columns {
+            &:extend(.breeze-block-boxed all);
+        }
+    }
+
+    .form.form-orders-search,
+    .form.search.advanced {
+        legend {
+            &:extend(.sr-only);
+        }
+    }
+
+    :where(body:not(.narrow-page-reset)) .checkout-success,
+    .form.form-orders-search,
+    .form-create-account {
+        .actions-toolbar {
+            justify-content: center;
+        }
+    }
+
+    .catalogsearch-advanced-index,
+    .customer-account-forgotpassword,
+    .customer-account-create {
+        .page.messages {
+            .lib-css(max-width, @boxed-block__max-width);
+            .lib-css(margin, @boxed-block__margin);
+        }
+    }
+
+    :where(body:not(.narrow-page-reset)) .checkout-success,
+    :where(body:not(.narrow-page-reset)) .checkout-success + #registration {
+        text-align: center;
+    }
+}
