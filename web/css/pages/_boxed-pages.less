@@ -10,6 +10,18 @@
         &:extend(.breeze-block-boxed all);
     }
 
+    .form.form-orders-search,
+    .form.search.advanced,
+    .form.password.forget,
+    .form.password.reset,
+    .form.send.confirmation,
+    .form-create-account {
+        .action.primary {
+            &:extend(.breeze-button-lg all);
+            width: 100%;
+        }
+    }
+
     & when (@boxed-page-login = true) {
         .login-container {
             &:extend(.breeze-block-boxed all);
@@ -24,6 +36,10 @@
     & when (@boxed-page-contact = true) {
         .column.main .form.contact {
             &:extend(.breeze-block-boxed all);
+            .action.primary {
+                &:extend(.breeze-button-lg all);
+                width: 100%;
+            }
         }
     }
 
