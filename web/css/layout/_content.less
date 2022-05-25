@@ -1,10 +1,10 @@
 & when (@critical) {
     :root {
-        --sidebar-width: 180px;
-        --sidebar-gap: @4;
+        --sidebar-width: @sidebar__width;
+        --sidebar-gap: @sidebar__gap;
         @media @media-lg {
-            --sidebar-width: 220px;
-            --sidebar-gap: @8;
+            --sidebar-width: @sidebar__media-lg__width;
+            --sidebar-gap: @sidebar__media-lg__gap;
         }
     }
 
