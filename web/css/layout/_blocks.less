@@ -89,8 +89,11 @@
         }
     }
 
-    .block .action.delete,
-    .block .action.remove {
+    .block-compare .action.delete,
+    .filter .action.remove,
+    .sidebar .action.delete,
+    .sidebar .action.remove
+    {
         display: inline-flex;
         align-items: center;
         .margin-left(auto);
@@ -113,8 +116,11 @@
             }
         }
     }
-    .block .action.delete,
-    .block .action.remove {
+    .block-compare .action.delete,
+    .filter .action.remove,
+    .sidebar .action.delete,
+    .sidebar .action.remove
+    {
         color: @muted__color;
         &::before {
             .breeze-icon(@icon-x, @4);
