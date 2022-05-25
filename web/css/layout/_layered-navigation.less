@@ -281,6 +281,24 @@
         }
     }
     .page-with-filter {
+        &.page-title-in-content {
+            @media @media-md-down {
+                .columns {
+                    padding-top: @13;
+                }
+                .toolbar:not(.toolbar ~ .toolbar) {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    flex-wrap: nowrap;
+                }
+            }
+            @media @media-sm-down {
+                .toolbar-amount {
+                    display: none;
+                }
+            }
+        }
         .toolbar {
             @media @media-md-down {
                 .modes {
