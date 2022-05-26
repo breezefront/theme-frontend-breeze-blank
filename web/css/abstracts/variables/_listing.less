@@ -13,7 +13,8 @@
 @listing-grid-item__price-aside-name: false;
 
 @listing-grid-item__max-width: 400px;
-@listing-grid-item__max-height: false;
+@listing-grid-item__aspect-ratio: 4 / 5; // image-width / image-height
+@listing-grid-item__details-height: false;
 @listing-grid-item__padding: 0px;
 @listing-grid-item__margin: -@listing-grid-item__padding;
 @listing-grid-item__border-radius: @product-image__border-radius;
@@ -77,7 +78,8 @@
 // Preset: hover-card;
 // Copy and uncomment these variables into your theme to apply
 // ----------------------------------------------
-// @listing-grid-item__max-height: 40%; // percent of the item width
+// @listing-grid-item__aspect-ratio: 300 / 375;
+// @listing-grid-item__details-height: 70px;
 // @listing-grid-item__background: @base__background;
 // @listing-grid-item__hover__padding: @3;
 // @listing-grid-item__hover__box-shadow: @shadow-lg-around;

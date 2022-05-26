@@ -1,10 +1,13 @@
 & when (@critical) {
     :where(.products-grid, .widget-product-carousel) .product-item {
         // overflowed item that reveal its content on hover
-        & when not (@listing-grid-item__max-height = false) {
-            height: 0;
-            padding-bottom: @listing-grid-item__max-height;
+        & when not (@listing-grid-item__details-height = false) {
+            box-sizing: content-box;
+            padding-bottom: @listing-grid-item__details-height;
             overflow: hidden;
+            aspect-ratio: @listing-grid-item__aspect-ratio;
+            margin-bottom: ~"calc(2.5 * var(--listing-grid-item-margin)) !important";
+
             &::after {
                 &:extend(.gradient-overflow);
             }
@@ -14,6 +17,10 @@
                 &::after {
                     opacity: 0;
                 }
+            }
+
+            .product-item-info {
+                position: absolute;
             }
 
             .product-item-inner ~ * {
