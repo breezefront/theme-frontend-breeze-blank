@@ -16,6 +16,17 @@
                 }
             }
 
+            .product-item-inner ~ * {
+                opacity: 0;
+                &:extend(.transition);
+            }
+            &:hover,
+            &:focus-within {
+                .product-item-inner ~ * {
+                    opacity: 1;
+                }
+            }
+
             & when (@listing-grid-item-actions-primary__position = static) {
                 .actions-primary {
                     opacity: 0;
