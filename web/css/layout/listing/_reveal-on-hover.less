@@ -12,7 +12,13 @@
             box-sizing: content-box;
             overflow: hidden;
             aspect-ratio: @listing-grid-item__aspect-ratio;
-            padding-bottom: ~"calc(@{listing-grid-item__details-height} + var(--listing-grid-item-margin))";
+
+            & when (@listing-grid-item__aspect-ratio = 1) {
+                padding-bottom: @listing-grid-item__details-height;
+            }
+            & when not (@listing-grid-item__aspect-ratio = 1) {
+                padding-bottom: ~"calc(@{listing-grid-item__details-height} + var(--listing-grid-item-margin))";
+            }
 
             &::after {
                 &:extend(.gradient-overflow);
