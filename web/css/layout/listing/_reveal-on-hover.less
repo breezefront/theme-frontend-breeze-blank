@@ -1,3 +1,11 @@
+@listing-reveal-on-hover-selector: ~":where(.products-grid:not(.recent), .widget-product-carousel) .product-item";
+
+& when not (@listing-grid-item__details-height = false) {
+    @{listing-reveal-on-hover-selector} {
+        .listing-reveal-on-hover();
+    }
+}
+
 & when (@critical) {
     .widget-product-carousel,
     .products-grid .product-items {
@@ -6,87 +14,7 @@
         }
     }
 
-    @selector: ~":where(.products-grid:not(.recent), .widget-product-carousel) .product-item";
-    @{selector} {
-        // overflowed item that reveal its content on hover
-        & when not (@listing-grid-item__details-height = false) {
-            box-sizing: content-box;
-            overflow: hidden;
-            aspect-ratio: @listing-grid-item__aspect-ratio;
-
-            & when (@listing-grid-item__aspect-ratio = 1) {
-                padding-bottom: @listing-grid-item__details-height;
-            }
-            & when not (@listing-grid-item__aspect-ratio = 1) {
-                padding-bottom: ~"calc(@{listing-grid-item__details-height} + var(--listing-grid-item-margin))";
-            }
-
-            &::after {
-                &:extend(.gradient-overflow);
-            }
-
-            &:hover,
-            &:focus-within {
-                &::after {
-                    opacity: 0;
-                }
-            }
-
-            .product-item-info {
-                position: absolute;
-            }
-
-            .product-item-inner ~ * {
-                opacity: 0;
-                &:extend(.transition);
-            }
-            &:hover,
-            &:focus-within {
-                .product-item-inner ~ * {
-                    opacity: 1;
-                }
-            }
-
-            & when (@listing-grid-item-actions-primary__position = static) {
-                .actions-primary {
-                    opacity: 0;
-                    &:extend(.transition);
-                }
-                &:hover,
-                &:focus-within {
-                    .actions-primary {
-                        opacity: 1;
-                    }
-                }
-            }
-
-            & when (@listing-grid-item-actions-secondary__position = static) {
-                .actions-secondary {
-                    opacity: 0;
-                    &:extend(.transition);
-                }
-                &:hover,
-                &:focus-within {
-                    .actions-secondary {
-                        opacity: 1;
-                    }
-                }
-            }
-
-            & when (@listing-grid-item-swatches__position = static) {
-                [class^="swatch-opt-"] {
-                    opacity: 0;
-                    &:extend(.transition);
-                }
-                &:hover,
-                &:focus-within {
-                    [class^="swatch-opt-"] {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-
+    :where(.products-grid, .widget-product-carousel) .product-item {
         // absolutely positioned primary button
         & when (@listing-grid-item-actions-primary__position = absolute) {
             .product-item-details {
