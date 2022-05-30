@@ -6,7 +6,8 @@
         }
     }
 
-    :where(.products-grid, .widget-product-carousel) .product-item {
+    @selector: ~":where(.products-grid:not(.recent), .widget-product-carousel) .product-item";
+    @{selector} {
         // overflowed item that reveal its content on hover
         & when not (@listing-grid-item__details-height = false) {
             box-sizing: content-box;
