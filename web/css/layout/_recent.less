@@ -1,0 +1,13 @@
+& when (@critical) {
+    .widget-recent {
+        .products-grid {
+            .product-item {
+                width: ~"calc((100% - var(--listing-grid-item-margin) * var(--listing-grid-columns) * 2 - var(--listing-grid-gap) * (var(--listing-grid-columns) - 1)) / var(--listing-grid-columns) / 1.2)";
+            }
+            .product-item-info {
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+}
