@@ -175,6 +175,7 @@
                     &:focus-within {
                         overflow: visible;
                         .lib-css(--listing-grid-item-margin, @listing-grid-item__hover__margin);
+                        .lib-css(--listing-grid-item-padding, @listing-grid-item__hover__padding);
                     }
                 }
             }
@@ -190,7 +191,6 @@
                 .product-item:focus-within {
                     .product-item-info {
                         z-index: 10;
-                        .lib-css(--listing-grid-item-padding, @listing-grid-item__hover__padding);
                         .lib-css(box-shadow, @listing-grid-item__hover__box-shadow);
                         .lib-css(background, @listing-grid-item__hover__background);
                     }
