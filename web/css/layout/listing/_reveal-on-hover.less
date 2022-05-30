@@ -1,12 +1,18 @@
 & when (@critical) {
+    .widget-product-carousel,
+    .products-grid .product-items {
+        & when not (@listing-grid-item__details-height = false) {
+            align-items: flex-start; // fix for jumping content in safari
+        }
+    }
+
     :where(.products-grid, .widget-product-carousel) .product-item {
         // overflowed item that reveal its content on hover
         & when not (@listing-grid-item__details-height = false) {
             box-sizing: content-box;
-            padding-bottom: @listing-grid-item__details-height;
             overflow: hidden;
             aspect-ratio: @listing-grid-item__aspect-ratio;
-            margin-bottom: ~"calc(2.5 * var(--listing-grid-item-margin)) !important";
+            padding-bottom: ~"calc(@{listing-grid-item__details-height} + var(--listing-grid-item-margin))";
 
             &::after {
                 &:extend(.gradient-overflow);
