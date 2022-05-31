@@ -2,6 +2,14 @@
 
 & when not (@listing-grid-item__details-height = false) {
     @media @media-hover {
+        & when (@critical) {
+            .widget-product-carousel,
+            .products-grid .product-items {
+                & when not (@listing-grid-item__details-height = false) {
+                    align-items: flex-start; // fix for jumping content in safari
+                }
+            }
+        }
         @{listing-reveal-on-hover-selector} {
             .listing-reveal-on-hover();
         }
@@ -22,13 +30,6 @@
 }
 
 & when (@critical) {
-    .widget-product-carousel,
-    .products-grid .product-items {
-        & when not (@listing-grid-item__details-height = false) {
-            align-items: flex-start; // fix for jumping content in safari
-        }
-    }
-
     :where(.products-grid, .widget-product-carousel) .product-item {
         // absolutely positioned primary button
         & when (@listing-grid-item-actions-primary__position = absolute) {
