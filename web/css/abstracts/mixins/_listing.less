@@ -16,6 +16,11 @@
 
         .product-item-info {
             position: absolute;
+            height: auto !important;
+        }
+
+        .price-box ~ * {
+            opacity: 0;
         }
     }
 
@@ -29,6 +34,9 @@
         &:focus-within {
             &::after {
                 opacity: 0;
+            }
+            .price-box ~ * {
+                opacity: 1;
             }
         }
     }
