@@ -42,7 +42,11 @@ button,
 & when (@critical) {
     button,
     .pagebuilder-button-primary,
-    .pagebuilder-button-secondary {
+    .pagebuilder-button-secondary,
+    .pagebuilder-button-link {
+        .button-xs & {
+            &:extend(.breeze-button-xs);
+        }
         .button-lg & {
             &:extend(.breeze-button-lg);
         }
