@@ -188,12 +188,27 @@
                 border: var(--listing-grid-item-padding) solid @listing-grid-item__background;
             }
             @media @media-hover {
+                & when not (@listing-grid-item-name__line-clamp = false) {
+                    .product-item-name {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: @listing-grid-item-name__line-clamp;
+                        overflow: hidden;
+                    }
+                }
+
                 .product-item:hover,
                 .product-item:focus-within {
                     .product-item-info {
                         z-index: 10;
                         .lib-css(box-shadow, @listing-grid-item__hover__box-shadow);
                         .lib-css(background, @listing-grid-item__hover__background);
+                    }
+
+                    & when not (@listing-grid-item-name__line-clamp = false) {
+                        .product-item-name {
+                            .lib-css(-webkit-line-clamp, @listing-grid-item-name__hover__line-clamp);
+                        }
                     }
                 }
             }
