@@ -1,6 +1,7 @@
 & when (@critical) {
     .price-box {
         .lib-css(color, @price__color);
+        .lib-css(font-weight, @price__font-weight);
         .product-item & {
             .lib-css(color, @listing-price__color);
         }
@@ -8,6 +9,10 @@
     .price-label,
     .price-box .label {
         .lib-css(color, @price-label__color);
+        .lib-css(font-weight, @price-label__font-weight);
+    }
+    .price-box a {
+        .lib-css(font-weight, @price-label__font-weight);
     }
     .normal-price {
         & when (@price-normal-label__display = none) {
