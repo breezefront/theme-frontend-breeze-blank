@@ -1,0 +1,14 @@
+& when (@critical) {
+    .scroller {
+        width: 100%;
+        overflow: auto;
+        scroll-behavior: smooth;
+
+        // hide scrollbar
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
