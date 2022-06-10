@@ -30,11 +30,13 @@
             height: @2;
         }
 
+        &:hover::after,
+        &:focus-within::after {
+            opacity: 0;
+        }
+
         &:hover,
         &:focus-within {
-            &::after {
-                opacity: 0;
-            }
             .price-box ~ * {
                 opacity: 1;
             }
