@@ -67,6 +67,16 @@
         font-weight: 500;
     }
 
+    // prevent too wide background images
+    @media @media-xl {
+        .xl-bg-clamp [data-background-images] {
+            background-size: ~"clamp(0px, 1400px, 100%) !important";
+        }
+        .xl-bg-center [data-background-images] {
+            background-position: center !important;
+        }
+    }
+
     [data-content-type="row"] {
         &:extend(.breeze-prose all);
         [data-element="inner"] {
