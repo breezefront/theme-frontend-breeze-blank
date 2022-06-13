@@ -130,8 +130,8 @@
             &:extend(.button-x all);
             background: @base__background;
             position: absolute;
-            top: var(--modal-padding-y);
-            .right(var(--modal-padding-x));
+            top: ~"calc(var(--modal-padding-y) / 3)";
+            .right(~"calc(var(--modal-padding-x) / 3)");
         }
     }
 
