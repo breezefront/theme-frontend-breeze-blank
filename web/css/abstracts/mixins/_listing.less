@@ -30,20 +30,22 @@
             height: @2;
         }
 
-        &:hover::after,
-        &:focus-within::after {
-            opacity: 0;
-        }
-
-        &:hover,
-        &:focus-within {
-            .price-box ~ * {
-                opacity: 1;
+        @media @media-hover {
+            &:hover::after,
+            &:focus-within::after {
+                opacity: 0;
             }
 
-            & when not (@listing-grid-item-name__line-clamp = false) {
-                .product-item-name {
-                    .lib-css(-webkit-line-clamp, @listing-grid-item-name__hover__line-clamp);
+            &:hover,
+            &:focus-within {
+                .price-box ~ * {
+                    opacity: 1;
+                }
+
+                & when not (@listing-grid-item-name__line-clamp = false) {
+                    .product-item-name {
+                        .lib-css(-webkit-line-clamp, @listing-grid-item-name__hover__line-clamp);
+                    }
                 }
             }
         }

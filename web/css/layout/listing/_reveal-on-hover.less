@@ -1,31 +1,16 @@
 @listing-reveal-on-hover-selector: ~":where(.products-grid:not(.recent), .widget-product-carousel) .product-item";
 
 & when not (@listing-grid-item__details-height = false) {
-    @media @media-hover {
-        & when (@critical) {
-            .widget-product-carousel,
-            .products-grid .product-items {
-                & when not (@listing-grid-item__details-height = false) {
-                    align-items: flex-start; // fix for jumping content in safari
-                }
+    & when (@critical) {
+        .widget-product-carousel,
+        .products-grid .product-items {
+            & when not (@listing-grid-item__details-height = false) {
+                align-items: flex-start; // fix for jumping content in safari
             }
-        }
-        @{listing-reveal-on-hover-selector} {
-            .listing-reveal-on-hover();
         }
     }
-    @media @media-hover-none {
-        @{listing-reveal-on-hover-selector} {
-            .product-item-inner ~ * {
-                display: none !important;
-            }
-
-            & when (@listing-grid-item-swatches__position = static) {
-                [class^="swatch-opt-"] {
-                    display: none;
-                }
-            }
-        }
+    @{listing-reveal-on-hover-selector} {
+        .listing-reveal-on-hover();
     }
 }
 
