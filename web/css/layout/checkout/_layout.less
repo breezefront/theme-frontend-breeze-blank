@@ -2,6 +2,10 @@
     .page-layout-checkout {
         --container-max-width: 980px;
 
+        .page-main {
+            padding-top: @5;
+        }
+
         .page-title-wrapper,
         .nav-toggle {
             display: none;
@@ -9,6 +13,9 @@
         .header.content {
             justify-content: center;
             --container-padding: @4 @2 @1 @2;
+        }
+        .page-title-wrapper ~ .columns {
+            margin-top: 0;
         }
     }
 
