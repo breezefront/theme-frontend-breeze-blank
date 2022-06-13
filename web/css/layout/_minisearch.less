@@ -55,6 +55,9 @@
             & when (@header__dark) {
                 :where(.header) & {
                     .lib-css(background, @header__background);
+                    & when (@header__background = false) {
+                        .lib-css(background, @theme__dark-color);
+                    }
                 }
             }
 
