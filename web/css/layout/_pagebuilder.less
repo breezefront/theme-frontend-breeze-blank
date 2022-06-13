@@ -185,12 +185,13 @@
     .slick-arrow {
         position: absolute;
         z-index: 11;
-        top: 50%;
-        width: 35px;
-        height: 60px;
-        transform: translateY(-50%);
+        top: @slider-arrow__top;
+        width: @slider-arrow__width;
+        height: @slider-arrow__height;
+        transform: @slider-arrow__transform;
         --base-bg-alpha: .7;
-        background: @base__background;
+        background-color: @slider-arrow__background-color;
+        .lib-css(border, @slider-arrow__border);
         display: flex;
         gap: 0;
         align-items: center;
@@ -214,9 +215,11 @@
     }
     .slick-prev {
         left: 0;
+        .lib-css(border-width, @slider-arrow-prev__border-width);
     }
     .slick-next {
         right: 0;
+        .lib-css(border-width, @slider-arrow-next__border-width);
     }
 
     [data-appearance="carousel"] {
