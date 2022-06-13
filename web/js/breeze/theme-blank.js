@@ -90,6 +90,7 @@
             $(el).pagebuilderCarousel({
                 arrows: true
             });
+            $(el).parents('.hide.show-on-ready').removeClass('hide');
         });
     });
 })();
