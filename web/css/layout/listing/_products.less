@@ -35,6 +35,14 @@
             .lib-css(--listing-grid-columns, @listing-grid__media-xl-1column__columns);
         }
     }
+    .page-layout-3columns {
+        @media @media-lg {
+            .lib-css(--listing-grid-columns, @listing-grid__media-lg-3columns__columns);
+        }
+        @media @media-xl {
+            .lib-css(--listing-grid-columns, @listing-grid__media-xl-3columns__columns);
+        }
+    }
 
     .product-image-container {
         display: block;
