@@ -6,10 +6,16 @@
         --listing-grid-item-padding: @listing-grid-item__padding;
         --listing-grid-item-margin: @listing-grid-item__margin;
         @media @media-sm {
-            --listing-grid-columns: @listing-grid__media-sm__columns;
+            .lib-css(--listing-grid-columns, @listing-grid__media-sm__columns);
+        }
+        @media @media-md {
+            .lib-css(--listing-grid-columns, @listing-grid__media-md__columns);
+        }
+        @media @media-lg {
+            .lib-css(--listing-grid-columns, @listing-grid__media-lg__columns);
         }
         @media @media-xl {
-            --listing-grid-columns: @listing-grid__media-xl__columns;
+            .lib-css(--listing-grid-columns, @listing-grid__media-xl__columns);
         }
 
         @media @media-hover {
@@ -26,7 +32,7 @@
             .lib-css(--listing-grid-columns, @listing-grid__media-lg-1column__columns);
         }
         @media @media-xl {
-            --listing-grid-columns: @listing-grid__media-xl-1column__columns;
+            .lib-css(--listing-grid-columns, @listing-grid__media-xl-1column__columns);
         }
     }
 
