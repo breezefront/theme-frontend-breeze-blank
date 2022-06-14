@@ -218,6 +218,11 @@
                 flex-direction: column;
                 gap: @1;
             }
+            @media @media-xs-down {
+                .reviews-actions .action span {
+                    display: none;
+                }
+            }
 
             // Name and price in a single line
             & when (@listing-grid-item__price-aside-name = true) {
