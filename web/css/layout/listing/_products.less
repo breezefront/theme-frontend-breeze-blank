@@ -19,6 +19,9 @@
         }
     }
     .page-layout-1column {
+        @media @media-md {
+            .lib-css(--listing-grid-columns, @listing-grid__media-md-1column__columns);
+        }
         @media @media-lg {
             .lib-css(--listing-grid-columns, @listing-grid__media-lg-1column__columns);
         }
