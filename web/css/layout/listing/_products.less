@@ -95,7 +95,6 @@
         .product-item-info {
             position: relative;
             display: flex;
-            align-items: flex-start;
             gap: @2;
         }
         .product-item-details {
@@ -204,6 +203,11 @@
                         .lib-css(box-shadow, @listing-grid-item__hover__box-shadow);
                         .lib-css(background, @listing-grid-item__hover__background);
                     }
+                }
+            }
+            .product-item-photo {
+                img {
+                    width: 100%;
                 }
             }
             .product-item-inner {
