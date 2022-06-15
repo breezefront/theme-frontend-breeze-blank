@@ -38,6 +38,7 @@
 
 @listing-grid-item-actions-primary__position: static;
 @listing-grid-item-actions-primary__opacity: 0;
+@listing-grid-item-actions-primary__z-index: 5;
 @listing-grid-item-actions-primary__top: 33%;
 @listing-grid-item-actions-primary__left: 50%;
 @listing-grid-item-actions-primary__right: false;
@@ -58,7 +59,7 @@
 @listing-grid-item-actions-secondary__position: static;
 @listing-grid-item-actions-secondary__flex-direction: column;
 @listing-grid-item-actions-secondary__opacity: 0;
-@listing-grid-item-actions-secondary__z-index: 1;
+@listing-grid-item-actions-secondary__z-index: @listing-grid-item-actions-primary__z-index;
 @listing-grid-item-actions-secondary__top: @1;
 @listing-grid-item-actions-secondary__left: false;
 @listing-grid-item-actions-secondary__right: @1;
