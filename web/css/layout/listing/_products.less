@@ -75,7 +75,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: @1;
+        .lib-css(gap, @listing-grid-item-actions__gap);
     }
     .product-item-details {
         dl a {
@@ -89,8 +89,8 @@
         }
     }
     .actions-secondary {
-        display: flex;
-        gap: @0-5;
+        .lib-css(display, @listing-grid-item-actions-secondary__display);
+        .lib-css(gap, @listing-grid-item-actions-secondary__gap);
         a {
             --muted-alpha: .4;
             .padding(@listing-grid-item-actions-secondary-link__padding);

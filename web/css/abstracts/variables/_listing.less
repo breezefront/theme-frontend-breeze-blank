@@ -36,6 +36,8 @@
 @listing-grid-item-swatches__position: static;
 @listing-grid-item-swatches__z-index: 1;
 
+@listing-grid-item-actions__gap: @1;
+
 @listing-grid-item-actions-primary__position: static;
 @listing-grid-item-actions-primary__opacity: 0;
 @listing-grid-item-actions-primary__z-index: 5;
@@ -57,7 +59,9 @@
 @listing-grid-item-tocart__text-transform: false;
 
 @listing-grid-item-actions-secondary__position: static;
-@listing-grid-item-actions-secondary__flex-direction: column;
+@listing-grid-item-actions-secondary__display: flex;
+@listing-grid-item-actions-secondary__flex-direction: column; // for abs position only
+@listing-grid-item-actions-secondary__gap: @0-5;
 @listing-grid-item-actions-secondary__opacity: 0;
 @listing-grid-item-actions-secondary__z-index: @listing-grid-item-actions-primary__z-index;
 @listing-grid-item-actions-secondary__top: @1;
