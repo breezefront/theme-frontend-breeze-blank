@@ -5,7 +5,7 @@
         -webkit-mask-size: @size @size;
     }
 }
-.breeze-icon(@icon, @width: @6, @height: @6) {
+.breeze-icon(@icon, @width, @height) {
     & when not (@critical) {
         background-color: currentColor;
         -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
