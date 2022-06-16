@@ -101,8 +101,8 @@
                 <height>375</height>
             </image>
             <image id="recently_viewed_products_grid_content_widget" type="small_image">
-                <width>300</width>
-                <height>375</height>
+                <width>600</width>
+                <height>750</height>
             </image>
             <image id="recently_compared_products_grid_content_widget" type="small_image">
                 <width>300</width>
