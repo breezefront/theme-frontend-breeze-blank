@@ -1,4 +1,10 @@
 .breeze-icon(@icon, @size: @6) {
+    & when (@critical) {
+        content: '';
+        display: block;
+        width: @size;
+        height: @size;
+    }
     & when not (@critical) {
         background-color: currentColor;
         -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
@@ -6,6 +12,12 @@
     }
 }
 .breeze-icon(@icon, @width, @height) {
+    & when (@critical) {
+        content: '';
+        display: block;
+        width: @width;
+        height: @height;
+    }
     & when not (@critical) {
         background-color: currentColor;
         -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
