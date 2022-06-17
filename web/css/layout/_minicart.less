@@ -54,7 +54,7 @@
 
             & when not (@minicart-counter__mode = inline) {
                 .text {
-                    &:extend(.sr-only);
+                    &:extend(.breeze-sr-only);
                 }
             }
 
@@ -83,7 +83,7 @@
 
                 .counter.qty {
                     .counter-label span {
-                        &:extend(.sr-only);
+                        &:extend(.breeze-sr-only);
                     }
                 }
             }
@@ -146,13 +146,13 @@
             flex-direction: column;
         }
         .action.close {
-            &:extend(.button-x all);
+            &:extend(.breeze-button-close all);
             position: absolute;
             top: @2-5;
             .right(@2-5);
         }
         .items-total {
-            &:extend(.text-lg);
+            &:extend(.breeze-text-lg);
             font-weight: 500;
             display: none;
         }
@@ -184,7 +184,7 @@
             }
 
             a.action {
-                &:extend(.link-common all);
+                &:extend(.breeze-link all);
             }
         }
     }
@@ -266,10 +266,10 @@
 
             .label,
             .value {
-                &:extend(.text-sm);
+                &:extend(.breeze-text-sm);
             }
             .item-qty {
-                &:extend(.input-xs);
+                &:extend(.breeze-input-xs);
                 color: @muted__color;
                 width: @10;
                 border-color: transparent;
@@ -278,7 +278,7 @@
             .update-cart-item {
                 &:extend(.breeze-button-xs);
                 span {
-                    &:extend(.sr-only);
+                    &:extend(.breeze-sr-only);
                 }
                 &::before {
                     content: '';
@@ -304,7 +304,7 @@
         .action.edit,
         .action.delete {
             span {
-                &:extend(.sr-only);
+                &:extend(.breeze-sr-only);
             }
             &::before {
                 content: '';

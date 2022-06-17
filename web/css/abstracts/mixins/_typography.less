@@ -1,4 +1,4 @@
-.sr-only {
+.breeze-sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -9,7 +9,7 @@
     white-space: nowrap;
     border-width: 0;
 }
-.not-sr-only {
+.breeze-sr-only-reset {
     position: static;
     width: auto;
     height: auto;
@@ -20,49 +20,49 @@
     white-space: normal;
 }
 
-.focus-ring {
+.breeze-focus-ring {
     outline: @ring__width solid @ring__color;
     outline-offset: @ring__offset;
 }
 
-.text-xs {
+.breeze-text-xs {
     font-size: @font-size__xs;
     line-height: @line-height__xs;
 }
-.text-sm {
+.breeze-text-sm {
     font-size: @font-size__sm;
     line-height: @line-height__sm;
 }
-.text-base {
+.breeze-text-base {
     font-size: @font-size__base;
     line-height: @line-height__base;
 }
-.text-lg {
+.breeze-text-lg {
     font-size: @font-size__lg;
     line-height: @line-height__lg;
 }
-.text-xl {
+.breeze-text-xl {
     font-size: @font-size__xl;
     line-height: @line-height__xl;
 }
-.text-2xl {
+.breeze-text-2xl {
     font-size: @font-size__2xl;
     line-height: @line-height__2xl;
 }
-.text-3xl {
+.breeze-text-3xl {
     font-size: @font-size__3xl;
     line-height: @line-height__3xl;
 }
-.text-4xl {
+.breeze-text-4xl {
     font-size: @font-size__4xl;
     line-height: @line-height__4xl;
 }
-.text-5xl {
+.breeze-text-5xl {
     font-size: @font-size__5xl;
     line-height: @line-height__5xl;
 }
 
-.link-common {
+.breeze-link {
     color: @link__color;
     text-decoration: @link__text-decoration;
     &:hover {
@@ -71,7 +71,7 @@
     }
 }
 
-.responsive-table {
+.breeze-table {
     display: block;
     thead {
         display: none;
@@ -102,7 +102,7 @@
         .text-align(right);
     }
 }
-.striped-table {
+.breeze-striped-table {
     > tbody {
         > tr {
             border-bottom: 0;
@@ -115,7 +115,7 @@
 
 .breeze-prose {
     :where(a:not(.product-item-link):not(.action)) {
-        .link-common();
+        .breeze-link();
     }
     p,
     :where(ul:not(.unstyled)),
@@ -179,7 +179,7 @@
         color: @muted__color;
     }
     .lead {
-        .text-xl();
+        .breeze-text-xl();
         color: @muted__color;
     }
 }

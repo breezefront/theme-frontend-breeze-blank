@@ -26,12 +26,12 @@
     .block {
         .block-title {
             a {
-                .text-base();
-                &:extend(.link-common all);
+                .breeze-text-base();
+                &:extend(.breeze-link all);
                 font-weight: 400;
             }
             .counter {
-                .text-sm();
+                .breeze-text-sm();
                 white-space: nowrap;
             }
         }
@@ -71,7 +71,7 @@
         margin-top: @2;
 
         a {
-            &:extend(.link-common all);
+            &:extend(.breeze-link all);
         }
     }
 
@@ -98,7 +98,7 @@
         align-items: center;
         .margin-left(auto);
         span {
-            &:extend(.sr-only);
+            &:extend(.breeze-sr-only);
         }
         &::before {
             content: '';

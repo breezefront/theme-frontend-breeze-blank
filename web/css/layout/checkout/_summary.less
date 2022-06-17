@@ -1,7 +1,7 @@
 & when (@critical) {
     .opc-estimated-wrapper {
         .showcart {
-            &:extend(.button-reset all);
+            &:extend(.breeze-button-reset all);
         }
     }
     @media @media-md-down {
@@ -16,7 +16,7 @@
             .clear(left);
 
             .estimated-block {
-                .text-lg();
+                .breeze-text-lg();
             }
             .estimated-price {
                 font-weight: 500;
@@ -36,8 +36,8 @@
 
     .opc-summary-wrapper {
         .action-edit {
-            &:extend(.button-reset all);
-            &:extend(.link-common all);
+            &:extend(.breeze-button-reset all);
+            &:extend(.breeze-link all);
             text-transform: capitalize;
         }
         .shipping-information {
@@ -71,7 +71,7 @@
             }
         }
         .grand.totals {
-            .text-xl();
+            .breeze-text-xl();
         }
     }
 
@@ -88,7 +88,7 @@
             order: -5;
             margin-top: -@2;
             > .title {
-                .text-sm();
+                .breeze-text-sm();
                 text-transform: uppercase;
                 strong {
                     font-weight: 450;

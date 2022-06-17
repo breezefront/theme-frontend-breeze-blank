@@ -7,7 +7,7 @@
     }
     .rating-summary {
         .label {
-            &:extend(.sr-only);
+            &:extend(.breeze-sr-only);
         }
     }
     .rating-result {
@@ -24,7 +24,7 @@
             display: block;
 
             span {
-                &:extend(.sr-only);
+                &:extend(.breeze-sr-only);
             }
         }
 
@@ -41,8 +41,8 @@
         align-items: center;
         gap: @2;
         a {
-            &:extend(.link-common all);
-            .text-sm();
+            &:extend(.breeze-link all);
+            .breeze-text-sm();
             color: @review-action__color;
         }
     }
@@ -74,7 +74,7 @@
             inset: 0;
         }
         input {
-            &:extend(.sr-only);
+            &:extend(.breeze-sr-only);
         }
         label {
             position: absolute;
@@ -114,9 +114,9 @@
                 opacity: .6;
             }
             &-date {
-                .text-sm();
+                .breeze-text-sm();
                 .review-details-label {
-                    &:extend(.sr-only);
+                    &:extend(.breeze-sr-only);
                 }
             }
         }
@@ -146,7 +146,7 @@
             opacity: 1;
         }
         input:focus-visible + label, {
-            .focus-ring();
+            .breeze-focus-ring();
         }
         label {
             cursor: pointer;
@@ -159,7 +159,7 @@
                 inset: 0;
             }
             span {
-                &:extend(.sr-only);
+                &:extend(.breeze-sr-only);
             }
         }
         .rating-1 {

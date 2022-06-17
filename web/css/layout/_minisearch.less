@@ -22,7 +22,7 @@
         }
         .label {
             span {
-                &:extend(.sr-only);
+                &:extend(.breeze-sr-only);
             }
         }
         @media @minisearch__media-mobile {
@@ -76,7 +76,7 @@
                 display: none;
                 position: absolute;
                 top: 100%;
-                .text-sm();
+                .breeze-text-sm();
             }
         }
 
@@ -93,7 +93,7 @@
 
         .action.search {
             & when (@minisearch-button__reset) {
-                &:extend(.button-reset all);
+                &:extend(.breeze-button-reset all);
                 .margin-left(-@8);
             }
             & when not (@minisearch-button__reset) {
@@ -116,7 +116,7 @@
             }
 
             span {
-                &:extend(.sr-only);
+                &:extend(.breeze-sr-only);
             }
             &::before {
                 content: '';

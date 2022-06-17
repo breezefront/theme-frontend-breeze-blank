@@ -41,7 +41,7 @@
     .show { display: initial !important; }
     .flex { display: flex !important; }
     .abs-visually-hidden {
-        &:extend(.sr-only);
+        &:extend(.breeze-sr-only);
     }
 
     .grid { display: grid !important; }
@@ -103,7 +103,7 @@
 
 & when not (@critical) {
     .button-close {
-        &:extend(.button-x all);
+        &:extend(.breeze-button-close all);
     }
 
     .shadow-sm { box-shadow: @shadow-sm; }

@@ -31,7 +31,7 @@
         .switcher {
             margin-bottom: @2;
             .label {
-                &:extend(.sr-only);
+                &:extend(.breeze-sr-only);
             }
         }
         .pagebuilder-column-group + .pagebuilder-column-group {
@@ -54,7 +54,7 @@
 
             .title {
                 & when (@footer-newsletter-title__mode = hidden) {
-                    &:extend(.sr-only);
+                    &:extend(.breeze-sr-only);
                 }
             }
             .form {
@@ -72,7 +72,7 @@
             }
             .control > label {
                 .label {
-                    &:extend(.sr-only);
+                    &:extend(.breeze-sr-only);
                 }
 
                 & when not (@footer-newsletter-input-icon = false) {

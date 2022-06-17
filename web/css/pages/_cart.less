@@ -102,7 +102,7 @@
 
         .shipping {
             legend {
-                &:extend(.sr-only);
+                &:extend(.breeze-sr-only);
             }
         }
 
@@ -128,7 +128,7 @@
             }
 
             .primary {
-                .text-xl();
+                .breeze-text-xl();
                 width: 100%;
                 font-weight: bold;
                 padding: @4;
@@ -157,19 +157,19 @@
                 .margin-left(@3);
             }
             &-name {
-                .text-lg();
+                .breeze-text-lg();
                 display: inline-block;
                 margin-bottom: @2;
             }
         }
         .field.qty {
             span {
-                &:extend(.sr-only);
+                &:extend(.breeze-sr-only);
             }
             input.qty {
                 padding: 0;
-                &:extend(.input-xs);
-                .text-base();
+                &:extend(.breeze-input-xs);
+                .breeze-text-base();
                 width: @10;
                 border-color: transparent;
             }
@@ -193,12 +193,12 @@
         a.action-delete,
         a.action-towishlist {
             span {
-                &:extend(.sr-only);
+                &:extend(.breeze-sr-only);
             }
         }
         .action-gift {
-            &:extend(.button-reset all);
-            &:extend(.link-common all);
+            &:extend(.breeze-button-reset all);
+            &:extend(.breeze-link all);
         }
         .gift {
             &-options-cart-item {

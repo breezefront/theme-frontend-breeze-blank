@@ -17,19 +17,19 @@
     .normal-price {
         & when (@price-normal-label__display = none) {
             .price-label {
-                &:extend(.sr-only);
+                &:extend(.breeze-sr-only);
             }
         }
     }
     .minimal-price-link {
         & when (@price-minimal__display = none) {
-            &:extend(.sr-only);
+            &:extend(.breeze-sr-only);
         }
     }
     .special-price {
         .lib-css(color, @price-special__color);
         .price-label {
-            &:extend(.sr-only);
+            &:extend(.breeze-sr-only);
         }
     }
     .old-price {
@@ -38,7 +38,7 @@
 
         & when (@price-old-label__display = none) {
             .price-label {
-                &:extend(.sr-only);
+                &:extend(.breeze-sr-only);
             }
         }
     }

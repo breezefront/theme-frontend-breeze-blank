@@ -66,8 +66,8 @@ button,
     }
     label {
         button {
-            &:extend(.button-reset all);
-            &:extend(.link-common all);
+            &:extend(.breeze-button-reset all);
+            &:extend(.breeze-link all);
         }
     }
     form {
@@ -75,7 +75,7 @@ button,
             margin-top: @5;
         }
         .legend {
-            .text-xl();
+            .breeze-text-xl();
             width: 100%;
             margin: 0 0 @5;
             padding: 0 0 @0-5;
@@ -185,14 +185,14 @@ button,
         &.street {
             .control {
                 label {
-                    &:extend(.sr-only);
+                    &:extend(.breeze-sr-only);
                 }
             }
         }
     }
     .control {
         .note {
-            .text-sm();
+            .breeze-text-sm();
             display: block;
             margin-top: @1;
         }
@@ -201,7 +201,7 @@ button,
         display: inline-block;
         position: relative;
         .label {
-            &:extend(.sr-only);
+            &:extend(.breeze-sr-only);
         }
     }
     .field-tooltip-action {
@@ -216,11 +216,11 @@ button,
             content: '';
         }
         span {
-            &:extend(.sr-only);
+            &:extend(.breeze-sr-only);
         }
     }
     .ui-datepicker-trigger {
-        &:extend(.button-reset);
+        &:extend(.breeze-button-reset);
         position: absolute !important;
         .right(@2);
         top:~"calc(50% - @{6} / 2)";
@@ -233,7 +233,7 @@ button,
             height: @6;
         }
         span {
-            &:extend(.sr-only);
+            &:extend(.breeze-sr-only);
         }
     }
     .control.captcha-image {
