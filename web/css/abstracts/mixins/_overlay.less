@@ -1,7 +1,7 @@
 .breeze-overlay {
     & when not (@critical) {
-        .inset-0();
         .transition();
+        inset: 0;
         position: fixed;
         visibility: hidden;
         content: '';
