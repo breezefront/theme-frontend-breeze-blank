@@ -37,7 +37,7 @@
 
     .page-header {
         & when (@header__dark) {
-            &:extend(.invert-colors all);
+            &:extend(.breeze-invert-colors all);
             & when (@header__background = false) {
                 .lib-css(background, @theme__dark-color);
             }
@@ -51,7 +51,7 @@
 
         .panel.wrapper {
             & when (@header-panel__dark) {
-                &:extend(.invert-colors all);
+                &:extend(.breeze-invert-colors all);
                 & when (@header-panel__background = false) {
                     .lib-css(background, @theme__dark-color);
                 }
