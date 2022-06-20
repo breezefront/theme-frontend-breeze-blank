@@ -65,6 +65,14 @@
             position: static;
         }
 
+        @media @media-hover {
+            & when not (@listing-grid-item-name__line-clamp = false) {
+                .product-item-name {
+                    .lib-css(-webkit-line-clamp, @listing-grid-item-name__line-clamp);
+                }
+            }
+        }
+
         .price-box ~ * {
             opacity: 1;
         }
