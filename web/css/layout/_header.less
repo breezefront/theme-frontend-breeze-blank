@@ -24,6 +24,19 @@
         &:extend(.container);
         justify-content: flex-end;
         align-items: center;
+
+        @media @media-xs-down {
+            flex-wrap: wrap;
+            justify-content: center;
+            .header-panel-info {
+                width: 100%;
+                margin: 0;
+                justify-content: center;
+            }
+            > .switcher {
+                max-width: 50%;
+            }
+        }
     }
 
     .header.content {
