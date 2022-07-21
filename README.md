@@ -1,10 +1,11 @@
 # Breeze Blank
 
-Breeze Blank - is a minimalistic starter theme. Great to build your new unique
+Breeze Blank — is a minimalistic starter theme. Great to build your new unique
 Breeze-based theme.
 
  - [Docs](https://breezefront.com/about)
  - [Demo](https://breeze.swissupdemo.com/breeze_blank/)
+ - [Screenshots](https://breezefront.com/screenshots#breeze-blank)
 
 ## Installation
 
