@@ -2,6 +2,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <attribute name="class" value="breeze-theme"/>
+
         <move element="skip_to_content" destination="header.panel" before="-"/>
         <referenceBlock name="cookie-status-check" remove="true"/>
         <referenceBlock name="report.bugs" remove="true"/>
