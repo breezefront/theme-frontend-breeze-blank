@@ -17,7 +17,7 @@
         ~ div:not([style*="none"]) {
             margin: @6 0 0;
             + div {
-                margin: @1 0 0;
+                margin: @3 0 0;
             }
         }
         ~ .checkout-billing-address {
@@ -78,7 +78,8 @@
         }
     }
 
-    .form-discount label {
+    .form-discount label,
+    .form-giftcard-account label {
         &:extend(.breeze-sr-only);
         + .control {
             margin: 0 !important;
