@@ -97,6 +97,23 @@
             .lib-css(padding, @product-options-wrapper__padding);
             .lib-css(border, @product-options-wrapper__border);
             .lib-css(border-width, @product-options-wrapper__border-width);
+
+            .label {
+                .lib-css(font-weight, @product-option-label__font-weight);
+                ~ .control {
+                    .lib-css(margin-top, @product-option-field__margin-top);
+                }
+            }
+            .field {
+                margin-top: 0;
+                .lib-css(margin-bottom, @product-option-field__margin-bottom);
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .swatch-opt + .field {
+                .lib-css(margin-top, @product-option-field__margin-bottom);
+            }
         }
         .product-options-bottom {
             .lib-css(margin, @product-options-bottom__margin);
