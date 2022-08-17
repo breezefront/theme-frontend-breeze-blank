@@ -193,6 +193,10 @@
 
     @media @navigation__media-mobile {
         .navigation-wrapper {
+            & when (@header__dark) {
+                .breeze-invert-colors-reset();
+            }
+
             .navigation {
                 clear: both;
                 padding: @2 0;
