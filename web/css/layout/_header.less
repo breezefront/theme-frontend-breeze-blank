@@ -1,4 +1,10 @@
 & when (@critical) {
+    :root {
+        & when (@header-panel__slideout) {
+            --header-panel-slideout: true;
+        }
+    }
+
     .header.panel,
     .header.links,
     .header.content {
@@ -132,19 +138,17 @@
             align-items: center;
             gap: @1;
         }
-
-        // when mobile menu is active - show it there.
-        @media @navigation__media-mobile {
-            .header.panel & {
-                &:not(.static) {
-                    display: none;
-                }
-            }
-        }
-        @media @navigation__media-desktop {
-            .navigation-wrapper & {
+    }
+    @media @navigation__media-mobile {
+        & when (@header-panel__slideout) {
+            .page-header .panel.wrapper {
                 display: none;
             }
+        }
+    }
+    @media @navigation__media-desktop {
+        .navigation-wrapper .mobile-header-panel {
+            display: none;
         }
     }
 
@@ -187,23 +191,40 @@
     .wishlist-dropdown > .action::before {
         .breeze-icon(@header-actions-icon__wishlist, @header-actions-icon__width, @header-actions-icon__height);
     }
-    .navigation-wrapper {
+
+    .mobile-header-panel {
+        margin-top: @4;
+        padding-top: @2;
+        border-top: 1px solid @divider__color;
+
+        .heading,
+        .switcher-label {
+            display: block;
+            text-transform: uppercase;
+            font-size: @font-size__sm;
+            font-weight: 600;
+            color: @muted__color;
+        }
+        .switcher .label {
+            &:extend(.breeze-sr-only-reset);
+        }
+        .switcher,
         .header-panel-info {
             margin-top: @4;
             padding: 0 @2;
-            flex-direction: column;
-            align-items: flex-start;
-            row-gap: @3;
-            .heading {
-                display: block;
-                text-transform: uppercase;
-                font-size: @font-size__sm;
-                font-weight: 600;
-                color: @muted__color;
-            }
+            display: flex;
+            gap: @3;
             a {
                 opacity: .7;
             }
+        }
+        .switcher + .switcher {
+            margin-top: @2;
+        }
+        .header-panel-info {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: @2;
         }
     }
 }
