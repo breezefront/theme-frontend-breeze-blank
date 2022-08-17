@@ -92,5 +92,10 @@
             });
             $(el).parents('.hide.show-on-ready').removeClass('hide');
         });
+
+        $('.panel.header .header-panel-info:not(.static)')
+            .clone()
+            .data('breeze-temporary', true)
+            .appendTo($('.navigation-wrapper'));
     });
 })();

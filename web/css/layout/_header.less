@@ -76,29 +76,6 @@
             .lib-css(border-width, @header-panel__border-width);
         }
 
-        .header-panel-info {
-            .lib-css(font-weight, @header-panel-info__font-weight);
-            .lib-css(font-size, @header-panel-info__font-size);
-            .lib-css(letter-spacing, @header-panel-info__letter-spacing);
-            .lib-css(margin, @header-panel-info__margin);
-            .lib-css(padding, @header-panel-info__padding);
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            column-gap: @3;
-
-            .icon {
-                width: @5;
-                height: @5;
-            }
-            a {
-                color: currentColor;
-                display: flex;
-                align-items: center;
-                gap: @1;
-            }
-        }
-
         .switcher .label {
             &:extend(.breeze-sr-only);
         }
@@ -128,6 +105,46 @@
         .block .block-title {
             font-size: @4;
             margin: 0;
+        }
+    }
+
+    .header-panel-info {
+        .lib-css(font-weight, @header-panel-info__font-weight);
+        .lib-css(font-size, @header-panel-info__font-size);
+        .lib-css(letter-spacing, @header-panel-info__letter-spacing);
+        .lib-css(margin, @header-panel-info__margin);
+        .lib-css(padding, @header-panel-info__padding);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: @3;
+
+        .heading {
+            display: none;
+        }
+        .icon {
+            width: @5;
+            height: @5;
+        }
+        a {
+            color: currentColor;
+            display: flex;
+            align-items: center;
+            gap: @1;
+        }
+
+        // when mobile menu is active - show it there.
+        @media @navigation__media-mobile {
+            .header.panel & {
+                &:not(.static) {
+                    display: none;
+                }
+            }
+        }
+        @media @navigation__media-desktop {
+            .navigation-wrapper & {
+                display: none;
+            }
         }
     }
 
@@ -169,5 +186,24 @@
     }
     .wishlist-dropdown > .action::before {
         .breeze-icon(@header-actions-icon__wishlist, @header-actions-icon__width, @header-actions-icon__height);
+    }
+    .navigation-wrapper {
+        .header-panel-info {
+            margin-top: @4;
+            padding: 0 @2;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: @3;
+            .heading {
+                display: block;
+                text-transform: uppercase;
+                font-size: @font-size__sm;
+                font-weight: 600;
+                color: @muted__color;
+            }
+            a {
+                opacity: .7;
+            }
+        }
     }
 }
