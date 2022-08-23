@@ -225,11 +225,11 @@
         }
     }
     .slick-prev {
-        left: 0;
+        .left(0);
         .lib-css(border-width, @slider-arrow-prev__border-width);
     }
     .slick-next {
-        right: 0;
+        .right(0);
         .lib-css(border-width, @slider-arrow-next__border-width);
     }
 
@@ -272,7 +272,10 @@
         .breeze-icon(@icon-chevron);
     }
     .slick-prev::before {
-        transform: rotate(180deg);
+        .modrtl(transform, scaleX(-1), false);
+    }
+    .slick-next::before {
+        .modrtl(transform, false, scaleX(-1));
     }
 
     #html-body {
