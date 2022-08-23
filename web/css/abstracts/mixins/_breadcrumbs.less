@@ -24,6 +24,7 @@
     & when not (@critical) {
         &::after {
             .breeze-icon(@icon-chevron, @3);
+            .modrtl(transform, false, scaleX(-1));
         }
     }
 }
