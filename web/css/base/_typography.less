@@ -107,7 +107,10 @@
 
     .icon {
         flex-shrink: 0;
-        line-height: normal;
+        display: flex;
+        align-items: center;
+        line-height: 0;
+        gap: @1;
     }
     svg.icon,
     .icon > svg {
@@ -129,6 +132,9 @@
         border-radius: 999px;
         background: @muted__background;
         padding: @3;
+        &.small {
+            padding: @2;
+        }
     }
 
     .table-wrapper:not(.grouped) {
