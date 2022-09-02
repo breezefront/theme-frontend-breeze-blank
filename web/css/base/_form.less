@@ -147,15 +147,15 @@ button,
             display: flex;
             gap: @1-5;
             align-items: flex-start;
-            line-height: var(--line-height);
+            line-height: @base__line-height;
             clear: left;
             position: relative;
             > [type="radio"],
             > [type="checkbox"] {
-                margin-top: ~"calc(var(--line-height) / 2 - @{checkbox__size} / 2)";
+                margin-top: ~"calc(@{base__line-height} / 2 - @{checkbox__size} / 2)";
             }
             .field-tooltip {
-                margin-top: ~"calc(var(--line-height) / 2 - @{4-5} / 2)";
+                margin-top: ~"calc(@{base__line-height} / 2 - @{4-5} / 2)";
             }
             div.mage-error {
                 .right(0);
