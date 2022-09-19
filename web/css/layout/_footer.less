@@ -60,10 +60,10 @@
             .form {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
+                .lib-css(justify-content, @footer-newsletter-form__justify-content);
                 gap: @2;
-                max-width: 420px;
-                margin: 0 auto;
+                .lib-css(max-width, @footer-newsletter-form__max-width);
+                .lib-css(margin, @footer-newsletter-form__margin);
                 .text-align(left);
 
                 > :not(.newsletter):not(.actions) {
@@ -111,6 +111,7 @@
         flex-wrap: wrap;
         column-gap: @footer-links__gap;
         justify-content: center;
+        .lib-css(margin, @footer-links__margin);
         a:hover {
             text-decoration: underline;
         }
