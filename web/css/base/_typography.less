@@ -132,12 +132,17 @@
         height: @7;
     }
     .icon.rounded {
-        border-radius: 999px;
         background: @muted__background;
         padding: @3;
         &.small {
             padding: @2;
         }
+    }
+    .icon {
+        &.rounded-sm { border-radius: @0-5; }
+        &.rounded { border-radius: @1; }
+        &.rounded-lg { border-radius: @2; }
+        &.rounded-full { border-radius: 9999px; }
     }
 
     .table-wrapper:not(.grouped) {
