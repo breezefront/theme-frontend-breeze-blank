@@ -70,6 +70,8 @@
         &:hover {
             --button-bg-alpha: var(--button-hover-bg-alpha);
             text-decoration: @button__hover__text-decoration !important;
+            .breeze-rgb(--button-color, @button__hover__color);
+            .breeze-rgb(--button-bg, @button__hover__background-color);
             .lib-css(background, @button__hover__background);
             .lib-css(border-color, @button__hover__border-color);
         }
@@ -91,6 +93,12 @@
         --link-alpha: 1;
         .lib-css(text-shadow, @button__text-shadow);
     }
+    & when not (@critical) {
+        &:hover {
+            .breeze-rgb(--button-color, @button-primary__hover__color);
+            .breeze-rgb(--button-bg, @button-primary__hover__background-color);
+        }
+    }
 }
 
 .breeze-button-secondary {
@@ -100,6 +108,12 @@
         --button-bg: var(--button-secondary-bg);
         --button-color: var(--button-secondary-color);
         --button-border-color: var(--button-secondary-border-color);
+    }
+    & when not (@critical) {
+        &:hover {
+            .breeze-rgb(--button-color, @button-secondary__hover__color);
+            .breeze-rgb(--button-bg, @button-secondary__hover__background-color);
+        }
     }
 }
 
@@ -114,6 +128,7 @@
     & when not (@critical) {
         &:hover {
             text-decoration: @link__hover__text-decoration !important;
+            --button-bg: transparent;
         }
     }
 }
@@ -131,6 +146,7 @@
     & when not (@critical) {
         &:hover {
             --button-bg-alpha: .1;
+            --button-color: var(--base-color);
         }
     }
 }

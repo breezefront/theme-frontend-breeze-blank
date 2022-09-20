@@ -1,3 +1,3 @@
-.breeze-rgb(@property, @value) {
+.breeze-rgb(@property, @value) when not (@value = false) {
     @{property}: red(@value), green(@value), blue(@value);
 }
