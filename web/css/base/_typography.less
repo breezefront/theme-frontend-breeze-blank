@@ -26,7 +26,6 @@
     h4, .h4,
     h5, .h5,
     h6, .h6,
-    th,
     .heading {
         color: @headings__color;
         .lib-css(font-family, @headings__font-family);
@@ -183,6 +182,9 @@
         thead tr {
             --divider-alpha: .15;
             border-bottom-color: @divider__color;
+        }
+        thead th {
+            color: @headings__color;
         }
         tbody:last-child tr:last-child {
             border-bottom: 0;
