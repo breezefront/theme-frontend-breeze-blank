@@ -227,41 +227,51 @@
 .breeze-invert-colors {
     color: @base__color;
 
-    .lib-css(--base-color, @inverted--base-color);
-    .lib-css(--base-alpha, @inverted--base-alpha);
-    .lib-css(--headings-alpha, @inverted--headings-alpha);
-    .lib-css(--link-color, @inverted--link-color);
-    .lib-css(--link-alpha, @inverted--link-alpha);
-    .lib-css(--muted-bg, @inverted--muted-bg);
-    .lib-css(--muted-bg-alpha, @inverted--muted-bg-alpha);
-    .lib-css(--ring-color, @inverted--ring-color);
-    .lib-css(--ring-alpha, @inverted--ring-alpha);
-    .lib-css(--button-bg, @inverted--button-bg);
-    .lib-css(--button-border-color, @inverted--button-border-color);
-    .lib-css(--button-color, @inverted--button-color);
-    .lib-css(--input-color, @inverted--base-color);
-    .lib-css(--input-alpha, @inverted--base-alpha);
-    .lib-css(--input-bg, @inverted--input-bg);
-    .lib-css(--input-bg-alpha, @inverted--input-bg-alpha);
-    .lib-css(--input-border-color, @inverted--input-border-color);
-    .lib-css(--input-border-alpha, @inverted--input-border-alpha);
-    .lib-css(--input-focus-border-color, @inverted--ring-color);
+    .lib-rgb(--base-color, @base__inverted__text-color);
+    .lib-css(--base-alpha, @base__inverted__text-alpha);
+    .lib-rgb(--headings-color, @headings__inverted__text-color);
+    .lib-css(--headings-alpha, @headings__inverted__text-alpha);
+    .lib-rgb(--link-color, @link__inverted__text-color);
+    .lib-css(--link-alpha, @link__inverted__text-alpha);
+    .lib-rgb(--muted-bg, @muted__inverted__background-color);
+    .lib-css(--muted-bg-alpha, @muted__inverted__background-alpha);
+    .lib-rgb(--ring-color, @ring__inverted__text-color);
+    .lib-css(--ring-alpha, @ring__inverted__text-alpha);
+    .lib-rgb(--button-bg, @button__inverted__background-color);
+    .lib-rgb(--button-border-color, @button__inverted__border-color);
+    .lib-rgb(--button-color, @button__inverted__text-color);
+    .lib-rgb(--input-color, @base__inverted__text-color);
+    .lib-css(--input-alpha, @base__inverted__text-alpha);
+    .lib-rgb(--input-bg, @input__inverted__background-color);
+    .lib-css(--input-bg-alpha, @input__inverted__background-alpha);
+    .lib-rgb(--input-border-color, @input__inverted__border-color);
+    .lib-css(--input-border-alpha, @input__inverted__border-alpha);
+    .lib-rgb(--input-focus-border-color, @input__inverted__focus__border-color);
 }
 
 .breeze-invert-colors-reset {
     color: @base__color;
 
-    .lib-css(--base-color, @rgb-base);
-    .lib-css(--link-color, @rgb-link);
-    .lib-css(--muted-bg, @rgb-muted-bg);
+    .lib-rgb(--base-color, @base__text-color);
+    .lib-rgb(--link-color, @link__text-color);
+    .lib-rgb(--muted-bg, @muted__background-color);
     .lib-css(--muted-bg-alpha, 1);
-    .lib-css(--ring-color, @rgb-ring);
+    .lib-rgb(--ring-color, @ring__text-color);
     .lib-css(--ring-alpha, 1);
-    .lib-css(--input-color, @rgb-base);
+    .lib-rgb(--input-color, @base__text-color);
     .lib-css(--input-alpha, 1);
-    .lib-css(--input-bg, @rgb-input-bg);
+    .lib-rgb(--input-bg, @input__background-color);
     .lib-css(--input-bg-alpha, 1);
-    .lib-css(--input-border-color, @rgb-input-border);
+    .lib-rgb(--input-border-color, @input__border-color);
     .lib-css(--input-border-alpha, 1);
-    .lib-css(--input-focus-border-color, @rgb-input-focus-border);
+    .lib-rgb(--input-focus-border-color, @input__focus__border-color);
+
+    & when (@respect-color-scheme = true) {
+        @media @media-dark {
+            .lib-rgb(--base-color, @base__dark__text-color);
+            .lib-rgb(--muted-bg, @muted__dark__background-color);
+            .lib-rgb(--input-color, @base__dark__text-color);
+            .lib-rgb(--input-border-color, @input__dark__border-color);
+        }
+    }
 }

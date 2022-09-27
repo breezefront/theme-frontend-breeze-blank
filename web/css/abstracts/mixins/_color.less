@@ -1,3 +1,16 @@
 .breeze-rgb(@property, @value) when not (@value = false) {
-    @{property}: red(@value), green(@value), blue(@value);
+    & when (iscolor(@value)) {
+        @{property}: red(@value), green(@value), blue(@value);
+    }
+    & when not (iscolor(@value)) {
+        @{property}: @value;
+    }
+}
+.lib-rgb(@property, @value) when not (@value = false) {
+    & when (iscolor(@value)) {
+        @{property}: red(@value), green(@value), blue(@value);
+    }
+    & when not (iscolor(@value)) {
+        @{property}: @value;
+    }
 }

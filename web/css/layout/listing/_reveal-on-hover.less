@@ -31,17 +31,17 @@
                     &:extend(.transition);
 
                     .tocart {
-                        .lib-css(--button-bg-alpha, @listing-grid-item-tocart--bg-alpha);
-                        .lib-css(--button-color, @listing-grid-item-tocart--color);
-                        .lib-css(--button-bg, @listing-grid-item-tocart--bg);
-                        .lib-css(--button-border-color, @listing-grid-item-tocart--border-color);
+                        .lib-css(--button-bg-alpha, @listing-grid-item-tocart__background-alpha);
+                        .lib-rgb(--button-color, @listing-grid-item-tocart__text-color);
+                        .lib-rgb(--button-bg, @listing-grid-item-tocart__background-color);
+                        .lib-rgb(--button-border-color, @listing-grid-item-tocart__border-color);
                         .lib-css(box-shadow, @listing-grid-item-tocart__box-shadow);
                         .lib-css(font-weight, @listing-grid-item-tocart__font-weight);
                         .lib-css(font-size, @listing-grid-item-tocart__font-size);
                         .lib-css(letter-spacing, @listing-grid-item-tocart__letter-spacing);
                         .lib-css(text-transform, @listing-grid-item-tocart__text-transform);
                         &:hover {
-                            .lib-css(--button-bg-alpha, @listing-grid-item-tocart__hover--bg-alpha);
+                            .lib-css(--button-bg-alpha, @listing-grid-item-tocart__hover__background-alpha);
                         }
                     }
                     .stock {

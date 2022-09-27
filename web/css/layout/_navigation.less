@@ -89,8 +89,8 @@
     }
 
     .navigation {
-        --base-color: @rgb-navigation;
-        --z-layer-color: @rgb-navigation;
+        .lib-rgb(--base-color, @navigation__text-color);
+        .lib-css(--z-layer-color, @navigation__text-color);
         color: @base__color;
 
         a.level-top {

@@ -1,73 +1,79 @@
 & when (@critical) {
     :root {
-        --black: @rgb-black;
-        --white: @rgb-white;
+        .lib-rgb(--black, @black);
+        .lib-rgb(--white, @white);
 
-        --gray-50:  @rgb-gray-50;
-        --gray-100: @rgb-gray-100;
-        --gray-200: @rgb-gray-200;
-        --gray-300: @rgb-gray-300;
-        --gray-400: @rgb-gray-400;
-        --gray-500: @rgb-gray-500;
-        --gray-600: @rgb-gray-600;
-        --gray-700: @rgb-gray-700;
-        --gray-800: @rgb-gray-800;
-        --gray-900: @rgb-gray-900;
+        .lib-rgb(--gray-50,  @gray-50);
+        .lib-rgb(--gray-100, @gray-100);
+        .lib-rgb(--gray-200, @gray-200);
+        .lib-rgb(--gray-300, @gray-300);
+        .lib-rgb(--gray-400, @gray-400);
+        .lib-rgb(--gray-500, @gray-500);
+        .lib-rgb(--gray-600, @gray-600);
+        .lib-rgb(--gray-700, @gray-700);
+        .lib-rgb(--gray-800, @gray-800);
+        .lib-rgb(--gray-900, @gray-900);
 
-        --red:    @rgb-red;
-        --green:  @rgb-green;
-        --blue:   @rgb-blue;
-        --yellow: @rgb-yellow;
+        .lib-rgb(--red, @red);
+        .lib-rgb(--green, @green);
+        .lib-rgb(--blue, @blue);
+        .lib-rgb(--yellow, @yellow);
 
-        --brand-color:   @rgb-brand;
-        --danger-color:  @rgb-danger;
-        --info-color:    @rgb-info;
-        --success-color: @rgb-success;
+        .lib-rgb(--brand-color, @theme__brand-color);
+        --danger-color:  var(--red);
+        --info-color:    var(--blue);
+        --success-color: var(--green);
 
-        --base-alpha: 1;
-        --base-color: @rgb-base;
-        --base-bg: @rgb-base-bg;
-        --muted-bg: @rgb-muted-bg;
-        --z-layer-color: @rgb-z-layer;
-        --z-layer-bg: @rgb-z-layer-bg;
-        --z-overlay-bg: @rgb-z-overlay-bg;
+        --base-alpha: @base__text-alpha;
+        .lib-rgb(--base-color, @base__text-color);
+        .lib-rgb(--base-bg, @base__background-color);
+        .lib-rgb(--muted-bg, @muted__background-color);
 
-        --ring-color: @rgb-ring;
+        .lib-rgb(--z-layer-color, @z-layer__text-color);
+        .lib-rgb(--z-layer-bg, @z-layer__background-color);
+        .lib-rgb(--z-overlay-bg, @z-overlay__background-color);
 
-        --link-alpha: .85;
-        --link-color: @rgb-link;
-        --headings-color: @rgb-headings;
-        --block-title-color: @rgb-block-title;
+        .lib-rgb(--ring-color, @ring__text-color);
+
+        --link-alpha: @link__text-alpha;
+        .lib-rgb(--link-color, @link__text-color);
+
+        --headings-alpha: @headings__text-alpha;
+        .lib-rgb(--headings-color, @headings__text-color);
+
+        .lib-rgb(--block-title-color, @block-title__text-color);
+        .lib-rgb(--block-title-bg, @block-title__background-color);
+        .lib-rgb(--block-content-bg, @block-content__background-color);
 
         --input-alpha: 1;
-        --input-color: @rgb-input;
-        --input-bg: @rgb-input-bg;
+        .lib-rgb(--input-color, @input__text-color);
+        .lib-rgb(--input-bg, @input__background-color);
         --input-bg-alpha: 1;
         --input-border-alpha: 1;
-        --input-border-color: @rgb-input-border;
-        --input-outline-color: @rgb-input-outline;
+        .lib-rgb(--input-border-color, @input__border-color);
+        .lib-rgb(--input-outline-color, @input__focus__outline-color);
         --input-outline-alpha: @input__focus__outline-alpha;
-        --input-focus-border-color: @rgb-input-focus-border;
+        .lib-rgb(--input-focus-border-color, @input__focus__border-color);
 
-        --button-color: @rgb-button;
-        --button-bg: @rgb-button-bg;
+        .lib-rgb(--button-color, @button__text-color);
+        .lib-rgb(--button-bg, @button__background-color);
         --button-bg-alpha: @button__background-alpha;
         --button-hover-bg-alpha: @button__hover__background-alpha;
         --button-border-alpha: @button__border-alpha;
-        --button-border-color: @rgb-button-border;
-        --button-secondary-color: @rgb-button-secondary;
-        --button-secondary-bg: @rgb-button-secondary-bg;
-        --button-secondary-border-color: @rgb-button-secondary-border;
+        .lib-rgb(--button-border-color, @button__border-color);
+        .lib-rgb(--button-secondary-color, @button-secondary__text-color);
+        .lib-rgb(--button-secondary-bg, @button-secondary__background-color);
+        .lib-rgb(--button-secondary-border-color, @button-secondary__border-color);
 
         --transition-duration: 200ms;
 
         --spinner-size: @6;
         --spinner-border-width: 2px;
-        --spinner-border-color: @rgb-spinner;
+        .lib-rgb(--spinner-border-color, @spinner__border-color);
         --spinner-duration: .6s;
 
-        --scrollbar-bg: @rgb-scrollbar-bg;
-        --scrollbar-color: @rgb-scrollbar;
+        .lib-rgb(--scrollbar-bg, @scrollbar-track__background-color);
+        .lib-rgb(--scrollbar-color, @scrollbar-thumb__background-color);
 
         @media (prefers-reduced-motion) {
             --transition-duration: 20ms;
@@ -76,34 +82,38 @@
 
         & when (@respect-color-scheme = true) {
             @media @media-dark {
-                --gray-800: @dark-rgb-gray-800;
-                --green: @dark-rgb-green;
-                --blue: @dark-rgb-blue;
-                --red: @dark-rgb-red;
-                --brand-color: @dark-rgb-brand;
                 --muted-alpha: .8;
                 --brand-alpha: 1;
                 --danger-alpha: 1;
                 --info-alpha: 1;
                 --success-alpha: 1;
-                --base-color: @dark-rgb-base;
-                --base-bg: @dark-rgb-base-bg;
-                --muted-bg: @dark-rgb-muted-bg;
-                --z-layer-bg: @dark-rgb-z-layer-bg;
+                .lib-rgb(--gray-800, @dark__gray-800);
+                .lib-rgb(--green, @dark__green);
+                .lib-rgb(--blue, @dark__blue);
+                .lib-rgb(--red, @dark__red);
+                .lib-rgb(--brand-color, @theme__dark__brand-color);
+                .lib-rgb(--base-color, @base__dark__text-color);
+                .lib-rgb(--base-bg, @base__dark__background-color);
+                .lib-rgb(--muted-bg, @muted__dark__background-color);
+
                 --z-overlay-bg-alpha: .65;
+                .lib-rgb(--z-layer-bg, @z-layer__dark__background-color);
 
-                --headings-color: @dark-rgb-headings;
-                --block-title-color: @dark-rgb-block-title;
+                .lib-rgb(--headings-color, @headings__dark__text-color);
 
-                --input-border-color: @dark-rgb-input-border;
+                .lib-rgb(--block-title-color, @block-title__dark__text-color);
+                .lib-rgb(--block-title-bg, @block-title__dark__background-color);
+                .lib-rgb(--block-content-bg, @block-content__dark__background-color);
+
+                .lib-rgb(--input-border-color, @input__dark__border-color);
 
                 --button-bg-alpha: .4;
                 --button-hover-bg-alpha: .5;
-                --button-secondary-color: @dark-rgb-button;
-                --button-secondary-bg: @dark-rgb-button-secondary-bg;
+                .lib-rgb(--button-secondary-color, @button-secondary__dark__text-color);
+                .lib-rgb(--button-secondary-bg, @button-secondary__dark__background-color);
 
-                --scrollbar-bg: @dark-rgb-scrollbar-bg;
-                --scrollbar-color: @dark-rgb-scrollbar;
+                .lib-rgb(--scrollbar-bg, @scrollbar-track__dark__background-color);
+                .lib-rgb(--scrollbar-color, @scrollbar-thumb__dark__background-color);
             }
         }
     }

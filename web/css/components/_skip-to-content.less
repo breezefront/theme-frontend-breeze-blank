@@ -9,7 +9,7 @@
 & when not (@critical) {
     .action.skip {
         .page-header & {
-            --base-color: @rgb-base;
+            .lib-rgb(--base-color, @base__text-color);
             --base-alpha: 1;
             position: absolute;
             left: 0;

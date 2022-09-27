@@ -70,13 +70,13 @@
         &:hover {
             --button-bg-alpha: var(--button-hover-bg-alpha);
             text-decoration: @button__hover__text-decoration !important;
-            .breeze-rgb(--button-color, @button__hover__color);
+            .breeze-rgb(--button-color, @button__hover__text-color);
             .breeze-rgb(--button-bg, @button__hover__background-color);
             .breeze-rgb(--button-border-color, @button__hover__border-color);
         }
         &:focus-visible {
             --button-border-alpha: 1;
-            .breeze-rgb(--button-color, @button__focus__color);
+            .breeze-rgb(--button-color, @button__focus__text-color);
             .breeze-rgb(--button-bg, @button__focus__background-color);
             .breeze-rgb(--button-border-color, @button__focus__border-color);
             z-index: 10;
@@ -94,7 +94,7 @@
     }
     & when not (@critical) {
         &:hover {
-            .breeze-rgb(--button-color, @button-primary__hover__color);
+            .breeze-rgb(--button-color, @button-primary__hover__text-color);
             .breeze-rgb(--button-bg, @button-primary__hover__background-color);
             .breeze-rgb(--button-border-color, @button-primary__hover__border-color);
         }
@@ -111,7 +111,7 @@
     }
     & when not (@critical) {
         &:hover {
-            .breeze-rgb(--button-color, @button-secondary__hover__color);
+            .breeze-rgb(--button-color, @button-secondary__hover__text-color);
             .breeze-rgb(--button-bg, @button-secondary__hover__background-color);
             .breeze-rgb(--button-border-color, @button-secondary__hover__border-color);
         }

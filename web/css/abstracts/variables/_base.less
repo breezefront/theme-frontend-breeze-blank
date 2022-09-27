@@ -1,6 +1,11 @@
 @theme__brand-color: @blue-600;
 @theme__dark-color: @slate-900;
 
+@blue: @blue-700;
+@green: @green-700;
+@red: @red-700;
+@yellow: @yellow-400;
+
 @selection__color: false;
 @selection__background: false;
 
@@ -8,25 +13,41 @@
 @font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 @font-mono:  ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
+@spinner__border-color: var(--brand-color);
+
 @link__text-decoration: none;
 @link__hover__text-decoration: underline;
+@link__text-color: var(--blue);
+@link__text-alpha: .85;
 @link__color: ~"rgba(var(--link-color), var(--link-alpha))";
 
 @ring__width: 2px;
 @ring__offset: 1px;
+@ring__text-color: var(--brand-color);
 @ring__color: ~"rgba(var(--ring-color), var(--ring-alpha, 1))";
 
+@headings__text-color: var(--base-color);
+@headings__text-alpha: 1;
 @headings__color: ~"rgba(var(--headings-color), var(--headings-alpha, 1))";
 
 @brand__color: ~"rgba(var(--brand-color), var(--brand-alpha, 1))";
+
+@base__text-color: @gray-900;
+@base__text-alpha: 1;
 @base__color: ~"rgba(var(--base-color), var(--base-alpha, 1))";
+
 @muted__color: ~"rgba(var(--base-color), var(--muted-alpha, .6))";
 @divider__color: ~"rgba(var(--base-color), var(--divider-alpha, .1))";
 @danger__color: ~"rgba(var(--danger-color), var(--danger-alpha, 1))";
 @success__color: ~"rgba(var(--success-color), var(--success-alpha, 1))";
 @info__color: ~"rgba(var(--info-color), var(--info-alpha, 1))";
+@base__background-color: @white;
 @base__background: ~"rgba(var(--base-bg), var(--base-bg-alpha, 1))";
+@muted__background-color: @gray-100;
 @muted__background: ~"rgba(var(--muted-bg), var(--muted-bg-alpha, 1))";
+@z-layer__text-color: var(--base-color);
 @z-layer__color: ~"rgba(var(--z-layer-color), var(--z-layer-color-alpha, 1))";
+@z-layer__background-color: var(--base-bg);
 @z-layer__background: ~"rgba(var(--z-layer-bg), var(--z-layer-bg-alpha, 1))";
+@z-overlay__background-color: @black;
 @z-overlay__background: ~"rgba(var(--z-overlay-bg), var(--z-overlay-bg-alpha, .8))";

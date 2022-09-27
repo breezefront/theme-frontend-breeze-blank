@@ -1,2 +1,29 @@
 @respect-color-scheme: true;
+
+@theme__dark__brand-color: lighten(@theme__brand-color, 25%);
 @logo__dark__filter: invert(.7) sepia(.1) saturate(3) hue-rotate(180deg);
+
+@dark__gray-800: lighten(@gray-900, 2.5%);
+@dark__blue: lighten(@blue-700, 25%);
+@dark__green: lighten(@green-700, 35%);
+@dark__red: lighten(@red-700, 30%);
+
+@base__dark__text-color: var(--gray-400);
+@base__dark__background-color: var(--gray-900);
+@muted__dark__background-color: var(--gray-800);
+
+@headings__dark__text-color: var(--gray-300);
+
+@block-title__dark__text-color: var(--gray-300);
+@block-title__dark__background-color: false;
+@block-content__dark__background-color: false;
+
+@input__dark__border-color: var(--gray-700);
+
+@button-secondary__dark__text-color: var(--gray-400);
+@button-secondary__dark__background-color: var(--gray-700);
+
+@z-layer__dark__background-color: var(--muted-bg);
+
+@scrollbar-track__dark__background-color: var(--gray-800);
+@scrollbar-thumb__dark__background-color: var(--gray-700);
