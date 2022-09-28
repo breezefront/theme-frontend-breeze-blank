@@ -26,8 +26,9 @@
 
 @checkbox__size: @4;
 @checkbox__border-radius: @input__border-radius;
-@checkbox__color: ~"rgb(var(--input-focus-border-color))";
-@checkbox__focus__shadow: ~"0 0 0 2px rgb(var(--base-bg)), 0 0 0 4px rgb(var(--input-focus-border-color))";
+@checkbox__text-color: @input__focus__border-color;
+@checkbox__color: ~"rgba(var(--checkbox-color), var(--checkbox-alpha, 1))";
+@checkbox__focus__shadow: ~"0 0 0 2px rgb(var(--base-bg)), 0 0 0 4px rgb(var(--checkbox-color))";
 
 @button__font-weight: 400;
 @button__font-family: false;
