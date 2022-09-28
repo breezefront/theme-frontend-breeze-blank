@@ -20,12 +20,12 @@
     & when not (@critical) {
         &:focus,
         &:focus-visible {
-            --input-border-color: var(--input-focus-border-color);
+            .lib-rgb(--input-bg, @input__focus__background-color);
+            .lib-rgb(--input-border-color, @input__focus__border-color);
             --input-outline-color: var(--input-border-color);
             --input-shadow-spread: @input__focus__shadow-spread;
             outline: @input__focus__outline;
             outline-offset: @input__focus__outline-offset;
-            .lib-css(background-color, @input__focus__background);
         }
         &:-webkit-autofill {
             -webkit-box-shadow: @input__shadow, 0 0 0 30px @muted__background inset;
