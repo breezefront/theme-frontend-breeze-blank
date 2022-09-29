@@ -94,9 +94,11 @@
         color: @base__color;
 
         a.level-top {
+            .lib-css(font-family, @navigation-item-level0__font-family);
             .lib-css(font-weight, @navigation-item-level0__font-weight);
             .lib-css(font-size, @navigation-item-level0__font-size);
             .lib-css(letter-spacing, @navigation-item-level0__letter-spacing);
+            .lib-css(text-transform, @navigation-item-level0__text-transform);
             .lib-css(text-shadow, @navigation-item-level0__text-shadow);
             .padding(@navigation-item-level0__padding);
         }
@@ -106,6 +108,7 @@
             .has-active {
                 > a.level-top {
                     --divider-alpha: .05;
+                    .lib-css(color, @navigation-item-level0__active__color);
                     .lib-css(background, @navigation-item-level0__active__background);
                 }
             }
@@ -249,6 +252,11 @@
         .navigation-wrapper {
             .opened > a {
                 .lib-css(background, @navigation-item__opened__background);
+            }
+            a.level-top:hover,
+            .opened > a.level-top {
+                .lib-css(color, @navigation-item-level0__opened__color);
+                .lib-css(background, @navigation-item-level0__opened__background);
             }
 
             .parent {
