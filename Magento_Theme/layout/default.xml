@@ -42,6 +42,7 @@
                     <argument name="title" xsi:type="string" translate="true">My Account</argument>
                     <argument name="sr_only" xsi:type="boolean">true</argument>
                     <argument name="href" xsi:type="url" path="customer/account"/>
+                    <argument name="switcher_css_class" xsi:type="string">switcher-account</argument>
                     <argument name="css_class" xsi:type="string">no-chevron account-dropdown</argument>
                 </arguments>
             </block>
@@ -50,6 +51,7 @@
                     <argument name="title" xsi:type="string" translate="true">Wishlist</argument>
                     <argument name="sr_only" xsi:type="boolean">true</argument>
                     <argument name="href" xsi:type="url" path="wishlist"/>
+                    <argument name="switcher_css_class" xsi:type="string">switcher-wishlist</argument>
                     <argument name="css_class" xsi:type="string">no-chevron wishlist-dropdown dropdown-lg</argument>
                     <argument name="is_dialog" xsi:type="boolean">true</argument>
                 </arguments>
