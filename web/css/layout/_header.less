@@ -154,8 +154,10 @@
 
     .header.content > .actions > .action {
         .lib-css(color, @header-actions__color);
-        .lib-css(font-weight, @header-actions__font-weight);
         .lib-css(gap, @header-actions__gap);
+        strong {
+            .lib-css(font-weight, @header-actions__font-weight);
+        }
 
         @media @media-md-down {
             span {
