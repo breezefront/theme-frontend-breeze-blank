@@ -38,7 +38,7 @@
     .hide,
     .no-display,
     .abs-no-display { display: none !important; }
-    .show { display: initial !important; }
+    .show { display: revert !important; }
     .flex { display: flex !important; }
     .abs-visually-hidden {
         &:extend(.breeze-sr-only);
@@ -51,19 +51,19 @@
 
     @media @media-xs {
       .xs\:hide, .xs-hide { display: none !important }
-      .xs\:show, .xs-show { display: initial !important }
+      .xs\:show, .xs-show { display: revert !important }
       .xs\:flex, .xs-flex { display: flex !important; }
       .xs\:grid { display: grid !important; }
     }
     @media @media-sm {
       .sm\:hide, .sm-hide { display: none !important }
-      .sm\:show, .sm-show { display: initial !important }
+      .sm\:show, .sm-show { display: revert !important }
       .sm\:flex, .sm-flex { display: flex !important; }
       .sm\:grid { display: grid !important; }
     }
     @media @media-md {
       .md\:hide, .md-hide { display: none !important }
-      .md\:show, .md-show { display: initial !important }
+      .md\:show, .md-show { display: revert !important }
       .md\:flex, .md-flex { display: flex !important; }
       .md\:a-right, .md-a-right { .text-align(right); }
       .md\:grid { display: grid !important; }
@@ -73,19 +73,19 @@
     }
     @media @media-lg {
       .lg\:hide, .lg-hide { display: none !important }
-      .lg\:show, .lg-show { display: initial !important }
+      .lg\:show, .lg-show { display: revert !important }
       .lg\:flex, .lg-flex { display: flex !important; }
       .lg\:grid { display: grid !important; }
     }
     @media @media-xl {
       .xl\:hide, .xl-hide { display: none !important }
-      .xl\:show, .xl-show { display: initial !important }
+      .xl\:show, .xl-show { display: revert !important }
       .xl\:flex, .xl-flex { display: flex !important; }
       .xl\:grid { display: grid !important; }
     }
     @media @media-xxl {
       .xxl\:hide, .xxl-hide { display: none !important }
-      .xxl\:show, .xxl-show { display: initial !important }
+      .xxl\:show, .xxl-show { display: revert !important }
       .xxl\:flex, .xxl-flex { display: flex !important; }
       .xxl\:grid { display: grid !important; }
     }
