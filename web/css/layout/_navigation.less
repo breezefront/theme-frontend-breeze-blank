@@ -73,16 +73,18 @@
     }
 
     // wrap navbar to the new line when navigation inside header
-    @media @navigation__media-wrap {
-        .header.content {
-            flex-wrap: wrap;
-            > .navigation-wrapper {
-                order: 9999;
-                width: 100%;
-                margin-bottom: -@2;
+    & when not (@navigation__media-wrap = false) {
+        @media @navigation__media-wrap {
+            .header.content {
+                flex-wrap: wrap;
+                > .navigation-wrapper {
+                    order: 9999;
+                    width: 100%;
+                    margin-bottom: -@2;
 
-                .navigation > ul {
-                    .margin-left(-@2);
+                    .navigation > ul {
+                        .margin-left(-@2);
+                    }
                 }
             }
         }
