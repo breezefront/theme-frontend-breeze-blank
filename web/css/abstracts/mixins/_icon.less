@@ -1,4 +1,4 @@
-.breeze-icon(@icon, @size: @6) {
+.breeze-icon(@icon, @size: @6) when not (@icon = false) {
     & when (@critical) {
         content: '';
         display: block;
@@ -11,7 +11,7 @@
         -webkit-mask-size: @size @size;
     }
 }
-.breeze-icon(@icon, @width, @height) {
+.breeze-icon(@icon, @width, @height) when not (@icon = false) {
     & when (@critical) {
         content: '';
         display: block;
