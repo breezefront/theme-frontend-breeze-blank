@@ -34,7 +34,7 @@
             }
 
             .counter.qty.empty {
-                opacity: 0;
+                .lib-css(opacity, @minicart-counter__empty__opacity);
             }
 
             & when (@minicart-counter__mode = badge) {
@@ -75,6 +75,7 @@
             }
 
             & when (@minicart-counter__mode = compact) {
+                .lib-css(font-family, @minicart-counter__mode-compact__font-family);
                 .lib-css(font-size, @minicart-counter__mode-compact__font-size);
                 .lib-css(font-weight, @minicart-counter__mode-compact__font-weight);
 
