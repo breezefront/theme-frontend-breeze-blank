@@ -32,8 +32,10 @@
                 margin: 0 !important;
 
                 .block-title {
-                    .breeze-text-2xl();
-                    text-transform: none;
+                    .lib-css(font-size, @login-container-title__font-size);
+                    .lib-css(font-weight, @login-container-title__font-weight);
+                    .lib-css(line-height, @login-container-title__line-height);
+                    .lib-css(text-transform, @login-container-title__text-transform);
                 }
             }
         }
