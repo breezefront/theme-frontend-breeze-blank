@@ -7,11 +7,13 @@
         margin-bottom: @3;
         border: 1px solid var(--message-border-color);
 
+        .lib-css(font-family, @message__font-family);
         .lib-css(font-size, @message__font-size);
         .lib-css(font-weight, @message__font-weight);
         .lib-css(text-transform, @message__text-transform);
         .lib-css(border-radius, @message__border-radius);
         .lib-css(border-width, @message__border-width);
+        .lib-css(box-shadow, @message__box-shadow);
 
         & when (@message__text-align = center) {
             > div {
