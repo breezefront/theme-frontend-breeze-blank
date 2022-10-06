@@ -6,7 +6,11 @@
             flex-wrap: wrap;
             .lib-css(justify-content, @tab__horizontal__justify-content);
             .lib-css(margin, @tab__horizontal__margin);
+            .lib-css(padding, @tab__horizontal__padding);
         }
+    }
+    & when not (@critical) {
+        .lib-css(background, @tab__background);
     }
 }
 
@@ -24,6 +28,7 @@
         .lib-css(padding, @tab-toggler__padding);
         .lib-css(color, @tab-toggler__color);
         .lib-css(background, @tab-toggler__background);
+        .lib-css(font-family, @tab-toggler__font-family);
         .lib-css(font-size, @tab-toggler__font-size);
         .lib-css(font-weight, @tab-toggler__font-weight);
         .lib-css(text-transform, @tab-toggler__text-transform);
