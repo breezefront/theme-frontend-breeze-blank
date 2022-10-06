@@ -1,5 +1,16 @@
 & when (@critical) {
     .widget-recent {
+        .page-bottom & {
+            @media @media-md {
+                .lib-css(--listing-grid-columns, @listing-grid__media-md-1column__columns);
+            }
+            @media @media-lg {
+                .lib-css(--listing-grid-columns, @listing-grid__media-lg-1column__columns);
+            }
+            @media @media-xl {
+                .lib-css(--listing-grid-columns, @listing-grid__media-xl-1column__columns);
+            }
+        }
         .products-grid {
             .product-item-info {
                 align-items: center;
