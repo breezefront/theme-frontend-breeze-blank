@@ -10,12 +10,15 @@
             }
             .page-main {
                 padding-bottom: @narrow-page__padding-bottom;
-                --container-max-width: @sm;
+                .columns {
+                    max-width: @sm;
+                    margin: 0 auto;
+                }
             }
         }
         @media @media-md {
-            .page-main {
-                --container-max-width: @md;
+            .page-main .columns {
+                max-width: @md;
             }
         }
     }
