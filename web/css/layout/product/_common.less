@@ -61,21 +61,31 @@
     .product-info-stock-sku {
         display: flex;
         align-items: center;
+        .lib-css(justify-content, @product-stock-wrapper__justify-content);
         gap: @2;
         .stock {
-            padding: @0-5 @2;
-            background: @product-stock__background;
-            color: @product-stock__color;
+            .lib-css(font-family, @product-stock__font-family);
+            .lib-css(font-weight, @product-stock__font-weight);
+            .lib-css(font-size, @product-stock__font-size);
+            .lib-css(text-transform, @product-stock__text-transform);
+            .lib-css(padding, @product-stock__padding);
+            .lib-css(background, @product-stock__background);
+            .lib-css(color, @product-stock__color);
             &.available {
-                background: @product-stock-available__background;
-                color: @product-stock-available__color;
+                .lib-css(background, @product-stock-available__background);
+                .lib-css(color, @product-stock-available__color);
             }
             &.unavailable {
-                background: @product-stock-unavailable__background;
-                color: @product-stock-unavailable__color;
+                .lib-css(background, @product-stock-unavailable__background);
+                .lib-css(color, @product-stock-unavailable__color);
             }
         }
         .sku {
+            .lib-css(color, @product-sku__color);
+            .lib-css(font-family, @product-sku__font-family);
+            .lib-css(font-weight, @product-sku__font-weight);
+            .lib-css(font-size, @product-sku__font-size);
+            .lib-css(text-transform, @product-sku__text-transform);
             display: flex;
             align-items: center;
             gap: @1;
