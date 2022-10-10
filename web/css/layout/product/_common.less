@@ -27,9 +27,8 @@
 
         @media @media-md {
             row-gap: 0;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: "media title"
-                                 "media main";
+            .lib-css(grid-template-columns, @product-wrapper__desktop__grid-columns);
+            .lib-css(grid-template-areas, @product-wrapper__desktop__grid-areas);
         }
     }
 
