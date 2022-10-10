@@ -27,8 +27,12 @@
 
         @media @media-md {
             row-gap: 0;
-            .lib-css(grid-template-columns, @product-wrapper__desktop__grid-columns);
-            .lib-css(grid-template-areas, @product-wrapper__desktop__grid-areas);
+            .lib-css(column-gap, @product-wrapper__md__gap);
+            .lib-css(grid-template-columns, @product-wrapper__md__grid-columns);
+            .lib-css(grid-template-areas, @product-wrapper__md__grid-areas);
+        }
+        @media @media-lg {
+            .lib-css(column-gap, @product-wrapper__lg__gap);
         }
     }
 
@@ -43,7 +47,8 @@
         flex-direction: column;
         gap: @2;
         .price-box {
-            .breeze-text-2xl();
+            .lib-css(font-size, @product-price-box__font-size);
+            .lib-css(line-height, @product-price-box__line-height);
         }
     }
 

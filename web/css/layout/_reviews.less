@@ -42,8 +42,9 @@
         gap: @2;
         a {
             &:extend(.breeze-link all);
-            .breeze-text-sm();
-            color: @review-action__color;
+            .lib-css(font-size, @review-action__font-size);
+            .lib-css(line-height, @review-action__line-height);
+            .lib-css(color, @review-action__color);
         }
     }
 
