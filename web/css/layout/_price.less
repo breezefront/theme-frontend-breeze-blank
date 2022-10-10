@@ -1,9 +1,13 @@
 & when (@critical) {
     .price-box {
         .lib-css(color, @price__color);
+        .lib-css(font-family, @price__font-family);
         .lib-css(font-weight, @price__font-weight);
+        .lib-css(font-size, @price__font-size);
+        .lib-css(line-height, @price__line-height);
         .product-item & {
             .lib-css(color, @listing-price__color);
+            .lib-css(font-size, @listing-price__font-size);
         }
         p {
             margin: 0;
@@ -38,6 +42,7 @@
     .old-price {
         .lib-css(color, @price-old__color);
         .lib-css(text-decoration, @price-old__text-decoration);
+        .lib-css(text-decoration-color, @price-old__text-decoration-color);
 
         & when (@price-old-label__display = none) {
             .price-label {
