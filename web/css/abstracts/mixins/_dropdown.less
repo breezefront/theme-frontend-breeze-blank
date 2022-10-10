@@ -1,4 +1,4 @@
-.breeze-dropdown {
+.breeze-z-layer {
     & when (@critical) {
         opacity: 0;
         position: absolute;
@@ -23,14 +23,9 @@
         .lib-css(border, @dropdown__border);
         .lib-css(border-radius, @dropdown__border-radius);
         .text-align(left);
-
-        .breeze & {
-            display: block !important; // override inline style to enable amination
-        }
     }
 }
-
-.breeze-dropdown-visible {
+.breeze-z-layer-visible {
     & when not (@critical) {
         z-index: 851;
         opacity: 1;
@@ -39,6 +34,18 @@
         transform: scale(1);
         top: auto;
     }
+}
+
+.breeze-dropdown {
+    &:extend(.breeze-z-layer all);
+    & when not (@critical) {
+        .breeze & {
+            display: block !important; // override inline style to enable amination
+        }
+    }
+}
+.breeze-dropdown-visible {
+    &:extend(.breeze-z-layer-visible all);
 }
 
 .breeze-dropdown-item {
