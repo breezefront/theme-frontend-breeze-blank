@@ -247,6 +247,9 @@
 
             .product-item-details {
                 .lib-css(align-items, @listing-grid-item__align-items);
+                & when (@listing-grid-item__align-items = center) {
+                    text-align: center;
+                }
             }
 
             // Name and price in a single line
