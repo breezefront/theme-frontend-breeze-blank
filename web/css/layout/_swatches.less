@@ -31,6 +31,7 @@
         }
     }
     .swatch-option {
+        .lib-css(font-family, @swatch__font-family);
         .lib-css(font-size, @swatch__font-size);
         .lib-css(font-weight, @swatch__font-weight);
         color: @muted__color;
@@ -53,7 +54,7 @@
         &::before {
             content: '';
             position: absolute;
-            box-shadow: 0 0 0 1px inset @divider__color;
+            .lib-css(box-shadow, @swatch__box-shadow);
             .lib-css(border-radius, @swatch__border-radius);
             top: @swatch__border-offset;
             bottom: @swatch__border-offset;
