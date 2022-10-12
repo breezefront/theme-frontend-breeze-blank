@@ -1,5 +1,8 @@
 & when (@critical) {
     .bundle-options-container {
+        @media @media-md {
+            margin: @product-details__margin;
+        }
         .product-options-wrapper {
             border: 0;
             padding: 0;
@@ -47,7 +50,6 @@
     .product-options-wrapper {
         .action.back {
             &:extend(.breeze-button-reset all);
-            &:extend(.breeze-link all);
         }
         .field {
             &.option {
