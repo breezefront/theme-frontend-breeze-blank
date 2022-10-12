@@ -219,6 +219,12 @@
                         -webkit-line-clamp: @listing-grid-item-name__line-clamp;
                         overflow: hidden;
                         min-height: 0;
+                        a {
+                            outline: none;
+                        }
+                        &:focus-within {
+                            .breeze-focus-ring();
+                        }
                     }
                 }
 
