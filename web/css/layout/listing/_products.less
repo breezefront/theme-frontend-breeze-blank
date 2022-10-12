@@ -248,7 +248,9 @@
             .product-item-details {
                 .lib-css(align-items, @listing-grid-item__align-items);
                 & when (@listing-grid-item__align-items = center) {
-                    text-align: center;
+                    .product-item-name {
+                        text-align: center;
+                    }
                 }
             }
 
