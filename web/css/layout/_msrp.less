@@ -6,8 +6,12 @@
 }
 
 & when (@critical) {
-    .map-old-price .price-wrapper {
-        text-decoration: line-through;
+    .old-price.map-old-price {
+        text-decoration: none;
+        .price-wrapper {
+            text-decoration: line-through;
+            .lib-css(text-decoration-color, @price-old__text-decoration-color);
+        }
     }
     .map-fallback-price {
         display: none;
