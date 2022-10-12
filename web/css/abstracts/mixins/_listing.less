@@ -78,4 +78,9 @@
             pointer-events: all;
         }
     }
+    & when not (@critical) {
+        &::after {
+            display: none;
+        }
+    }
 }
