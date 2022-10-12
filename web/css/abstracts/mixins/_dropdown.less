@@ -37,7 +37,7 @@
 }
 
 .breeze-dropdown {
-    &:extend(.breeze-z-layer all);
+    .breeze-z-layer();
     & when not (@critical) {
         .breeze & {
             display: block !important; // override inline style to enable amination
@@ -45,7 +45,7 @@
     }
 }
 .breeze-dropdown-visible {
-    &:extend(.breeze-z-layer-visible all);
+    .breeze-z-layer-visible();
 }
 
 .breeze-dropdown-item {
