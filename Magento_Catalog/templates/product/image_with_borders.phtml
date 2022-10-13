@@ -1,11 +1,14 @@
 <?php /** @var $block \Magento\Catalog\Block\Product\Image */ ?>
 
-<img class="<?= $escaper->escapeHtmlAttr($block->getClass()) ?>"
-    <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
-        <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
-    <?php endforeach; ?>
-    src="<?= $escaper->escapeUrl($block->getImageUrl()) ?>"
-    loading="lazy"
-    width="<?= $escaper->escapeHtmlAttr($block->getWidth()) ?>"
-    height="<?= $escaper->escapeHtmlAttr($block->getHeight()) ?>"
-    alt="<?= $escaper->escapeHtmlAttr($block->getLabel()) ?>"/>
+<span class="product-image-container"
+    style="--image-container-width: <?= $block->getWidth() ?>px; --image-container-aspect-ratio: <?= $block->getWidth() ?>/<?= $block->getHeight() ?>;">
+    <img class="<?= $escaper->escapeHtmlAttr($block->getClass()) ?>"
+        <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
+            <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
+        <?php endforeach; ?>
+        src="<?= $escaper->escapeUrl($block->getImageUrl()) ?>"
+        loading="lazy"
+        width="<?= $escaper->escapeHtmlAttr($block->getWidth()) ?>"
+        height="<?= $escaper->escapeHtmlAttr($block->getHeight()) ?>"
+        alt="<?= $escaper->escapeHtmlAttr($block->getLabel()) ?>"/>
+</span>
