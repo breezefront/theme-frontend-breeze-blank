@@ -89,18 +89,18 @@
         }
     }
     .actions-secondary {
-        .lib-css(display, @listing-grid-item-actions-secondary__display);
-        .lib-css(gap, @listing-grid-item-actions-secondary__gap);
+        .lib-css(display, @listing-item-actions-secondary__display);
+        .lib-css(gap, @listing-item-actions-secondary__gap);
         a {
             --muted-alpha: .4;
-            .padding(@listing-grid-item-actions-secondary-link__padding);
-            .lib-css(color, @listing-grid-item-actions-secondary-link__color);
-            .lib-css(background, @listing-grid-item-actions-secondary-link__background);
-            .lib-css(border, @listing-grid-item-actions-secondary-link__border);
-            .lib-css(border-radius, @listing-grid-item-actions-secondary-link__border-radius);
+            .padding(@listing-item-actions-secondary-link__padding);
+            .lib-css(color, @listing-item-actions-secondary-link__color);
+            .lib-css(background, @listing-item-actions-secondary-link__background);
+            .lib-css(border, @listing-item-actions-secondary-link__border);
+            .lib-css(border-radius, @listing-item-actions-secondary-link__border-radius);
             &::before {
-                .lib-css(width, @listing-grid-item-actions-secondary-icon__width);
-                .lib-css(height, @listing-grid-item-actions-secondary-icon__height);
+                .lib-css(width, @listing-item-actions-secondary-icon__width);
+                .lib-css(height, @listing-item-actions-secondary-icon__height);
             }
             &:focus-visible {
                 z-index: 2;
@@ -337,7 +337,7 @@
                 --muted-alpha: .6;
             }
             &::before {
-                .lib-css(-webkit-mask-size, @listing-grid-item-actions-secondary-icon__size);
+                .lib-css(-webkit-mask-size, @listing-item-actions-secondary-icon__size);
             }
         }
     }
