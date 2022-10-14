@@ -50,6 +50,10 @@
     .product-options-wrapper {
         .action.back {
             &:extend(.breeze-button-reset all);
+            color: @base__color !important;
+            &:hover {
+                text-decoration: underline !important;
+            }
         }
         .field {
             &.option {
@@ -76,7 +80,7 @@
         .stock {
             display: none;
         }
-        .product-image-photo {
+        .product-image-container {
             margin-bottom: @3;
         }
         .product-details {
