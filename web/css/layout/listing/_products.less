@@ -45,11 +45,12 @@
     }
 
     .product-image-container {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
         max-width: 100%;
         aspect-ratio: var(--image-container-aspect-ratio, none);
+        width: var(--image-container-width, auto);
         overflow: hidden;
         .lib-css(border, @product-image__border);
         .lib-css(border-radius, @product-image__border-radius);
