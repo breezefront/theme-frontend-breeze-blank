@@ -50,36 +50,34 @@
 
 @listing-grid-item-actions__gap: @1;
 
-@listing-grid-item-actions-primary__position: static;
-@listing-grid-item-actions-primary__opacity: 0;
-@listing-grid-item-actions-primary__z-index: 5;
-@listing-grid-item-actions-primary__top: 33%;
-@listing-grid-item-actions-primary__left: 50%;
-@listing-grid-item-actions-primary__right: false;
-@listing-grid-item-actions-primary__transform: translateX(-50%) translateY(40%);
-@listing-grid-item-actions-primary__visible__transform: translateX(-50%);
+@listing-grid-item-actions-primary__position: static; // static|absolute
+@listing-grid-item-actions-primary__absolute__opacity: 0;
+@listing-grid-item-actions-primary__absolute__z-index: 5;
+@listing-grid-item-actions-primary__absolute__top: 33%;
+@listing-grid-item-actions-primary__absolute__left: 50%;
+@listing-grid-item-actions-primary__absolute__right: false;
+@listing-grid-item-actions-primary__absolute__transform: translateX(-50%) translateY(40%);
+@listing-grid-item-actions-primary__absolute__visible__transform: translateX(-50%);
+@listing-grid-item-tocart__absolute__text-color: false;
+@listing-grid-item-tocart__absolute__background-alpha: false;
+@listing-grid-item-tocart__absolute__background-color: false;
+@listing-grid-item-tocart__absolute__border-color: false;
+@listing-grid-item-tocart__absolute__hover__background-alpha: false;
+@listing-grid-item-tocart__absolute__box-shadow: false;
+@listing-grid-item-tocart__absolute__font-weight: false;
+@listing-grid-item-tocart__absolute__font-size: false;
+@listing-grid-item-tocart__absolute__letter-spacing: false;
+@listing-grid-item-tocart__absolute__text-transform: false;
 
-// Variables below are used when @listing-grid-item-actions-primary__position is absolute
-@listing-grid-item-tocart__text-color: false;
-@listing-grid-item-tocart__background-alpha: false;
-@listing-grid-item-tocart__background-color: false;
-@listing-grid-item-tocart__border-color: false;
-@listing-grid-item-tocart__hover__background-alpha: false;
-@listing-grid-item-tocart__box-shadow: false;
-@listing-grid-item-tocart__font-weight: false;
-@listing-grid-item-tocart__font-size: false;
-@listing-grid-item-tocart__letter-spacing: false;
-@listing-grid-item-tocart__text-transform: false;
-
-@listing-grid-item-actions-secondary__position: static;
-@listing-grid-item-actions-secondary__flex-direction: column; // for abs position only
-@listing-grid-item-actions-secondary__opacity: 0;
-@listing-grid-item-actions-secondary__z-index: @listing-grid-item-actions-primary__z-index;
-@listing-grid-item-actions-secondary__top: @1;
-@listing-grid-item-actions-secondary__left: false;
-@listing-grid-item-actions-secondary__right: @1;
-@listing-grid-item-actions-secondary__transform: false;
-@listing-grid-item-actions-secondary__visible__transform: false;
+@listing-grid-item-actions-secondary__position: static; // static|absolute
+@listing-grid-item-actions-secondary__absolute__flex-direction: column; // for abs position only
+@listing-grid-item-actions-secondary__absolute__opacity: 0;
+@listing-grid-item-actions-secondary__absolute__z-index: @listing-grid-item-actions-primary__absolute__z-index;
+@listing-grid-item-actions-secondary__absolute__top: @1;
+@listing-grid-item-actions-secondary__absolute__left: false;
+@listing-grid-item-actions-secondary__absolute__right: @1;
+@listing-grid-item-actions-secondary__absolute__transform: false;
+@listing-grid-item-actions-secondary__absolute__visible__transform: false;
 
 // ----------------------------------------------
 // Preset: static-card;

@@ -22,26 +22,26 @@
                 .actions-primary {
                     position: absolute;
                     pointer-events: none;
-                    .lib-css(z-index, @listing-grid-item-actions-primary__z-index);
-                    .lib-css(opacity, @listing-grid-item-actions-primary__opacity);
-                    .lib-css(transform, @listing-grid-item-actions-primary__transform);
-                    .lib-css(top, @listing-grid-item-actions-primary__top);
-                    .left(@listing-grid-item-actions-primary__left);
-                    .right(@listing-grid-item-actions-primary__right);
+                    .lib-css(z-index, @listing-grid-item-actions-primary__absolute__z-index);
+                    .lib-css(opacity, @listing-grid-item-actions-primary__absolute__opacity);
+                    .lib-css(transform, @listing-grid-item-actions-primary__absolute__transform);
+                    .lib-css(top, @listing-grid-item-actions-primary__absolute__top);
+                    .left(@listing-grid-item-actions-primary__absolute__left);
+                    .right(@listing-grid-item-actions-primary__absolute__right);
                     &:extend(.transition);
 
                     .tocart {
-                        .lib-css(--button-bg-alpha, @listing-grid-item-tocart__background-alpha);
-                        .lib-rgb(--button-color, @listing-grid-item-tocart__text-color);
-                        .lib-rgb(--button-bg, @listing-grid-item-tocart__background-color);
-                        .lib-rgb(--button-border-color, @listing-grid-item-tocart__border-color);
-                        .lib-css(box-shadow, @listing-grid-item-tocart__box-shadow);
-                        .lib-css(font-weight, @listing-grid-item-tocart__font-weight);
-                        .lib-css(font-size, @listing-grid-item-tocart__font-size);
-                        .lib-css(letter-spacing, @listing-grid-item-tocart__letter-spacing);
-                        .lib-css(text-transform, @listing-grid-item-tocart__text-transform);
+                        .lib-css(--button-bg-alpha, @listing-grid-item-tocart__absolute__background-alpha);
+                        .lib-rgb(--button-color, @listing-grid-item-tocart__absolute__text-color);
+                        .lib-rgb(--button-bg, @listing-grid-item-tocart__absolute__background-color);
+                        .lib-rgb(--button-border-color, @listing-grid-item-tocart__absolute__border-color);
+                        .lib-css(box-shadow, @listing-grid-item-tocart__absolute__box-shadow);
+                        .lib-css(font-weight, @listing-grid-item-tocart__absolute__font-weight);
+                        .lib-css(font-size, @listing-grid-item-tocart__absolute__font-size);
+                        .lib-css(letter-spacing, @listing-grid-item-tocart__absolute__letter-spacing);
+                        .lib-css(text-transform, @listing-grid-item-tocart__absolute__text-transform);
                         &:hover {
-                            .lib-css(--button-bg-alpha, @listing-grid-item-tocart__hover__background-alpha);
+                            .lib-css(--button-bg-alpha, @listing-grid-item-tocart__absolute__hover__background-alpha);
                         }
                     }
                     .stock {
@@ -58,7 +58,7 @@
                         .actions-primary {
                             opacity: 1;
                             pointer-events: all;
-                            .lib-css(transform, @listing-grid-item-actions-primary__visible__transform);
+                            .lib-css(transform, @listing-grid-item-actions-primary__absolute__visible__transform);
                         }
                     }
                 }
@@ -69,26 +69,26 @@
         & when (@listing-grid-item-actions-secondary__position = absolute) {
             .actions-secondary {
                 @media @media-hover {
-                    .lib-css(opacity, @listing-grid-item-actions-secondary__opacity);
-                    .lib-css(transform, @listing-grid-item-actions-secondary__transform);
+                    .lib-css(opacity, @listing-grid-item-actions-secondary__absolute__opacity);
+                    .lib-css(transform, @listing-grid-item-actions-secondary__absolute__transform);
                 }
                 @media @media-hover-none {
-                    .lib-css(transform, @listing-grid-item-actions-secondary__visible__transform);
+                    .lib-css(transform, @listing-grid-item-actions-secondary__absolute__visible__transform);
                 }
 
                 position: absolute;
-                .lib-css(z-index, @listing-grid-item-actions-secondary__z-index);
-                .lib-css(top, @listing-grid-item-actions-secondary__top);
-                .lib-css(flex-direction, @listing-grid-item-actions-secondary__flex-direction);
-                .right(@listing-grid-item-actions-secondary__right);
-                .left(@listing-grid-item-actions-secondary__left);
+                .lib-css(z-index, @listing-grid-item-actions-secondary__absolute__z-index);
+                .lib-css(top, @listing-grid-item-actions-secondary__absolute__top);
+                .lib-css(flex-direction, @listing-grid-item-actions-secondary__absolute__flex-direction);
+                .right(@listing-grid-item-actions-secondary__absolute__right);
+                .left(@listing-grid-item-actions-secondary__absolute__left);
                 &:extend(.transition);
             }
             &:hover,
             &:focus-within {
                 .actions-secondary {
                     opacity: 1;
-                    .lib-css(transform, @listing-grid-item-actions-secondary__visible__transform);
+                    .lib-css(transform, @listing-grid-item-actions-secondary__absolute__visible__transform);
                 }
             }
         }
