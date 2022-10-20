@@ -265,7 +265,7 @@
                     z-index: 5;
                     top: 0;
                     margin: 0;
-                    max-width: @36;
+                    max-width: @layered-sidebar-title__md-down__max-width;
                     white-space: nowrap;
                     overflow: hidden;
                 }
@@ -304,7 +304,7 @@
         .toolbar {
             @media @media-md-down {
                 .modes {
-                    .margin-left(@36); // make some space for toggler
+                    .margin-left(@layered-toolbar-modes__md-down__margin-left); // make some space for toggler
                 }
             }
             @media @media-sm-down {
@@ -314,7 +314,7 @@
             }
             @media @media-xs-down {
                 .sorter {
-                    width: ~"calc(100% - @{36})";
+                    width: ~"calc(100% - @{layered-sidebar-title__md-down__max-width})";
                 }
                 .modes {
                     display: none;
