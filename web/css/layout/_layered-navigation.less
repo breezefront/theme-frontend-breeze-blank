@@ -96,13 +96,14 @@
             }
             &-options {
                 &-item {
-                    margin-bottom: @1;
+                    .lib-css(margin-bottom, @layered-item__margin-bottom);
                     &:last-child {
                         margin-bottom: 0;
                     }
                 }
                 &-title {
-                    font-weight: 500;
+                    .lib-css(font-size, @layered-item-title__font-size);
+                    .lib-css(font-weight, @layered-item-title__font-weight);
                     padding: @1 0;
                     :first-child {
                         .margin-right(auto);
@@ -340,7 +341,7 @@
                 }
             }
             .filter-content {
-                padding: @12 @6;
+                .lib-css(padding, @layered-slideout__padding);
             }
         }
     }
