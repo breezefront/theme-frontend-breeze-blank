@@ -221,14 +221,14 @@
 
     @media @media-md {
         .product.info {
-            .review-add + .review-list,
+            .review-add + .review-list, // reviews page
             #product-review-container {
-                .float(right);
-                width: 55%;
+                .float(@product-review-list__float);
+                .lib-css(width, @product-review-list__width);
             }
             .review-add {
-                .float(left);
-                width: 42%;
+                .float(@product-review-form__float);
+                .lib-css(width, @product-review-form__width);
             }
         }
     }
