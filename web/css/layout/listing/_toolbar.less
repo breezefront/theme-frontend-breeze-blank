@@ -30,6 +30,7 @@
         }
 
         label,
+        .modes-label,
         .toolbar-amount,
         .limiter-text {
             .lib-css(color, @toolbar__color);
@@ -111,7 +112,12 @@
                 a,
                 .page {
                     display: flex;
-                    padding: @1 @2;
+                    align-items: center;
+                    justify-content: center;
+                    .lib-css(padding, @toolbar-pages-item__padding);
+                    .lib-css(width, @toolbar-pages-item__width);
+                    .lib-css(height, @toolbar-pages-item__height);
+                    .lib-css(font-weight, @toolbar-pages-item__font-weight);
                 }
 
                 .current .page {
