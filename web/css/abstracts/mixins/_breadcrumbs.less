@@ -3,6 +3,14 @@
         display: flex;
         flex-wrap: wrap;
         gap: @2;
+
+        @media @media-md-down {
+            & when not (@breadcrumbs__wrap = true) {
+                flex-wrap: nowrap;
+                white-space: nowrap;
+                overflow: auto;
+            }
+        }
     }
 }
 
