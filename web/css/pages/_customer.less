@@ -17,6 +17,10 @@
         .actions-toolbar {
             .lib-css(margin, @login-container-actions__margin);
         }
+        > .block {
+            padding: @login-container-block__padding;
+            .lib-css(background, @login-container-block__background);
+        }
     }
 
     @media @media-md {
@@ -26,7 +30,6 @@
             flex-direction: @login-container__flex-direction;
 
             > .block {
-                padding: 0;
                 flex-grow: 1;
                 flex-basis: 0;
                 margin: 0 !important;
