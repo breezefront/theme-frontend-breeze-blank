@@ -14,8 +14,10 @@
     .tooltip.wrapper {
         position: relative;
         .tooltip.content {
-            .right(auto);
-            .left(0);
+            @media @media-xs {
+                .right(auto);
+                .left(0);
+            }
             top: 100%;
         }
     }
