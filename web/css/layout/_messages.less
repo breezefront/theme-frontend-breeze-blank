@@ -1,4 +1,32 @@
 & when (@critical) {
+    & when (@message__sticky) {
+        .page-main > .page.messages {
+            z-index: 810;
+            position: fixed;
+            top: @4;
+            left: 0;
+            right: 0;
+            pointer-events: none;
+
+            .messages {
+                &:extend(.container all);
+            }
+
+            .message {
+                &:extend(.transition);
+                transform: translateY(-50px);
+                opacity: 0;
+
+                // See messages.js in breeze-module
+                &.shown {
+                    opacity: 1;
+                    transform: translateY(0);
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+
     .message {
         display: flex;
         align-items: flex-start;
@@ -15,9 +43,13 @@
         .lib-css(border-width, @message__border-width);
         .lib-css(box-shadow, @message__box-shadow);
 
+        > div {
+            .margin-right(auto);
+        }
+
         & when (@message__text-align = center) {
             > div {
-                margin: 0 auto;
+                .margin-left(auto);
             }
         }
 
@@ -56,6 +88,10 @@
             &:hover {
                 text-decoration: none !important;
             }
+        }
+
+        > .button-close::before {
+            -webkit-mask-size: @4 @4;
         }
 
         &.success {
