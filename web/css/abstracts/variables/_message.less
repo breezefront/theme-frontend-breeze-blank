@@ -18,15 +18,20 @@
 @message__border-width: false;
 @message__border-radius: false;
 @message__box-shadow: false;
+@message__background: ~"rgb(var(--message-bg))";
+@message__color: ~"rgb(var(--message-color))";
+@message__border-color: ~"rgb(var(--message-border-color, var(--message-color)), var(--message-border-alpha, .1))";
 
-@message-success__color: @success__color;
-@message-success__background: ~"rgba(var(--success-color), var(--message-bg-alpha, .05))";
-@message-success__background-alpha: .05;
+@message-link__color: ~"rgb(var(--message-color)) !important";
 
-@message-info__color: @info__color;
-@message-info__background: ~"rgba(var(--info-color), var(--message-bg-alpha, .05))";
-@message-info__background-alpha: .05;
+@message-success__text-color: @success__text-color;
+@message-success__background-color: @success__background-color;
+@message-success__border-color: false;
 
-@message-error__color: @danger__color;
-@message-error__background: ~"rgba(var(--danger-color), var(--message-bg-alpha, .05))";
-@message-error__background-alpha: .05;
+@message-info__text-color: @info__text-color;
+@message-info__background-color: @info__background-color;
+@message-info__border-color: false;
+
+@message-error__text-color: @danger__text-color;
+@message-error__background-color: @danger__background-color;
+@message-error__border-color: false;

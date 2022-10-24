@@ -13,16 +13,18 @@
 
 @product-stock-wrapper__justify-content: false;
 @product-stock__padding: @0-5 @2;
-@product-stock__background: @message-info__background;
-@product-stock__color: @message-info__color;
+@product-stock__background-color: @info__background-color;
+@product-stock__background: ~"rgb(var(--stock-bg))";
+@product-stock__text-color: @info__text-color;
+@product-stock__color: ~"rgb(var(--stock-color))";
 @product-stock__font-family: false;
 @product-stock__font-weight: false;
 @product-stock__font-size: false;
 @product-stock__text-transform: false;
-@product-stock-available__background: @message-success__background;
-@product-stock-available__color: @message-success__color;
-@product-stock-unavailable__background: @message-error__background;
-@product-stock-unavailable__color: @message-error__color;
+@product-stock-available__background-color: @message-success__background-color;
+@product-stock-available__text-color: @message-success__text-color;
+@product-stock-unavailable__background-color: @message-error__background-color;
+@product-stock-unavailable__text-color: @message-error__text-color;
 
 @product-sku__color: false;
 @product-sku__font-family: @product-stock__font-family;

@@ -5,7 +5,7 @@
         gap: @1;
         padding: @3 @4;
         margin-bottom: @3;
-        border: 1px solid var(--message-border-color);
+        border: 1px solid transparent;
 
         .lib-css(font-family, @message__font-family);
         .lib-css(font-size, @message__font-size);
@@ -47,21 +47,21 @@
 
 & when not (@critical) {
     .message {
-        background: var(--message-bg);
-        color: var(--message-color);
+        .lib-css(background, @message__background);
+        .lib-css(color, @message__color);
+        .lib-css(border-color, @message__border-color);
 
         a {
-            color: var(--message-color) !important;
+            .lib-css(color, @message-link__color);
             &:hover {
                 text-decoration: none !important;
             }
         }
 
         &.success {
-            --message-border-color: @message-success__background;
-            --message-bg: @message-success__background;
-            --message-bg-alpha: @message-success__background-alpha;
-            --message-color: @message-success__color;
+            .lib-rgb(--message-bg, @message-success__background-color);
+            .lib-rgb(--message-color, @message-success__text-color);
+            .lib-rgb(--message-border-color, @message-success__border-color);
             &::before {
                 .breeze-icon(@icon-s-check, @5);
             }
@@ -69,19 +69,17 @@
         &.info,
         &.warning,
         &.notice {
-            --message-border-color: @message-info__background;
-            --message-bg: @message-info__background;
-            --message-bg-alpha: @message-info__background-alpha;
-            --message-color: @message-info__color;
+            .lib-rgb(--message-bg, @message-info__background-color);
+            .lib-rgb(--message-color, @message-info__text-color);
+            .lib-rgb(--message-border-color, @message-info__border-color);
             &::before {
                 .breeze-icon(@icon-s-information-circle, @5)
             }
         }
         &.error {
-            --message-border-color: @message-error__background;
-            --message-bg: @message-error__background;
-            --message-bg-alpha: @message-error__background-alpha;
-            --message-color: @message-error__color;
+            .lib-rgb(--message-bg, @message-error__background-color);
+            .lib-rgb(--message-color, @message-error__text-color);
+            .lib-rgb(--message-border-color, @message-error__border-color);
             &::before {
                 .breeze-icon(@icon-s-exclamation-circle, @5)
             }
