@@ -26,8 +26,13 @@
                     .lib-css(opacity, @listing-grid-item-actions-primary__absolute__opacity);
                     .lib-css(transform, @listing-grid-item-actions-primary__absolute__transform);
                     .lib-css(top, @listing-grid-item-actions-primary__absolute__top);
-                    .left(@listing-grid-item-actions-primary__absolute__left);
-                    .right(@listing-grid-item-actions-primary__absolute__right);
+                    & when (@listing-grid-item-actions-primary__absolute__centered-x) {
+                        left: 50%;
+                    }
+                    & when not (@listing-grid-item-actions-primary__absolute__centered-x) {
+                        .left(@listing-grid-item-actions-primary__absolute__left);
+                        .right(@listing-grid-item-actions-primary__absolute__right);
+                    }
                     &:extend(.transition);
 
                     .tocart {
