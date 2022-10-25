@@ -1,26 +1,29 @@
 & when (@critical) {
-    & when (@message__sticky) {
-        .page-main > .page.messages {
-            z-index: 810;
+    & when (@message__position = fixed) {
+        .breeze.breeze-theme .page-main > .page.messages {
             position: fixed;
-            top: @4;
-            left: 0;
-            right: 0;
+            .lib-css(z-index, @message__fixed__z-index);
+            .lib-css(top, @message__fixed__top);
+            .lib-css(left, @message__fixed__left);
+            .lib-css(right, @message__fixed__right);
+            .lib-css(bottom, @message__fixed__bottom);
             pointer-events: none;
 
-            .messages {
-                &:extend(.container all);
+            & when (@message__fixed__container) {
+                .messages {
+                    &:extend(.container all);
+                }
             }
 
             .message {
                 &:extend(.transition);
-                transform: translateY(-50px);
+                .lib-css(transform, @message__fixed__transform);
                 opacity: 0;
 
                 // See messages.js in breeze-module
                 &.shown {
                     opacity: 1;
-                    transform: translateY(0);
+                    .lib-css(transform, @message__fixed__shown__transform);
                     pointer-events: all;
                 }
             }

@@ -10,8 +10,6 @@
 @global-cookie-message__border-radius: false;
 @global-cookie-message__box-shadow: false;
 
-@message__sticky: false;
-
 @message__font-family: false;
 @message__font-size: false;
 @message__font-weight: false;
@@ -23,6 +21,16 @@
 @message__background: ~"rgb(var(--message-bg))";
 @message__color: ~"rgb(var(--message-color))";
 @message__border-color: ~"rgb(var(--message-border-color, var(--message-color)), var(--message-border-alpha, .1))";
+
+@message__position: static; // static|fixed
+@message__fixed__container: true;
+@message__fixed__z-index: 810;
+@message__fixed__top: @4;
+@message__fixed__bottom: false;
+@message__fixed__left: 0;
+@message__fixed__right: 0;
+@message__fixed__transform: translateY(-50px);
+@message__fixed__shown__transform: translateY(0);
 
 @message-link__color: ~"rgb(var(--message-color)) !important";
 
