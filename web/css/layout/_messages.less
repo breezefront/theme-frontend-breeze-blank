@@ -16,16 +16,7 @@
             }
 
             .message {
-                &:extend(.transition);
-                .lib-css(transform, @message__fixed__transform);
                 opacity: 0;
-
-                // See messages.js in breeze-module
-                &.shown {
-                    opacity: 1;
-                    .lib-css(transform, @message__fixed__shown__transform);
-                    pointer-events: all;
-                }
             }
         }
     }
@@ -121,6 +112,64 @@
             .lib-rgb(--message-border-color, @message-error__border-color);
             &::before {
                 .breeze-icon(@icon-s-exclamation-circle, @5)
+            }
+        }
+    }
+
+    & when (@message__position = fixed) {
+        .breeze.breeze-theme .page-main > .page.messages {
+            .message {
+                &:extend(.transition);
+                .lib-css(transform, @message__fixed__hidden__transform);
+                position: relative;
+
+                // See messages.js in breeze-module
+                &.shown {
+                    opacity: 1;
+                    .lib-css(transform, @message__fixed__visible__transform);
+                    pointer-events: all;
+                    & when not (@message-hide__delay = false) {
+                        animation: .3s ease-in-out @message-hide__delay forwards message-hide;
+                    }
+                }
+
+                & when not (@message-hide__delay = false) {
+                    .button-close::after {
+                        content: '';
+                        position: absolute;
+                        .right(-@1-5);
+                        bottom: 0;
+                        width: 3px;
+                        height: 100%;
+                        opacity: 0;
+                        background-color: currentColor;
+                        .lib-css(border-radius, @message-hide-progress__border-radius);
+                        animation: @message-hide-progress__duration linear @message-hide-progress__delay forwards message-progress;
+                    }
+                    &:hover,
+                    &:hover .button-close::after {
+                        animation-play-state: paused;
+                    }
+                }
+            }
+        }
+
+        & when not (@message-hide__delay = false) {
+            @keyframes message-hide {
+                100% {
+                    .lib-css(transform, @message__fixed__hidden__transform);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            @keyframes message-progress {
+                0% {
+                    opacity: .5;
+                }
+                100% {
+                    height: 0;
+                    opacity: 0.1;
+                }
             }
         }
     }

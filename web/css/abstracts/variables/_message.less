@@ -29,8 +29,13 @@
 @message__fixed__bottom: false;
 @message__fixed__left: 0;
 @message__fixed__right: 0;
-@message__fixed__transform: translateY(-50px);
-@message__fixed__shown__transform: translateY(0);
+@message__fixed__hidden__transform: translateY(-50px);
+@message__fixed__visible__transform: translateY(0);
+
+@message-hide__delay: 5s;
+@message-hide-progress__delay: 1.5s;
+@message-hide-progress__duration: @message-hide__delay - @message-hide-progress__delay;
+@message-hide-progress__border-radius: false;
 
 @message-link__color: ~"rgb(var(--message-color)) !important";
 
