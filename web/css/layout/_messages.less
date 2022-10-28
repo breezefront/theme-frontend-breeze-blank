@@ -128,12 +128,12 @@
                     opacity: 1;
                     .lib-css(transform, @message__fixed__visible__transform);
                     pointer-events: all;
-                    & when not (@message-hide__delay = false) {
-                        animation: .3s ease-in-out @message-hide__delay forwards message-hide;
+                    & when not (@message__fixed__hide-delay = false) {
+                        animation: .3s ease-in-out @message__fixed__hide-delay forwards message-hide;
                     }
                 }
 
-                & when not (@message-hide__delay = false) {
+                & when not (@message__fixed__hide-delay = false) {
                     .button-close::after {
                         content: '';
                         position: absolute;
@@ -143,8 +143,8 @@
                         height: 100%;
                         opacity: 0;
                         background-color: currentColor;
-                        .lib-css(border-radius, @message-hide-progress__border-radius);
-                        animation: @message-hide-progress__duration linear @message-hide-progress__delay forwards message-progress;
+                        .lib-css(border-radius, @message__fixed__hide-progress__border-radius);
+                        animation: @message__fixed__hide-progress__duration linear @message__fixed__hide-progress__delay forwards message-progress;
                     }
                     &:hover,
                     &:hover .button-close::after {
@@ -154,7 +154,7 @@
             }
         }
 
-        & when not (@message-hide__delay = false) {
+        & when not (@message__fixed__hide-delay = false) {
             @keyframes message-hide {
                 100% {
                     .lib-css(transform, @message__fixed__hidden__transform);

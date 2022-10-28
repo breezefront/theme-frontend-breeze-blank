@@ -31,11 +31,10 @@
 @message__fixed__right: 0;
 @message__fixed__hidden__transform: translateY(-50px);
 @message__fixed__visible__transform: translateY(0);
-
-@message-hide__delay: 5s;
-@message-hide-progress__delay: 1.5s;
-@message-hide-progress__duration: @message-hide__delay - @message-hide-progress__delay;
-@message-hide-progress__border-radius: false;
+@message__fixed__hide-delay: 5s; // 5s|false
+@message__fixed__hide-progress__delay: 1.5s;
+@message__fixed__hide-progress__duration: @message__fixed__hide-delay - @message__fixed__hide-progress__delay;
+@message__fixed__hide-progress__border-radius: false;
 
 @message-link__color: ~"rgb(var(--message-color)) !important";
 
