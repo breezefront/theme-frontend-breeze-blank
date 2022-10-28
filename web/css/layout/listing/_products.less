@@ -199,7 +199,7 @@
 
                 @media @media-hover {
                     &:hover,
-                    &:focus-within {
+                    &:has(:focus-visible) {
                         z-index: 10;
                         overflow: visible;
                         .lib-css(--listing-grid-item-margin, @listing-grid-item__hover__margin);
@@ -226,14 +226,14 @@
                         a {
                             outline: none;
                         }
-                        &:focus-within {
+                        &:has(:focus-visible) {
                             .breeze-focus-ring();
                         }
                     }
                 }
 
                 .product-item:hover,
-                .product-item:focus-within {
+                .product-item:has(:focus-visible) {
                     .product-item-info {
                         z-index: 10;
                         .lib-css(box-shadow, @listing-grid-item__hover__box-shadow);

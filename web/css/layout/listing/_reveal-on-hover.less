@@ -58,7 +58,7 @@
             }
             @media @media-hover {
                 &:hover,
-                &:focus-within {
+                &:has(:focus-visible) {
                     .product-item-details {
                         .actions-primary {
                             opacity: 1;
@@ -90,7 +90,7 @@
                 &:extend(.transition);
             }
             &:hover,
-            &:focus-within {
+            &:has(:focus-visible) {
                 .actions-secondary {
                     opacity: 1;
                     .lib-css(transform, @listing-grid-item-actions-secondary__absolute__visible__transform);
@@ -119,7 +119,7 @@
             }
             @media @media-hover {
                 &:hover,
-                &:focus-within {
+                &:has(:focus-visible) {
                     [class^="swatch-opt-"] {
                         pointer-events: all;
                         opacity: 1;

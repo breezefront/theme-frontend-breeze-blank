@@ -33,12 +33,12 @@
 
         @media @media-hover {
             &:hover::after,
-            &:focus-within::after {
+            &:has(:focus-visible)::after {
                 opacity: 0;
             }
 
             &:hover,
-            &:focus-within {
+            &:has(:focus-visible) {
                 .price-box ~ * {
                     opacity: 1;
                     pointer-events: all;
