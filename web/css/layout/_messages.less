@@ -1,6 +1,6 @@
 & when (@critical) {
     & when (@message__position = fixed) {
-        .breeze.breeze-theme .page-main > .page.messages {
+        .breeze.breeze-theme #maincontent > .page.messages {
             position: fixed;
             .lib-css(z-index, @message__fixed__z-index);
             .lib-css(top, @message__fixed__top);
@@ -117,7 +117,7 @@
     }
 
     & when (@message__position = fixed) {
-        .breeze.breeze-theme .page-main > .page.messages {
+        .breeze.breeze-theme #maincontent > .page.messages {
             .message {
                 &:extend(.transition);
                 .lib-css(transform, @message__fixed__hidden__transform);
