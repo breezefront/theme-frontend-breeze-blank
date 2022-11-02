@@ -285,7 +285,7 @@
 & when not (@critical) {
     .slick-next::before,
     .slick-prev::before {
-        .breeze-icon(@icon-chevron);
+        .breeze-icon(@slider-arrow-icon__mask, @slider-arrow-icon__width, @slider-arrow-icon__height);
     }
     .slick-prev::before {
         .modrtl(transform, scaleX(-1), false);
