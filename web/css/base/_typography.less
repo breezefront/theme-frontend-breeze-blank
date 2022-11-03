@@ -100,7 +100,7 @@
     }
 
     ul.disc {
-        &:extend(.breeze-prose ul all);
+        &:extend(.breeze-prose :where(ul:not(.unstyled)) all);
     }
 
     dl {
