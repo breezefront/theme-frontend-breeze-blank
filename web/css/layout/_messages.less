@@ -130,6 +130,7 @@
                     pointer-events: all;
                     & when not (@message__fixed__hide-delay = false) {
                         animation: .3s ease-in-out @message__fixed__hide-delay forwards message-hide;
+                        -moz-animation: @message__fixed__hide-delay ease-in-out forwards moz-message-hide;
                     }
                 }
 
@@ -156,6 +157,21 @@
 
         & when not (@message__fixed__hide-delay = false) {
             @keyframes message-hide {
+                100% {
+                    .lib-css(transform, @message__fixed__hidden__transform);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            @keyframes moz-message-hide {
+                0% {
+                    .lib-css(transform, @message__fixed__visible__transform);
+                }
+                93% {
+                    .lib-css(transform, @message__fixed__visible__transform);
+                    opacity: 1;
+                    visibility: visible;
+                }
                 100% {
                     .lib-css(transform, @message__fixed__hidden__transform);
                     opacity: 0;
