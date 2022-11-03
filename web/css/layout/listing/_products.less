@@ -198,7 +198,12 @@
                 width: ~"calc((100% - var(--listing-grid-item-margin) * var(--listing-grid-columns) * 2 - var(--listing-grid-gap) * (var(--listing-grid-columns) - 1)) / var(--listing-grid-columns))";
 
                 @media @media-hover {
-                    &:hover,
+                    &:hover {
+                        z-index: 10;
+                        overflow: visible;
+                        .lib-css(--listing-grid-item-margin, @listing-grid-item__hover__margin);
+                        .lib-css(--listing-grid-item-padding, @listing-grid-item__hover__padding);
+                    }
                     &:has(:focus-visible) {
                         z-index: 10;
                         overflow: visible;
@@ -232,7 +237,13 @@
                     }
                 }
 
-                .product-item:hover,
+                .product-item:hover {
+                    .product-item-info {
+                        z-index: 10;
+                        .lib-css(box-shadow, @listing-grid-item__hover__box-shadow);
+                        .lib-css(background, @listing-grid-item__hover__background);
+                    }
+                }
                 .product-item:has(:focus-visible) {
                     .product-item-info {
                         z-index: 10;

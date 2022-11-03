@@ -32,12 +32,25 @@
         }
 
         @media @media-hover {
-            &:hover::after,
+            &:hover::after {
+                opacity: 0;
+            }
             &:has(:focus-visible)::after {
                 opacity: 0;
             }
 
-            &:hover,
+            &:hover {
+                .price-box ~ * {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+
+                & when not (@listing-grid-item-name__line-clamp = false) {
+                    .product-item-name {
+                        .lib-css(-webkit-line-clamp, @listing-grid-item-name__hover__line-clamp);
+                    }
+                }
+            }
             &:has(:focus-visible) {
                 .price-box ~ * {
                     opacity: 1;
