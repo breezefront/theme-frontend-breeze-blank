@@ -10,6 +10,9 @@
 @screen__l: @lg;
 @screen__xl: @xl;
 
+@font-family__base: @base__font-family;
+@font-weight__semibold: 500;
+
 @indent__base: @4;
 @indent__xl: @indent__base * 2;
 @indent__l: @indent__base * 1.5;
@@ -33,6 +36,12 @@
 
 .lib-visually-hidden() {
     .breeze-sr-only();
+}
+.lib-font-size(@_size) {
+    font-size: @_size;
+}
+.lib-vendor-prefix-display(@_value: flex) {
+    display: @_value;
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {}
