@@ -45,6 +45,62 @@
         }
     }
 
+    .credit-card-types {
+        display: flex;
+        gap: @1-5;
+        img {
+            max-width: 30px;
+            filter: grayscale(100%)
+        }
+        ._active {
+            img {
+                filter: grayscale(0%);
+            }
+        }
+        &._inactive {
+            opacity: .4;
+        }
+    }
+
+    .ccard {
+        .legend {
+            display: none;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        .month .select {
+            width: 140px;
+        }
+
+        .year .select {
+            width: 90px;
+        }
+
+        .captcha,
+        .number {
+            .input-text {
+                width: 225px;
+            }
+        }
+
+        > .field.cvv > .control {
+            display: inline-block;
+        }
+
+        .cvv {
+            .input-text {
+                width: 80px;
+            }
+        }
+    }
+
     .field-select-billing {
         margin-bottom: @4;
     }
