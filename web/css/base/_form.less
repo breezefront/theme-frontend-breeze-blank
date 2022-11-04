@@ -103,6 +103,9 @@ button,
     .fields {
         display: flex;
         gap: @2;
+        .field + .field {
+            margin-top: 0;
+        }
     }
     .nested > .field,
     button + .field,
