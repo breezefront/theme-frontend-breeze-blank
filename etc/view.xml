@@ -5,32 +5,16 @@
         <images module="Magento_Catalog">
             <!-- Product grid listing -->
             <image id="category_page_grid" type="small_image">
-                <width>300</width>
-                <height>375</height>
+                <width>220</width>
+                <height>275</height>
             </image>
             <image id="category_page_grid-srcset-1" type="small_image">
-                <width>230</width>
-                <height>287</height>
+                <width>350</width>
+                <height>436</height>
             </image>
             <image id="category_page_grid-srcset-2" type="small_image">
-                <width>260</width>
-                <height>325</height>
-            </image>
-            <image id="category_page_grid-srcset-3" type="small_image">
-                <width>330</width>
-                <height>412</height>
-            </image>
-            <image id="category_page_grid-srcset-4" type="small_image">
-                <width>380</width>
-                <height>475</height>
-            </image>
-            <image id="category_page_grid-srcset-5" type="small_image">
-                <width>460</width>
-                <height>575</height>
-            </image>
-            <image id="category_page_grid-srcset-6" type="small_image">
-                <width>600</width>
-                <height>750</height>
+                <width>440</width>
+                <height>550</height>
             </image>
 
             <!-- Product list listing -->
@@ -287,11 +271,11 @@
         <var name="responsive_images">1</var>
         <var name="sizes">
             <var name="category_page_grid"><![CDATA[
-                (min-width: 1536px) 300px,
-                (min-width: 1024px) 230px,
-                (min-width: 768px) 165px,
-                (min-width: 640px) 190px,
-                calc(50vw - 2rem)
+                (min-width: 1200px) 220px,
+                (min-width: 1024px) calc((100vw - 220px - 6rem) / 4),
+                (min-width: 768px) calc((100vw - 180px - 4rem) / 3),
+                (min-width: 640px) calc((100vw - 3rem) / 3),
+                calc((100vw - 2rem) / 2)
             ]]></var>
             <var name="category_page_grid-1column"><![CDATA[
                 (min-width: 1536px) 285px,
