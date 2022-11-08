@@ -63,16 +63,26 @@
                 <height>110</height>
             </image>
 
-            <!-- These lists use category_page_grid fallback. Not need to declare srcset for them -->
-            <image id="related_products_list" type="small_image">
-                <width>236</width>
-                <height>296</height>
+            <!-- These lists use category_page_list fallback. Not need to declare srcset for them -->
+            <image id="recently_viewed_products_list_content_widget" type="small_image">
+                <width>540</width>
+                <height>677</height>
             </image>
+            <image id="recently_compared_products_list_content_widget" type="small_image">
+                <width>540</width>
+                <height>677</height>
+            </image>
+
+            <!-- These lists use category_page_grid fallback. Not need to declare srcset for them -->
             <image id="recently_viewed_products_grid_content_widget" type="small_image">
                 <width>472</width>
                 <height>592</height>
             </image>
             <image id="recently_compared_products_grid_content_widget" type="small_image">
+                <width>472</width>
+                <height>592</height>
+            </image>
+            <image id="related_products_list" type="small_image">
                 <width>236</width>
                 <height>296</height>
             </image>
@@ -167,10 +177,6 @@
                 <width>270</width>
                 <height>270</height>
             </image>
-            <image id="recently_viewed_products_list_content_widget" type="small_image">
-                <width>270</width>
-                <height>270</height>
-            </image>
 
             <image id="product_page_main_image" type="image">
                 <width>700</width>
@@ -229,11 +235,6 @@
             <image id="wishlist_sidebar_block" type="thumbnail">
                 <width>156</width>
                 <height>156</height>
-            </image>
-
-            <image id="recently_compared_products_list_content_widget" type="small_image">
-                <width>270</width>
-                <height>207</height>
             </image>
         </images>
     </media>
