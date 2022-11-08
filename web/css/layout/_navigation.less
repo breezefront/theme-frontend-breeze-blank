@@ -277,13 +277,18 @@
 
             .submenu {
                 width: @52;
-                top: 100%;
-                .left(0);
+                top: -9999px;
+                .left(-9999px);
                 .right(auto);
                 .lib-css(border, @navigation-dropdown__border);
                 .lib-css(border-color, @navigation-dropdown__border-color);
 
-                .submenu {
+                &.shown {
+                    top: 100%;
+                    .left(0);
+                }
+
+                .submenu.shown {
                     top: -@0-5 !important;
                     .left(~"calc(100% - @{4}) !important");
                 }
