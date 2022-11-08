@@ -133,10 +133,10 @@
                 <height>280</height>
             </image>
 
-            <image id="customer_account_my_tags_tag_view" type="small_image">
+            <!-- <image id="customer_account_my_tags_tag_view" type="small_image">
                 <width>100</width>
                 <height>100</height>
-            </image>
+            </image> -->
             <image id="gift_messages_checkout_thumbnail" type="thumbnail">
                 <width>100</width>
                 <height>100</height>
@@ -149,15 +149,15 @@
                 <width>100</width>
                 <height>100</height>
             </image>
-            <image id="product_page_more_views" type="thumbnail">
+            <!-- <image id="product_page_more_views" type="thumbnail">
                 <width>100</width>
                 <height>100</height>
-            </image>
+            </image> -->
 
-            <image id="shared_wishlist_email" type="small_image">
+            <!-- <image id="shared_wishlist_email" type="small_image">
                 <width>135</width>
                 <height>135</height>
-            </image>
+            </image> -->
 
             <image id="mini_cart_product_thumbnail" type="thumbnail">
                 <width>156</width>
@@ -169,32 +169,32 @@
                 <height>270</height>
             </image>
 
-            <image id="review_page_product_image" type="small_image">
+            <!-- <image id="review_page_product_image" type="small_image">
                 <width>270</width>
                 <height>270</height>
-            </image>
+            </image> -->
             <image id="new_products_content_widget_list" type="small_image">
                 <width>270</width>
                 <height>270</height>
             </image>
 
-            <image id="product_page_main_image" type="image">
+            <!-- <image id="product_page_main_image" type="image">
                 <width>700</width>
                 <height>700</height>
-            </image>
-            <image id="product_page_main_image_default" type="image">
+            </image> -->
+            <!-- <image id="product_page_main_image_default" type="image">
                 <width>700</width>
                 <height>700</height>
-            </image>
+            </image> -->
 
-            <image id="gift_messages_checkout_small_image" type="small_image">
+            <!-- <image id="gift_messages_checkout_small_image" type="small_image">
                 <width>75</width>
                 <height>75</height>
-            </image>
-            <image id="product_stock_alert_email_product_image" type="small_image">
+            </image> -->
+            <!-- <image id="product_stock_alert_email_product_image" type="small_image">
                 <width>75</width>
                 <height>75</height>
-            </image>
+            </image> -->
             <image id="recently_viewed_products_images_only_widget" type="small_image">
                 <width>75</width>
                 <height>75</height>
