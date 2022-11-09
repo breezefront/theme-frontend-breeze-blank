@@ -256,14 +256,14 @@
         <var name="responsive_images">1</var>
         <var name="sizes">
             <var name="category_page_grid"><![CDATA[
-                (min-width: 1280px) 235px,
+                (min-width: 1280px) 236px,
                 (min-width: 1024px) calc((100vw - 220px - 6rem) / 4),
                 (min-width: 768px) calc((100vw - 180px - 4rem) / 3),
                 (min-width: 640px) calc((100vw - 3rem) / 3),
                 calc((100vw - 2rem) / 2)
             ]]></var>
             <var name="category_page_grid-1column"><![CDATA[
-                (min-width: 1200px) 220px,
+                (min-width: 1280px) 236px,
                 (min-width: 1024px) calc((100vw - 5rem) / 5),
                 (min-width: 768px) calc((100vw - 4rem) / 4),
                 (min-width: 640px) calc((100vw - 3rem) / 3),
@@ -271,26 +271,36 @@
             ]]></var>
             <var name="category_page_grid-cms-full-width">use:category_page_grid-1column</var>
             <var name="category_page_grid-3columns"><![CDATA[
-                (min-width: 1200px) 220px,
+                (min-width: 1280px) 236px,
                 (min-width: 1024px) calc((100vw - 440px - 7rem) / 3),
                 (min-width: 768px) calc((100vw - 180px - 4rem) / 3),
                 (min-width: 640px) calc((100vw - 3rem) / 3),
                 calc((100vw - 2rem) / 2)
             ]]></var>
             <var name="category_page_list"><![CDATA[
-                (min-width: 1200px) 260px,
+                (min-width: 1280px) 270px,
                 (min-width: 1024px) calc((100vw - 220px - 3.75rem) * 0.28),
                 (min-width: 768px) calc((100vw - 180px - 2.75rem) * 0.28),
                 calc((100vw - 1.75rem) * 0.28)
             ]]></var>
+            <var name="category_page_list-1column"><![CDATA[
+                (min-width: 1024px) 270px,
+                calc((100vw - 1.75rem) * 0.28)
+            ]]></var>
+            <var name="category_page_list-3columns"><![CDATA[
+                (min-width: 1280px) 207px,
+                (min-width: 1024px) calc((100vw - 440px - 5.75rem) * 0.28),
+                (min-width: 768px) calc((100vw - 180px - 2.75rem) * 0.28),
+                calc((100vw - 1.75rem) * 0.28)
+            ]]></var>
             <var name="product_page_image_medium"><![CDATA[
-                (min-width: 1260px) 614px,
+                (min-width: 1280px) 614px,
                 (min-width: 768px) calc((100vw - 2rem) / 2),
                 calc(100vw - 1rem)
             ]]></var>
             <var name="product_page_image_small">88px</var>
             <var name="cart_page_product_thumbnail"><![CDATA[
-                (min-width: 1260px) 220px,
+                (min-width: 1280px) 223px,
                 (min-width: 1024px) calc((100vw - 2rem - 420px - 190px) * 0.4),
                 (min-width: 768px) calc((100vw - 2rem - 220px - 190px) * 0.4),
                 calc((100vw - 1rem - 190px) * 0.4)
