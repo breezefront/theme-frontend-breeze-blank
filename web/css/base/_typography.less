@@ -155,6 +155,7 @@
         position: relative;
     }
     table {
+        border-color: @divider__color;
         .text-align(left);
         width: 100%;
         .id a,
@@ -176,6 +177,7 @@
             font-weight: 500;
         }
         td, th {
+            border-color: @divider__color;
             vertical-align: top;
             padding: @3 @2;
             &:first-child {
@@ -187,7 +189,6 @@
         }
         thead tr {
             --divider-alpha: .15;
-            border-bottom-color: @divider__color;
         }
         thead th {
             color: @headings__color;
@@ -205,6 +206,26 @@
             }
             .mark {
                 .text-align(right);
+            }
+        }
+
+        // table inserted via WYSIWYG editor
+        &[border] {
+            border-style: solid;
+            tr {
+                --divider-alpha: .07;
+            }
+            td, th {
+                &:first-child {
+                    .padding-left(@2);
+                }
+            }
+            &[style*="border-color"] {
+                tr,
+                th,
+                td {
+                    border-color: inherit;
+                }
             }
         }
     }
