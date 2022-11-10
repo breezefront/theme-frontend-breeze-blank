@@ -73,10 +73,10 @@
 
         --transition-duration: 200ms;
 
-        --spinner-size: @6;
-        --spinner-border-width: 2px;
+        --spinner-size: @spinner__size;
+        --spinner-border-width: @spinner__border-width;
         .lib-rgb(--spinner-border-color, @spinner__border-color);
-        --spinner-duration: .6s;
+        --spinner-duration: @spinner__animation-duration;
 
         .lib-rgb(--scrollbar-bg, @scrollbar-track__background-color);
         .lib-rgb(--scrollbar-color, @scrollbar-thumb__background-color);
