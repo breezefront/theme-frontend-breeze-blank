@@ -1,6 +1,6 @@
 @listing-reveal-on-hover-selector: ~":where(.products-grid:not(.recent), .widget-product-carousel) .product-item";
 
-& when not (@listing-grid-item__details-height = false) {
+& when not (@listing-grid-item__reveal-on-hover = false) {
     & when (@critical) {
         .widget-product-carousel,
         .products-grid .product-items {
