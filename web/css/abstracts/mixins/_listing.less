@@ -1,37 +1,68 @@
+.listing-reveal-on-hover-base(@_aspect-ratio) {
+    box-sizing: content-box;
+    overflow: hidden;
+    aspect-ratio: @_aspect-ratio;
+    .product-item-info {
+        position: absolute;
+        height: auto !important;
+    }
+    .price-box ~ * {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+.listing-reveal-on-hover-visible-height(@_aspect-ratio, @_visible-height) {
+    & when (@_aspect-ratio = 1) {
+        padding-bottom: @_visible-height;
+    }
+    & when not (@_aspect-ratio = 1) {
+        padding-bottom: ~"calc(@{_visible-height} + var(--listing-grid-item-margin))";
+    }
+}
+
 .listing-reveal-on-hover(
     @_visible-height: @listing-grid-item__reveal-on-hover__visible-height,
-    @_aspect-ratio: @listing-grid-item__reveal-on-hover__aspect-ratio
+    @_aspect-ratio: @listing-grid-item__reveal-on-hover__aspect-ratio,
+    @_hover-none-visible-height: @listing-grid-item__reveal-on-hover__hover-none__visible-height
 ) {
     & when (@critical) {
-        box-sizing: content-box;
-        overflow: hidden;
-        aspect-ratio: @_aspect-ratio;
-
-        & when (@_aspect-ratio = 1) {
-            padding-bottom: @_visible-height;
-        }
-        & when not (@_aspect-ratio = 1) {
-            padding-bottom: ~"calc(@{_visible-height} + var(--listing-grid-item-margin))";
+        // enable for both hover and hover-none devices
+        & when not (@_hover-none-visible-height = false) {
+            .listing-reveal-on-hover-base(@_aspect-ratio);
         }
 
-        .product-item-info {
-            position: absolute;
-            height: auto !important;
+        @media @media-hover {
+            // enable for hover devices only
+            & when (@_hover-none-visible-height = false) {
+                .listing-reveal-on-hover-base(@_aspect-ratio);
+            }
+            .listing-reveal-on-hover-visible-height(@_aspect-ratio, @_visible-height);
         }
 
-        .price-box ~ * {
-            opacity: 0;
-            pointer-events: none;
+        // enable for hover-none devices
+        @media @media-hover-none {
+            & when not (@_hover-none-visible-height = false) {
+                .listing-reveal-on-hover-visible-height(@_aspect-ratio, @_hover-none-visible-height);
+            }
         }
     }
 
     & when not (@critical) {
-        &::after {
-            .gradient-overflow();
-            height: @2;
+        & when not (@_hover-none-visible-height = false) {
+            &::after {
+                .gradient-overflow();
+                height: @2;
+            }
         }
 
         @media @media-hover {
+            & when (@_hover-none-visible-height = false) {
+                &::after {
+                    .gradient-overflow();
+                    height: @2;
+                }
+            }
+
             &:hover::after {
                 opacity: 0;
             }
