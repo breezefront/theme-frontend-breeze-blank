@@ -4,9 +4,7 @@
     & when (@critical) {
         .widget-product-carousel,
         .products-grid .product-items {
-            & when not (@listing-grid-item__details-height = false) {
-                align-items: flex-start; // fix for jumping content in safari
-            }
+            align-items: flex-start; // fix for jumping content in safari
         }
     }
     @{listing-reveal-on-hover-selector} {
