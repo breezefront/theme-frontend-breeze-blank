@@ -41,7 +41,18 @@
 
         // enable for hover-none devices
         @media @media-hover-none {
+            & when (@listing-grid-item-actions-secondary__position = absolute) {
+                .product-item-inner,
+                .actions-secondary {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
             & when not (@_hover-none-visible-height = false) {
+                .actions-primary {
+                    opacity: 0;
+                    pointer-events: none;
+                }
                 .listing-reveal-on-hover-visible-height(@_aspect-ratio, @_hover-none-visible-height);
             }
         }
