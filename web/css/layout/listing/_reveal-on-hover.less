@@ -2,9 +2,11 @@
 
 & when not (@listing-grid-item__reveal-on-hover = false) {
     & when (@critical) {
-        .widget-product-carousel,
-        .products-grid .product-items {
-            align-items: flex-start; // fix for jumping content in safari
+        @media @media-hover {
+            .widget-product-carousel,
+            .products-grid .product-items {
+                align-items: flex-start; // fix for jumping content in safari
+            }
         }
     }
     @{listing-reveal-on-hover-selector} {
