@@ -63,10 +63,14 @@
 
                 position: absolute;
                 .lib-css(z-index, @listing-grid-item-actions-secondary__absolute__z-index);
-                .lib-css(top, @listing-grid-item-actions-secondary__absolute__top);
+                .lib-css(top, ~"calc(@{listing-grid-item-actions-secondary__absolute__top} + var(--listing-grid-item-padding, 0px))");
                 .lib-css(flex-direction, @listing-grid-item-actions-secondary__absolute__flex-direction);
-                .right(@listing-grid-item-actions-secondary__absolute__right);
-                .left(@listing-grid-item-actions-secondary__absolute__left);
+                & when not (@listing-grid-item-actions-secondary__absolute__right = false) {
+                    .right(~"calc(@{listing-grid-item-actions-secondary__absolute__right} + var(--listing-grid-item-padding, 0px))");
+                }
+                & when not (@listing-grid-item-actions-secondary__absolute__left = false) {
+                    .left(~"calc(@{listing-grid-item-actions-secondary__absolute__left} + var(--listing-grid-item-padding, 0px))");
+                }
                 &:extend(.transition);
             }
             &:hover {
