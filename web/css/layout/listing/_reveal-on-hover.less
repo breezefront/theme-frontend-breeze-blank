@@ -121,3 +121,13 @@
         }
     }
 }
+
+& when not (@critical) {
+    & when (@listing-grid-item-actions-secondary__position = absolute) {
+        :where(.products-grid, .widget-product-carousel) .product-item {
+            .actions-secondary a::before {
+                .lib-css(-webkit-mask-size, @listing-grid-item-actions-secondary__absolute__mask-size);
+            }
+        }
+    }
+}
