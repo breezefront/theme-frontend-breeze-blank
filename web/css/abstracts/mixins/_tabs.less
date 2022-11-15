@@ -15,12 +15,38 @@
 }
 
 .breeze-tab-toggler {
+    .breeze-tab-toggler-common();
+
     @media @tab-accordion__media {
-        &::after {
-            .breeze-dropdown-toggler-icon();
-        }
+        .breeze-tab-toggler-accordion();
     }
 
+    @media @tab-horizontal__media {
+        .breeze-tab-toggler-horizontal();
+    }
+
+    & when (@critical) {
+        .counter {
+            opacity: .8;
+            padding: @0-5 @2;
+            .lib-css(background, @tab-counter__background);
+            .lib-css(display, @tab-counter__display);
+        }
+    }
+}
+.breeze-tab-toggler-active {
+    .breeze-tab-toggler-common-active();
+
+    @media @tab-accordion__media {
+        .breeze-tab-toggler-accordion-active();
+    }
+
+    @media @tab-horizontal__media {
+        .breeze-tab-toggler-horizontal-active();
+    }
+}
+
+.breeze-tab-toggler-common {
     & when (@critical) {
         order: -1;
         display: flex;
@@ -32,36 +58,6 @@
         .lib-css(font-size, @tab-toggler__font-size);
         .lib-css(font-weight, @tab-toggler__font-weight);
         .lib-css(text-transform, @tab-toggler__text-transform);
-
-        @media @tab-accordion__media {
-            --muted-bg-alpha: .5;
-            justify-content: space-between;
-            border-bottom: 1px solid @divider__color;
-            .lib-css(background, @tab-toggler__accordion__background);
-            &:nth-last-child(2) {
-                border-bottom-color: transparent;
-            }
-        }
-
-        @media @tab-horizontal__media {
-            .margin(@tab-toggler__horizontal__margin);
-            .lib-css(padding, @tab-toggler__horizontal__padding);
-            .lib-css(border, @tab-toggler__horizontal__border);
-            & when not (@tab-toggler__horizontal__border-width = false) {
-                border-width: @tab-toggler__horizontal__border-width !important;
-            }
-            .lib-css(border-radius, @tab-toggler__horizontal__border-radius);
-            .lib-css(position, @tab-toggler__horizontal__position);
-            .lib-css(z-index, @tab-toggler__horizontal__z-index);
-            white-space: nowrap;
-        }
-
-        .counter {
-            opacity: .8;
-            padding: @0-5 @2;
-            .lib-css(background, @tab-counter__background);
-            .lib-css(display, @tab-counter__display);
-        }
     }
     & when not (@critical) {
         cursor: pointer;
@@ -73,19 +69,41 @@
         }
     }
 }
+.breeze-tab-toggler-horizontal {
+    & when (@critical) {
+        .margin(@tab-toggler__horizontal__margin);
+        .lib-css(padding, @tab-toggler__horizontal__padding);
+        .lib-css(border, @tab-toggler__horizontal__border);
+        & when not (@tab-toggler__horizontal__border-width = false) {
+            border-width: @tab-toggler__horizontal__border-width !important;
+        }
+        .lib-css(border-radius, @tab-toggler__horizontal__border-radius);
+        .lib-css(position, @tab-toggler__horizontal__position);
+        .lib-css(z-index, @tab-toggler__horizontal__z-index);
+        white-space: nowrap;
+    }
+}
+.breeze-tab-toggler-accordion {
+    &::after {
+        .breeze-dropdown-toggler-icon();
+    }
 
-.breeze-tab-toggler-active {
+    & when (@critical) {
+        --muted-bg-alpha: .5;
+        justify-content: space-between;
+        border-bottom: 1px solid @divider__color;
+        .lib-css(background, @tab-toggler__accordion__background);
+        &:nth-last-child(2) {
+            border-bottom-color: transparent;
+        }
+    }
+}
+.breeze-tab-toggler-common-active {
     &::after {
         .breeze-dropdown-toggler-icon-active();
     }
     & when (@critical) {
         z-index: 2;
-        @media @tab-accordion__media {
-            border-bottom-color: transparent;
-        }
-        @media @tab-horizontal__media {
-            .lib-css(border-color, @tab-toggler__horizontal-active__border-color);
-        }
     }
     & when not (@critical) {
         --muted-alpha: .9;
@@ -95,14 +113,31 @@
             --muted-bg-alpha: 1;
         }
     }
+}
+.breeze-tab-toggler-horizontal-active {
+    & when (@critical) {
+        .lib-css(border-color, @tab-toggler__horizontal-active__border-color);
+    }
+}
+.breeze-tab-toggler-accordion-active {
+    & when (@critical) {
+        border-bottom-color: transparent;
+    }
     & when not (@critical) {
-        @media @tab-accordion__media {
-            .lib-css(background, @tab-toggler__accordion-active__background);
-        }
+        .lib-css(background, @tab-toggler__accordion-active__background);
     }
 }
 
 .breeze-tab-content {
+    .breeze-tab-content-common();
+    @media @tab-horizontal__media {
+        .breeze-tab-content-horizontal();
+    }
+}
+.breeze-tab-content-active {
+    .breeze-tab-content-common-active();
+}
+.breeze-tab-content-common {
     & when (@critical) {
         display: none;
         visibility: hidden;
@@ -110,24 +145,24 @@
         .lib-css(padding, @tab-content__padding);
         .lib-css(border, @tab-content__border);
         .lib-css(border-width, @tab-content__border-width);
-
-        @media @tab-horizontal__media {
-            width: 100%;
-            .lib-css(position, @tab-content__horizontal__position);
-            .lib-css(z-index, @tab-content__horizontal__z-index);
-            .lib-css(margin, @tab-content__horizontal__margin);
-            .lib-css(padding, @tab-content__horizontal__padding);
-            .lib-css(border, @tab-content__horizontal__border);
-            .lib-css(border-width, @tab-content__horizontal__border-width);
-        }
     }
 
     & when not (@critical) {
         .transition();
     }
 }
-
-.breeze-tab-content-active {
+.breeze-tab-content-horizontal {
+    & when (@critical) {
+        width: 100%;
+        .lib-css(position, @tab-content__horizontal__position);
+        .lib-css(z-index, @tab-content__horizontal__z-index);
+        .lib-css(margin, @tab-content__horizontal__margin);
+        .lib-css(padding, @tab-content__horizontal__padding);
+        .lib-css(border, @tab-content__horizontal__border);
+        .lib-css(border-width, @tab-content__horizontal__border-width);
+    }
+}
+.breeze-tab-content-common-active {
     & when (@critical) {
         visibility: visible;
         opacity: 1;

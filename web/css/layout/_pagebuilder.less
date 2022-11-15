@@ -15,16 +15,27 @@
 
 [data-content-type="tabs"] {
     .tab-header {
-        &:extend(.breeze-tab-toggler all);
+        &:extend(.breeze-tab-toggler-common all);
+        &:extend(.breeze-tab-toggler-horizontal all);
         &.active {
-            &:extend(.breeze-tab-toggler-active all);
+            &:extend(.breeze-tab-toggler-common-active all);
+            &:extend(.breeze-tab-toggler-horizontal-active all);
+        }
+        & when (@critical) {
+            .padding(@3 @4);
+            .margin-left(0);
+            .margin-right(0);
         }
     }
     .tabs-content {
         > div {
-            &:extend(.breeze-tab-content all);
+            &:extend(.breeze-tab-content-common all);
+            &:extend(.breeze-tab-content-horizontal all);
             &[aria-hidden=false] {
-                &:extend(.breeze-tab-content-active all);
+                &:extend(.breeze-tab-content-common-active all);
+            }
+            & when (@critical) {
+                .padding(@3);
             }
         }
     }
@@ -102,9 +113,6 @@
         .tabs-navigation {
             &:extend(.breeze-prose-reset ul all);
             display: flex;
-            @media @tab-accordion__media {
-                flex-direction: column;
-            }
         }
         .tab-header {
             > a {
