@@ -129,7 +129,7 @@
     .rating-result > span::before {
         .breeze-icon(@rating-icon, @rating-icon__width);
         -webkit-mask-repeat: repeat-x;
-        -webkit-mask-position: 0 50%;
+        .modrtl(-webkit-mask-position, 0 50%, 100% 50%);
     }
     .rating-result > span {
         color: @rating__color;
