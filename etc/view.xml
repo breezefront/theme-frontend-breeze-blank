@@ -246,6 +246,24 @@
             <var name="nav">true</var> <!-- true/false -->
             <var name="navdir">horizontal</var> <!-- horizontal/vertical -->
         </var>
+        <var name="magnifier">
+            <var name="enabled">false</var> <!-- true/false -->
+            <var name="mode">auto</var> <!-- auto(stage with fallback to lens)/stage/lens -->
+            <var name="zoom">auto</var> <!-- auto or number. When using number, consider changing upscale option. -->
+            <var name="zoomMin">1.6</var> <!-- min zoom to use, otherwise - disable magnifier. -->
+            <var name="zoomMax">2.5</var> <!-- max zoom to use, otherwise - downscale the image. -->
+            <var name="upscale">1.5</var> <!-- max upscale to satisfy zoomMin. -->
+            <var name="stage">
+                <var name="position">right</var> <!-- left/right/inner -->
+                <var name="width">100w</var> <!-- number or percent of width/height -->
+                <var name="height">100h</var> <!-- number or percent of width/height -->
+            </var>
+            <var name="lens">
+                <var name="shape">circle</var> <!-- rectangle/circle -->
+                <var name="width">180</var> <!-- number -->
+                <var name="height">180</var> <!-- number -->
+            </var>
+        </var>
     </vars>
     <vars module="Magento_ConfigurableProduct">
         <var name="gallery_switch_strategy">prepend</var>
