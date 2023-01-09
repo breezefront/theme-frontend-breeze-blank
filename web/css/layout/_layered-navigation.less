@@ -243,6 +243,9 @@
                     height: @6;
                     flex-shrink: 0;
                 }
+                &[data-count="0"]::after {
+                    display: none;
+                }
                 &::after {
                     .breeze-text-sm();
                     .margin-left(@0-5);
