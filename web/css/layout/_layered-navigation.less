@@ -76,9 +76,6 @@
                     align-items: center;
                     gap: @1;
                 }
-                .count {
-                    display: none;
-                }
             }
             &-content-close {
                 display: none;
@@ -246,9 +243,10 @@
                     height: @6;
                     flex-shrink: 0;
                 }
-                .count {
+                &::after {
                     .breeze-text-sm();
                     .margin-left(@0-5);
+                    content: attr(data-count);
                     display: flex;
                     align-items: center;
                     justify-content: center;

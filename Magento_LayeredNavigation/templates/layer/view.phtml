@@ -27,11 +27,12 @@
 ?>
 
 <div class="block filter" data-mage-init='{"slideout":{"toggler":".filter-title","panel":".filter-content"}}'>
-    <div class="block-title filter-title" tabindex="0">
-        <strong><?= $block->escapeHtml(__('Shop By')) ?></strong>
+    <div class="block-title filter-title" tabindex="0"
         <?php if ($activeFilters) : ?>
-            <span class="count"><?= count($activeFilters) ?></span>
+            data-count="<?= count($activeFilters) ?>"
         <?php endif; ?>
+        >
+        <strong><?= $block->escapeHtml(__('Shop By')) ?></strong>
     </div>
 
     <div class="block-content filter-content">
