@@ -2,7 +2,7 @@
 [data-role="collapsible"],
 [data-mage-init*='"collapsible":'] {
     // [data-trigger],
-    [data-role="title"] {
+    > [data-role="title"] {
         &:extend(.breeze-dropdown-toggler);
 
         &::after {
@@ -20,7 +20,7 @@
 [data-mage-init*='"collapsible":'] {
     &[data-mage-init*='"active":true'] {
         // [data-trigger],
-        [data-role="title"] {
+        > [data-role="title"] {
             &:not([aria-expanded])::after {
                 &:extend(.breeze-dropdown-toggler-icon-active);
             }
@@ -30,7 +30,7 @@
 
 & when (@critical) {
     [data-mage-init*='"collapsible":']:not([data-mage-init*='"active":true']) {
-        [data-role=content] {
+        > [data-role=content] {
             display: block !important;
             height: 0;
             opacity: 0;
@@ -43,7 +43,7 @@
 
 & when not (@critical) {
     [data-mage-init*='"collapsible":'] {
-        [data-role=content] {
+        > [data-role=content] {
             &:extend(.transition);
             &[aria-hidden=false] {
                 height: auto;
