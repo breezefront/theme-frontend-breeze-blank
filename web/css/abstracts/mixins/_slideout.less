@@ -5,7 +5,6 @@
     }
 
     & when not (@critical) {
-        .transition();
         .left(0);
         top: 0;
         bottom: 0;
@@ -38,9 +37,26 @@
 
 .breeze-slideout-close {
     & when not (@critical) {
-        display: block;
-        position: absolute;
-        top: @3;
-        .right(@5);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        position: fixed;
+        z-index: 811; // @see overlay
+        color: @white;
+        content: '';
+        width: @6;
+        height: @6;
+        top: @5;
+        .left(~"min(calc(@{96} + @{4-5}), calc(100vw - @{11}))"); // @see slideout width
+        .breeze-icon(@icon-x);
+        .modrtl(transform, translateX(-20px), translateX(20px));
+    }
+}
+.breeze-slideout-close-visible {
+    & when not (@critical) {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translateX(0);
     }
 }

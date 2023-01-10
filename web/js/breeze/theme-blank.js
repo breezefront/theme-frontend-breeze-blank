@@ -1,75 +1,41 @@
 (function () {
     'use strict';
 
-    $.widget('slideout', {
-        component: 'slideout',
-        options: {
-            active: 'active'
+    $.mixin('collapsible', {
+        isLayeredNavigation: function () {
+            return this.element.hasClass('filter') &&
+                this.element.has('.filter-options').length;
         },
 
-        /** [create description] */
-        create: function () {
-            this.toggler = this.element.find(this.options.toggler);
-            this.panel = this.element.find(this.options.panel);
-            this.focusTrap = this.createFocusTrap(this.panel);
-            this.closeBtn = $('<button>').addClass('button-close filter-content-close');
-            this.panel.prepend(this.closeBtn);
-
-            this._on(document, {
-                keydown: function (e) {
-                    if (e.key === 'Escape' && this.element.hasClass(this.options.active)) {
-                        this.close();
-                    }
-                }.bind(this)
-            });
-
-            this._on(this.toggler, {
-                click: this.toggle,
-                keydown: function (e) {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        this.toggle();
-                    }
-                }.bind(this)
-            });
-
-            this._on(this.closeBtn, {
-                click: this.close
-            });
-        },
-
-        /** [destroy description] */
-        destroy: function () {
-            this.close();
-            this.closeBtn.remove();
-            this._super();
-        },
-
-        /** [toggle description] */
-        toggle: function () {
-            if (this.element.hasClass(this.options.active)) {
-                this.close();
-            } else {
-                this.open();
-            }
-        },
-
-        /** [open description] */
-        open: function () {
-            if (this.panel.css('visibility') !== 'hidden') {
-                return;
+        create: function (original) {
+            if (this.isLayeredNavigation()) {
+                this.filters = this.element.find('.filter-content');
+                this.focusTrap = this.createFocusTrap(this.filters);
             }
 
-            $.breeze.scrollbar.hide();
-            this.panel.one('transitionend', this.focusTrap.activate);
-            this.element.addClass(this.options.active);
+            original();
         },
 
-        /** [close description] */
-        close: function () {
-            $.breeze.scrollbar.reset();
-            this.focusTrap.deactivate();
-            this.element.removeClass(this.options.active);
+        open: function (original) {
+            if (this.isLayeredNavigation()) {
+                if (this.filters.css('visibility') !== 'hidden') {
+                    return;
+                }
+
+                $.breeze.scrollbar.hide();
+                this.filters.one('transitionend', this.focusTrap.activate);
+            }
+
+            original();
+        },
+
+        close: function (original) {
+            if (this.isLayeredNavigation()) {
+                $.breeze.scrollbar.reset();
+                this.focusTrap.deactivate();
+            }
+
+            original();
         }
     });
 
