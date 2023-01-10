@@ -155,6 +155,12 @@
 }
 
 & when not (@critical) {
+    .navigation-wrapper {
+        &:extend(.transition all);
+        @media @navigation__media-desktop {
+            transition: none;
+        }
+    }
     .nav-toggle {
         -webkit-tap-highlight-color: transparent;
         cursor: pointer;

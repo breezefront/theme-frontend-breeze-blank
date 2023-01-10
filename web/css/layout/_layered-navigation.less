@@ -350,6 +350,9 @@
         .filter-content,
         .filter-title strong::after {
             &:extend(.transition all);
+            @media @media-md {
+                transition: none;
+            }
         }
     }
     @media @media-md-down {
