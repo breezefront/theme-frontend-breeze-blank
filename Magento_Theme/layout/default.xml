@@ -63,13 +63,7 @@
         <!-- Navigation -->
         <referenceBlock name="navigation.sections" remove="true"/>
         <referenceContainer name="page.top">
-            <container name="navigation.wrapper" before="-" htmlTag="div" htmlClass="navigation-wrapper">
-                <block class="Magento\Framework\View\Element\Text" name="navigation.close">
-                    <arguments>
-                        <argument name="text" xsi:type="string"><![CDATA[<span data-action="toggle-nav" class="button-close" tabindex="0"></span>]]></argument>
-                    </arguments>
-                </block>
-            </container>
+            <container name="navigation.wrapper" before="-" htmlTag="div" htmlClass="navigation-wrapper"/>
         </referenceContainer>
         <move element="store.menu" destination="navigation.wrapper"/>
         <!-- <move element="navigation.wrapper" destination="header-wrapper" after="logo"/> -->

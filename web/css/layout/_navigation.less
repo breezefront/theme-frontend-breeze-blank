@@ -32,6 +32,12 @@
             .breeze-slideout-overlay-visible();
         }
     }
+    .nav-toggle span::after {
+        .breeze-slideout-close();
+        .nav-open & {
+            .breeze-slideout-close-visible();
+        }
+    }
 }
 
 & when (@critical) {
@@ -167,10 +173,15 @@
         &::after {
             z-index: 39;
             .breeze-icon(@icon-menu);
-            .nav-open & {
-                .breeze-icon(@icon-x);
-                color: @base__background;
-                opacity: .8;
+        }
+        span::after {
+            &:extend(.transition all);
+        }
+        @media @navigation__media-mobile {
+            span {
+                .nav-before-open & {
+                    clip: unset;
+                }
             }
         }
     }
