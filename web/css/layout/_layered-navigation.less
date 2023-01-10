@@ -242,7 +242,6 @@
             .filter-title {
                 border: 0;
                 .padding(@2 @1 @2 0);
-                cursor: pointer;
                 display: flex;
                 align-items: center;
                 gap: @1;
@@ -357,12 +356,12 @@
     }
     @media @media-md-down {
         .block.filter {
-            .filter-title {
+            [data-role="title"] {
                 cursor: pointer;
                 -webkit-tap-highlight-color: transparent;
-                &::before {
-                    .breeze-icon(@icon-s-filter, @5);
-                }
+            }
+            .filter-title::before {
+                .breeze-icon(@icon-s-filter, @5);
             }
             .filter-content {
                 .lib-css(padding, @layered-slideout__padding);
