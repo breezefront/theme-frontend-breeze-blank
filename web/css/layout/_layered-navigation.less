@@ -53,11 +53,14 @@
         .filter {
             &-current li {
                 display: flex;
-                flex-wrap: wrap;
                 align-items: center;
                 column-gap: @1;
                 span {
                     white-space: nowrap;
+                    &.filter-value {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
                 }
                 .filter-label::after {
                     content: ':';
