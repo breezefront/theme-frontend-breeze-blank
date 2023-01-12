@@ -11,6 +11,11 @@
             if (this.isLayeredNavigation()) {
                 this.filters = this.element.find('.filter-content');
                 this.focusTrap = this.createFocusTrap(this.filters);
+                this._on(document, 'breeze:resize-x', () => {
+                    if (this.filters.css('position') !== 'fixed') {
+                        this.close();
+                    }
+                });
             }
 
             original();
