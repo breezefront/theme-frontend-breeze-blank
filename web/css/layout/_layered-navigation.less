@@ -254,10 +254,7 @@
                     height: @6;
                     flex-shrink: 0;
                 }
-                &[data-count="0"]::after {
-                    display: none;
-                }
-                &::after {
+                &[data-count]::after {
                     .breeze-text-sm();
                     .margin-left(@0-5);
                     content: attr(data-count);
@@ -270,6 +267,9 @@
                     color: @white;
                     border-radius: @5;
                     padding: 0 @1;
+                }
+                &[data-count="0"]::after {
+                    display: none;
                 }
             }
             .page-layout-1column &,
