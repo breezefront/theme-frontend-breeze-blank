@@ -44,6 +44,12 @@
         }
     });
 
+    if ($('body').var('--swatches-over-image')) {
+        $(document).on('click', 'a [class^="swatch-opt-"]', function (e) {
+            e.preventDefault();
+        });
+    }
+
     $(document).on('breeze:load', function () {
         if ($('body').var('--swatches-over-image')) {
             $.async([
@@ -51,9 +57,6 @@
                 '[data-appearance="carousel"] .product-item-details [class^="swatch-opt-"]',
             ].join(','), function (el) {
                 $(el).appendTo($(el).closest('.product-item-info').find('.product-item-photo'));
-            })
-            $(document).on('click', 'a [class^="swatch-opt-"]', function (e) {
-                e.preventDefault();
             });
         }
 
