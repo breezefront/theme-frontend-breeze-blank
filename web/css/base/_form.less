@@ -110,6 +110,7 @@ button,
     .nested > .field,
     button + .field,
     .field + .fieldset,
+    .field + .field-recaptcha,
     .field + script + .field,
     .field + script + script + .field,
     .field + .field {
@@ -242,6 +243,9 @@ button,
         span {
             &:extend(.breeze-sr-only);
         }
+    }
+    .required-captcha.checkbox {
+        &:extend(.breeze-sr-only);
     }
     .control.captcha-image {
         margin-top: @2;
