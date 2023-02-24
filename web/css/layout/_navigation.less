@@ -56,13 +56,6 @@
         span {
             &:extend(.breeze-sr-only);
         }
-
-        &::after {
-            content: '';
-            display: block;
-            width: @12;
-            height: @12;
-        }
     }
 
     .page-wrapper,
@@ -158,6 +151,12 @@
             }
         }
     }
+    .nav-toggle::after {
+        .breeze-icon-critical(@icon-menu);
+        z-index: 39;
+        width: @12;
+        height: @12;
+    }
 }
 
 & when not (@critical) {
@@ -170,10 +169,6 @@
     .nav-toggle {
         -webkit-tap-highlight-color: transparent;
         cursor: pointer;
-        &::after {
-            z-index: 39;
-            .breeze-icon(@icon-menu);
-        }
         span::after {
             &:extend(.transition all);
         }
