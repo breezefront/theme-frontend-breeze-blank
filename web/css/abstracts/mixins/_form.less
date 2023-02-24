@@ -189,8 +189,16 @@
     }
 }
 .breeze-button-xs {
-    .breeze-text-xs();
-    padding: @1 @2;
+    .lib-css(font-size, @button__xs__font-size);
+    .lib-css(line-height, @button__xs__line-height);
+    .lib-css(font-weight, @button__xs__font-weight);
+    .lib-css(padding, @button__xs__padding);
+}
+.breeze-button-sm {
+    .lib-css(font-size, @button__sm__font-size);
+    .lib-css(line-height, @button__sm__line-height);
+    .lib-css(font-weight, @button__sm__font-weight);
+    .lib-css(padding, @button__sm__padding);
 }
 .breeze-button-lg {
     .lib-css(font-size, @button__lg__font-size);
