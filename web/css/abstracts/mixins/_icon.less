@@ -24,3 +24,26 @@
         -webkit-mask-size: @width @height;
     }
 }
+
+.breeze-icon-critical(@icon, @size: @6) when not (@icon = false) {
+    & when (@critical) {
+        content: '';
+        display: block;
+        width: @size;
+        height: @size;
+        background-color: currentColor;
+        -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        -webkit-mask-size: @size @size;
+    }
+}
+.breeze-icon-critical(@icon, @width, @height) when not (@icon = false) {
+    & when (@critical) {
+        content: '';
+        display: block;
+        width: @width;
+        height: @height;
+        background-color: currentColor;
+        -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        -webkit-mask-size: @width @height;
+    }
+}
