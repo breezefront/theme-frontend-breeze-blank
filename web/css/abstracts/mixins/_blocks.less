@@ -29,7 +29,9 @@
 }
 .breeze-block-sidebar-content {
     & when (@critical) {
-        display: flow-root;
+        &:where(:not(.no-display)) {
+            display: flow-root;
+        }
         .lib-css(padding, @block-content__padding);
         .lib-css(border, @block-content__border);
         .lib-css(border-width, @block-content__border-width);
