@@ -116,6 +116,15 @@
         -webkit-appearance: textfield;
         outline-offset: -2px;
     }
+    [type='date'] {
+        &::-webkit-datetime-edit-fields-wrapper {
+            padding: 0;
+        }
+        &::-webkit-date-and-time-value {
+            .text-align(left); // safari alignment
+            height: 1.5em; // fixed empty field height on iphone
+        }
+    }
 
     ::-webkit-search-decoration {
         -webkit-appearance: none;
