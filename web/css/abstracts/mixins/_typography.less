@@ -187,6 +187,15 @@
         .breeze-text-xl();
         color: @muted__color;
     }
+    [data-role="collapsible"],
+    [data-mage-init*='"collapsible":'] {
+        > [data-role=content][aria-hidden=false] {
+            margin: @2 0;
+        }
+        + div {
+            margin-top: @3;
+        }
+    }
 }
 
 .breeze-prose-reset {
