@@ -48,7 +48,7 @@
             </block>
             <block class="Swissup\Breeze\Block\Theme\Dropdown" name="header.wishlist" ifconfig="wishlist/general/active">
                 <arguments>
-                    <argument name="title" xsi:type="string" translate="true">Wishlist</argument>
+                    <argument name="title" xsi:type="string" translate="true">Wish List</argument>
                     <argument name="sr_only" xsi:type="boolean">true</argument>
                     <argument name="href" xsi:type="url" path="wishlist"/>
                     <argument name="switcher_css_class" xsi:type="string">switcher-wishlist</argument>
