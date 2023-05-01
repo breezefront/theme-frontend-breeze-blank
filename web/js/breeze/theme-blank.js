@@ -74,6 +74,18 @@
                 .addClass('mobile-header-panel')
                 .data('breeze-temporary', true)
                 .appendTo($('.navigation-wrapper'));
+
+            $('.mobile-header-panel').find('[id],[for]').each((i, el) => {
+                el = $(el);
+
+                if (el.attr('for')) {
+                    el.attr('for', el.attr('for') + '_clone');
+                }
+
+                if (el.attr('id')) {
+                    el.attr('id', el.attr('id') + '_clone');
+                }
+            });
         }
     });
 })();
