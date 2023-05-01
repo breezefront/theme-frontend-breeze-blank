@@ -48,7 +48,7 @@
         <?php foreach ($visibleFilters as $i => $filter) : ?>
             <div class="filter-options-item filter-<?= $filter->getRequestVar() ?><?= $isExpanded ? ' initially-active active' : '' ?>"
                 data-mage-init='{"collapsible":{"active":<?= $isExpanded ? 'true' : 'false' ?>,"dialog":true}}'>
-                <div role="heading" aria-level="2" class="filter-options-title" data-trigger="true" data-role="title"><?= $block->escapeHtml(__($filter->getName())) ?></div>
+                <div class="filter-options-title" data-trigger="true" data-role="title"><?= $block->escapeHtml(__($filter->getName())) ?></div>
                 <div class="filter-options-content" data-role="content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter) ?></div>
             </div>
         <?php endforeach; ?>
