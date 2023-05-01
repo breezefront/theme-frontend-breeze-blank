@@ -189,6 +189,9 @@
     }
     [data-role="collapsible"],
     [data-mage-init*='"collapsible":'] {
+        > [data-role=title] {
+            margin: 0;
+        }
         > [data-role=content][aria-hidden=false] {
             margin: @2 0;
         }
