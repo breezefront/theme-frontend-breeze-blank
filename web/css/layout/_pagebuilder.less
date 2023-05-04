@@ -176,6 +176,14 @@
         margin: 20px 0 0 0;
     }
 
+    [data-enable-parallax="1"] {
+        opacity: 0;
+        transition: opacity linear 50ms 100ms; // use delay to hide image jumping
+        &.jarallax-ready {
+            opacity: 1;
+        }
+    }
+
     // Slider and carousel
     .slick-dots {
         &:extend(.breeze-prose-reset ul all);
