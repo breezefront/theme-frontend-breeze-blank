@@ -57,7 +57,8 @@ button,
     fieldset,
     .fieldset {
         margin-bottom: @8;
-        &:last-child {
+        &:last-child,
+        + .loading-mask:last-child {
             margin-bottom: 0;
         }
         &.field {
