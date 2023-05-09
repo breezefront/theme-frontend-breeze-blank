@@ -57,11 +57,15 @@ button,
     fieldset,
     .fieldset {
         margin-bottom: @8;
-        &:last-child,
-        + .loading-mask:last-child {
+        &:last-child {
             margin-bottom: 0;
         }
         &.field {
+            margin-bottom: 0;
+        }
+    }
+    form:has(.fieldset + .loading-mask:last-child) {
+        .fieldset:nth-last-child(2) {
             margin-bottom: 0;
         }
     }
