@@ -24,6 +24,37 @@
         }
     }
 
+    :where(.table-totals, .table.totals) {
+        .amount {
+            .text-align(right);
+        }
+        [class^="totals-tax"],
+        .totals:not(.grand) {
+            color: @muted__color;
+            border: 0;
+            th, td {
+                font-weight: 400;
+                padding-top: @1;
+                padding-bottom: @1;
+            }
+        }
+        .totals-tax-details {
+            display: none;
+            &.shown {
+                display: table-row;
+            }
+        }
+        .totals-tax-summary .amount .price {
+            display: inline-flex;
+            &::before {
+                .breeze-icon(@icon-chevron);
+            }
+        }
+        .grand.totals {
+            .breeze-text-xl();
+        }
+    }
+
     .cart-container {
         display: flex;
         flex-direction: column;
@@ -120,33 +151,6 @@
 
         .cart-totals {
             padding: 0 @4;
-            tr {
-                --divider-alpha: 0;
-                &.totals-tax-summary:not(.expanded),
-                &.totals-tax-details {
-                    --divider-alpha: .1;
-                }
-            }
-            td, th {
-                padding-top: @2;
-                padding-bottom: @2;
-                font-weight: normal;
-            }
-            .grand {
-                font-size: @font-size__lg;
-            }
-        }
-        .totals-tax-details {
-            display: none;
-            &.shown {
-                display: table-row;
-            }
-        }
-        .totals-tax-summary .amount .price {
-            display: flex;
-            &::after {
-                .breeze-icon(@icon-chevron);
-            }
         }
         .checkout-methods-items {
             display: flex;
@@ -280,12 +284,13 @@
     }
     .totals-tax-summary {
         cursor: pointer;
-        .amount .price::after {
+        .amount .price::before {
             .breeze-icon(@icon-chevron, @3);
+            transform: rotate(90deg);
             &:extend(.transition);
         }
-        &.expanded .amount .price::after {
-            transform: rotate(90deg);
+        &.expanded .amount .price::before {
+            transform: rotate(-90deg);
         }
     }
 }
