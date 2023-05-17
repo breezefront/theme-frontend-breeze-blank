@@ -104,7 +104,7 @@
         .discount,
         .shipping {
             .content {
-                display: none;
+                display: none; // this style prevents layout shift when breeze is disabled
             }
         }
 
@@ -120,6 +120,33 @@
 
         .cart-totals {
             padding: 0 @4;
+            tr {
+                --divider-alpha: 0;
+                &.totals-tax-summary:not(.expanded),
+                &.totals-tax-details {
+                    --divider-alpha: .1;
+                }
+            }
+            td, th {
+                padding-top: @2;
+                padding-bottom: @2;
+                font-weight: normal;
+            }
+            .grand {
+                font-size: @font-size__lg;
+            }
+        }
+        .totals-tax-details {
+            display: none;
+            &.shown {
+                display: table-row;
+            }
+        }
+        .totals-tax-summary .amount .price {
+            display: flex;
+            &::after {
+                .breeze-icon(@icon-chevron);
+            }
         }
         .checkout-methods-items {
             display: flex;
@@ -249,6 +276,16 @@
             &:hover {
                 --muted-alpha: .6;
             }
+        }
+    }
+    .totals-tax-summary {
+        cursor: pointer;
+        .amount .price::after {
+            .breeze-icon(@icon-chevron, @3);
+            &:extend(.transition);
+        }
+        &.expanded .amount .price::after {
+            transform: rotate(90deg);
         }
     }
 }
