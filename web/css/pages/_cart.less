@@ -238,6 +238,12 @@
         .action-gift {
             &:extend(.breeze-button-reset all);
             &:extend(.breeze-link all);
+
+            gap: 0;
+
+            &::after {
+               .breeze-icon(@icon-chevron);
+            }
         }
         .gift {
             &-options-cart-item {
@@ -252,6 +258,10 @@
                 }
                 &._active {
                     display: block;
+                }
+                .actions-toolbar {
+                    margin: @2 0;
+                    justify-content: flex-start;
                 }
             }
             &-options-title {
@@ -276,6 +286,14 @@
             &:hover {
                 --muted-alpha: .6;
             }
+        }
+        .action-gift::after {
+           .breeze-icon(@icon-chevron, @3);
+           transform: rotate(90deg);
+           &:extend(.transition);
+        }
+        .action-gift._active::after {
+           transform: rotate(-90deg);
         }
     }
     .totals-tax-summary {
