@@ -127,8 +127,8 @@
             flex-direction: column;
             gap: @4;
 
-            > .title {
-                display: none;
+            > .block + .block {
+                margin: 0;
             }
         }
 
@@ -137,10 +137,6 @@
             .content {
                 display: none; // this style prevents layout shift when breeze is disabled
             }
-        }
-
-        .discount {
-            order: -1;
         }
 
         .shipping {
