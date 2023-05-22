@@ -55,4 +55,18 @@
             }
         }
     }
+
+    .weee[data-label],
+    .minimal-price-link,
+    .price-excluding-tax,
+    .price-including-tax {
+        display: block;
+    }
+    .weee[data-label],
+    .price-including-tax + .price-excluding-tax {
+        .lib-css(font-size, @price-tax__font-size);
+        &::before {
+            content: attr(data-label) ': ';
+        }
+    }
 }
