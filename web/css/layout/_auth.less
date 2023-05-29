@@ -22,7 +22,7 @@
                 &:extend(.breeze-prose p all);
             }
             ul {
-                &:extend(.breeze-prose ul all);
+                &:extend(.breeze-prose :where(ul:not(.unstyled):not(.items)) all);
             }
         }
     }
