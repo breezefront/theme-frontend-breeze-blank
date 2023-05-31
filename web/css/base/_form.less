@@ -116,10 +116,7 @@ button,
     button + .field,
     .field + .fieldset,
     .field + .field-recaptcha,
-    .field + script + .field,
-    .field + script + script + .field,
-    .field + [type=hidden] + .field,
-    .field + .field {
+    .field ~ .field {
         margin-top: @3;
     }
     .field {
