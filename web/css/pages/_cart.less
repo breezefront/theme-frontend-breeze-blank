@@ -24,6 +24,7 @@
         }
     }
 
+    // totals summary at cart and checkout
     :where(.table-totals, .table.totals) {
         .amount {
             .text-align(right);
@@ -148,6 +149,10 @@
         .cart-totals {
             padding: 0 @4;
         }
+        .col.subtotal {
+            .text-align(right);
+            .padding-right(@1);
+        }
         .checkout-methods-items {
             display: flex;
             flex-direction: column;
@@ -269,6 +274,15 @@
             }
         }
     }
+    .cart-tax-total {
+        display: inline-flex;
+        gap: @0-5;
+        align-items: center;
+        &::after {
+            .breeze-icon(@icon-chevron, @3);
+            transform: rotate(90deg);
+        }
+    }
 }
 
 & when not (@critical) {
@@ -294,6 +308,16 @@
         }
         .action-gift._active::after {
            transform: rotate(-90deg);
+        }
+    }
+    .cart-tax-total {
+        cursor: pointer;
+        &::after {
+            .breeze-icon(@icon-chevron, @3);
+            &:extend(.transition);
+        }
+        &-expanded::after {
+            transform: rotate(-90deg);
         }
     }
     .totals-tax-summary {
