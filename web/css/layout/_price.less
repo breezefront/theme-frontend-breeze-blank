@@ -65,6 +65,7 @@
     .weee[data-label],
     .price-including-tax + .price-excluding-tax {
         .lib-css(font-size, @price-tax__font-size);
+        .lib-css(line-height, @price-tax__line-height);
         &::before {
             content: attr(data-label) ': ';
         }
