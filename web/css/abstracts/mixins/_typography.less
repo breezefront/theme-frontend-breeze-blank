@@ -145,6 +145,15 @@
     :where(ol:not(.unstyled):not(.product-items)) {
         list-style: auto;
     }
+    ol.nested-counter {
+        counter-reset: item;
+        li {
+            counter-increment: item;
+        }
+        ol > li::marker {
+            content: counters(item, '.') ' ';
+        }
+    }
     li::marker {
         --muted-alpha: .4;
         color: @muted__color;
