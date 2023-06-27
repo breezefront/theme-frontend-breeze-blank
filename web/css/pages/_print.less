@@ -1,4 +1,11 @@
 & when (@critical) {
+    .page-print {
+        .logo {
+            display: inline-block;
+            margin-bottom: 0.5cm;
+        }
+    }
+
     @media print {
         @page {
             size: auto;
@@ -7,6 +14,11 @@
 
         body {
             margin: 1cm;
+            min-height: auto;
+        }
+
+        a {
+            .lib-rgb(--link-color, @black);
         }
 
         .page-header,
@@ -14,9 +26,16 @@
             display: none;
         }
 
-        .logo {
-            display: inline-block;
-            margin-bottom: 0.5cm;
+        .page-wrapper {
+            min-height: 0;
+        }
+        .page-main {
+            padding: 0;
+            margin: 0;
+        }
+
+        [data-action="toggle-nav"] {
+            display: none;
         }
 
         .hidden-print {
