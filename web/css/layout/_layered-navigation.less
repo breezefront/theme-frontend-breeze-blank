@@ -2,20 +2,23 @@
     .block.filter {
         .filter-content {
             .breeze-slideout();
-            .active& {
+            .active&,
+            .filter-active & {
                 .breeze-slideout-visible();
             }
         }
         .filter-title strong {
             &::before {
                 .breeze-slideout-overlay();
-                .active& {
+                .active&,
+                .filter-active & {
                     .breeze-slideout-overlay-visible();
                 }
             }
             &::after {
                 .breeze-slideout-close();
-                .active& {
+                .active&,
+                .filter-active & {
                     .breeze-slideout-close-visible();
                 }
             }
