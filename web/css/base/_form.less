@@ -178,11 +178,17 @@ button,
                 z-index: 11;
             }
         }
+        .admin__field-option + .admin__field-option {
+            margin-top: @1-5;
+        }
         .control {
             position: relative;
         }
         .label + .control {
             margin-top: @0-5;
+            &:has(.admin__field-option) {
+                margin-top: @1-5;
+            }
         }
         ._with-tooltip {
             input, select, textarea {
