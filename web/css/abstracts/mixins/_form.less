@@ -68,12 +68,14 @@
     & when not (@critical) {
         .transition();
 
-        &:hover {
-            --button-bg-alpha: var(--button-hover-bg-alpha);
-            text-decoration: @button__hover__text-decoration !important;
-            .breeze-rgb(--button-color, @button__hover__text-color);
-            .breeze-rgb(--button-bg, @button__hover__background-color);
-            .breeze-rgb(--button-border-color, @button__hover__border-color);
+        @media @media-hover {
+            &:hover {
+                --button-bg-alpha: var(--button-hover-bg-alpha);
+                text-decoration: @button__hover__text-decoration !important;
+                .breeze-rgb(--button-color, @button__hover__text-color);
+                .breeze-rgb(--button-bg, @button__hover__background-color);
+                .breeze-rgb(--button-border-color, @button__hover__border-color);
+            }
         }
         &:focus-visible {
             --button-border-alpha: 1;
@@ -94,10 +96,12 @@
         .lib-css(text-shadow, @button__text-shadow);
     }
     & when not (@critical) {
-        &:hover {
-            .breeze-rgb(--button-color, @button-primary__hover__text-color);
-            .breeze-rgb(--button-bg, @button-primary__hover__background-color);
-            .breeze-rgb(--button-border-color, @button-primary__hover__border-color);
+        @media @media-hover {
+            &:hover {
+                .breeze-rgb(--button-color, @button-primary__hover__text-color);
+                .breeze-rgb(--button-bg, @button-primary__hover__background-color);
+                .breeze-rgb(--button-border-color, @button-primary__hover__border-color);
+            }
         }
     }
 }
@@ -111,10 +115,12 @@
         --button-border-color: var(--button-secondary-border-color);
     }
     & when not (@critical) {
-        &:hover {
-            .breeze-rgb(--button-color, @button-secondary__hover__text-color);
-            .breeze-rgb(--button-bg, @button-secondary__hover__background-color);
-            .breeze-rgb(--button-border-color, @button-secondary__hover__border-color);
+        @media @media-hover {
+            &:hover {
+                .breeze-rgb(--button-color, @button-secondary__hover__text-color);
+                .breeze-rgb(--button-bg, @button-secondary__hover__background-color);
+                .breeze-rgb(--button-border-color, @button-secondary__hover__border-color);
+            }
         }
     }
 }
@@ -128,11 +134,13 @@
     }
 
     & when not (@critical) {
-        &:hover {
-            text-decoration: @link__hover__text-decoration !important;
-            --button-bg: transparent;
-            --button-border-color: transparent;
-            --button-color: var(--link-color);
+        @media @media-hover {
+            &:hover {
+                text-decoration: @link__hover__text-decoration !important;
+                --button-bg: transparent;
+                --button-border-color: transparent;
+                --button-color: var(--link-color);
+            }
         }
     }
 }
@@ -148,9 +156,11 @@
     }
 
     & when not (@critical) {
-        &:hover {
-            --button-bg-alpha: .1;
-            --button-color: var(--base-color);
+        @media @media-hover {
+            &:hover {
+                --button-bg-alpha: .1;
+                --button-color: var(--base-color);
+            }
         }
     }
 }
