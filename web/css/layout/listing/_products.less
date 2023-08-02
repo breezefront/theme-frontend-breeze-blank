@@ -147,16 +147,21 @@
         }
 
         .sidebar & {
-            .product-item {
-                + .product-item {
-                    margin-top: @3;
-                }
-            }
             .product-item-info .action.delete {
                 position: absolute;
                 .right(@0-5);
                 top: @0-5;
             }
+        }
+        .sidebar .products-list & {
+            .product-item + .product-item {
+                margin-top: @3;
+            }
+        }
+        .sidebar .products-grid & {
+            --listing-grid-columns: 2;
+            --listing-grid-gap: @2;
+            --listing-grid-row-gap: @2;
         }
 
         // Compare Products and Recent Orders
