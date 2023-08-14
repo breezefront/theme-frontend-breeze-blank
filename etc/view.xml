@@ -267,7 +267,7 @@
         </var>
     </vars>
     <vars module="Magento_ConfigurableProduct">
-        <var name="gallery_switch_strategy">prepend</var>
+        <var name="gallery_switch_strategy">prepend</var> <!-- prepend/replace -->
     </vars>
     <vars module="Swissup_Breeze">
         <var name="enabled">1</var>
