@@ -240,6 +240,7 @@
     </media>
     <vars module="Magento_Catalog">
         <var name="gallery">
+            <var name="mode">default</var> <!-- default/expanded -->
             <var name="allowfullscreen">true</var>
             <var name="keyboard">true</var>
             <var name="loop">true</var>
