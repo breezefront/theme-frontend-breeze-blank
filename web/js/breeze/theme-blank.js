@@ -44,11 +44,9 @@
         }
     });
 
-    if ($('body').var('--swatches-over-image')) {
-        $(document).on('click', 'a [class^="swatch-opt-"]', function (e) {
-            e.preventDefault();
-        });
-    }
+    $(document).on('click', 'a [class^="swatch-opt-"]', function (e) {
+        e.preventDefault();
+    });
 
     $(document).on('breeze:load', function () {
         $.lazy(() => $('body').removeClass('breeze-inactive'));
