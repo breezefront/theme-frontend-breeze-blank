@@ -51,6 +51,8 @@
     }
 
     $(document).on('breeze:load', function () {
+        $.lazy(() => $('body').removeClass('breeze-inactive'));
+
         if ($('body').var('--swatches-over-image')) {
             $.async([
                 '.products-grid .product-item-details [class^="swatch-opt-"]',

@@ -71,7 +71,7 @@
                 & when not (@listing-grid-item-actions-secondary__absolute__left = false) {
                     .left(~"calc(@{listing-grid-item-actions-secondary__absolute__left} + var(--listing-grid-item-padding, 0px))");
                 }
-                &:extend(.transition);
+                &:extend(.transition all);
             }
             &:hover {
                 .actions-secondary {
@@ -104,7 +104,7 @@
                 background: @z-layer__background;
                 transform: translateY(50%);
                 opacity: 0;
-                &:extend(.transition);
+                &:extend(.transition all);
             }
             @media @media-hover {
                 &:hover {

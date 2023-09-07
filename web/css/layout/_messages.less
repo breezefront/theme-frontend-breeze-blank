@@ -119,7 +119,7 @@
     & when (@message__position = fixed) {
         .breeze.breeze-theme #maincontent > .page.messages {
             .message {
-                &:extend(.transition);
+                &:extend(.transition all);
                 .lib-css(transform, @message__fixed__hidden__transform);
                 position: relative;
 

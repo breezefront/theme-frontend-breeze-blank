@@ -167,14 +167,14 @@
             transform: rotate(180deg);
         }
         .sorter-action {
-            &:extend(.transition);
+            &:extend(.transition all);
             &:hover {
                 --muted-alpha: .6;
             }
         }
         .modes {
             a {
-                &:extend(.transition);
+                &:extend(.transition all);
                 &:hover {
                     --muted-alpha: .6;
                 }
@@ -190,7 +190,7 @@
 
     .pages {
         a.page {
-            &:extend(.transition);
+            &:extend(.transition all);
             &:hover {
                 background: @muted__background;
             }
@@ -203,7 +203,7 @@
         }
         .action.next,
         .action.previous {
-            &:extend(.transition);
+            &:extend(.transition all);
             &:hover {
                 --muted-alpha: .6;
             }

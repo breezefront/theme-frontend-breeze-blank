@@ -296,7 +296,7 @@
     }
     .cart.table {
         a.action {
-            &:extend(.transition);
+            &:extend(.transition all);
             &:hover {
                 --muted-alpha: .6;
             }
@@ -304,7 +304,7 @@
         .action-gift::after {
            .breeze-icon(@icon-chevron, @3);
            transform: rotate(90deg);
-           &:extend(.transition);
+           &:extend(.transition all);
         }
         .action-gift._active::after {
            transform: rotate(-90deg);
@@ -314,7 +314,7 @@
         cursor: pointer;
         &::after {
             .breeze-icon(@icon-chevron, @3);
-            &:extend(.transition);
+            &:extend(.transition all);
         }
         &-expanded::after {
             transform: rotate(-90deg);
@@ -325,7 +325,7 @@
         .amount .price::before {
             .breeze-icon(@icon-chevron, @3);
             transform: rotate(90deg);
-            &:extend(.transition);
+            &:extend(.transition all);
         }
         &.expanded .amount .price::before {
             transform: rotate(-90deg);

@@ -44,7 +44,7 @@
 & when not (@critical) {
     [data-mage-init*='"collapsible":'] {
         > [data-role=content] {
-            &:extend(.transition);
+            &:extend(.transition all);
             &[aria-hidden=false] {
                 height: auto;
                 visibility: visible;
