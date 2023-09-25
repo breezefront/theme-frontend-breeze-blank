@@ -262,7 +262,8 @@
     .prose,
     .cms-no-route .main,
     .cms-page-view .main {
-        .breeze-text-lg();
+        .lib-css(font-size, @prose__font-size);
+        .lib-css(line-height, @prose__line-height);
         &:extend(.breeze-prose all);
     }
     .text-reset {
