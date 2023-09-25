@@ -23,7 +23,6 @@
 @message__border-color: ~"rgb(var(--message-border-color, var(--message-color)), var(--message-border-alpha, .1))";
 
 @message__position: static; // static|fixed
-@message__icon-size: @5;
 @message__fixed__container: true;
 @message__fixed__z-index: 810;
 @message__fixed__top: @4;
@@ -37,6 +36,8 @@
 @message__fixed__hide-progress__duration: @message__fixed__hide-delay - @message__fixed__hide-progress__delay;
 @message__fixed__hide-progress__border-radius: false;
 
+@message-icon__size: @5;
+@message-close-icon__mask-size: @4 @4;
 @message-link__color: ~"rgb(var(--message-color)) !important";
 
 @message-success__icon: @icon-s-check;

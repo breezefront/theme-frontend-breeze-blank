@@ -85,7 +85,7 @@
         }
 
         > .button-close::before {
-            -webkit-mask-size: @4 @4;
+            .lib-css(-webkit-mask-size, @message-close-icon__mask-size);
         }
 
         &.success {
@@ -93,7 +93,7 @@
             .lib-rgb(--message-color, @message-success__text-color);
             .lib-rgb(--message-border-color, @message-success__border-color);
             &::before {
-                .breeze-icon(@message-success__icon, @message__icon-size);
+                .breeze-icon(@message-success__icon, @message-icon__size);
             }
         }
         &.info,
@@ -103,7 +103,7 @@
             .lib-rgb(--message-color, @message-info__text-color);
             .lib-rgb(--message-border-color, @message-info__border-color);
             &::before {
-                .breeze-icon(@message-info__icon, @message__icon-size)
+                .breeze-icon(@message-info__icon, @message-icon__size)
             }
         }
         &.error {
@@ -111,7 +111,7 @@
             .lib-rgb(--message-color, @message-error__text-color);
             .lib-rgb(--message-border-color, @message-error__border-color);
             &::before {
-                .breeze-icon(@message-error__icon, @message__icon-size)
+                .breeze-icon(@message-error__icon, @message-icon__size)
             }
         }
     }
