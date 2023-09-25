@@ -93,7 +93,7 @@
             .lib-rgb(--message-color, @message-success__text-color);
             .lib-rgb(--message-border-color, @message-success__border-color);
             &::before {
-                .breeze-icon(@icon-s-check, @5);
+                .breeze-icon(@message-success__icon, @message__icon-size);
             }
         }
         &.info,
@@ -103,7 +103,7 @@
             .lib-rgb(--message-color, @message-info__text-color);
             .lib-rgb(--message-border-color, @message-info__border-color);
             &::before {
-                .breeze-icon(@icon-s-information-circle, @5)
+                .breeze-icon(@message-info__icon, @message__icon-size)
             }
         }
         &.error {
@@ -111,7 +111,7 @@
             .lib-rgb(--message-color, @message-error__text-color);
             .lib-rgb(--message-border-color, @message-error__border-color);
             &::before {
-                .breeze-icon(@icon-s-exclamation-circle, @5)
+                .breeze-icon(@message-error__icon, @message__icon-size)
             }
         }
     }
