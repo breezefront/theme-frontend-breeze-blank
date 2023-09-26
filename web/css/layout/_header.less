@@ -29,7 +29,11 @@
     .header.panel {
         &:extend(.container);
         justify-content: flex-end;
-        align-items: center;
+        align-items: flex-start;
+
+        .switcher {
+            flex-shrink: 0;
+        }
 
         @media @media-xs-down {
             flex-wrap: wrap;
@@ -122,11 +126,12 @@
         .padding(@header-panel-info__padding);
         display: flex;
         flex-wrap: wrap;
+        flex-grow: 1;
         align-items: center;
         column-gap: @3;
 
         .heading,
-        > .switcher-label {
+        .switcher-label {
             display: none;
         }
         .icon {
@@ -135,9 +140,12 @@
         }
         a {
             color: currentColor;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: @1;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     @media @navigation__media-mobile {
