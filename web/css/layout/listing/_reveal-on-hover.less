@@ -14,10 +14,49 @@
     }
 }
 
+:where(.products-grid, .widget-product-carousel) .product-item {
+    // absolutely positioned primary and secondary actions
+    & when (@listing-grid-item-actions__position = absolute) {
+        & when (@listing-grid-item-actions__hover-none__position = false) {
+            .listing-grid-item-actions-absolute();
+        }
+
+        & when (@listing-grid-item-actions__hover-none__position = static) {
+            @media @media-hover {
+                .listing-grid-item-actions-absolute();
+            }
+        }
+
+        & when not (@critical) {
+            @media @media-hover {
+                &:hover {
+                    .product-item-details {
+                        .product-item-actions {
+                            opacity: 1;
+                            pointer-events: all;
+                            .lib-css(transform, @listing-grid-item-actions__absolute__visible__transform);
+                        }
+                    }
+                }
+                &:has(:focus-visible) {
+                    .product-item-details {
+                        .product-item-actions {
+                            opacity: 1;
+                            pointer-events: all;
+                            .lib-css(transform, @listing-grid-item-actions__absolute__visible__transform);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 & when (@critical) {
     :where(.products-grid, .widget-product-carousel) .product-item {
         // absolutely positioned primary button
         & when (@listing-grid-item-actions-primary__position = absolute) {
+        & when not (@listing-grid-item-actions__position = absolute) {
             & when (@listing-grid-item-actions-primary__hover-none__position = false) {
                 .listing-grid-item-actions-primary-absolute();
             }
@@ -49,9 +88,11 @@
                 }
             }
         }
+        }
 
         // absolutely positioned secondary buttons
         & when (@listing-grid-item-actions-secondary__position = absolute) {
+        & when not (@listing-grid-item-actions__position = absolute) {
             .actions-secondary {
                 @media @media-hover {
                     .lib-css(opacity, @listing-grid-item-actions-secondary__absolute__opacity);
@@ -85,6 +126,7 @@
                     .lib-css(transform, @listing-grid-item-actions-secondary__absolute__visible__transform);
                 }
             }
+        }
         }
 
         & when (@listing-grid-item-swatches__position = absolute) {
