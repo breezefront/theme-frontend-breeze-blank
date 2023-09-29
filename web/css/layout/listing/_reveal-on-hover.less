@@ -17,13 +17,17 @@
 :where(.products-grid, .widget-product-carousel) .product-item {
     // absolutely positioned primary and secondary actions
     & when (@listing-grid-item-actions__position = absolute) {
-        & when (@listing-grid-item-actions__hover-none__position = false) {
-            .listing-grid-item-actions-absolute();
-        }
+        .listing-grid-item-actions-absolute();
 
-        & when (@listing-grid-item-actions__hover-none__position = static) {
-            @media @media-hover {
-                .listing-grid-item-actions-absolute();
+        & when (@critical) {
+            @media @media-hover-none {
+                .product-item-details {
+                    .product-item-actions {
+                        opacity: 1;
+                        pointer-events: all;
+                        .lib-css(transform, @listing-grid-item-actions__absolute__visible__transform);
+                    }
+                }
             }
         }
 
