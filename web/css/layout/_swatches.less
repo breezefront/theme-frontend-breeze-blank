@@ -34,7 +34,8 @@
         .lib-css(font-family, @swatch__font-family);
         .lib-css(font-size, @swatch__font-size);
         .lib-css(font-weight, @swatch__font-weight);
-        color: @muted__color;
+        .lib-css(color, @swatch__color);
+        .lib-css(background, @swatch__background);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -42,7 +43,6 @@
         min-width: @swatch__size;
         height: @swatch__size;
         padding: 0 @1;
-        background: @muted__background;
         position: relative;
         margin: abs(@swatch__border-offset);
         .lib-css(border-radius, @swatch__border-radius);
@@ -62,6 +62,13 @@
             right: @swatch__border-offset;
         }
 
+        &.text {
+            .lib-css(border-radius, @swatch__text__border-radius);
+            &::before {
+                .lib-css(border-radius, @swatch__text__border-radius);
+            }
+        }
+
         .product-item & {
             .lib-css(font-size, @listing-swatch__font-size);
             .lib-css(font-weight, @listing-swatch__font-weight);
@@ -70,6 +77,12 @@
             & when not (@listing-swatch__border-offset = false) {
                 margin: abs(@listing-swatch__border-offset);
             }
+
+            &.text {
+                .lib-css(min-width, @listing-swatch__text__size);
+                .lib-css(height, @listing-swatch__text__size);
+            }
+
             &::before {
                 .lib-css(top, @listing-swatch__border-offset);
                 .lib-css(bottom, @listing-swatch__border-offset);

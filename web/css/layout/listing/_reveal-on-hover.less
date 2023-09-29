@@ -93,15 +93,19 @@
             }
             [class^="swatch-opt-"] {
                 position: absolute;
-                .lib-css(z-index, @listing-grid-item-swatches__z-index);
                 pointer-events: none;
-                bottom: 0;
-                left: 0;
-                right: 0;
+                .lib-css(z-index, @listing-grid-item-swatches__absolute__z-index);
+                .lib-css(top, @listing-grid-item-swatches__absolute__top);
+                .lib-css(bottom, @listing-grid-item-swatches__absolute__bottom);
+                .lib-css(left, @listing-grid-item-swatches__absolute__left);
+                .lib-css(right, @listing-grid-item-swatches__absolute__right);
+                .lib-css(padding, @listing-grid-item-swatches__absolute__padding);
+                .lib-css(border, @listing-grid-item-swatches__absolute__border);
+                .lib-css(border-radius, @listing-grid-item-swatches__absolute__border-radius);
+                .lib-css(background, @listing-grid-item-swatches__absolute__background);
+                .lib-css(--z-layer-bg-alpha, @listing-grid-item-swatches__absolute__background-opacity);
+                .lib-css(box-shadow, @listing-grid-item-swatches__absolute__box-shadow);
                 margin: 0 !important;
-                padding: @3;
-                --z-layer-bg-alpha: .85;
-                background: @z-layer__background;
                 transform: translateY(50%);
                 opacity: 0;
                 &:extend(.transition all);

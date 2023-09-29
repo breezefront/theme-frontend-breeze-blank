@@ -49,7 +49,18 @@
 @listing-grid-item-name__hover__line-clamp: 7;
 
 @listing-grid-item-swatches__position: static;
-@listing-grid-item-swatches__z-index: 1;
+@listing-grid-item-swatches__z-index: @listing-grid-item-swatches__absolute__z-index; // deprecated
+@listing-grid-item-swatches__absolute__z-index: 1;
+@listing-grid-item-swatches__absolute__top: false;
+@listing-grid-item-swatches__absolute__bottom: 0;
+@listing-grid-item-swatches__absolute__left: 0;
+@listing-grid-item-swatches__absolute__right: 0;
+@listing-grid-item-swatches__absolute__padding: @3;
+@listing-grid-item-swatches__absolute__border: false;
+@listing-grid-item-swatches__absolute__border-radius: false;
+@listing-grid-item-swatches__absolute__box-shadow: false;
+@listing-grid-item-swatches__absolute__background: @z-layer__background;
+@listing-grid-item-swatches__absolute__background-opacity: .85;
 
 @listing-grid-item-actions__gap: @1;
 
@@ -67,6 +78,7 @@
 @listing-grid-item-tocart__absolute__background-alpha: false;
 @listing-grid-item-tocart__absolute__background-color: false;
 @listing-grid-item-tocart__absolute__border-color: false;
+@listing-grid-item-tocart__absolute__border-radius: false;
 @listing-grid-item-tocart__absolute__hover__background-alpha: false;
 @listing-grid-item-tocart__absolute__box-shadow: false;
 @listing-grid-item-tocart__absolute__font-weight: false;
