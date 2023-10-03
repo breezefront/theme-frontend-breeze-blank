@@ -109,14 +109,17 @@
             &-options {
                 &-item {
                     .lib-css(margin-bottom, @layered-item__margin-bottom);
+                    .lib-css(border-bottom, @layered-item__separator);
                     &:last-child {
                         margin-bottom: 0;
+                        border: 0;
                     }
                 }
                 &-title {
                     .lib-css(font-size, @layered-item-title__font-size);
                     .lib-css(font-weight, @layered-item-title__font-weight);
-                    padding: @1 0;
+                    .lib-css(text-transform, @layered-item-title__text-transform);
+                    .lib-css(padding, @layered-item-title__padding);
                     :first-child {
                         .margin-right(auto);
                     }
@@ -127,7 +130,7 @@
                 &-content {
                     .lib-css(color, @layered-item__color);
                     > :first-child {
-                        margin: @2 0 @3;
+                        .lib-css(margin, @layered-item-content__margin);
                     }
                 }
                 .filter-count-label {
@@ -206,6 +209,7 @@
 
                     &-item {
                         margin: 0;
+                        border: 0;
                         position: relative;
                     }
 
