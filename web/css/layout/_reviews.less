@@ -45,6 +45,7 @@
             .lib-css(font-size, @review-action__font-size);
             .lib-css(line-height, @review-action__line-height);
             .lib-css(color, @review-action__color);
+            .lib-css(text-decoration, @review-action__text-decoration);
         }
     }
 
@@ -89,24 +90,33 @@
             display: none;
         }
         .review {
+            &-items {
+                display: flex;
+                flex-direction: column;
+                .lib-css(gap, @review-list__gap);
+            }
             &-item {
                 display: flex;
                 flex-direction: column;
-                gap: @2;
-                + .review-item {
-                    margin-top: @4;
-                    padding-top: @4;
-                    border-top: 1px solid @divider__color;
-                }
+                .lib-css(gap, @review-item__gap);
+                .lib-css(padding, @review-item__padding);
+                .lib-css(background, @review-item__background);
+                .lib-css(border, @review-item__border);
+                .lib-css(border-radius, @review-item__border-radius);
             }
             &-title {
-                font-weight: 500;
+                .lib-css(font-weight, @review-title__font-weight);
+                .lib-css(font-size, @review-title__font-size);
             }
             &-ratings {
                 order: -1;
             }
             &-content {
-                margin-bottom: @1;
+                .lib-css(margin, @review-content__margin);
+                .lib-css(font-family, @review-content__font-family);
+                .lib-css(font-weight, @review-content__font-weight);
+                .lib-css(font-size, @review-content__font-size);
+                .lib-css(line-height, @review-content__line-height);
             }
             &-details {
                 display: flex;
