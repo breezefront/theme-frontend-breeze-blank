@@ -27,8 +27,8 @@
 
     & when (@critical) {
         .counter {
-            opacity: .8;
-            padding: @0-5 @2;
+            .lib-css(opacity, @tab-counter__opacity);
+            .lib-css(padding, @tab-counter__padding);
             .lib-css(background, @tab-counter__background);
             .lib-css(display, @tab-counter__display);
         }
@@ -91,8 +91,15 @@
     & when (@critical) {
         --muted-bg-alpha: .5;
         justify-content: space-between;
-        border-bottom: 1px solid @divider__color;
+        .lib-css(margin, @tab-toggler__accordion__margin);
+        .lib-css(border, @tab-toggler__accordion__border);
+        .lib-css(border-width, @tab-toggler__accordion__border-width);
+        .lib-css(border-radius, @tab-toggler__accordion__border-radius);
         .lib-css(background, @tab-toggler__accordion__background);
+        &:has(+ .content + script:last-child),
+        &:has(+ .content:last-child) {
+            border-bottom-color: transparent;
+        }
         &:nth-last-child(2) {
             border-bottom-color: transparent;
         }
