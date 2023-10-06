@@ -242,21 +242,24 @@
         &::before {
             content: '';
             display: block;
-            width: @6;
-            height: @6;
+            width: @slider-arrow__width;
+            height: @slider-arrow__height;
         }
 
         &.slick-disabled {
-            opacity: 0;
+            .lib-css(opacity, @slider-arrow__disabled__opacity);
+            .lib-css(color, @slider-arrow__disabled__color);
             pointer-events: none
         }
     }
     .slick-prev {
-        .left(0);
+        .left(@slider-arrow-prev__left);
+        .right(@slider-arrow-prev__right);
         .lib-css(border-width, @slider-arrow-prev__border-width);
     }
     .slick-next {
-        .right(0);
+        .left(@slider-arrow-next__left);
+        .right(@slider-arrow-next__right);
         .lib-css(border-width, @slider-arrow-next__border-width);
     }
 
