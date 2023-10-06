@@ -10,9 +10,9 @@
 
         .page-title-wrapper {
             grid-area: title;
-            margin-bottom: @2;
-            @media @media-md-down {
-                margin-bottom: 0;
+            .lib-css(margin-bottom, @product-title__margin-bottom);
+            @media @media-md {
+                .lib-css(margin-bottom, @product-title__md__margin-bottom);
             }
             h1 {
                 margin: 0;
