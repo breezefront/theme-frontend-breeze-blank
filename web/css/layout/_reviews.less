@@ -94,6 +94,9 @@
                 display: flex;
                 flex-direction: column;
                 .lib-css(gap, @review-list__gap);
+                @media @media-md {
+                    .lib-css(gap, @review-list__md__gap);
+                }
             }
             &-item {
                 display: flex;
@@ -103,6 +106,9 @@
                 .lib-css(background, @review-item__background);
                 .lib-css(border, @review-item__border);
                 .lib-css(border-radius, @review-item__border-radius);
+                @media @media-md {
+                    .lib-css(padding, @review-item__md__padding);
+                }
             }
             &-title {
                 .lib-css(font-weight, @review-title__font-weight);
