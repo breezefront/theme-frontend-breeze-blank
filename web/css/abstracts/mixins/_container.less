@@ -1,0 +1,8 @@
+.breeze-container {
+    & when (@critical) {
+        width: 100%;
+        max-width: var(--container-max-width);
+        margin: var(--container-margin);
+        padding: var(--container-padding);
+    }
+}
