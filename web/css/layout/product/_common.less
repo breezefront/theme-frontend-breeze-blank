@@ -229,6 +229,11 @@
 
     @media @media-md {
         .product.info {
+            #reviews::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
             .review-add + .review-list, // reviews page
             #product-review-container {
                 .float(@product-review-list__float);
