@@ -81,6 +81,12 @@
         .lib-css(position, @tab-toggler__horizontal__position);
         .lib-css(z-index, @tab-toggler__horizontal__z-index);
         white-space: nowrap;
+
+        > a {
+            .lib-css(padding, @tab-toggler-inner__horizontal__padding);
+            .lib-css(border-radius, @tab-toggler-inner__horizontal__border-radius);
+            .lib-css(background, @tab-toggler-inner__horizontal__background);
+        }
     }
 }
 .breeze-tab-toggler-accordion {
@@ -124,6 +130,11 @@
 .breeze-tab-toggler-horizontal-active {
     & when (@critical) {
         .lib-css(border-color, @tab-toggler__horizontal-active__border-color);
+    }
+    & when not (@critical) {
+        > a {
+            .lib-css(background, @tab-toggler-inner__horizontal-active__background);
+        }
     }
 }
 .breeze-tab-toggler-accordion-active {
