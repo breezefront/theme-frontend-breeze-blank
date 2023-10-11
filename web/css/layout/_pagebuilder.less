@@ -22,9 +22,8 @@
             &:extend(.breeze-tab-toggler-horizontal-active all);
         }
         & when (@critical) {
-            .padding(@3 @4);
-            .margin-left(0);
-            .margin-right(0);
+            .padding(@tab-toggler__padding);
+            .padding(@tab-toggler__horizontal__padding);
         }
     }
     .tabs-content {
@@ -35,7 +34,7 @@
                 &:extend(.breeze-tab-content-common-active all);
             }
             & when (@critical) {
-                .padding(@3);
+                .padding(@tab-content__padding);
             }
         }
     }
