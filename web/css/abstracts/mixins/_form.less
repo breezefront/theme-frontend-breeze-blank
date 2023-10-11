@@ -202,43 +202,57 @@
     }
 }
 .breeze-button-xs {
-    .lib-css(font-size, @button__xs__font-size);
-    .lib-css(line-height, @button__xs__line-height);
-    .lib-css(font-weight, @button__xs__font-weight);
-    .lib-css(padding, @button__xs__padding);
+    & when (@critical) {
+        .lib-css(font-size, @button__xs__font-size);
+        .lib-css(line-height, @button__xs__line-height);
+        .lib-css(font-weight, @button__xs__font-weight);
+        .lib-css(padding, @button__xs__padding);
+    }
 }
 .breeze-button-sm {
-    .lib-css(font-size, @button__sm__font-size);
-    .lib-css(line-height, @button__sm__line-height);
-    .lib-css(font-weight, @button__sm__font-weight);
-    .lib-css(padding, @button__sm__padding);
+    & when (@critical) {
+        .lib-css(font-size, @button__sm__font-size);
+        .lib-css(line-height, @button__sm__line-height);
+        .lib-css(font-weight, @button__sm__font-weight);
+        .lib-css(padding, @button__sm__padding);
+    }
 }
 .breeze-button-lg {
-    .lib-css(font-size, @button__lg__font-size);
-    .lib-css(line-height, @button__lg__line-height);
-    .lib-css(font-weight, @button__lg__font-weight);
-    .lib-css(padding, @button__lg__padding);
+    & when (@critical) {
+        .lib-css(font-size, @button__lg__font-size);
+        .lib-css(line-height, @button__lg__line-height);
+        .lib-css(font-weight, @button__lg__font-weight);
+        .lib-css(padding, @button__lg__padding);
+    }
 }
 .breeze-button-xl {
-    .lib-css(font-size, @button__xl__font-size);
-    .lib-css(line-height, @button__xl__line-height);
-    .lib-css(font-weight, @button__xl__font-weight);
-    .lib-css(padding, @button__xl__padding);
+    & when (@critical) {
+        .lib-css(font-size, @button__xl__font-size);
+        .lib-css(line-height, @button__xl__line-height);
+        .lib-css(font-weight, @button__xl__font-weight);
+        .lib-css(padding, @button__xl__padding);
+    }
 }
 
 .breeze-input-xs {
-    .breeze-text-xs();
-    padding: @1;
-    width: auto;
-    flex-grow: 0;
+    & when (@critical) {
+        .breeze-text-xs();
+        padding: @1;
+        width: auto;
+        flex-grow: 0;
+    }
 }
 .breeze-input-lg {
-    .breeze-text-lg();
-    .lib-css(font-weight, @input__lg__font-weight);
-    .lib-css(padding, @input__lg__padding);
+    & when (@critical) {
+        .breeze-text-lg();
+        .lib-css(font-weight, @input__lg__font-weight);
+        .lib-css(padding, @input__lg__padding);
+    }
 }
 .breeze-input-xl {
-    .breeze-text-xl();
-    .lib-css(font-weight, @input__xl__font-weight);
-    .lib-css(padding, @input__xl__padding);
+    & when (@critical) {
+        .breeze-text-xl();
+        .lib-css(font-weight, @input__xl__font-weight);
+        .lib-css(padding, @input__xl__padding);
+    }
 }
