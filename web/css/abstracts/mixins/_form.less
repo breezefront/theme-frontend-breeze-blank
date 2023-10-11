@@ -93,6 +93,9 @@
     & when (@critical) {
         --link-color: var(--button-color);
         --link-alpha: 1;
+        --button-bg: var(--button-primary-bg);
+        --button-color: var(--button-primary-color);
+        --button-border-color: var(--button-primary-border-color);
         .lib-css(text-shadow, @button__text-shadow);
     }
     & when not (@critical) {
