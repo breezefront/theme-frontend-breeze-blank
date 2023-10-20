@@ -3,20 +3,20 @@
     .color-invert { &:extend(.breeze-invert-colors all); }
 
     .font {
-        &-sans { font-family: @font-sans; }
-        &-serif { font-family: @font-serif; }
-        &-mono { font-family: @font-mono; }
+        &-sans { font-family: @font-sans !important; }
+        &-serif { font-family: @font-serif !important; }
+        &-mono { font-family: @font-mono !important; }
     }
     .text {
-        &-xs { &:extend(.breeze-text-xs); }
-        &-sm { &:extend(.breeze-text-sm); }
-        &-base { &:extend(.breeze-text-base); }
-        &-lg { &:extend(.breeze-text-lg); }
-        &-xl { &:extend(.breeze-text-xl); }
-        &-2xl { &:extend(.breeze-text-2xl); }
-        &-3xl { &:extend(.breeze-text-3xl); }
-        &-4xl { &:extend(.breeze-text-4xl); }
-        &-5xl { &:extend(.breeze-text-5xl); }
+        &-xs { .breeze-text-xs() !important; }
+        &-sm { .breeze-text-sm() !important; }
+        &-base { .breeze-text-base() !important; }
+        &-lg { .breeze-text-lg() !important; }
+        &-xl { .breeze-text-xl() !important; }
+        &-2xl { .breeze-text-2xl() !important; }
+        &-3xl { .breeze-text-3xl() !important; }
+        &-4xl { .breeze-text-4xl() !important; }
+        &-5xl { .breeze-text-5xl() !important; }
     }
 
     .a-center { text-align: center; }
