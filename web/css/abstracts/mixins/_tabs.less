@@ -67,6 +67,9 @@
             .lib-css(background, @tab-toggler__hover__background);
             .lib-css(color, @tab-toggler__hover__color);
         }
+        &:focus-visible {
+            z-index: 10;
+        }
     }
 }
 .breeze-tab-toggler-horizontal {
