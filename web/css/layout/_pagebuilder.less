@@ -273,6 +273,10 @@
         }
     }
 
+    .pagebuilder-column-group {
+        display: flex;
+    }
+
     .pagebuilder-column-gap (@i) when (@i <= 8) {
         .pagebuilder-column-group {
             .gap-@{i} > &, // 2.4.4 legacy. Not working in 2.4.5
