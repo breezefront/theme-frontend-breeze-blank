@@ -62,6 +62,33 @@
     line-height: @line-height__5xl;
 }
 
+.breeze-line-clamp {
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    max-height: ~"calc(var(--line-clamp, 1) * var(--line-height, @{base__line-height}))"; // safari fix
+
+    &.expanded {
+        display: block;
+        -webkit-line-clamp: initial !important;
+        overflow: visible;
+        max-height: none;
+    }
+    .clamp-toggle {
+        position: absolute;
+        bottom: 0;
+        .right(0);
+        .padding-left(@3);
+        .modrtl(
+            background,
+            linear-gradient(to right, transparent 0, @z-layer__background @2),
+            linear-gradient(to left, transparent 0, @z-layer__background @2)
+        );
+    }
+}
+
 .breeze-link {
     color: @link__color;
     text-decoration: @link__text-decoration;
