@@ -30,6 +30,17 @@
     .nowrap { white-space: nowrap; }
     .underline { text-decoration: underline; }
 
+    .rounded {
+        border-radius: @1;
+        &-sm { border-radius: @0-5; }
+        &-md { border-radius: @1-5; }
+        &-lg { border-radius: @2; }
+        &-xl { border-radius: @3; }
+        &-2xl { border-radius: @4; }
+        &-3xl { border-radius: @6; }
+        &-full { border-radius: 9999px; }
+    }
+
     .relative { position: relative; }
     .absolute { position: absolute; }
     .top-0 { top: 0; }
