@@ -29,6 +29,14 @@
         &-5xl { .breeze-text-5xl() !important; }
     }
 
+    .leading {
+        &-tight { line-height: 1.25 !important; }
+        &-snug { line-height: 1.375 !important; }
+        &-normal { line-height: 1.5 !important; }
+        &-relaxed { line-height: 1.625 !important; }
+        &-loose { line-height: 2 !important; }
+    }
+
     .line-clamp-1 { &:extend(.breeze-line-clamp all); }
     .line-clamp-2 { &:extend(.breeze-line-clamp all); --line-clamp: 2; }
     .line-clamp-3 { &:extend(.breeze-line-clamp all); --line-clamp: 3; }
