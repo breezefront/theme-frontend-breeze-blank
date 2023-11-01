@@ -141,8 +141,11 @@
 }
 
 .breeze-prose {
-    :where(a:not(.product-item-link):not(.product-item-photo):not(.action)) {
+    :where(a:not(.product-item-link):not(.action)) {
         .breeze-link();
+    }
+    :where(a div) {
+        color: @base__color;
     }
     p,
     table,
