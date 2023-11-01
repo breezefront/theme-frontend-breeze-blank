@@ -63,7 +63,7 @@
                 <height>110</height>
             </image>
 
-            <!-- These lists use category_page_list fallback. Not need to declare srcset for them -->
+            <!-- These lists always render image with width/2 -->
             <image id="recently_viewed_products_list_content_widget" type="small_image">
                 <width>540</width>
                 <height>677</height>
@@ -72,8 +72,6 @@
                 <width>540</width>
                 <height>677</height>
             </image>
-
-            <!-- These lists use category_page_grid fallback. Not need to declare srcset for them -->
             <image id="recently_viewed_products_grid_content_widget" type="small_image">
                 <width>472</width>
                 <height>592</height>
@@ -82,6 +80,8 @@
                 <width>472</width>
                 <height>592</height>
             </image>
+
+            <!-- These lists use category_page_grid fallback. Not need to declare srcset for them -->
             <image id="related_products_list" type="small_image">
                 <width>236</width>
                 <height>296</height>
@@ -220,6 +220,7 @@
                 <height>75</height>
             </image>
 
+            <!-- These lists always render image with width/2 -->
             <image id="recently_viewed_products_images_names_widget" type="small_image">
                 <width>156</width>
                 <height>156</height>
