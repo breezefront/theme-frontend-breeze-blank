@@ -330,6 +330,10 @@
                 margin-top: @listing-list__gap;
                 padding-top: @listing-list__gap;
                 .lib-css(border-top, @listing-list__divider);
+                @media @media-lg {
+                    .lib-css(margin-top, @listing-list__lg__gap);
+                    .lib-css(padding-top, @listing-list__lg__gap);
+                }
                 .sidebar & {
                     border: 0;
                     margin-top: @1-5;
@@ -338,6 +342,9 @@
             }
             .product-item-info {
                 gap: @listing-list-item__gap;
+                @media @media-lg {
+                    .lib-css(gap, @listing-list-item__lg__gap);
+                }
                 .sidebar & {
                     gap: @2;
                 }
