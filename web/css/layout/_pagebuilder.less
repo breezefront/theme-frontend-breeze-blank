@@ -193,24 +193,24 @@
     .slick-dots {
         &:extend(.breeze-prose-reset ul all);
         width: 100%;
-        padding: @2-5 0;
         display: flex;
-        justify-content: center;
-        gap: @2;
+        .lib-css(padding, @slider-dots__padding);
+        .lib-css(justify-content, @slider-dots__justify-content);
+        .lib-css(gap, @slider-dots__gap);
 
         button {
             padding: 0;
-            border-radius: 50%;
-            border: 1px solid @divider__color;
-            background: @black;
+            .lib-css(border-radius, @slider-dot__border-radius);
+            .lib-css(border, @slider-dot__border);
+            .lib-css(background, @slider-dot__background);
             text-indent: -9999px;
             display: block;
-            width: @4;
-            height: @4;
-            box-shadow: 0 0 0 1px @white;
+            .lib-css(width, @slider-dot__width);
+            .lib-css(height, @slider-dot__height);
+            .lib-css(box-shadow, @slider-dot__box-shadow);
         }
         .slick-active button {
-            background: @white;
+            .lib-css(background, @slider-dot__active__background);
         }
     }
 
