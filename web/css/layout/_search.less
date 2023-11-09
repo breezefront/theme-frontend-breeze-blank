@@ -24,12 +24,23 @@
         flex-wrap: wrap;
         gap: @4;
     }
+    .search.found {
+        margin-bottom: @1;
+    }
+    .search.summary {
+        margin-bottom: @2;
+    }
 }
 
 & when not (@critical) {
     .search-terms {
         a:hover {
             text-decoration: underline;
+        }
+    }
+    .search.summary + .message {
+        .button-close {
+            display: none;
         }
     }
 }
