@@ -21,8 +21,8 @@
         gap: @breadcrumbs-item__gap;
         &::after {
             content: @breadcrumbs-item-separator__content;
-            width: @breadcrumbs-item-separator__width;
-            height: @breadcrumbs-item-separator__height;
+            .lib-css(width, @breadcrumbs-item-separator__width);
+            .lib-css(height, @breadcrumbs-item-separator__height);
         }
         &:last-child::after {
             display: none;
