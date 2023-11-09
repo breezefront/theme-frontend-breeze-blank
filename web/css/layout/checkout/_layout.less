@@ -61,10 +61,11 @@
         .step-title,
         .field-select-billing .label,
         &-block-summary > .title {
-            .breeze-text-xl();
             display: block;
-            font-weight: 500;
-            margin-bottom: @3;
+            font-size: @checkout-step-title__font-size;
+            font-weight: @checkout-step-title__font-weight;
+            line-height: @checkout-step-title__line-height;
+            margin: @checkout-step-title__margin;
         }
 
         > li {
@@ -96,6 +97,7 @@
                     box-shadow: none;
                     max-height: none;
                     border-radius: 0;
+                    .lib-css(border-radius, @checkout-sidebar__border-radius);
                 }
                 .modal-content {
                     margin: 0;
