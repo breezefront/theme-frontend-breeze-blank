@@ -274,6 +274,15 @@
                 .lib-css(background, @navigation-item-level0__opened__background);
             }
 
+            li.active,
+            li.has-active {
+                > a.level-top,
+                > a.level-top:hover {
+                    .lib-css(color, @navigation-item-level0__active__color);
+                    .lib-css(background, @navigation-item-level0__active__background);
+                }
+            }
+
             .parent {
                 > a {
                     .ui-icon {
