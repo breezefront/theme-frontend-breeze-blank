@@ -264,10 +264,11 @@
 
     @media @navigation__media-desktop {
         .navigation-wrapper {
+            li > a:hover,
             .opened > a {
                 .lib-css(background, @navigation-item__opened__background);
             }
-            a.level-top:hover,
+            li > a.level-top:hover,
             .opened > a.level-top {
                 .lib-css(color, @navigation-item-level0__opened__color);
                 .lib-css(background, @navigation-item-level0__opened__background);
