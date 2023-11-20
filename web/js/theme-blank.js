@@ -3,8 +3,6 @@ define([
 ], function ($) {
     'use strict';
 
-    $('body').removeClass('breeze-inactive');
-
     if (getComputedStyle(document.body).getPropertyValue('--header-panel-slideout')) {
         $('.panel.header')
             .clone()

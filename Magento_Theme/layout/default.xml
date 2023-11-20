@@ -3,7 +3,6 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <attribute name="class" value="breeze-theme"/>
-        <attribute name="class" value="breeze-inactive"/>
 
         <move element="skip_to_content" destination="header.container" before="-"/>
         <referenceBlock name="cookie-status-check" remove="true"/>
