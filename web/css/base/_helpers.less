@@ -44,7 +44,9 @@
     .line-clamp-5 { &:extend(.breeze-line-clamp all); --line-clamp: 5; }
     .line-clamp-6 { &:extend(.breeze-line-clamp all); --line-clamp: 6; }
 
-    .a-center { text-align: center; }
+    .text-left { .text-align(left); }
+    .text-right { .text-align(right); }
+    .text-center, .a-center { text-align: center; }
     .nowrap { white-space: nowrap; }
     .underline { text-decoration: underline; }
     .select-none { user-select: none; }
