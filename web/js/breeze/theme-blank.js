@@ -59,10 +59,12 @@
         }
 
         $.async('.breeze-carousel .products-grid', (el) => {
-            $(el).pagebuilderCarousel({
-                arrows: true
-            });
-            $(el).parents('.hide.show-on-ready').removeClass('hide');
+            $.onReveal(el, () => require(['pagebuilderCarousel'], () => {
+                $(el).pagebuilderCarousel({
+                    arrows: true
+                });
+                $(el).parents('.hide.show-on-ready').removeClass('hide');
+            }));
         });
     });
 
