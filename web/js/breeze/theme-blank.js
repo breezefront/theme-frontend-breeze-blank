@@ -58,12 +58,20 @@
             });
         }
 
-        $.async('.breeze-carousel .products-grid', (el) => {
+        $.async('div:has(>.hide.show-on-ready .breeze-carousel)', el => {
             $.onReveal(el, () => require(['pagebuilderCarousel'], () => {
-                $(el).pagebuilderCarousel({
-                    arrows: true
+                $.async({
+                    selector: '.breeze-carousel .products-grid',
+                    ctx: el
+                }, el => {
+                    $(el).pagebuilderCarousel().parents('.hide.show-on-ready').removeClass('hide');
                 });
-                $(el).parents('.hide.show-on-ready').removeClass('hide');
+            }));
+        });
+
+        $.async('.breeze-carousel .products-grid', el => {
+            $.onReveal(el, () => require(['pagebuilderCarousel'], () => {
+                $(el).pagebuilderCarousel();
             }));
         });
     });
