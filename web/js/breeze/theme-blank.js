@@ -90,7 +90,6 @@
             .data('breeze-temporary', true)
             .appendTo($('.navigation-wrapper'));
 
-        $('.mobile-header-panel').find('[data-breeze-processed]').removeAttr('data-breeze-processed');
         $('.mobile-header-panel')
             .trigger('contentUpdated')
             .find('[id],[for]')
