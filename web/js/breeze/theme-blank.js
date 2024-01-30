@@ -59,20 +59,16 @@
         }
 
         $.async('div:has(>.hide.show-on-ready .breeze-carousel)', el => {
-            $.onReveal(el, () => require(['pagebuilderCarousel'], () => {
-                $.async({
-                    selector: '.breeze-carousel .products-grid',
-                    ctx: el
-                }, el => {
-                    $(el).pagebuilderCarousel().parents('.hide.show-on-ready').removeClass('hide');
-                });
+            $.onReveal(el, () => $.async({
+                selector: '.breeze-carousel .products-grid',
+                ctx: el
+            }, el => {
+                $(el).pagebuilderCarousel().parents('.hide.show-on-ready').removeClass('hide');
             }));
         });
 
         $.async('.breeze-carousel .products-grid', el => {
-            $.onReveal(el, () => require(['pagebuilderCarousel'], () => {
-                $(el).pagebuilderCarousel();
-            }));
+            $.onReveal(el, () => $(el).pagebuilderCarousel());
         });
     });
 
