@@ -21,9 +21,14 @@
 
 @media @navigation__media-mobile {
     .navigation-wrapper {
+        display: none;
         .breeze-slideout();
         .nav-open & {
             .breeze-slideout-visible();
+        }
+        .nav-open &,
+        .nav-before-open & {
+            display: block;
         }
     }
     .nav-toggle::before {
