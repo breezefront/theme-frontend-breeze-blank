@@ -13,4 +13,13 @@
         content: ' + ';
         display: inline;
     }
+    .downloads-all {
+        [type="checkbox"] {
+            display: none;
+        }
+        .label {
+            &:extend(.breeze-link all);
+            cursor: pointer;
+        }
+    }
 }
