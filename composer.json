@@ -2,7 +2,7 @@
     "name": "swissup/theme-frontend-breeze-blank",
     "description": "Clean, lightning-fast breeze-powered theme.",
     "type": "magento2-theme",
-    "version": "2.6.3",
+    "version": "2.6.4",
     "license": "OSL-3.0",
     "autoload": {
         "files": [
@@ -10,7 +10,7 @@
         ]
     },
     "require": {
-        "swissup/module-breeze": "^2.12.0",
+        "swissup/module-breeze": "^2.13.1",
         "swissup/module-rtl": "*"
     }
 }
