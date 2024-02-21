@@ -158,7 +158,11 @@
             -webkit-mask-repeat: repeat-x;
             -webkit-mask-position: 0 50%;
         }
-        label:hover,
+        @media @media-hover {
+            label:hover {
+                opacity: 1;
+            }
+        }
         input:checked + label,
         input:focus-visible + label {
             opacity: 1;
