@@ -176,17 +176,19 @@
         }
     }
 
-    .account-dropdown,
-    .wishlist-dropdown {
-        > .action::before {
-            flex-shrink: 0;
+    .switcher {
+        .account-dropdown,
+        .wishlist-dropdown {
+            > .action::before {
+                flex-shrink: 0;
+            }
         }
-    }
-    .account-dropdown > .action::before {
-        .breeze-icon-critical(@header-actions-icon__account, @header-actions-icon__width, @header-actions-icon__height);
-    }
-    .wishlist-dropdown > .action::before {
-        .breeze-icon-critical(@header-actions-icon__wishlist, @header-actions-icon__width, @header-actions-icon__height);
+        .account-dropdown > .action::before {
+            .breeze-icon-critical(@header-actions-icon__account, @header-actions-icon__width, @header-actions-icon__height);
+        }
+        .wishlist-dropdown > .action::before {
+            .breeze-icon-critical(@header-actions-icon__wishlist, @header-actions-icon__width, @header-actions-icon__height);
+        }
     }
 }
 
