@@ -186,7 +186,7 @@
         }
     }
 
-    .cart.table {
+    .cart.table-wrapper {
         .item-info {
             border: 0;
         }
@@ -205,11 +205,11 @@
             }
             &-name {
                 .breeze-text-lg();
-                display: inline-block;
+                display: block;
                 margin-bottom: @2;
             }
         }
-        .field.qty {
+        .control.qty {
             span {
                 &:extend(.breeze-sr-only);
             }
@@ -227,19 +227,19 @@
             align-items: flex-start;
             justify-content: flex-end;
         }
-        a.action {
+        .action::before {
+            width: @6;
+            height: @6;
+        }
+        .action-edit,
+        .action-delete,
+        .action-towishlist {
             --muted-alpha: .3;
             color: @muted__color;
             &::before {
                 content: '';
                 display: block;
-                width: @6;
-                height: @6;
             }
-        }
-        a.action-edit,
-        a.action-delete,
-        a.action-towishlist {
             span {
                 &:extend(.breeze-sr-only);
             }
@@ -277,6 +277,10 @@
                 margin: @2 0;
             }
         }
+        .item-options,
+        .message {
+            margin: @2 0;
+        }
     }
     .cart-tax-total {
         display: inline-flex;
@@ -290,20 +294,23 @@
 }
 
 & when not (@critical) {
-    .form-cart {
+    .cart.table-wrapper {
+        .action-edit,
+        .action-delete,
+        .action-towishlist {
+            &:extend(.transition all);
+            &:hover {
+                --muted-alpha: .6;
+            }
+        }
+        .action::before {
+            -webkit-mask-size: @5 @5;
+        }
         .action-edit::before {
             .breeze-icon(@icon-pencil, @5);
         }
         .action-delete::before {
             .breeze-icon(@icon-trash, @5);
-        }
-    }
-    .cart.table {
-        a.action {
-            &:extend(.transition all);
-            &:hover {
-                --muted-alpha: .6;
-            }
         }
         .action-gift::after {
            .breeze-icon(@icon-chevron, @3);
