@@ -190,3 +190,29 @@
     .lib-css(border, @boxed-block-title__border);
     .lib-css(border-width, @boxed-block-title__border-width);
 }
+
+.breeze-block-account {
+    .block-title {
+        &:extend(.breeze-block-account-title all);
+    }
+    .block-title + .block-content {
+        &:extend(.breeze-block-account-content all);
+    }
+}
+.breeze-block-account-title {
+    .lib-css(line-height, @account-block-title__line-height);
+    .lib-css(font-size, @account-block-title__font-size);
+    .lib-css(font-weight, @account-block-title__font-weight);
+    .lib-css(text-transform, @account-block-title__text-transform);
+    .lib-css(margin, @account-block-title__margin);
+    .lib-css(padding, @account-block-title__padding);
+    .lib-css(border, @account-block-title__border);
+    .lib-css(border-width, @account-block-title__border-width);
+    .lib-css(background, @account-block-title__background);
+    strong {
+        .lib-css(font-weight, @account-block-title__font-weight);
+    }
+}
+.breeze-block-account-content {
+    .lib-css(padding, @account-block-content__padding);
+}

@@ -56,22 +56,7 @@
     .account {
         .main {
             .block {
-                .block-title {
-                    .lib-css(line-height, @account-block-title__line-height);
-                    .lib-css(font-size, @account-block-title__font-size);
-                    .lib-css(text-transform, @account-block-title__text-transform);
-                    .lib-css(margin, @account-block-title__margin);
-                    .lib-css(padding, @account-block-title__padding);
-                    .lib-css(border, @account-block-title__border);
-                    .lib-css(border-width, @account-block-title__border-width);
-                    .lib-css(background, @account-block-title__background);
-                    strong {
-                        .lib-css(font-weight, @account-block-title__font-weight);
-                    }
-                }
-                .block-title + .block-content {
-                    .lib-css(padding, @account-block-content__padding);
-                }
+                &:extend(.breeze-block-account all);
             }
         }
     }
