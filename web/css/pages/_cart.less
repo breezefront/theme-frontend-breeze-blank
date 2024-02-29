@@ -30,6 +30,14 @@
 
     // totals summary at cart and checkout
     :where(.table-totals, .table.totals) {
+        a {
+            &:extend(.breeze-link all);
+            display: inline-block;
+        }
+        button {
+            padding: 0 @1-5;
+            border: 0;
+        }
         .amount {
             .text-align(right);
         }

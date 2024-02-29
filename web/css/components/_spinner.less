@@ -42,6 +42,9 @@
     }
 
     .load.indicator {
+        &[style*="display: inline"] {
+            display: flex !important;
+        }
         &::before {
             content: '';
             display: block;
