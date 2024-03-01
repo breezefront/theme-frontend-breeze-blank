@@ -21,7 +21,7 @@
         }
     }
 
-    .message {
+    .message:where(.warning, .success, .notice, .error, .info) {
         display: flex;
         align-items: flex-start;
         gap: @1;
@@ -37,6 +37,15 @@
         .lib-css(border-width, @message__border-width);
         .lib-css(box-shadow, @message__box-shadow);
 
+        &::before {
+            flex-shrink: 0;
+            content: '';
+            width: @6;
+            height: @6;
+        }
+    }
+
+    .message {
         > div {
             .margin-right(auto);
         }
@@ -55,28 +64,16 @@
         a {
             text-decoration: underline !important;
         }
-
-        &.warning,
-        &.success,
-        &.notice,
-        &.error,
-        &.info, {
-            &::before {
-                flex-shrink: 0;
-                content: '';
-                width: @6;
-                height: @6;
-            }
-        }
     }
 }
 
 & when not (@critical) {
-    .message {
+    .message:where(.warning, .success, .notice, .error, .info) {
         .lib-css(background, @message__background);
         .lib-css(color, @message__color);
         .lib-css(border-color, @message__border-color);
-
+    }
+    .message {
         a {
             .lib-css(color, @message-link__color);
             &:hover {
