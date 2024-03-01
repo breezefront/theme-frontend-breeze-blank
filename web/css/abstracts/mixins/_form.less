@@ -243,3 +243,67 @@
     .lib-css(font-weight, @input__xl__font-weight);
     .lib-css(padding, @input__xl__padding);
 }
+
+// row builder forms
+.abs-form-row-builder {
+    .fields {
+        + .fields {
+            margin-top: @4;
+        }
+
+        .actions-toolbar {
+            width: 20%;
+            align-items: flex-start;
+            margin-top: @6-5;
+            margin-bottom: 0;
+            order: 999;
+        }
+        .fieldset {
+            width: 65%;
+            display: grid;
+            @media @media-sm {
+                width: 80%;
+                grid-template-columns: 1fr 1fr;
+            }
+            gap: @2;
+            row-gap: @1;
+            > .field {
+                padding: 0;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// two columns forms
+.abs-form-field-column-2 {
+    .fieldset {
+        letter-spacing: -.25em;
+        > :not(.fieldset) {
+            letter-spacing: normal;
+        }
+        > .field {
+            .padding-right(@2);
+            display: inline-block;
+            width: 50%;
+            vertical-align: top;
+
+            &:nth-child(2) {
+                margin-top: 0;
+            }
+        }
+        > :not(.field) ~ .field:not(.field .field):nth-child(3) {
+            margin-top: 0;
+        }
+    }
+    .fields {
+        .field + .field + .field {
+            margin-top: @2;
+        }
+    }
+}
+@media @media-sm {
+    .abs-form-field__media-sm__column-2 {
+        .abs-form-field-column-2();
+    }
+}
