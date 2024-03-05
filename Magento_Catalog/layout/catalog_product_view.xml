@@ -6,7 +6,7 @@
             <container name="product.info.wrapper" htmlTag="div" htmlClass="product-info-wrapper" before="-"/>
         </referenceContainer>
 
-        <move element="page.main.title" destination="product.info.wrapper"/>
+        <move element="page.main.title" destination="product.info.main" before="-"/>
         <move element="product.info.main" destination="product.info.wrapper"/>
         <move element="product.info.media" destination="product.info.wrapper"/>
     </body>

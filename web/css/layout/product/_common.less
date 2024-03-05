@@ -20,6 +20,9 @@
         }
         .product-info-main {
             grid-area: main;
+            @media @media-md-down {
+                display: contents;
+            }
         }
         .product.media {
             grid-area: media;
@@ -270,6 +273,17 @@
 }
 
 & when not (@critical) {
+    & when (@product-info__sticky) {
+        @media @media-md {
+            .product.media:not(:has(.opened)),
+            .product-info-wrapper .product-info-main {
+                position: sticky;
+                .lib-css(top, @product-info__sticky__top);
+                .lib-css(z-index, @product-info__sticky__z-index);
+                align-self: flex-start;
+            }
+        }
+    }
     .product-social-links {
         a.action,
         button.action {
