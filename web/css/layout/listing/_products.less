@@ -299,7 +299,7 @@
 
             // Name and price in a single line
             & when (@listing-grid-item__price-aside-name = true) {
-                .product-item-details {
+                .product-item-details:not(:has(.msrp-message)) {
                     flex-direction: row;
                     flex-wrap: wrap;
                     > * {
