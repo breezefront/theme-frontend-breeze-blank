@@ -68,6 +68,12 @@
     & when not (@critical) {
         .transition();
 
+        &.selected {
+            .breeze-rgb(--button-color, @button__selected__text-color);
+            .breeze-rgb(--button-bg, @button__selected__background-color);
+            .breeze-rgb(--button-border-color, @button__selected__border-color);
+        }
+
         @media @media-hover {
             &:hover {
                 --button-bg-alpha: var(--button-hover-bg-alpha);
