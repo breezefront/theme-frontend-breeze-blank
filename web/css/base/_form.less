@@ -116,7 +116,7 @@ button,
     .nested > .field,
     button + .field,
     .field + button,
-    .field + .fieldset,
+    :where(.field:not([style*="display: none"])) + .fieldset,
     .field + .field-recaptcha,
     .field ~ .field {
         margin-top: @3;

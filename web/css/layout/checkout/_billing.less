@@ -30,6 +30,7 @@
             padding: @2 0;
         }
         &-content {
+            margin: 0;
             .padding(@2 0 0 @6);
             display: none;
 
@@ -107,11 +108,21 @@
 
     .field-select-billing {
         margin-bottom: @4;
+        &:has(> .control:empty) {
+            display: none !important;
+            + div {
+                margin-top: 0;
+            }
+        }
     }
     .billing-address-details {
+        margin: 0;
         .padding(@2 0 0 @6);
         .action {
             margin-top: @1;
+        }
+        .billing-address-same-as-shipping-block[style*="display: none"] ~ & {
+            padding: 0;
         }
     }
 
