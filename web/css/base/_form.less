@@ -63,6 +63,9 @@ button,
         &.field {
             margin-bottom: 0;
         }
+        &:not(:has(*)) {
+            display: none;
+        }
     }
     form:has(.fieldset + .loading-mask:last-child) {
         .fieldset:nth-last-child(2) {
