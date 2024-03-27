@@ -1,0 +1,50 @@
+& when (@critical) {
+    #store-pickup {
+        padding-bottom: 0;
+        .form-login {
+            margin: @4 0;
+        }
+    }
+    #opc-store-selector-popup {
+        display: none;
+    }
+    #delivery-method-selector ~ div {
+        margin-top: @4;
+    }
+    #store-pickup.selected-store-pickup ~ #shipping,
+    #store-pickup.selected-store-pickup ~ #opc-shipping_method {
+        padding: 0;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+    }
+}
+
+& when not (@critical) {
+    .store-selector-popup {
+        .modal-content {
+            padding-top: @1;
+        }
+    }
+    .store-selector-search {
+        display: flex;
+        gap: @2;
+        .label {
+            display: none;
+            + .control {
+                margin-top: 0;
+            }
+        }
+        .field {
+            flex-grow: 1;
+        }
+        .actions .search {
+            height: 100%;
+        }
+    }
+    .store-selector-popup-empty-query,
+    .store-selector-popup-no-locations {
+        margin-top: @2;
+        color: @muted__color;
+    }
+}
