@@ -119,6 +119,9 @@
         }
     }
     .product-items {
+        .product-item:has(.stock.unavailable) {
+            .lib-css(filter, @listing-item__out-of-stock__filter);
+        }
         .product-item-name {
             .lib-css(color, @listing-item-name__color);
             .lib-css(font-size, @listing-item-name__font-size);
