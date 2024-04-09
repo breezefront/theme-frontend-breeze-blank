@@ -74,25 +74,12 @@
                 }
             }
 
-            &:hover::after {
-                opacity: 0;
-            }
+            &:hover::after,
             &:has(:focus-visible)::after {
                 opacity: 0;
             }
 
-            &:hover {
-                .price-box ~ * {
-                    opacity: 1;
-                    pointer-events: all;
-                }
-
-                & when not (@listing-grid-item-name__line-clamp = false) {
-                    .product-item-name {
-                        .lib-css(-webkit-line-clamp, @listing-grid-item-name__hover__line-clamp);
-                    }
-                }
-            }
+            &:hover,
             &:has(:focus-visible) {
                 .price-box ~ * {
                     opacity: 1;

@@ -33,15 +33,7 @@
 
         & when not (@critical) {
             @media @media-hover {
-                &:hover {
-                    .product-item-details {
-                        .product-item-actions {
-                            opacity: 1;
-                            pointer-events: all;
-                            .lib-css(transform, @listing-grid-item-actions__absolute__visible__transform);
-                        }
-                    }
-                }
+                &:hover,
                 &:has(:focus-visible) {
                     .product-item-details {
                         .product-item-actions {
@@ -77,15 +69,7 @@
         & when (@listing-grid-item-actions-primary__position = absolute) {
         & when not (@listing-grid-item-actions__position = absolute) {
             @media @media-hover {
-                &:hover {
-                    .product-item-details {
-                        .actions-primary {
-                            opacity: 1;
-                            pointer-events: all;
-                            .lib-css(transform, @listing-grid-item-actions-primary__absolute__visible__transform);
-                        }
-                    }
-                }
+                &:hover,
                 &:has(:focus-visible) {
                     .product-item-details {
                         .actions-primary {
@@ -123,12 +107,7 @@
                 }
                 &:extend(.transition all);
             }
-            &:hover {
-                .actions-secondary {
-                    opacity: 1;
-                    .lib-css(transform, @listing-grid-item-actions-secondary__absolute__visible__transform);
-                }
-            }
+            &:hover,
             &:has(:focus-visible) {
                 .actions-secondary {
                     opacity: 1;
@@ -162,13 +141,7 @@
                 &:extend(.transition all);
             }
             @media @media-hover {
-                &:hover {
-                    [class^="swatch-opt-"] {
-                        pointer-events: all;
-                        opacity: 1;
-                        transform: none;
-                    }
-                }
+                &:hover,
                 &:has(:focus-visible) {
                     [class^="swatch-opt-"] {
                         pointer-events: all;
