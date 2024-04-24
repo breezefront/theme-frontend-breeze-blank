@@ -70,6 +70,18 @@
         $.async('.breeze-carousel .products-grid', el => {
             $.onReveal(el, () => $(el).pagebuilderCarousel());
         });
+
+        $.async('.hover-zoom', el => {
+            $(el).one('mouseenter', () => {
+                var bgEl = $('a > [data-background-images]', el);
+
+                if (!bgEl.length || parseFloat($(el).css('border-radius'))) {
+                    return;
+                }
+
+                $(el).css('border-radius', bgEl.css('border-radius'));
+            });
+        });
     });
 
     $(document).on('menuSlideout:beforeOpen', () => {

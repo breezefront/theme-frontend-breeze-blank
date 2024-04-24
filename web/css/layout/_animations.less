@@ -1,0 +1,21 @@
+& when not (@critical) {
+    @media (prefers-reduced-motion: no-preference) {
+        .hover-zoom {
+            overflow: hidden;
+            [data-background-images^="{\\"],
+            [data-background-images^="{\\"] > * {
+                transition-property: transform;
+                transition-duration: 600ms;
+                transition-timing-function: cubic-bezier(0.35, 0, 0.05, 1);
+            }
+            &:hover {
+                [data-background-images^="{\\"] {
+                    transform: scale(1.05);
+                    > * {
+                        transform: scale(.95);
+                    }
+                }
+            }
+        }
+    }
+}
