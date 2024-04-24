@@ -4,9 +4,7 @@
             overflow: hidden;
             [data-background-images^="{\\"],
             [data-background-images^="{\\"] > * {
-                transition-property: transform;
-                transition-duration: 600ms;
-                transition-timing-function: cubic-bezier(0.35, 0, 0.05, 1);
+                transition: transform 600ms cubic-bezier(0.35, 0, 0.05, 1);
             }
             &:hover {
                 [data-background-images^="{\\"] {
