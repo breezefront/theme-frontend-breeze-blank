@@ -389,4 +389,16 @@
             }
         }
     }
+    & when (@listing-grid-item__zoom-on-hover) {
+        @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+            :where(.products-grid, .widget-product-carousel) .product-item {
+                img {
+                    .lib-css(transition, @listing-grid-item__zoom-on-hover__transition);
+                }
+                &:hover img {
+                    .lib-css(transform, @listing-grid-item__zoom-on-hover__transform);
+                }
+            }
+        }
+    }
 }
