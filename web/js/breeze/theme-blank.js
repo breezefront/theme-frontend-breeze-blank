@@ -71,15 +71,14 @@
             $.onReveal(el, () => $(el).pagebuilderCarousel());
         });
 
-        $.async('.hover-zoom', el => {
+        // Use the same border-radius for zoom element as used in pagebuilder
+        $.async('.hover-zoom:has(a > [data-background-images])', el => {
             $(el).one('mouseenter', () => {
-                var bgEl = $('a > [data-background-images]', el);
-
-                if (!bgEl.length || parseFloat($(el).css('border-radius'))) {
+                if (parseFloat($(el).css('border-radius'))) {
                     return;
                 }
 
-                $(el).css('border-radius', bgEl.css('border-radius'));
+                $(el).css('border-radius', $('a > [data-background-images]', el).css('border-radius'));
             });
         });
     });
