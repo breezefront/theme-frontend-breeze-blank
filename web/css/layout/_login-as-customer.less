@@ -1,0 +1,17 @@
+& when not (@critical) {
+    .lac-notification {
+        &-sticky {
+            .lib-css(background, @lac__background);
+            .lib-css(box-shadow, @lac__shadow);
+            .lib-css(position, @lac__position);
+            .lib-css(z-index, @lac__z-index);
+            top: 0;
+        }
+        .top-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: @2;
+        }
+    }
+}
