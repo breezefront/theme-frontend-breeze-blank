@@ -189,6 +189,11 @@
             opacity: 1;
         }
     }
+    [data-enable-parallax="0"][data-video-src] {
+        .jarallax-container:not(:has(video[style*="translate3d"], iframe[style*="translate3d"])) {
+            opacity: 0; // hide image jumping until video is loaded
+        }
+    }
 
     // Slider and carousel
     .pagebuilder-slide-wrapper,
