@@ -46,7 +46,8 @@
     }
 
     .message {
-        > div {
+        > div,
+        > span {
             .margin-right(auto);
             + .button-close {
                 .margin-left(0);
@@ -54,7 +55,8 @@
         }
 
         & when (@message__text-align = center) {
-            > div {
+            > div,
+            > span {
                 .margin-left(auto);
             }
         }
