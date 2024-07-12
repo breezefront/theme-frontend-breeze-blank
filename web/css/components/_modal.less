@@ -119,7 +119,9 @@
 
     .modal-header {
         h1 {
-            .breeze-text-2xl();
+            .lib-css(font-size, @modal-title__font-size);
+            .lib-css(line-height, @modal-title__line-height);
+            .lib-css(margin-bottom, @modal-title__margin-bottom);
         }
         .action-close {
             &:extend(.breeze-button-close all);
