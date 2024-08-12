@@ -10,7 +10,9 @@
     }
     .box-tocart .fieldset .actions > div {
         &.paypal-logo {
-            width: auto;
+            &:not(.braintree-paypal-logo) {
+                width: auto;
+            }
         }
     }
 }
