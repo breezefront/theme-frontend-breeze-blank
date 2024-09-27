@@ -12,9 +12,8 @@
             .lib-rgb(--base-color, @base__text-color);
             --base-alpha: 1;
             position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
+            .left(@2);
+            top: @2;
             z-index: 40;
             text-align: center;
             background: @base__background;
@@ -23,8 +22,7 @@
                 text-decoration: underline;
             }
             &:focus-within {
-                outline: none;
-                border-bottom: 1px solid @divider__color;
+                outline-offset: 0;
                 padding: @container__padding;
             }
         }
