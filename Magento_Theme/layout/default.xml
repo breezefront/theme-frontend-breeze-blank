@@ -68,6 +68,9 @@
         <move element="store.menu" destination="navigation.wrapper"/>
         <!-- <move element="navigation.wrapper" destination="header-wrapper" after="logo"/> -->
 
+        <!-- Move sidebar before main column for keyboard a11y -->
+        <move element="div.sidebar.main" destination="columns" before="main"/>
+
         <!-- Before Footer -->
         <referenceContainer name="page.bottom.container">
             <container name="before-footer.top-wrapper" htmlTag="div">
