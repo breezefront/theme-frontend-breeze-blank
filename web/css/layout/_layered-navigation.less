@@ -5,6 +5,16 @@
             .active&,
             .filter-active & {
                 .breeze-slideout-visible();
+
+            }
+        }
+        & when not (@critical) {
+            &:not(.active) {
+                .filter-content {
+                    [data-mage-init*='"collapsible":'] > [data-role=content][aria-hidden=false] {
+                        visibility: hidden;
+                    }
+                }
             }
         }
         .filter-title strong {
