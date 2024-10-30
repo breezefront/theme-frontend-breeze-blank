@@ -129,12 +129,18 @@
         }
     }
 
-    // Banners
+    // Outline
     [data-content-type="banner"],
-    [data-content-type="slider"] {
+    [data-content-type="slider"],
+    [data-content-type="slide"] {
         > a {
             outline-offset: -4px;
         }
+    }
+
+    // Banners
+    [data-content-type="banner"],
+    [data-content-type="slider"] {
         a {
             display: block;
             &:hover {
