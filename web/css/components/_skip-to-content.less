@@ -26,5 +26,12 @@
                 padding: @container__padding;
             }
         }
+
+        @media @media-md-down {
+            // No need to have "skip" on mobile because layered nav is hidden
+            .sidebar & {
+                display: none !important;
+            }
+        }
     }
 }
