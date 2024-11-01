@@ -1,11 +1,16 @@
 & when (@critical) {
+    [class*="swatch-opt"]:has(.swatch-attribute:not(.breeze-placeholder)) .swatch-attribute.breeze-placeholder {
+        display: none;
+    }
     .swatch-attribute {
         margin-bottom: @swatch-options__margin-bottom;
+        .lib-css(min-height, @swatch-options__min-height);
         &:last-child {
             margin: 0;
         }
         .product-item & {
             .lib-css(margin-bottom, @listing-swatch-options__margin-bottom);
+            .lib-css(min-height, @listing-swatch-options__min-height);
             &:last-child {
                 margin: 0;
             }
