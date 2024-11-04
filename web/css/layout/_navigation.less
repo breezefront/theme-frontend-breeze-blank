@@ -172,7 +172,9 @@
         }
     }
     .nav-toggle {
-        -webkit-tap-highlight-color: transparent;
+        .nav-open & {
+            -webkit-tap-highlight-color: transparent;
+        }
         cursor: pointer;
         span::after {
             &:extend(.transition all);

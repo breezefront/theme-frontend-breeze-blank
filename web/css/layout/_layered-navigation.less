@@ -378,7 +378,9 @@
         .block.filter {
             [data-role="title"] {
                 cursor: pointer;
-                -webkit-tap-highlight-color: transparent;
+                .active& {
+                    -webkit-tap-highlight-color: transparent;
+                }
             }
             .filter-title::before {
                 .breeze-icon(@icon-s-filter, @5);
