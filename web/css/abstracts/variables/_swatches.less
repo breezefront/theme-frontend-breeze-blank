@@ -16,7 +16,23 @@
 
 @swatch__text__border-radius: false;
 
-// Listing-specific styles
+// Listing-specific styles. Do not use @listing-swatch-[..] variables
+@swatch-wrapper__listing__media-hidden: @listing-swatch-wrapper__media-hidden;
+@swatch-wrapper__listing__margin: @listing-swatch-wrapper__margin;
+
+@swatch-options__listing__margin-bottom: @listing-swatch-options__margin-bottom;
+@swatch-options__listing__justify-content: @listing-swatch-options__justify-content;
+@swatch-options__listing__min-height: @listing-swatch-options__min-height;
+
+@swatch__listing__font-size: @listing-swatch__font-size;
+@swatch__listing__font-weight: @listing-swatch__font-weight;
+@swatch__listing__size: @listing-swatch__size;
+@swatch__listing__gap: @listing-swatch__gap;
+@swatch__listing__border-offset: @listing-swatch__border-offset;
+
+@swatch__text__listing__size: @listing-swatch__text__size;
+
+// Deprecated. Use variables above. Remove them in 2025, copy values to variables above.
 @listing-swatch-wrapper__media-hidden: false;
 @listing-swatch-wrapper__margin: 0 0 @0-5;
 

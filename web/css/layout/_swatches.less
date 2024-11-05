@@ -9,8 +9,8 @@
             margin: 0;
         }
         .product-item & {
-            .lib-css(margin-bottom, @listing-swatch-options__margin-bottom);
-            .lib-css(min-height, @listing-swatch-options__min-height);
+            .lib-css(margin-bottom, @swatch-options__listing__margin-bottom);
+            .lib-css(min-height, @swatch-options__listing__min-height);
             &:last-child {
                 margin: 0;
             }
@@ -29,10 +29,10 @@
         gap: @swatch__gap;
 
         .product-item & {
-            .lib-css(gap, @listing-swatch__gap);
+            .lib-css(gap, @swatch__listing__gap);
         }
         :where(.products-grid, .widget-product-carousel) & {
-            .lib-css(justify-content, @listing-swatch-options__justify-content);
+            .lib-css(justify-content, @swatch-options__listing__justify-content);
         }
     }
     .swatch-option {
@@ -75,24 +75,24 @@
         }
 
         .product-item & {
-            .lib-css(font-size, @listing-swatch__font-size);
-            .lib-css(font-weight, @listing-swatch__font-weight);
-            .lib-css(min-width, @listing-swatch__size);
-            .lib-css(height, @listing-swatch__size);
-            & when not (@listing-swatch__border-offset = false) {
-                margin: abs(@listing-swatch__border-offset);
+            .lib-css(font-size, @swatch__listing__font-size);
+            .lib-css(font-weight, @swatch__listing__font-weight);
+            .lib-css(min-width, @swatch__listing__size);
+            .lib-css(height, @swatch__listing__size);
+            & when not (@swatch__listing__border-offset = false) {
+                margin: abs(@swatch__listing__border-offset);
             }
 
             &.text {
-                .lib-css(min-width, @listing-swatch__text__size);
-                .lib-css(height, @listing-swatch__text__size);
+                .lib-css(min-width, @swatch__text__listing__size);
+                .lib-css(height, @swatch__text__listing__size);
             }
 
             &::before {
-                .lib-css(top, @listing-swatch__border-offset);
-                .lib-css(bottom, @listing-swatch__border-offset);
-                .lib-css(left, @listing-swatch__border-offset);
-                .lib-css(right, @listing-swatch__border-offset);
+                .lib-css(top, @swatch__listing__border-offset);
+                .lib-css(bottom, @swatch__listing__border-offset);
+                .lib-css(left, @swatch__listing__border-offset);
+                .lib-css(right, @swatch__listing__border-offset);
             }
         }
     }
@@ -107,10 +107,10 @@
     }
     .product-item {
         [class^="swatch-opt-"] {
-            .lib-css(margin, @listing-swatch-wrapper__margin);
+            .lib-css(margin, @swatch-wrapper__listing__margin);
 
-            & when not (@listing-swatch-wrapper__media-hidden = false) {
-                @media @listing-swatch-wrapper__media-hidden {
+            & when not (@swatch-wrapper__listing__media-hidden = false) {
+                @media @swatch-wrapper__listing__media-hidden {
                     display: none;
                 }
             }
