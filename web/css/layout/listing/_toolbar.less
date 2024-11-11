@@ -45,7 +45,6 @@
             .margin-left(auto);
         }
         .sorter-action {
-            --muted-alpha: .4;
             color: @muted__color;
             span {
                 &:extend(.breeze-sr-only);
@@ -63,7 +62,6 @@
             .lib-css(border, @toolbar-modes__border);
             .lib-css(border-radius, @toolbar-modes__border-radius);
             a {
-                --muted-alpha: .3;
                 color: @muted__color;
             }
         }
@@ -140,7 +138,6 @@
         .action.next {
             display: flex;
             align-items: center;
-            --muted-alpha: .4;
             color: @muted__color;
             span {
                 &:extend(.breeze-sr-only);
@@ -169,14 +166,14 @@
         .sorter-action {
             &:extend(.transition all);
             &:hover {
-                --muted-alpha: .6;
+                --muted-alpha: .9;
             }
         }
         .modes {
             a {
                 &:extend(.transition all);
                 &:hover {
-                    --muted-alpha: .6;
+                    --muted-alpha: .9;
                 }
             }
         }
@@ -205,7 +202,7 @@
         .action.previous {
             &:extend(.transition all);
             &:hover {
-                --muted-alpha: .6;
+                --muted-alpha: .9;
             }
         }
     }

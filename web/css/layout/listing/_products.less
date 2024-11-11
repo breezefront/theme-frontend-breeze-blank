@@ -101,7 +101,6 @@
         .lib-css(display, @listing-item-actions-secondary__display);
         .lib-css(gap, @listing-item-actions-secondary__gap);
         .action {
-            --muted-alpha: .4;
             .padding(@listing-item-actions-secondary-link__padding);
             .lib-css(color, @listing-item-actions-secondary-link__color);
             .lib-css(background, @listing-item-actions-secondary-link__background);
@@ -383,7 +382,7 @@
         .action {
             &:extend(.transition all);
             &:hover {
-                --muted-alpha: .6;
+                --muted-alpha: .9;
             }
             &::before {
                 .lib-css(-webkit-mask-size, @listing-item-actions-secondary-icon__size);
