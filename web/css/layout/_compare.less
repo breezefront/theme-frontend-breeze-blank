@@ -1,7 +1,20 @@
 & when (@critical) {
     .table-comparison {
+        width: auto;
         th.remove {
             &:extend(.breeze-sr-only);
+        }
+        th.label {
+            .lib-css(width, @compare-table-label__width);
+        }
+        td.product {
+            .lib-css(width, @compare-table-cell__width);
+        }
+        .product-item-photo {
+            display: inline-block;
+        }
+        .product-item-name {
+            display: block;
         }
         .price-box {
             margin: @2 0;
