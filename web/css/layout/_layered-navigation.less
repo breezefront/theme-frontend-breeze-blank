@@ -293,7 +293,7 @@
             .sidebar & {
                 .filter-title {
                     position: absolute;
-                    z-index: 5;
+                    z-index: 10; // must be higher than 5 to cover addto links
                     top: 0;
                     margin: 0;
                     max-width: @layered-sidebar-title__md-down__max-width;
