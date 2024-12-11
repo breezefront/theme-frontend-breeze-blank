@@ -12,9 +12,15 @@
         .page-title-wrapper {
             grid-area: title;
             .lib-css(margin-bottom, @product-title__margin-bottom);
+
+            @media @media-md-down {
+                .lib-css(--animation-order, @product-title__md-down__animation-order);
+            }
+
             @media @media-md {
                 .lib-css(margin-bottom, @product-title__md__margin-bottom);
             }
+
             h1 {
                 margin: 0;
             }
