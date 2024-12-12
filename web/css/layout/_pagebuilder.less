@@ -218,18 +218,25 @@
         .lib-css(gap, @slider-dots__gap);
 
         button {
-            padding: 0;
-            .lib-css(border-radius, @slider-dot__border-radius);
-            .lib-css(border, @slider-dot__border);
-            .lib-css(background, @slider-dot__background);
-            .lib-css(color, @slider-dot__color);
-            text-indent: -9999px;
             display: block;
-            .lib-css(width, @slider-dot__width);
-            .lib-css(height, @slider-dot__height);
-            .lib-css(box-shadow, @slider-dot__box-shadow);
+            background: transparent;
+            border: 0;
+            .lib-css(padding, @slider-dot-area__padding);
+            .lib-css(border-radius, @slider-dot__border-radius);
+
+            > span {
+                text-indent: -9999px;
+                display: block;
+                .lib-css(border-radius, @slider-dot__border-radius);
+                .lib-css(border, @slider-dot__border);
+                .lib-css(background, @slider-dot__background);
+                .lib-css(color, @slider-dot__color);
+                .lib-css(width, @slider-dot__width);
+                .lib-css(height, @slider-dot__height);
+                .lib-css(box-shadow, @slider-dot__box-shadow);
+            }
         }
-        .slick-active button {
+        .slick-active button > span {
             .lib-css(background, @slider-dot__active__background);
             .lib-css(color, @slider-dot__active__color);
         }
@@ -332,6 +339,9 @@
 }
 
 & when not (@critical) {
+    .slick-active button span {
+        &:extend(.transition all);
+    }
     .slick-next::before,
     .slick-prev::before {
         .breeze-icon(@slider-arrow-icon__mask, @slider-arrow-icon__width, @slider-arrow-icon__height);
