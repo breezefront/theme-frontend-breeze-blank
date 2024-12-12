@@ -71,7 +71,6 @@
         max-height: var(--modal-max-height);
         max-height: -webkit-fill-available;
         background: @z-layer__background;
-        pointer-events: auto;
         .lib-css(border-radius, @modal__border-radius);
         .lib-css(box-shadow, @modal__box-shadow);
 
@@ -98,6 +97,7 @@
         }
 
         ._show & {
+            pointer-events: auto;
             transform: none;
             opacity: 1;
         }
