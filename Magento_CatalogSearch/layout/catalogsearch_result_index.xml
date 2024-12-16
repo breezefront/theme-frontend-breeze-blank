@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!--
+            Revert "Move sidebar before main column for keyboard a11y"
+            because it breaks Adobe Live Search, and do not select "Relevance" in dropdown
+        -->
+        <move element="div.sidebar.main" destination="columns" after="main"/>
+    </body>
+</page>
