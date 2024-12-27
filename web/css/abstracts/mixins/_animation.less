@@ -6,8 +6,10 @@
                 text-decoration-color var(--transition-duration),
                 opacity var(--transition-duration),
                 transform var(--transition-duration),
+                display var(--transition-duration),
                 visibility var(--transition-duration) 0s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-behavior: allow-discrete;
 
     .breeze-inactive & {
         transition: none !important;

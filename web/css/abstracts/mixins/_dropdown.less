@@ -1,19 +1,22 @@
+.breeze-z-layer-starting-style {
+    opacity: 0;
+    transform: scale(.95);
+}
 .breeze-z-layer {
     & when (@critical) {
-        opacity: 0;
+        display: none;
         position: absolute;
         pointer-events: none;
         .right(0);
-        top: -9999px;
     }
 
     & when not (@critical) {
+        .breeze-z-layer-starting-style();
         .breeze-invert-colors-reset();
         .transition();
         padding: var(--dropdown-padding);
         width: var(--dropdown-width);
         transform-origin: top;
-        transform: scale(.95);
         z-index: 850;
         visibility: hidden;
         margin-top: @0-5;
@@ -30,19 +33,14 @@
         z-index: 851;
         opacity: 1;
         pointer-events: all;
+        display: block;
         visibility: visible;
         transform: scale(1);
-        top: auto;
     }
 }
 
 .breeze-dropdown {
     .breeze-z-layer();
-    & when not (@critical) {
-        .breeze & {
-            display: block !important; // override inline style to enable amination
-        }
-    }
 }
 .breeze-dropdown-visible {
     .breeze-z-layer-visible();

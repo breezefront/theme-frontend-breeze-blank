@@ -45,6 +45,9 @@
     [data-mage-init*='"collapsible":'] {
         > [data-role=content] {
             &:extend(.transition all);
+            &[aria-hidden=true] {
+                opacity: 0;
+            }
             &[aria-hidden=false] {
                 height: auto;
                 visibility: visible;
@@ -52,6 +55,12 @@
                 overflow: visible;
                 position: static;
             }
+        }
+    }
+
+    @starting-style {
+        [data-mage-init*='"collapsible":'] > [data-role=content][aria-hidden=false] {
+            opacity: 0;
         }
     }
 }

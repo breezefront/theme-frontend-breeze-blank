@@ -135,6 +135,11 @@
         padding: @1;
         min-width: @8;
     }
+    @starting-style {
+        .swatch-option-tooltip:not([style*="none"]) {
+            .breeze-z-layer-starting-style();
+        }
+    }
     .swatch-option {
         &.selected {
             &::before {
