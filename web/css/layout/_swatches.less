@@ -120,7 +120,7 @@
 
 .swatch-option-tooltip {
     &:extend(.breeze-z-layer all);
-    &[style*="block"] {
+    &:not([style*="none"]) {
         &:extend(.breeze-z-layer-visible);
     }
 }
