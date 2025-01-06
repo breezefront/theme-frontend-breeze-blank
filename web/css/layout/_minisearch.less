@@ -131,14 +131,16 @@
                 position: relative;
                 cursor: pointer;
             }
+            &.active {
+                + .control {
+                    display: block;
+                    z-index: 40;
+                    left: 0;
+                    right: 0;
+                }
+            }
         }
         &.active {
-            .control {
-                display: block;
-                z-index: 40;
-                left: 0;
-                right: 0;
-            }
             .actions {
                 display: flex;
                 z-index: 41;
