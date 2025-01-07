@@ -11,7 +11,7 @@ use Magento\Swatches\ViewModel\Product\Renderer\Configurable as ConfigurableView
 /** @var Configurable $block */
 /** @var Product $product */
 $product = $block->getProduct();
-$config = json_decode($block->getJsonConfig(), true);
+$config = json_decode($block->getJsonSwatchConfig(), true);
 ?>
 <?php if ($product && $product->isAvailable()): ?>
     <?php $productId = $product->getId() ?>
@@ -20,7 +20,7 @@ $config = json_decode($block->getJsonConfig(), true);
     <div class="swatch-opt-<?= $block->escapeHtmlAttr($productId) ?>"
          data-role="swatch-option-<?= $block->escapeHtmlAttr($productId) ?>">
 
-        <?php foreach ($config['attributes'] ?? [] as $id => $values) : ?>
+        <?php foreach ($config ?? [] as $id => $options) : ?>
             <div class="swatch-attribute breeze-placeholder"></div>
         <?php endforeach ?>
     </div>
