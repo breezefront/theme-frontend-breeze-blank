@@ -162,15 +162,9 @@
 .breeze-tab-content-common {
     & when (@critical) {
         display: none;
-        visibility: hidden;
-        opacity: 0;
         .lib-css(padding, @tab-content__padding);
         .lib-css(border, @tab-content__border);
         .lib-css(border-width, @tab-content__border-width);
-    }
-
-    & when not (@critical) {
-        .transition();
     }
 }
 .breeze-tab-content-horizontal {
@@ -186,8 +180,6 @@
 }
 .breeze-tab-content-common-active {
     & when (@critical) {
-        visibility: visible;
-        opacity: 1;
         display: block;
     }
 }
