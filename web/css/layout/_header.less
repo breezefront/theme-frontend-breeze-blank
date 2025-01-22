@@ -201,9 +201,10 @@
     }
 
     .mobile-header-panel {
-        margin-top: @4;
-        padding-top: @2;
-        border-top: 1px solid @divider__color;
+        .margin(@header-mobile-panel__margin);
+        .padding(@header-mobile-panel__padding);
+        .lib-css(border, @header-mobile-panel__border);
+        .border-width(@header-mobile-panel__border-width);
 
         .slideout\:hide {
             display: none !important;
