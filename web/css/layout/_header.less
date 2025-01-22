@@ -152,7 +152,7 @@
     @media @navigation__media-mobile {
         & when (@header-panel__slideout) {
             .page-header .panel.wrapper {
-                display: none;
+                .lib-css(display, @header-panel__slideout__display);
             }
         }
     }
