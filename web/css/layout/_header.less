@@ -221,8 +221,10 @@
             font-weight: 600;
             color: @muted__color;
         }
-        .switcher .label {
-            &:extend(.breeze-sr-only-reset);
+        & when (@header-mobile-panel-switcher-label__display = none) {
+            .switcher .label {
+                &:extend(.breeze-sr-only-reset);
+            }
         }
         .switcher,
         .header-panel-info {
