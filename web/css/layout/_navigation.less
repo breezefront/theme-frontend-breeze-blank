@@ -21,15 +21,20 @@
 
 @media @navigation__media-mobile {
     .navigation-wrapper {
-        display: none;
         .breeze-slideout();
         .nav-open & {
             .breeze-slideout-visible();
         }
-        .nav-open &,
-        .nav-before-open & {
-            display: flex;
-            flex-direction: column;
+
+        & when (@critical) {
+            display: none;
+        }
+
+        & when not (@critical) {
+            .nav-open &,
+            .nav-before-open & {
+                display: block;
+            }
         }
     }
     .nav-toggle::before {
@@ -64,8 +69,7 @@
         }
     }
 
-    .page-wrapper,
-    .page-header {
+    :where(.page-wrapper, .page-header) {
         > .navigation-wrapper {
             .navigation {
                 &:extend(.container);
@@ -220,14 +224,24 @@
 
     @media @navigation__media-mobile {
         .navigation-wrapper {
+            overflow: visible;
+            padding: 0;
+
             & when (@header__dark) {
                 .breeze-invert-colors-reset();
             }
 
+            .navigation-section {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
             .navigation {
-                clear: both;
-                padding: @2 0;
-                > ul {
+                height: 100%;
+                overflow: auto;
+                padding: @header-mobile-panel__padding;
+                ul {
                     margin: 0;
                 }
             }

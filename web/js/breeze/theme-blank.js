@@ -95,7 +95,7 @@
             .removeClass('header panel')
             .addClass('mobile-header-panel')
             .data('breeze-temporary', true)
-            .appendTo($('.navigation-wrapper'));
+            .appendTo($('.navigation-section'));
 
         $('.mobile-header-panel')
             .trigger('contentUpdated')

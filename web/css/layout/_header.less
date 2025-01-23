@@ -229,20 +229,30 @@
         .switcher,
         .header-panel-info {
             margin-top: @4;
-            padding: 0 @2;
             display: flex;
             gap: @3;
             a:not(.toggle) {
                 opacity: .7;
             }
         }
-        .switcher + .switcher {
-            margin-top: @2;
+        .switcher {
+            + .switcher {
+                margin-top: @2;
+            }
+            .switcher-dropdown {
+                width: 100%;
+                max-height: 70dvh;
+                min-width: 200px;
+                overflow: auto;
+                transform-origin: bottom;
+                margin: 0 0 @2;
+            }
         }
         .header-panel-info {
             flex-direction: column;
             align-items: flex-start;
             gap: @2;
+            margin: 0;
         }
     }
 }

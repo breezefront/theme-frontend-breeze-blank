@@ -63,9 +63,11 @@
         <!-- Navigation -->
         <referenceBlock name="navigation.sections" remove="true"/>
         <referenceContainer name="page.top">
-            <container name="navigation.wrapper" before="-" htmlTag="div" htmlClass="navigation-wrapper"/>
+            <container name="navigation.wrapper" before="-" htmlTag="div" htmlClass="navigation-wrapper">
+                <container name="navigation.section" htmlTag="div" htmlClass="navigation-section"/>
+            </container>
         </referenceContainer>
-        <move element="store.menu" destination="navigation.wrapper"/>
+        <move element="store.menu" destination="navigation.section"/>
         <!-- <move element="navigation.wrapper" destination="header-wrapper" after="logo"/> -->
 
         <!-- Move sidebar before main column for keyboard a11y -->
