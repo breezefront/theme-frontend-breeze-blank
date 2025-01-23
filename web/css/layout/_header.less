@@ -206,11 +206,14 @@
         .lib-css(border, @header-mobile-panel__border);
         .border-width(@header-mobile-panel__border-width);
 
-        .slideout\:hide {
-            display: none !important;
-        }
-        .slideout\:flex {
-            display: flex !important;
+        .slideout\:hide { display: none !important; }
+        .slideout\:block { display: block !important; }
+        .slideout\:inline { display: inline !important; }
+        .slideout\:flex { display: flex !important; }
+        .slideout\:inline-flex { display: inline-flex !important; }
+
+        hr {
+            width: 100%;
         }
 
         .heading,
