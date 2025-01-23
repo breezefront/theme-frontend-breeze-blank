@@ -141,12 +141,14 @@
         }
         a {
             color: currentColor;
-            display: flex;
-            align-items: center;
-            gap: @1;
-            &:hover {
-                text-decoration: underline;
-            }
+        }
+    }
+    :where(.header-panel-info a) {
+        display: flex;
+        align-items: center;
+        gap: @1;
+        &:hover {
+            text-decoration: underline;
         }
     }
     @media @navigation__media-mobile {
@@ -256,6 +258,9 @@
             align-items: flex-start;
             gap: @2;
             margin: 0;
+        }
+        :where(.header-panel-info > div) {
+            width: 100%;
         }
     }
 }
