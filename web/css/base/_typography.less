@@ -269,8 +269,8 @@
         border-bottom: 0;
     }
 
-    a[href^="tel:"],
-    a[href^="mailto:"],
+    :where(a[href^="tel:"]),
+    :where(a[href^="mailto:"]),
     a.alert,
     address a {
         &:extend(.breeze-link all);
