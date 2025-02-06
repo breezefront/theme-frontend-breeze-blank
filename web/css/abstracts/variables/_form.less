@@ -1,4 +1,5 @@
 @input__font-family: false;
+@input__font-size: false;
 @input__text-color: var(--base-color);
 @input__color: ~"rgba(var(--input-color), var(--input-alpha))";
 @input__background-color: var(--base-bg);
@@ -33,7 +34,7 @@
 
 @button__font-weight: 400;
 @button__font-family: false;
-@button__font-size: false;
+@button__font-size: @input__font-size;
 @button__text-color: @white;
 @button__color: ~"rgba(var(--button-color), var(--button-alpha, 1))";
 @button__background-color: var(--brand-color);
