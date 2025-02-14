@@ -23,7 +23,7 @@
 
         open: function (original) {
             if (this.isLayeredNavigation()) {
-                if (this.filters.css('visibility') !== 'hidden') {
+                if (!this.filters || this.filters.css('visibility') !== 'hidden') {
                     return;
                 }
 
