@@ -218,6 +218,17 @@
             text-align: center;
         }
     }
+
+    @keyframes rotate {
+        from {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
 }
 
 & when not (@critical) {
@@ -237,15 +248,4 @@
     .shadow-lg-around { box-shadow: @shadow-lg-around; }
     .shadow-xl-around { box-shadow: @shadow-xl-around; }
     .shadow-2xl-around { box-shadow: @shadow-2xl-around; }
-
-    @keyframes rotate {
-        from {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
-        to {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-        }
-    }
 }

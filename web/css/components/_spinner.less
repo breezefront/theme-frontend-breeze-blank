@@ -1,12 +1,6 @@
 & when (@critical) {
     .loading-mask,
     .load.indicator {
-        display: none;
-    }
-}
-& when not (@critical) {
-    .loading-mask,
-    .load.indicator {
         inset: 0;
         margin: auto;
         position: fixed;
@@ -20,12 +14,10 @@
             z-index: 990;
         }
     }
-
     .loading-mask {
         body > & {
             position: fixed !important;
         }
-
         .loader {
             &:extend(.spinner);
             flex-shrink: 0;
@@ -35,7 +27,14 @@
                 display: none;
             }
         }
+    }
+    ._block-content-loading {
+        position: relative;
+    }
+}
 
+& when not (@critical) {
+    .loading-mask {
         + .loading-mask {
             opacity: 0;
         }
@@ -53,9 +52,5 @@
         span {
             display: none;
         }
-    }
-
-    ._block-content-loading {
-        position: relative;
     }
 }
