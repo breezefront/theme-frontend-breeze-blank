@@ -97,8 +97,13 @@
 
                 position: absolute;
                 .lib-css(z-index, @listing-grid-item-actions-secondary__absolute__z-index);
-                .lib-css(top, ~"calc(@{listing-grid-item-actions-secondary__absolute__top} + var(--listing-grid-item-padding, 0px))");
                 .lib-css(flex-direction, @listing-grid-item-actions-secondary__absolute__flex-direction);
+                & when not (@listing-grid-item-actions-secondary__absolute__top = false) {
+                    .lib-css(top, ~"calc(@{listing-grid-item-actions-secondary__absolute__top} + var(--listing-grid-item-padding, 0px))");
+                }
+                & when not (@listing-grid-item-actions-secondary__absolute__bottom = false) {
+                    .lib-css(bottom, ~"calc(@{listing-grid-item-actions-secondary__absolute__bottom} + var(--listing-grid-item-padding, 0px))");
+                }
                 & when not (@listing-grid-item-actions-secondary__absolute__right = false) {
                     .right(~"calc(@{listing-grid-item-actions-secondary__absolute__right} + var(--listing-grid-item-padding, 0px))");
                 }
