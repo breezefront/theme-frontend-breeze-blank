@@ -17,7 +17,7 @@
 }
 
 & when (@critical) {
-    :where(.page-main, .page-bottom) .block ~ div {
+    :where(.page-main .block ~ div, .page-bottom .block ~ div) {
         margin-top: @block__indent;
     }
     .sidebar-main .block:last-child {
