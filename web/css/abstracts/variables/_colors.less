@@ -11,7 +11,8 @@
 @yellow__muted: @yellow-50;
 
 @brand__color: ~"rgba(var(--brand-color), var(--brand-alpha, 1))";
-@muted__color: ~"rgba(var(--base-color), var(--muted-alpha, .6))";
+@muted__alpha: .6;
+@muted__color: ~"rgba(var(--base-color), var(--muted-alpha, @{muted__alpha}))";
 @divider__color: ~"rgba(var(--base-color), var(--divider-alpha, .1))";
 
 @base__background-color: @white;
