@@ -77,6 +77,12 @@
         .lib-css(border-radius, @product-image__border-radius);
     }
 
+    & when not (@product-image__mix-blend-mode = false) {
+        .main-image-wrapper {
+            .lib-css(mix-blend-mode, @product-image__mix-blend-mode);
+        }
+    }
+
     // Styles for content and sidebar (grid and list)
     .product-item-actions {
         display: flex;
