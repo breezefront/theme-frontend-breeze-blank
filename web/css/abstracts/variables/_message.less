@@ -17,6 +17,9 @@
 @message__text-align: false;
 @message__border-width: false;
 @message__border-radius: false;
+@message__gap: @1;
+@message__padding: @3 @4;
+@message__margin-bottom: @3;
 @message__box-shadow: false;
 @message__background: ~"rgb(var(--message-bg))";
 @message__color: ~"rgb(var(--message-color))";
@@ -36,21 +39,31 @@
 @message__fixed__hide-progress__duration: @message__fixed__hide-delay - @message__fixed__hide-progress__delay;
 @message__fixed__hide-progress__border-radius: false;
 
+@message-icon-container__width: @6;
+@message-icon-container__height: @6;
+@message-icon-container__margin: 0;
+@message-icon-container__align-self: false;
+@message-icon-container__border-radius: false;
+@message-icon-container__background: false;
+
 @message-icon__size: @5;
 @message-close-icon__mask-size: @4 @4;
 @message-link__color: ~"rgb(var(--message-color)) !important";
 
 @message-success__icon: @icon-s-check;
+@message-success__icon-background: false;
 @message-success__text-color: @success__text-color;
 @message-success__background-color: @success__background-color;
 @message-success__border-color: false;
 
 @message-info__icon: @icon-s-information-circle;
+@message-info__icon-background: false;
 @message-info__text-color: @info__text-color;
 @message-info__background-color: @info__background-color;
 @message-info__border-color: false;
 
 @message-error__icon: @icon-s-exclamation-circle;
+@message-error__icon-background: false;
 @message-error__text-color: @danger__text-color;
 @message-error__background-color: @danger__background-color;
 @message-error__border-color: false;

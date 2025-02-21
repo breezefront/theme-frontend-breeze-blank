@@ -24,9 +24,9 @@
     .message:where(.warning, .success, .notice, .error, .info) {
         display: flex;
         align-items: flex-start;
-        gap: @1;
-        padding: @3 @4;
-        margin-bottom: @3;
+        gap: @message__gap;
+        padding: @message__padding;
+        margin-bottom: @message__margin-bottom;
         border: 1px solid transparent;
 
         .lib-css(font-family, @message__font-family);
@@ -38,10 +38,13 @@
         .lib-css(box-shadow, @message__box-shadow);
 
         &::before {
+            .lib-css(border-radius, @message-icon-container__border-radius);
+            .lib-css(align-self, @message-icon-container__align-self);
+            .lib-css(margin, @message-icon-container__margin);
             flex-shrink: 0;
             content: '';
-            width: @6;
-            height: @6;
+            width: @message-icon-container__width;
+            height: @message-icon-container__height;
         }
     }
 
@@ -99,6 +102,7 @@
             .lib-rgb(--message-border-color, @message-success__border-color);
             &::before {
                 .breeze-icon(@message-success__icon, @message-icon__size);
+                .lib-css(background, @message-success__icon-background);
             }
         }
         &.info,
@@ -108,7 +112,8 @@
             .lib-rgb(--message-color, @message-info__text-color);
             .lib-rgb(--message-border-color, @message-info__border-color);
             &::before {
-                .breeze-icon(@message-info__icon, @message-icon__size)
+                .breeze-icon(@message-info__icon, @message-icon__size);
+                .lib-css(background, @message-info__icon-background);
             }
         }
         &.error {
@@ -116,7 +121,8 @@
             .lib-rgb(--message-color, @message-error__text-color);
             .lib-rgb(--message-border-color, @message-error__border-color);
             &::before {
-                .breeze-icon(@message-error__icon, @message-icon__size)
+                .breeze-icon(@message-error__icon, @message-icon__size);
+                .lib-css(background, @message-error__icon-background);
             }
         }
     }
