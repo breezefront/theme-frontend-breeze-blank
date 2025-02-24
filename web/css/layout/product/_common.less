@@ -109,16 +109,16 @@
                 .lib-rgb(--stock-color, @product-stock-unavailable__text-color);
             }
         }
-        .sku {
-            .lib-css(color, @product-sku__color);
-            .lib-css(font-family, @product-sku__font-family);
-            .lib-css(font-weight, @product-sku__font-weight);
-            .lib-css(font-size, @product-sku__font-size);
-            .lib-css(text-transform, @product-sku__text-transform);
-            display: flex;
-            align-items: center;
-            gap: @1;
-        }
+    }
+    .attribute.sku {
+        .lib-css(color, @product-sku__color);
+        .lib-css(font-family, @product-sku__font-family);
+        .lib-css(font-weight, @product-sku__font-weight);
+        .lib-css(font-size, @product-sku__font-size);
+        .lib-css(text-transform, @product-sku__text-transform);
+        display: flex;
+        align-items: center;
+        gap: @1;
     }
     .product-info-main .configurable-variation-qty {
         display: none;
