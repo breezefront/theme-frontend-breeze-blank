@@ -34,7 +34,7 @@
                 &:extend(.breeze-tab-content-common-active all);
             }
             & when (@critical) {
-                .padding(@tab-content__padding);
+                .padding(@tab-content__horizontal__padding);
             }
         }
     }
@@ -115,9 +115,18 @@
     }
 
     [data-content-type="tabs"] {
+        .lib-css(background, @tab__background);
         .tabs-navigation {
             &:extend(.breeze-prose-reset ul all);
             display: flex;
+            overflow: auto;
+        }
+        .tabs-content {
+            display: flex;
+            flex-direction: column;
+            > div {
+                flex-grow: 1;
+            }
         }
         .tab-header {
             > a {
