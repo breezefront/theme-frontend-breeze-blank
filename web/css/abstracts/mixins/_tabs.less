@@ -163,6 +163,7 @@
 .breeze-tab-content-common {
     & when (@critical) {
         display: none;
+        .lib-css(scroll-margin, @tab-content__scroll-margin);
         .lib-css(padding, @tab-content__padding);
         .lib-css(border, @tab-content__border);
         .lib-css(border-width, @tab-content__border-width);
@@ -172,6 +173,7 @@
 .breeze-tab-content-horizontal {
     & when (@critical) {
         width: 100%;
+        .lib-css(scroll-margin, @tab-content__horizontal__scroll-margin);
         .lib-css(position, @tab-content__horizontal__position);
         .lib-css(z-index, @tab-content__horizontal__z-index);
         .lib-css(margin, @tab-content__horizontal__margin);
