@@ -24,16 +24,6 @@
     @media @tab-horizontal__media {
         .breeze-tab-toggler-horizontal();
     }
-
-    & when (@critical) {
-        .counter {
-            .lib-css(opacity, @tab-counter__opacity);
-            .lib-css(padding, @tab-counter__padding);
-            .lib-css(background, @tab-counter__background);
-            .lib-css(display, @tab-counter__display);
-            .lib-css(border-radius, @tab-counter__border-radius);
-        }
-    }
 }
 .breeze-tab-toggler-active {
     .breeze-tab-toggler-common-active();
@@ -59,6 +49,14 @@
         .lib-css(font-size, @tab-toggler__font-size);
         .lib-css(font-weight, @tab-toggler__font-weight);
         .lib-css(text-transform, @tab-toggler__text-transform);
+
+        .counter {
+            .lib-css(opacity, @tab-counter__opacity);
+            .lib-css(padding, @tab-counter__padding);
+            .lib-css(background, @tab-counter__background);
+            .lib-css(display, @tab-counter__display);
+            .lib-css(border-radius, @tab-counter__border-radius);
+        }
     }
     & when not (@critical) {
         cursor: pointer;
