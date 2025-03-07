@@ -18,7 +18,7 @@
 
 .zoom-on-hover() {
     & when not (@critical) {
-        @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+        @media @media-hover and (prefers-reduced-motion: no-preference) {
             img {
                 .lib-css(transition, @zoom-on-hover__transition);
             }
@@ -31,7 +31,7 @@
 
 .zoom-on-hover(@selector) {
     & when not (@critical) {
-        @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+        @media @media-hover and (prefers-reduced-motion: no-preference) {
             @{selector} {
                 .lib-css(transition, @zoom-on-hover__transition);
             }
