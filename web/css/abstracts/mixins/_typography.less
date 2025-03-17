@@ -76,21 +76,35 @@
         overflow: visible;
         max-height: none;
     }
+    > :first-child {
+        margin-top: 0;
+    }
+    > :last-child {
+        margin-bottom: 0;
+    }
     .clamp-toggle {
         font-weight: 600;
         font-size: @font-size__base;
         font-family: @font-family__base;
         color: @base__color;
         text-decoration: underline;
+        background: linear-gradient(~"rgba(var(--z-layer-bg), 0)", ~"rgba(var(--z-layer-bg), .8)");
         position: absolute;
         bottom: 0;
         .right(0);
-        .padding-left(@3);
-        .modrtl(
-            background,
-            linear-gradient(to right, transparent 0, @z-layer__background @2),
-            linear-gradient(to left, transparent 0, @z-layer__background @2)
-        );
+        .left(0);
+        .text-align(right);
+
+        > span {
+            display: inline-flex;
+            background: @z-layer__background;
+            .padding-left(@3);
+            .modrtl(
+                background,
+                linear-gradient(to right, transparent 0, @z-layer__background @2),
+                linear-gradient(to left, transparent 0, @z-layer__background @2)
+            );
+        }
 
         + * {
             margin-top: 0;
