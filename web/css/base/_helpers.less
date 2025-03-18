@@ -2,6 +2,17 @@
     .filter-invert { filter: invert(1); }
     .color-invert { &:extend(.breeze-invert-colors all); }
 
+    .color {
+        &-base { color: @base__color; }
+        &-brand { color: @brand__color; }
+        &-heading { color: @headings__color; }
+        &-link { color: @link__color; }
+        &-muted { color: @muted__color; }
+        &-danger { color: @danger__color; }
+        &-success { color: @success__color; }
+        &-info { color: @info__color; }
+    }
+
     .font {
         &-sans { font-family: @font-sans !important; }
         &-serif { font-family: @font-serif !important; }
