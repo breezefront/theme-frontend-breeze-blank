@@ -43,20 +43,14 @@
 & when (@critical) {
     .page-layout-cms-full-width {
         .page-main {
-            max-width: none;
-            margin: 0;
-            padding: 0;
+            &:extend(.container-reset);
         }
         main .page-title-wrapper .page-title {
             &:extend(.container);
         }
     }
-    // prevent doubled container styles because .page-main is a container
-    body:not(.page-layout-cms-full-width) .main > [data-content-type="row"] [data-element="inner"],
     .modal-content [data-content-type="row"] [data-element="inner"] {
-        padding: 0;
-        margin: 0;
-        max-width: none;
+        &:extend(.container-reset);
     }
     .pagebuilder {
         &-mobile {

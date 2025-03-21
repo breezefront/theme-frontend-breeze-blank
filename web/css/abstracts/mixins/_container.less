@@ -1,8 +1,19 @@
 .breeze-container {
     & when (@critical) {
-        width: 100%;
+        width: var(--container-width);
         max-width: var(--container-max-width);
         margin: var(--container-margin);
         padding: var(--container-padding);
+        [data-element="inner"] {
+            .breeze-container-reset();
+        }
+    }
+}
+.breeze-container-reset {
+    & when (@critical) {
+        width: auto;
+        max-width: none;
+        margin: 0;
+        padding: 0;
     }
 }

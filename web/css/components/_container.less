@@ -1,5 +1,6 @@
 & when (@critical) {
     :root {
+        --container-width: 100%;
         --container-margin: @container__margin;
         --container-max-width: @container__max-width;
         --container-padding: @container__padding;
@@ -22,9 +23,9 @@
 
     .container,
     .top-container {
-        width: 100%;
-        max-width: var(--container-max-width);
-        margin: var(--container-margin);
-        padding: var(--container-padding);
+        &:extend(.breeze-container all);
+    }
+    .container-reset {
+        &:extend(.breeze-container-reset);
     }
 }
