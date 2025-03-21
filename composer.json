@@ -10,6 +10,7 @@
         ]
     },
     "require": {
+        "magento/module-page-builder": "*",
         "swissup/module-breeze": "^2.15.0",
         "swissup/module-rtl": "*"
     }
