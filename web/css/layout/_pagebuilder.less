@@ -329,6 +329,17 @@
     }
     .pagebuilder-column-gap(0);
 
+    .pagebuilder-row-gap (@i) when (@i <= 8) {
+        .pagebuilder-column-group {
+            .row-gap-@{i} > & > .pagebuilder-column-line,
+            &.row-gap-@{i} > .pagebuilder-column-line {
+                row-gap: ~"@{@{i}}";
+            }
+        }
+        .pagebuilder-row-gap(@i + 1);
+    }
+    .pagebuilder-row-gap(0);
+
     @media @media-md-down {
         .pagebuilder-column-group,
         .pagebuilder-column-line {
