@@ -151,6 +151,12 @@
     .max-w-40 { max-width: @40; }
     .max-w-80 { max-width: @80; }
 
+    .aspect {
+        &-auto { aspect-ratio: auto; }
+        &-square { aspect-ratio: ~"1 / 1"; }
+        &-video { aspect-ratio: var(--aspect-ratio-video, ~"16 / 9"); }
+    }
+
     .grid { display: grid !important; }
     .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
