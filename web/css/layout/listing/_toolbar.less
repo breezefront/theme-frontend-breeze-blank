@@ -78,7 +78,7 @@
         }
         .mode-grid,
         .mode-list {
-            padding: @2;
+            .lib-css(padding, @toolbar-mode__padding);
             span {
                 &:extend(.breeze-sr-only);
             }
@@ -128,20 +128,22 @@
                 .lib-css(width, @toolbar-pages-item__width);
                 .lib-css(height, @toolbar-pages-item__height);
                 .lib-css(font-weight, @toolbar-pages-item__font-weight);
+                .lib-css(color, @toolbar-pages-item__color);
                 &:hover {
                     text-decoration: none;
                 }
             }
 
             .current .page {
-                background: @muted__background;
+                .lib-css(color, @toolbar-pages-item__active__color);
+                .lib-css(background, @toolbar-pages-item__active__background);
             }
         }
         .action.previous,
         .action.next {
             display: flex;
             align-items: center;
-            color: @muted__color;
+            .lib-css(color, @toolbar-pages-arrow__color);
             span {
                 &:extend(.breeze-sr-only);
             }
@@ -156,8 +158,6 @@
 }
 
 & when not (@critical) {
-    .pages .action.previous::before,
-    .pages .action.next::before,
     .sorter-action::before {
         .breeze-icon(@icon-arrow-up);
     }
@@ -192,14 +192,15 @@
         a.page {
             &:extend(.transition all);
             &:hover {
-                background: @muted__background;
+                .lib-css(color, @toolbar-pages-item__hover__color);
+                .lib-css(background, @toolbar-pages-item__hover__background);
             }
         }
-        .action.next::before {
-            .modrtl(transform, rotate(90deg), rotate(-90deg));
-        }
         .action.previous::before {
-            .modrtl(transform, rotate(-90deg), rotate(90deg));
+            .breeze-icon(@icon-arrow-left);
+        }
+        .action.next::before {
+            .breeze-icon(@icon-arrow-right);
         }
         .action.next,
         .action.previous {
