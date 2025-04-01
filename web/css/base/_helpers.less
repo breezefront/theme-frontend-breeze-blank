@@ -126,7 +126,8 @@
     .show { display: revert !important; }
     .flex { display: flex !important; }
     .inline-flex { display: inline-flex !important; }
-    .flex-col { flex-direction: column; }
+    .flex-col { flex-direction: column !important; }
+    .flex-row { flex-direction: row !important; }
     .abs-visually-hidden {
         &:extend(.breeze-sr-only);
     }
@@ -136,6 +137,7 @@
     .overflow-visible { overflow: visible !important; }
 
     .w-full { width: 100%; }
+    .h-full { height: 100%; }
     .max-w-xs { max-width: @xs; }
     .max-w-sm { max-width: @sm; }
     .max-w-md { max-width: @md; }
