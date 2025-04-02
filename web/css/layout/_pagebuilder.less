@@ -202,7 +202,10 @@
 
     .pagebuilder-poster-content {
         width: 100%;
-        .content-containered & {
+    }
+    .content-containered {
+        .pagebuilder-poster-content,
+        .slick-dots {
             &:extend(.container);
         }
     }
