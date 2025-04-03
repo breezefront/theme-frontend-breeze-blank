@@ -18,6 +18,15 @@
         min-height: ~"clamp(100px, 25vh, 300px)";
     }
 
+    .page-header + .page-main {
+        &,
+        &-full-width {
+            .page-title-wrapper {
+                margin-top: @page-title-wrapper-without-breadcrumbs__margin-top;
+            }
+        }
+    }
+
     .page-title-wrapper ~ .columns {
         margin-top: @4;
     }
