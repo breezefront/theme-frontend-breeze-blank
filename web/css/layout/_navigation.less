@@ -207,12 +207,12 @@
                     position: absolute;
                     .right(@navigation-caret__right);
                     top: 50%;
-                    margin-top: -@6/2;
+                    margin-top: -(@6 / 2);
                     width: @6;
                     height: @6;
                     &:extend(.transition all);
                     .breeze-icon(@icon-chevron, @3);
-                    .modrtl(transform, false, scaleX(-1));
+                    .modrtl(transform, false, ~"scaleX(-1)");
                     .lib-css(opacity, @navigation-caret__opacity);
                 }
                 .ui-icon {

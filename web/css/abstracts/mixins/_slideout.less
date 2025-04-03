@@ -13,7 +13,7 @@
         max-width: ~"calc(100vw - @{16})";
         background: @z-layer__background;
         color: @z-layer__color;
-        .modrtl(transform, translateX(-100%), translateX(100%));
+        .modrtl(transform, ~"translateX(-100%)", ~"translateX(100%)");
         overscroll-behavior: contain;
         overflow: auto;
         padding: @4;
@@ -50,7 +50,7 @@
         top: @5;
         .left(~"min(calc(@{96} + @{4-5}), calc(100vw - @{11}))"); // @see slideout width
         .breeze-icon(@icon-x);
-        .modrtl(transform, translateX(-20px), translateX(20px));
+        .modrtl(transform, ~"translateX(-20px)", ~"translateX(20px)");
     }
 }
 .breeze-slideout-close-visible {

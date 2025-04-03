@@ -32,7 +32,7 @@
     & when not (@critical) {
         &::after {
             .breeze-icon(@breadcrumbs-item-separator__icon, @breadcrumbs-item-separator__width, @breadcrumbs-item-separator__height);
-            .modrtl(transform, false, scaleX(-1));
+            .modrtl(transform, false, ~"scaleX(-1)");
         }
     }
 }

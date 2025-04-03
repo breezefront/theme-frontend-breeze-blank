@@ -391,10 +391,10 @@
         .breeze-icon(@slider-arrow-icon__mask, @slider-arrow-icon__width, @slider-arrow-icon__height);
     }
     .slick-prev::before {
-        .modrtl(transform, scaleX(-1), false);
+        .modrtl(transform, ~"scaleX(-1)", false);
     }
     .slick-next::before {
-        .modrtl(transform, false, scaleX(-1));
+        .modrtl(transform, false, ~"scaleX(-1)");
     }
 
     #html-body {
