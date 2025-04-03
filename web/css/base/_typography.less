@@ -283,9 +283,8 @@
         color: @muted__color;
     }
 
-    :where(.prose),
-    :where(.cms-no-route .main),
-    :where(.cms-page-view .main) {
+    .prose,
+    :where(.cms-no-route, .cms-page-view) .main {
         .lib-css(font-size, @prose__font-size);
         .lib-css(line-height, @prose__line-height);
         &:extend(.breeze-prose all);
