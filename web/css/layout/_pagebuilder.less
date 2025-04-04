@@ -378,6 +378,14 @@
         .flex-nowrap > .pagebuilder-column-line {
             flex-wrap: nowrap;
         }
+        .flex-wrap-2 > .pagebuilder-column-line .pagebuilder-column {
+            width: ~"calc((100% - var(--gap)) / 2)" !important;
+            flex-basis: auto;
+        }
+        .flex-wrap-3 > .pagebuilder-column-line .pagebuilder-column {
+            width: ~"calc((100% - var(--gap) * 2) / 3)" !important;
+            flex-basis: auto;
+        }
         .pagebuilder-column {
             flex-basis: 100%;
             max-width: 100%;
