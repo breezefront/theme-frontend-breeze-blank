@@ -337,21 +337,19 @@
     .pagebuilder-column-group,
     .pagebuilder-column-line {
         gap: var(--gap, 0px);
-        row-gap: var(--row-gap, 0px);
+        row-gap: var(--row-gap, var(--gap, 0px));
     }
 
     .pagebuilder-column-gap (@i) when (@i <= 8) {
         .pagebuilder-column-group {
-            .gap-@{i} > &, // 2.4.4 legacy. Not working in 2.4.5
-            .gap-@{i} > & > .pagebuilder-column-line, //2.4.5
-            &.gap-@{i} > .pagebuilder-column-line {   // 2.4.5
+            .gap-@{i},
+            &.gap-@{i} {
                 --gap: ~"@{@{i}}";
             }
 
             & when (@i = 2) {
-                .gap > &,
-                .gap > & > .pagebuilder-column-line,
-                &.gap > .pagebuilder-column-line {
+                .gap,
+                &.gap {
                     --gap: ~"@{@{i}}";
                 }
             }
@@ -362,8 +360,8 @@
 
     .pagebuilder-row-gap (@i) when (@i <= 8) {
         .pagebuilder-column-group {
-            .row-gap-@{i} > & > .pagebuilder-column-line,
-            &.row-gap-@{i} > .pagebuilder-column-line {
+            .row-gap-@{i},
+            &.row-gap-@{i} {
                 --row-gap: ~"@{@{i}}";
             }
         }
