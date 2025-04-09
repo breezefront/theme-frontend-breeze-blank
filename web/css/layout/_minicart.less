@@ -343,6 +343,11 @@
 
 & when not (@critical) {
     .minicart-items {
+        .product.options {
+            .content .subtitle {
+                display: none;
+            }
+        }
         .actions {
             a {
                 &:extend(.transition all);
