@@ -231,11 +231,12 @@
                     .lib-css(text-transform, @listing-grid-item-tocart__absolute__text-transform);
                     &:hover {
                         .lib-css(--button-bg-alpha, @listing-grid-item-tocart__absolute__hover__background-alpha);
+                        .lib-rgb(--button-hover-bg, @listing-grid-item-tocart__absolute__background-color);
                     }
                 }
                 .stock {
                     .breeze-button();
-                    &:extend(:where(.products-grid, .widget-product-carousel) .product-item .product-item-details .actions-primary .tocart);
+                    &:extend(:where(.products-grid, .widget-product-carousel) .product-item .product-item-details .actions-primary .tocart all);
                     --button-alpha: .7;
                 }
             }
