@@ -135,8 +135,8 @@
 
 .breeze-button-link {
     & when (@critical) {
-        --button-bg: transparent;
-        --button-border-color: transparent;
+        --button-bg-alpha: 0;
+        --button-border-alpha: 0;
         --button-color: var(--link-color);
         text-decoration: @link__text-decoration !important;
     }
@@ -145,8 +145,8 @@
         @media @media-hover {
             &:hover {
                 text-decoration: @link__hover__text-decoration !important;
-                --button-hover-bg: transparent;
-                --button-border-color: transparent;
+                --button-hover-bg-alpha: 0;
+                --button-border-alpha: 0;
                 --button-color: var(--link-color);
             }
         }
