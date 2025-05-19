@@ -81,6 +81,9 @@
                 text-decoration: @button__hover__text-decoration !important;
                 .breeze-rgb(--button-border-color, @button__hover__border-color);
             }
+            &.selected:hover {
+                .breeze-rgb(--button-hover-bg, @button__selected__background-color);
+            }
         }
         &:focus-visible {
             .breeze-rgb(--button-color, @button__focus__text-color);
