@@ -5,7 +5,8 @@
 @toolbar-mode__padding: @2;
 
 @toolbar-pages-item__padding: @1 @2;
-@toolbar-pages-item__width: false;
+@toolbar-pages-item__width: false; // @deprecated. It cause issues with bigger strings
+@toolbar-pages-item__min-width: @toolbar-pages-item__width;
 @toolbar-pages-item__height: false;
 @toolbar-pages-item__font-weight: false;
 @toolbar-pages-item__color: false;
