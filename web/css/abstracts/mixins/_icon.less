@@ -8,7 +8,13 @@
     }
     & when not (@critical) {
         background-color: currentColor;
-        -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        @replaced: replace(@icon, '<svg ', '');
+        & when (@icon = @replaced) {
+            -webkit-mask: url('@{icon}') no-repeat 50% 50%;
+        }
+        & when not (@icon = @replaced) {
+            -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        }
         -webkit-mask-size: @size @size;
     }
 }
@@ -22,7 +28,13 @@
     }
     & when not (@critical) {
         background-color: currentColor;
-        -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        @replaced: replace(@icon, '<svg ', '');
+        & when (@icon = @replaced) {
+            -webkit-mask: url('@{icon}') no-repeat 50% 50%;
+        }
+        & when not (@icon = @replaced) {
+            -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        }
         -webkit-mask-size: @width @height;
     }
 }
@@ -35,7 +47,13 @@
         width: @size;
         height: @size;
         background-color: currentColor;
-        -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        @replaced: replace(@icon, '<svg ', '');
+        & when (@icon = @replaced) {
+            -webkit-mask: url('@{icon}') no-repeat 50% 50%;
+        }
+        & when not (@icon = @replaced) {
+            -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        }
         -webkit-mask-size: @size @size;
     }
 }
@@ -47,7 +65,13 @@
         width: @width;
         height: @height;
         background-color: currentColor;
-        -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        @replaced: replace(@icon, '<svg ', '');
+        & when (@icon = @replaced) {
+            -webkit-mask: url('@{icon}') no-repeat 50% 50%;
+        }
+        & when not (@icon = @replaced) {
+            -webkit-mask: url('data:image/svg+xml,@{icon}') no-repeat 50% 50%;
+        }
         -webkit-mask-size: @width @height;
     }
 }
