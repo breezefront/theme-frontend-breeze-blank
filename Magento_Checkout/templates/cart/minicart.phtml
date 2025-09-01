@@ -22,8 +22,8 @@
             <span class="counter-label">
             <!-- ko if: getCartParam('summary_count') -->
                 <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
-                <!-- ko if: getCartParam('summary_count') > 1 --><span><?= __('items') ?></span><!-- /ko -->
-                <!-- ko if: getCartParam('summary_count') === 1 --><span><?= __('item') ?></span><!-- /ko -->
+                <!-- ko if: getCartParam('summary_count') > 1 --><span><?= $block->escapeHtml(__('items')) ?></span><!-- /ko -->
+                <!-- ko if: getCartParam('summary_count') === 1 --><span><?= $block->escapeHtml(__('item')) ?></span><!-- /ko -->
             <!-- /ko -->
             </span>
         </span>

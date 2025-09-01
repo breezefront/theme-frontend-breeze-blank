@@ -46,7 +46,7 @@
         <?php endif ?>
 
         <?php foreach ($visibleFilters as $i => $filter) : ?>
-            <div class="filter-options-item filter-<?= $filter->getRequestVar() ?><?= $isExpanded ? ' initially-active active' : '' ?>"
+            <div class="filter-options-item filter-<?= $block->escapeHtmlAttr($filter->getRequestVar()) ?><?= $isExpanded ? ' initially-active active' : '' ?>"
                 data-mage-init='{"collapsible":{"active":<?= $isExpanded ? 'true' : 'false' ?>,"dialog":true}}'>
                 <div class="filter-options-title" data-trigger="true" data-role="title" role="button"><?= $block->escapeHtml(__($filter->getName())) ?></div>
                 <div class="filter-options-content" data-role="content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter) ?></div>

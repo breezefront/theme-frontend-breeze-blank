@@ -1,7 +1,7 @@
 <?php /** @var $block \Magento\Catalog\Block\Product\Image */ ?>
 
 <span class="product-image-container"
-    style="--image-container-width: <?= $block->getWidth() ?>px; --image-container-aspect-ratio: <?= $block->getWidth() ?>/<?= $block->getHeight() ?>;">
+    style="--image-container-width: <?= $escaper->escapeHtmlAttr($block->getWidth()) ?>px; --image-container-aspect-ratio: <?= $escaper->escapeHtmlAttr($block->getWidth()) ?>/<?= $escaper->escapeHtmlAttr($block->getHeight()) ?>;">
     <img class="<?= $escaper->escapeHtmlAttr($block->getClass()) ?>"
         <?php foreach ($block->getCustomAttributes() as $name => $value): ?>
             <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtml($value) ?>"
