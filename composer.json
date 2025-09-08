@@ -10,8 +10,8 @@
         ]
     },
     "require": {
-        "magento/module-page-builder": "*",
+        "magento/module-page-builder": "^2.0",
         "swissup/module-breeze": "^2.15.0",
-        "swissup/module-rtl": "*"
+        "swissup/module-rtl": "^1.3.10"
     }
 }
