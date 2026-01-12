@@ -1,0 +1,200 @@
+{
+  "version": "1.0",
+  "sections": [
+    {
+      "id": "test_visual_effects",
+      "name": "🎨 Visual Effects Test",
+      "description": "Fields with immediate visible changes",
+      "icon": "palette",
+      "order": 1,
+      "settings": [
+        {
+          "id":  "primary_button_color",
+          "label": "1️⃣ Primary Button Color",
+          "type": "color",
+          "default": "#1979c3",
+          "description": "Changes all primary buttons (Add to Cart, etc.)",
+          "css_var": "--button-primary-bg",
+          "help_text": "Try #e63946 (red) or #06ffa5 (green)"
+        },
+        {
+          "id": "text_color",
+          "label":  "2️⃣ Text Color",
+          "type": "color",
+          "default": "rgb(17, 24, 39)",
+          "description": "Main text color across the site",
+          "css_var": "--base-color"
+        },
+        {
+          "id": "link_color",
+          "label":  "3️⃣ Link Color",
+          "type": "color",
+          "default": "rgb(29, 78, 216)",
+          "description": "All clickable links",
+          "css_var": "--link-color"
+        },
+        {
+          "id": "text_opacity",
+          "label": "4️⃣ Text Opacity",
+          "type": "range",
+          "default": "1",
+          "min": "0.3",
+          "max": "1",
+          "step": "0.05",
+          "description": "Make text more/less transparent",
+          "css_var":  "--base-alpha"
+        },
+        {
+          "id":  "animation_speed",
+          "label": "5️⃣ Animation Speed",
+          "type": "range",
+          "default": "200",
+          "min": "0",
+          "max": "1000",
+          "step": "50",
+          "unit": "ms",
+          "description": "Hover effects speed (try 1000ms for slow-mo)",
+          "css_var":  "--transition-duration"
+        }
+      ]
+    },
+    {
+      "id": "test_layout",
+      "name": "📐 Layout Test",
+      "description": "Fields that change page structure",
+      "icon": "view_column",
+      "order": 2,
+      "settings": [
+        {
+          "id": "container_width",
+          "label":  "6️⃣ Container Max Width",
+          "type": "select",
+          "default": "1280px",
+          "options":  [
+            {"value": "800px", "label": "Narrow (800px)"},
+            {"value": "1024px", "label": "Medium (1024px)"},
+            {"value": "1280px", "label": "Wide (1280px)"},
+            {"value": "1536px", "label": "Extra Wide (1536px)"},
+            {"value": "100%", "label": "Full Width"}
+          ],
+          "description":  "Page content max width",
+          "css_var": "--container-max-width"
+        },
+        {
+          "id": "grid_columns",
+          "label":  "7️⃣ Product Grid Columns",
+          "type": "number",
+          "default": "3",
+          "min": "2",
+          "max": "6",
+          "step": "1",
+          "description": "Products per row (go to catalog page to see)",
+          "css_var":  "--listing-grid-columns",
+          "help_text": "Navigate to a category page to see this effect"
+        },
+        {
+          "id": "grid_gap",
+          "label": "8️⃣ Product Grid Gap",
+          "type":  "select",
+          "default":  "1rem",
+          "options": [
+            {"value": "0.25rem", "label": "Extra Tight (4px)"},
+            {"value":  "0.5rem", "label": "Tight (8px)"},
+            {"value": "1rem", "label": "Normal (16px)"},
+            {"value": "1.5rem", "label": "Relaxed (24px)"},
+            {"value": "2rem", "label": "Loose (32px)"}
+          ],
+          "description": "Space between products",
+          "css_var": "--listing-grid-gap"
+        },
+        {
+          "id":  "sidebar_width",
+          "label":  "9️⃣ Sidebar Width",
+          "type":  "text",
+          "default": "220px",
+          "description": "Left sidebar width (on pages with sidebar)",
+          "css_var": "--sidebar-width",
+          "placeholder": "220px"
+        }
+      ]
+    },
+    {
+      "id": "test_all_types",
+      "name": "🧪 All Field Types",
+      "description": "One of each field type",
+      "icon":  "settings",
+      "order": 3,
+      "settings": [
+        {
+          "id": "test_toggle",
+          "label": "🔟 Sticky Header",
+          "type": "toggle",
+          "default": true,
+          "description": "Enable/disable sticky header on scroll",
+          "css_var": "--header-sticky"
+        },
+        {
+          "id": "test_textarea",
+          "label": "1️⃣1️⃣ Custom CSS",
+          "type": "textarea",
+          "default": "/* Add your custom styles here */",
+          "description":  "Inject custom CSS (advanced)",
+          "rows": 10,
+          "help_text": "Example: body { font-size: 18px; }"
+        },
+        {
+          "id": "test_font",
+          "label": "1️⃣2️⃣ Body Font",
+          "type": "font_picker",
+          "default": "Open Sans",
+          "description": "Main text font family",
+          "css_var": "--font-family-base",
+          "options": [
+            {"value": "Open Sans", "label": "Open Sans"},
+            {"value": "Roboto", "label": "Roboto"},
+            {"value": "Lato", "label": "Lato"},
+            {"value": "Montserrat", "label": "Montserrat"},
+            {"value": "Georgia", "label": "Georgia"},
+            {"value": "serif", "label": "Serif"}
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "id": "dark-mode",
+      "name": "🌙 Dark Mode",
+      "description": "Complete dark color scheme with high contrast for better readability in low-light conditions. Perfect for night browsing.",
+      "settings": {
+        "test_visual_effects.primary_button_color": "#3b82f6",
+        "test_visual_effects.text_color": "rgb(243, 244, 246)",
+        "test_visual_effects.link_color": "rgb(96, 165, 250)",
+        "test_visual_effects.animation_speed": "300"
+      }
+    },
+    {
+      "id": "high-contrast",
+      "name": "♿ High Contrast",
+      "description": "Maximum contrast accessibility theme with bold colors and clear distinction between elements. Designed for users with visual impairments.",
+      "settings": {
+        "test_visual_effects.primary_button_color": "#dc2626",
+        "test_visual_effects.text_color": "rgb(0, 0, 0)",
+        "test_visual_effects.link_color": "rgb(0, 0, 255)",
+        "test_visual_effects.text_opacity": "1"
+      }
+    },
+    {
+      "id": "minimal-clean",
+      "name": "✨ Minimal Clean",
+      "description": "Clean and minimal light theme with generous spacing and soft colors. Focus on content with distraction-free design.",
+      "settings": {
+        "test_visual_effects.primary_button_color": "#ffffff",
+        "test_visual_effects.text_color": "rgb(31, 41, 55)",
+        "test_visual_effects.link_color": "rgb(75, 85, 99)",
+        "test_layout.container_width": "1024px",
+        "test_layout.grid_gap": "1.5rem"
+      }
+    }
+  ]
+}
