@@ -62,7 +62,7 @@
         & when (@header__dark) {
             &:extend(.breeze-invert-colors all);
             & when (@header__background = false) {
-                .lib-css(background, @theme__dark-color);
+                .lib-css(background, @dark__background);
             }
         }
 
@@ -76,7 +76,7 @@
             & when (@header-panel__dark) {
                 &:extend(.breeze-invert-colors all);
                 & when (@header-panel__background = false) {
-                    .lib-css(background, @theme__dark-color);
+                    .lib-css(background, @dark__background);
                 }
             }
 
