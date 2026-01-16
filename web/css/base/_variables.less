@@ -1,5 +1,18 @@
 & when (@critical) {
     :root {
+        .lib-css(--brand, @color__brand);
+        .lib-css(--neutral-0, @white);
+        .lib-css(--neutral-800, @gray-800);
+
+        .lib-css(--button-color, @button__color);
+        .lib-css(--button-color-hover, @button__color__hover);
+        .lib-css(--button-bg, @button__bg);
+        .lib-css(--button-bg-hover, @button__bg__hover);
+
+
+
+        ///////
+
         .lib-rgb(--black, @black);
         .lib-rgb(--white, @white);
 
@@ -24,7 +37,7 @@
         .lib-rgb(--yellow-muted, @yellow__muted);
 
         .lib-rgb(--brand-color, @theme__brand-color);
-        .lib-rgb(--brand-hover-color, @theme__brand-hover-color);
+        // .lib-rgb(--brand-hover-color, @theme__brand-hover-color);
         .lib-rgb(--danger-color, @danger__text-color);
         .lib-rgb(--info-color, @info__text-color);
         .lib-rgb(--success-color, @success__text-color);

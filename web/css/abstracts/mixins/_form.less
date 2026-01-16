@@ -52,9 +52,11 @@
         .lib-css(box-shadow, @button__shadow);
 
         padding: @button__padding;
-        color: @button__color;
-        background: @button__background;
-        border: @button__border;
+        color: var(--button-color, var(--neutral-0));
+        background: var(--button-bg, var(--brand));
+        border-color: var(--button-border-color, var(--button-bg, var(--brand)));
+        border-width: @button__border-width;
+        border-style: var(--button-border-style, solid);
         border-radius: @button__border-radius;
         text-decoration: @button__text-decoration !important;
         white-space: nowrap;
@@ -77,9 +79,28 @@
 
         @media @media-hover {
             &:hover {
-                background: @button__hover__background;
                 text-decoration: @button__hover__text-decoration !important;
-                .breeze-rgb(--button-border-color, @button__hover__border-color);
+                color: var(--button-color-hover, var(--button-color, var(--neutral-0)));
+                border-color: var(--button-border-color-hover, color-mix(
+                    in srgb,
+                    var(--button-border-color, var(--button-bg, var(--brand))) 90%,
+                    black
+                ));
+                background: var(--button-bg-hover, color-mix(
+                    in srgb,
+                    var(--button-bg, var(--brand)) 90%,
+                    black
+                ));
+                @supports ~"(color: oklch(from #000 l c h))" {
+                    border-color: var(--button-border-color-hover, oklch(
+                        from var(--button-border-color, var(--button-bg, var(--brand)))
+                        ~"max(calc(l - 0.05), 0)" c h
+                    ));
+                    background: var(--button-bg-hover, oklch(
+                        from var(--button-bg, var(--brand))
+                        ~"max(calc(l - 0.05), 0)" c h
+                    ));
+                }
             }
             &.selected:hover {
                 .breeze-rgb(--button-hover-bg, @button__selected__background-color);
