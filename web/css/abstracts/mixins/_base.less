@@ -1,7 +1,7 @@
 .lib-css(
     @_property,
     @_value,
-    @_prefix: 0
+    @_default: undefined
 ) when not (@_value = '')
     and not (@_value = false)
     and not (extract(@_value, 1) = false)
@@ -10,4 +10,21 @@
     and not (extract(@_value, 4) = false)
     and not (extract(@_value, 5) = false) {
     @{_property}: @_value;
+}
+
+.lib-css(
+    @_property,
+    @_value,
+    @_default: undefined
+) when (@_value = false)
+    and (@_default = 1) {
+}
+
+.lib-css(
+    @_property,
+    @_value,
+    @_default: undefined
+) when (@_value = false)
+    and not (@_default = undefined) {
+    @{_property}: @_default;
 }

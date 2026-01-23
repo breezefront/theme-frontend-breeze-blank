@@ -280,11 +280,10 @@
         width: @slider-arrow__width;
         height: @slider-arrow__height;
         transform: @slider-arrow__transform;
-        --base-bg-alpha: .7;
-        background-color: @slider-arrow__background-color;
-        color: @slider-arrow__color;
-        .lib-css(border, @slider-arrow__border);
-        .lib-css(border-radius, @slider-arrow__border-radius);
+        background: var(--slider-arrow-bg, color-mix(in srgb, var(--base-bg) 70%, transparent));
+        color: var(--slider-arrow-color, var(--base-color));
+        border: var(--slider-arrow-border-width, 0) solid var(--slider-arrow-border-color, transparent);
+        border-radius: var(--slider-arrow-border-radius, 0);
         display: none;
         gap: 0;
         align-items: center;
@@ -297,11 +296,6 @@
             display: flex;
         }
 
-        &:hover {
-            color: @slider-arrow__hover__color;
-            background-color: @slider-arrow__hover__background-color;
-        }
-
         &::before {
             content: '';
             display: block;
@@ -312,8 +306,8 @@
         }
 
         &.slick-disabled {
+            .lib-css(filter, @slider-arrow__disabled__filter);
             .lib-css(opacity, @slider-arrow__disabled__opacity);
-            .lib-css(color, @slider-arrow__disabled__color);
             pointer-events: none
         }
     }
@@ -417,6 +411,21 @@
     }
     .slick-next::before {
         .modrtl(transform, false, ~"scaleX(-1)");
+    }
+    @media @media-hover {
+        .slick-arrow:hover {
+            color: var(--slider-arrow-hover-color, var(--slider-arrow-color, var(--base-color)));
+            border-color: var(--slider-arrow-hover-border-color, color-mix(
+                in srgb,
+                var(--slider-arrow-border-color, transparent) 90%,
+                black
+            ));
+            background: var(--slider-arrow-hover-bg, color-mix(
+                in srgb,
+                var(--slider-arrow-bg, var(--base-bg)) 90%,
+                transparent
+            ));
+        }
     }
 
     #html-body {

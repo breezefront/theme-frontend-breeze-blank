@@ -1,25 +1,79 @@
 & when (@critical) {
     :root {
-        .lib-css(--brand, @color__brand);
-        .lib-css(--neutral-0, @white);
+        .lib-css(--brand, @brand);
+        .lib-css(--white, @white);
+        .lib-css(--black, @black);
+        .lib-css(--neutral-200, @gray-200);
+        .lib-css(--neutral-300, @gray-300);
+        .lib-css(--neutral-400, @gray-400);
         .lib-css(--neutral-800, @gray-800);
 
-        .lib-css(--button-color, @button__color);
-        .lib-css(--button-color-hover, @button__color__hover);
+        .lib-css(--base-font-family, @base__font-family);
+        .lib-css(--base-font-size, @base__font-size);
+        .lib-css(--base-line-height, @base__line-height);
+        .lib-css(--base-color, @base__color, var(--neutral-800));
+        .lib-css(--base-bg, @base__bg, var(--white));
+        .lib-css(--base-border-radius, @base__border-radius);
+
+        .lib-css(--body-font-family, @body__font-family);
+        .lib-css(--body-font-size, @body__font-size);
+        .lib-css(--body-line-height, @body__line-height);
+        .lib-css(--body-color, @body__color);
+        .lib-css(--body-bg, @body__bg);
+
+        .lib-css(--surface-bg, @surface__bg, var(--base-bg));
+        .lib-css(--surface-color, @surface__color, var(--base-color));
+        .lib-css(--overlay-bg, @overlay__bg);
+
+        .lib-css(--divider-color, @divider__color, var(--neutral-200));
+
+        .lib-css(--focus-ring-width, @focus-ring__width, 2px);
+        .lib-css(--focus-ring-color, @focus-ring__color, var(--brand));
+        .lib-css(--focus-ring-offset, @focus-ring__offset, 2px);
+
+        .lib-css(--input-bg, @input__bg);
+        .lib-css(--input-color, @input__color);
+        .lib-css(--input-border-color, @input__border-color, var(--neutral-400));
+        .lib-css(--input-border-width, @input__border-width, 1px);
+        .lib-css(--input-border-radius, @input__border-radius);
+        .lib-css(--input-focus-bg, @input__focus__bg);
+        .lib-css(--input-focus-color, @input__focus__color);
+        .lib-css(--input-focus-border-color, @input__focus__border-color);
+
+        .lib-css(--checkbox-size, @checkbox__size);
+        .lib-css(--checkbox-color, @checkbox__color);
+        .lib-css(--checkbox-border-radius, @checkbox__border-radius);
+
         .lib-css(--button-bg, @button__bg);
-        .lib-css(--button-bg-hover, @button__bg__hover);
+        .lib-css(--button-color, @button__color);
+        .lib-css(--button-border-width, @button__border-width);
+        .lib-css(--button-border-radius, @button__border-radius);
+        .lib-css(--button-border-color, @button__border-color);
 
-        .lib-css(--button-secondary-color, @button__secondary__color);
-        .lib-css(--button-secondary-color-hover, @button__secondary__color__hover);
+        .lib-css(--button-hover-bg, @button__hover__bg);
+        .lib-css(--button-hover-color, @button__hover__color);
+        .lib-css(--button-hover-border-color, @button__hover__border-color);
+
         .lib-css(--button-secondary-bg, @button__secondary__bg);
-        .lib-css(--button-secondary-bg-hover, @button__secondary__bg__hover);
+        .lib-css(--button-secondary-color, @button__secondary__color);
 
+        .lib-css(--button-hover-secondary-bg, @button__secondary__hover__bg);
+        .lib-css(--button-hover-secondary-color, @button__secondary__hover__color);
+
+        .lib-css(--dropdown-item-hover-bg, @dropdown-item__hover__bg);
+        .lib-css(--dropdown-item-hover-color, @dropdown-item__hover__color);
+
+        .lib-css(--slider-arrow-bg, @slider-arrow__bg);
+        .lib-css(--slider-arrow-color, @slider-arrow__color);
+        .lib-css(--slider-arrow-border-width, @slider-arrow__border-width);
+        .lib-css(--slider-arrow-border-color, @slider-arrow__border-color);
+        .lib-css(--slider-arrow-border-radius, @slider-arrow__border-radius);
+        .lib-css(--slider-arrow-hover-bg, @slider-arrow__hover__bg);
+        .lib-css(--slider-arrow-hover-color, @slider-arrow__hover__color);
+        .lib-css(--slider-arrow-hover-border-color, @slider-arrow__hover__border-color);
 
 
         ///////
-
-        .lib-rgb(--black, @black);
-        .lib-rgb(--white, @white);
 
         .lib-rgb(--gray-50,  @gray-50);
         .lib-rgb(--gray-100, @gray-100);
@@ -48,17 +102,12 @@
         .lib-rgb(--success-color, @success__text-color);
         .lib-rgb(--success-bg, @success__background-color);
 
-        --base-alpha: @base__text-alpha;
-        .lib-rgb(--base-color, @base__text-color);
-        .lib-rgb(--base-bg, @base__background-color);
+        .lib-rgb(--base-color, @base__color);
+        .lib-rgb(--base-bg, @base__bg);
         .lib-rgb(--muted-bg, @muted__background-color);
         .lib-rgb(--dark-bg, @dark__background-color);
 
-        .lib-rgb(--z-layer-color, @z-layer__text-color);
-        .lib-rgb(--z-layer-bg, @z-layer__background-color);
-        .lib-rgb(--z-overlay-bg, @z-overlay__background-color);
-
-        .lib-rgb(--ring-color, @ring__text-color);
+        // .lib-rgb(--ring-color, @ring__text-color);
 
         --link-alpha: @link__text-alpha;
         .lib-rgb(--link-color, @link__text-color);
@@ -70,16 +119,16 @@
         .lib-rgb(--block-title-bg, @block-title__background-color);
         .lib-rgb(--block-content-bg, @block-content__background-color);
 
-        --input-alpha: 1;
-        .lib-rgb(--input-color, @input__text-color);
-        .lib-rgb(--input-bg, @input__background-color);
-        --input-bg-alpha: 1;
-        --input-border-alpha: 1;
-        .lib-rgb(--input-border-color, @input__border-color);
-        .lib-rgb(--input-outline-color, @input__focus__outline-color);
-        --input-outline-alpha: @input__focus__outline-alpha;
+        // --input-alpha: 1;
+        // .lib-rgb(--input-color, @input__color);
+        // .lib-rgb(--input-bg, @input__bg);
+        // --input-bg-alpha: 1;
+        // --input-border-alpha: 1;
+        // .lib-rgb(--input-border-color, @input__border-color);
+        // .lib-rgb(--input-outline-color, @input__focus__outline-color);
+        // --input-outline-alpha: @input__focus__outline-alpha;
 
-        .lib-rgb(--checkbox-color, @checkbox__text-color);
+        // .lib-rgb(--checkbox-color, @checkbox__text-color);
 
         // .lib-rgb(--button-color, @button__text-color);
         // .lib-rgb(--button-bg, @button__background-color);
@@ -126,9 +175,6 @@
                 .lib-rgb(--base-color, @base__dark__text-color);
                 .lib-rgb(--base-bg, @base__dark__background-color);
                 .lib-rgb(--muted-bg, @muted__dark__background-color);
-
-                --z-overlay-bg-alpha: .65;
-                .lib-rgb(--z-layer-bg, @z-layer__dark__background-color);
 
                 .lib-rgb(--headings-color, @headings__dark__text-color);
 

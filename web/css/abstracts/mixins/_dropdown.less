@@ -20,11 +20,11 @@
         z-index: 850;
         visibility: hidden;
         margin-top: @0-5;
-        color: @z-layer__color;
-        background: @z-layer__background;
+        color: var(--surface-color);
+        background: var(--surface-bg);
+        border: 1px solid var(--dropdown-border-color, var(--divider-color));
         .lib-css(filter, @dropdown__filter);
         .lib-css(box-shadow, @dropdown__shadow);
-        .lib-css(border, @dropdown__border);
         .lib-css(border-radius, @dropdown__border-radius);
         .text-align(left);
     }
@@ -54,11 +54,14 @@
         .lib-css(border-radius, @dropdown-item__border-radius);
     }
     & when not (@critical) {
-        .lib-css(--divider-alpha, @dropdown-item__hover__background-alpha);
         cursor: pointer;
         &:hover {
-            .lib-css(color, @dropdown-item__hover__color);
-            .lib-css(background, @dropdown-item__hover__background);
+            color: var(--dropdown-item-hover-color, var(--surface-color));
+            background: var(--dropdown-item-hover-bg, color-mix(
+                in srgb,
+                var(--surface-bg) 95%,
+                var(--black)
+            ));
         }
     }
 }

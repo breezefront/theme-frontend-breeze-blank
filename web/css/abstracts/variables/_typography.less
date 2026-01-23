@@ -18,16 +18,26 @@
 @line-height__4xl: @10;
 @line-height__5xl: 1;
 
-@font-sans:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-sans:  ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 @font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 @font-mono:  ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 @base__font-family: @font-sans;
 @base__font-size: @font-size__base;
 @base__line-height: @line-height__base;
-@base__text-color: @gray-900;
-@base__text-alpha: 1;
-@base__color: ~"rgba(var(--base-color), var(--base-alpha, 1))";
+@base__color: false;
+@base__bg: false;
+@base__border-radius: 0;
+
+@body__font-family: false;
+@body__font-size: false;
+@body__line-height: false;
+@body__color: false;
+@body__bg: false;
+
+@focus-ring__width: false;
+@focus-ring__offset: false;
+@focus-ring__color: false;
 
 @selection__color: false;
 @selection__background: false;
@@ -109,11 +119,6 @@
 @info__color: ~"rgba(var(--info-color), var(--info-alpha, 1))";
 @info__background-color: var(--blue-muted);
 @info__background: ~"rgba(var(--info-bg), var(--info-bg-alpha, 1))";
-
-@ring__width: 2px;
-@ring__offset: 1px;
-@ring__text-color: var(--brand-color);
-@ring__color: ~"rgba(var(--ring-color), var(--ring-alpha, 1))";
 
 @base__inverted__text-color: @white;
 @base__inverted__text-alpha: .85;

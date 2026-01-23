@@ -1,59 +1,50 @@
+@input__font-weight: false;
 @input__font-family: false;
 @input__font-size: false;
-@input__text-color: var(--base-color);
-@input__color: ~"rgba(var(--input-color), var(--input-alpha))";
-@input__background-color: var(--base-bg);
-@input__background: ~"rgba(var(--input-bg), var(--input-bg-alpha))";
+@input__color: false;
+@input__bg: false;
 @input__padding: @2 @3;
-@input__border-width: 1px;
-@input__border-color: @gray-400;
-@input__border: @input__border-width solid ~"rgba(var(--input-border-color), var(--input-border-alpha))";
-@input__border-radius: 0;
-@input__shadow: ~"0 0 0 var(--input-shadow-spread, 0) rgba(var(--input-border-color), var(--input-border-alpha))";
-@input__focus__background-color: false;
-@input__focus__border-color: var(--brand-color);
-@input__focus__shadow-spread: 1px;
-@input__focus__outline-color: var(--input-border-color);
-@input__focus__outline: 2px solid ~"rgba(var(--input-outline-color), var(--input-outline-alpha))";
-@input__focus__outline-alpha: 0;
-@input__focus__outline-offset: 2px;
+@input__border-width: false;
+@input__border-radius: false;
+@input__border-color: false;
+@input__outline-color: false;
+@input__outline-width: false;
+@input__outline-offset: false;
+@input__focus__bg: false;
+@input__focus__color: false;
+@input__focus__border-color: false;
 
 @input__lg__font-weight: false;
 @input__lg__padding: false;
-
 @input__xl__font-weight: false;
 @input__xl__padding: @3 @3;
 
 @select__padding-right: @10;
 
 @checkbox__size: @4;
-@checkbox__border-radius: @input__border-radius;
-@checkbox__text-color: @input__focus__border-color;
-@checkbox__color: ~"rgba(var(--checkbox-color), var(--checkbox-alpha, 1))";
-@checkbox__focus__shadow: ~"0 0 0 2px rgb(var(--base-bg)), 0 0 0 4px rgb(var(--checkbox-color))";
+@checkbox__color: false;
+@checkbox__border-radius: false;
 
-@button__font-weight: 400;
+@button__font-weight: false;
 @button__font-family: false;
 @button__font-size: @input__font-size;
 @button__color: false;
-@button__color__hover: false;
-@button__color__focus: false;
 @button__bg: false;
-@button__bg__hover: false;
-@button__bg__focus: false;
-@button__border-width: @input__border-width;
-@button__border-radius: @input__border-radius;
-@button__border-color: var(--button-bg);
-@button__border-color__hover: var(--button-hover-bg, var(--button-bg));
-@button__border-color__focus: @button__bg__focus;
+@button__border-width: false;
+@button__border-radius: false;
+@button__border-color: false;
 @button__padding: @2 @5;
 @button__shadow: false;
 @button__text-decoration: none;
-@button__text-decoration__hover: none;
 @button__text-transform: false;
 @button__text-shadow: false;
-@button__outline__focus: 2px solid @ring__color;
-@button__outline-offset__focus: 2px;
+@button__hover__color: false;
+@button__hover__bg: false;
+@button__hover__border-color: false;
+@button__hover__text-decoration: none;
+
+// @button__outline__focus: 2px solid @ring__color;
+// @button__outline-offset__focus: 2px;
 // @button__color__selected: @button__color;
 // @button__bg__selected: @button__bg;
 // @button__border-color__selected: @button__border-color;
@@ -63,12 +54,12 @@
 // @button-primary__hover__background-color: false;
 // @button-primary__hover__border-color: @button-primary__hover__background-color;
 
-@button__secondary__color: null;
-@button__secondary__color__hover: null;
-@button__secondary__bg: null;
-@button__secondary__bg__hover: null;
-@button__secondary__border-color: null;
-@button__secondary__border-color__hover: null;
+@button__secondary__color: false;
+@button__secondary__bg: false;
+@button__secondary__border-color: false;
+@button__secondary__hover__color: false;
+@button__secondary__hover__bg: false;
+@button__secondary__hover__border-color: false;
 
 @button__xs__font-size: @font-size__xs;
 @button__xs__line-height: @line-height__xs;

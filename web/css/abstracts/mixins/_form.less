@@ -1,17 +1,17 @@
 .breeze-input {
     & when (@critical) {
-        outline: none;
         position: relative;
         padding: @input__padding;
         width: 100%;
 
         .lib-css(font-family, @input__font-family);
+        .lib-css(font-weight, @input__font-weight);
         .lib-css(font-size, @input__font-size);
-        color: @input__color;
-        background: @input__background;
-        border: @input__border;
-        border-radius: @input__border-radius;
-        box-shadow: @input__shadow;
+
+        color: var(--input-color, var(--base-color));
+        background: var(--input-bg, var(--base-bg));
+        border: var(--input-border-width) solid var(--input-border-color);
+        border-radius: var(--input-border-radius, var(--base-border-radius));
 
         &:disabled {
             opacity: .5;
@@ -20,25 +20,19 @@
     }
 
     & when not (@critical) {
-        &:focus,
         &:focus-visible {
-            .lib-rgb(--input-bg, @input__focus__background-color);
-            .lib-rgb(--input-border-color, @input__focus__border-color);
-            --input-outline-color: var(--input-border-color);
-            --input-shadow-spread: @input__focus__shadow-spread;
-            outline: @input__focus__outline;
-            outline-offset: @input__focus__outline-offset;
-        }
-        &:-webkit-autofill {
-            -webkit-box-shadow: @input__shadow, 0 0 0 30px @muted__background inset;
-            -webkit-text-fill-color: @input__color;
+            color: var(--input-focus-color, var(--input-color, var(--base-color)));
+            border-color: var(--input-focus-border-color, var(--input-border-color, var(--neutral-400)));
+            background: var(--input-focus-bg, var(--input-bg, var(--base-bg)));
+            outline-color: var(--input-outline-color, var(--focus-ring-color));
+            outline-width: var(--input-outline-width, var(--focus-ring-width));
+            outline-offset: var(--input-outline-offset, calc(var(--input-border-width) * -1));
         }
     }
 }
 
 .breeze-button {
     & when (@critical) {
-        outline: none;
         position: relative;
         display: inline-flex;
         justify-content: center;
@@ -52,12 +46,12 @@
         .lib-css(box-shadow, @button__shadow);
 
         padding: @button__padding;
-        color: var(--button-color, var(--neutral-0));
+        color: var(--button-color, var(--white));
         background: var(--button-bg, var(--brand));
         border-color: var(--button-border-color, var(--button-bg, var(--brand)));
-        border-width: @button__border-width;
+        border-width: var(--button-border-width, var(--input-border-width));
         border-style: var(--button-border-style, solid);
-        border-radius: @button__border-radius;
+        border-radius: var(--button-border-radius, var(--input-border-radius, var(--base-border-radius)));
         text-decoration: @button__text-decoration !important;
         white-space: nowrap;
 
@@ -79,24 +73,24 @@
 
         @media @media-hover {
             &:hover {
-                text-decoration: @button__text-decoration__hover !important;
-                color: var(--button-color-hover, var(--button-color, var(--neutral-0)));
-                border-color: var(--button-border-color-hover, color-mix(
+                text-decoration: @button__hover__text-decoration !important;
+                color: var(--button-hover-color, var(--button-color, var(--white)));
+                border-color: var(--button-hover-border-color, color-mix(
                     in srgb,
                     var(--button-border-color, var(--button-bg, var(--brand))) 90%,
-                    black
+                    var(--black)
                 ));
-                background: var(--button-bg-hover, color-mix(
+                background: var(--button-hover-bg, color-mix(
                     in srgb,
                     var(--button-bg, var(--brand)) 90%,
-                    black
+                    var(--black)
                 ));
                 @supports ~"(color: oklch(from #000 l c h))" {
-                    border-color: var(--button-border-color-hover, oklch(
+                    border-color: var(--button-hover-border-color, oklch(
                         from var(--button-border-color, var(--button-bg, var(--brand)))
                         ~"max(calc(l - 0.05), 0)" c h
                     ));
-                    background: var(--button-bg-hover, oklch(
+                    background: var(--button-hover-bg, oklch(
                         from var(--button-bg, var(--brand))
                         ~"max(calc(l - 0.05), 0)" c h
                     ));
@@ -107,12 +101,12 @@
             // }
         }
         &:focus-visible {
-            .breeze-rgb(--button-color, @button__color__focus);
-            .breeze-rgb(--button-bg, @button__bg__focus);
-            .breeze-rgb(--button-border-color, @button__border-color__focus);
+            // .breeze-rgb(--button-color, @button__color__focus);
+            // .breeze-rgb(--button-bg, @button__bg__focus);
+            // .breeze-rgb(--button-border-color, @button__border-color__focus);
             z-index: 10;
-            outline: @button__outline__focus;
-            outline-offset: @button__outline-offset__focus;
+            // outline: @button__outline__focus;
+            // outline-offset: @button__outline-offset__focus;
         }
     }
 }
@@ -201,9 +195,9 @@
 .breeze-button-reset {
     --button-bg: var(--base-bg);
     --button-border-color: var(--base-bg);
-    &:focus-visible {
-        .breeze-focus-ring();
-    }
+    // &:focus-visible {
+    //     .breeze-focus-ring();
+    // }
     padding: 0 !important;
     background: transparent !important;
     color: inherit !important;

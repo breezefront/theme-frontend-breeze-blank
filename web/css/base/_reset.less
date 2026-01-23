@@ -119,7 +119,6 @@
 
     [type='search'] {
         -webkit-appearance: textfield;
-        outline-offset: -2px;
     }
     [type='date'] {
         &::-webkit-datetime-edit-fields-wrapper {
@@ -247,9 +246,14 @@
         background-origin: border-box;
         flex-shrink: 0;
         min-width: 0;
-        height: @checkbox__size;
-        width: @checkbox__size;
-        color: @checkbox__color;
+        height: var(--checkbox-size);
+        width: var(--checkbox-size);
+        color: var(--checkbox-color, var(--brand));
+        border: var(--input-border-width) solid var(--input-border-color);
+        border-radius: var(--checkbox-border-radius, var(--base-border-radius));
+    }
+    [type=radio] {
+        border-radius: 100%;
     }
 
     [type=image] {
@@ -333,19 +337,6 @@
         }
     }
 
-    [type=checkbox] {
-        border-radius: @checkbox__border-radius;
-    }
-
-    [type=radio] {
-        border-radius: 100%;
-    }
-
-    [type=checkbox]:focus-visible,
-    [type=radio]:focus-visible {
-        box-shadow: @checkbox__focus__shadow;
-    }
-
     [type=file] {
         background: unset;
         border-color: inherit;
@@ -372,44 +363,25 @@
         background-size: 1.5em 1.5em;
     }
 
-    [type=checkbox]:checked,
-    [type=radio]:checked {
-        border-color: transparent;
-        background-color: currentColor;
+    input:where([type=checkbox], [type=radio]) {
         background-size: 100% 100%;
         background-position: center;
-        background-repeat: no-repeat
+        background-repeat: no-repeat;
+        &:checked {
+            border-color: transparent;
+            background-color: currentColor;
+        }
     }
-
     [type=checkbox]:checked {
         background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e")
     }
-
     [type=radio]:checked {
         background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")
     }
-
-    [type=checkbox]:checked:focus-visible,
-    [type=checkbox]:checked:hover,
-    [type=radio]:checked:focus-visible,
-    [type=radio]:checked:hover {
-        border-color: transparent;
-        background-color: currentColor
-    }
-
     [type=checkbox]:indeterminate {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");
         border-color: transparent;
         background-color: currentColor;
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat
-    }
-
-    [type=checkbox]:indeterminate:focus-visible,
-    [type=checkbox]:indeterminate:hover {
-        border-color: transparent;
-        background-color: currentColor
     }
 
     [type=file] {
@@ -426,10 +398,10 @@
 
         &:focus {
             &::-webkit-slider-thumb {
-                box-shadow: ~"0 0 0 1px @{z-layer__background}, 0 0 0 0.25rem rgba(var(--brand-color), 0.2)";
+                box-shadow: ~"0 0 0 1px var(--surface-bg), 0 0 0 0.25rem rgba(var(--brand-color), 0.2)";
             }
             &::-moz-range-thumb {
-                box-shadow: ~"0 0 0 1px @{z-layer__background}, 0 0 0 0.25rem rgba(var(--brand-color), 0.2)";
+                box-shadow: ~"0 0 0 1px var(--surface-bg), 0 0 0 0.25rem rgba(var(--brand-color), 0.2)";
             }
             &::-webkit-slider-thumb {
                 .transition(); // do not pair with -moz
