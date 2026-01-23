@@ -9,21 +9,23 @@
       "order": 1,
       "settings": [
         {
+          "id": "text_color",
+          "label":  "️ 1️⃣ 32 Text Color",
+          "type": "color",
+          "default": "rgb(17, 24, 39)",
+          "description": "Main text color across the site",
+          "css_var": "--base-color",
+          "palette": "default"
+        },
+        {
           "id":  "primary_button_color",
-          "label": "1️⃣ Primary Button Color",
+          "label": " 2️⃣  Primary Button Color",
           "type": "color",
           "default": "#1979c3",
           "description": "Changes all primary buttons (Add to Cart, etc.)",
           "css_var": "--button-primary-bg",
-          "help_text": "Try #e63946 (red) or #06ffa5 (green)"
-        },
-        {
-          "id": "text_color",
-          "label":  "2️⃣ Text Color",
-          "type": "color",
-          "default": "rgb(17, 24, 39)",
-          "description": "Main text color across the site",
-          "css_var": "--base-color"
+          "help_text": "Try #e63946 (red) or #06ffa5 (green)",
+          "palette": "default"
         },
         {
           "id": "link_color",
@@ -31,7 +33,8 @@
           "type": "color",
           "default": "rgb(29, 78, 216)",
           "description": "All clickable links",
-          "css_var": "--link-color"
+          "css_var": "--link-color",
+          "palette": "default"
         },
         {
           "id": "text_opacity",
@@ -161,6 +164,176 @@
       ]
     }
   ],
+  "palettes": {
+    "default": {
+      "id": "default",
+      "label": "Default Color Palette",
+      "description": "Professional color system for theme customization",
+      "groups": {
+        "brand": {
+          "id": "brand",
+          "label": "Brand Colors",
+          "description": "Primary brand identity colors",
+          "colors": [
+            {
+              "id": "primary",
+              "label": "Primary",
+              "description": "Main brand color for buttons and key elements",
+              "css_var": "--color-brand-primary",
+              "default": "#1979c3"
+            },
+            {
+              "id": "secondary",
+              "label": "Secondary",
+              "description": "Supporting brand color for headers and emphasis",
+              "css_var": "--color-brand-secondary",
+              "default": "#111827"
+            },
+            {
+              "id": "accent",
+              "label": "Accent",
+              "description": "Highlight color for links and interactive elements",
+              "css_var": "--color-brand-accent",
+              "default": "#1d4ed8"
+            },
+            {
+              "id": "amber-primary",
+              "label": "Amber Primary",
+              "description": "Warm alternative primary color",
+              "css_var": "--color-brand-amber-primary",
+              "default": "#eab308"
+            },
+            {
+              "id": "amber-dark",
+              "label": "Amber Dark",
+              "description": "Deep warm color for text and emphasis",
+              "css_var": "--color-brand-amber-dark",
+              "default": "#a16207"
+            }
+          ]
+        },
+        "neutral": {
+          "id": "neutral",
+          "label": "Neutral Colors",
+          "description": "Grayscale palette for backgrounds, borders, and text",
+          "colors": [
+            {
+              "id": "0",
+              "label": "White",
+              "description": "Pure white",
+              "css_var": "--color-neutral-0",
+              "default": "#ffffff"
+            },
+            {
+              "id": "50",
+              "label": "Gray 50",
+              "description": "Lightest gray",
+              "css_var": "--color-neutral-50",
+              "default": "#f9fafb"
+            },
+            {
+              "id": "100",
+              "label": "Gray 100",
+              "description": "Very light gray",
+              "css_var": "--color-neutral-100",
+              "default": "#f3f4f6"
+            },
+            {
+              "id": "200",
+              "label": "Gray 200",
+              "description": "Light gray",
+              "css_var": "--color-neutral-200",
+              "default": "#e5e7eb"
+            },
+            {
+              "id": "300",
+              "label": "Gray 300",
+              "description": "Medium-light gray",
+              "css_var": "--color-neutral-300",
+              "default": "#d1d5db"
+            },
+            {
+              "id": "400",
+              "label": "Gray 400",
+              "description": "Medium gray",
+              "css_var": "--color-neutral-400",
+              "default": "#9ca3af"
+            },
+            {
+              "id": "500",
+              "label": "Gray 500",
+              "description": "Base gray",
+              "css_var": "--color-neutral-500",
+              "default": "#6b7280"
+            },
+            {
+              "id": "600",
+              "label": "Gray 600",
+              "description": "Medium-dark gray",
+              "css_var": "--color-neutral-600",
+              "default": "#4b5563"
+            },
+            {
+              "id": "700",
+              "label": "Gray 700",
+              "description": "Dark gray - ideal for body text",
+              "css_var": "--color-neutral-700",
+              "default": "#374151"
+            },
+            {
+              "id": "800",
+              "label": "Gray 800",
+              "description": "Very dark gray",
+              "css_var": "--color-neutral-800",
+              "default": "#1f2937"
+            },
+            {
+              "id": "900",
+              "label": "Gray 900",
+              "description": "Darkest gray - almost black",
+              "css_var": "--color-neutral-900",
+              "default": "#111827"
+            }
+          ]
+        },
+        "state": {
+          "id": "state",
+          "label": "State Colors",
+          "description": "Semantic colors for UI feedback",
+          "colors": [
+            {
+              "id": "success",
+              "label": "Success",
+              "description": "Positive actions and confirmations",
+              "css_var": "--color-state-success",
+              "default": "#10b981"
+            },
+            {
+              "id": "warning",
+              "label": "Warning",
+              "description": "Caution and important notices",
+              "css_var": "--color-state-warning",
+              "default": "#f59e0b"
+            },
+            {
+              "id": "error",
+              "label": "Error",
+              "description": "Errors and destructive actions",
+              "css_var": "--color-state-error",
+              "default": "#ef4444"
+            },
+            {
+              "id": "info",
+              "label": "Info",
+              "description": "Informational messages",
+              "css_var": "--color-state-info",
+              "default": "#3b82f6"
+            }
+          ]
+        }
+      }
+    }
+  },
   "presets": [
     {
       "id": "dark-mode",
