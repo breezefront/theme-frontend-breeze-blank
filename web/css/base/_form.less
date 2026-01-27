@@ -154,7 +154,7 @@ button,
                 gap: @1;
                 &::after {
                     content: '*';
-                    color: @danger__color;
+                    color: var(--form-required-color, var(--color-danger));
                 }
             }
         }
@@ -275,7 +275,7 @@ button,
     div.field-error {
         margin-top: @0-5;
         font-size: .9rem;
-        color: @danger__color;
+        color: var(--form-error-color, var(--color-danger));
     }
     .field-tooltip {
         --dropdown-width: @72;

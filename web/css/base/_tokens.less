@@ -1,18 +1,25 @@
 & when (@critical) {
     :root {
-        .lib-css(--brand, @brand);
-        .lib-css(--white, @white);
-        .lib-css(--black, @black);
-        .lib-css(--neutral-200, @gray-200);
-        .lib-css(--neutral-300, @gray-300);
-        .lib-css(--neutral-400, @gray-400);
-        .lib-css(--neutral-800, @gray-800);
+        .lib-css(--color-brand, @color__brand);
+        .lib-css(--color-white, @color__white);
+        .lib-css(--color-black, @color__black);
+        .lib-css(--color-neutral-200, @color__neutral-200);
+        .lib-css(--color-neutral-300, @color__neutral-300);
+        .lib-css(--color-neutral-400, @color__neutral-400);
+        .lib-css(--color-neutral-800, @color__neutral-800);
+        .lib-css(--color-blue, @color__blue);
+        .lib-css(--color-green, @color__green);
+        .lib-css(--color-red, @color__red);
+        .lib-css(--color-yellow, @color__yellow);
+        .lib-css(--color-info, @color__info, var(--color-blue));
+        .lib-css(--color-success, @color__success, var(--color-green));
+        .lib-css(--color-danger, @color__danger, var(--color-red));
 
         .lib-css(--base-font-family, @base__font-family);
         .lib-css(--base-font-size, @base__font-size);
         .lib-css(--base-line-height, @base__line-height);
-        .lib-css(--base-color, @base__color, var(--neutral-800));
-        .lib-css(--base-bg, @base__bg, var(--white));
+        .lib-css(--base-color, @base__color, var(--color-neutral-800));
+        .lib-css(--base-bg, @base__bg, var(--color-white));
         .lib-css(--base-border-radius, @base__border-radius);
 
         .lib-css(--body-font-family, @body__font-family);
@@ -25,15 +32,15 @@
         .lib-css(--surface-color, @surface__color, var(--base-color));
         .lib-css(--overlay-bg, @overlay__bg);
 
-        .lib-css(--divider-color, @divider__color, var(--neutral-200));
+        .lib-css(--divider-color, @divider__color, var(--color-neutral-200));
 
         .lib-css(--focus-ring-width, @focus-ring__width, 2px);
-        .lib-css(--focus-ring-color, @focus-ring__color, var(--brand));
+        .lib-css(--focus-ring-color, @focus-ring__color, var(--color-brand));
         .lib-css(--focus-ring-offset, @focus-ring__offset, 2px);
 
         .lib-css(--input-bg, @input__bg);
         .lib-css(--input-color, @input__color);
-        .lib-css(--input-border-color, @input__border-color, var(--neutral-400));
+        .lib-css(--input-border-color, @input__border-color, var(--color-neutral-400));
         .lib-css(--input-border-width, @input__border-width, 1px);
         .lib-css(--input-border-radius, @input__border-radius);
         .lib-css(--input-focus-bg, @input__focus__bg);
@@ -60,6 +67,8 @@
         .lib-css(--button-hover-secondary-bg, @button__secondary__hover__bg);
         .lib-css(--button-hover-secondary-color, @button__secondary__hover__color);
 
+        .lib-css(--link-color, @link__color, var(--color-blue));
+
         .lib-css(--dropdown-item-hover-bg, @dropdown-item__hover__bg);
         .lib-css(--dropdown-item-hover-color, @dropdown-item__hover__color);
 
@@ -72,6 +81,14 @@
         .lib-css(--slider-arrow-hover-color, @slider-arrow__hover__color);
         .lib-css(--slider-arrow-hover-border-color, @slider-arrow__hover__border-color);
 
+        .lib-css(--stock-bg, @product-stock__bg);
+        .lib-css(--stock-color, @product-stock__color);
+        .lib-css(--stock-available-bg, @product-stock__available__bg);
+        .lib-css(--stock-available-color, @product-stock__available__color);
+        .lib-css(--stock-unavailable-bg, @product-stock__unavailable__bg);
+        .lib-css(--stock-unavailable-color, @product-stock__unavailable__color);
+
+        .lib-css(--rating-icon-color, @rating-icon__color);
 
         ///////
 
@@ -86,21 +103,19 @@
         .lib-rgb(--gray-800, @gray-800);
         .lib-rgb(--gray-900, @gray-900);
 
-        .lib-rgb(--red, @red);
-        .lib-rgb(--red-muted, @red__muted);
-        .lib-rgb(--green, @green);
-        .lib-rgb(--green-muted, @green__muted);
-        .lib-rgb(--blue, @blue);
-        .lib-rgb(--blue-muted, @blue__muted);
-        .lib-rgb(--yellow, @yellow);
-        .lib-rgb(--yellow-muted, @yellow__muted);
+        // .lib-rgb(--red, @red);
+        // .lib-rgb(--red-muted, @red__muted);
+        // .lib-rgb(--green, @green);
+        // .lib-rgb(--green-muted, @green__muted);
+        // .lib-rgb(--blue, @blue);
+        // .lib-rgb(--blue-muted, @blue__muted);
+        // .lib-rgb(--yellow, @yellow);
+        // .lib-rgb(--yellow-muted, @yellow__muted);
 
-        .lib-rgb(--brand-color, @theme__brand-color);
-        // .lib-rgb(--brand-hover-color, @theme__brand-hover-color);
-        .lib-rgb(--danger-color, @danger__text-color);
-        .lib-rgb(--info-color, @info__text-color);
-        .lib-rgb(--success-color, @success__text-color);
-        .lib-rgb(--success-bg, @success__background-color);
+        // .lib-rgb(--danger-color, @danger__text-color);
+        // .lib-rgb(--info-color, @info__text-color);
+        // .lib-rgb(--success-color, @success__text-color);
+        // .lib-rgb(--success-bg, @success__background-color);
 
         .lib-rgb(--base-color, @base__color);
         .lib-rgb(--base-bg, @base__bg);
@@ -109,8 +124,8 @@
 
         // .lib-rgb(--ring-color, @ring__text-color);
 
-        --link-alpha: @link__text-alpha;
-        .lib-rgb(--link-color, @link__text-color);
+        // --link-alpha: @link__text-alpha;
+        // .lib-rgb(--link-color, @link__text-color);
 
         --headings-alpha: @headings__text-alpha;
         .lib-rgb(--headings-color, @headings__text-color);
@@ -171,7 +186,7 @@
                 .lib-rgb(--green, @dark__green);
                 .lib-rgb(--blue, @dark__blue);
                 .lib-rgb(--red, @dark__red);
-                .lib-rgb(--brand-color, @theme__dark__brand-color);
+                .lib-rgb(--color-brand, @theme__dark__brand-color);
                 .lib-rgb(--base-color, @base__dark__text-color);
                 .lib-rgb(--base-bg, @base__dark__background-color);
                 .lib-rgb(--muted-bg, @muted__dark__background-color);

@@ -149,9 +149,9 @@
         .modrtl(-webkit-mask-position, 0 50%, 100% 50%);
     }
     .rating-result > span {
-        color: @rating__color;
+        color: var(--rating-icon-color, var(--color-yellow));
         > span {
-            color: @base__color;
+            color: var(--base-color);
         }
     }
     .review-control-vote {
@@ -175,7 +175,7 @@
         }
         label {
             cursor: pointer;
-            color: @rating__color;
+            color: var(--rating-icon-color, var(--color-yellow));
             height: @6;
             .left(0);
             &::before {

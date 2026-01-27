@@ -22,7 +22,7 @@
     & when not (@critical) {
         &:focus-visible {
             color: var(--input-focus-color, var(--input-color, var(--base-color)));
-            border-color: var(--input-focus-border-color, var(--input-border-color, var(--neutral-400)));
+            border-color: var(--input-focus-border-color, var(--input-border-color));
             background: var(--input-focus-bg, var(--input-bg, var(--base-bg)));
             outline-color: var(--input-outline-color, var(--focus-ring-color));
             outline-width: var(--input-outline-width, var(--focus-ring-width));
@@ -46,9 +46,9 @@
         .lib-css(box-shadow, @button__shadow);
 
         padding: @button__padding;
-        color: var(--button-color, var(--white));
-        background: var(--button-bg, var(--brand));
-        border-color: var(--button-border-color, var(--button-bg, var(--brand)));
+        color: var(--button-color, var(--color-white));
+        background: var(--button-bg, var(--color-brand));
+        border-color: var(--button-border-color, var(--button-bg, var(--color-brand)));
         border-width: var(--button-border-width, var(--input-border-width));
         border-style: var(--button-border-style, solid);
         border-radius: var(--button-border-radius, var(--input-border-radius, var(--base-border-radius)));
@@ -74,24 +74,24 @@
         @media @media-hover {
             &:hover {
                 text-decoration: @button__hover__text-decoration !important;
-                color: var(--button-hover-color, var(--button-color, var(--white)));
+                color: var(--button-hover-color, var(--button-color, var(--color-white)));
                 border-color: var(--button-hover-border-color, color-mix(
                     in srgb,
-                    var(--button-border-color, var(--button-bg, var(--brand))) 90%,
-                    var(--black)
+                    var(--button-border-color, var(--button-bg, var(--color-brand))) 90%,
+                    var(--color-black)
                 ));
                 background: var(--button-hover-bg, color-mix(
                     in srgb,
-                    var(--button-bg, var(--brand)) 90%,
-                    var(--black)
+                    var(--button-bg, var(--color-brand)) 90%,
+                    var(--color-black)
                 ));
                 @supports ~"(color: oklch(from #000 l c h))" {
                     border-color: var(--button-hover-border-color, oklch(
-                        from var(--button-border-color, var(--button-bg, var(--brand)))
+                        from var(--button-border-color, var(--button-bg, var(--color-brand)))
                         ~"max(calc(l - 0.05), 0)" c h
                     ));
                     background: var(--button-hover-bg, oklch(
-                        from var(--button-bg, var(--brand))
+                        from var(--button-bg, var(--color-brand))
                         ~"max(calc(l - 0.05), 0)" c h
                     ));
                 }

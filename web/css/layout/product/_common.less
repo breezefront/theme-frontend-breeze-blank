@@ -95,10 +95,12 @@
         .lib-css(justify-content, @product-stock-wrapper__justify-content);
         gap: @2;
         .stock {
-            .lib-rgb(--stock-bg, @product-stock__background-color);
-            .lib-rgb(--stock-color, @product-stock__text-color);
-            .lib-css(background, @product-stock__background);
-            .lib-css(color, @product-stock__color);
+            color: var(--stock-color, var(--color-info));
+            background: var(--stock-bg, color-mix(
+                in srgb,
+                var(--stock-color, var(--color-info)) 7%,
+                var(--base-bg)
+            ));
 
             .lib-css(font-family, @product-stock__font-family);
             .lib-css(font-weight, @product-stock__font-weight);
@@ -107,13 +109,13 @@
             .lib-css(padding, @product-stock__padding);
 
             &.available {
-                .lib-rgb(--stock-bg, @product-stock-available__background-color);
-                .lib-rgb(--stock-color, @product-stock-available__text-color);
+                --stock-bg: var(--stock-available-bg);
+                --stock-color: var(--stock-available-color, var(--color-success));
             }
 
             &.unavailable {
-                .lib-rgb(--stock-bg, @product-stock-unavailable__background-color);
-                .lib-rgb(--stock-color, @product-stock-unavailable__text-color);
+                --stock-bg: var(--stock-unavailable-bg);
+                --stock-color: var(--stock-unavailable-color, var(--color-danger));
             }
         }
     }

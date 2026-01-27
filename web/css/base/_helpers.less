@@ -4,13 +4,13 @@
 
     .color {
         &-base { color: @base__color !important; }
-        &-brand { color: @brand__color !important; }
+        &-brand { color: @color__brand !important; }
         &-heading { color: @headings__color !important; }
         &-link { color: @link__color !important; }
         &-muted { color: @muted__color !important; }
-        &-danger { color: @danger__color !important; }
-        &-success { color: @success__color !important; }
-        &-info { color: @info__color !important; }
+        &-danger { color: var(--color-danger) !important; }
+        &-success { color: var(--color-success) !important; }
+        &-info { color: var(--color-info) !important; }
         &-inherit { color: inherit !important; }
     }
 

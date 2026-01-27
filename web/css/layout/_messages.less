@@ -70,7 +70,7 @@
         }
 
         a {
-            text-decoration: underline !important;
+            text-decoration: underline;
         }
     }
 }
@@ -80,15 +80,23 @@
         display: none;
     }
     .message:where(.warning, .success, .notice, .error, .info) {
-        .lib-css(background, @message__background);
-        .lib-css(color, @message__color);
-        .lib-css(border-color, @message__border-color);
+        color: var(--message-color, var(--base-color));
+        background: var(--message-bg, color-mix(
+            in srgb,
+            var(--message-color, var(--base-color)) 7%,
+            var(--base-bg)
+        ));
+        border-color: var(--message-border-color, color-mix(
+            in srgb,
+            var(--message-color, var(--base-color)) 14%,
+            var(--base-bg)
+        ));
     }
     .message {
         a {
-            .lib-css(color, @message-link__color);
+            // .lib-css(color, @message-link__color);
             &:hover {
-                text-decoration: none !important;
+                text-decoration: none;
             }
         }
 
@@ -97,32 +105,32 @@
         }
 
         &.success {
-            .lib-rgb(--message-bg, @message-success__background-color);
-            .lib-rgb(--message-color, @message-success__text-color);
-            .lib-rgb(--message-border-color, @message-success__border-color);
+            --message-bg: var(--message-success-bg);
+            --message-color: var(--message-success-color, var(--color-success));
+            --message-border-color: var(--message-border-color, var(--color-success));
             &::before {
                 .breeze-icon(@message-success__icon, @message-icon__size);
-                .lib-css(background, @message-success__icon-background);
+                .lib-css(background, @message-success__icon-bg);
             }
         }
         &.info,
         &.warning,
         &.notice {
-            .lib-rgb(--message-bg, @message-info__background-color);
-            .lib-rgb(--message-color, @message-info__text-color);
-            .lib-rgb(--message-border-color, @message-info__border-color);
+            --message-bg: var(--message-info-bg);
+            --message-color: var(--message-info-color, var(--color-info));
+            --message-border-color: var(--message-border-color, var(--color-info));
             &::before {
                 .breeze-icon(@message-info__icon, @message-icon__size);
-                .lib-css(background, @message-info__icon-background);
+                .lib-css(background, @message-info__icon-bg);
             }
         }
         &.error {
-            .lib-rgb(--message-bg, @message-error__background-color);
-            .lib-rgb(--message-color, @message-error__text-color);
-            .lib-rgb(--message-border-color, @message-error__border-color);
+            --message-bg: var(--message-error-bg);
+            --message-color: var(--message-error-color, var(--color-danger));
+            --message-border-color: var(--message-border-color, var(--color-danger));
             &::before {
                 .breeze-icon(@message-error__icon, @message-icon__size);
-                .lib-css(background, @message-error__icon-background);
+                .lib-css(background, @message-error__icon-bg);
             }
         }
     }

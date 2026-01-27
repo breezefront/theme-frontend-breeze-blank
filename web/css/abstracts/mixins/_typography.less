@@ -114,10 +114,10 @@
 }
 
 .breeze-link {
-    color: @link__color;
+    color: var(--link-color);
     text-decoration: @link__text-decoration;
     &:hover {
-        --link-alpha: 1;
+        color: var(--link-color-hover, var(--link-color));
         text-decoration: @link__hover__text-decoration;
     }
 }
@@ -345,8 +345,8 @@
     .lib-rgb(--headings-color, @headings__text-color);
     .lib-css(--headings-alpha, @headings__text-alpha);
     .lib-css(--block-title-color, @headings__text-color);
-    .lib-rgb(--link-color, @link__text-color);
-    .lib-css(--link-alpha, @link__text-alpha);
+    // .lib-rgb(--link-color, @link__text-color);
+    // .lib-css(--link-alpha, @link__text-alpha);
     .lib-rgb(--muted-bg, @muted__background-color);
     .lib-css(--muted-bg-alpha, 1);
     .lib-rgb(--focus-ring-color, @focus-ring__color);
