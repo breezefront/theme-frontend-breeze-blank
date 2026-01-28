@@ -65,12 +65,6 @@
     & when not (@critical) {
         .transition();
 
-        // &.selected {
-        //     .breeze-rgb(--button-color, @button__selected__text-color);
-        //     .breeze-rgb(--button-bg, @button__selected__background-color);
-        //     .breeze-rgb(--button-border-color, @button__selected__border-color);
-        // }
-
         @media @media-hover {
             &:hover {
                 text-decoration: @button__hover__text-decoration !important;
@@ -96,58 +90,56 @@
                     ));
                 }
             }
-            // &.selected:hover {
-            //     .breeze-rgb(--button-hover-bg, @button__selected__background-color);
-            // }
         }
+
         &:focus-visible {
-            // .breeze-rgb(--button-color, @button__color__focus);
-            // .breeze-rgb(--button-bg, @button__bg__focus);
-            // .breeze-rgb(--button-border-color, @button__border-color__focus);
             z-index: 10;
-            // outline: @button__outline__focus;
-            // outline-offset: @button__outline-offset__focus;
+        }
+
+        &.selected {
+            --button-color: var(--button-selected-color, var(--button-color, var(--color-white)));
+            --button-bg: var(--button-selected-bg, var(--button-bg, var(--color-brand)));
+            --button-border-color: var(
+                --button-selected-border-color, var(
+                --button-border-color, var(
+                --button-bg, var(
+                --color-brand
+            ))));
+            /* No need in hover effect for selected state */
+            --button-hover-color: var(--button-selected-color, var(--button-color, var(--color-white)));
+            --button-hover-bg: var(--button-selected-bg, var(--button-bg, var(--color-brand)));
+            --button-hover-border-color: var(
+                --button-selected-border-color, var(
+                --button-border-color, var(
+                --button-bg, var(
+                --color-brand
+            ))));
         }
     }
 }
 
-.breeze-button-primary {
-    // & when (@critical) {
-    //     --link-color: var(--button-color);
-    //     --link-alpha: 1;
-    //     --button-bg: var(--button-primary-bg);
-    //     --button-color: var(--button-primary-color);
-    //     --button-border-color: var(--button-primary-border-color);
-    //     .lib-css(text-shadow, @button__text-shadow);
-    // }
-    // & when not (@critical) {
-    //     .breeze-rgb(--button-hover-bg, @button-primary__hover__background-color);
-    //     @media @media-hover {
-    //         &:hover {
-    //             .breeze-rgb(--button-color, @button-primary__hover__text-color);
-    //             .breeze-rgb(--button-border-color, @button-primary__hover__border-color);
-    //         }
-    //     }
-    // }
-}
+.breeze-button-primary {}
 
 .breeze-button-secondary {
-    // & when (@critical) {
-    //     --link-color: var(--button-color);
-    //     --link-alpha: 1;
-    //     --button-bg: var(--button-secondary-bg);
-    //     --button-color: var(--button-secondary-color);
-    //     --button-border-color: var(--button-secondary-border-color);
-    // }
-    // & when not (@critical) {
-    //     .breeze-rgb(--button-hover-bg, var(--button-secondary-hover-bg));
-    //     @media @media-hover {
-    //         &:hover {
-    //             .lib-css(--button-color, @button__secondary__color__hover);
-    //             .lib-css(--button-border-color, @button__secondary__border-color__hover);
-    //         }
-    //     }
-    // }
+    & when (@critical) {
+        // --link-color: var(--button-color);
+        // --link-alpha: 1;
+        --button-bg: var(--button-secondary-bg, var(--subtle-color));
+        --button-color: var(--button-secondary-color, color-mix(
+            in srgb,
+            var(--base-color) 80%,
+            var(--button-secondary-bg, var(--subtle-color))
+        ));
+        --button-border-color: var(--button-secondary-border-color, var(--subtle-color));
+    }
+    & when not (@critical) {
+        --button-hover-bg: var(--button-secondary-hover-bg);
+        --button-hover-color: var(--button-secondary-hover-color, color-mix(
+            in srgb,
+            var(--base-color) 95%,
+            var(--button-secondary-hover-bg, var(--button-secondary-bg, var(--subtle-color)))
+        ));
+    }
 }
 
 .breeze-button-link {
