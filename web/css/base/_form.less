@@ -1,4 +1,8 @@
-:where(input:not([type=range],[type=checkbox],[type=radio])),
+:where(input:not(
+    [type=range],
+    [type=checkbox],
+    [type=radio]
+)),
 textarea,
 select {
     &:extend(.breeze-input all);
@@ -12,18 +16,18 @@ input[type='button'] {
     &:extend(.breeze-button all);
 }
 
-.action.primary,
-.action-primary,
-[type='submit'] {
-    &:extend(.breeze-button-primary all);
-}
+// .action.primary,
+// .action-primary,
+// [type='submit'] {
+//     &:extend(.breeze-button-primary all);
+// }
 
 :where(button:not(
     [type='submit'],
     .action-primary,
     .primary,
-    .pagebuilder-button-link,
-    .pagebuilder-button-primary,
+    // .pagebuilder-button-link,
+    // .pagebuilder-button-primary,
     .select,
     .selected
 )),
@@ -99,7 +103,7 @@ button,
             width: 100%;
             margin: 0 0 @5;
             padding: 0 0 @0-5;
-            border-bottom: 1px solid @divider__color;
+            border-bottom: 1px solid var(--subtle-color);
 
             + br {
                 display: none;

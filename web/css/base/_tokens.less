@@ -106,76 +106,13 @@
 
         ///////
 
-        .lib-rgb(--gray-50,  @gray-50);
-        .lib-rgb(--gray-100, @gray-100);
-        .lib-rgb(--gray-200, @gray-200);
-        .lib-rgb(--gray-300, @gray-300);
-        .lib-rgb(--gray-400, @gray-400);
-        .lib-rgb(--gray-500, @gray-500);
-        .lib-rgb(--gray-600, @gray-600);
-        .lib-rgb(--gray-700, @gray-700);
-        .lib-rgb(--gray-800, @gray-800);
-        .lib-rgb(--gray-900, @gray-900);
-
-        // .lib-rgb(--red, @red);
-        // .lib-rgb(--red-muted, @red__muted);
-        // .lib-rgb(--green, @green);
-        // .lib-rgb(--green-muted, @green__muted);
-        // .lib-rgb(--blue, @blue);
-        // .lib-rgb(--blue-muted, @blue__muted);
-        // .lib-rgb(--yellow, @yellow);
-        // .lib-rgb(--yellow-muted, @yellow__muted);
-
-        // .lib-rgb(--danger-color, @danger__text-color);
-        // .lib-rgb(--info-color, @info__text-color);
-        // .lib-rgb(--success-color, @success__text-color);
-        // .lib-rgb(--success-bg, @success__background-color);
-
-        // .lib-rgb(--base-color, @base__color);
-        // .lib-rgb(--base-bg, @base__bg);
-        // .lib-rgb(--muted-bg, @muted__background-color);
         .lib-rgb(--dark-bg, @dark__background-color);
-
-        // .lib-rgb(--ring-color, @ring__text-color);
-
-        // --link-alpha: @link__text-alpha;
-        // .lib-rgb(--link-color, @link__text-color);
-
-        --headings-alpha: @headings__text-alpha;
         .lib-rgb(--headings-color, @headings__text-color);
-
         .lib-rgb(--block-title-color, @block-title__text-color);
         .lib-rgb(--block-title-bg, @block-title__background-color);
         .lib-rgb(--block-content-bg, @block-content__background-color);
 
-        // --input-alpha: 1;
-        // .lib-rgb(--input-color, @input__color);
-        // .lib-rgb(--input-bg, @input__bg);
-        // --input-bg-alpha: 1;
-        // --input-border-alpha: 1;
-        // .lib-rgb(--input-border-color, @input__border-color);
-        // .lib-rgb(--input-outline-color, @input__focus__outline-color);
-        // --input-outline-alpha: @input__focus__outline-alpha;
-
-        // .lib-rgb(--checkbox-color, @checkbox__text-color);
-
-        // .lib-rgb(--button-color, @button__text-color);
-        // .lib-rgb(--button-bg, @button__background-color);
-        // --button-bg-alpha: @button__background-alpha;
-        // .lib-rgb(--button-hover-bg, @button__hover__background-color);
-        // --button-hover-bg-alpha: @button__hover__background-alpha;
-        // --button-border-alpha: @button__border-alpha;
-        // .lib-rgb(--button-border-color, @button__border-color);
-        // .lib-rgb(--button-primary-color, @button__text-color);
-        // .lib-rgb(--button-primary-bg, @button__background-color);
-        // .lib-rgb(--button-primary-border-color, @button__border-color);
-        // .lib-rgb(--button-secondary-color, @button-secondary__text-color);
-        // .lib-rgb(--button-secondary-bg, @button-secondary__background-color);
-        // .lib-rgb(--button-secondary-border-color, @button-secondary__border-color);
-        // .lib-rgb(--button-secondary-hover-bg, @button-secondary__hover__background-color);
-
         --transition-duration: 200ms;
-
         --spinner-size: @spinner__size;
         --spinner-border-width: @spinner__border-width;
         .lib-rgb(--spinner-border-color, @spinner__border-color);
@@ -191,11 +128,6 @@
 
         & when (@respect-color-scheme = true) {
             @media @media-dark {
-                --muted-alpha: .8;
-                --brand-alpha: 1;
-                --danger-alpha: 1;
-                --info-alpha: 1;
-                --success-alpha: 1;
                 .lib-rgb(--gray-800, @dark__gray-800);
                 .lib-rgb(--green, @dark__green);
                 .lib-rgb(--blue, @dark__blue);
@@ -213,8 +145,6 @@
 
                 .lib-rgb(--input-border-color, @input__dark__border-color);
 
-                --button-bg-alpha: .4;
-                --button-hover-bg-alpha: .5;
                 .lib-rgb(--button-secondary-color, @button-secondary__dark__text-color);
                 .lib-rgb(--button-secondary-bg, @button-secondary__dark__background-color);
 

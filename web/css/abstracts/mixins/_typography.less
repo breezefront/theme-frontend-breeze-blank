@@ -165,7 +165,11 @@
 }
 
 .breeze-prose {
-    :where(a:not(.product-item-link):not(.action)) {
+    :where(a:not(
+        .product-item-link,
+        .action,
+        [class*="pagebuilder-button"]
+    )) {
         .breeze-link();
     }
     :where(a div) {

@@ -179,7 +179,7 @@
         position: relative;
     }
     table {
-        border-color: @divider__color;
+        border-color: var(--subtle-color);
         .text-align(left);
         width: 100%;
         .id a,
@@ -195,13 +195,13 @@
         }
         tr {
             --divider-alpha: .07;
-            border-bottom: 1px solid @divider__color;
+            border-bottom: 1px solid var(--subtle-color);
         }
         th {
             font-weight: 500;
         }
         td, th {
-            border-color: @divider__color;
+            border-color: var(--subtle-color);
             vertical-align: top;
             padding: @3 @2;
             &:first-child {
@@ -263,7 +263,7 @@
 
     hr {
         margin: @3 0;
-        border: 1px solid @divider__color;
+        border: 1px solid var(--subtle-color);
         border-right: 0;
         border-left: 0;
         border-bottom: 0;

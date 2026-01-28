@@ -144,8 +144,8 @@
 
 .breeze-button-link {
     & when (@critical) {
-        --button-bg-alpha: 0;
-        --button-border-alpha: 0;
+        --button-bg: transparent;
+        --button-border-color: transparent;
         --button-color: var(--link-color);
         text-decoration: @link__text-decoration !important;
     }
@@ -154,9 +154,6 @@
         @media @media-hover {
             &:hover {
                 text-decoration: @link__hover__text-decoration !important;
-                --button-hover-bg-alpha: 0;
-                --button-border-alpha: 0;
-                --button-color: var(--link-color);
             }
         }
     }
@@ -164,23 +161,19 @@
 
 .breeze-button-ghost {
     & when (@critical) {
-        --button-bg: var(--base-color);
-        --button-bg-alpha: 0;
-        --button-color: var(--base-color);
-        --button-border-color: var(--base-color);
-        --button-border-alpha: var(--base-alpha);
-        text-shadow: none;
+        --button-bg: transparent;
+        --button-border-color: var(--color-brand);
+        --button-color: var(--color-brand);
     }
 
     & when not (@critical) {
-        --button-hover-bg: var(--base-color);
-        @media @media-hover {
-            &:hover {
-                --button-hover-bg-alpha: .1;
-                --button-color: var(--base-color);
-                --button-border-color: var(--base-color);
-            }
-        }
+        --button-hover-bg: color-mix(in srgb, var(--color-brand) 7%, transparent);
+        // @media @media-hover {
+        //     &:hover {
+        //         --button-color: var(--base-color);
+        //         --button-border-color: var(--base-color);
+        //     }
+        // }
     }
 }
 
