@@ -9,12 +9,19 @@
       "order": 1,
       "settings": [
         {
-          "id":  "primary_button_color",
-          "label": " 2️⃣  Primary Button Color",
+          "id":  "button-bg",
+          "label": "Primary Button Background",
           "type": "color",
           "default": "#155dfc",
           "css_var": "--button-bg",
-          "help_text": "Try #e63946 (red) or #06ffa5 (green)",
+          "palette": "default"
+        },
+        {
+          "id":  "button-color",
+          "label": "Primary Button Color",
+          "type": "color",
+          "default": "#ffffff",
+          "css_var": "--button-color",
           "palette": "default"
         }
       ]
@@ -34,7 +41,7 @@
               "id": "primary",
               "label": "Primary",
               "description": "Main brand color for buttons and key elements",
-              "css_var": "--brand",
+              "css_var": "--color-brand",
               "default": "#155dfc"
             }
           ]
@@ -47,41 +54,41 @@
               "id": "white",
               "label": "White",
               "description": "Pure white",
-              "css_var": "--white",
+              "css_var": "--color-white",
               "default": "#ffffff"
             },
             {
               "id": "200",
               "label": "Neutral 200",
               "description": "Light gray",
-              "css_var": "--neutral-200",
+              "css_var": "--color-neutral-200",
               "default": "#e5e7eb"
             },
             {
               "id": "300",
               "label": "Neutral 300",
               "description": "Medium-light gray",
-              "css_var": "--neutral-300",
-              "default": "#d1d5db"
+              "css_var": "--color-neutral-300",
+              "default": "#d1d5dc"
             },
             {
               "id": "400",
               "label": "Neutral 400",
               "description": "Medium gray",
-              "css_var": "--neutral-400",
-              "default": "#9ca3af"
+              "css_var": "--color-neutral-400",
+              "default": "#99a1af"
             },
             {
               "id": "800",
               "label": "Neutral 800",
               "description": "Very dark gray",
-              "css_var": "--neutral-800",
-              "default": "#1f2937"
+              "css_var": "--color-neutral-800",
+              "default": "#1e2939"
             },
             {
               "id": "black",
               "label": "Black",
-              "css_var": "--black",
+              "css_var": "--color-black",
               "default": "#000000"
             }
           ]
@@ -89,7 +96,32 @@
         "utility": {
           "id": "utility",
           "label": "Utility Colors",
-          "colors": []
+          "colors": [
+            {
+              "id": "blue",
+              "label": "Blue",
+              "css_var": "--color-blue",
+              "default": "#3160e2"
+            },
+            {
+              "id": "green",
+              "label": "Green",
+              "css_var": "--color-green",
+              "default": "#008236"
+            },
+            {
+              "id": "red",
+              "label": "Red",
+              "css_var": "--color-red",
+              "default": "#c10007"
+            },
+            {
+              "id": "yellow",
+              "label": "Yellow",
+              "css_var": "--color-yellow",
+              "default": "#fdc700"
+            }
+          ]
         }
       }
     }
