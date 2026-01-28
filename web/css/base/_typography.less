@@ -1,10 +1,10 @@
 & when (@critical) {
     html {
-        color: var(--body-color, var(--base-color));
-        background: var(--body-bg, var(--base-bg));
-        font-family: var(--body-font-family, var(--base-font-family));
-        font-size: var(--body-font-size, var(--base-font-size));
-        line-height: var(--body-line-height, var(--base-line-height));
+        color: var(--base-color);
+        background: var(--base-bg);
+        font-family: var(--base-font-family);
+        font-size: var(--base-font-size);
+        line-height: var(--base-line-height);
     }
 
     ::selection {
@@ -161,7 +161,7 @@
         height: @7;
     }
     .icon.rounded {
-        background: @muted__background;
+        background: var(--muted-bg);
         padding: @3;
         &.small {
             padding: @2;

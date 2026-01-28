@@ -120,10 +120,10 @@
 
 & when not (@critical) {
     .page-layout-checkout {
-        .lib-css(background, @checkout__background);
+        background: var(--checkout-bg, var(--muted-bg));
     }
     .opc {
-        .lib-css(background, @checkout-opc__background);
+        background: var(--checkout-opc-bg, var(--surface-bg));
         .lib-css(box-shadow, @checkout-opc__box-shadow);
         .lib-css(border, @checkout-opc__border);
         .lib-css(border-radius, @checkout-opc__border-radius);

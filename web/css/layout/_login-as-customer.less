@@ -1,7 +1,7 @@
 & when not (@critical) {
     .lac-notification {
         &-sticky {
-            .lib-css(background, @lac__background);
+            background: var(--lac-bg, var(--surface-bg));
             .lib-css(box-shadow, @lac__shadow);
             .lib-css(position, @lac__position);
             .lib-css(z-index, @lac__z-index);

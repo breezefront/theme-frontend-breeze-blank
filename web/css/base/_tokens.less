@@ -3,9 +3,12 @@
         .lib-css(--color-brand, @color__brand);
         .lib-css(--color-white, @color__white);
         .lib-css(--color-black, @color__black);
+        .lib-css(--color-neutral-50, @color__neutral-50);
+        .lib-css(--color-neutral-100, @color__neutral-100);
         .lib-css(--color-neutral-200, @color__neutral-200);
         .lib-css(--color-neutral-300, @color__neutral-300);
         .lib-css(--color-neutral-400, @color__neutral-400);
+        .lib-css(--color-neutral-500, @color__neutral-500);
         .lib-css(--color-neutral-800, @color__neutral-800);
         .lib-css(--color-blue, @color__blue);
         .lib-css(--color-green, @color__green);
@@ -22,17 +25,15 @@
         .lib-css(--base-bg, @base__bg, var(--color-white));
         .lib-css(--base-border-radius, @base__border-radius);
 
-        .lib-css(--body-font-family, @body__font-family);
-        .lib-css(--body-font-size, @body__font-size);
-        .lib-css(--body-line-height, @body__line-height);
-        .lib-css(--body-color, @body__color);
-        .lib-css(--body-bg, @body__bg);
+        .lib-css(--muted-color, @muted__color, var(--color-neutral-500));
+        .lib-css(--muted-bg, @muted__bg, var(--color-neutral-100));
+
+        .lib-css(--subtle-color, @subtle__color, var(--color-neutral-200));
+        .lib-css(--subtle-bg, @subtle__bg, var(--color-neutral-50));
 
         .lib-css(--surface-bg, @surface__bg, var(--base-bg));
         .lib-css(--surface-color, @surface__color, var(--base-color));
         .lib-css(--overlay-bg, @overlay__bg);
-
-        .lib-css(--divider-color, @divider__color, var(--color-neutral-200));
 
         .lib-css(--focus-ring-width, @focus-ring__width, 2px);
         .lib-css(--focus-ring-color, @focus-ring__color, var(--color-brand));
@@ -90,6 +91,15 @@
 
         .lib-css(--rating-icon-color, @rating-icon__color);
 
+        .lib-css(--swatch-color, @swatch__color);
+        .lib-css(--swatch-bg, @swatch__bg);
+        .lib-css(--swatch-box-shadow, @swatch__box-shadow);
+
+        .lib-css(--lac-bg, @lac__bg);
+
+        .lib-css(--checkout-opc-bg, @checkout__bg);
+        .lib-css(--checkout-opc-bg, @checkout-opc__bg);
+
         ///////
 
         .lib-rgb(--gray-50,  @gray-50);
@@ -117,9 +127,9 @@
         // .lib-rgb(--success-color, @success__text-color);
         // .lib-rgb(--success-bg, @success__background-color);
 
-        .lib-rgb(--base-color, @base__color);
-        .lib-rgb(--base-bg, @base__bg);
-        .lib-rgb(--muted-bg, @muted__background-color);
+        // .lib-rgb(--base-color, @base__color);
+        // .lib-rgb(--base-bg, @base__bg);
+        // .lib-rgb(--muted-bg, @muted__background-color);
         .lib-rgb(--dark-bg, @dark__background-color);
 
         // .lib-rgb(--ring-color, @ring__text-color);

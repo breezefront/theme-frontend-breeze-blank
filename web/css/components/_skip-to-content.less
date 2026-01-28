@@ -9,15 +9,13 @@
 & when not (@critical) {
     .action.skip {
         .page-header & {
-            .lib-rgb(--base-color, @base__color);
-            --base-alpha: 1;
             position: absolute;
             .left(@2);
             top: @2;
             z-index: 40;
             text-align: center;
-            background: @base__background;
-            color: @base__color;
+            background: var(--surface-bg);
+            color: var(--surface-color);
             &:hover {
                 text-decoration: underline;
             }

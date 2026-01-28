@@ -158,7 +158,7 @@
         > tr {
             border-bottom: 0;
             &:nth-child(odd) {
-                background: @muted__background;
+                background: var(--muted-bg);
             }
         }
     }
@@ -221,7 +221,7 @@
     blockquote {
         margin: @6 0;
         .padding-left(@4);
-        .border-left(4px solid @divider__color);
+        .border-left(~"4px solid var(--subtle-color)");
         font-style: italic;
         font-weight: 500;
     }
@@ -236,7 +236,7 @@
         margin: @4 0;
         padding: @4;
         overflow-x: auto;
-        background: @muted__background;
+        background: var(--muted-bg);
         code {
             font-weight: 400;
             &:before,
@@ -346,9 +346,7 @@
     .lib-css(--headings-alpha, @headings__text-alpha);
     .lib-css(--block-title-color, @headings__text-color);
     // .lib-rgb(--link-color, @link__text-color);
-    // .lib-css(--link-alpha, @link__text-alpha);
-    .lib-rgb(--muted-bg, @muted__background-color);
-    .lib-css(--muted-bg-alpha, 1);
+    .lib-rgb(--muted-bg, @muted__bg);
     .lib-rgb(--focus-ring-color, @focus-ring__color);
     .lib-css(--button-bg, @button__bg);
     .lib-rgb(--button-border-color, @button__border-color);

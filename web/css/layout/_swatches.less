@@ -39,8 +39,8 @@
         .lib-css(font-family, @swatch__font-family);
         .lib-css(font-size, @swatch__font-size);
         .lib-css(font-weight, @swatch__font-weight);
-        .lib-css(color, @swatch__color);
-        .lib-css(background, @swatch__background);
+        color: var(--swatch-color, var(--muted-color));
+        background: var(--swatch-bg, var(--muted-bg));
         display: flex;
         align-items: center;
         justify-content: center;
