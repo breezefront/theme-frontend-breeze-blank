@@ -111,7 +111,6 @@
     [data-content-type="tabs"] {
         .lib-css(background, @tab__background);
         .tabs-navigation {
-            &:extend(.breeze-prose-reset ul all);
             display: flex;
             overflow: auto;
         }
@@ -123,12 +122,7 @@
             }
         }
         .tab-header {
-            > a {
-                color: inherit;
-                &:hover {
-                    text-decoration: none;
-                }
-            }
+            outline-offset: -2px;
         }
     }
 
