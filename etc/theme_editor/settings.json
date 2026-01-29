@@ -2,10 +2,8 @@
   "version": "1.0",
   "sections": [
     {
-      "id": "test_visual_effects",
-      "name": "🎨 Visual Effects Test",
-      "description": "Fields with immediate visible changes",
-      "icon": "palette",
+      "id": "elements_colors",
+      "name": "Elements Colors",
       "order": 1,
       "settings": [
         {
