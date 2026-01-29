@@ -1,46 +1,21 @@
 & when (@critical) {
-    :root {
-        --listing-grid-gap: @listing-grid__gap;
-        --listing-grid-row-gap: @listing-grid__row-gap;
-        --listing-grid-columns: @listing-grid__columns;
-        --listing-grid-item-padding: @listing-grid-item__padding;
-        --listing-grid-item-margin: @listing-grid-item__margin;
-        @media @media-sm {
-            .lib-css(--listing-grid-columns, @listing-grid__media-sm__columns);
-        }
-        @media @media-md {
-            .lib-css(--listing-grid-columns, @listing-grid__media-md__columns);
-        }
-        @media @media-lg {
-            .lib-css(--listing-grid-columns, @listing-grid__media-lg__columns);
-        }
-        @media @media-xl {
-            .lib-css(--listing-grid-columns, @listing-grid__media-xl__columns);
-        }
-
-        @media @media-hover {
-            & when (@listing-grid-item-swatches__position = absolute) {
-                --swatches-over-image: true;
-            }
-        }
-    }
     .page-layout-1column {
         @media @media-md {
-            .lib-css(--listing-grid-columns, @listing-grid__media-md-1column__columns);
+            .lib-css(--listing-grid-columns, @listing-grid__media-md__1column__columns);
         }
         @media @media-lg {
-            .lib-css(--listing-grid-columns, @listing-grid__media-lg-1column__columns);
+            .lib-css(--listing-grid-columns, @listing-grid__media-lg__1column__columns);
         }
         @media @media-xl {
-            .lib-css(--listing-grid-columns, @listing-grid__media-xl-1column__columns);
+            .lib-css(--listing-grid-columns, @listing-grid__media-xl__1column__columns);
         }
     }
     .page-layout-3columns {
         @media @media-lg {
-            .lib-css(--listing-grid-columns, @listing-grid__media-lg-3columns__columns);
+            .lib-css(--listing-grid-columns, @listing-grid__media-lg__3columns__columns);
         }
         @media @media-xl {
-            .lib-css(--listing-grid-columns, @listing-grid__media-xl-3columns__columns);
+            .lib-css(--listing-grid-columns, @listing-grid__media-xl__3columns__columns);
         }
     }
 
@@ -100,7 +75,7 @@
     }
     .actions-primary {
         .stock {
-            color: @muted__color;
+            color: var(--muted-color);
             white-space: nowrap;
         }
     }
@@ -110,7 +85,7 @@
         .action {
             .padding(@listing-item-actions-secondary-link__padding);
             .lib-css(color, @listing-item-actions-secondary-link__color);
-            .lib-css(background, @listing-item-actions-secondary-link__background);
+            .lib-css(background, @listing-item-actions-secondary-link__bg);
             .lib-css(border, @listing-item-actions-secondary-link__border);
             .lib-css(border-radius, @listing-item-actions-secondary-link__border-radius);
             &::before {

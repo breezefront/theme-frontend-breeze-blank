@@ -7,7 +7,7 @@
 
 & when (@critical) {
     .opc-progress-bar {
-        color: @muted__color;
+        color: var(--muted-color);
         margin-bottom: @4;
         ._active span {
             color: @base__color;
@@ -18,7 +18,7 @@
             cursor: pointer;
         }
         li::after {
-            color: @muted__color;
+            color: var(--muted-color);
         }
     }
 }

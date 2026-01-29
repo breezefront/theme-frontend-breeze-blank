@@ -52,11 +52,6 @@
 }
 
 & when (@critical) {
-    :root {
-        // this prop is used by menu.js component
-        --navigation-media-mobile: @navigation__media-mobile;
-    }
-
     .nav-toggle {
         flex-shrink: 0;
         flex-grow: 0;
@@ -100,8 +95,8 @@
     }
 
     .navigation {
-        .lib-rgb(--base-color, @navigation__text-color);
-        .lib-rgb(--z-layer-color, @navigation__text-color);
+        // .lib-rgb(--base-color, @navigation__text-color);
+        // .lib-rgb(--z-layer-color, @navigation__text-color);
         color: @base__color;
 
         a.level-top {

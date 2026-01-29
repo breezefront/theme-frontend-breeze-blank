@@ -48,8 +48,8 @@
             .lib-css(margin, @footer-newsletter__margin);
             .lib-css(padding, @footer-newsletter__padding);
             .lib-css(background, @footer-newsletter__background);
-            .lib-rgb(--input-border-color, @footer-newsletter-input__border-color);
-            .lib-rgb(--input-bg, @footer-newsletter-input__background-color);
+            // .lib-rgb(--input-border-color, @footer-newsletter-input__border-color);
+            // .lib-rgb(--input-bg, @footer-newsletter-input__background-color);
 
             .title {
                 & when (@footer-newsletter-title__mode = hidden) {
@@ -116,7 +116,7 @@
         }
     }
     .copyright {
-        color: @muted__color;
+        color: var(--muted-color);
     }
 }
 

@@ -1,156 +1,54 @@
 & when (@critical) {
     :root {
-        .lib-css(--color-brand, @color__brand);
-        .lib-css(--color-white, @color__white);
-        .lib-css(--color-black, @color__black);
-        .lib-css(--color-neutral-50, @color__neutral-50);
-        .lib-css(--color-neutral-100, @color__neutral-100);
-        .lib-css(--color-neutral-200, @color__neutral-200);
-        .lib-css(--color-neutral-300, @color__neutral-300);
-        .lib-css(--color-neutral-400, @color__neutral-400);
-        .lib-css(--color-neutral-500, @color__neutral-500);
-        .lib-css(--color-neutral-800, @color__neutral-800);
-        .lib-css(--color-blue, @color__blue);
-        .lib-css(--color-green, @color__green);
-        .lib-css(--color-red, @color__red);
-        .lib-css(--color-yellow, @color__yellow);
-        .lib-css(--color-info, @color__info, var(--color-blue));
-        .lib-css(--color-success, @color__success, var(--color-green));
-        .lib-css(--color-danger, @color__danger, var(--color-red));
-
-        .lib-css(--base-font-family, @base__font-family);
-        .lib-css(--base-font-size, @base__font-size);
-        .lib-css(--base-line-height, @base__line-height);
-        .lib-css(--base-color, @base__color, var(--color-neutral-800));
-        .lib-css(--base-bg, @base__bg, var(--color-white));
-        .lib-css(--base-border-radius, @base__border-radius);
-
-        .lib-css(--muted-color, @muted__color, var(--color-neutral-500));
-        .lib-css(--muted-bg, @muted__bg, var(--color-neutral-100));
-
-        .lib-css(--subtle-color, @subtle__color, var(--color-neutral-200));
-        .lib-css(--subtle-bg, @subtle__bg, var(--color-neutral-50));
-
-        .lib-css(--surface-bg, @surface__bg, var(--base-bg));
-        .lib-css(--surface-color, @surface__color, var(--base-color));
-        .lib-css(--overlay-bg, @overlay__bg);
-
-        .lib-css(--focus-ring-width, @focus-ring__width, 2px);
-        .lib-css(--focus-ring-color, @focus-ring__color, var(--color-brand));
-        .lib-css(--focus-ring-offset, @focus-ring__offset, 2px);
-
-        .lib-css(--input-bg, @input__bg);
-        .lib-css(--input-color, @input__color);
-        .lib-css(--input-border-color, @input__border-color, var(--color-neutral-400));
-        .lib-css(--input-border-width, @input__border-width, 1px);
-        .lib-css(--input-border-radius, @input__border-radius);
-        .lib-css(--input-focus-bg, @input__focus__bg);
-        .lib-css(--input-focus-color, @input__focus__color);
-        .lib-css(--input-focus-border-color, @input__focus__border-color);
-
-        .lib-css(--checkbox-size, @checkbox__size);
-        .lib-css(--checkbox-color, @checkbox__color);
-        .lib-css(--checkbox-border-radius, @checkbox__border-radius);
-
-        .lib-css(--button-bg, @button__bg);
-        .lib-css(--button-color, @button__color);
-        .lib-css(--button-border-width, @button__border-width);
-        .lib-css(--button-border-radius, @button__border-radius);
-        .lib-css(--button-border-color, @button__border-color);
-        .lib-css(--button-hover-bg, @button__hover__bg);
-        .lib-css(--button-hover-color, @button__hover__color);
-        .lib-css(--button-hover-border-color, @button__hover__border-color);
-
-        .lib-css(--button-secondary-bg, @button__secondary__bg);
-        .lib-css(--button-secondary-color, @button__secondary__color);
-        .lib-css(--button-secondary-border-color, @button__secondary__border-color);
-        .lib-css(--button-secondary-hover-bg, @button__secondary__hover__bg);
-        .lib-css(--button-secondary-hover-color, @button__secondary__hover__color);
-        .lib-css(--button-secondary-hover-border-color, @button__secondary__hover__border-color);
-
-        .lib-css(--button-selected-bg, @button__selected__bg);
-        .lib-css(--button-selected-color, @button__selected__color);
-        .lib-css(--button-selected-border-color, @button__selected__border-color);
-
-        .lib-css(--link-color, @link__color, var(--color-blue));
-
-        .lib-css(--dropdown-item-hover-bg, @dropdown-item__hover__bg);
-        .lib-css(--dropdown-item-hover-color, @dropdown-item__hover__color);
-
-        .lib-css(--slider-arrow-bg, @slider-arrow__bg);
-        .lib-css(--slider-arrow-color, @slider-arrow__color);
-        .lib-css(--slider-arrow-border-width, @slider-arrow__border-width);
-        .lib-css(--slider-arrow-border-color, @slider-arrow__border-color);
-        .lib-css(--slider-arrow-border-radius, @slider-arrow__border-radius);
-        .lib-css(--slider-arrow-hover-bg, @slider-arrow__hover__bg);
-        .lib-css(--slider-arrow-hover-color, @slider-arrow__hover__color);
-        .lib-css(--slider-arrow-hover-border-color, @slider-arrow__hover__border-color);
-
-        .lib-css(--stock-bg, @product-stock__bg);
-        .lib-css(--stock-color, @product-stock__color);
-        .lib-css(--stock-available-bg, @product-stock__available__bg);
-        .lib-css(--stock-available-color, @product-stock__available__color);
-        .lib-css(--stock-unavailable-bg, @product-stock__unavailable__bg);
-        .lib-css(--stock-unavailable-color, @product-stock__unavailable__color);
-
-        .lib-css(--rating-icon-color, @rating-icon__color);
-
-        .lib-css(--swatch-color, @swatch__color);
-        .lib-css(--swatch-bg, @swatch__bg);
-        .lib-css(--swatch-box-shadow, @swatch__box-shadow);
-
-        .lib-css(--lac-bg, @lac__bg);
-
-        .lib-css(--checkout-opc-bg, @checkout__bg);
-        .lib-css(--checkout-opc-bg, @checkout-opc__bg);
+        .breeze-tokens();
 
         ///////
 
-        .lib-rgb(--dark-bg, @dark__background-color);
-        .lib-rgb(--headings-color, @headings__text-color);
-        .lib-rgb(--block-title-color, @block-title__text-color);
-        .lib-rgb(--block-title-bg, @block-title__background-color);
-        .lib-rgb(--block-content-bg, @block-content__background-color);
+        // .lib-rgb(--dark-bg, @dark__background-color);
+        // .lib-rgb(--headings-color, @headings__text-color);
+        // .lib-rgb(--block-title-color, @block-title__text-color);
+        // .lib-rgb(--block-title-bg, @block-title__background-color);
+        // .lib-rgb(--block-content-bg, @block-content__background-color);
 
         --transition-duration: 200ms;
         --spinner-size: @spinner__size;
         --spinner-border-width: @spinner__border-width;
-        .lib-rgb(--spinner-border-color, @spinner__border-color);
+        // .lib-rgb(--spinner-border-color, @spinner__border-color);
         --spinner-duration: @spinner__animation-duration;
 
-        .lib-rgb(--scrollbar-bg, @scrollbar-track__background-color);
-        .lib-rgb(--scrollbar-color, @scrollbar-thumb__background-color);
+        // .lib-rgb(--scrollbar-bg, @scrollbar-track__background-color);
+        // .lib-rgb(--scrollbar-color, @scrollbar-thumb__background-color);
 
         @media (prefers-reduced-motion) {
             --transition-duration: 20ms;
             --spinner-duration: 5s;
         }
 
-        & when (@respect-color-scheme = true) {
-            @media @media-dark {
-                .lib-rgb(--gray-800, @dark__gray-800);
-                .lib-rgb(--green, @dark__green);
-                .lib-rgb(--blue, @dark__blue);
-                .lib-rgb(--red, @dark__red);
-                .lib-rgb(--color-brand, @theme__dark__brand-color);
-                .lib-rgb(--base-color, @base__dark__text-color);
-                .lib-rgb(--base-bg, @base__dark__background-color);
-                .lib-rgb(--muted-bg, @muted__dark__background-color);
+        // & when (@respect-color-scheme = true) {
+        //     @media @media-dark {
+        //         .lib-rgb(--gray-800, @dark__gray-800);
+        //         .lib-rgb(--green, @dark__green);
+        //         .lib-rgb(--blue, @dark__blue);
+        //         .lib-rgb(--red, @dark__red);
+        //         .lib-rgb(--color-brand, @theme__dark__brand-color);
+        //         .lib-rgb(--base-color, @base__dark__text-color);
+        //         .lib-rgb(--base-bg, @base__dark__background-color);
+        //         .lib-rgb(--muted-bg, @muted__dark__background-color);
 
-                .lib-rgb(--headings-color, @headings__dark__text-color);
+        //         .lib-rgb(--headings-color, @headings__dark__text-color);
 
-                .lib-rgb(--block-title-color, @block-title__dark__text-color);
-                .lib-rgb(--block-title-bg, @block-title__dark__background-color);
-                .lib-rgb(--block-content-bg, @block-content__dark__background-color);
+        //         .lib-rgb(--block-title-color, @block-title__dark__text-color);
+        //         .lib-rgb(--block-title-bg, @block-title__dark__background-color);
+        //         .lib-rgb(--block-content-bg, @block-content__dark__background-color);
 
-                .lib-rgb(--input-border-color, @input__dark__border-color);
+        //         .lib-rgb(--input-border-color, @input__dark__border-color);
 
-                .lib-rgb(--button-secondary-color, @button-secondary__dark__text-color);
-                .lib-rgb(--button-secondary-bg, @button-secondary__dark__background-color);
+        //         .lib-rgb(--button-secondary-color, @button-secondary__dark__text-color);
+        //         .lib-rgb(--button-secondary-bg, @button-secondary__dark__background-color);
 
-                .lib-rgb(--scrollbar-bg, @scrollbar-track__dark__background-color);
-                .lib-rgb(--scrollbar-color, @scrollbar-thumb__dark__background-color);
-            }
-        }
+        //         .lib-rgb(--scrollbar-bg, @scrollbar-track__dark__background-color);
+        //         .lib-rgb(--scrollbar-color, @scrollbar-thumb__dark__background-color);
+        //     }
+        // }
     }
 }

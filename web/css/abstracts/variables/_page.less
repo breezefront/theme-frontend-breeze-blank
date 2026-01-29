@@ -19,3 +19,12 @@
 
 @before-footer__padding-top: false;
 @before-footer__padding-bottom: @before-footer__padding-top;
+
+.breeze-tokens() {
+    --sidebar-width: @sidebar__width;
+    --sidebar-gap: @sidebar__gap;
+    @media @media-lg {
+        --sidebar-width: @sidebar__media-lg__width;
+        --sidebar-gap: @sidebar__media-lg__gap;
+    }
+}

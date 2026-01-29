@@ -39,3 +39,9 @@
 @header-mobile-panel__background: false;
 @header-mobile-panel-link__opacity: .7;
 @header-mobile-panel-switcher-label__display: none;
+
+.breeze-tokens() {
+    & when (@header-panel__slideout) {
+        --header-panel-slideout: true;
+    }
+}

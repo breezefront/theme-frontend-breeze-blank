@@ -73,3 +73,38 @@
 @button__xl__line-height: @line-height__xl;
 @button__xl__font-weight: 500;
 @button__xl__padding: @3 @10;
+
+.breeze-tokens() {
+    .lib-css(--input-bg, @input__bg);
+    .lib-css(--input-color, @input__color);
+    .lib-css(--input-border-color, @input__border-color, var(--color-neutral-400));
+    .lib-css(--input-border-width, @input__border-width, 1px);
+    .lib-css(--input-border-radius, @input__border-radius);
+    .lib-css(--input-focus-bg, @input__focus__bg);
+    .lib-css(--input-focus-color, @input__focus__color);
+    .lib-css(--input-focus-border-color, @input__focus__border-color);
+
+    .lib-css(--checkbox-size, @checkbox__size);
+    .lib-css(--checkbox-color, @checkbox__color);
+    .lib-css(--checkbox-border-radius, @checkbox__border-radius);
+
+    .lib-css(--button-bg, @button__bg);
+    .lib-css(--button-color, @button__color);
+    .lib-css(--button-border-width, @button__border-width);
+    .lib-css(--button-border-radius, @button__border-radius);
+    .lib-css(--button-border-color, @button__border-color);
+    .lib-css(--button-hover-bg, @button__hover__bg);
+    .lib-css(--button-hover-color, @button__hover__color);
+    .lib-css(--button-hover-border-color, @button__hover__border-color);
+
+    .lib-css(--button-secondary-bg, @button__secondary__bg);
+    .lib-css(--button-secondary-color, @button__secondary__color);
+    .lib-css(--button-secondary-border-color, @button__secondary__border-color);
+    .lib-css(--button-secondary-hover-bg, @button__secondary__hover__bg);
+    .lib-css(--button-secondary-hover-color, @button__secondary__hover__color);
+    .lib-css(--button-secondary-hover-border-color, @button__secondary__hover__border-color);
+
+    .lib-css(--button-selected-bg, @button__selected__bg);
+    .lib-css(--button-selected-color, @button__selected__color);
+    .lib-css(--button-selected-border-color, @button__selected__border-color);
+}

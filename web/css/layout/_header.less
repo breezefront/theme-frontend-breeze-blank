@@ -1,10 +1,4 @@
 & when (@critical) {
-    :root {
-        & when (@header-panel__slideout) {
-            --header-panel-slideout: true;
-        }
-    }
-
     .header.panel,
     .header.links,
     .header.content {
@@ -226,7 +220,7 @@
             text-transform: uppercase;
             font-size: @font-size__sm;
             font-weight: 600;
-            color: @muted__color;
+            color: var(--muted-color);
         }
         & when (@header-mobile-panel-switcher-label__display = none) {
             .switcher .label {

@@ -125,3 +125,28 @@
 @input__inverted__background-alpha: 0;
 @input__inverted__border-color: false;
 @input__inverted__border-alpha: .5;
+
+.breeze-tokens() {
+    .lib-css(--base-font-family, @base__font-family);
+    .lib-css(--base-font-size, @base__font-size);
+    .lib-css(--base-line-height, @base__line-height);
+    .lib-css(--base-color, @base__color, var(--color-neutral-800));
+    .lib-css(--base-bg, @base__bg, var(--color-white));
+    .lib-css(--base-border-radius, @base__border-radius);
+
+    .lib-css(--muted-color, @muted__color, var(--color-neutral-500));
+    .lib-css(--muted-bg, @muted__bg, var(--color-neutral-100));
+
+    .lib-css(--subtle-color, @subtle__color, var(--color-neutral-200));
+    .lib-css(--subtle-bg, @subtle__bg, var(--color-neutral-50));
+
+    .lib-css(--surface-bg, @surface__bg, var(--base-bg));
+    .lib-css(--surface-color, @surface__color, var(--base-color));
+    .lib-css(--overlay-bg, @overlay__bg);
+
+    .lib-css(--focus-ring-width, @focus-ring__width, 2px);
+    .lib-css(--focus-ring-color, @focus-ring__color, var(--color-brand));
+    .lib-css(--focus-ring-offset, @focus-ring__offset, 2px);
+
+    .lib-css(--link-color, @link__color, var(--color-blue));
+}

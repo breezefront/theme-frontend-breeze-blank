@@ -19,6 +19,25 @@
 @color__success: false;
 @color__danger: false;
 
+.breeze-tokens() {
+    .lib-css(--color-brand, @color__brand);
+    .lib-css(--color-white, @color__white);
+    .lib-css(--color-black, @color__black);
+    .lib-css(--color-neutral-50, @color__neutral-50);
+    .lib-css(--color-neutral-100, @color__neutral-100);
+    .lib-css(--color-neutral-200, @color__neutral-200);
+    .lib-css(--color-neutral-300, @color__neutral-300);
+    .lib-css(--color-neutral-400, @color__neutral-400);
+    .lib-css(--color-neutral-500, @color__neutral-500);
+    .lib-css(--color-neutral-800, @color__neutral-800);
+    .lib-css(--color-blue, @color__blue);
+    .lib-css(--color-green, @color__green);
+    .lib-css(--color-red, @color__red);
+    .lib-css(--color-yellow, @color__yellow);
+    .lib-css(--color-info, @color__info, var(--color-blue));
+    .lib-css(--color-success, @color__success, var(--color-green));
+    .lib-css(--color-danger, @color__danger, var(--color-red));
+}
 
 ////////
 

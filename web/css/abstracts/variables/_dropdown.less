@@ -8,3 +8,8 @@
 @dropdown-item__padding: @1 @2;
 @dropdown-item__hover__color: false;
 @dropdown-item__hover__bg: false;
+
+.breeze-tokens() {
+    .lib-css(--dropdown-item-hover-bg, @dropdown-item__hover__bg);
+    .lib-css(--dropdown-item-hover-color, @dropdown-item__hover__color);
+}

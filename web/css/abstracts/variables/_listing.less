@@ -7,8 +7,8 @@
 
 @listing-item-actions-secondary__display: flex;
 @listing-item-actions-secondary__gap: @0-5;
-@listing-item-actions-secondary-link__color: @muted__color;
-@listing-item-actions-secondary-link__background: transparent;
+@listing-item-actions-secondary-link__color: false;
+@listing-item-actions-secondary-link__bg: false;
 @listing-item-actions-secondary-link__padding: 0px;
 @listing-item-actions-secondary-link__border: false;
 @listing-item-actions-secondary-link__border-radius: @button__border-radius;
@@ -23,11 +23,11 @@
 @listing-grid__media-md__columns: false;
 @listing-grid__media-lg__columns: 4;
 @listing-grid__media-xl__columns: false;
-@listing-grid__media-md-1column__columns: 4;
-@listing-grid__media-lg-1column__columns: 5;
-@listing-grid__media-xl-1column__columns: false;
-@listing-grid__media-lg-3columns__columns: 3;
-@listing-grid__media-xl-3columns__columns: false;
+@listing-grid__media-md__1column__columns: 4;
+@listing-grid__media-lg__1column__columns: 5;
+@listing-grid__media-xl__1column__columns: false;
+@listing-grid__media-lg__3columns__columns: 3;
+@listing-grid__media-xl__3columns__columns: false;
 
 @listing-grid-item__price-aside-name: false;
 
@@ -53,7 +53,6 @@
 @listing-grid-item-name__hover__line-clamp: 7;
 
 @listing-grid-item-swatches__position: static;
-@listing-grid-item-swatches__z-index: @listing-grid-item-swatches__absolute__z-index; // deprecated
 @listing-grid-item-swatches__absolute__z-index: 1;
 @listing-grid-item-swatches__absolute__top: auto;
 @listing-grid-item-swatches__absolute__bottom: 0;
@@ -134,7 +133,7 @@
 
 @listing-list__gap: @3;
 @listing-list__lg__gap: false;
-@listing-list__divider: 1px solid var(--subtle-color);
+@listing-list__divider: 1px solid ~"var(--subtle-color)";
 @listing-list-item__gap: @3;
 @listing-list-item__lg__gap: false;
 @listing-list-image__width: 28%;
@@ -142,3 +141,29 @@
 @listing-list-actions__margin: @1 0;
 @listing-list-descrition__margin: @2 0 0 0;
 @listing-list-rows__margin: false;
+
+.breeze-tokens() {
+    --listing-grid-gap: @listing-grid__gap;
+    --listing-grid-row-gap: @listing-grid__row-gap;
+    --listing-grid-columns: @listing-grid__columns;
+    --listing-grid-item-padding: @listing-grid-item__padding;
+    --listing-grid-item-margin: @listing-grid-item__margin;
+
+    @media @media-sm {
+        .lib-css(--listing-grid-columns, @listing-grid__media-sm__columns);
+    }
+    @media @media-md {
+        .lib-css(--listing-grid-columns, @listing-grid__media-md__columns);
+    }
+    @media @media-lg {
+        .lib-css(--listing-grid-columns, @listing-grid__media-lg__columns);
+    }
+    @media @media-xl {
+        .lib-css(--listing-grid-columns, @listing-grid__media-xl__columns);
+    }
+    @media @media-hover {
+        & when (@listing-grid-item-swatches__position = absolute) {
+            --swatches-over-image: true;
+        }
+    }
+}

@@ -152,11 +152,11 @@
                 .tocart {
                     outline-offset: 1px;
                     border: 0;
-                    .lib-rgb(--button-color, @listing-item-actions-secondary-link__color);
-                    .lib-rgb(--button-bg, @listing-item-actions-secondary-link__background);
+                    --button-color: var(--listing-item-actions-secondary-link-color, var(--muted-color));
+                    --button-bg: var(--listing-item-actions-secondary-link-bg, transparent);
                     .padding(@listing-item-actions-secondary-link__padding);
-                    .lib-css(color, @listing-item-actions-secondary-link__color);
-                    .lib-css(background, @listing-item-actions-secondary-link__background);
+                    // .lib-css(color, @listing-item-actions-secondary-link__color);
+                    // .lib-css(background, @listing-item-actions-secondary-link__background);
                     .lib-css(border, @listing-item-actions-secondary-link__border);
                     .lib-css(border-radius, @listing-item-actions-secondary-link__border-radius);
                     span {
@@ -220,9 +220,9 @@
 
                 .tocart {
                     .lib-css(--button-bg-alpha, @listing-grid-item-tocart__absolute__background-alpha);
-                    .lib-rgb(--button-color, @listing-grid-item-tocart__absolute__text-color);
-                    .lib-rgb(--button-bg, @listing-grid-item-tocart__absolute__background-color);
-                    .lib-rgb(--button-border-color, @listing-grid-item-tocart__absolute__border-color);
+                    // .lib-rgb(--button-color, @listing-grid-item-tocart__absolute__text-color);
+                    // .lib-rgb(--button-bg, @listing-grid-item-tocart__absolute__background-color);
+                    // .lib-rgb(--button-border-color, @listing-grid-item-tocart__absolute__border-color);
                     .lib-css(border-radius, @listing-grid-item-tocart__absolute__border-radius);
                     .lib-css(box-shadow, @listing-grid-item-tocart__absolute__box-shadow);
                     .lib-css(font-weight, @listing-grid-item-tocart__absolute__font-weight);
@@ -231,7 +231,7 @@
                     .lib-css(text-transform, @listing-grid-item-tocart__absolute__text-transform);
                     &:hover {
                         .lib-css(--button-bg-alpha, @listing-grid-item-tocart__absolute__hover__background-alpha);
-                        .lib-rgb(--button-hover-bg, @listing-grid-item-tocart__absolute__background-color);
+                        // .lib-rgb(--button-hover-bg, @listing-grid-item-tocart__absolute__background-color);
                     }
                 }
                 .stock {
