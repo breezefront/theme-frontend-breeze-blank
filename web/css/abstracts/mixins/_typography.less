@@ -181,30 +181,27 @@
     figure {
         margin-bottom: @3;
     }
+    section {
+        margin-bottom: @4;
+    }
     strong {
         font-weight: 600;
     }
     :where(ul:not(.unstyled,.items,[role=tablist])),
-    :where(ol:not(.unstyled,.product-items,[role=tablist])) {
+    :where(ol:not(.unstyled,.product-items)) {
         margin-top: @3;
         margin-bottom: @3;
+        .padding-left(@5);
     }
     :where(ul:not(.unstyled,.items,[role=tablist]) li),
-    :where(ol:not(.unstyled,.product-items,[role=tablist]) li) {
+    :where(ol:not(.unstyled,.product-items) li) {
         margin-top: @1;
         margin-bottom: @1;
-    }
-    section {
-        margin-bottom: @4;
-    }
-    :where(ul:not(.unstyled,.items,[role=tablist])),
-    :where(ol:not(.unstyled,.product-items,[role=tablist])) {
-        .padding-left(@5);
     }
     :where(ul:not(.unstyled,.items,[role=tablist])) {
         list-style: disc;
     }
-    :where(ol:not(.unstyled,.product-items,[role=tablist])) {
+    :where(ol:not(.unstyled,.product-items)) {
         list-style: auto;
     }
     ol.nested-counter {
