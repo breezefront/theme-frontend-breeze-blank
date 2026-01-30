@@ -44,9 +44,7 @@
 
 @headings__font-family: false;
 @headings__text-transform: false;
-@headings__text-color: ~"var(--base-color)";
-@headings__text-alpha: 1;
-@headings__color: ~"rgba(var(--headings-color), var(--headings-alpha, 1))";
+@headings__color: false;
 
 @h1__font-size: @font-size__4xl;
 @h1__font-weight: bold;
@@ -149,4 +147,8 @@
     .lib-css(--focus-ring-offset, @focus-ring__offset, 2px);
 
     .lib-css(--link-color, @link__color, var(--color-blue));
+
+    .lib-css(--headings-color, @headings__color, var(--surface-color));
+    .lib-css(--headings-font-family, @headings__font-family);
+    .lib-css(--headings-text-transform, @headings__text-transform);
 }

@@ -27,10 +27,9 @@
     h5, .h5,
     h6, .h6,
     .heading {
-        color: @headings__color;
-        .lib-css(font-family, @headings__font-family);
-        .lib-css(text-transform, @headings__text-transform);
-
+        color: var(--headings-color);
+        font-family: var(--headings-font-family, var(--base-font-family));
+        text-transform: var(--headings-text-transform, none);
     }
 
     h1, .h1,
@@ -215,7 +214,7 @@
             --divider-alpha: .15;
         }
         thead th {
-            color: @headings__color;
+            color: var(--headings-color);
         }
         tbody:last-child tr:last-child {
             border-bottom: 0;
