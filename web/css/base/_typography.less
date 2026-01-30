@@ -32,25 +32,19 @@
         text-transform: var(--headings-text-transform, none);
     }
 
-    h1, .h1,
-    h2, .h2,
-    h3, .h3 {
+    :where(h1, .h1, h2, .h2, h3, .h3) {
         strong {
             font-weight: 700;
         }
     }
 
-    h4, .h4,
-    h5, .h5,
-    h6, .h6,
-    .heading {
+    :where(h4, .h4, h5, .h5, h6, .h6, .heading) {
         strong {
             font-weight: 600;
         }
     }
 
-    h1,
-    .h1 {
+    :where(h1, .h1) {
         .lib-css(font-size, @h1__font-size);
         .lib-css(font-weight, @h1__font-weight);
         .lib-css(text-transform, @h1__text-transform);
@@ -61,8 +55,7 @@
             .lib-css(margin-top, @h1__margin-top);
         }
     }
-    h2,
-    .h2 {
+    :where(h2, .h2) {
         .lib-css(font-size, @h2__font-size);
         .lib-css(font-weight, @h2__font-weight);
         .lib-css(text-transform, @h2__text-transform);
@@ -73,8 +66,7 @@
             .lib-css(margin-top, @h2__margin-top);
         }
     }
-    h3,
-    .h3 {
+    :where(h3, .h3) {
         .lib-css(font-size, @h3__font-size);
         .lib-css(font-weight, @h3__font-weight);
         .lib-css(text-transform, @h3__text-transform);
@@ -85,8 +77,7 @@
             .lib-css(margin-top, @h3__margin-top);
         }
     }
-    h4,
-    .h4 {
+    :where(h4, .h4) {
         .lib-css(font-size, @h4__font-size);
         .lib-css(font-weight, @h4__font-weight);
         .lib-css(text-transform, @h4__text-transform);
@@ -97,8 +88,7 @@
             .lib-css(margin-top, @h4__margin-top);
         }
     }
-    h5,
-    .h5 {
+    :where(h5, .h5) {
         .lib-css(font-size, @h5__font-size);
         .lib-css(font-weight, @h5__font-weight);
         .lib-css(text-transform, @h5__text-transform);
@@ -109,8 +99,7 @@
             .lib-css(margin-top, @h5__margin-top);
         }
     }
-    h6,
-    .h6 {
+    :where(h6, .h6) {
         .lib-css(font-size, @h6__font-size);
         .lib-css(font-weight, @h6__font-weight);
         .lib-css(text-transform, @h6__text-transform);
@@ -123,7 +112,7 @@
     }
 
     ul.disc {
-        &:extend(.breeze-prose :where(ul:not(.unstyled):not(.items)) all);
+        &:extend(.breeze-prose :where(ul:not(.unstyled,.items,[role=tablist])) all);
     }
 
     dl {
@@ -261,11 +250,11 @@
     }
 
     hr {
+        height: 0;
+        color: inherit;
         margin: @3 0;
-        border: 1px solid var(--subtle-color);
-        border-right: 0;
-        border-left: 0;
-        border-bottom: 0;
+        border: 0 solid var(--subtle-color);
+        border-top-width: 1px;
     }
 
     :where(a[href^="tel:"]),
@@ -283,7 +272,7 @@
     }
 
     .prose,
-    :where(.cms-no-route, .cms-page-view) .main {
+    :where(.cms-no-route .main, .cms-page-view .main) {
         .lib-css(font-size, @prose__font-size);
         .lib-css(line-height, @prose__line-height);
         &:extend(.breeze-prose all);
