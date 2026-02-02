@@ -305,15 +305,13 @@
 }
 
 .breeze-invert-colors {
-    // color: @base__color;
+    color: var(--base-color);
 
-    // .lib-rgb(--base-color, @base__inverted__text-color);
-    // .lib-css(--base-alpha, @base__inverted__text-alpha);
-    // .lib-rgb(--headings-color, @headings__inverted__text-color);
-    // .lib-css(--headings-alpha, @headings__inverted__text-alpha);
-    // .lib-css(--block-title-color, @headings__inverted__text-alpha);
-    // .lib-rgb(--link-color, @link__inverted__text-color);
-    // .lib-css(--link-alpha, @link__inverted__text-alpha);
+    .lib-css(--base-color, @base__inverted__color);
+    .lib-css(--headings-color, @headings__inverted__color);
+    .lib-css(--block-title-color, @headings__inverted__color);
+    .lib-css(--link-color, @link__inverted__color);
+
     // .lib-rgb(--muted-bg, @muted__inverted__background-color);
     // .lib-css(--muted-bg-alpha, @muted__inverted__background-alpha);
     // .lib-rgb(--ring-color, @ring__inverted__text-color);
