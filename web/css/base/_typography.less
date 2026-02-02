@@ -11,10 +11,6 @@
         .lib-css(color, @selection__color);
         .lib-css(background, @selection__background);
     }
-    ::-moz-selection {
-        .lib-css(color, @selection__color);
-        .lib-css(background, @selection__background);
-    }
 
     code, kbd, pre, samp {
         font-family: @font-mono;
@@ -148,19 +144,6 @@
         width: @7;
         height: @7;
     }
-    .icon.rounded {
-        background: var(--muted-bg);
-        padding: @3;
-        &.small {
-            padding: @2;
-        }
-    }
-    .icon {
-        &.rounded { border-radius: @1; }
-        &.rounded-sm { border-radius: @0-5; }
-        &.rounded-lg { border-radius: @2; }
-        &.rounded-full { border-radius: 9999px; }
-    }
 
     .table-wrapper:not(.grouped) {
         overflow-x: auto;
@@ -182,7 +165,6 @@
             &:extend(.breeze-sr-only);
         }
         tr {
-            --divider-alpha: .07;
             border-bottom: 1px solid var(--subtle-color);
         }
         th {
@@ -191,16 +173,13 @@
         td, th {
             border-color: var(--subtle-color);
             vertical-align: top;
-            padding: @3 @2;
+            padding: @2-5 @3;
             &:first-child {
                 .padding-left(0);
             }
             &:last-child {
                 .padding-right(0);
             }
-        }
-        thead tr {
-            --divider-alpha: .15;
         }
         thead th {
             color: var(--headings-color);
@@ -224,12 +203,10 @@
         // table inserted via WYSIWYG editor
         &[border] {
             border-style: solid;
-            tr {
-                --divider-alpha: .07;
-            }
             td, th {
+                border-style: solid;
                 &:first-child {
-                    .padding-left(@2);
+                    .padding-left(@2-5);
                 }
             }
             &[style*="border-color"] {
@@ -244,7 +221,7 @@
 
     @media @media-sm-down and screen {
         .mobile-table,
-        .table:not(.additional-attributes):not(.table-totals):not(.totals):not(.cart):not(.table-comparison):not(.grouped) {
+        .table:not(.additional-attributes, .table-totals, .totals, .cart, .table-comparison, .grouped) {
             .breeze-table();
         }
     }

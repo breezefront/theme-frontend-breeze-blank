@@ -3,10 +3,10 @@
     .color-invert { &:extend(.breeze-invert-colors all); }
 
     .color {
-        &-base { color: @base__color !important; }
-        &-brand { color: @color__brand !important; }
+        &-base { color: var(--base-color) !important; }
+        &-brand { color: var(--color-brand) !important; }
         &-heading { color: var(--headings-color) !important; }
-        &-link { color: @link__color !important; }
+        &-link { color: var(--link-color) !important; }
         &-muted { color: var(--muted-color) !important; }
         &-danger { color: var(--color-danger) !important; }
         &-success { color: var(--color-success) !important; }
