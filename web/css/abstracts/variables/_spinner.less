@@ -1,4 +1,15 @@
 @spinner__size: @6;
 @spinner__border-width: 2px;
-@spinner__border-color: var(--color-brand);
+@spinner__border-color: false;
 @spinner__animation-duration: .6s;
+
+.breeze-tokens() {
+    .lib-css(--spinner-border-color, @spinner__border-color);
+    --spinner-size: @spinner__size;
+    --spinner-border-width: @spinner__border-width;
+    --spinner-duration: @spinner__animation-duration;
+
+    @media (prefers-reduced-motion) {
+        --spinner-duration: 5s;
+    }
+}

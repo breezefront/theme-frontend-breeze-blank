@@ -2,30 +2,13 @@
     :root {
         .breeze-tokens();
 
-        ///////
-
-        // .lib-rgb(--dark-bg, @dark__background-color);
-
-        --transition-duration: 200ms;
-        --spinner-size: @spinner__size;
-        --spinner-border-width: @spinner__border-width;
-        // .lib-rgb(--spinner-border-color, @spinner__border-color);
-        --spinner-duration: @spinner__animation-duration;
-
-        // .lib-rgb(--scrollbar-bg, @scrollbar-track__background-color);
-        // .lib-rgb(--scrollbar-color, @scrollbar-thumb__background-color);
-
-        @media (prefers-reduced-motion) {
-            --transition-duration: 20ms;
-            --spinner-duration: 5s;
-        }
-
         & when (@respect-color-scheme = true) {
             @media @media-inverted {
                 .breeze-tokens-inverted();
             }
         }
     }
+
     .breeze-invert-colors {
         color: var(--base-color);
         background: var(--base-bg);
