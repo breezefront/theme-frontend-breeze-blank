@@ -8,9 +8,13 @@
         .lib-css(font-weight, @input__font-weight);
         .lib-css(font-size, @input__font-size);
 
-        color: var(--input-color, var(--surface-color));
-        background: var(--input-bg, var(--surface-bg));
-        border: var(--input-border-width) solid var(--input-border-color);
+        color: var(--input-color, currentColor);
+        background: var(--input-bg, transparent);
+        border: var(--input-border-width) solid var(--input-border-color, color-mix(
+            in srgb,
+            currentColor 30%,
+            transparent
+        ));
         border-radius: var(--input-border-radius, var(--base-border-radius));
 
         &:disabled {
@@ -21,9 +25,13 @@
 
     & when not (@critical) {
         &:focus-visible {
-            color: var(--input-focus-color, var(--input-color, var(--surface-color)));
-            border-color: var(--input-focus-border-color, var(--input-border-color));
-            background: var(--input-focus-bg, var(--input-bg, var(--surface-bg)));
+            color: var(--input-focus-color, var(--input-color, currentColor));
+            border-color: var(--input-focus-border-color, var(--input-border-color, color-mix(
+                in srgb,
+                currentColor 30%,
+                transparent
+            )));
+            background: var(--input-focus-bg, var(--input-bg, transparent));
             outline-color: var(--input-outline-color, var(--focus-ring-color));
             outline-width: var(--input-outline-width, var(--focus-ring-width));
             outline-offset: var(--input-outline-offset, ~"calc(var(--input-border-width) * -1)");
@@ -122,12 +130,10 @@
 
 .breeze-button-secondary {
     & when (@critical) {
-        // --link-color: var(--button-color);
-        // --link-alpha: 1;
         --button-bg: var(--button-secondary-bg, var(--subtle-color));
         --button-color: var(--button-secondary-color, color-mix(
             in srgb,
-            var(--surface-color) 80%,
+            currentColor 80%,
             var(--button-secondary-bg, var(--subtle-color))
         ));
         --button-border-color: var(--button-secondary-border-color, var(--subtle-color));
@@ -136,7 +142,7 @@
         --button-hover-bg: var(--button-secondary-hover-bg);
         --button-hover-color: var(--button-secondary-hover-color, color-mix(
             in srgb,
-            var(--surface-color) 95%,
+            currentColor 95%,
             var(--button-secondary-hover-bg, var(--button-secondary-bg, var(--subtle-color)))
         ));
     }
@@ -168,21 +174,12 @@
 
     & when not (@critical) {
         --button-hover-bg: color-mix(in srgb, var(--color-brand) 7%, transparent);
-        // @media @media-hover {
-        //     &:hover {
-        //         --button-color: var(--surface-color);
-        //         --button-border-color: var(--surface-color);
-        //     }
-        // }
     }
 }
 
 .breeze-button-reset {
-    --button-bg: var(--surface-bg);
-    --button-border-color: var(--surface-bg);
-    // &:focus-visible {
-    //     .breeze-focus-ring();
-    // }
+    --button-bg: transparent;
+    --button-border-color: transparent;
     padding: 0 !important;
     background: transparent !important;
     color: inherit !important;

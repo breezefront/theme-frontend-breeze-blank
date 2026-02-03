@@ -1,15 +1,15 @@
-// @theme__brand-color:         // replace with: ~"var(--color-brand)";
-// @theme__brand-hover-color    // removed
-// @brand__color                // removed;
-// @brand__hover__color         // removed;
-// @muted__color                // replace with: ~"var(--muted-color)";
-@theme__dark-color: @color__dark;
-@dark__background-color: @color__dark;
-@dark__background: ~"var(--dark-bg)";
+@theme__brand-color: ~"var(--color-brand)";
+@theme__brand-hover-color: false;
+@theme__dark-color: @color__neutral-900;
+@brand__color: @color__brand;
+@brand__hover__color: false;
 @muted__background: ~"var(--muted-bg)";
 @divider__color: ~"var(--subtle-color)";
 @z-layer__background: ~"var(--surface-bg)";
 @z-layer__color: ~"var(--surface-color)";
+
+@dark__background-color: @theme__dark-color;
+@dark__background: @theme__dark-color;
 
 @ring__width: @focus-ring__width;
 @ring__offset: @focus-ring__offset;

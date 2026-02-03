@@ -44,7 +44,7 @@
 @button__hover__bg: false;
 @button__hover__border-color: false;
 @button__hover__text-decoration: none;
-@button__inverted__bg: #f00;
+@button__inverted__bg: false;
 @button__inverted__color: false;
 @button__inverted__hover__bg: false;
 @button__inverted__border-color: false;
@@ -87,7 +87,7 @@
 .breeze-tokens() {
     .lib-css(--input-bg, @input__bg);
     .lib-css(--input-color, @input__color);
-    .lib-css(--input-border-color, @input__border-color, var(--color-neutral-400));
+    .lib-css(--input-border-color, @input__border-color);
     .lib-css(--input-border-width, @input__border-width, 1px);
     .lib-css(--input-border-radius, @input__border-radius);
     .lib-css(--input-focus-bg, @input__focus__bg);
@@ -119,16 +119,18 @@
     .lib-css(--button-selected-border-color, @button__selected__border-color);
 }
 
-.breeze-invert-colors {
+.breeze-invert-colors() {
+    .lib-css(--input-color, @base__inverted__color);
+    .lib-css(--input-bg, @input__inverted__bg);
+    .lib-css(--input-border-color, @input__inverted__border-color);
+
     .lib-css(--button-bg, @button__inverted__bg);
     .lib-css(--button-hover-bg, @button__inverted__hover__bg);
     .lib-css(--button-color, @button__inverted__color);
     .lib-css(--button-border-color, @button__inverted__border-color);
+
     .lib-css(--button-secondary-bg, @button__secondary__inverted__bg);
     .lib-css(--button-secondary-hover-bg, @button__secondary__inverted__hover__bg);
     .lib-css(--button-secondary-color, @button__secondary__inverted__color);
     .lib-css(--button-secondary-border-color, @button__secondary__inverted__border-color);
-    .lib-css(--input-color, @base__inverted__color);
-    .lib-css(--input-bg, @input__inverted__bg);
-    .lib-css(--input-border-color, @input__inverted__border-color);
 }

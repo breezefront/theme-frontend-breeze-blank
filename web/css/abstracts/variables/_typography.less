@@ -28,8 +28,8 @@
 @base__color: false;
 @base__bg: false;
 @base__border-radius: 0;
-@base__inverted__color: @color__white;
-@base__inverted__bg: @color__dark;
+@base__inverted__color: false;
+@base__inverted__bg: false;
 
 @muted__color: false;
 @muted__bg: false;
@@ -59,7 +59,7 @@
 @headings__font-family: false;
 @headings__text-transform: false;
 @headings__color: false;
-@headings__inverted__color: @base__inverted__color;
+@headings__inverted__color: false;
 
 @h1__font-size: @font-size__4xl;
 @h1__font-weight: bold;
@@ -141,22 +141,22 @@
 
     .lib-css(--link-color, @link__color, var(--color-blue));
 
-    .lib-css(--headings-color, @headings__color, var(--surface-color));
+    .lib-css(--headings-color, @headings__color);
     .lib-css(--headings-font-family, @headings__font-family);
     .lib-css(--headings-text-transform, @headings__text-transform);
 }
 
-.breeze-invert-colors {
+.breeze-invert-colors() {
     color: var(--base-color);
-    .lib-css(--base-color, @base__inverted__color);
-    .lib-css(--base-bg, @base__inverted__bg);
+    .lib-css(--base-color, @base__inverted__color, var(--color-white));
+    .lib-css(--base-bg, @base__inverted__bg, var(--color-neutral-900));
     .lib-css(--surface-color, @surface__inverted__color, var(--base-color));
     .lib-css(--surface-bg, @surface__inverted__bg, var(--base-bg));
     .lib-css(--muted-color, @muted__inverted__color, var(--color-neutral-500));
     .lib-css(--muted-bg, @muted__inverted__bg, var(--color-neutral-800));
     .lib-css(--subtle-color, @subtle__inverted__color, var(--color-neutral-700));
     .lib-css(--subtle-bg, @subtle__inverted__bg, var(--color-neutral-800));
-    .lib-css(--focus-ring-color, @focus-ring__inverted__color, var(--surface-color));
+    .lib-css(--focus-ring-color, @focus-ring__inverted__color, var(--color-brand));
     .lib-css(--headings-color, @headings__inverted__color);
     .lib-css(--block-title-color, @headings__inverted__color);
     .lib-css(--link-color, @link__inverted__color, var(--color-blue));
