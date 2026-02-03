@@ -5,10 +5,6 @@
         ///////
 
         // .lib-rgb(--dark-bg, @dark__background-color);
-        // .lib-rgb(--headings-color, @headings__text-color);
-        // .lib-rgb(--block-title-color, @block-title__text-color);
-        // .lib-rgb(--block-title-bg, @block-title__background-color);
-        // .lib-rgb(--block-content-bg, @block-content__background-color);
 
         --transition-duration: 200ms;
         --spinner-size: @spinner__size;
@@ -50,5 +46,10 @@
         //         .lib-rgb(--scrollbar-color, @scrollbar-thumb__dark__background-color);
         //     }
         // }
+    }
+    .breeze-invert-colors {
+        color: var(--base-color);
+        background: var(--base-bg);
+        .breeze-tokens-inverted();
     }
 }

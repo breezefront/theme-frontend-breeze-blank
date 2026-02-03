@@ -24,8 +24,8 @@
         }
     }
     & when not (@critical) {
-        .lib-css(color, @block-title__color);
-        .lib-css(background, @block-title__background);
+        color: var(--block-title-color, currentColor);
+        background: var(--block-title-bg, transparent);
     }
 }
 .breeze-block-sidebar-content {
@@ -39,7 +39,7 @@
         .lib-css(border-width, @block-content__border-width);
     }
     & when not (@critical) {
-        .lib-css(background, @block-content__background);
+        background: var(--block-content-bg, transparent);
     }
 }
 

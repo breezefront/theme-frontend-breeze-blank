@@ -146,8 +146,7 @@
     .lib-css(--headings-text-transform, @headings__text-transform);
 }
 
-.breeze-invert-colors() {
-    color: var(--base-color);
+.breeze-tokens-inverted() {
     .lib-css(--base-color, @base__inverted__color, var(--color-white));
     .lib-css(--base-bg, @base__inverted__bg, var(--color-neutral-900));
     .lib-css(--surface-color, @surface__inverted__color, var(--base-color));
@@ -158,6 +157,5 @@
     .lib-css(--subtle-bg, @subtle__inverted__bg, var(--color-neutral-800));
     .lib-css(--focus-ring-color, @focus-ring__inverted__color, var(--color-brand));
     .lib-css(--headings-color, @headings__inverted__color);
-    .lib-css(--block-title-color, @headings__inverted__color);
     .lib-css(--link-color, @link__inverted__color, var(--color-blue));
 }
