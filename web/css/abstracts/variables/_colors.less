@@ -1,4 +1,5 @@
 @color__brand: @blue-600;
+@color__dark: @slate-900;
 
 @color__white: @white;
 @color__black: @black;
@@ -8,16 +9,24 @@
 @color__neutral-300: @gray-300;
 @color__neutral-400: @gray-400;
 @color__neutral-500: @gray-500;
+@color__neutral-700: @gray-700;
 @color__neutral-800: @gray-800;
 
 @color__blue: #3160e2;
 @color__green: @green-700;
 @color__red: @red-700;
 @color__yellow: @yellow-400;
+@color__inverted__blue: @blue-300;
+@color__inverted__green: @green-400;
+@color__inverted__red: @red-500;
+@color__inverted__yellow: false;
 
 @color__info: false;
 @color__success: false;
 @color__danger: false;
+@color__inverted__info: false;
+@color__inverted__success: false;
+@color__inverted__danger: false;
 
 .breeze-tokens() {
     .lib-css(--color-brand, @color__brand);
@@ -29,6 +38,7 @@
     .lib-css(--color-neutral-300, @color__neutral-300);
     .lib-css(--color-neutral-400, @color__neutral-400);
     .lib-css(--color-neutral-500, @color__neutral-500);
+    .lib-css(--color-neutral-700, @color__neutral-700);
     .lib-css(--color-neutral-800, @color__neutral-800);
     .lib-css(--color-blue, @color__blue);
     .lib-css(--color-green, @color__green);
@@ -39,8 +49,12 @@
     .lib-css(--color-danger, @color__danger, var(--color-red));
 }
 
-////////
-
-@theme__dark-color: @slate-900;
-@dark__background-color: @theme__dark-color;
-@dark__background: ~"rgba(var(--dark-bg), var(--dark-bg-alpha, 1))";
+.breeze-invert-colors {
+    .lib-css(--color-blue, @color__inverted__blue);
+    .lib-css(--color-green, @color__inverted__green);
+    .lib-css(--color-red, @color__inverted__red);
+    .lib-css(--color-yellow, @color__inverted__yellow);
+    .lib-css(--color-info, @color__inverted__info, var(--color-blue));
+    .lib-css(--color-success, @color__inverted__success, var(--color-green));
+    .lib-css(--color-danger, @color__inverted__danger, var(--color-red));
+}
