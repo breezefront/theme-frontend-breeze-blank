@@ -1,4 +1,16 @@
 @scrollbar__width: @1-5;
 @scrollbar__border-radius: @96;
-@scrollbar-track__background-color: ~"var(--gray-100)";
-@scrollbar-thumb__background-color: ~"var(--gray-300)";
+@scrollbar-track__bg: false;
+@scrollbar-thumb__bg: false;
+@scrollbar-track__inverted__bg: false;
+@scrollbar-thumb__inverted__bg: false;
+
+.breeze-tokens() {
+    .lib-css(--scrollbar-bg, @scrollbar-track__bg);
+    .lib-css(--scrollbar-color, @scrollbar-track__bg);
+}
+
+.breeze-tokens-inverted() {
+    .lib-css(--scrollbar-bg, @scrollbar-track__inverted__bg);
+    .lib-css(--scrollbar-color, @scrollbar-track__inverted__bg);
+}

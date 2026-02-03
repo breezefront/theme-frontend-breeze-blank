@@ -8,12 +8,15 @@
 @block-title__padding: @2 0;
 @block-title__margin: false;
 @block-title__color: false;
+@block-title__inverted__color: false;
 @block-title__bg: false;
+@block-title__inverted__bg: false;
 @block-title__border: false;
 @block-title__border-width: false;
 @block-title__text-wrap: balance;
 @block-content__padding: false;
 @block-content__bg: false;
+@block-content__inverted__bg: false;
 @block-content__border: false;
 @block-content__border-width: false;
 
@@ -115,5 +118,7 @@
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--block-title-color, @headings__inverted__color);
+    .lib-css(--block-title-color, @block-title__inverted__color);
+    .lib-css(--block-title-bg, @block-title__inverted__bg);
+    .lib-css(--block-content-bg, @block-content__inverted__bg);
 }

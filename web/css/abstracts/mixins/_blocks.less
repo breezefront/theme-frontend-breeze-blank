@@ -24,7 +24,7 @@
         }
     }
     & when not (@critical) {
-        color: var(--block-title-color, currentColor);
+        color: var(--block-title-color, var(--headings-color));
         background: var(--block-title-bg, transparent);
     }
 }

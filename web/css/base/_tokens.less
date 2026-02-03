@@ -20,32 +20,11 @@
             --spinner-duration: 5s;
         }
 
-        // & when (@respect-color-scheme = true) {
-        //     @media @media-dark {
-        //         .lib-rgb(--gray-800, @dark__gray-800);
-        //         .lib-rgb(--green, @dark__green);
-        //         .lib-rgb(--blue, @dark__blue);
-        //         .lib-rgb(--red, @dark__red);
-        //         .lib-rgb(--color-brand, @theme__dark__brand-color);
-        //         .lib-rgb(--base-color, @base__dark__text-color);
-        //         .lib-rgb(--base-bg, @base__dark__background-color);
-        //         .lib-rgb(--muted-bg, @muted__dark__background-color);
-
-        //         .lib-rgb(--headings-color, @headings__dark__text-color);
-
-        //         .lib-rgb(--block-title-color, @block-title__dark__text-color);
-        //         .lib-rgb(--block-title-bg, @block-title__dark__background-color);
-        //         .lib-rgb(--block-content-bg, @block-content__dark__background-color);
-
-        //         .lib-rgb(--input-border-color, @input__dark__border-color);
-
-        //         .lib-rgb(--button-secondary-color, @button-secondary__dark__text-color);
-        //         .lib-rgb(--button-secondary-bg, @button-secondary__dark__background-color);
-
-        //         .lib-rgb(--scrollbar-bg, @scrollbar-track__dark__background-color);
-        //         .lib-rgb(--scrollbar-color, @scrollbar-thumb__dark__background-color);
-        //     }
-        // }
+        & when (@respect-color-scheme = true) {
+            @media @media-inverted {
+                .breeze-tokens-inverted();
+            }
+        }
     }
     .breeze-invert-colors {
         color: var(--base-color);
