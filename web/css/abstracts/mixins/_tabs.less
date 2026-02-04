@@ -10,7 +10,7 @@
         }
     }
     & when not (@critical) {
-        .lib-css(background, @tab__background);
+        background: var(--tab-bg);
     }
 }
 
@@ -42,18 +42,18 @@
         order: -1;
         display: flex;
         align-items: center;
+        color: var(--tab-toggler-color);
+        background: var(--tab-toggler-bg);
         .lib-css(padding, @tab-toggler__padding);
-        .lib-css(color, @tab-toggler__color);
-        .lib-css(background, @tab-toggler__background);
         .lib-css(font-family, @tab-toggler__font-family);
         .lib-css(font-size, @tab-toggler__font-size);
         .lib-css(font-weight, @tab-toggler__font-weight);
         .lib-css(text-transform, @tab-toggler__text-transform);
 
         .counter {
+            background: var(--tab-counter-bg);
             .lib-css(opacity, @tab-counter__opacity);
             .lib-css(padding, @tab-counter__padding);
-            .lib-css(background, @tab-counter__background);
             .lib-css(display, @tab-counter__display);
             .lib-css(border-radius, @tab-counter__border-radius);
         }
@@ -61,10 +61,11 @@
     & when not (@critical) {
         cursor: pointer;
         &:hover {
-            --muted-alpha: .9;
-            --muted-bg-alpha: .5;
-            .lib-css(background, @tab-toggler__hover__background);
-            .lib-css(color, @tab-toggler__hover__color);
+            background: var(--tab-toggler-hover-bg);
+            color: var(--tab-toggler-hover-color);
+            .counter {
+                background: var(--tab-counter-hover-bg);
+            }
         }
         &:focus-visible {
             z-index: 10;
@@ -121,11 +122,13 @@
         z-index: 2;
     }
     & when not (@critical) {
-        --muted-alpha: .9;
-        .lib-css(background, @tab-toggler__active__background);
-        .lib-css(color, @tab-toggler__active__color);
-        &:hover {
-            --muted-bg-alpha: 1;
+        background: var(--tab-toggler-active-bg);
+        color: var(--tab-toggler-active-color);
+        .counter {
+            &,
+            &:hover {
+                background: var(--tab-counter-active-bg);
+            }
         }
     }
 }

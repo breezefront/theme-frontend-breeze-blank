@@ -3,9 +3,6 @@
 .pagebuilder-button-link {
     &:extend(.breeze-button all);
 }
-// .pagebuilder-button-primary {
-//     &:extend(.breeze-button-primary all);
-// }
 .pagebuilder-button-secondary {
     &:extend(.breeze-button-secondary all);
 }
@@ -109,7 +106,7 @@
     }
 
     [data-content-type="tabs"] {
-        .lib-css(background, @tab__background);
+        background: var(--tab-bg);
         .tabs-navigation {
             display: flex;
             overflow: auto;
