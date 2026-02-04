@@ -1,0 +1,21 @@
+@surface__bg: false;
+@surface__color: false;
+@surface__inverted__bg: false;
+@surface__inverted__color: false;
+
+@overlay__bg: false;
+@overlay__inverted__bg: false;
+
+.breeze-tokens() {
+    .lib-css(--surface-bg, @surface__bg, var(--base-bg));
+    .lib-css(--surface-color, @surface__color, var(--base-color));
+
+    .lib-css(--overlay-bg, @overlay__bg, color-mix(in srgb, var(--base-color) 80%, transparent));
+}
+
+.breeze-tokens-inverted() {
+    .lib-css(--surface-bg, @surface__inverted__bg, var(--base-bg));
+    .lib-css(--surface-color, @surface__inverted__color, var(--base-color));
+
+    .lib-css(--overlay-bg, @overlay__inverted__bg, color-mix(in srgb, var(--base-bg) 80%, transparent));
+}

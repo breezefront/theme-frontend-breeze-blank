@@ -41,13 +41,6 @@
 @subtle__inverted__color: @gray-700;
 @subtle__inverted__bg: @gray-800;
 
-@surface__bg: false;
-@surface__color: false;
-@surface__inverted__bg: false;
-@surface__inverted__color: false;
-
-@overlay__bg: false;
-
 @focus-ring__width: false;
 @focus-ring__offset: false;
 @focus-ring__color: false;
@@ -131,10 +124,6 @@
     .lib-css(--subtle-color, @subtle__color, var(--color-neutral-200));
     .lib-css(--subtle-bg, @subtle__bg, var(--color-neutral-50));
 
-    .lib-css(--surface-bg, @surface__bg, var(--base-bg));
-    .lib-css(--surface-color, @surface__color, var(--base-color));
-    .lib-css(--overlay-bg, @overlay__bg);
-
     .lib-css(--focus-ring-width, @focus-ring__width, 2px);
     .lib-css(--focus-ring-color, @focus-ring__color, var(--color-brand));
     .lib-css(--focus-ring-offset, @focus-ring__offset, 2px);
@@ -149,8 +138,6 @@
 .breeze-tokens-inverted() {
     .lib-css(--base-color, @base__inverted__color, var(--color-white));
     .lib-css(--base-bg, @base__inverted__bg, var(--color-neutral-900));
-    .lib-css(--surface-color, @surface__inverted__color, var(--base-color));
-    .lib-css(--surface-bg, @surface__inverted__bg, var(--base-bg));
     .lib-css(--muted-color, @muted__inverted__color, var(--color-neutral-500));
     .lib-css(--muted-bg, @muted__inverted__bg, var(--color-neutral-800));
     .lib-css(--subtle-color, @subtle__inverted__color, var(--color-neutral-700));
