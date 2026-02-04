@@ -60,6 +60,12 @@
 @button-secondary__dark__text-color: @button__secondary__inverted__color;
 @button-secondary__dark__background-color: @button__secondary__inverted__bg;
 
+@dropdown__border: 1px solid @dropdown__border-color;
+@dropdown__shadow: @shadow-lg;
+@dropdown__filter: @shadow-lg;
+@dropdown__border-color: @popover__border-color;
+@dropdown__border-radius: @popover__border-radius;
+
 @block-title__text-color: @block-title__color;
 @block-title__background-color: @block-title__bg;
 @block-title__dark__text-color: @block-title__inverted__color;
@@ -80,3 +86,13 @@
 @listing-grid__media-xl-1column__columns: @listing-grid__media-xl__1column__columns;
 @listing-grid__media-lg-3columns__columns: @listing-grid__media-lg__3columns__columns;
 @listing-grid__media-xl-3columns__columns: @listing-grid__media-xl__3columns__columns;
+
+.breeze-z-layer-starting-style {
+    .breeze-popover-starting-style();
+}
+.breeze-z-layer {
+    .breeze-popover();
+}
+.breeze-z-layer-visible {
+    .breeze-popover-visible();
+}

@@ -57,22 +57,17 @@
 
     @starting-style {
         .dropdown.options .dropdown[aria-hidden="false"] {
-            .breeze-z-layer-starting-style();
+            .breeze-popover-starting-style();
         }
     }
 
     .dropdown-lg {
-        --dropdown-padding: @3 @4;
-        --dropdown-width: @72;
+        --popover-padding: @3 @4;
+        --popover-width: @72;
     }
 
     .dropdown-xl {
-        --dropdown-padding: @3 @4;
-        --dropdown-width: @80;
+        --popover-padding: @3 @4;
+        --popover-width: @80;
     }
-}
-
-.breeze-tokens() {
-    --dropdown-padding: @2;
-    --dropdown-width: @44;
 }

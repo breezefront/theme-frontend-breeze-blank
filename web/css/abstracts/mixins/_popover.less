@@ -1,0 +1,42 @@
+.breeze-popover-starting-style {
+    & when not (@critical) {
+        opacity: 0;
+        transform: scale(.95);
+    }
+}
+.breeze-popover {
+    & when (@critical) {
+        display: none;
+        position: absolute;
+        pointer-events: none;
+        .right(0);
+    }
+    & when not (@critical) {
+        .breeze-popover-starting-style();
+        .breeze-invert-colors-reset();
+        .transition();
+        padding: var(--popover-padding);
+        width: var(--popover-width);
+        transform-origin: top;
+        z-index: 850;
+        visibility: hidden;
+        margin-top: @0-5;
+        color: var(--popover-color);
+        background:var(--popover-bg);
+        border: 1px solid var(--popover-border-color);
+        border-radius: var(--popover-border-radius);
+        .lib-css(filter, @popover__filter);
+        .lib-css(box-shadow, @popover__shadow);
+        .text-align(left);
+    }
+}
+.breeze-popover-visible {
+    & when not (@critical) {
+        z-index: 851;
+        opacity: 1;
+        pointer-events: all;
+        display: block;
+        visibility: visible;
+        transform: scale(1);
+    }
+}

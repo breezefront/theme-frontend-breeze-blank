@@ -45,9 +45,14 @@ button,
 }
 
 .field-tooltip-content {
-    &:extend(.breeze-dropdown all);
+    &:extend(.breeze-popover all);
     &[aria-hidden="false"] {
-        &:extend(.breeze-dropdown-visible);
+        &:extend(.breeze-popover-visible);
+    }
+}
+@starting-style {
+    .field-tooltip-content[aria-hidden="false"] {
+        .breeze-popover-starting-style();
     }
 }
 
@@ -290,8 +295,8 @@ button,
         color: var(--form-error-color, var(--color-danger));
     }
     .field-tooltip {
-        --dropdown-width: @72;
-        --dropdown-padding: @2 @3;
+        --popover-width: @72;
+        --popover-padding: @2 @3;
     }
     .field-tooltip-action {
         &::before {

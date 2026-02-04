@@ -1,11 +1,11 @@
 .tooltip.wrapper {
     .tooltip.content {
-        &:extend(.breeze-dropdown all);
+        &:extend(.breeze-popover all);
     }
     &:hover,
     &:focus {
         .tooltip.content {
-            &:extend(.breeze-dropdown-visible);
+            &:extend(.breeze-popover-visible);
         }
     }
 }
@@ -25,8 +25,8 @@
 
 & when not (@critical) {
     .tooltip.wrapper {
-        --dropdown-width: @64;
-        --dropdown-padding: @2 @3;
+        --popover-width: @64;
+        --popover-padding: @2 @3;
         .tooltip.toggle {
             cursor: help;
         }
@@ -38,7 +38,7 @@
         }
 
         @media @media-md-down {
-            --dropdown-width: @48;
+            --popover-width: @48;
         }
     }
 }

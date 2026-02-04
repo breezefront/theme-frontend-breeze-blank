@@ -1,7 +1,7 @@
 .minisearch {
     .search-autocomplete {
         &:extend(.breeze-dropdown all);
-        &:not(:empty):not([style*="display:none"]):not([style*="display: none"]) {
+        &:not(:empty,[style*="display:none"],[style*="display: none"]) {
             &:extend(.breeze-dropdown-visible);
         }
         [role="listbox"] li {
@@ -168,8 +168,8 @@
     }
 
     @starting-style {
-        .minisearch .search-autocomplete:not(:empty):not([style*="display:none"]):not([style*="display: none"]) {
-            .breeze-z-layer-starting-style();
+        .minisearch .search-autocomplete:not(:empty,[style*="display:none"],[style*="display: none"]) {
+            .breeze-popover-starting-style();
         }
     }
 }

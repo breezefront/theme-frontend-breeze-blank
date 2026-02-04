@@ -119,9 +119,9 @@
 }
 
 .swatch-option-tooltip {
-    &:extend(.breeze-z-layer all);
+    &:extend(.breeze-popover all);
     &:not([style*="none"]) {
-        &:extend(.breeze-z-layer-visible);
+        &:extend(.breeze-popover-visible);
     }
 }
 
@@ -137,7 +137,7 @@
     }
     @starting-style {
         .swatch-option-tooltip:not([style*="none"]) {
-            .breeze-z-layer-starting-style();
+            .breeze-popover-starting-style();
         }
     }
     .swatch-option {
