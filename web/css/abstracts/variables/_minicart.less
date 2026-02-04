@@ -11,7 +11,7 @@
 
 @minicart-counter__empty__opacity: 0;
 @minicart-counter__mode: badge; // badge|compact|inline
-@minicart-counter__mode-badge__background: @color__brand;
+@minicart-counter__mode-badge__background: false;
 @minicart-counter__mode-badge__border: false;
 @minicart-counter__mode-badge__border-width: false;
 @minicart-counter__mode-badge__width: @2-5;
@@ -27,3 +27,7 @@
 @minicart-counter__mode-inline__font-weight: false;
 
 @minicart-item-image__border: 1px solid var(--subtle-color);
+
+.breeze-tokens() {
+    .lib-css(--minicart-badge-bg, @minicart-counter__mode-badge__background);
+}
