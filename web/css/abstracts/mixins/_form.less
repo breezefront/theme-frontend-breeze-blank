@@ -10,11 +10,7 @@
 
         color: var(--input-color, currentColor);
         background: var(--input-bg, transparent);
-        border: var(--input-border-width) solid var(--input-border-color, color-mix(
-            in srgb,
-            currentColor 30%,
-            transparent
-        ));
+        border: var(--input-border-width) solid var(--input-border-color);
         border-radius: var(--input-border-radius, var(--base-border-radius));
 
         &:disabled {
@@ -26,11 +22,7 @@
     & when not (@critical) {
         &:focus-visible {
             color: var(--input-focus-color, var(--input-color, currentColor));
-            border-color: var(--input-focus-border-color, var(--input-border-color, color-mix(
-                in srgb,
-                currentColor 30%,
-                transparent
-            )));
+            border-color: var(--input-focus-border-color, var(--input-border-color));
             background: var(--input-focus-bg, var(--input-bg, transparent));
             outline-color: var(--input-outline-color, var(--focus-ring-color));
             outline-width: var(--input-outline-width, var(--focus-ring-width));

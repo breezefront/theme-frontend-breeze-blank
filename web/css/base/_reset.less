@@ -212,7 +212,6 @@
         min-width: 0;
         height: var(--checkbox-size);
         width: var(--checkbox-size);
-        color: var(--checkbox-color, var(--color-brand));
         border: var(--input-border-width) solid var(--input-border-color);
         border-radius: var(--checkbox-border-radius, var(--base-border-radius));
     }
@@ -333,7 +332,7 @@
         background-repeat: no-repeat;
         &:checked {
             border-color: transparent;
-            background-color: currentColor;
+            background-color: var(--checkbox-color, var(--color-brand));
         }
     }
     [type=checkbox]:checked {
@@ -345,7 +344,7 @@
     [type=checkbox]:indeterminate {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");
         border-color: transparent;
-        background-color: currentColor;
+        background-color: var(--checkbox-color, var(--color-brand));
     }
 
     [type=file] {

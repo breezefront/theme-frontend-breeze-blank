@@ -87,7 +87,9 @@
 .breeze-tokens() {
     .lib-css(--input-bg, @input__bg);
     .lib-css(--input-color, @input__color);
-    .lib-css(--input-border-color, @input__border-color);
+    .lib-css(--input-border-color, @input__border-color, color-mix(
+        in srgb, currentColor 30%, transparent
+    ));
     .lib-css(--input-border-width, @input__border-width, 1px);
     .lib-css(--input-border-radius, @input__border-radius);
     .lib-css(--input-focus-bg, @input__focus__bg);
