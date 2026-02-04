@@ -16,18 +16,10 @@ input[type='button'] {
     &:extend(.breeze-button all);
 }
 
-// .action.primary,
-// .action-primary,
-// [type='submit'] {
-//     &:extend(.breeze-button-primary all);
-// }
-
 :where(button:not(
     [type='submit'],
     .action-primary,
     .primary,
-    // .pagebuilder-button-link,
-    // .pagebuilder-button-primary,
     .select,
     .selected
 )),
@@ -132,7 +124,7 @@ button,
             margin-top: 0;
         }
     }
-    :where(.field ~ div:not(.actions):not(.product-item-actions)),
+    :where(.field ~ div:not(.actions,.product-item-actions)),
     .nested > .field,
     button + .field,
     .field + button,

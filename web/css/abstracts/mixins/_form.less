@@ -64,6 +64,8 @@
 
     & when not (@critical) {
         .transition();
+        --spinner-size: @5;
+        --spinner-border-color: currentColor;
 
         @media @media-hover {
             &:hover {
