@@ -143,6 +143,18 @@
     .lib-css(--subtle-color, @subtle__inverted__color, var(--color-neutral-700));
     .lib-css(--subtle-bg, @subtle__inverted__background, var(--color-neutral-800));
     .lib-css(--focus-ring-color, @focus-ring__inverted__color, var(--color-brand));
-    .lib-css(--headings-color, @headings__inverted__color);
     .lib-css(--link-color, @link__inverted__color, var(--color-blue));
+    .lib-css(--headings-color, @headings__inverted__color);
+}
+
+.breeze-tokens-inverted-reset() {
+    .lib-css(--base-color, @base__color, var(--color-neutral-800));
+    .lib-css(--base-bg, @base__background, var(--color-white));
+    .lib-css(--muted-color, @muted__color, var(--color-neutral-500));
+    .lib-css(--muted-bg, @muted__background, var(--color-neutral-100));
+    .lib-css(--subtle-color, @subtle__color, var(--color-neutral-200));
+    .lib-css(--subtle-bg, @subtle__background, var(--color-neutral-50));
+    .lib-css(--focus-ring-color, @focus-ring__color, var(--color-brand));
+    .lib-css(--link-color, @link__color, var(--color-blue));
+    .lib-css(--headings-color, @headings__color);
 }

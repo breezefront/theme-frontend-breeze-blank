@@ -221,8 +221,7 @@
         max-width: @16;
     }
 
-    .product-addto-links,
-    .product-social-links {
+    :where(.product-addto-links, .product-social-links) {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -236,16 +235,11 @@
         }
         a.action,
         button.action {
+            color: var(--addto-color);
+            background: var(--addto-bg);
             .padding(@product-addto-link__padding);
-            .lib-css(color, @product-addto-link__color);
-            .lib-css(background, @product-addto-link__background);
             .lib-css(border, @product-addto-link__border);
             .lib-css(border-radius, @product-addto-link__border-radius);
-            &:hover {
-                .lib-css(color, @product-addto-link__hover__color);
-                .lib-css(background, @product-addto-link__hover__background);
-                .lib-css(text-decoration, @product-addto-link__hover__text-decoration);
-            }
         }
     }
     .product-social-links {
@@ -312,12 +306,14 @@
             }
         }
     }
-    .product-social-links {
+    :where(.product-addto-links, .product-social-links) {
         a.action,
         button.action {
             &:extend(.transition all);
             &:hover {
-                --muted-alpha: .8;
+                color: var(--addto-hover-color);
+                background: var(--addto-hover-bg);
+                .lib-css(text-decoration, @product-addto-link__hover__text-decoration);
             }
         }
     }

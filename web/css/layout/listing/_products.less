@@ -83,9 +83,9 @@
         .lib-css(display, @listing-item-actions-secondary__display);
         .lib-css(gap, @listing-item-actions-secondary__gap);
         .action {
+            color: var(--action-secondary-color);
+            background: var(--action-secondary-bg);
             .padding(@listing-item-actions-secondary-link__padding);
-            .lib-css(color, @listing-item-actions-secondary-link__color);
-            .lib-css(background, @listing-item-actions-secondary-link__background);
             .lib-css(border, @listing-item-actions-secondary-link__border);
             .lib-css(border-radius, @listing-item-actions-secondary-link__border-radius);
             &::before {
@@ -364,8 +364,11 @@
     .actions-secondary {
         .action {
             &:extend(.transition all);
-            &:hover {
-                --muted-alpha: .9;
+            @media @media-hover {
+                &:hover {
+                    color: var(--action-secondary-hover-color);
+                    background: var(--action-secondary-hover-bg);
+                }
             }
             &::before {
                 .lib-css(-webkit-mask-size, @listing-item-actions-secondary-icon__size);

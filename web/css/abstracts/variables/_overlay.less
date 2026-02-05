@@ -8,3 +8,7 @@
 .breeze-tokens-inverted() {
     .lib-css(--overlay-bg, @overlay__inverted__background);
 }
+
+.breeze-tokens-inverted-reset() {
+    .lib-css(--overlay-bg, @overlay__background, color-mix(in srgb, var(--color-black) 75%, transparent));
+}

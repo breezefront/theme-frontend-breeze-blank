@@ -129,6 +129,11 @@
             [class^="swatch-opt-"] {
                 position: absolute;
                 pointer-events: none;
+                background: color-mix(
+                    in srgb,
+                    var(--abs-swatches-bg) ~"calc(var(--abs-swatches-bg-alpha) * 100%)",
+                    transparent
+                );
                 .lib-css(z-index, @listing-grid-item-swatches__absolute__z-index);
                 .lib-css(top, @listing-grid-item-swatches__absolute__top);
                 .lib-css(bottom, @listing-grid-item-swatches__absolute__bottom);
@@ -137,8 +142,6 @@
                 .lib-css(padding, @listing-grid-item-swatches__absolute__padding);
                 .lib-css(border, @listing-grid-item-swatches__absolute__border);
                 .lib-css(border-radius, @listing-grid-item-swatches__absolute__border-radius);
-                .lib-css(background, @listing-grid-item-swatches__absolute__background);
-                .lib-css(--z-layer-bg-alpha, @listing-grid-item-swatches__absolute__background-opacity);
                 .lib-css(box-shadow, @listing-grid-item-swatches__absolute__box-shadow);
                 margin: 0 !important;
                 transform: translateY(50%);
