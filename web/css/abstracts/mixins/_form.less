@@ -81,16 +81,6 @@
                     var(--button-bg, var(--color-brand)) 90%,
                     var(--color-black)
                 ));
-                @supports ~"(color: oklch(from #000 l c h))" {
-                    border-color: var(--button-hover-border-color, oklch(
-                        from var(--button-border-color, var(--button-bg, var(--color-brand)))
-                        ~"max(calc(l - 0.05), 0)" c h
-                    ));
-                    background: var(--button-hover-bg, oklch(
-                        from var(--button-bg, var(--color-brand))
-                        ~"max(calc(l - 0.05), 0)" c h
-                    ));
-                }
             }
         }
 
@@ -147,6 +137,8 @@
         --button-bg: transparent;
         --button-border-color: transparent;
         --button-color: var(--link-color);
+        --button-hover-bg: transparent;
+        --button-hover-border-color: transparent;
         text-decoration: @link__text-decoration !important;
     }
 
