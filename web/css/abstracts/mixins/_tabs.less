@@ -88,7 +88,7 @@
         > a {
             .lib-css(padding, @tab-toggler-inner__horizontal__padding);
             .lib-css(border-radius, @tab-toggler-inner__horizontal__border-radius);
-            .lib-css(background, @tab-toggler-inner__horizontal__background);
+            .lib-css(background, @tab-toggler-inner__horizontal__bg);
         }
     }
 }
@@ -98,13 +98,12 @@
     }
 
     & when (@critical) {
-        --muted-bg-alpha: .5;
         justify-content: space-between;
         .lib-css(margin, @tab-toggler__accordion__margin);
         .lib-css(border, @tab-toggler__accordion__border);
         .lib-css(border-width, @tab-toggler__accordion__border-width);
         .lib-css(border-radius, @tab-toggler__accordion__border-radius);
-        .lib-css(background, @tab-toggler__accordion__background);
+        .lib-css(--tab-toggler-bg, @tab-toggler__accordion__bg);
         &:has(+ .content + script:last-child),
         &:has(+ .content:last-child) {
             border-bottom-color: transparent;
@@ -134,11 +133,11 @@
 }
 .breeze-tab-toggler-horizontal-active {
     & when (@critical) {
-        .lib-css(border-color, @tab-toggler__horizontal-active__border-color);
+        .lib-css(border-color, @tab-toggler__horizontal__active__border-color);
     }
     & when not (@critical) {
         > a {
-            .lib-css(background, @tab-toggler-inner__horizontal-active__background);
+            .lib-css(background, @tab-toggler-inner__horizontal__active__bg);
         }
     }
 }
@@ -147,8 +146,8 @@
         border-bottom-color: transparent;
     }
     & when not (@critical) {
-        .lib-css(color, @tab-toggler__accordion-active__color);
-        .lib-css(background, @tab-toggler__accordion-active__background);
+        .lib-css(color, @tab-toggler__accordion__active__color);
+        .lib-css(background, @tab-toggler__accordion__active__bg);
     }
 }
 
@@ -164,11 +163,11 @@
 .breeze-tab-content-common {
     & when (@critical) {
         display: none;
+        background: var(--tab-content-bg);
         .lib-css(scroll-margin, @tab-content__scroll-margin);
         .lib-css(padding, @tab-content__padding);
         .lib-css(border, @tab-content__border);
         .lib-css(border-width, @tab-content__border-width);
-        .lib-css(background, @tab-content__background);
     }
 }
 .breeze-tab-content-horizontal {

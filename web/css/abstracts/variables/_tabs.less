@@ -65,7 +65,7 @@
 .breeze-tokens() {
     .lib-css(--tab-bg, @tab__bg);
 
-    .lib-css(--tab-toggler-bg, @tab-toggler__bg, var(--surface-bg));
+    .lib-css(--tab-toggler-bg, @tab-toggler__bg, transparent);
     .lib-css(--tab-toggler-hover-bg, @tab-toggler__hover__bg, color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor));
     .lib-css(--tab-toggler-active-bg, @tab-toggler__active__bg, color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor));
 
@@ -77,5 +77,5 @@
     .lib-css(--tab-counter-hover-bg, @tab-counter__hover__bg, color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor));
     .lib-css(--tab-counter-active-bg, @tab-counter__active__bg, color-mix(in srgb, var(--tab-toggler-active-bg) 95%, currentColor));
 
-    .lib-css(--tab-content-bg, @tab-content__bg);
+    .lib-css(--tab-content-bg, @tab-content__bg, var(--surface-bg));
 }
