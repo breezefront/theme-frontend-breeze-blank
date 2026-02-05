@@ -66,44 +66,16 @@
     .lib-css(--tab-bg, @tab__bg);
 
     .lib-css(--tab-toggler-bg, @tab-toggler__bg, var(--surface-bg));
-    .lib-css(--tab-toggler-hover-bg, @tab-toggler__hover__bg, color-mix(
-        in srgb,
-        var(--tab-toggler-bg) 95%,
-        currentColor
-    ));
-    .lib-css(--tab-toggler-active-bg, @tab-toggler__active__bg, color-mix(
-        in srgb,
-        var(--tab-toggler-hover-bg) 95%,
-        currentColor
-    ));
+    .lib-css(--tab-toggler-hover-bg, @tab-toggler__hover__bg, color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor));
+    .lib-css(--tab-toggler-active-bg, @tab-toggler__active__bg, color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor));
 
-    .lib-css(--tab-toggler-color, @tab-toggler__color, var(--muted-color));
-    .lib-css(--tab-toggler-hover-color, @tab-toggler__hover__color, color-mix(
-        in srgb,
-        var(--tab-toggler-color) 80%,
-        currentColor
-    ));
-    .lib-css(--tab-toggler-active-color, @tab-toggler__active__color, color-mix(
-        in srgb,
-        var(--tab-toggler-hover-color) 80%,
-        currentColor
-    ));
+    .lib-css(--tab-toggler-color, @tab-toggler__color, var(--color-neutral-600));
+    .lib-css(--tab-toggler-hover-color, @tab-toggler__hover__color, color-mix(in srgb, var(--tab-toggler-color) 80%, currentColor));
+    .lib-css(--tab-toggler-active-color, @tab-toggler__active__color, color-mix(in srgb, var(--tab-toggler-hover-color) 80%, currentColor));
 
-    .lib-css(--tab-counter-bg, @tab-counter__bg, color-mix(
-        in srgb,
-        var(--tab-toggler-bg) 95%,
-        currentColor
-    ));
-    .lib-css(--tab-counter-hover-bg, @tab-counter__hover__bg, color-mix(
-        in srgb,
-        var(--tab-toggler-hover-bg) 95%,
-        currentColor
-    ));
-    .lib-css(--tab-counter-active-bg, @tab-counter__active__bg, color-mix(
-        in srgb,
-        var(--tab-toggler-active-bg) 95%,
-        currentColor
-    ));
+    .lib-css(--tab-counter-bg, @tab-counter__bg, color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor));
+    .lib-css(--tab-counter-hover-bg, @tab-counter__hover__bg, color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor));
+    .lib-css(--tab-counter-active-bg, @tab-counter__active__bg, color-mix(in srgb, var(--tab-toggler-active-bg) 95%, currentColor));
 
     .lib-css(--tab-content-bg, @tab-content__bg);
 }
