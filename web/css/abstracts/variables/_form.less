@@ -2,7 +2,7 @@
 @input__font-family: false;
 @input__font-size: false;
 @input__color: false;
-@input__bg: false;
+@input__background: false;
 @input__padding: @2 @3;
 @input__border-width: false;
 @input__border-radius: false;
@@ -10,10 +10,10 @@
 @input__outline-color: false;
 @input__outline-width: false;
 @input__outline-offset: false;
-@input__focus__bg: false;
+@input__focus__background: false;
 @input__focus__color: false;
 @input__focus__border-color: false;
-@input__inverted__bg: false;
+@input__inverted__background: false;
 @input__inverted__border-color: false;
 
 @input__lg__font-weight: false;
@@ -31,7 +31,7 @@
 @button__font-family: false;
 @button__font-size: @input__font-size;
 @button__color: false;
-@button__bg: false;
+@button__background: false;
 @button__border-width: false;
 @button__border-radius: false;
 @button__border-color: false;
@@ -41,27 +41,27 @@
 @button__text-transform: false;
 @button__text-shadow: false;
 @button__hover__color: false;
-@button__hover__bg: false;
+@button__hover__background: false;
 @button__hover__border-color: false;
 @button__hover__text-decoration: none;
-@button__inverted__bg: false;
+@button__inverted__background: false;
 @button__inverted__color: false;
-@button__inverted__hover__bg: false;
+@button__inverted__hover__background: false;
 @button__inverted__border-color: false;
 
 @button__secondary__color: false;
-@button__secondary__bg: false;
+@button__secondary__background: false;
 @button__secondary__border-color: false;
 @button__secondary__hover__color: false;
-@button__secondary__hover__bg: false;
+@button__secondary__hover__background: false;
 @button__secondary__hover__border-color: false;
-@button__secondary__inverted__bg: false;
+@button__secondary__inverted__background: false;
 @button__secondary__inverted__color: false;
-@button__secondary__inverted__border-color: @button__secondary__inverted__bg;
-@button__secondary__inverted__hover__bg: @button__secondary__inverted__bg;
+@button__secondary__inverted__border-color: @button__secondary__inverted__background;
+@button__secondary__inverted__hover__background: @button__secondary__inverted__background;
 
 @button__selected__color: false;
-@button__selected__bg: false;
+@button__selected__background: false;
 @button__selected__border-color: false;
 
 @button__xs__font-size: @font-size__xs;
@@ -85,14 +85,14 @@
 @button__xl__padding: @3 @10;
 
 .breeze-tokens() {
-    .lib-css(--input-bg, @input__bg);
+    .lib-css(--input-bg, @input__background);
     .lib-css(--input-color, @input__color);
     .lib-css(--input-border-color, @input__border-color, color-mix(
         in srgb, currentColor 30%, transparent
     ));
     .lib-css(--input-border-width, @input__border-width, 1px);
     .lib-css(--input-border-radius, @input__border-radius);
-    .lib-css(--input-focus-bg, @input__focus__bg);
+    .lib-css(--input-focus-bg, @input__focus__background);
     .lib-css(--input-focus-color, @input__focus__color);
     .lib-css(--input-focus-border-color, @input__focus__border-color);
 
@@ -100,39 +100,39 @@
     .lib-css(--checkbox-color, @checkbox__color);
     .lib-css(--checkbox-border-radius, @checkbox__border-radius);
 
-    .lib-css(--button-bg, @button__bg);
+    .lib-css(--button-bg, @button__background);
     .lib-css(--button-color, @button__color);
     .lib-css(--button-border-width, @button__border-width);
     .lib-css(--button-border-radius, @button__border-radius);
     .lib-css(--button-border-color, @button__border-color);
-    .lib-css(--button-hover-bg, @button__hover__bg);
+    .lib-css(--button-hover-bg, @button__hover__background);
     .lib-css(--button-hover-color, @button__hover__color);
     .lib-css(--button-hover-border-color, @button__hover__border-color);
 
-    .lib-css(--button-secondary-bg, @button__secondary__bg);
+    .lib-css(--button-secondary-bg, @button__secondary__background);
     .lib-css(--button-secondary-color, @button__secondary__color);
     .lib-css(--button-secondary-border-color, @button__secondary__border-color);
-    .lib-css(--button-secondary-hover-bg, @button__secondary__hover__bg);
+    .lib-css(--button-secondary-hover-bg, @button__secondary__hover__background);
     .lib-css(--button-secondary-hover-color, @button__secondary__hover__color);
     .lib-css(--button-secondary-hover-border-color, @button__secondary__hover__border-color);
 
-    .lib-css(--button-selected-bg, @button__selected__bg);
+    .lib-css(--button-selected-bg, @button__selected__background);
     .lib-css(--button-selected-color, @button__selected__color);
     .lib-css(--button-selected-border-color, @button__selected__border-color);
 }
 
 .breeze-tokens-inverted() {
     .lib-css(--input-color, @base__inverted__color);
-    .lib-css(--input-bg, @input__inverted__bg);
+    .lib-css(--input-bg, @input__inverted__background);
     .lib-css(--input-border-color, @input__inverted__border-color);
 
-    .lib-css(--button-bg, @button__inverted__bg);
-    .lib-css(--button-hover-bg, @button__inverted__hover__bg);
+    .lib-css(--button-bg, @button__inverted__background);
+    .lib-css(--button-hover-bg, @button__inverted__hover__background);
     .lib-css(--button-color, @button__inverted__color);
     .lib-css(--button-border-color, @button__inverted__border-color);
 
-    .lib-css(--button-secondary-bg, @button__secondary__inverted__bg);
-    .lib-css(--button-secondary-hover-bg, @button__secondary__inverted__hover__bg);
+    .lib-css(--button-secondary-bg, @button__secondary__inverted__background);
+    .lib-css(--button-secondary-hover-bg, @button__secondary__inverted__hover__background);
     .lib-css(--button-secondary-color, @button__secondary__inverted__color);
     .lib-css(--button-secondary-border-color, @button__secondary__inverted__border-color);
 }

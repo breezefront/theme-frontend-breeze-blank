@@ -34,16 +34,16 @@
 @product-stock-wrapper__justify-content: false;
 
 @product-stock__padding: @0-5 @2;
-@product-stock__bg: false;
+@product-stock__background: false;
 @product-stock__color: false;
 @product-stock__font-family: false;
 @product-stock__font-weight: false;
 @product-stock__font-size: false;
 @product-stock__text-transform: false;
 @product-stock__available__color: false;
-@product-stock__available__bg: false;
+@product-stock__available__background: false;
 @product-stock__unavailable__color: false;
-@product-stock__unavailable__bg: false;
+@product-stock__unavailable__background: false;
 
 @product-sku__color: false;
 @product-sku__font-family: @product-stock__font-family;
@@ -94,10 +94,10 @@
 @product-review-list__width: 55%;
 
 .breeze-tokens() {
-    .lib-css(--stock-bg, @product-stock__bg);
+    .lib-css(--stock-bg, @product-stock__background);
     .lib-css(--stock-color, @product-stock__color);
-    .lib-css(--stock-available-bg, @product-stock__available__bg);
+    .lib-css(--stock-available-bg, @product-stock__available__background);
     .lib-css(--stock-available-color, @product-stock__available__color);
-    .lib-css(--stock-unavailable-bg, @product-stock__unavailable__bg);
+    .lib-css(--stock-unavailable-bg, @product-stock__unavailable__background);
     .lib-css(--stock-unavailable-color, @product-stock__unavailable__color);
 }

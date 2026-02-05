@@ -88,7 +88,7 @@
         > a {
             .lib-css(padding, @tab-toggler-inner__horizontal__padding);
             .lib-css(border-radius, @tab-toggler-inner__horizontal__border-radius);
-            .lib-css(background, @tab-toggler-inner__horizontal__bg);
+            .lib-css(background, @tab-toggler-inner__horizontal__background);
         }
     }
 }
@@ -103,7 +103,7 @@
         .lib-css(border, @tab-toggler__accordion__border);
         .lib-css(border-width, @tab-toggler__accordion__border-width);
         .lib-css(border-radius, @tab-toggler__accordion__border-radius);
-        .lib-css(--tab-toggler-bg, @tab-toggler__accordion__bg);
+        .lib-css(--tab-toggler-bg, @tab-toggler__accordion__background);
         &:has(+ .content + script:last-child),
         &:has(+ .content:last-child) {
             border-bottom-color: transparent;
@@ -137,7 +137,7 @@
     }
     & when not (@critical) {
         > a {
-            .lib-css(background, @tab-toggler-inner__horizontal__active__bg);
+            .lib-css(background, @tab-toggler-inner__horizontal__active__background);
         }
     }
 }
@@ -147,7 +147,7 @@
     }
     & when not (@critical) {
         .lib-css(color, @tab-toggler__accordion__active__color);
-        .lib-css(background, @tab-toggler__accordion__active__bg);
+        .lib-css(background, @tab-toggler__accordion__active__background);
     }
 }
 

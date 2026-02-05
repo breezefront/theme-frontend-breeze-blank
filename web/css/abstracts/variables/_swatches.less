@@ -9,7 +9,7 @@
 @swatch__font-size: @3;
 @swatch__font-weight: false;
 @swatch__color: false;
-@swatch__bg: false;
+@swatch__background: false;
 @swatch__box-shadow: ~"0 0 0 1px inset color-mix(in srgb, var(--surface-color) 15%, transparent)";
 @swatch__border-radius: false;
 @swatch__border-offset: 0;
@@ -34,6 +34,6 @@
 
 .breeze-tokens() {
     .lib-css(--swatch-color, @swatch__color);
-    .lib-css(--swatch-bg, @swatch__bg);
+    .lib-css(--swatch-bg, @swatch__background);
     .lib-css(--swatch-box-shadow, @swatch__box-shadow);
 }

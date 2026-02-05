@@ -1,25 +1,25 @@
 @tab-horizontal__media: @media-md;
 @tab-accordion__media: @media-md-down;
 
-@tab__bg: false;
+@tab__background: false;
 
 @tab-toggler__color: false;
-@tab-toggler__bg: false;
+@tab-toggler__background: false;
 @tab-toggler__font-family: false;
 @tab-toggler__font-size: false;
 @tab-toggler__font-weight: false;
 @tab-toggler__text-transform: false;
 @tab-toggler__padding: @2-5 @4;
 @tab-toggler__hover__color: false;
-@tab-toggler__hover__bg: false;
+@tab-toggler__hover__background: false;
 @tab-toggler__active__color: false;
-@tab-toggler__active__bg: false;
+@tab-toggler__active__background: false;
 
 @tab-counter__opacity: false;
 @tab-counter__padding: @0-5 @2;
-@tab-counter__bg: false;
-@tab-counter__hover__bg: false;
-@tab-counter__active__bg: false;
+@tab-counter__background: false;
+@tab-counter__hover__background: false;
+@tab-counter__active__background: false;
 @tab-counter__display: false;
 @tab-counter__border-radius: false;
 
@@ -27,7 +27,7 @@
 @tab-content__padding: @3 @4;
 @tab-content__border: false;
 @tab-content__border-width: false;
-@tab-content__bg: false;
+@tab-content__background: false;
 
 @tab__horizontal__justify-content: false;
 @tab__horizontal__margin: false;
@@ -43,8 +43,8 @@
 
 @tab-toggler-inner__horizontal__padding: false;
 @tab-toggler-inner__horizontal__border-radius: false;
-@tab-toggler-inner__horizontal__bg: false;
-@tab-toggler-inner__horizontal__active__bg: false;
+@tab-toggler-inner__horizontal__background: false;
+@tab-toggler-inner__horizontal__active__background: false;
 
 @tab-content__horizontal__scroll-margin: false;
 @tab-content__horizontal__position: false;
@@ -58,24 +58,24 @@
 @tab-toggler__accordion__border: 1px solid var(--subtle-color);
 @tab-toggler__accordion__border-width: 0 0 1px;
 @tab-toggler__accordion__border-radius: false;
-@tab-toggler__accordion__bg: false;
+@tab-toggler__accordion__background: false;
 @tab-toggler__accordion__active__color: false;
-@tab-toggler__accordion__active__bg: false;
+@tab-toggler__accordion__active__background: false;
 
 .breeze-tokens() {
-    .lib-css(--tab-bg, @tab__bg);
+    .lib-css(--tab-bg, @tab__background);
 
-    .lib-css(--tab-toggler-bg, @tab-toggler__bg, transparent);
-    .lib-css(--tab-toggler-hover-bg, @tab-toggler__hover__bg, color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor));
-    .lib-css(--tab-toggler-active-bg, @tab-toggler__active__bg, color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor));
+    .lib-css(--tab-toggler-bg, @tab-toggler__background, transparent);
+    .lib-css(--tab-toggler-hover-bg, @tab-toggler__hover__background, color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor));
+    .lib-css(--tab-toggler-active-bg, @tab-toggler__active__background, color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor));
 
     .lib-css(--tab-toggler-color, @tab-toggler__color, var(--color-neutral-600));
     .lib-css(--tab-toggler-hover-color, @tab-toggler__hover__color, color-mix(in srgb, var(--tab-toggler-color) 80%, currentColor));
     .lib-css(--tab-toggler-active-color, @tab-toggler__active__color, color-mix(in srgb, var(--tab-toggler-hover-color) 80%, currentColor));
 
-    .lib-css(--tab-counter-bg, @tab-counter__bg, color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor));
-    .lib-css(--tab-counter-hover-bg, @tab-counter__hover__bg, color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor));
-    .lib-css(--tab-counter-active-bg, @tab-counter__active__bg, color-mix(in srgb, var(--tab-toggler-active-bg) 95%, currentColor));
+    .lib-css(--tab-counter-bg, @tab-counter__background, color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor));
+    .lib-css(--tab-counter-hover-bg, @tab-counter__hover__background, color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor));
+    .lib-css(--tab-counter-active-bg, @tab-counter__active__background, color-mix(in srgb, var(--tab-toggler-active-bg) 95%, currentColor));
 
-    .lib-css(--tab-content-bg, @tab-content__bg, var(--surface-bg));
+    .lib-css(--tab-content-bg, @tab-content__background, var(--surface-bg));
 }

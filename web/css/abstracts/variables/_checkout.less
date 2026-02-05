@@ -1,13 +1,13 @@
-@checkout__bg: false;
+@checkout__background: false;
 
 @checkout-header__background: @header__background;
 
-@checkout-opc__bg: false;
+@checkout-opc__background: false;
 @checkout-opc__box-shadow: false;
 @checkout-opc__border: false;
 @checkout-opc__border-radius: false;
 
-@checkout-sidebar__background: @checkout-opc__bg;
+@checkout-sidebar__background: @checkout-opc__background;
 @checkout-sidebar__box-shadow: @checkout-opc__box-shadow;
 @checkout-sidebar__border: @checkout-opc__border;
 @checkout-sidebar__border-radius: @checkout-opc__border-radius;
@@ -18,6 +18,6 @@
 @checkout-step-title__margin: 0 0 @3;
 
 .breeze-tokens() {
-    .lib-css(--checkout-opc-bg, @checkout__bg);
-    .lib-css(--checkout-opc-bg, @checkout-opc__bg);
+    .lib-css(--checkout-opc-bg, @checkout__background);
+    .lib-css(--checkout-opc-bg, @checkout-opc__background);
 }

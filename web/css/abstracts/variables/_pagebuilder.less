@@ -4,14 +4,14 @@
 
 @slider-arrow__width: 35px;
 @slider-arrow__height: 60px;
-@slider-arrow__bg: false;
+@slider-arrow__background: false;
 @slider-arrow__color: false;
 @slider-arrow__top: 50%;
 @slider-arrow__transform: ~"translateY(-50%)";
 @slider-arrow__border-width: false;
 @slider-arrow__border-radius: false;
 @slider-arrow__border-color: false;
-@slider-arrow__hover__bg: false;
+@slider-arrow__hover__background: false;
 @slider-arrow__hover__color: false;
 @slider-arrow__hover__border-color: false;
 @slider-arrow__disabled__filter: ~"grayscale(100%)";
@@ -40,12 +40,12 @@
 @slider-dot__active__color: @black;
 
 .breeze-tokens() {
-    .lib-css(--slider-arrow-bg, @slider-arrow__bg);
+    .lib-css(--slider-arrow-bg, @slider-arrow__background);
     .lib-css(--slider-arrow-color, @slider-arrow__color);
     .lib-css(--slider-arrow-border-width, @slider-arrow__border-width);
     .lib-css(--slider-arrow-border-color, @slider-arrow__border-color);
     .lib-css(--slider-arrow-border-radius, @slider-arrow__border-radius);
-    .lib-css(--slider-arrow-hover-bg, @slider-arrow__hover__bg);
+    .lib-css(--slider-arrow-hover-bg, @slider-arrow__hover__background);
     .lib-css(--slider-arrow-hover-color, @slider-arrow__hover__color);
     .lib-css(--slider-arrow-hover-border-color, @slider-arrow__hover__border-color);
 }

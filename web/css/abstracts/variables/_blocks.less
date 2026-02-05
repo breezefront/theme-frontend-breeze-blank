@@ -9,14 +9,14 @@
 @block-title__margin: false;
 @block-title__color: false;
 @block-title__inverted__color: false;
-@block-title__bg: false;
-@block-title__inverted__bg: false;
+@block-title__background: false;
+@block-title__inverted__background: false;
 @block-title__border: false;
 @block-title__border-width: false;
 @block-title__text-wrap: balance;
 @block-content__padding: false;
-@block-content__bg: false;
-@block-content__inverted__bg: false;
+@block-content__background: false;
+@block-content__inverted__background: false;
 @block-content__border: false;
 @block-content__border-width: false;
 
@@ -29,7 +29,7 @@
 @content-block-title__padding: false;
 @content-block-title__margin: false;
 @content-block-title__color: false;
-@content-block-title__bg: false;
+@content-block-title__background: false;
 @content-block-title__border: false;
 @content-block-title__border-width: false;
 @content-block-content__padding: false;
@@ -45,7 +45,7 @@
 @account-block-title__padding: @2 @4;
 @account-block-title__margin: 0;
 @account-block-title__color: false;
-@account-block-title__bg: ~"rgb(var(--muted-bg))";
+@account-block-title__background: ~"rgb(var(--muted-bg))";
 @account-block-title__border: false;
 @account-block-title__border-width: false;
 @account-block-content__padding: @4;
@@ -63,7 +63,7 @@
 @hero-block-title__padding: false;
 @hero-block-title__margin: false;
 @hero-block-title__color: false;
-@hero-block-title__bg: false;
+@hero-block-title__background: false;
 @hero-block-title__border: false;
 @hero-block-title__border-width: false;
 @hero-block-title-icon__mask: false;
@@ -99,7 +99,7 @@
 @boxed-block__margin: 0 auto;
 @boxed-block__padding: @10 @12;
 @boxed-block__box-shadow: @shadow-sm-around;
-@boxed-block__bg: @surface__bg;
+@boxed-block__background: @surface__background;
 @boxed-block__border: 1px solid var(--subtle-color);
 @boxed-block__border-width: false;
 @boxed-block__border-radius: @button__border-radius;
@@ -113,12 +113,12 @@
 
 .breeze-tokens() {
     .lib-css(--block-title-color, @block-title__color);
-    .lib-css(--block-title-bg, @block-title__bg);
-    .lib-css(--block-content-bg, @block-content__bg);
+    .lib-css(--block-title-bg, @block-title__background);
+    .lib-css(--block-content-bg, @block-content__background);
 }
 
 .breeze-tokens-inverted() {
     .lib-css(--block-title-color, @block-title__inverted__color);
-    .lib-css(--block-title-bg, @block-title__inverted__bg);
-    .lib-css(--block-content-bg, @block-content__inverted__bg);
+    .lib-css(--block-title-bg, @block-title__inverted__background);
+    .lib-css(--block-content-bg, @block-content__inverted__background);
 }
