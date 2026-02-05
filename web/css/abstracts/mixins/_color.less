@@ -14,3 +14,20 @@
         @{property}: @value;
     }
 }
+
+.breeze-invert-colors {
+    color: var(--base-color);
+    background: var(--base-bg);
+    .breeze-tokens-inverted();
+}
+.breeze-invert-colors-reset {
+    color: var(--base-color);
+    background: var(--base-bg);
+    .breeze-tokens();
+    & when (@respect-color-scheme = true) {
+        @media @media-inverted {
+            .breeze-tokens-inverted();
+        }
+    }
+}
+
