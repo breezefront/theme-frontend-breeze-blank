@@ -1,0 +1,10 @@
+@overlay__background: false;
+@overlay__inverted__background: false;
+
+.breeze-tokens() {
+    .lib-css(--overlay-bg, @overlay__background, color-mix(in srgb, var(--color-black) 75%, transparent));
+}
+
+.breeze-tokens-inverted() {
+    .lib-css(--overlay-bg, @overlay__inverted__background);
+}
