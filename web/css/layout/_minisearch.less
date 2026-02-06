@@ -44,7 +44,7 @@
         align-items: center;
         justify-content: flex-end;
         .lib-css(--input-border-color, @minisearch-input__border-color);
-        .lib-css(--input-bg, @minisearch-input__background-color);
+        .lib-css(--input-bg, @minisearch-input__background);
 
         .control {
             padding: @minisearch__padding;
@@ -99,15 +99,11 @@
                 .margin-left(-@8);
             }
             & when not (@minisearch-button__reset) {
-                .lib-css(--button-color, @minisearch-button__text-color);
-                .lib-css(--button-bg, @minisearch-button__background-color);
-                .lib-css(--button-hover-bg, @minisearch-button__background-color);
+                .lib-css(--button-color, @minisearch-button__color);
+                .lib-css(--button-bg, @minisearch-button__background);
+                .lib-css(--button-hover-bg, @minisearch-button__hover__background);
                 width: @16;
                 .margin-left(-@16);
-            }
-
-            &:focus-visible {
-                .lib-css(--button-bg, @minisearch-button__focus__background-color);
             }
 
             &:disabled {

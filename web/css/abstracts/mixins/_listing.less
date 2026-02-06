@@ -219,25 +219,20 @@
                 }
 
                 .tocart {
-                    .lib-css(--button-bg-alpha, @listing-grid-item-tocart__absolute__background-alpha);
-                    .lib-css(--button-color, @listing-grid-item-tocart__absolute__text-color);
-                    .lib-css(--button-bg, @listing-grid-item-tocart__absolute__background-color);
+                    .lib-css(--button-color, @listing-grid-item-tocart__absolute__color);
+                    .lib-css(--button-bg, @listing-grid-item-tocart__absolute__background);
                     .lib-css(--button-border-color, @listing-grid-item-tocart__absolute__border-color);
+                    .lib-css(--button-hover-bg, @listing-grid-item-tocart__absolute__hover__background);
                     .lib-css(border-radius, @listing-grid-item-tocart__absolute__border-radius);
                     .lib-css(box-shadow, @listing-grid-item-tocart__absolute__box-shadow);
                     .lib-css(font-weight, @listing-grid-item-tocart__absolute__font-weight);
                     .lib-css(font-size, @listing-grid-item-tocart__absolute__font-size);
                     .lib-css(letter-spacing, @listing-grid-item-tocart__absolute__letter-spacing);
                     .lib-css(text-transform, @listing-grid-item-tocart__absolute__text-transform);
-                    &:hover {
-                        .lib-css(--button-bg-alpha, @listing-grid-item-tocart__absolute__hover__background-alpha);
-                        .lib-css(--button-hover-bg, @listing-grid-item-tocart__absolute__background-color);
-                    }
                 }
                 .stock {
                     .breeze-button();
                     &:extend(:where(.products-grid, .widget-product-carousel) .product-item .product-item-details .actions-primary .tocart all);
-                    --button-alpha: .7;
                 }
             }
         }
