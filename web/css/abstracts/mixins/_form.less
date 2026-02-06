@@ -48,9 +48,9 @@
         padding: @button__padding;
         color: var(--button-color, var(--color-white));
         background: var(--button-bg, var(--color-brand));
-        border-color: var(--button-border-color, var(--button-bg, var(--color-brand)));
+        border-color: var(--button-border-color, transparent);
         border-width: var(--button-border-width, var(--input-border-width));
-        border-style: var(--button-border-style, solid);
+        border-style: solid;
         border-radius: var(--button-border-radius, var(--input-border-radius, var(--base-border-radius)));
         text-decoration: @button__text-decoration !important;
         white-space: nowrap;
@@ -71,11 +71,7 @@
             &:hover {
                 text-decoration: @button__hover__text-decoration !important;
                 color: var(--button-hover-color, var(--button-color, var(--color-white)));
-                border-color: var(--button-hover-border-color, color-mix(
-                    in srgb,
-                    var(--button-border-color, var(--button-bg, var(--color-brand))) 90%,
-                    var(--color-black)
-                ));
+                border-color: var(--button-hover-border-color, transparent);
                 background: var(--button-hover-bg, color-mix(
                     in srgb,
                     var(--button-bg, var(--color-brand)) 90%,
@@ -93,19 +89,17 @@
             --button-bg: var(--button-selected-bg, var(--button-bg, var(--color-brand)));
             --button-border-color: var(
                 --button-selected-border-color, var(
-                --button-border-color, var(
-                --button-bg, var(
-                --color-brand
-            ))));
+                --button-border-color,
+                transparent
+            ));
             /* No need in hover effect for selected state */
             --button-hover-color: var(--button-selected-color, var(--button-color, var(--color-white)));
             --button-hover-bg: var(--button-selected-bg, var(--button-bg, var(--color-brand)));
             --button-hover-border-color: var(
                 --button-selected-border-color, var(
-                --button-border-color, var(
-                --button-bg, var(
-                --color-brand
-            ))));
+                --button-border-color,
+                transparent
+            ));
         }
     }
 }
@@ -120,10 +114,14 @@
             currentColor 80%,
             var(--button-secondary-bg, var(--subtle-color))
         ));
-        --button-border-color: var(--button-secondary-border-color, var(--subtle-color));
+        --button-border-color: var(--button-secondary-border-color, transparent);
     }
     & when not (@critical) {
-        --button-hover-bg: var(--button-secondary-hover-bg);
+        --button-hover-bg: var(--button-secondary-hover-bg, color-mix(
+            in srgb,
+            var(--button-secondary-bg, var(--subtle-color)) 90%,
+            var(--color-black)
+        ));
         --button-hover-color: var(--button-secondary-hover-color, color-mix(
             in srgb,
             currentColor 95%,
@@ -137,12 +135,13 @@
         --button-bg: transparent;
         --button-border-color: transparent;
         --button-color: var(--link-color);
-        --button-hover-bg: transparent;
-        --button-hover-border-color: transparent;
         text-decoration: @link__text-decoration !important;
     }
 
     & when not (@critical) {
+        --button-hover-bg: transparent;
+        --button-hover-border-color: transparent;
+        --button-hover-color: var(--link-color);
         @media @media-hover {
             &:hover {
                 text-decoration: @link__hover__text-decoration !important;
@@ -153,13 +152,15 @@
 
 .breeze-button-ghost {
     & when (@critical) {
-        --button-bg: transparent;
-        --button-border-color: var(--color-brand);
-        --button-color: var(--color-brand);
+        --button-bg: var(--button-ghost-bg, transparent);
+        --button-border-color: var(--button-ghost-border-color, var(--color-brand));
+        --button-color: var(--button-ghost-color, var(--color-brand));
     }
 
     & when not (@critical) {
-        --button-hover-bg: color-mix(in srgb, var(--color-brand) 7%, transparent);
+        --button-hover-bg: var(--button-ghost-hover-bg, color-mix(in srgb, var(--color-brand) 7%, transparent));
+        --button-hover-border-color: var(--button-ghost-hover-border-color, var(--button-ghost-border-color, var(--color-brand)));
+        --button-hover-color: var(--button-ghost-hover-color, var(--button-ghost-color, var(--color-brand)));
     }
 }
 
