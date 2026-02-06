@@ -1,18 +1,18 @@
 @input__font-weight: false;
 @input__font-family: false;
 @input__font-size: false;
-@input__color: false;
-@input__background: false;
+@input__color: currentColor;
+@input__background: transparent;
 @input__padding: @2 @3;
-@input__border-width: false;
-@input__border-radius: false;
-@input__border-color: false;
-@input__outline-color: false;
-@input__outline-width: false;
-@input__outline-offset: false;
-@input__focus__background: false;
-@input__focus__color: false;
-@input__focus__border-color: false;
+@input__border-width: 1px;
+@input__border-radius: ~"var(--base-border-radius)";
+@input__border-color: ~"color-mix(in srgb, currentColor 30%, transparent)";
+@input__outline-color: ~"var(--focus-ring-color)";
+@input__outline-width: ~"var(--focus-ring-width)";
+@input__outline-offset: ~"calc(var(--input-border-width) * -1)";
+@input__focus__background: ~"var(--input-bg)";
+@input__focus__color: ~"var(--input-color)";
+@input__focus__border-color: ~"var(--input-border-color)";
 @input__inverted__background: false;
 @input__inverted__border-color: false;
 
@@ -30,39 +30,46 @@
 @button__font-weight: false;
 @button__font-family: false;
 @button__font-size: @input__font-size;
-@button__color: false;
-@button__background: false;
-@button__border-width: false;
-@button__border-radius: false;
-@button__border-color: false;
+@button__color: ~"var(--color-white)";
+@button__background: ~"var(--color-brand)";
+@button__border-width: ~"var(--input-border-width)";
+@button__border-radius: ~"var(--input-border-radius)";
+@button__border-color: transparent;
 @button__padding: @2 @5;
 @button__shadow: false;
 @button__text-decoration: none;
 @button__text-transform: false;
 @button__text-shadow: false;
-@button__hover__color: false;
-@button__hover__background: false;
-@button__hover__border-color: false;
+@button__hover__color: ~"var(--button-color)";
+@button__hover__background: ~"color-mix(in srgb, var(--button-bg) 90%, var(--color-black))";
+@button__hover__border-color: @button__border-color;
 @button__hover__text-decoration: none;
 @button__inverted__background: false;
 @button__inverted__color: false;
 @button__inverted__hover__background: false;
 @button__inverted__border-color: false;
 
-@button__secondary__color: false;
-@button__secondary__background: false;
-@button__secondary__border-color: false;
-@button__secondary__hover__color: false;
-@button__secondary__hover__background: false;
-@button__secondary__hover__border-color: false;
-@button__secondary__inverted__background: false;
-@button__secondary__inverted__color: false;
-@button__secondary__inverted__border-color: @button__secondary__inverted__background;
-@button__secondary__inverted__hover__background: @button__secondary__inverted__background;
+@button__secondary__color: ~"color-mix(in srgb, currentColor 80%, var(--button-secondary-bg))";
+@button__secondary__background: ~"var(--subtle-color)";
+@button__secondary__border-color: transparent;
+@button__secondary__hover__color: ~"color-mix(in srgb, currentColor 95%, var(--button-secondary-hover-bg, var(--button-secondary-bg)))";
+@button__secondary__hover__background: ~"color-mix(in srgb, var(--button-secondary-bg) 90%, var(--color-black))";
+@button__secondary__hover__border-color: @button__secondary__border-color;
+@button__secondary__inverted__color: @button__secondary__color;
+@button__secondary__inverted__background: @button__secondary__background;
+@button__secondary__inverted__border-color: @button__secondary__border-color;
+@button__secondary__inverted__hover__background: @button__secondary__hover__background;
 
-@button__selected__color: false;
-@button__selected__background: false;
-@button__selected__border-color: false;
+@button__selected__color: ~"var(--button-color)";
+@button__selected__background: ~"var(--button-bg)";
+@button__selected__border-color: ~"var(--button-border-color)";
+
+@button__ghost__color: ~"var(--color-brand)";
+@button__ghost__background: transparent;
+@button__ghost__border-color: ~"var(--color-brand)";
+@button__ghost__hover__color: ~"var(--button-ghost-color)";
+@button__ghost__hover__background: ~"color-mix(in srgb, var(--color-brand) 7%, transparent)";
+@button__ghost__hover__border-color: ~"var(--button-ghost-border-color)";
 
 @button__xs__font-size: @font-size__xs;
 @button__xs__line-height: @line-height__xs;
@@ -87,11 +94,12 @@
 .breeze-tokens() {
     .lib-css(--input-bg, @input__background);
     .lib-css(--input-color, @input__color);
-    .lib-css(--input-border-color, @input__border-color, color-mix(
-        in srgb, currentColor 30%, transparent
-    ));
-    .lib-css(--input-border-width, @input__border-width, 1px);
+    .lib-css(--input-border-color, @input__border-color);
+    .lib-css(--input-border-width, @input__border-width);
     .lib-css(--input-border-radius, @input__border-radius);
+    .lib-css(--input-outline-color, @input__outline-color);
+    .lib-css(--input-outline-width, @input__outline-width);
+    .lib-css(--input-outline-offset, @input__outline-offset);
     .lib-css(--input-focus-bg, @input__focus__background);
     .lib-css(--input-focus-color, @input__focus__color);
     .lib-css(--input-focus-border-color, @input__focus__border-color);
@@ -119,6 +127,13 @@
     .lib-css(--button-selected-bg, @button__selected__background);
     .lib-css(--button-selected-color, @button__selected__color);
     .lib-css(--button-selected-border-color, @button__selected__border-color);
+
+    .lib-css(--button-ghost-bg, @button__ghost__background);
+    .lib-css(--button-ghost-color, @button__ghost__color);
+    .lib-css(--button-ghost-border-color, @button__ghost__border-color);
+    .lib-css(--button-ghost-hover-bg, @button__ghost__hover__background);
+    .lib-css(--button-ghost-hover-color, @button__ghost__hover__color);
+    .lib-css(--button-ghost-hover-border-color, @button__ghost__hover__border-color);
 }
 
 .breeze-tokens-inverted() {
