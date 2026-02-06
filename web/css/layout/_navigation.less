@@ -95,9 +95,9 @@
     }
 
     .navigation {
-        .lib-css(--base-color, @navigation__color);
-        .lib-css(--popover-color, @navigation__color);
-        color: @base__color;
+        color: var(--surface-color);
+        .lib-css(--surface-color, @navigation__color);
+        .lib-css(--popover-color, currentColor);
 
         a.level-top {
             .lib-css(color, @navigation-item-level0__color);

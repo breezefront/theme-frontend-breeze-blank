@@ -15,12 +15,8 @@
     & when not (@critical) {
         cursor: pointer;
         &:hover {
-            color: var(--dropdown-item-hover-color, var(--surface-color));
-            background: var(--dropdown-item-hover-bg, color-mix(
-                in srgb,
-                var(--surface-bg) 95%,
-                currentColor
-            ));
+            color: var(--dropdown-item-hover-color);
+            background: var(--dropdown-item-hover-bg);
         }
     }
 }
