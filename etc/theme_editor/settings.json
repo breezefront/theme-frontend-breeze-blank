@@ -21,6 +21,45 @@
           "default": "#ffffff",
           "css_var": "--button-color",
           "palette": "default"
+        },
+        {
+          "id":  "button-secondary-bg",
+          "label": "Secondary Button Background",
+          "type": "color",
+          "default": "#e5e7eb",
+          "css_var": "--button-secondary-bg",
+          "palette": "default"
+        },
+        {
+          "id":  "button-secondary-color",
+          "label": "Secondary Button Color",
+          "type": "color",
+          "default": "#464f5d",
+          "css_var": "--button-secondary-color",
+          "palette": "default"
+        }
+      ]
+    },
+    {
+      "id": "typography",
+      "name": "Typography",
+      "order": 10,
+      "settings": [
+        {
+          "id":  "base-bg",
+          "label": "Base Background",
+          "type": "color",
+          "default": "#ffffff",
+          "css_var": "--base-bg",
+          "palette": "default"
+        },
+        {
+          "id":  "base-color",
+          "label": "Base Color",
+          "type": "color",
+          "default": "#1e2939",
+          "css_var": "--base-color",
+          "palette": "default"
         }
       ]
     }
@@ -56,6 +95,20 @@
               "default": "#ffffff"
             },
             {
+              "id": "50",
+              "label": "Neutral 50",
+              "description": "Light gray",
+              "css_var": "--color-neutral-50",
+              "default": "#f9fafb"
+            },
+            {
+              "id": "100",
+              "label": "Neutral 100",
+              "description": "Light gray",
+              "css_var": "--color-neutral-100",
+              "default": "#f3f4f6"
+            },
+            {
               "id": "200",
               "label": "Neutral 200",
               "description": "Light gray",
@@ -77,11 +130,46 @@
               "default": "#99a1af"
             },
             {
+              "id": "500",
+              "label": "Neutral 500",
+              "description": "Medium gray",
+              "css_var": "--color-neutral-500",
+              "default": "#6a7282"
+            },
+            {
+              "id": "600",
+              "label": "Neutral 600",
+              "description": "Medium gray",
+              "css_var": "--color-neutral-600",
+              "default": "#4a5565"
+            },
+            {
+              "id": "700",
+              "label": "Neutral 700",
+              "description": "Medium gray",
+              "css_var": "--color-neutral-700",
+              "default": "#364153"
+            },
+            {
               "id": "800",
               "label": "Neutral 800",
               "description": "Very dark gray",
               "css_var": "--color-neutral-800",
               "default": "#1e2939"
+            },
+            {
+              "id": "900",
+              "label": "Neutral 900",
+              "description": "Very dark gray",
+              "css_var": "--color-neutral-900",
+              "default": "#101828"
+            },
+            {
+              "id": "950",
+              "label": "Neutral 950",
+              "description": "Very dark gray",
+              "css_var": "--color-neutral-950",
+              "default": "#030712"
             },
             {
               "id": "black",
