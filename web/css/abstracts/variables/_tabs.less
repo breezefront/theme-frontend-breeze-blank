@@ -3,23 +3,23 @@
 
 @tab__background: false;
 
-@tab-toggler__color: false;
-@tab-toggler__background: false;
+@tab-toggler__color: ~"var(--muted-color)";
+@tab-toggler__background: transparent;
 @tab-toggler__font-family: false;
 @tab-toggler__font-size: false;
 @tab-toggler__font-weight: false;
 @tab-toggler__text-transform: false;
 @tab-toggler__padding: @2-5 @4;
-@tab-toggler__hover__color: false;
-@tab-toggler__hover__background: false;
-@tab-toggler__active__color: false;
-@tab-toggler__active__background: false;
+@tab-toggler__hover__color: ~"color-mix(in srgb, var(--tab-toggler-color) 80%, currentColor)";
+@tab-toggler__hover__background: ~"color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor)";
+@tab-toggler__active__color: ~"color-mix(in srgb, var(--tab-toggler-hover-color) 80%, currentColor)";
+@tab-toggler__active__background: ~"color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor)";
 
 @tab-counter__opacity: false;
 @tab-counter__padding: @0-5 @2;
-@tab-counter__background: false;
-@tab-counter__hover__background: false;
-@tab-counter__active__background: false;
+@tab-counter__background: ~"color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor)";
+@tab-counter__hover__background: ~"color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor)";
+@tab-counter__active__background: ~"color-mix(in srgb, var(--tab-toggler-active-bg) 95%, currentColor)";
 @tab-counter__display: false;
 @tab-counter__border-radius: false;
 
@@ -27,7 +27,7 @@
 @tab-content__padding: @3 @4;
 @tab-content__border: false;
 @tab-content__border-width: false;
-@tab-content__background: false;
+@tab-content__background: ~"var(--surface-bg)";
 
 @tab__horizontal__justify-content: false;
 @tab__horizontal__margin: false;
@@ -65,17 +65,17 @@
 .breeze-tokens() {
     .lib-css(--tab-bg, @tab__background);
 
-    .lib-css(--tab-toggler-bg, @tab-toggler__background, transparent);
-    .lib-css(--tab-toggler-hover-bg, @tab-toggler__hover__background, color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor));
-    .lib-css(--tab-toggler-active-bg, @tab-toggler__active__background, color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor));
+    .lib-css(--tab-toggler-bg, @tab-toggler__background);
+    .lib-css(--tab-toggler-hover-bg, @tab-toggler__hover__background);
+    .lib-css(--tab-toggler-active-bg, @tab-toggler__active__background);
 
-    .lib-css(--tab-toggler-color, @tab-toggler__color, var(--muted-color));
-    .lib-css(--tab-toggler-hover-color, @tab-toggler__hover__color, color-mix(in srgb, var(--tab-toggler-color) 80%, currentColor));
-    .lib-css(--tab-toggler-active-color, @tab-toggler__active__color, color-mix(in srgb, var(--tab-toggler-hover-color) 80%, currentColor));
+    .lib-css(--tab-toggler-color, @tab-toggler__color);
+    .lib-css(--tab-toggler-hover-color, @tab-toggler__hover__color);
+    .lib-css(--tab-toggler-active-color, @tab-toggler__active__color);
 
-    .lib-css(--tab-counter-bg, @tab-counter__background, color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor));
-    .lib-css(--tab-counter-hover-bg, @tab-counter__hover__background, color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor));
-    .lib-css(--tab-counter-active-bg, @tab-counter__active__background, color-mix(in srgb, var(--tab-toggler-active-bg) 95%, currentColor));
+    .lib-css(--tab-counter-bg, @tab-counter__background);
+    .lib-css(--tab-counter-hover-bg, @tab-counter__hover__background);
+    .lib-css(--tab-counter-active-bg, @tab-counter__active__background);
 
-    .lib-css(--tab-content-bg, @tab-content__background, var(--surface-bg));
+    .lib-css(--tab-content-bg, @tab-content__background);
 }

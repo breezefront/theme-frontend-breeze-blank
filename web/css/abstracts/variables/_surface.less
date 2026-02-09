@@ -1,19 +1,19 @@
-@surface__background: false;
-@surface__color: false;
-@surface__inverted__background: false;
-@surface__inverted__color: false;
+@surface__background: ~"var(--base-bg)";
+@surface__color: ~"var(--base-color)";
+@surface__inverted__background: @surface__background;
+@surface__inverted__color: @surface__color;
 
 .breeze-tokens() {
-    .lib-css(--surface-bg, @surface__background, var(--base-bg));
-    .lib-css(--surface-color, @surface__color, var(--base-color));
+    .lib-css(--surface-bg, @surface__background);
+    .lib-css(--surface-color, @surface__color);
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--surface-bg, @surface__inverted__background, var(--base-bg));
-    .lib-css(--surface-color, @surface__inverted__color, var(--base-color));
+    .lib-css(--surface-bg, @surface__inverted__background);
+    .lib-css(--surface-color, @surface__inverted__color);
 }
 
 .breeze-tokens-inverted-reset() {
-    .lib-css(--surface-bg, @surface__inverted__background, var(--base-bg));
-    .lib-css(--surface-color, @surface__inverted__color, var(--base-color));
+    .lib-css(--surface-bg, @surface__inverted__background);
+    .lib-css(--surface-color, @surface__inverted__color);
 }

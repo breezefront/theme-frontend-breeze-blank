@@ -7,13 +7,13 @@
 
 @listing-item-actions-secondary__display: flex;
 @listing-item-actions-secondary__gap: @0-5;
-@listing-item-actions-secondary-link__color: false;
-@listing-item-actions-secondary-link__background: false;
+@listing-item-actions-secondary-link__color: ~"var(--muted-color)";
+@listing-item-actions-secondary-link__background: transparent;
 @listing-item-actions-secondary-link__padding: 0px;
 @listing-item-actions-secondary-link__border: false;
 @listing-item-actions-secondary-link__border-radius: @button__border-radius;
-@listing-item-actions-secondary-link__hover__color: false;
-@listing-item-actions-secondary-link__hover__background: false;
+@listing-item-actions-secondary-link__hover__color: ~"color-mix(in srgb, var(--action-secondary-color) 50%, var(--surface-color))";
+@listing-item-actions-secondary-link__hover__background: transparent;
 @listing-item-actions-secondary-icon__width: @8;
 @listing-item-actions-secondary-icon__height: @8;
 @listing-item-actions-secondary-icon__size: @6;
@@ -64,7 +64,7 @@
 @listing-grid-item-swatches__absolute__border: false;
 @listing-grid-item-swatches__absolute__border-radius: false;
 @listing-grid-item-swatches__absolute__box-shadow: false;
-@listing-grid-item-swatches__absolute__background: false;
+@listing-grid-item-swatches__absolute__background: ~"var(--surface-bg)";
 @listing-grid-item-swatches__absolute__background-opacity: .85;
 
 @listing-grid-item-actions__gap: @1;
@@ -168,13 +168,13 @@
         }
     }
 
-    .lib-css(--action-secondary-color, @listing-item-actions-secondary-link__color, var(--muted-color));
-    .lib-css(--action-secondary-bg, @listing-item-actions-secondary-link__background, transparent);
-    .lib-css(--action-secondary-hover-color, @listing-item-actions-secondary-link__hover__color, color-mix(in srgb, var(--action-secondary-color) 50%, var(--surface-color)));
-    .lib-css(--action-secondary-hover-bg, @listing-item-actions-secondary-link__hover__background, transparent);
+    .lib-css(--action-secondary-color, @listing-item-actions-secondary-link__color);
+    .lib-css(--action-secondary-bg, @listing-item-actions-secondary-link__background);
+    .lib-css(--action-secondary-hover-color, @listing-item-actions-secondary-link__hover__color);
+    .lib-css(--action-secondary-hover-bg, @listing-item-actions-secondary-link__hover__background);
 
     & when (@listing-grid-item-swatches__position = absolute) {
-        .lib-css(--abs-swatches-bg, @listing-grid-item-swatches__absolute__background, var(--surface-bg));
+        .lib-css(--abs-swatches-bg, @listing-grid-item-swatches__absolute__background);
         .lib-css(--abs-swatches-bg-alpha, @listing-grid-item-swatches__absolute__background-opacity);
     }
 }

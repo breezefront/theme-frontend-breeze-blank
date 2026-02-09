@@ -23,12 +23,12 @@
 @color__inverted__red: @red-500;
 @color__inverted__yellow: false;
 
-@color__info: false;
-@color__success: false;
-@color__danger: false;
-@color__inverted__info: false;
-@color__inverted__success: false;
-@color__inverted__danger: false;
+@color__info: ~"var(--color-blue)";
+@color__success: ~"var(--color-green)";
+@color__danger: ~"var(--color-red)";
+@color__inverted__info: @color__info;
+@color__inverted__success: @color__success;
+@color__inverted__danger: @color__danger;
 
 .breeze-tokens() {
     .lib-css(--color-brand, @color__brand);
@@ -49,9 +49,9 @@
     .lib-css(--color-green, @color__green);
     .lib-css(--color-red, @color__red);
     .lib-css(--color-yellow, @color__yellow);
-    .lib-css(--color-info, @color__info, var(--color-blue));
-    .lib-css(--color-success, @color__success, var(--color-green));
-    .lib-css(--color-danger, @color__danger, var(--color-red));
+    .lib-css(--color-info, @color__info);
+    .lib-css(--color-success, @color__success);
+    .lib-css(--color-danger, @color__danger);
 }
 
 .breeze-tokens-inverted() {
@@ -59,16 +59,16 @@
     .lib-css(--color-green, @color__inverted__green);
     .lib-css(--color-red, @color__inverted__red);
     .lib-css(--color-yellow, @color__inverted__yellow);
-    .lib-css(--color-info, @color__inverted__info, var(--color-blue));
-    .lib-css(--color-success, @color__inverted__success, var(--color-green));
-    .lib-css(--color-danger, @color__inverted__danger, var(--color-red));
+    .lib-css(--color-info, @color__inverted__info);
+    .lib-css(--color-success, @color__inverted__success);
+    .lib-css(--color-danger, @color__inverted__danger);
 }
 .breeze-tokens-inverted-reset() {
     .lib-css(--color-blue, @color__blue);
     .lib-css(--color-green, @color__green);
     .lib-css(--color-red, @color__red);
     .lib-css(--color-yellow, @color__yellow);
-    .lib-css(--color-info, @color__info, var(--color-blue));
-    .lib-css(--color-success, @color__success, var(--color-green));
-    .lib-css(--color-danger, @color__danger, var(--color-red));
+    .lib-css(--color-info, @color__info);
+    .lib-css(--color-success, @color__success);
+    .lib-css(--color-danger, @color__danger);
 }
