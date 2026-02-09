@@ -21,9 +21,6 @@
 @message__padding: @3 @4;
 @message__margin-bottom: @3;
 @message__box-shadow: false;
-@message__background: ~"rgb(var(--message-bg))";
-@message__color: ~"rgb(var(--message-color))";
-@message__border-color: ~"rgb(var(--message-border-color, var(--message-color)), var(--message-border-alpha, .1))";
 
 @message__position: static; // static|fixed
 @message__fixed__container: true;
@@ -48,22 +45,41 @@
 
 @message-icon__size: @5;
 @message-close-icon__mask-size: @4 @4;
-// @message-link__color: ~"rgb(var(--message-color)) !important";
+@message-link__color: false;
 
 @message-success__icon: @icon-s-check;
-@message-success__icon-bg: false;
-@message-success__color: false;
+@message-success__icon-background: false;
+@message-success__color: ~"var(--color-success)";
 @message-success__background: false;
 @message-success__border-color: false;
 
 @message-info__icon: @icon-s-information-circle;
-@message-info__icon-bg: false;
-@message-info__color: false;
+@message-info__icon-background: false;
+@message-info__color: ~"var(--color-info)";
 @message-info__background: false;
 @message-info__border-color: false;
 
 @message-error__icon: @icon-s-exclamation-circle;
-@message-error__icon-bg: false;
-@message-error__color: false;
+@message-error__icon-background: false;
+@message-error__color: ~"var(--color-danger)";
 @message-error__background: false;
 @message-error__border-color: false;
+
+.breeze-tokens() {
+    .lib-css(--message-link-color, @message-link__color);
+
+    .lib-css(--message-success-color, @message-success__color);
+    .lib-css(--message-success-bg, @message-success__background);
+    .lib-css(--message-success-border-color, @message-success__border-color);
+    .lib-css(--message-success-icon-bg, @message-success__icon-background);
+
+    .lib-css(--message-info-color, @message-info__color);
+    .lib-css(--message-info-bg, @message-info__background);
+    .lib-css(--message-info-border-color, @message-info__border-color);
+    .lib-css(--message-info-icon-bg, @message-info__icon-background);
+
+    .lib-css(--message-error-color, @message-error__color);
+    .lib-css(--message-error-bg, @message-error__background);
+    .lib-css(--message-error-border-color, @message-error__border-color);
+    .lib-css(--message-error-icon-bg, @message-error__icon-background);
+}

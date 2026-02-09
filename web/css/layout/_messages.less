@@ -45,6 +45,7 @@
             content: '';
             width: @message-icon-container__width;
             height: @message-icon-container__height;
+            color: var(--message-icon-bg, var(--message-color));
         }
     }
 
@@ -95,7 +96,7 @@
     }
     .message {
         a {
-            // .lib-css(color, @message-link__color);
+            color: var(--message-link-color, var(--message-color));
             &:hover {
                 text-decoration: none;
             }
@@ -107,31 +108,31 @@
 
         &.success {
             --message-bg: var(--message-success-bg);
-            --message-color: var(--message-success-color, var(--color-success));
-            --message-border-color: var(--message-border-color, var(--color-success));
+            --message-color: var(--message-success-color);
+            --message-border-color: var(--message-success-border-color);
+            --message-icon-bg: var(--message-success-icon-bg);
             &::before {
                 .breeze-icon(@message-success__icon, @message-icon__size);
-                .lib-css(background, @message-success__icon-bg);
             }
         }
         &.info,
         &.warning,
         &.notice {
             --message-bg: var(--message-info-bg);
-            --message-color: var(--message-info-color, var(--color-info));
-            --message-border-color: var(--message-border-color, var(--color-info));
+            --message-color: var(--message-info-color);
+            --message-border-color: var(--message-info-border-color);
+            --message-icon-bg: var(--message-info-icon-bg);
             &::before {
                 .breeze-icon(@message-info__icon, @message-icon__size);
-                .lib-css(background, @message-info__icon-bg);
             }
         }
         &.error {
             --message-bg: var(--message-error-bg);
-            --message-color: var(--message-error-color, var(--color-danger));
-            --message-border-color: var(--message-border-color, var(--color-danger));
+            --message-color: var(--message-error-color);
+            --message-border-color: var(--message-error-border-color);
+            --message-icon-bg: var(--message-error-icon-bg);
             &::before {
                 .breeze-icon(@message-error__icon, @message-icon__size);
-                .lib-css(background, @message-error__icon-bg);
             }
         }
     }

@@ -169,14 +169,14 @@
         .sorter-action {
             &:extend(.transition all);
             &:hover {
-                --muted-alpha: .9;
+                color: color-mix(in srgb, currentColor 80%, var(--surface-color));
             }
         }
         .modes {
             a {
                 &:extend(.transition all);
                 &:hover {
-                    --muted-alpha: .9;
+                    color: color-mix(in srgb, currentColor 80%, var(--surface-color));
                 }
             }
         }
@@ -206,7 +206,7 @@
         .action.previous {
             &:extend(.transition all);
             &:hover {
-                --muted-alpha: .9;
+                color: color-mix(in srgb, currentColor 80%, var(--surface-color));
             }
         }
     }
