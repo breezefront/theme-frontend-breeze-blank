@@ -8,12 +8,12 @@
 @listing-item-actions-secondary__display: flex;
 @listing-item-actions-secondary__gap: @0-5;
 @listing-item-actions-secondary-link__color: ~"var(--muted-color)";
-@listing-item-actions-secondary-link__background: transparent;
+@listing-item-actions-secondary-link__background: ~"var(--surface-bg)";
 @listing-item-actions-secondary-link__padding: 0px;
 @listing-item-actions-secondary-link__border: false;
 @listing-item-actions-secondary-link__border-radius: @button__border-radius;
-@listing-item-actions-secondary-link__hover__color: ~"color-mix(in srgb, var(--action-secondary-color) 50%, var(--surface-color))";
-@listing-item-actions-secondary-link__hover__background: transparent;
+@listing-item-actions-secondary-link__hover__color: ~"color-mix(in srgb, var(--secondary-link-color) 50%, var(--surface-color))";
+@listing-item-actions-secondary-link__hover__background: @listing-item-actions-secondary-link__background;
 @listing-item-actions-secondary-icon__width: @8;
 @listing-item-actions-secondary-icon__height: @8;
 @listing-item-actions-secondary-icon__size: @6;
@@ -54,19 +54,6 @@
 @listing-grid-item-name__line-clamp: false;
 @listing-grid-item-name__hover__line-clamp: 7;
 
-@listing-grid-item-swatches__position: static;
-@listing-grid-item-swatches__absolute__z-index: 1;
-@listing-grid-item-swatches__absolute__top: auto;
-@listing-grid-item-swatches__absolute__bottom: 0;
-@listing-grid-item-swatches__absolute__left: 0;
-@listing-grid-item-swatches__absolute__right: 0;
-@listing-grid-item-swatches__absolute__padding: @3;
-@listing-grid-item-swatches__absolute__border: false;
-@listing-grid-item-swatches__absolute__border-radius: false;
-@listing-grid-item-swatches__absolute__box-shadow: false;
-@listing-grid-item-swatches__absolute__background: ~"var(--surface-bg)";
-@listing-grid-item-swatches__absolute__background-opacity: .85;
-
 @listing-grid-item-actions__gap: @1;
 @listing-grid-item-actions__position: static; // static|absolute
 @listing-grid-item-actions__absolute__opacity: 0;
@@ -92,6 +79,8 @@
 @listing-grid-item-actions-primary__absolute__visible__transform: ~"translateX(-50%)";
 @listing-grid-item-tocart__absolute__color: @listing-grid-item-tocart__absolute__text-color;
 @listing-grid-item-tocart__absolute__background: @listing-grid-item-tocart__absolute__background-color;
+@listing-grid-item-tocart__absolute__hover__color: @listing-grid-item-tocart__absolute__color;
+@listing-grid-item-tocart__absolute__hover__background: @listing-grid-item-tocart__absolute__background;
 @listing-grid-item-tocart__absolute__border-color: false;
 @listing-grid-item-tocart__absolute__border-radius: false;
 @listing-grid-item-tocart__absolute__hover__background: false;
@@ -112,6 +101,19 @@
 @listing-grid-item-actions-secondary__absolute__transform: false;
 @listing-grid-item-actions-secondary__absolute__visible__transform: false;
 @listing-grid-item-actions-secondary__absolute__mask-size: @5;
+
+@listing-grid-item-swatches__position: static;
+@listing-grid-item-swatches__absolute__z-index: 1;
+@listing-grid-item-swatches__absolute__top: auto;
+@listing-grid-item-swatches__absolute__bottom: 0;
+@listing-grid-item-swatches__absolute__left: 0;
+@listing-grid-item-swatches__absolute__right: 0;
+@listing-grid-item-swatches__absolute__padding: @3;
+@listing-grid-item-swatches__absolute__border: false;
+@listing-grid-item-swatches__absolute__border-radius: false;
+@listing-grid-item-swatches__absolute__box-shadow: false;
+@listing-grid-item-swatches__absolute__background: ~"var(--surface-bg)";
+@listing-grid-item-swatches__absolute__background-opacity: .85;
 
 // ----------------------------------------------
 // Preset: static-card;
@@ -168,10 +170,14 @@
         }
     }
 
-    .lib-css(--action-secondary-color, @listing-item-actions-secondary-link__color);
-    .lib-css(--action-secondary-bg, @listing-item-actions-secondary-link__background);
-    .lib-css(--action-secondary-hover-color, @listing-item-actions-secondary-link__hover__color);
-    .lib-css(--action-secondary-hover-bg, @listing-item-actions-secondary-link__hover__background);
+    .lib-css(--tocart-abs-color, @listing-grid-item-tocart__absolute__color);
+    .lib-css(--tocart-abs-bg, @listing-grid-item-tocart__absolute__background);
+    .lib-css(--tocart-abs-hover-color, @listing-grid-item-tocart__absolute__hover__color);
+    .lib-css(--tocart-abs-hover-bg, @listing-grid-item-tocart__absolute__hover__background);
+    .lib-css(--secondary-link-color, @listing-item-actions-secondary-link__color);
+    .lib-css(--secondary-link-bg, @listing-item-actions-secondary-link__background);
+    .lib-css(--secondary-link-hover-color, @listing-item-actions-secondary-link__hover__color);
+    .lib-css(--secondary-link-hover-bg, @listing-item-actions-secondary-link__hover__background);
 
     & when (@listing-grid-item-swatches__position = absolute) {
         .lib-css(--abs-swatches-bg, @listing-grid-item-swatches__absolute__background);
