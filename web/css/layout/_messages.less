@@ -28,12 +28,12 @@
         padding: @message__padding;
         margin-bottom: @message__margin-bottom;
         border: 1px solid transparent;
+        border-radius: var(--message-border-radius, var(--base-border-radius));
 
         .lib-css(font-family, @message__font-family);
         .lib-css(font-size, @message__font-size);
         .lib-css(font-weight, @message__font-weight);
         .lib-css(text-transform, @message__text-transform);
-        .lib-css(border-radius, @message__border-radius);
         .lib-css(border-width, @message__border-width);
         .lib-css(box-shadow, @message__box-shadow);
 
@@ -82,21 +82,21 @@
         display: none;
     }
     .message:where(.warning, .success, .notice, .error, .info) {
-        color: var(--message-color, var(--base-color));
+        color: var(--message-color, var(--surface-color));
         background: var(--message-bg, color-mix(
             in srgb,
-            var(--message-color, var(--base-color)) 7%,
-            var(--base-bg)
+            var(--message-color, var(--surface-color)) 7%,
+            var(--surface-bg)
         ));
         border-color: var(--message-border-color, color-mix(
             in srgb,
-            var(--message-color, var(--base-color)) 14%,
-            var(--base-bg)
+            var(--message-color, var(--surface-color)) 15%,
+            var(--surface-bg)
         ));
     }
     .message {
         a {
-            color: var(--message-link-color, var(--message-color));
+            color: var(--message-link-color, inherit);
             &:hover {
                 text-decoration: none;
             }
