@@ -117,6 +117,11 @@
             > div {
                 flex-grow: 1;
             }
+            &:not(:has(> div[style])) {
+                > div:not(:first-child) {
+                    display: none !important;
+                }
+            }
         }
         .tab-header {
             outline-offset: -2px;
