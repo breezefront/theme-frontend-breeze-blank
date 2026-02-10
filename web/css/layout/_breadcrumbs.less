@@ -9,15 +9,14 @@
 
 & when (@critical) {
     .breadcrumbs {
-        .lib-css(background, @breadcrumbs__background);
+        color: var(--breadcrumbs-color);
+        background: var(--breadcrumbs-bg, transparent);
         .lib-css(border, @breadcrumbs__border);
         .lib-css(border-width, @breadcrumbs__border-width);
-        .lib-css(color, @breadcrumbs__color);
         .lib-css(font-size, @breadcrumbs__font-size);
         .lib-css(font-weight, @breadcrumbs__font-weight);
         .lib-css(line-height, @breadcrumbs__line-height);
         .lib-css(text-transform, @breadcrumbs__text-transform);
-        min-height: @breadcrumbs__min-height;
 
         ul {
             &:extend(.container);
@@ -26,8 +25,8 @@
         }
 
         strong {
+            color: var(--breadcrumbs-active-color, inherit);
             .lib-css(font-weight, @breadcrumbs-item__active__font-weight);
-            .lib-css(color, @breadcrumbs-item__active__color);
         }
 
         & when not (@breadcrumbs-item-home__icon = false) {
@@ -54,7 +53,7 @@
 & when not (@critical) {
     .breadcrumbs {
         a:hover {
-            .lib-css(color, @breadcrumbs-item__hover__color);
+            color: var(--breadcrumbs-hover-color);
             .lib-css(text-decoration, @breadcrumbs-item__hover__text-decoration);
         }
 
@@ -65,7 +64,7 @@
                 }
                 &:hover {
                     &::before {
-                        .lib-css(color, @breadcrumbs-item__hover__color);
+                        color: var(--breadcrumbs-hover-color);
                     }
                 }
             }

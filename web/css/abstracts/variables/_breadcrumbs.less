@@ -1,6 +1,5 @@
-@breadcrumbs__min-height: @9;
 @breadcrumbs__gap: @2;
-@breadcrumbs__wrap: true;
+@breadcrumbs__wrap: false;
 @breadcrumbs__border: false;
 @breadcrumbs__border-width: false;
 @breadcrumbs__background: false;
@@ -26,3 +25,10 @@
 @breadcrumbs-item-home__icon: false;
 @breadcrumbs-item-home__width: @4;
 @breadcrumbs-item-home__height: @breadcrumbs-item-home__width;
+
+.breeze-tokens() {
+    .lib-css(--breadcrumbs-bg, @breadcrumbs__background);
+    .lib-css(--breadcrumbs-color, @breadcrumbs__color);
+    .lib-css(--breadcrumbs-hover-color, @breadcrumbs-item__hover__color);
+    .lib-css(--breadcrumbs-active-color, @breadcrumbs-item__active__color);
+}
