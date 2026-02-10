@@ -68,8 +68,14 @@
 @button__ghost__background: transparent;
 @button__ghost__border-color: ~"var(--color-brand)";
 @button__ghost__hover__color: ~"var(--button-ghost-color)";
-@button__ghost__hover__background: ~"color-mix(in srgb, var(--color-brand) 7%, transparent)";
+@button__ghost__hover__background: ~"color-mix(in srgb, currentColor 7%, transparent)";
 @button__ghost__hover__border-color: ~"var(--button-ghost-border-color)";
+@button__ghost__inverted__color: ~"var(--surface-color)";
+@button__ghost__inverted__background: transparent;
+@button__ghost__inverted__border-color: @button__ghost__inverted__color;
+@button__ghost__inverted__hover__color: @button__ghost__hover__color;
+@button__ghost__inverted__hover__background: ~"color-mix(in srgb, currentColor 7%, transparent)";
+@button__ghost__inverted__hover__border-color: @button__ghost__inverted__border-color;
 
 @button__xs__font-size: @font-size__xs;
 @button__xs__line-height: @line-height__xs;
@@ -150,6 +156,13 @@
     .lib-css(--button-secondary-hover-bg, @button__secondary__inverted__hover__background);
     .lib-css(--button-secondary-color, @button__secondary__inverted__color);
     .lib-css(--button-secondary-border-color, @button__secondary__inverted__border-color);
+
+    .lib-css(--button-ghost-bg, @button__ghost__inverted__background);
+    .lib-css(--button-ghost-color, @button__ghost__inverted__color);
+    .lib-css(--button-ghost-border-color, @button__ghost__inverted__border-color);
+    .lib-css(--button-ghost-hover-bg, @button__ghost__inverted__hover__background);
+    .lib-css(--button-ghost-hover-color, @button__ghost__inverted__hover__color);
+    .lib-css(--button-ghost-hover-border-color, @button__ghost__inverted__hover__border-color);
 }
 
 .breeze-tokens-inverted-reset() {
@@ -166,4 +179,11 @@
     .lib-css(--button-secondary-hover-bg, @button__secondary__hover__background);
     .lib-css(--button-secondary-color, @button__secondary__color);
     .lib-css(--button-secondary-border-color, @button__secondary__border-color);
+
+    .lib-css(--button-ghost-bg, @button__ghost__background);
+    .lib-css(--button-ghost-color, @button__ghost__color);
+    .lib-css(--button-ghost-border-color, @button__ghost__border-color);
+    .lib-css(--button-ghost-hover-bg, @button__ghost__hover__background);
+    .lib-css(--button-ghost-hover-color, @button__ghost__hover__color);
+    .lib-css(--button-ghost-hover-border-color, @button__ghost__hover__border-color);
 }
