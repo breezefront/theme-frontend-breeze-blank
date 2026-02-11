@@ -1,5 +1,31 @@
-@modal__border-radius: false;
-@modal__box-shadow: @shadow-xl-around;
+@modal__background: ~"var(--surface-bg)";
+@modal__border-radius: ~"var(--base-border-radius)";
+@modal__box-shadow: ~"var(--shadow-xl-around)";
+@modal__max-width: 500px;
+@modal__max-height: 85vh;
+@modal__padding-x: @4;
+@modal__padding-y: ~"var(--modal-padding-x)";
+@modal__media-md__padding-x: @8;
+@modal__media-md__padding-y: ~"var(--modal-padding-x)";
+
+@modal__xl__max-width: 850px;
+
 @modal-title__font-size: @font-size__2xl;
 @modal-title__line-height: @line-height__2xl;
 @modal-title__margin-bottom: @4;
+
+.breeze-tokens() {
+    .lib-css(--modal-bg, @modal__background);
+    .lib-css(--modal-border-radius, @modal__border-radius);
+    .lib-css(--modal-box-shadow, @modal__box-shadow);
+
+    --modal-max-width: @modal__max-width;
+    --modal-max-height: @modal__max-height;
+    --modal-padding-x: @modal__padding-x;
+    --modal-padding-y: @modal__padding-y;
+
+    @media @media-md {
+        --modal-padding-x: @modal__media-md__padding-x;
+        --modal-padding-y: @modal__media-md__padding-y;
+    }
+}
