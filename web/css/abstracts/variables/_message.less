@@ -1,5 +1,5 @@
-@global-message__background: ~"rgb(var(--yellow))";
-@global-message__color: #222;
+@global-message__background: ~"var(--color-yellow)";
+@global-message__color: false;
 
 @global-cookie-message__position: fixed;
 @global-cookie-message__z-index: 40;
@@ -66,6 +66,9 @@
 @message-error__border-color: false;
 
 .breeze-tokens() {
+    .lib-css(--global-message-bg, @global-message__background);
+    .lib-css(--global-message-color, @global-message__color);
+
     .lib-css(--message-border-radius, @message__border-radius);
     .lib-css(--message-link-color, @message-link__color);
 
