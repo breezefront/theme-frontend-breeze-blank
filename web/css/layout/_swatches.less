@@ -50,17 +50,17 @@
         padding: 0 @1;
         position: relative;
         margin: abs(@swatch__border-offset);
-        .lib-css(border-radius, @swatch__border-radius);
+        border-radius: var(--swatch-border-radius);
 
         &-link-layered {
-            .lib-css(border-radius, @swatch__border-radius);
+            border-radius: var(--swatch-border-radius);
         }
 
         &::before {
             content: '';
             position: absolute;
             .lib-css(box-shadow, @swatch__box-shadow);
-            .lib-css(border-radius, @swatch__border-radius);
+            border-radius: var(--swatch-border-radius);
             top: @swatch__border-offset;
             bottom: @swatch__border-offset;
             left: @swatch__border-offset;
@@ -68,9 +68,9 @@
         }
 
         &.text {
-            .lib-css(border-radius, @swatch__text__border-radius);
+            border-radius: var(--swatch-text-border-radius);
             &::before {
-                .lib-css(border-radius, @swatch__text__border-radius);
+                border-radius: var(--swatch-text-border-radius);
             }
         }
 
