@@ -101,6 +101,7 @@
         .lib-css(--popover-color, currentColor);
 
         a.level-top {
+            border-radius: var(--nav-level0-border-radius);
             .lib-css(color, @navigation-item-level0__color);
             .lib-css(font-family, @navigation-item-level0__font-family);
             .lib-css(font-weight, @navigation-item-level0__font-weight);
@@ -325,8 +326,8 @@
                 .right(auto);
                 .lib-css(border, @navigation-dropdown__border);
                 .lib-css(border-color, @navigation-dropdown__border-color);
-                .lib-css(border-radius, @navigation-dropdown__border-radius);
-                .lib-css(box-shadow, @navigation-dropdown__shadow);
+                border-radius: var(--nav-dropdown-border-radius);
+                box-shadow: var(--nav-dropdown-box-shadow);
 
                 .submenu {
                     top: -@0-5 !important;

@@ -1,6 +1,6 @@
 @toolbar__color: false;
 @toolbar-modes__border: 1px solid var(--subtle-color);
-@toolbar-modes__border-radius: false;
+@toolbar-modes__border-radius: ~"var(--base-border-radius)";
 
 @toolbar-mode__padding: @2;
 
@@ -10,6 +10,7 @@
 @toolbar-pages-item__height: false;
 @toolbar-pages-item__font-weight: false;
 @toolbar-pages-item__color: false;
+@toolbar-pages-item__border-radius: ~"var(--base-border-radius)";
 
 @toolbar-pages-item__hover__color: false;
 @toolbar-pages-item__hover__background: ~"var(--muted-bg)";
@@ -18,3 +19,8 @@
 @toolbar-pages-item__active__background: ~"var(--muted-bg)";
 
 @toolbar-pages-arrow__color: ~"var(--muted-color)";
+
+.breeze-tokens() {
+    .lib-css(--toolbar-modes-border-radius, @toolbar-modes__border-radius);
+    .lib-css(--toolbar-page-border-radius, @toolbar-pages-item__border-radius);
+}

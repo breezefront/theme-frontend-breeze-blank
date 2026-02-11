@@ -1,9 +1,10 @@
-@dropdown-item__border-radius: @dropdown__border-radius;
 @dropdown-item__padding: @1 @2;
 @dropdown-item__hover__color: false;
 @dropdown-item__hover__background: ~"color-mix(in srgb, var(--popover-bg) 95%, currentColor)";
+@dropdown-item__border-radius: ~"clamp(min(4px, var(--popover-border-radius, 0px)), calc(var(--popover-border-radius, 0px) - var(--popover-padding, 0px) / 1.5), 30px)";
 
 .breeze-tokens() {
     .lib-css(--dropdown-item-hover-bg, @dropdown-item__hover__background);
     .lib-css(--dropdown-item-hover-color, @dropdown-item__hover__color);
+    .lib-css(--dropdown-item-border-radius, @dropdown-item__border-radius);
 }

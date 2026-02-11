@@ -15,6 +15,7 @@
 @navigation-item-level0__text-transform: false;
 @navigation-item-level0__text-shadow: false;
 @navigation-item-level0__padding: false;
+@navigation-item-level0__border-radius: @navigation-dropdown__border-radius;
 @navigation-item-level0__opened__color: false;
 @navigation-item-level0__opened__background: @dropdown-item__hover__background;
 @navigation-item-level0__active__color: @navigation-item-level0__opened__color;
@@ -27,12 +28,17 @@
 @navigation-caret-level0__padding: false;
 @navigation-caret-level0__right: false;
 
-@navigation-dropdown__border-color: @dropdown__border-color;
+@navigation-dropdown__border-color: @popover__border-color;
 @navigation-dropdown__border: false;
-@navigation-dropdown__border-radius: @dropdown__border-radius;
-@navigation-dropdown__shadow: @dropdown__shadow;
+@navigation-dropdown__border-radius: ~"var(--popover-border-radius)";
+@navigation-dropdown__shadow: ~"var(--popover-box-shadow)";
 
 .breeze-tokens() {
     // this prop is used by menu.js component
     --navigation-media-mobile: @navigation__media-mobile;
+    --nav-media-mobile: @navigation__media-mobile;
+
+    .lib-css(--nav-level0-border-radius, @navigation-item-level0__border-radius);
+    .lib-css(--nav-dropdown-border-radius, @navigation-dropdown__border-radius);
+    .lib-css(--nav-dropdown-box-shadow, @navigation-dropdown__shadow);
 }

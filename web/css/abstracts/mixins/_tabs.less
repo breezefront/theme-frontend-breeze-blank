@@ -44,6 +44,7 @@
         align-items: center;
         color: var(--tab-toggler-color);
         background: var(--tab-toggler-bg);
+        border-radius: var(--tab-toggler-border-radius, 0);
         .lib-css(padding, @tab-toggler__padding);
         .lib-css(font-family, @tab-toggler__font-family);
         .lib-css(font-size, @tab-toggler__font-size);
@@ -53,6 +54,7 @@
         .counter {
             background: var(--tab-counter-bg);
             .lib-css(opacity, @tab-counter__opacity);
+            .lib-css(margin-inline, @tab-counter__margin-x);
             .lib-css(padding, @tab-counter__padding);
             .lib-css(display, @tab-counter__display);
             .lib-css(border-radius, @tab-counter__border-radius);
@@ -80,7 +82,7 @@
         & when not (@tab-toggler__horizontal__border-width = false) {
             border-width: @tab-toggler__horizontal__border-width !important;
         }
-        .lib-css(border-radius, @tab-toggler__horizontal__border-radius);
+        .lib-css(--tab-toggler-border-radius, @tab-toggler__horizontal__border-radius);
         .lib-css(position, @tab-toggler__horizontal__position);
         .lib-css(z-index, @tab-toggler__horizontal__z-index);
         white-space: nowrap;
@@ -102,7 +104,7 @@
         .lib-css(margin, @tab-toggler__accordion__margin);
         .lib-css(border, @tab-toggler__accordion__border);
         .lib-css(border-width, @tab-toggler__accordion__border-width);
-        .lib-css(border-radius, @tab-toggler__accordion__border-radius);
+        .lib-css(--tab-toggler-border-radius, @tab-toggler__accordion__border-radius);
         .lib-css(--tab-toggler-bg, @tab-toggler__accordion__background);
         &:has(+ .content + script:last-child),
         &:has(+ .content:last-child) {

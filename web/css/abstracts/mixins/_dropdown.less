@@ -9,8 +9,8 @@
 .breeze-dropdown-item {
     & when (@critical) {
         display: block;
+        border-radius: var(--dropdown-item-border-radius);
         .lib-css(padding, @dropdown-item__padding);
-        .lib-css(border-radius, @dropdown-item__border-radius);
     }
     & when not (@critical) {
         cursor: pointer;

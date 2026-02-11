@@ -16,12 +16,13 @@
 @tab-toggler__active__background: ~"color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor)";
 
 @tab-counter__opacity: false;
+@tab-counter__margin-x: @0-5 0;
 @tab-counter__padding: @0-5 @2;
 @tab-counter__background: ~"color-mix(in srgb, var(--tab-toggler-bg) 95%, currentColor)";
 @tab-counter__hover__background: ~"color-mix(in srgb, var(--tab-toggler-hover-bg) 95%, currentColor)";
 @tab-counter__active__background: ~"color-mix(in srgb, var(--tab-toggler-active-bg) 95%, currentColor)";
 @tab-counter__display: false;
-@tab-counter__border-radius: false;
+@tab-counter__border-radius: ~"calc(var(--tab-toggler-border-radius, 0px) / 1.5)";
 
 @tab-content__scroll-margin: @16 0 0;
 @tab-content__padding: @3 @4;
@@ -38,7 +39,7 @@
 @tab-toggler__horizontal__margin: 0 @3 0 0;
 @tab-toggler__horizontal__border: false;
 @tab-toggler__horizontal__border-width: false;
-@tab-toggler__horizontal__border-radius: false;
+@tab-toggler__horizontal__border-radius: ~"var(--base-border-radius)";
 @tab-toggler__horizontal__active__border-color: false;
 
 @tab-toggler-inner__horizontal__padding: false;
@@ -57,7 +58,7 @@
 @tab-toggler__accordion__margin: false;
 @tab-toggler__accordion__border: 1px solid var(--subtle-color);
 @tab-toggler__accordion__border-width: 0 0 1px;
-@tab-toggler__accordion__border-radius: false;
+@tab-toggler__accordion__border-radius: ~"var(--base-border-radius)";
 @tab-toggler__accordion__background: false;
 @tab-toggler__accordion__active__color: false;
 @tab-toggler__accordion__active__background: false;

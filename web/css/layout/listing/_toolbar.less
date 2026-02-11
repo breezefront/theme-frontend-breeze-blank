@@ -60,7 +60,7 @@
             display: flex;
             align-items: center;
             .lib-css(border, @toolbar-modes__border);
-            .lib-css(border-radius, @toolbar-modes__border-radius);
+            border-radius: var(--toolbar-modes-border-radius);
             &:not(:has(a)) {
                 display: none;
             }
@@ -124,6 +124,7 @@
                 align-items: center;
                 justify-content: center;
                 color: inherit;
+                border-radius: var(--toolbar-page-border-radius);
                 .lib-css(padding, @toolbar-pages-item__padding);
                 .lib-css(min-width, @toolbar-pages-item__min-width);
                 .lib-css(height, @toolbar-pages-item__height);
