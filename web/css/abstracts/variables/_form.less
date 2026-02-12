@@ -13,6 +13,7 @@
 @input__focus__background: ~"var(--input-bg)";
 @input__focus__color: ~"var(--input-color)";
 @input__focus__border-color: ~"var(--input-border-color)";
+@input__inverted__color: currentColor;
 @input__inverted__background: false;
 @input__inverted__border-color: false;
 
@@ -145,7 +146,7 @@
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--input-color, @base__inverted__color);
+    .lib-css(--input-color, @input__inverted__color);
     .lib-css(--input-bg, @input__inverted__background);
     .lib-css(--input-border-color, @input__inverted__border-color);
 
@@ -168,7 +169,7 @@
 }
 
 .breeze-tokens-inverted-reset() {
-    .lib-css(--input-color, @base__color);
+    .lib-css(--input-color, @input__color);
     .lib-css(--input-bg, @input__background);
     .lib-css(--input-border-color, @input__border-color);
 
