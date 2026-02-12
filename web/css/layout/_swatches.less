@@ -152,7 +152,19 @@
                 content: '';
                 position: absolute;
                 inset: 0;
-                background: linear-gradient(to left top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 42%, #ffffff 43%, #ffffff 46%, #ff5216 47%, #ff5216 53%, #ffffff 54%, #ffffff 57%, rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, 0) 100%);
+                background: linear-gradient(
+                    to left top,
+                    transparent 0%,
+                    transparent 42%,
+                    var(--base-bg) 43%,
+                    var(--base-bg) 46%,
+                    #ff5216 47%,
+                    #ff5216 53%,
+                    var(--base-bg) 54%,
+                    var(--base-bg) 57%,
+                    transparent 58%,
+                    transparent 100%
+                );
             }
         }
     }
@@ -161,7 +173,7 @@
             &::before {
                 content: '';
                 &:extend(.spinner);
-                border-color: @base__color;
+                border-color: var(--base-color);
                 border-top-color: transparent;
                 opacity: .3;
                 position: absolute;
