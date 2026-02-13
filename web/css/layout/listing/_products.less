@@ -28,7 +28,7 @@
         width: var(--image-container-width, auto);
         overflow: hidden;
         .lib-css(border, @product-image__border);
-        .lib-css(border-radius, @product-image__border-radius);
+        border-radius: var(--image-border-radius);
         .product-image-wrapper {
             padding: 0 !important;
             width: 100%;
@@ -39,8 +39,8 @@
     .product.media .main-image,
     .product.media .images img,
     .product.media .thumbnails img {
+        border-radius: var(--product-image-border-radius);
         .lib-css(filter, @product-image__filter);
-        .lib-css(border-radius, @product-image__border-radius);
         .lib-css(mix-blend-mode, @product-image__mix-blend-mode);
     }
     .main-image-wrapper,
@@ -49,7 +49,7 @@
     .image-magnifier-stage,
     .product.media .item,
     .product.media .thumbnails a::after {
-        .lib-css(border-radius, @product-image__border-radius);
+        border-radius: var(--product-image-border-radius);
     }
 
     & when not (@product-image__mix-blend-mode = false) {

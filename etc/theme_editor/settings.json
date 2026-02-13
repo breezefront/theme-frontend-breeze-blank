@@ -2,56 +2,43 @@
   "version": "1.0",
   "sections": [
     {
-      "id": "elements_colors",
-      "name": "Colors",
+      "id": "layout",
+      "name": "Layout",
       "order": 10,
       "settings": [
         {
-          "id":  "base-bg",
-          "label": "Body Background",
-          "type": "color",
-          "default": "#ffffff",
-          "css_var": "--base-bg",
-          "palette": "default"
+          "id":  "max-width",
+          "label": "Container Width",
+          "type": "range",
+          "unit": "px",
+          "default": "1260px",
+          "min": "1024",
+          "max": "1920",
+          "css_var": "--container-max-width"
         },
+        {
+          "id":  "border-radius",
+          "label": "Roundness",
+          "type": "range",
+          "unit": "px",
+          "default": "0px",
+          "min": "0",
+          "max": "20",
+          "css_var": "--base-border-radius"
+        }
+      ]
+    },
+    {
+      "id": "typography",
+      "name": "Typography",
+      "order": 20,
+      "settings": [
         {
           "id":  "base-color",
           "label": "Text Color",
           "type": "color",
           "default": "#1e2939",
           "css_var": "--base-color",
-          "palette": "default"
-        },
-        {
-          "id":  "muted-color",
-          "label": "Muted Text Color",
-          "type": "color",
-          "default": "#6a7282",
-          "css_var": "--muted-color",
-          "palette": "default"
-        },
-        {
-          "id":  "muted-bg",
-          "label": "Muted Background",
-          "type": "color",
-          "default": "#f3f4f6",
-          "css_var": "--muted-bg",
-          "palette": "default"
-        },
-        {
-          "id":  "subtle-color",
-          "label": "Subtle Text Color",
-          "type": "color",
-          "default": "#e5e7eb",
-          "css_var": "--subtle-color",
-          "palette": "default"
-        },
-        {
-          "id":  "subtle-bg",
-          "label": "Subtle Background",
-          "type": "color",
-          "default": "#f9fafb",
-          "css_var": "--subtle-bg",
           "palette": "default"
         },
         {
@@ -62,6 +49,33 @@
           "css_var": "--link-color",
           "palette": "default"
         },
+        {
+          "id":  "font-size",
+          "label": "Font Size",
+          "type": "range",
+          "unit": "px",
+          "default": "16px",
+          "min": "12",
+          "max": "20",
+          "css_var": "--base-font-size"
+        },
+        {
+          "id":  "line-height",
+          "label": "Line Height",
+          "type": "range",
+          "unit": "px",
+          "default": "24px",
+          "min": "16",
+          "max": "36",
+          "css_var": "--base-line-height"
+        }
+      ]
+    },
+    {
+      "id": "buttons",
+      "name": "Buttons",
+      "order": 30,
+      "settings": [
         {
           "id":  "button-bg",
           "label": "Primary Button Background",
@@ -97,46 +111,9 @@
       ]
     },
     {
-      "id": "typography",
-      "name": "Typography",
-      "order": 20,
-      "settings": [
-        {
-          "id":  "font-size",
-          "label": "Font Size",
-          "type": "range",
-          "unit": "px",
-          "default": "16px",
-          "min": "12",
-          "max": "20",
-          "css_var": "--base-font-size"
-        },
-        {
-          "id":  "line-height",
-          "label": "Line Height",
-          "type": "range",
-          "unit": "px",
-          "default": "24px",
-          "min": "16",
-          "max": "36",
-          "css_var": "--base-line-height"
-        },
-        {
-          "id":  "border-radius",
-          "label": "Roundness",
-          "type": "range",
-          "unit": "px",
-          "default": "0px",
-          "min": "0",
-          "max": "20",
-          "css_var": "--base-border-radius"
-        }
-      ]
-    },
-    {
       "id": "listing",
       "name": "Product Listing",
-      "order": 30,
+      "order": 40,
       "settings": [
         {
           "id":  "columns-count",
@@ -150,7 +127,7 @@
         },
         {
           "id":  "gap",
-          "label": "Gap Between Items",
+          "label": "Distance Between Items",
           "type": "range",
           "unit": "px",
           "default": "16px",
