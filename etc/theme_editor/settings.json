@@ -109,33 +109,6 @@
           "palette": "default"
         }
       ]
-    },
-    {
-      "id": "listing",
-      "name": "Product Listing",
-      "order": 40,
-      "settings": [
-        {
-          "id":  "columns-count",
-          "label": "Columns Count",
-          "type": "range",
-          "unit": "",
-          "default": "3",
-          "min": "2",
-          "max": "5",
-          "css_var": "--listing-grid-columns"
-        },
-        {
-          "id":  "gap",
-          "label": "Distance Between Items",
-          "type": "range",
-          "unit": "px",
-          "default": "16px",
-          "min": "0",
-          "max": "48",
-          "css_var": "--listing-grid-gap"
-        }
-      ]
     }
   ],
   "palettes": {
