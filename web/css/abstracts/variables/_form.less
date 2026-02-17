@@ -16,6 +16,9 @@
 @input__inverted__color: currentColor;
 @input__inverted__background: false;
 @input__inverted__border-color: false;
+@input__inverted__focus__color: @input__inverted__color;
+@input__inverted__focus__background: @input__inverted__background;
+@input__inverted__focus__border-color: @input__inverted__border-color;
 
 @input__xs__border-radius: ~"calc(var(--input-border-radius) / 2)";
 @input__lg__font-weight: false;
@@ -48,8 +51,9 @@
 @button__hover__text-decoration: none;
 @button__inverted__background: false;
 @button__inverted__color: false;
-@button__inverted__hover__background: false;
 @button__inverted__border-color: false;
+@button__inverted__hover__color: false;
+@button__inverted__hover__background: false;
 
 @button__secondary__color: ~"color-mix(in srgb, var(--muted-color) 85%, var(--base-color))";
 @button__secondary__background: ~"var(--subtle-color)";
@@ -149,12 +153,17 @@
 .breeze-tokens-inverted() {
     .lib-css(--input-color, @input__inverted__color);
     .lib-css(--input-bg, @input__inverted__background);
+    .lib-css(--input-outline-color, @input__outline-color);
     .lib-css(--input-border-color, @input__inverted__border-color);
+    .lib-css(--input-focus-bg, @input__inverted__focus__background);
+    .lib-css(--input-focus-color, @input__inverted__focus__color);
+    .lib-css(--input-focus-border-color, @input__inverted__focus__border-color);
 
     .lib-css(--button-bg, @button__inverted__background);
-    .lib-css(--button-hover-bg, @button__inverted__hover__background);
     .lib-css(--button-color, @button__inverted__color);
     .lib-css(--button-border-color, @button__inverted__border-color);
+    .lib-css(--button-hover-bg, @button__inverted__hover__background);
+    .lib-css(--button-hover-color, @button__inverted__hover__color);
 
     .lib-css(--button-secondary-bg, @button__secondary__inverted__background);
     .lib-css(--button-secondary-color, @button__secondary__inverted__color);
@@ -173,12 +182,17 @@
 .breeze-tokens-inverted-reset() {
     .lib-css(--input-color, @input__color);
     .lib-css(--input-bg, @input__background);
+    .lib-css(--input-outline-color, @input__outline-color);
     .lib-css(--input-border-color, @input__border-color);
+    .lib-css(--input-focus-bg, @input__focus__background);
+    .lib-css(--input-focus-color, @input__focus__color);
+    .lib-css(--input-focus-border-color, @input__focus__border-color);
 
     .lib-css(--button-bg, @button__background);
-    .lib-css(--button-hover-bg, @button__hover__background);
     .lib-css(--button-color, @button__color);
     .lib-css(--button-border-color, @button__border-color);
+    .lib-css(--button-hover-bg, @button__hover__background);
+    .lib-css(--button-hover-color, @button__hover__color);
 
     .lib-css(--button-secondary-bg, @button__secondary__background);
     .lib-css(--button-secondary-color, @button__secondary__color);

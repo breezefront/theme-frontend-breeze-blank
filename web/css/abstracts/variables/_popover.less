@@ -2,6 +2,7 @@
 @popover__padding: @2;
 @popover__background: ~"var(--surface-bg)";
 @popover__color: ~"var(--surface-color)";
+@popover__border-width: 1px;
 @popover__border-color: ~"var(--subtle-color)";
 @popover__border-radius: ~"var(--base-border-radius)";
 @popover__shadow: ~"var(--shadow-lg)";
@@ -16,6 +17,7 @@
     --popover-padding: @popover__padding;
     .lib-css(--popover-bg, @popover__background);
     .lib-css(--popover-color, @popover__color);
+    .lib-css(--popover-border-width, @popover__border-width);
     .lib-css(--popover-border-color, @popover__border-color);
     .lib-css(--popover-border-radius, @popover__border-radius);
     .lib-css(--popover-box-shadow, @popover__shadow);

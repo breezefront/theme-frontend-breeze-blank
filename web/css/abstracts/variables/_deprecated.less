@@ -1,3 +1,8 @@
+// All __background-color variables removed. Use __brackground instead.
+// All __text-color variables removed. Use __color instead.
+// All __background-alpha variables removed. Use ~"color-mix()" instead.
+// All __text-alpha variables removed. Use ~"color-mix()" instead.
+
 @theme__brand-color: @blue-600;
 @theme__brand-hover-color: false;
 @theme__dark-color: @color__neutral-900;
@@ -64,11 +69,11 @@
 @button-secondary__dark__text-color: @button__secondary__inverted__color;
 @button-secondary__dark__background-color: @button__secondary__inverted__background;
 
-@dropdown__border: 1px solid @dropdown__border-color;
-@dropdown__shadow: @shadow-lg;
-@dropdown__filter: @shadow-lg;
-@dropdown__border-color: @popover__border-color;
-@dropdown__border-radius: @popover__border-radius;
+@dropdown__border: 1px solid @dropdown__border-color;   // removed
+@dropdown__shadow: @shadow-lg;                          // replaced with @popover_shadow
+@dropdown__filter: false;                               // replaced with @popover_filter
+@dropdown__border-color: @popover__border-color;        // replaced with @popover_border-color
+@dropdown__border-radius: @popover__border-radius;      // replaced with @popover_border-radius
 
 @breadcrumbs__min-height: @10;
 
