@@ -31,6 +31,8 @@
 @base__inverted__color: ~"var(--color-white)";
 @base__inverted__background: ~"var(--color-neutral-900)";
 
+@dark__background: ~"var(--color-neutral-900)";
+
 @muted__color: ~"var(--color-neutral-500)";
 @muted__background: ~"var(--color-neutral-100)";
 @muted__inverted__color: ~"var(--color-neutral-400)";
@@ -117,6 +119,8 @@
     .lib-css(--base-color, @base__color);
     .lib-css(--base-bg, @base__background);
     .lib-css(--base-border-radius, @base__border-radius);
+
+    .lib-css(--dark-bg, @dark__background);
 
     .lib-css(--muted-color, @muted__color);
     .lib-css(--muted-bg, @muted__background);

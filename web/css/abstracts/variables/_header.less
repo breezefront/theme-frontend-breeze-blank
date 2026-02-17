@@ -46,4 +46,15 @@
     & when (@header-panel__slideout) {
         --header-panel-slideout: true;
     }
+
+    .lib-css(--header-bg, @header__background);
+    & when (@header__dark) and (@header__background = false) {
+        --header-bg: var(--dark-bg);
+    }
+
+    .lib-css(--header-panel-color, @header-panel__color);
+    .lib-css(--header-panel-bg, @header-panel__background);
+    & when (@header-panel__dark) and (@header-panel__background = false) {
+        --header-panel-bg: var(--dark-bg);
+    }
 }

@@ -55,13 +55,10 @@
     .page-header {
         & when (@header__dark) {
             &:extend(.breeze-invert-colors all);
-            & when (@header__background = false) {
-                .lib-css(background, @dark__background);
-            }
         }
 
         position: relative;
-        .lib-css(background, @header__background);
+        background: var(--header-bg);
         .lib-css(box-shadow, @header__box-shadow);
         .lib-css(border, @header__border);
         .lib-css(border-width, @header__border-width);
@@ -69,13 +66,10 @@
         .panel.wrapper {
             & when (@header-panel__dark) {
                 &:extend(.breeze-invert-colors all);
-                & when (@header-panel__background = false) {
-                    .lib-css(background, @dark__background);
-                }
             }
 
-            .lib-css(color, @header-panel__color);
-            .lib-css(background, @header-panel__background);
+            color: var(--header-panel-color, var(--base-color));
+            background: var(--header-panel-bg);
             .lib-css(border, @header-panel__border);
             .lib-css(border-width, @header-panel__border-width);
         }
