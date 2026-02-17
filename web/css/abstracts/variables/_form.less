@@ -51,15 +51,16 @@
 @button__inverted__hover__background: false;
 @button__inverted__border-color: false;
 
-@button__secondary__color: ~"color-mix(in srgb, currentColor 80%, var(--button-secondary-bg))";
+@button__secondary__color: ~"color-mix(in srgb, var(--muted-color) 85%, var(--base-color))";
 @button__secondary__background: ~"var(--subtle-color)";
 @button__secondary__border-color: transparent;
-@button__secondary__hover__color: ~"color-mix(in srgb, currentColor 95%, var(--button-secondary-hover-bg, var(--button-secondary-bg)))";
+@button__secondary__hover__color: ~"var(--button-secondary-color)";
 @button__secondary__hover__background: ~"color-mix(in srgb, var(--button-secondary-bg) 90%, var(--color-black))";
 @button__secondary__hover__border-color: @button__secondary__border-color;
 @button__secondary__inverted__color: @button__secondary__color;
 @button__secondary__inverted__background: @button__secondary__background;
 @button__secondary__inverted__border-color: @button__secondary__border-color;
+@button__secondary__inverted__hover__color: @button__secondary__hover__color;
 @button__secondary__inverted__hover__background: @button__secondary__hover__background;
 
 @button__selected__color: ~"var(--button-color)";
@@ -156,9 +157,10 @@
     .lib-css(--button-border-color, @button__inverted__border-color);
 
     .lib-css(--button-secondary-bg, @button__secondary__inverted__background);
-    .lib-css(--button-secondary-hover-bg, @button__secondary__inverted__hover__background);
     .lib-css(--button-secondary-color, @button__secondary__inverted__color);
     .lib-css(--button-secondary-border-color, @button__secondary__inverted__border-color);
+    .lib-css(--button-secondary-hover-bg, @button__secondary__inverted__hover__background);
+    .lib-css(--button-secondary-hover-color, @button__secondary__inverted__hover__color);
 
     .lib-css(--button-ghost-bg, @button__ghost__inverted__background);
     .lib-css(--button-ghost-color, @button__ghost__inverted__color);
@@ -179,9 +181,10 @@
     .lib-css(--button-border-color, @button__border-color);
 
     .lib-css(--button-secondary-bg, @button__secondary__background);
-    .lib-css(--button-secondary-hover-bg, @button__secondary__hover__background);
     .lib-css(--button-secondary-color, @button__secondary__color);
     .lib-css(--button-secondary-border-color, @button__secondary__border-color);
+    .lib-css(--button-secondary-hover-bg, @button__secondary__hover__background);
+    .lib-css(--button-secondary-hover-color, @button__secondary__hover__color);
 
     .lib-css(--button-ghost-bg, @button__ghost__background);
     .lib-css(--button-ghost-color, @button__ghost__color);
