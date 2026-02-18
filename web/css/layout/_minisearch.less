@@ -54,15 +54,6 @@
             margin: 0 !important;
             .left(-9999px);
 
-            & when (@header__dark) {
-                :where(.header) & {
-                    .lib-css(background, @header__background);
-                    & when (@header__background = false) {
-                        .lib-css(background, @dark__background);
-                    }
-                }
-            }
-
             @media @minisearch__media-desktop {
                 background: transparent;
                 position: static;

@@ -43,3 +43,25 @@
 @footer-links__margin: false;
 
 @footer-cms-row__indent: @10;
+
+.breeze-tokens() {
+    .lib-css(--footer-bg, @footer__background);
+    & when (@footer__dark) and (@footer__background = false) {
+        --footer-bg: var(--dark-bg);
+    }
+
+    .lib-css(--footer-top-bg, @footer-top__background);
+    & when (@footer-top__dark) and (@footer-top__background = false) {
+        --footer-top-bg: var(--dark-bg);
+    }
+
+    .lib-css(--footer-middle-bg, @footer-middle__background);
+    & when (@footer-middle__dark) and (@footer-middle__background = false) {
+        --footer-middle-bg: var(--dark-bg);
+    }
+
+    .lib-css(--footer-bottom-bg, @footer-bottom__background);
+    & when (@footer-bottom__dark) and (@footer-bottom__background = false) {
+        --footer-bottom-bg: var(--dark-bg);
+    }
+}
