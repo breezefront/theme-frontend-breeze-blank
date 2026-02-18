@@ -1,6 +1,6 @@
 @logo__dark__filter: ~"invert(.7) sepia(.1) saturate(3) hue-rotate(180deg)";
 
-@header__dark: false;
+@header__dark: false; // true|deep|false
 @header__border: false;
 @header__border-width: false;
 @header__background: false;
@@ -48,7 +48,7 @@
     }
 
     .lib-css(--header-bg, @header__background);
-    & when (@header__dark) and (@header__background = false) {
+    & when not (@header__dark = false) and (@header__background = false) {
         --header-bg: var(--dark-bg);
     }
 

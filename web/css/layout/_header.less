@@ -53,7 +53,15 @@
     }
 
     .page-header {
-        & when (@header__dark) {
+        & when (@header__dark = true) {
+            &:extend(.breeze-invert-colors all);
+            .dropdown .dropdown,
+            .search-autocomplete,
+            .mage-dropdown-dialog {
+                &:extend(.breeze-invert-colors-reset all);
+            }
+        }
+        & when (@header__dark = deep) {
             &:extend(.breeze-invert-colors all);
         }
 
@@ -64,8 +72,11 @@
         .lib-css(border-width, @header__border-width);
 
         .panel.wrapper {
-            & when (@header-panel__dark) {
+            & when (@header-panel__dark = true) {
                 &:extend(.breeze-invert-colors all);
+                .dropdown .dropdown {
+                    &:extend(.breeze-invert-colors-reset all);
+                }
             }
 
             color: var(--header-panel-color, var(--base-color));

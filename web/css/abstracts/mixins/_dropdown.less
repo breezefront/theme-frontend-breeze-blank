@@ -15,7 +15,7 @@
     & when not (@critical) {
         cursor: pointer;
         &:hover {
-            color: var(--dropdown-item-hover-color);
+            color: var(--dropdown-item-hover-color, var(--popover-color));
             background: var(--dropdown-item-hover-bg);
         }
     }
