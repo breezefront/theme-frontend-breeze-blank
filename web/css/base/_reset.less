@@ -214,7 +214,7 @@
         height: var(--checkbox-size);
         width: var(--checkbox-size);
         border: var(--input-border-width) solid var(--input-border-color);
-        border-radius: var(--checkbox-border-radius, var(--base-border-radius));
+        border-radius: var(--checkbox-border-radius);
     }
     [type=radio] {
         border-radius: 100%;
@@ -289,6 +289,7 @@
 
         &[multiple] {
             overflow-y: auto;
+            border-radius: var(--multiselect-border-radius);
         }
     }
 

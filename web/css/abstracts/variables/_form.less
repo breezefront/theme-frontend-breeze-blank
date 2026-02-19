@@ -27,6 +27,7 @@
 @input__xl__padding: @3 @3;
 
 @select__padding-right: @10;
+@multiselect__border-radius: ~"min(@{5}, var(--input-border-radius))";
 
 @checkbox__size: @4;
 @checkbox__color: false;
@@ -117,6 +118,8 @@
     .lib-css(--input-focus-bg, @input__focus__background);
     .lib-css(--input-focus-color, @input__focus__color);
     .lib-css(--input-focus-border-color, @input__focus__border-color);
+
+    .lib-css(--multiselect-border-radius, @multiselect__border-radius);
 
     .lib-css(--checkbox-size, @checkbox__size);
     .lib-css(--checkbox-color, @checkbox__color);
