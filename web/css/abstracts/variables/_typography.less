@@ -33,14 +33,14 @@
 
 @dark__background: ~"var(--color-neutral-900)";
 
-@muted__color: ~"var(--color-neutral-500)";
+@muted__color: ~"color-mix(in oklab, var(--base-color) 60%, transparent)";
 @muted__background: ~"var(--color-neutral-100)";
-@muted__inverted__color: ~"var(--color-neutral-400)";
+@muted__inverted__color: @muted__color;
 @muted__inverted__background: ~"var(--color-neutral-800)";
 
-@subtle__color: ~"var(--color-neutral-200)";
+@subtle__color: ~"color-mix(in oklab, var(--base-color) 10%, transparent)";
 @subtle__background: ~"var(--color-neutral-50)";
-@subtle__inverted__color: ~"var(--color-neutral-700)";
+@subtle__inverted__color: @subtle__color;
 @subtle__inverted__background: ~"var(--color-neutral-800)";
 
 @focus-ring__width: 2px;
