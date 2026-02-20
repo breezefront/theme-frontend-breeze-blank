@@ -101,8 +101,8 @@
         .lib-css(--popover-color, currentColor);
 
         a.level-top {
+            color: var(--navigation-item-level0-color);
             border-radius: var(--navigation-item-level0-border-radius);
-            .lib-css(color, @navigation-item-level0__color);
             .lib-css(font-family, @navigation-item-level0__font-family);
             .lib-css(font-weight, @navigation-item-level0__font-weight);
             .lib-css(font-size, @navigation-item-level0__font-size);
@@ -297,7 +297,7 @@
             }
             li > a.level-top:hover,
             .opened > a.level-top {
-                .lib-css(color, @navigation-item-level0__opened__color);
+                color: var(--navigation-item-level0-opened-color);
                 .lib-css(background, @navigation-item-level0__opened__background);
             }
 
@@ -305,7 +305,7 @@
             li.has-active {
                 > a.level-top,
                 > a.level-top:hover {
-                    .lib-css(color, @navigation-item-level0__active__color);
+                    color: var(--navigation-item-level0-active-color);
                     .lib-css(background, @navigation-item-level0__active__background);
                 }
             }
