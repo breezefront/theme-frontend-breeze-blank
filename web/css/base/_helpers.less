@@ -20,6 +20,7 @@
         &-dark { background-color: var(--dark-bg) !important; }
         &-muted { background-color: var(--muted-bg) !important; }
         &-subtle { background-color: var(--subtle-bg) !important; }
+        &-current { background-color: currentColor !important; }
     }
 
     .font {
@@ -50,11 +51,11 @@
     }
 
     .leading {
-        &-tight { line-height: 1.25 !important; }
-        &-snug { line-height: 1.375 !important; }
-        &-normal { line-height: 1.5 !important; }
-        &-relaxed { line-height: 1.625 !important; }
-        &-loose { line-height: 2 !important; }
+        &-tight { line-height: 1.25 !important; --line-height: 1.25; }
+        &-snug { line-height: 1.375 !important; --line-height: 1.375; }
+        &-normal { line-height: 1.5 !important; --line-height: 1.5; }
+        &-relaxed { line-height: 1.625 !important; --line-height: 1.625; }
+        &-loose { line-height: 2 !important; --line-height: 2; }
     }
 
     .line-clamp-1 { &:extend(.breeze-line-clamp all); }
