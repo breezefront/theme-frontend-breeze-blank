@@ -1,18 +1,18 @@
-@footer__dark: false;
+@footer__dark: false; // false|true|deep
 @footer__background: false;
 @footer__at-bottom: false;
 
-@footer-top__dark: false;
+@footer-top__dark: false; // false|true
 @footer-top__padding: false;
 @footer-top__margin: false;
 @footer-top__background: false;
 
-@footer-middle__dark: false;
+@footer-middle__dark: false; // false|true
 @footer-middle__padding: false;
 @footer-middle__margin: false;
 @footer-middle__background: false;
 
-@footer-bottom__dark: false;
+@footer-bottom__dark: false; // false|true
 @footer-bottom__padding: false;
 @footer-bottom__margin: false;
 @footer-bottom__background: false;
@@ -46,7 +46,7 @@
 
 .breeze-tokens() {
     .lib-css(--footer-bg, @footer__background);
-    & when (@footer__dark) and (@footer__background = false) {
+    & when not (@footer__dark = false) and (@footer__background = false) {
         --footer-bg: var(--dark-bg);
     }
 

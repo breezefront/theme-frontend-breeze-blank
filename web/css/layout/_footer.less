@@ -126,6 +126,10 @@
 
         & when (@footer-top__dark) {
             &:extend(.breeze-invert-colors all);
+            .dropdown .dropdown,
+            .mage-dropdown-dialog {
+                &:extend(.breeze-invert-colors-reset all);
+            }
         }
     }
     .footer-middle {
@@ -133,6 +137,10 @@
 
         & when (@footer-middle__dark) {
             &:extend(.breeze-invert-colors all);
+            .dropdown .dropdown,
+            .mage-dropdown-dialog {
+                &:extend(.breeze-invert-colors-reset all);
+            }
         }
     }
     .footer-bottom {
@@ -140,12 +148,23 @@
 
         & when (@footer-bottom__dark) {
             &:extend(.breeze-invert-colors all);
+            .dropdown .dropdown,
+            .mage-dropdown-dialog {
+                &:extend(.breeze-invert-colors-reset all);
+            }
         }
     }
     .page-footer {
         background: var(--footer-bg);
 
-        & when (@footer__dark) {
+        & when (@footer__dark = true) {
+            &:extend(.breeze-invert-colors all);
+            .dropdown .dropdown,
+            .mage-dropdown-dialog {
+                &:extend(.breeze-invert-colors-reset all);
+            }
+        }
+        & when (@footer__dark = deep) {
             &:extend(.breeze-invert-colors all);
         }
 
