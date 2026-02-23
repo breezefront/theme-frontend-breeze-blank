@@ -1,4 +1,5 @@
 @navigation__color: @navigation__text-color;
+@navigation__inverted__color: @navigation__color;
 @navigation__media-desktop: @media-sm;
 @navigation__media-mobile: @media-sm-down;
 @navigation__media-wrap: ~"@{navigation__media-desktop} and (max-width: @{md-max})";
@@ -20,6 +21,9 @@
 @navigation-item-level0__opened__background: @dropdown-item__hover__background;
 @navigation-item-level0__active__color: @navigation-item-level0__opened__color;
 @navigation-item-level0__active__background: @navigation-item-level0__opened__background;
+@navigation-item-level0__inverted__color: @navigation-item-level0__color;
+@navigation-item-level0__inverted__opened__color: @navigation-item-level0__inverted__color;
+@navigation-item-level0__inverted__active__color: @navigation-item-level0__inverted__opened__color;
 
 @navigation-item__opened__background: @dropdown-item__hover__background;
 
@@ -50,9 +54,17 @@
 }
 
 .breeze-tokens-inverted() {
+    .lib-css(--navigation-color, @navigation__inverted__color);
+    .lib-css(--navigation-item-level0-color, @navigation-item-level0__inverted__color);
+    .lib-css(--navigation-item-level0-opened-color, @navigation-item-level0__inverted__opened__color);
+    .lib-css(--navigation-item-level0-active-color, @navigation-item-level0__inverted__active__color);
     .lib-css(--navigation-dropdown-border-color, @navigation-dropdown__inverted__border-color);
 }
 
 .breeze-tokens-inverted-reset() {
+    .lib-css(--navigation-color, @navigation__color);
+    .lib-css(--navigation-item-level0-color, @navigation-item-level0__color);
+    .lib-css(--navigation-item-level0-opened-color, @navigation-item-level0__opened__color);
+    .lib-css(--navigation-item-level0-active-color, @navigation-item-level0__active__color);
     .lib-css(--navigation-dropdown-border-color, @navigation-dropdown__border-color);
 }
