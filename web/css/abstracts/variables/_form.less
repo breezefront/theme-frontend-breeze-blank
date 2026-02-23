@@ -6,7 +6,7 @@
 @input__padding: @2 @3;
 @input__border-width: 1px;
 @input__border-radius: ~"var(--base-border-radius)";
-@input__border-color: ~"color-mix(in srgb, currentColor 30%, transparent)";
+@input__border-color: ~"color-mix(in oklch, currentColor 30%, transparent)";
 @input__outline-color: ~"var(--focus-ring-color)";
 @input__outline-width: ~"var(--focus-ring-width)";
 @input__outline-offset: ~"calc(var(--input-border-width) * -1)";
@@ -47,7 +47,7 @@
 @button__text-transform: false;
 @button__text-shadow: false;
 @button__hover__color: ~"var(--button-color)";
-@button__hover__background: ~"color-mix(in srgb, var(--button-bg) 90%, var(--color-black))";
+@button__hover__background: ~"color-mix(in oklch, var(--button-bg) 90%, var(--color-black))";
 @button__hover__border-color: @button__border-color;
 @button__hover__text-decoration: none;
 @button__inverted__background: false;
@@ -56,11 +56,11 @@
 @button__inverted__hover__color: false;
 @button__inverted__hover__background: false;
 
-@button__secondary__color: ~"color-mix(in srgb, var(--muted-color) 85%, var(--base-color))";
+@button__secondary__color: ~"color-mix(in oklch, var(--muted-color) 85%, var(--base-color))";
 @button__secondary__background: ~"var(--subtle-color)";
 @button__secondary__border-color: transparent;
 @button__secondary__hover__color: ~"var(--button-secondary-color)";
-@button__secondary__hover__background: ~"color-mix(in srgb, var(--button-secondary-bg) 90%, var(--color-black))";
+@button__secondary__hover__background: ~"color-mix(in oklch, var(--button-secondary-bg) 90%, var(--color-black))";
 @button__secondary__hover__border-color: @button__secondary__border-color;
 @button__secondary__inverted__color: @button__secondary__color;
 @button__secondary__inverted__background: @button__secondary__background;
@@ -76,13 +76,13 @@
 @button__ghost__background: transparent;
 @button__ghost__border-color: ~"var(--color-brand)";
 @button__ghost__hover__color: ~"var(--button-ghost-color)";
-@button__ghost__hover__background: ~"color-mix(in srgb, currentColor 7%, transparent)";
+@button__ghost__hover__background: ~"color-mix(in oklch, currentColor 7%, transparent)";
 @button__ghost__hover__border-color: ~"var(--button-ghost-border-color)";
 @button__ghost__inverted__color: ~"var(--base-color)";
 @button__ghost__inverted__background: transparent;
 @button__ghost__inverted__border-color: @button__ghost__inverted__color;
 @button__ghost__inverted__hover__color: @button__ghost__hover__color;
-@button__ghost__inverted__hover__background: ~"color-mix(in srgb, currentColor 7%, transparent)";
+@button__ghost__inverted__hover__background: ~"color-mix(in oklch, currentColor 7%, transparent)";
 @button__ghost__inverted__hover__border-color: @button__ghost__inverted__border-color;
 
 @button__xs__font-size: @font-size__xs;
