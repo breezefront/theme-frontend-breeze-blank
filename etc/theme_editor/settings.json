@@ -7,24 +7,24 @@
       "order": 10,
       "settings": [
         {
-          "id":  "max-width",
+          "id": "max-width",
           "label": "Container Width",
           "type": "range",
           "unit": "px",
           "default": "1260px",
           "min": "1024",
           "max": "1920",
-          "css_var": "--container-max-width"
+          "property": "--container-max-width"
         },
         {
-          "id":  "border-radius",
+          "id": "border-radius",
           "label": "Roundness",
           "type": "range",
           "unit": "px",
           "default": "0px",
           "min": "0",
           "max": "20",
-          "css_var": "--base-border-radius"
+          "property": "--base-border-radius"
         }
       ]
     },
@@ -34,40 +34,40 @@
       "order": 20,
       "settings": [
         {
-          "id":  "base-color",
+          "id": "base-color",
           "label": "Text Color",
           "type": "color",
           "default": "#1e2939",
-          "css_var": "--base-color",
+          "property": "--base-color",
           "palette": "default"
         },
         {
-          "id":  "link-color",
+          "id": "link-color",
           "label": "Link Color",
           "type": "color",
           "default": "#3160e2",
-          "css_var": "--link-color",
+          "property": "--link-color",
           "palette": "default"
         },
         {
-          "id":  "font-size",
+          "id": "font-size",
           "label": "Font Size",
           "type": "range",
           "unit": "px",
           "default": "16px",
           "min": "12",
           "max": "20",
-          "css_var": "--base-font-size"
+          "property": "--base-font-size"
         },
         {
-          "id":  "line-height",
+          "id": "line-height",
           "label": "Line Height",
           "type": "range",
           "unit": "px",
           "default": "24px",
           "min": "16",
           "max": "36",
-          "css_var": "--base-line-height"
+          "property": "--base-line-height"
         }
       ]
     },
@@ -77,35 +77,35 @@
       "order": 30,
       "settings": [
         {
-          "id":  "button-bg",
+          "id": "button-bg",
           "label": "Primary Button Background",
           "type": "color",
           "default": "#155dfc",
-          "css_var": "--button-bg",
+          "property": "--button-bg",
           "palette": "default"
         },
         {
-          "id":  "button-color",
+          "id": "button-color",
           "label": "Primary Button Color",
           "type": "color",
           "default": "#ffffff",
-          "css_var": "--button-color",
+          "property": "--button-color",
           "palette": "default"
         },
         {
-          "id":  "button-secondary-bg",
+          "id": "button-secondary-bg",
           "label": "Secondary Button Background",
           "type": "color",
           "default": "#e5e7eb",
-          "css_var": "--button-secondary-bg",
+          "property": "--button-secondary-bg",
           "palette": "default"
         },
         {
-          "id":  "button-secondary-color",
+          "id": "button-secondary-color",
           "label": "Secondary Button Color",
           "type": "color",
           "default": "#464f5d",
-          "css_var": "--button-secondary-color",
+          "property": "--button-secondary-color",
           "palette": "default"
         }
       ]
