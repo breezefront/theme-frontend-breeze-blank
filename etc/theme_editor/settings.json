@@ -2,33 +2,6 @@
   "version": "1.0",
   "sections": [
     {
-      "id": "layout",
-      "name": "Layout",
-      "order": 10,
-      "settings": [
-        {
-          "id": "max-width",
-          "label": "Container Width",
-          "type": "range",
-          "unit": "px",
-          "default": "1260px",
-          "min": "1024",
-          "max": "1920",
-          "property": "--container-max-width"
-        },
-        {
-          "id": "border-radius",
-          "label": "Roundness",
-          "type": "range",
-          "unit": "px",
-          "default": "0px",
-          "min": "0",
-          "max": "20",
-          "property": "--base-border-radius"
-        }
-      ]
-    },
-    {
       "id": "typography",
       "name": "Typography",
       "order": 20,
