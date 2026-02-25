@@ -1,11 +1,13 @@
 @surface__background: ~"var(--base-bg)";
 @surface__color: ~"var(--base-color)";
+@surface__border-radius: ~"min(@{5}, var(--base-border-radius))";
 @surface__inverted__background: ~"color-mix(in oklch, var(--base-bg) 95%, var(--base-color))";
 @surface__inverted__color: @surface__color;
 
 .breeze-tokens() {
     .lib-css(--surface-bg, @surface__background);
     .lib-css(--surface-color, @surface__color);
+    .lib-css(--surface-border-radius, @surface__border-radius);
 }
 
 .breeze-tokens-inverted() {
