@@ -2,4 +2,15 @@
     #recipients-options {
         &:extend(.abs-form-row-builder all);
     }
+
+    & when (@boxed-page = true) {
+        #product-sendtofriend-form {
+            &:extend(.breeze-block-boxed all);
+            max-width: 650px;
+            .action.primary {
+                &:extend(.breeze-button-lg all);
+                width: 100%;
+            }
+        }
+    }
 }

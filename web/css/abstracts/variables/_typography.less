@@ -31,6 +31,9 @@
 @base__inverted__color: ~"var(--color-white)";
 @base__inverted__background: ~"var(--color-neutral-900)";
 
+@body__background: ~"var(--base-bg)";
+@body__inverted__background: @body__background;
+
 @dark__background: ~"var(--color-neutral-900)";
 
 @muted__color: ~"color-mix(in oklch, var(--base-color) 63%, transparent)";
@@ -120,6 +123,7 @@
     .lib-css(--base-bg, @base__background);
     .lib-css(--base-border-radius, @base__border-radius);
 
+    .lib-css(--body-bg, @body__background);
     .lib-css(--dark-bg, @dark__background);
 
     .lib-css(--muted-color, @muted__color);
@@ -142,6 +146,7 @@
 .breeze-tokens-inverted() {
     .lib-css(--base-color, @base__inverted__color);
     .lib-css(--base-bg, @base__inverted__background);
+    .lib-css(--body-bg, @body__inverted__background);
     .lib-css(--muted-color, @muted__inverted__color);
     .lib-css(--muted-bg, @muted__inverted__background);
     .lib-css(--subtle-color, @subtle__inverted__color);
@@ -154,6 +159,7 @@
 .breeze-tokens-inverted-reset() {
     .lib-css(--base-color, @base__color);
     .lib-css(--base-bg, @base__background);
+    .lib-css(--body-bg, @body__background);
     .lib-css(--muted-color, @muted__color);
     .lib-css(--muted-bg, @muted__background);
     .lib-css(--subtle-color, @subtle__color);
