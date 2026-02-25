@@ -3,6 +3,7 @@
 @header__dark: false; // true|deep|false
 @header__border: false;
 @header__border-width: false;
+@header__color: false;
 @header__background: false;
 @header__box-shadow: false;
 
@@ -47,6 +48,7 @@
         --header-panel-slideout: true;
     }
 
+    .lib-css(--header-color, @header__color);
     .lib-css(--header-bg, @header__background);
     & when not (@header__dark = false) and (@header__background = false) {
         --header-bg: var(--dark-bg);
