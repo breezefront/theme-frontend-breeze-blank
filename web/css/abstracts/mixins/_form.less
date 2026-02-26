@@ -7,10 +7,10 @@
         .lib-css(font-family, @input__font-family);
         .lib-css(font-weight, @input__font-weight);
         .lib-css(font-size, @input__font-size);
+        .lib-css(border, @input__border);
 
         color: var(--input-color);
         background: var(--input-bg);
-        border: var(--input-border-width) solid var(--input-border-color);
         border-radius: var(--input-border-radius);
 
         &:disabled {
@@ -44,11 +44,11 @@
         .lib-css(font-size, @button__font-size);
         .lib-css(text-transform, @button__text-transform);
         .lib-css(box-shadow, @button__shadow);
+        .lib-css(border, @button__border);
 
         padding: @button__padding;
         color: var(--button-color);
         background: var(--button-bg);
-        border: var(--button-border-width) solid var(--button-border-color);
         border-radius: var(--button-border-radius);
         text-decoration: @button__text-decoration !important;
         white-space: nowrap;
