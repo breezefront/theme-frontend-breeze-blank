@@ -11,25 +11,25 @@
 // .max-w-xl  => .max-w-screen-xl
 // .max-w-xxl => .max-w-screen-xxl
 
-@theme__brand-color: @blue-600;
-@theme__brand-hover-color: false;
-@theme__dark-color: @color__neutral-900;
-@theme__dark__brand-color: lighten(@color__brand, 25%);
-@brand__color: @color__brand;
-@brand__hover__color: false;
+@theme__brand-color: @blue-600;                         // @color__brand;
+@theme__brand-hover-color: false;                       // removed
+@theme__dark-color: @color__neutral-900;                // @dark__background
+@theme__dark__brand-color: lighten(@color__brand, 25%); // @color__inverted__brand
+@brand__color: @color__brand;                           // @color__brand;
+@brand__hover__color: false;                            // removed
 @divider__color: ~"var(--subtle-color)";
 @z-layer__background: ~"var(--surface-bg)";
 @z-layer__color: ~"var(--surface-color)";
 @z-layer__dark__background-color: ~"var(--surface-bg)";
 
-@dark__gray-800: lighten(@gray-900, 2.5%);
-@dark__blue: lighten(@blue-700, 25%);
-@dark__green: lighten(@green-700, 35%);
-@dark__red: lighten(@red-700, 30%);
+@dark__gray-800: lighten(@gray-900, 2.5%);              // ~"var(--color-base)"
+@dark__blue: lighten(@blue-700, 25%);                   // @color__inverted__blue
+@dark__green: lighten(@green-700, 35%);                 // @color__inverted__green
+@dark__red: lighten(@red-700, 30%);                     // @color__inverted__red
 
-@base__text-color: @base__color;
-@base__background-color: @base__background;
-@base__inverted__text-alpha: .85;
+@base__text-color: ~"var(--color-neutral-800)";         // @base__color;
+@base__background-color: ~"var(--color-white)";         // @base__background
+@base__inverted__text-alpha: .85;                       // removed
 @base__inverted__text-color: @base__inverted__color;
 @base__dark__text-color: @base__inverted__color;
 @base__dark__background-color: @base__inverted__background;
@@ -48,6 +48,12 @@
 @message__background: ~"var(--message-bg)";
 @message__color: ~"var(--message-color)";
 @message__border-color: ~"var(--message-border-color, var(--message-color))";
+@message-success__text-color: ~"var(--color-success)";
+@message-success__background-color: false;
+@message-info__text-color: ~"var(--color-info)";
+@message-info__background-color: false;
+@message-error__text-color: ~"var(--color-danger)";
+@message-error__background-color: false;
 
 @headings__text-color: @headings__color;
 @headings__text-alpha: 1;
@@ -59,6 +65,7 @@
 @scrollbar-track__dark__background-color: @scrollbar-track__inverted__background;
 @scrollbar-thumb__dark__background-color: @scrollbar-thumb__inverted__background;
 
+@input__background-color: transparent;                              // @input__background
 @input__inverted__background-color: @input__inverted__background;
 @input__inverted__background-alpha: 0;
 @input__inverted__border-alpha: .5;
@@ -81,7 +88,7 @@
 @dropdown__border-color: @popover__border-color;        // replaced with @popover_border-color
 @dropdown__border-radius: @popover__border-radius;      // replaced with @popover_border-radius
 
-@breadcrumbs__min-height: @10;
+@breadcrumbs__min-height: @10;                          // removed
 
 @block-title__text-color: @block-title__color;
 @block-title__background-color: @block-title__background;
@@ -127,6 +134,121 @@
 }
 
 .breeze-tokens() {
+    --brand-color: var(--color-brand);
     --z-layer-bg: var(--popover-bg);
     --z-layer-color: var(--popover-color);
 }
+
+// Alias all deprecations to make them clearly visible in source code
+// We are using them to minimize BC issues
+@deprecated__theme__brand-color: @theme__brand-color;
+@deprecated__theme__brand-hover-color: @theme__brand-hover-color;
+@deprecated__theme__dark-color: @theme__dark-color;
+@deprecated__theme__dark__brand-color: @theme__dark__brand-color;
+@deprecated__brand__color: @brand__color;
+@deprecated__brand__hover__color: @brand__hover__color;
+@deprecated__divider__color: @divider__color;
+@deprecated__z-layer__background: @z-layer__background;
+@deprecated__z-layer__color: @z-layer__color;
+@deprecated__z-layer__dark__background-color: @z-layer__dark__background-color;
+
+@deprecated__dark__gray-800: @dark__gray-800;
+@deprecated__dark__blue: @dark__blue;
+@deprecated__dark__green: @dark__green;
+@deprecated__dark__red: @dark__red;
+
+@deprecated__base__text-color: @base__text-color;
+@deprecated__base__background-color: @base__background-color;
+@deprecated__base__inverted__text-alpha: @base__inverted__text-alpha;
+@deprecated__base__inverted__text-color: @base__inverted__text-color;
+@deprecated__base__dark__text-color: @base__dark__text-color;
+@deprecated__base__dark__background-color: @base__dark__background-color;
+
+@deprecated__ring__width: @ring__width;
+@deprecated__ring__offset: @ring__offset;
+@deprecated__ring__color: @ring__color;
+@deprecated__ring__inverted__text-color: @ring__inverted__text-color;
+
+@deprecated__muted__inverted__background-color: @muted__inverted__background-color;
+@deprecated__muted__inverted__background-alpha: @muted__inverted__background-alpha;
+@deprecated__muted__dark__background-color: @muted__dark__background-color;
+
+@deprecated__link__inverted__text-color: @link__inverted__text-color;
+
+@deprecated__message__background: @message__background;
+@deprecated__message__color: @message__color;
+@deprecated__message__border-color: @message__border-color;
+@deprecated__message-success__text-color: @message-success__text-color;
+@deprecated__message-success__background-color: @message-success__background-color;
+@deprecated__message-info__text-color: @message-info__text-color;
+@deprecated__message-info__background-color: @message-info__background-color;
+@deprecated__message-error__text-color: @message-error__text-color;
+@deprecated__message-error__background-color: @message-error__background-color;
+
+@deprecated__headings__text-color: @headings__text-color;
+@deprecated__headings__text-alpha: @headings__text-alpha;
+@deprecated__headings__inverted__text-color: @headings__inverted__text-color;
+@deprecated__headings__dark__text-color: @headings__dark__text-color;
+
+@deprecated__scrollbar-track__background-color: @scrollbar-track__background-color;
+@deprecated__scrollbar-thumb__background-color: @scrollbar-thumb__background-color;
+@deprecated__scrollbar-track__dark__background-color: @scrollbar-track__dark__background-color;
+@deprecated__scrollbar-thumb__dark__background-color: @scrollbar-thumb__dark__background-color;
+
+@deprecated__input__background-color: @input__background-color;
+@deprecated__input__inverted__background-color: @input__inverted__background-color;
+@deprecated__input__inverted__background-alpha: @input__inverted__background-alpha;
+@deprecated__input__inverted__border-alpha: @input__inverted__border-alpha;
+@deprecated__input__dark__border-color: @input__dark__border-color;
+
+@deprecated__button__inverted__background-color: @button__inverted__background-color;
+@deprecated__button__inverted__text-color: @button__inverted__text-color;
+@deprecated__button__inverted__hover__background-color: @button__inverted__hover__background-color;
+
+@deprecated__button-secondary__inverted__background-color: @button-secondary__inverted__background-color;
+@deprecated__button-secondary__inverted__border-color: @button-secondary__inverted__border-color;
+@deprecated__button-secondary__inverted__text-color: @button-secondary__inverted__text-color;
+@deprecated__button-secondary__inverted__hover__background-color: @button-secondary__inverted__hover__background-color;
+@deprecated__button-secondary__dark__text-color: @button-secondary__dark__text-color;
+@deprecated__button-secondary__dark__background-color: @button-secondary__dark__background-color;
+
+@deprecated__dropdown__border: @dropdown__border;
+@deprecated__dropdown__shadow: @dropdown__shadow;
+@deprecated__dropdown__filter: @dropdown__filter;
+@deprecated__dropdown__border-color: @dropdown__border-color;
+@deprecated__dropdown__border-radius: @dropdown__border-radius;
+
+@deprecated__breadcrumbs__min-height: @breadcrumbs__min-height;
+
+@deprecated__block-title__text-color: @block-title__text-color;
+@deprecated__block-title__background-color: @block-title__background-color;
+@deprecated__block-title__dark__text-color: @block-title__dark__text-color;
+@deprecated__block-title__dark__background-color: @block-title__dark__background-color;
+@deprecated__block-content__dark__background-color: @block-content__dark__background-color;
+
+@deprecated__block-content__background-color: @block-content__background-color;
+
+@deprecated__navigation__text-color: @navigation__text-color;
+@deprecated__minisearch-input__background-color: @minisearch-input__background-color;
+@deprecated__minisearch-button__text-color: @minisearch-button__text-color;
+@deprecated__minisearch-button__background-color: @minisearch-button__background-color;
+@deprecated__minisearch-button__focus__background-color: @minisearch-button__focus__background-color;
+
+@deprecated__listing-grid__media-md-1column__columns: @listing-grid__media-md-1column__columns;
+@deprecated__listing-grid__media-lg-1column__columns: @listing-grid__media-lg-1column__columns;
+@deprecated__listing-grid__media-xl-1column__columns: @listing-grid__media-xl-1column__columns;
+@deprecated__listing-grid__media-lg-3columns__columns: @listing-grid__media-lg-3columns__columns;
+@deprecated__listing-grid__media-xl-3columns__columns: @listing-grid__media-xl-3columns__columns;
+@deprecated__listing-grid-item-tocart__absolute__text-color: @listing-grid-item-tocart__absolute__text-color;
+@deprecated__listing-grid-item-tocart__absolute__background-color: @listing-grid-item-tocart__absolute__background-color;
+@deprecated__listing-grid-item-tocart__absolute__background-alpha: @listing-grid-item-tocart__absolute__background-alpha;
+@deprecated__listing-grid-item-tocart__absolute__hover__background-alpha: @listing-grid-item-tocart__absolute__hover__background-alpha;
+
+@deprecated__rating__color: @rating__color;
+
+@deprecated__tab-toggler__horizontal-active__border-color: @tab-toggler__horizontal-active__border-color;
+@deprecated__tab-toggler-inner__horizontal-active__background: @tab-toggler-inner__horizontal-active__background;
+@deprecated__tab-toggler__accordion-active__color: @tab-toggler__accordion-active__color;
+@deprecated__tab-toggler__accordion-active__background: @tab-toggler__accordion-active__background;
+
+@deprecated__footer-newsletter-input__background-color: @footer-newsletter-input__background-color;
