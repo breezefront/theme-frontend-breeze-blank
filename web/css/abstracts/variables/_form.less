@@ -38,8 +38,8 @@
 @button__font-weight: false;
 @button__font-family: false;
 @button__font-size: @input__font-size;
-@button__color: ~"var(--color-white)";
-@button__background: ~"var(--color-brand)";
+@button__color: @deprecated__button__text-color; // ~"var(--color-white)";
+@button__background: @deprecated__button__background-color; // ~"var(--color-brand)";
 @button__border: ~"var(--button-border-width) solid var(--button-border-color)";
 @button__border-width: ~"var(--input-border-width)";
 @button__border-radius: ~"var(--input-border-radius)";
@@ -49,15 +49,15 @@
 @button__text-decoration: none;
 @button__text-transform: false;
 @button__text-shadow: false;
-@button__hover__color: ~"var(--button-color)";
-@button__hover__background: ~"color-mix(in oklch, var(--button-bg) 90%, var(--color-black))";
+@button__hover__color: @deprecated__button__text-color; // ~"var(--button-color)";
+@button__hover__background: @deprecated__button__background-color; // ~"color-mix(in oklch, var(--button-bg) 90%, var(--color-black))";
 @button__hover__border-color: @button__border-color;
 @button__hover__text-decoration: none;
-@button__inverted__background: false;
-@button__inverted__color: false;
+@button__inverted__background: @deprecated__button__inverted__background-color; // false
+@button__inverted__color: @deprecated__button__inverted__text-color; // false
 @button__inverted__border-color: false;
-@button__inverted__hover__color: false;
-@button__inverted__hover__background: false;
+@button__inverted__hover__color: @deprecated__button__inverted__hover__text-color;
+@button__inverted__hover__background: @deprecated__button__inverted__hover__background-color; // false
 
 @button__secondary__color: ~"color-mix(in oklch, var(--base-color) 70%, transparent)";
 @button__secondary__background: ~"var(--subtle-color)";

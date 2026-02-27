@@ -72,11 +72,14 @@
 @input__inverted__border-alpha: .5;
 @input__dark__border-color: @input__inverted__border-color;
 
-@button__text-color: @button__color;
-@button__background-color: @button__background;
-@button__inverted__background-color: @button__inverted__background;
-@button__inverted__text-color: @button__inverted__color;
-@button__inverted__hover__background-color: @button__inverted__hover__background;
+@button__text-color: ~"var(--color-white)";
+@button__background-color: ~"var(--color-brand)";
+@button__hover__text-color: ~"var(--button-color)";
+@button__hover__background-color: ~"color-mix(in oklch, var(--button-bg) 90%, var(--color-black))";
+@button__inverted__background-color: false;
+@button__inverted__text-color: false;
+@button__inverted__hover__background-color: @button__inverted__background-color;
+@button__inverted__hover__text-color: @button__inverted__text-color;
 
 @button-secondary__text-color: @button__secondary__color;
 @button-secondary__background-color: @button__secondary__background;
@@ -206,9 +209,14 @@
 @deprecated__input__inverted__border-alpha: @input__inverted__border-alpha;
 @deprecated__input__dark__border-color: @input__dark__border-color;
 
+@deprecated__button__text-color: @button__text-color;
+@deprecated__button__background-color: @button__background-color;
+@deprecated__button__hover__text-color: @button__hover__text-color;
+@deprecated__button__hover__background-color: @button__hover__background-color;
 @deprecated__button__inverted__background-color: @button__inverted__background-color;
 @deprecated__button__inverted__text-color: @button__inverted__text-color;
 @deprecated__button__inverted__hover__background-color: @button__inverted__hover__background-color;
+@deprecated__button__inverted__hover__text-color: @button__inverted__hover__text-color;
 
 @deprecated__button-secondary__inverted__background-color: @button-secondary__inverted__background-color;
 @deprecated__button-secondary__inverted__border-color: @button-secondary__inverted__border-color;
