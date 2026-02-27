@@ -11,3 +11,18 @@
     and not (extract(@_value, 5) = false) {
     @{_property}: @_value;
 }
+
+.lib-css-if(
+    @_flag,
+    @_property,
+    @_value,
+    @_prefix: 0
+) when not (@_flag = '')
+    and not (@_flag = false)
+    and not (extract(@_flag, 1) = false)
+    and not (extract(@_flag, 2) = false)
+    and not (extract(@_flag, 3) = false)
+    and not (extract(@_flag, 4) = false)
+    and not (extract(@_flag, 5) = false) {
+    .lib-css(@_property, @_value, @_prefix);
+}

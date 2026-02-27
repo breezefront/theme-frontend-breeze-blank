@@ -17,6 +17,6 @@
 }
 
 .breeze-tokens-inverted-reset() {
-    .lib-css(--dropdown-item-hover-bg, @dropdown-item__hover__background);
-    .lib-css(--dropdown-item-hover-color, @dropdown-item__hover__color);
+    .lib-css-if(@dropdown-item__inverted__hover__background, --dropdown-item-hover-bg, @dropdown-item__hover__background);
+    .lib-css-if(@dropdown-item__inverted__hover__color, --dropdown-item-hover-color, @dropdown-item__hover__color);
 }

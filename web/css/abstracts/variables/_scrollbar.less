@@ -16,6 +16,6 @@
 }
 
 .breeze-tokens-inverted-reset() {
-    .lib-css(--scrollbar-bg, @scrollbar-track__background);
-    .lib-css(--scrollbar-color, @scrollbar-thumb__background);
+    .lib-css-if(@scrollbar-track__inverted__background, --scrollbar-bg, @scrollbar-track__background);
+    .lib-css-if(@scrollbar-thumb__inverted__background, --scrollbar-color, @scrollbar-thumb__background);
 }

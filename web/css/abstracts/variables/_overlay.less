@@ -10,5 +10,5 @@
 }
 
 .breeze-tokens-inverted-reset() {
-    .lib-css(--overlay-bg, @overlay__background);
+    .lib-css-if(@overlay__inverted__background, --overlay-bg, @overlay__background);
 }

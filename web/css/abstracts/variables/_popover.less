@@ -30,7 +30,7 @@
 }
 
 .breeze-tokens-inverted-reset() {
-    .lib-css(--popover-bg, @popover__background);
-    .lib-css(--popover-color, @popover__color);
-    .lib-css(--popover-border-color, @popover__border-color);
+    .lib-css-if(@popover__inverted__background, --popover-bg, @popover__background);
+    .lib-css-if(@popover__inverted__color, --popover-color, @popover__color);
+    .lib-css-if(@popover__inverted__border-color, --popover-border-color, @popover__border-color);
 }

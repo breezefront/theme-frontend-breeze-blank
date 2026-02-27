@@ -3,7 +3,7 @@
 @header__dark: false; // true|deep|false
 @header__border: false;
 @header__border-width: false;
-@header__color: ~"var(--base-color)";
+@header__color: false;
 @header__background: false;
 @header__box-shadow: false;
 
@@ -59,12 +59,4 @@
     & when (@header-panel__dark) and (@header-panel__background = false) {
         --header-panel-bg: var(--dark-bg);
     }
-}
-
-.breeze-tokens-inverted() {
-    .lib-css(--header-color, @header__color);
-}
-
-.breeze-tokens-inverted-reset() {
-    .lib-css(--header-color, @header__color);
 }

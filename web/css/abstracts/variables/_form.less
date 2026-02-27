@@ -158,7 +158,6 @@
 .breeze-tokens-inverted() {
     .lib-css(--input-color, @input__inverted__color);
     .lib-css(--input-bg, @input__inverted__background);
-    .lib-css(--input-outline-color, @input__outline-color);
     .lib-css(--input-border-color, @input__inverted__border-color);
     .lib-css(--input-focus-bg, @input__inverted__focus__background);
     .lib-css(--input-focus-color, @input__inverted__focus__color);
@@ -185,30 +184,29 @@
 }
 
 .breeze-tokens-inverted-reset() {
-    .lib-css(--input-color, @input__color);
-    .lib-css(--input-bg, @input__background);
-    .lib-css(--input-outline-color, @input__outline-color);
-    .lib-css(--input-border-color, @input__border-color);
-    .lib-css(--input-focus-bg, @input__focus__background);
-    .lib-css(--input-focus-color, @input__focus__color);
-    .lib-css(--input-focus-border-color, @input__focus__border-color);
+    .lib-css-if(@input__inverted__color, --input-color, @input__color);
+    .lib-css-if(@input__inverted__background, --input-bg, @input__background);
+    .lib-css-if(@input__inverted__border-color, --input-border-color, @input__border-color);
+    .lib-css-if(@input__inverted__focus__background, --input-focus-bg, @input__focus__background);
+    .lib-css-if(@input__inverted__focus__color, --input-focus-color, @input__focus__color);
+    .lib-css-if(@input__inverted__focus__border-color, --input-focus-border-color, @input__focus__border-color);
 
-    .lib-css(--button-bg, @button__background);
-    .lib-css(--button-color, @button__color);
-    .lib-css(--button-border-color, @button__border-color);
-    .lib-css(--button-hover-bg, @button__hover__background);
-    .lib-css(--button-hover-color, @button__hover__color);
+    .lib-css-if(@button__inverted__background, --button-bg, @button__background);
+    .lib-css-if(@button__inverted__color, --button-color, @button__color);
+    .lib-css-if(@button__inverted__border-color, --button-border-color, @button__border-color);
+    .lib-css-if(@button__inverted__hover__background, --button-hover-bg, @button__hover__background);
+    .lib-css-if(@button__inverted__hover__color, --button-hover-color, @button__hover__color);
 
-    .lib-css(--button-secondary-bg, @button__secondary__background);
-    .lib-css(--button-secondary-color, @button__secondary__color);
-    .lib-css(--button-secondary-border-color, @button__secondary__border-color);
-    .lib-css(--button-secondary-hover-bg, @button__secondary__hover__background);
-    .lib-css(--button-secondary-hover-color, @button__secondary__hover__color);
+    .lib-css-if(@button__secondary__inverted__background, --button-secondary-bg, @button__secondary__background);
+    .lib-css-if(@button__secondary__inverted__color, --button-secondary-color, @button__secondary__color);
+    .lib-css-if(@button__secondary__inverted__border-color, --button-secondary-border-color, @button__secondary__border-color);
+    .lib-css-if(@button__secondary__inverted__hover__background, --button-secondary-hover-bg, @button__secondary__hover__background);
+    .lib-css-if(@button__secondary__inverted__hover__color, --button-secondary-hover-color, @button__secondary__hover__color);
 
-    .lib-css(--button-ghost-bg, @button__ghost__background);
-    .lib-css(--button-ghost-color, @button__ghost__color);
-    .lib-css(--button-ghost-border-color, @button__ghost__border-color);
-    .lib-css(--button-ghost-hover-bg, @button__ghost__hover__background);
-    .lib-css(--button-ghost-hover-color, @button__ghost__hover__color);
-    .lib-css(--button-ghost-hover-border-color, @button__ghost__hover__border-color);
+    .lib-css-if(@button__ghost__inverted__background, --button-ghost-bg, @button__ghost__background);
+    .lib-css-if(@button__ghost__inverted__color, --button-ghost-color, @button__ghost__color);
+    .lib-css-if(@button__ghost__inverted__border-color, --button-ghost-border-color, @button__ghost__border-color);
+    .lib-css-if(@button__ghost__inverted__hover__background, --button-ghost-hover-bg, @button__ghost__hover__background);
+    .lib-css-if(@button__ghost__inverted__hover__color, --button-ghost-hover-color, @button__ghost__hover__color);
+    .lib-css-if(@button__ghost__inverted__hover__border-color, --button-ghost-hover-border-color, @button__ghost__hover__border-color);
 }

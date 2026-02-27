@@ -66,12 +66,12 @@
     .lib-css(--color-danger, @color__inverted__danger);
 }
 .breeze-tokens-inverted-reset() {
-    .lib-css(--color-brand, @color__brand);
-    .lib-css(--color-blue, @color__blue);
-    .lib-css(--color-green, @color__green);
-    .lib-css(--color-red, @color__red);
-    .lib-css(--color-yellow, @color__yellow);
-    .lib-css(--color-info, @color__info);
-    .lib-css(--color-success, @color__success);
-    .lib-css(--color-danger, @color__danger);
+    .lib-css-if(@color__inverted__brand, --color-brand, @color__brand);
+    .lib-css-if(@color__inverted__blue, --color-blue, @color__blue);
+    .lib-css-if(@color__inverted__green, --color-green, @color__green);
+    .lib-css-if(@color__inverted__red, --color-red, @color__red);
+    .lib-css-if(@color__inverted__yellow, --color-yellow, @color__yellow);
+    .lib-css-if(@color__inverted__info, --color-info, @color__info);
+    .lib-css-if(@color__inverted__success, --color-success, @color__success);
+    .lib-css-if(@color__inverted__danger, --color-danger, @color__danger);
 }

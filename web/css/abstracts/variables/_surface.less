@@ -16,6 +16,6 @@
 }
 
 .breeze-tokens-inverted-reset() {
-    .lib-css(--surface-bg, @surface__background);
-    .lib-css(--surface-color, @surface__color);
+    .lib-css-if(@surface__inverted__background, --surface-bg, @surface__background);
+    .lib-css-if(@surface__inverted__color, --surface-color, @surface__color);
 }

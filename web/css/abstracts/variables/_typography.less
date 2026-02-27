@@ -157,14 +157,14 @@
 }
 
 .breeze-tokens-inverted-reset() {
-    .lib-css(--base-color, @base__color);
-    .lib-css(--base-bg, @base__background);
-    .lib-css(--body-bg, @body__background);
-    .lib-css(--muted-color, @muted__color);
-    .lib-css(--muted-bg, @muted__background);
-    .lib-css(--subtle-color, @subtle__color);
-    .lib-css(--subtle-bg, @subtle__background);
-    .lib-css(--focus-ring-color, @focus-ring__color);
-    .lib-css(--link-color, @link__color);
-    .lib-css(--headings-color, @headings__color);
+    .lib-css-if(@base__inverted__color, --base-color, @base__color);
+    .lib-css-if(@base__inverted__background, --base-bg, @base__background);
+    .lib-css-if(@body__inverted__background, --body-bg, @body__background);
+    .lib-css-if(@muted__inverted__color, --muted-color, @muted__color);
+    .lib-css-if(@muted__inverted__background, --muted-bg, @muted__background);
+    .lib-css-if(@subtle__inverted__color, --subtle-color, @subtle__color);
+    .lib-css-if(@subtle__inverted__background, --subtle-bg, @subtle__background);
+    .lib-css-if(@focus-ring__inverted__color, --focus-ring-color, @focus-ring__color);
+    .lib-css-if(@link__inverted__color, --link-color, @link__color);
+    .lib-css-if(@headings__inverted__color, --headings-color, @headings__color);
 }

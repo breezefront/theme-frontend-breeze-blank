@@ -62,9 +62,9 @@
 }
 
 .breeze-tokens-inverted-reset() {
-    .lib-css(--navigation-color, @navigation__color);
-    .lib-css(--navigation-item-level0-color, @navigation-item-level0__color);
-    .lib-css(--navigation-item-level0-opened-color, @navigation-item-level0__opened__color);
-    .lib-css(--navigation-item-level0-active-color, @navigation-item-level0__active__color);
-    .lib-css(--navigation-dropdown-border-color, @navigation-dropdown__border-color);
+    .lib-css-if(@navigation__inverted__color, --navigation-color, @navigation__color);
+    .lib-css-if(@navigation-item-level0__inverted__color, --navigation-item-level0-color, @navigation-item-level0__color);
+    .lib-css-if(@navigation-item-level0__inverted__opened__color, --navigation-item-level0-opened-color, @navigation-item-level0__opened__color);
+    .lib-css-if(@navigation-item-level0__inverted__active__color, --navigation-item-level0-active-color, @navigation-item-level0__active__color);
+    .lib-css-if(@navigation-dropdown__inverted__border-color, --navigation-dropdown-border-color, @navigation-dropdown__border-color);
 }
