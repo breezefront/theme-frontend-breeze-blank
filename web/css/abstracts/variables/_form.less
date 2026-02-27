@@ -49,44 +49,44 @@
 @button__text-decoration: none;
 @button__text-transform: false;
 @button__text-shadow: false;
-@button__hover__color: @deprecated__button__text-color; // ~"var(--button-color)";
-@button__hover__background: @deprecated__button__background-color; // ~"color-mix(in oklch, var(--button-bg) 90%, var(--color-black))";
+@button__hover__color: @deprecated__button__hover__text-color; // ~"var(--button-color)";
+@button__hover__background: @deprecated__button__hover__background-color; // ~"color-mix(in oklch, var(--button-bg) 90%, var(--color-black))";
 @button__hover__border-color: @button__border-color;
 @button__hover__text-decoration: none;
-@button__inverted__background: @deprecated__button__inverted__background-color; // false
-@button__inverted__color: @deprecated__button__inverted__text-color; // false
+@button__inverted__color: false;
+@button__inverted__background: false;
 @button__inverted__border-color: false;
-@button__inverted__hover__color: @deprecated__button__inverted__hover__text-color;
-@button__inverted__hover__background: @deprecated__button__inverted__hover__background-color; // false
-
-@button__secondary__color: ~"color-mix(in oklch, var(--base-color) 70%, transparent)";
-@button__secondary__background: ~"var(--subtle-color)";
-@button__secondary__border-color: transparent;
-@button__secondary__hover__color: ~"var(--button-secondary-color)";
-@button__secondary__hover__background: ~"color-mix(in oklch, var(--button-secondary-bg) 90%, var(--color-black))";
-@button__secondary__hover__border-color: @button__secondary__border-color;
-@button__secondary__inverted__color: @button__secondary__color;
-@button__secondary__inverted__background: @button__secondary__background;
-@button__secondary__inverted__border-color: @button__secondary__border-color;
-@button__secondary__inverted__hover__color: @button__secondary__hover__color;
-@button__secondary__inverted__hover__background: @button__secondary__hover__background;
+@button__inverted__hover__color: @button__inverted__color;
+@button__inverted__hover__background: @button__inverted__background;
 
 @button__selected__color: ~"var(--button-color)";
 @button__selected__background: ~"var(--button-bg)";
 @button__selected__border-color: ~"var(--button-border-color)";
 
-@button__ghost__color: ~"var(--color-brand)";
-@button__ghost__background: transparent;
-@button__ghost__border-color: ~"var(--color-brand)";
-@button__ghost__hover__color: ~"var(--button-ghost-color)";
-@button__ghost__hover__background: ~"color-mix(in oklch, currentColor 7%, transparent)";
-@button__ghost__hover__border-color: ~"var(--button-ghost-border-color)";
-@button__ghost__inverted__color: ~"var(--base-color)";
-@button__ghost__inverted__background: transparent;
-@button__ghost__inverted__border-color: @button__ghost__inverted__color;
-@button__ghost__inverted__hover__color: @button__ghost__hover__color;
-@button__ghost__inverted__hover__background: ~"color-mix(in oklch, currentColor 7%, transparent)";
-@button__ghost__inverted__hover__border-color: @button__ghost__inverted__border-color;
+@button-secondary__color: @deprecated__button-secondary__text-color; // ~"color-mix(in oklch, var(--base-color) 70%, transparent)";
+@button-secondary__background: @deprecated__button-secondary__background-color; // ~"var(--subtle-color)";
+@button-secondary__border-color: transparent;
+@button-secondary__hover__color: @deprecated__button-secondary__hover__text-color; // ~"var(--button-secondary-color)";
+@button-secondary__hover__background: @deprecated__button-secondary__hover__background-color; // ~"color-mix(in oklch, var(--button-secondary-bg) 90%, var(--color-black))";
+@button-secondary__hover__border-color: @button-secondary__border-color;
+@button-secondary__inverted__color: @button-secondary__color;
+@button-secondary__inverted__background: @button-secondary__background;
+@button-secondary__inverted__border-color: @button-secondary__border-color;
+@button-secondary__inverted__hover__color: @button-secondary__hover__color;
+@button-secondary__inverted__hover__background: @button-secondary__hover__background;
+
+@button-ghost__color: ~"var(--color-brand)";
+@button-ghost__background: transparent;
+@button-ghost__border-color: ~"var(--color-brand)";
+@button-ghost__hover__color: ~"var(--button-ghost-color)";
+@button-ghost__hover__background: ~"color-mix(in oklch, currentColor 7%, transparent)";
+@button-ghost__hover__border-color: ~"var(--button-ghost-border-color)";
+@button-ghost__inverted__color: ~"var(--base-color)";
+@button-ghost__inverted__background: transparent;
+@button-ghost__inverted__border-color: @button-ghost__inverted__color;
+@button-ghost__inverted__hover__color: @button-ghost__hover__color;
+@button-ghost__inverted__hover__background: ~"color-mix(in oklch, currentColor 7%, transparent)";
+@button-ghost__inverted__hover__border-color: @button-ghost__inverted__border-color;
 
 @button__xs__font-size: @font-size__xs;
 @button__xs__line-height: @line-height__xs;
@@ -137,23 +137,23 @@
     .lib-css(--button-hover-color, @button__hover__color);
     .lib-css(--button-hover-border-color, @button__hover__border-color);
 
-    .lib-css(--button-secondary-bg, @button__secondary__background);
-    .lib-css(--button-secondary-color, @button__secondary__color);
-    .lib-css(--button-secondary-border-color, @button__secondary__border-color);
-    .lib-css(--button-secondary-hover-bg, @button__secondary__hover__background);
-    .lib-css(--button-secondary-hover-color, @button__secondary__hover__color);
-    .lib-css(--button-secondary-hover-border-color, @button__secondary__hover__border-color);
+    .lib-css(--button-secondary-bg, @button-secondary__background);
+    .lib-css(--button-secondary-color, @button-secondary__color);
+    .lib-css(--button-secondary-border-color, @button-secondary__border-color);
+    .lib-css(--button-secondary-hover-bg, @button-secondary__hover__background);
+    .lib-css(--button-secondary-hover-color, @button-secondary__hover__color);
+    .lib-css(--button-secondary-hover-border-color, @button-secondary__hover__border-color);
 
     .lib-css(--button-selected-bg, @button__selected__background);
     .lib-css(--button-selected-color, @button__selected__color);
     .lib-css(--button-selected-border-color, @button__selected__border-color);
 
-    .lib-css(--button-ghost-bg, @button__ghost__background);
-    .lib-css(--button-ghost-color, @button__ghost__color);
-    .lib-css(--button-ghost-border-color, @button__ghost__border-color);
-    .lib-css(--button-ghost-hover-bg, @button__ghost__hover__background);
-    .lib-css(--button-ghost-hover-color, @button__ghost__hover__color);
-    .lib-css(--button-ghost-hover-border-color, @button__ghost__hover__border-color);
+    .lib-css(--button-ghost-bg, @button-ghost__background);
+    .lib-css(--button-ghost-color, @button-ghost__color);
+    .lib-css(--button-ghost-border-color, @button-ghost__border-color);
+    .lib-css(--button-ghost-hover-bg, @button-ghost__hover__background);
+    .lib-css(--button-ghost-hover-color, @button-ghost__hover__color);
+    .lib-css(--button-ghost-hover-border-color, @button-ghost__hover__border-color);
 }
 
 .breeze-tokens-inverted() {
@@ -171,18 +171,18 @@
     .lib-css(--button-hover-bg, @button__inverted__hover__background);
     .lib-css(--button-hover-color, @button__inverted__hover__color);
 
-    .lib-css(--button-secondary-bg, @button__secondary__inverted__background);
-    .lib-css(--button-secondary-color, @button__secondary__inverted__color);
-    .lib-css(--button-secondary-border-color, @button__secondary__inverted__border-color);
-    .lib-css(--button-secondary-hover-bg, @button__secondary__inverted__hover__background);
-    .lib-css(--button-secondary-hover-color, @button__secondary__inverted__hover__color);
+    .lib-css(--button-secondary-bg, @button-secondary__inverted__background);
+    .lib-css(--button-secondary-color, @button-secondary__inverted__color);
+    .lib-css(--button-secondary-border-color, @button-secondary__inverted__border-color);
+    .lib-css(--button-secondary-hover-bg, @button-secondary__inverted__hover__background);
+    .lib-css(--button-secondary-hover-color, @button-secondary__inverted__hover__color);
 
-    .lib-css(--button-ghost-bg, @button__ghost__inverted__background);
-    .lib-css(--button-ghost-color, @button__ghost__inverted__color);
-    .lib-css(--button-ghost-border-color, @button__ghost__inverted__border-color);
-    .lib-css(--button-ghost-hover-bg, @button__ghost__inverted__hover__background);
-    .lib-css(--button-ghost-hover-color, @button__ghost__inverted__hover__color);
-    .lib-css(--button-ghost-hover-border-color, @button__ghost__inverted__hover__border-color);
+    .lib-css(--button-ghost-bg, @button-ghost__inverted__background);
+    .lib-css(--button-ghost-color, @button-ghost__inverted__color);
+    .lib-css(--button-ghost-border-color, @button-ghost__inverted__border-color);
+    .lib-css(--button-ghost-hover-bg, @button-ghost__inverted__hover__background);
+    .lib-css(--button-ghost-hover-color, @button-ghost__inverted__hover__color);
+    .lib-css(--button-ghost-hover-border-color, @button-ghost__inverted__hover__border-color);
 }
 
 .breeze-tokens-inverted-reset() {
@@ -200,16 +200,16 @@
     .lib-css-if(@button__inverted__hover__background, --button-hover-bg, @button__hover__background);
     .lib-css-if(@button__inverted__hover__color, --button-hover-color, @button__hover__color);
 
-    .lib-css-if(@button__secondary__inverted__background, --button-secondary-bg, @button__secondary__background);
-    .lib-css-if(@button__secondary__inverted__color, --button-secondary-color, @button__secondary__color);
-    .lib-css-if(@button__secondary__inverted__border-color, --button-secondary-border-color, @button__secondary__border-color);
-    .lib-css-if(@button__secondary__inverted__hover__background, --button-secondary-hover-bg, @button__secondary__hover__background);
-    .lib-css-if(@button__secondary__inverted__hover__color, --button-secondary-hover-color, @button__secondary__hover__color);
+    .lib-css-if(@button-secondary__inverted__background, --button-secondary-bg, @button-secondary__background);
+    .lib-css-if(@button-secondary__inverted__color, --button-secondary-color, @button-secondary__color);
+    .lib-css-if(@button-secondary__inverted__border-color, --button-secondary-border-color, @button-secondary__border-color);
+    .lib-css-if(@button-secondary__inverted__hover__background, --button-secondary-hover-bg, @button-secondary__hover__background);
+    .lib-css-if(@button-secondary__inverted__hover__color, --button-secondary-hover-color, @button-secondary__hover__color);
 
-    .lib-css-if(@button__ghost__inverted__background, --button-ghost-bg, @button__ghost__background);
-    .lib-css-if(@button__ghost__inverted__color, --button-ghost-color, @button__ghost__color);
-    .lib-css-if(@button__ghost__inverted__border-color, --button-ghost-border-color, @button__ghost__border-color);
-    .lib-css-if(@button__ghost__inverted__hover__background, --button-ghost-hover-bg, @button__ghost__hover__background);
-    .lib-css-if(@button__ghost__inverted__hover__color, --button-ghost-hover-color, @button__ghost__hover__color);
-    .lib-css-if(@button__ghost__inverted__hover__border-color, --button-ghost-hover-border-color, @button__ghost__hover__border-color);
+    .lib-css-if(@button-ghost__inverted__background, --button-ghost-bg, @button-ghost__background);
+    .lib-css-if(@button-ghost__inverted__color, --button-ghost-color, @button-ghost__color);
+    .lib-css-if(@button-ghost__inverted__border-color, --button-ghost-border-color, @button-ghost__border-color);
+    .lib-css-if(@button-ghost__inverted__hover__background, --button-ghost-hover-bg, @button-ghost__hover__background);
+    .lib-css-if(@button-ghost__inverted__hover__color, --button-ghost-hover-color, @button-ghost__hover__color);
+    .lib-css-if(@button-ghost__inverted__hover__border-color, --button-ghost-hover-border-color, @button-ghost__hover__border-color);
 }

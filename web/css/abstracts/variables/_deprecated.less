@@ -79,16 +79,16 @@
 @button__inverted__background-color: false;
 @button__inverted__text-color: false;
 @button__inverted__hover__background-color: @button__inverted__background-color;
-@button__inverted__hover__text-color: @button__inverted__text-color;
 
-@button-secondary__text-color: @button__secondary__color;
-@button-secondary__background-color: @button__secondary__background;
-@button-secondary__inverted__background-color: @button__secondary__inverted__background;
-@button-secondary__inverted__border-color: @button__secondary__inverted__border-color;
-@button-secondary__inverted__text-color: @button__secondary__inverted__color;
-@button-secondary__inverted__hover__background-color: @button__secondary__inverted__hover__background;
-@button-secondary__dark__text-color: @button__secondary__inverted__color;
-@button-secondary__dark__background-color: @button__secondary__inverted__background;
+@button-secondary__text-color: ~"color-mix(in oklch, var(--base-color) 70%, transparent)";
+@button-secondary__background-color: ~"var(--subtle-color)";
+@button-secondary__hover__text-color: ~"var(--button-secondary-color)";
+@button-secondary__hover__background-color: ~"color-mix(in oklch, var(--button-secondary-bg) 90%, var(--color-black))";
+@button-secondary__inverted__text-color: @button-secondary__text-color;
+@button-secondary__inverted__background-color: @button-secondary__background-color;
+@button-secondary__inverted__hover__background-color: @button-secondary__hover__background-color;
+@button-secondary__dark__text-color: @button-secondary__inverted__text-color;
+@button-secondary__dark__background-color: @button-secondary__inverted__background-color;
 
 @dropdown__border: 1px solid @dropdown__border-color;   // removed
 @dropdown__shadow: @shadow-lg;                          // replaced with @popover_shadow
@@ -204,26 +204,16 @@
 @deprecated__scrollbar-thumb__dark__background-color: @scrollbar-thumb__dark__background-color;
 
 @deprecated__input__background-color: @input__background-color;
-@deprecated__input__inverted__background-color: @input__inverted__background-color;
-@deprecated__input__inverted__background-alpha: @input__inverted__background-alpha;
-@deprecated__input__inverted__border-alpha: @input__inverted__border-alpha;
-@deprecated__input__dark__border-color: @input__dark__border-color;
 
 @deprecated__button__text-color: @button__text-color;
 @deprecated__button__background-color: @button__background-color;
 @deprecated__button__hover__text-color: @button__hover__text-color;
 @deprecated__button__hover__background-color: @button__hover__background-color;
-@deprecated__button__inverted__background-color: @button__inverted__background-color;
-@deprecated__button__inverted__text-color: @button__inverted__text-color;
-@deprecated__button__inverted__hover__background-color: @button__inverted__hover__background-color;
-@deprecated__button__inverted__hover__text-color: @button__inverted__hover__text-color;
 
-@deprecated__button-secondary__inverted__background-color: @button-secondary__inverted__background-color;
-@deprecated__button-secondary__inverted__border-color: @button-secondary__inverted__border-color;
-@deprecated__button-secondary__inverted__text-color: @button-secondary__inverted__text-color;
-@deprecated__button-secondary__inverted__hover__background-color: @button-secondary__inverted__hover__background-color;
-@deprecated__button-secondary__dark__text-color: @button-secondary__dark__text-color;
-@deprecated__button-secondary__dark__background-color: @button-secondary__dark__background-color;
+@deprecated__button-secondary__text-color: @button-secondary__text-color;
+@deprecated__button-secondary__background-color: @button-secondary__background-color;
+@deprecated__button-secondary__hover__text-color: @button-secondary__hover__text-color;
+@deprecated__button-secondary__hover__background-color: @button-secondary__hover__background-color;
 
 @deprecated__dropdown__border: @dropdown__border;
 @deprecated__dropdown__shadow: @dropdown__shadow;
