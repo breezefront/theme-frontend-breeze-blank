@@ -1,7 +1,7 @@
 @input__font-weight: false;
 @input__font-family: false;
 @input__font-size: false;
-@input__color: currentColor;
+@input__color: false;
 @input__background: @deprecated__input__background-color;
 @input__padding: @2 @3;
 @input__border: ~"var(--input-border-width) solid var(--input-border-color)";
@@ -14,9 +14,10 @@
 @input__focus__background: ~"var(--input-bg)";
 @input__focus__color: ~"var(--input-color)";
 @input__focus__border-color: ~"var(--input-border-color)";
-@input__inverted__color: currentColor;
-@input__inverted__background: ~"var(--base-bg)";
+@input__inverted__color: false;
+@input__inverted__background: false;
 @input__inverted__border-color: false;
+@input__inverted__outline-color: false;
 @input__inverted__focus__color: @input__inverted__color;
 @input__inverted__focus__background: @input__inverted__background;
 @input__inverted__focus__border-color: @input__inverted__border-color;
@@ -159,6 +160,7 @@
     .lib-css(--input-color, @input__inverted__color);
     .lib-css(--input-bg, @input__inverted__background);
     .lib-css(--input-border-color, @input__inverted__border-color);
+    .lib-css(--input-outline-color, @input__inverted__outline-color);
     .lib-css(--input-focus-bg, @input__inverted__focus__background);
     .lib-css(--input-focus-color, @input__inverted__focus__color);
     .lib-css(--input-focus-border-color, @input__inverted__focus__border-color);
@@ -187,6 +189,7 @@
     .lib-css-if(@input__inverted__color, --input-color, @input__color);
     .lib-css-if(@input__inverted__background, --input-bg, @input__background);
     .lib-css-if(@input__inverted__border-color, --input-border-color, @input__border-color);
+    .lib-css-if(@input__inverted__outline-color, --input-outline-color, @input__outline-color);
     .lib-css-if(@input__inverted__focus__background, --input-focus-bg, @input__focus__background);
     .lib-css-if(@input__inverted__focus__color, --input-focus-color, @input__focus__color);
     .lib-css-if(@input__inverted__focus__border-color, --input-focus-border-color, @input__focus__border-color);
