@@ -1,8 +1,8 @@
 @input__font-weight: false;
 @input__font-family: false;
 @input__font-size: false;
-@input__color: false;
-@input__background: @deprecated__input__background-color;
+@input__color: @deprecated__input__text-color; // ~"var(--base-color)";
+@input__background: @deprecated__input__background-color; // ~"var(--base-bg)";
 @input__padding: @2 @3;
 @input__border: ~"var(--input-border-width) solid var(--input-border-color)";
 @input__border-width: 1px;
@@ -15,7 +15,7 @@
 @input__focus__color: ~"var(--input-color)";
 @input__focus__border-color: ~"var(--input-border-color)";
 @input__inverted__color: false;
-@input__inverted__background: transparent;
+@input__inverted__background: ~"var(--base-bg)";
 @input__inverted__border-color: false;
 @input__inverted__outline-color: false;
 @input__inverted__focus__color: @input__inverted__color;
