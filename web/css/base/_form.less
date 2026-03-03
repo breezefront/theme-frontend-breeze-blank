@@ -4,8 +4,7 @@
     [type=radio],
     [type=image]
 )),
-textarea,
-select {
+:where(textarea, select) {
     &:extend(.breeze-input all);
 }
 

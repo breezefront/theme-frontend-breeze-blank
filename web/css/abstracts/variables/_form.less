@@ -28,6 +28,7 @@
 @input__xl__font-weight: false;
 @input__xl__padding: @3 @3;
 
+@textarea__border-radius: ~"min(@{5}, var(--input-border-radius))";
 @select__padding-right: @10;
 @multiselect__border-radius: ~"min(@{5}, var(--input-border-radius))";
 
@@ -121,6 +122,8 @@
     .lib-css(--input-focus-bg, @input__focus__background);
     .lib-css(--input-focus-color, @input__focus__color);
     .lib-css(--input-focus-border-color, @input__focus__border-color);
+
+    .lib-css(--textarea-border-radius, @textarea__border-radius);
 
     .lib-css(--multiselect-border-radius, @multiselect__border-radius);
 
