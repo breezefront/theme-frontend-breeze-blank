@@ -11,5 +11,8 @@
     &::-webkit-scrollbar-thumb {
         background: var(--scrollbar-color, var(--muted-color));
         border-radius: @scrollbar__border-radius;
+        &:hover {
+            background: var(--scrollbar-color, color-mix(in oklch, var(--muted-color) 80%, var(--color-black)));
+        }
     }
 }
