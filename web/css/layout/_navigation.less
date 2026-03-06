@@ -330,16 +330,16 @@
 
             .submenu {
                 width: @52;
-                .left(0);
-                .right(auto);
+                .left(@navigation-dropdown-level0__left);
+                .right(@navigation-dropdown-level0__right);
                 .lib-css(border, @navigation-dropdown__border);
                 border-color: var(--navigation-dropdown-border-color);
                 border-radius: var(--navigation-dropdown-border-radius);
                 box-shadow: var(--navigation-dropdown-shadow);
 
                 .submenu {
-                    top: -@0-5 !important;
-                    .left(~"calc(100% - @{4}) !important");
+                    .lib-css(top, @navigation-dropdown__top);
+                    .left(@navigation-dropdown__left);
                 }
             }
         }
