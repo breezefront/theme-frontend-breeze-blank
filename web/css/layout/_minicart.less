@@ -135,10 +135,10 @@
 & when not (@critical) {
     .minicart-wrapper {
         .mage-dropdown-dialog {
-            width: @80;
+            width: @minicart__width;
             max-width: 90vw;
             display: block !important;
-            padding: @3 @4;
+            padding: @minicart__padding;
             .modrtl(transform-origin, top right, top left);
         }
         .showcart {
@@ -163,8 +163,8 @@
         .action.close {
             &:extend(.breeze-button-close all);
             position: absolute;
-            top: @2-5;
-            .right(@2-5);
+            top: @minicart-close__top;
+            .right(@minicart-close__right);
         }
         .items-total {
             &:extend(.breeze-text-lg);
