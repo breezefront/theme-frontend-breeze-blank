@@ -1,5 +1,4 @@
 @modal__background: ~"var(--surface-bg)";
-@modal__backdrop-filter: ~"var(--popover-backdrop-filter)";
 @modal__border-radius: ~"min(@{5}, var(--base-border-radius))";
 @modal__box-shadow: ~"var(--shadow-xl-around)";
 @modal__max-width: 500px;
@@ -17,7 +16,6 @@
 
 .breeze-tokens() {
     .lib-css(--modal-bg, @modal__background);
-    .lib-css(--modal-backdrop-filter, @modal__backdrop-filter);
     .lib-css(--modal-border-radius, @modal__border-radius);
     .lib-css(--modal-box-shadow, @modal__box-shadow);
 

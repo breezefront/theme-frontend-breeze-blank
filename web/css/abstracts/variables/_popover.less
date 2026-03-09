@@ -7,7 +7,6 @@
 @popover__border-radius: ~"min(@{5}, var(--base-border-radius))";
 @popover__shadow: ~"var(--shadow-lg)";
 @popover__filter: false;
-@popover__backdrop-filter: false;
 
 @popover__inverted__background: ~"var(--surface-bg)";
 @popover__inverted__color: ~"var(--surface-color)";
@@ -22,7 +21,6 @@
     .lib-css(--popover-border-color, @popover__border-color);
     .lib-css(--popover-border-radius, @popover__border-radius);
     .lib-css(--popover-box-shadow, @popover__shadow);
-    .lib-css(--popover-backdrop-filter, @popover__backdrop-filter);
 }
 
 .breeze-tokens-inverted() {

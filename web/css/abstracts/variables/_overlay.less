@@ -1,10 +1,8 @@
 @overlay__background: ~"color-mix(in oklch, var(--color-black) 75%, transparent)";
-@overlay__backdrop-filter: ~"var(--modal-backdrop-filter)";
 @overlay__inverted__background: false;
 
 .breeze-tokens() {
     .lib-css(--overlay-bg, @overlay__background);
-    .lib-css(--overlay-backdrop-filter, @overlay__backdrop-filter);
 }
 
 .breeze-tokens-inverted() {
