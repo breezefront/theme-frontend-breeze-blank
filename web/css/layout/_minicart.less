@@ -220,15 +220,19 @@
             padding: 0 @1 @1-5;
             .margin(0 0 0 -@1);
 
+            animation: minicart-hide-mask;
+            animation-timeline: scroll(self);
+            animation-range: 95%;
+            mask-composite: exclude;
+            mask-repeat: no-repeat;
+            mask-image: ~"linear-gradient(to bottom, black calc(100% - 1rem), transparent)";
+
             .modal-slide[data-type="slide"] & {
                 max-height: none;
             }
         }
         .message {
             margin-top: @1;
-        }
-        &::after {
-            &:extend(.gradient-overflow);
         }
     }
 
@@ -344,6 +348,12 @@
         }
         .action.delete::before {
             .breeze-icon(@icon-trash, @5);
+        }
+    }
+
+    @keyframes minicart-hide-mask {
+        to {
+            mask-size: ~"100% calc(100% + 1rem)";
         }
     }
 }
