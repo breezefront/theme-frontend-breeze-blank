@@ -115,6 +115,13 @@
 @link__color: ~"var(--color-blue)";
 @link__inverted__color: ~"var(--color-blue)";
 
+@clamp__color: ~"var(--base-color)";
+@clamp__bg: ~"var(--base-bg)";
+@clamp__font-weight: 600;
+@clamp__font-family: @font-family__base;
+@clamp__font-size: @font-size__base;
+@clamp__text-decoration: underline;
+
 .breeze-tokens() {
     .lib-css(--base-font-family, @base__font-family);
     .lib-css(--base-font-size, @base__font-size);
@@ -141,6 +148,9 @@
     .lib-css(--headings-color, @headings__color);
     .lib-css(--headings-font-family, @headings__font-family);
     .lib-css(--headings-text-transform, @headings__text-transform);
+
+    .lib-css(--clamp-color, @clamp__color);
+    .lib-css(--clamp-bg, @clamp__bg);
 }
 
 .breeze-tokens-inverted() {
