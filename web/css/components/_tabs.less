@@ -19,4 +19,17 @@
             &:extend(.breeze-tab-content-active all);
         }
     }
+
+    > [role="tablist"] {
+        ~ [data-role="collapsible"] {
+            &:nth-child(2):not([aria-expanded]) {
+                &:extend(.breeze-tab-toggler-active all);
+            }
+        }
+        ~ [data-role="content"] {
+            &:nth-child(3):not([aria-hidden]) {
+                &:extend(.breeze-tab-content-active all);
+            }
+        }
+    }
 }
