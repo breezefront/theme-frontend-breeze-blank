@@ -81,6 +81,8 @@
 .breeze-tab-toggler-horizontal {
     & when (@critical) {
         .margin(@tab-toggler__horizontal__margin);
+        .lib-css(font-size, @tab-toggler__horizontal__font-size);
+        .lib-css(font-weight, @tab-toggler__horizontal__font-weight);
         .lib-css(padding, @tab-toggler__horizontal__padding);
         .lib-css(border, @tab-toggler__horizontal__border);
         & when not (@tab-toggler__horizontal__border-width = false) {
@@ -105,7 +107,10 @@
 
     & when (@critical) {
         justify-content: space-between;
+        .lib-css(font-size, @tab-toggler__accordion__font-size);
+        .lib-css(font-weight, @tab-toggler__accordion__font-weight);
         .lib-css(margin, @tab-toggler__accordion__margin);
+        .lib-css(padding, @tab-toggler__accordion__padding);
         .lib-css(border, @tab-toggler__accordion__border);
         .lib-css(border-width, @tab-toggler__accordion__border-width);
         .lib-css(--tab-toggler-border-radius, @tab-toggler__accordion__border-radius);
