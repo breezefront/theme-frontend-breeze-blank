@@ -1,5 +1,5 @@
 .breeze-tabs {
-    & when (@critical) and (@tab-horizontal__media) {
+    & when (@critical) and not (@tab-horizontal__media = false) {
         @media @tab-horizontal__media {
             display: flex;
             align-items: center;
@@ -21,7 +21,7 @@
         .breeze-tab-toggler-accordion();
     }
 
-    & when (@tab-horizontal__media) {
+    & when not (@tab-horizontal__media = false) {
         @media @tab-horizontal__media {
             .breeze-tab-toggler-horizontal();
         }
@@ -34,7 +34,7 @@
         .breeze-tab-toggler-accordion-active();
     }
 
-    & when (@tab-horizontal__media) {
+    & when not (@tab-horizontal__media = false) {
         @media @tab-horizontal__media {
             .breeze-tab-toggler-horizontal-active();
         }
@@ -159,7 +159,7 @@
 
 .breeze-tab-content {
     .breeze-tab-content-common();
-    & when (@tab-horizontal__media) {
+    & when not (@tab-horizontal__media = false) {
         @media @tab-horizontal__media {
             .breeze-tab-content-horizontal();
         }
