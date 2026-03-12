@@ -259,21 +259,23 @@
         &:extend(.breeze-prose all);
     }
 
-    @media @product-review-form__float-media {
-        .product.info {
-            #reviews::after {
-                content: '';
-                display: table;
-                clear: both;
-            }
-            .review-add + .review-list, // reviews page
-            #product-review-container {
-                .float(@product-review-list__float);
-                .lib-css(width, @product-review-list__width);
-            }
-            .review-add {
-                .float(@product-review-form__float);
-                .lib-css(width, @product-review-form__width);
+    & when (@product-review-form__float-media) {
+        @media @product-review-form__float-media {
+            .product.info {
+                #reviews::after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+                .review-add + .review-list, // reviews page
+                #product-review-container {
+                    .float(@product-review-list__float);
+                    .lib-css(width, @product-review-list__width);
+                }
+                .review-add {
+                    .float(@product-review-form__float);
+                    .lib-css(width, @product-review-form__width);
+                }
             }
         }
     }
