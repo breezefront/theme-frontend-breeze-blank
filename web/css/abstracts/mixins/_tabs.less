@@ -1,5 +1,5 @@
 .breeze-tabs {
-    & when (@critical) {
+    & when (@critical) and (@tab-horizontal__media) {
         @media @tab-horizontal__media {
             display: flex;
             align-items: center;
@@ -21,8 +21,10 @@
         .breeze-tab-toggler-accordion();
     }
 
-    @media @tab-horizontal__media {
-        .breeze-tab-toggler-horizontal();
+    & when (@tab-horizontal__media) {
+        @media @tab-horizontal__media {
+            .breeze-tab-toggler-horizontal();
+        }
     }
 }
 .breeze-tab-toggler-active {
@@ -32,8 +34,10 @@
         .breeze-tab-toggler-accordion-active();
     }
 
-    @media @tab-horizontal__media {
-        .breeze-tab-toggler-horizontal-active();
+    & when (@tab-horizontal__media) {
+        @media @tab-horizontal__media {
+            .breeze-tab-toggler-horizontal-active();
+        }
     }
 }
 
@@ -155,8 +159,10 @@
 
 .breeze-tab-content {
     .breeze-tab-content-common();
-    @media @tab-horizontal__media {
-        .breeze-tab-content-horizontal();
+    & when (@tab-horizontal__media) {
+        @media @tab-horizontal__media {
+            .breeze-tab-content-horizontal();
+        }
     }
 }
 .breeze-tab-content-active {
