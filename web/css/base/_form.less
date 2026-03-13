@@ -132,11 +132,11 @@ button,
     :where(.field:not([style*="display: none"])) + .fieldset,
     .field + .field-recaptcha,
     .field ~ .field {
-        margin-top: @3;
+        margin-top: @form-field__gap;
     }
     .field {
         .choice + .choice {
-            margin-top: @0-5;
+            margin-top: @form-field-choice__gap;
         }
         .addon {
             display: flex;
@@ -193,15 +193,15 @@ button,
             }
         }
         .admin__field-option + .admin__field-option {
-            margin-top: @1-5;
+            margin-top: @form-field-option__gap;
         }
         .control {
             position: relative;
         }
         .label + .control {
-            margin-top: @0-5;
+            margin-top: @form-field-control__margin-top;
             &:has(.admin__field-option) {
-                margin-top: @1-5;
+                margin-top: @form-field-control__option__margin-top;
             }
         }
         ._with-tooltip {
@@ -283,7 +283,7 @@ button,
 & when not (@critical) {
     div.mage-error,
     div.field-error {
-        margin-top: @0-5;
+        margin-top: @form-field-error__margin-top;
         font-size: .9rem;
         color: var(--form-error-color, var(--color-danger));
     }
