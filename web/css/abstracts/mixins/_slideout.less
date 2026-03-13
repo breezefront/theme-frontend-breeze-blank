@@ -43,7 +43,7 @@
         pointer-events: none;
         position: fixed;
         z-index: 811; // @see overlay
-        color: var(--surface-bg);
+        color: var(--color-white);
         content: '';
         width: @6;
         height: @6;
@@ -51,6 +51,10 @@
         .left(~"min(calc(@{96} + @{4-5}), calc(100vw - @{11}))"); // @see slideout width
         .breeze-icon(@icon-x);
         .modrtl(transform, ~"translateX(-20px)", ~"translateX(20px)");
+
+        @supports (color: contrast-color(white)) {
+            color: contrast-color(var(--overlay-bg));
+        }
     }
 }
 .breeze-slideout-close-visible {
