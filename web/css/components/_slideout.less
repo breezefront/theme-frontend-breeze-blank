@@ -4,7 +4,8 @@
     }
     .slideout-overlay {
         &:extend(.breeze-slideout-overlay all);
-        .active + & {
+        .active + &,
+        &.active {
             &:extend(.breeze-slideout-overlay-visible all);
         }
     }
