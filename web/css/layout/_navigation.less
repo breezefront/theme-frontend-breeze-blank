@@ -231,7 +231,7 @@
             overflow: visible;
             padding: 0;
 
-            & when not (@header__dark = false) {
+            & when not (@header__dark = false) and not (@header-panel__slideout__dark = true) {
                 .breeze-invert-colors-reset();
             }
 
