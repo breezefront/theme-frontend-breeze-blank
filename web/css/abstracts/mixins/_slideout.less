@@ -36,6 +36,13 @@
     .breeze-overlay-visible();
 }
 
+.breeze-slideout-close-inner {
+    & when not (@critical) {
+        position: absolute;
+        top: @4;
+        .right(@4);
+    }
+}
 .breeze-slideout-close {
     & when not (@critical) {
         opacity: 0;

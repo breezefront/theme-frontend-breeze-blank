@@ -1,0 +1,11 @@
+& when not (@critical) {
+    .slideout-close {
+        &:extend(.breeze-slideout-close-inner all);
+    }
+    .slideout-overlay {
+        &:extend(.breeze-slideout-overlay all);
+        .active + & {
+            &:extend(.breeze-slideout-overlay-visible all);
+        }
+    }
+}
