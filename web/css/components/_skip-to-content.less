@@ -7,6 +7,9 @@
 }
 
 & when not (@critical) {
+    :where([id]) {
+        scroll-margin-top: var(--base-scroll-margin-top);
+    }
     .action.skip {
         .page-header & {
             position: absolute;

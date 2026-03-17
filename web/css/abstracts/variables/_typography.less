@@ -27,6 +27,7 @@
 @base__line-height: @line-height__base;
 @base__color: @deprecated__base__text-color; // ~"var(--color-neutral-800)"
 @base__background: @deprecated__base__background-color; // ~"var(--color-white)"
+@base__scroll-margin-top: 0px;
 @base__border-radius: 0px;
 @base__inverted__color: ~"var(--color-white)";
 @base__inverted__background: ~"var(--color-neutral-900)";
@@ -129,6 +130,7 @@
     .lib-css(--base-color, @base__color);
     .lib-css(--base-bg, @base__background);
     .lib-css(--base-border-radius, @base__border-radius);
+    .lib-css(--base-scroll-margin-top, @base__scroll-margin-top);
 
     .lib-css(--body-bg, @body__background);
     .lib-css(--dark-bg, @dark__background);
