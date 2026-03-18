@@ -119,10 +119,10 @@
         .lib-css(--tab-toggler-hover-bg, @tab-toggler__accordion__hover__background);
         &:has(+ .content + script:last-child),
         &:has(+ .content:last-child) {
-            border-bottom-color: transparent;
+            .lib-css(border-bottom-color, @tab-toggler__accordion__last__border-color);
         }
         &:nth-last-child(2) {
-            border-bottom-color: transparent;
+            .lib-css(border-bottom-color, @tab-toggler__accordion__last__border-color);
         }
     }
 }
