@@ -1,7 +1,6 @@
 .breeze-input {
     & when (@critical) {
         position: relative;
-        padding: @input__padding;
         width: 100%;
 
         .lib-css(font-family, @input__font-family);
@@ -12,6 +11,7 @@
         color: var(--input-color);
         background: var(--input-bg);
         border-radius: var(--input-border-radius);
+        padding: var(--input-padding);
 
         &:disabled {
             opacity: .5;
@@ -46,7 +46,7 @@
         .lib-css(box-shadow, @button__shadow);
         .lib-css(border, @button__border);
 
-        padding: @button__padding;
+        padding: var(--button-padding);
         color: var(--button-color);
         background: var(--button-bg);
         border-radius: var(--button-border-radius);
