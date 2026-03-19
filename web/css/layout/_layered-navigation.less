@@ -280,8 +280,8 @@
                     justify-content: center;
                     min-width: @5;
                     min-height: @5;
-                    // background: @danger__color;
-                    color: @white;
+                    background: var(--color-danger);
+                    color: var(--color-white);
                     border-radius: @5;
                     padding: 0 @1;
                 }
@@ -293,7 +293,7 @@
             .sidebar & {
                 .filter-title {
                     position: absolute;
-                    z-index: 10; // must be higher than 5 to cover addto links
+                    z-index: var(--filter-title-z-index, 10); // must be higher than 5 to cover addto links
                     top: 0;
                     margin: 0;
                     max-width: @layered-sidebar-title__md-down__max-width;
@@ -374,6 +374,9 @@
                 transition: none;
             }
         }
+    }
+    .block.filter.active {
+        --filter-title-z-index: 810;
     }
     @media @media-md-down {
         .block.filter {
