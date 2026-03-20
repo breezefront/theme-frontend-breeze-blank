@@ -33,10 +33,16 @@
 
 @swatch__text__listing__size: false;
 
+@swatch__inverted__color: ~"var(--color-white)";
+
 .breeze-tokens() {
     .lib-css(--swatch-color, @swatch__color);
     .lib-css(--swatch-bg, @swatch__background);
     .lib-css(--swatch-box-shadow, @swatch__box-shadow);
     .lib-css(--swatch-border-radius, @swatch__border-radius);
     .lib-css(--swatch-text-border-radius, @swatch__text__border-radius);
+}
+
+.breeze-tokens-inverted() {
+    .lib-css(--swatch-color, @swatch__inverted__color);
 }
