@@ -59,6 +59,8 @@
 @headings__text-transform: false;
 @headings__color: ~"var(--base-color)";
 @headings__inverted__color: @headings__color;
+@headings-primary__strong__font-weight: 700;
+@headings-secondary__strong__font-weight: 600;
 
 @h1__font-size: @font-size__4xl;
 @h1__font-weight: bold;
@@ -150,6 +152,8 @@
     .lib-css(--headings-color, @headings__color);
     .lib-css(--headings-font-family, @headings__font-family);
     .lib-css(--headings-text-transform, @headings__text-transform);
+    .lib-css(--headings-primary-strong-font-weight, @headings-primary__strong__font-weight);
+    .lib-css(--headings-secondary-strong-font-weight, @headings-secondary__strong__font-weight);
 
     .lib-css(--clamp-color, @clamp__color);
     .lib-css(--clamp-bg, @clamp__bg);
