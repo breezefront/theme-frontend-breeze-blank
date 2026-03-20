@@ -2,20 +2,25 @@
 @scrollbar__border-radius: @96;
 @scrollbar-track__background: false;
 @scrollbar-thumb__background: false;
+@scrollbar-thumb__hover__background: false;
 @scrollbar-track__inverted__background: false;
 @scrollbar-thumb__inverted__background: false;
+@scrollbar-thumb__inverted__hover__background: false;
 
 .breeze-tokens() {
     .lib-css(--scrollbar-bg, @scrollbar-track__background);
     .lib-css(--scrollbar-color, @scrollbar-thumb__background);
+    .lib-css(--scrollbar-hover-color, @scrollbar-thumb__hover__background);
 }
 
 .breeze-tokens-inverted() {
     .lib-css(--scrollbar-bg, @scrollbar-track__inverted__background);
     .lib-css(--scrollbar-color, @scrollbar-thumb__inverted__background);
+    .lib-css(--scrollbar-hover-color, @scrollbar-thumb__inverted__hover__background);
 }
 
 .breeze-tokens-inverted-reset() {
     .lib-css-if(@scrollbar-track__inverted__background, --scrollbar-bg, @scrollbar-track__background);
     .lib-css-if(@scrollbar-thumb__inverted__background, --scrollbar-color, @scrollbar-thumb__background);
+    .lib-css-if(@scrollbar-thumb__inverted__hover__background, --scrollbar-hover-color, @scrollbar-thumb__hover__background);
 }
