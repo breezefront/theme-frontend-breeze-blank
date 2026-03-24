@@ -1,3 +1,6 @@
+@page__max-width: false;
+@page__background: false;
+
 @page-main__padding-top: false;
 @page-main__padding-bottom: false;
 
@@ -21,6 +24,9 @@
 @before-footer__padding-bottom: @before-footer__padding-top;
 
 .breeze-tokens() {
+    .lib-css(--page-max-width, @page__max-width);
+    .lib-css(--page-bg, @page__background);
+
     --sidebar-width: @sidebar__width;
     --sidebar-gap: @sidebar__gap;
     @media @media-lg {
