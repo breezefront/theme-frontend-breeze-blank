@@ -142,21 +142,25 @@
             display: none;
         }
 
-        .page-header li {
-            & when (@header__dark = true) {
-                > .level-top {
+        .page-header {
+            .navigation {
+                & when (@header__dark = deep) {
                     .breeze-invert-colors();
                 }
-                ul {
-                    .breeze-invert-colors-reset();
+            }
+            li {
+                & when (@header__dark = true) {
+                    > .level-top {
+                        .breeze-invert-colors();
+                    }
+                    ul {
+                        .breeze-invert-colors-reset();
+                    }
                 }
             }
         }
 
         .navigation {
-            & when (@header__dark = deep) {
-                .breeze-invert-colors();
-            }
             > ul {
                 display: flex;
                 flex-wrap: wrap;
