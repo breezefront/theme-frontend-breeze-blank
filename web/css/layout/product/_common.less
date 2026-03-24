@@ -260,7 +260,7 @@
         &:extend(.breeze-prose all);
     }
 
-    & when (@product-review-form__float-media) {
+    & when not (@product-review-form__float-media = false) {
         @media @product-review-form__float-media {
             .product.info {
                 #reviews::after {
