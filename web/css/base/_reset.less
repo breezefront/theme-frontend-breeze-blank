@@ -258,7 +258,7 @@
             width: @4;
             height: @4;
             margin-top: -@1-5;
-            background-color: var(--color-brand);
+            background-color: var(--checkbox-color, var(--color-brand));
             border: 0;
             border-radius: 9999px;
             -webkit-appearance: none;
@@ -269,7 +269,7 @@
             width: @4;
             height: @4;
             margin-top: -@1-5;
-            background-color: var(--color-brand);
+            background-color: var(--checkbox-color, var(--color-brand));
             border: 0;
             border-radius: 9999px;
             appearance: none;
@@ -322,6 +322,7 @@
         background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
+        outline-color: var(--checkbox-outline-color, var(--input-outline-color));
         &:checked {
             border-color: transparent;
             background-color: var(--checkbox-color, var(--color-brand));
