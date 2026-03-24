@@ -354,10 +354,10 @@
 
         &:focus {
             &::-webkit-slider-thumb {
-                box-shadow: ~"0 0 0 1px var(--base-bg), 0 0 0 0.25rem color-mix(in oklch, var(--color-brand) 30%, transparent)";
+                box-shadow: ~"0 0 0 1px var(--base-bg), 0 0 0 0.25rem color-mix(in oklch, var(--checkbox-color, var(--color-brand)) 30%, transparent)";
             }
             &::-moz-range-thumb {
-                box-shadow: ~"0 0 0 1px var(--base-bg), 0 0 0 0.25rem color-mix(in oklch, var(--color-brand) 30%, transparent)";
+                box-shadow: ~"0 0 0 1px var(--base-bg), 0 0 0 0.25rem color-mix(in oklch, var(--checkbox-color, var(--color-brand)) 30%, transparent)";
             }
             &::-webkit-slider-thumb {
                 .transition(); // do not pair with -moz
