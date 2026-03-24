@@ -1,7 +1,21 @@
 @slideout__background: ~"var(--surface-bg)";
 @slideout__color: ~"var(--surface-color)";
+@slideout__inverted__background: ~"var(--surface-inverted-bg)";
+@slideout__inverted__color: ~"var(--surface-inverted-color)";
 
 .breeze-tokens() {
     --slideout-bg: @slideout__background;
     --slideout-color: @slideout__color;
+    .lib-css(--slideout-inverted-bg, @slideout__inverted__background);
+    .lib-css(--slideout-inverted-color, @slideout__inverted__color);
+}
+
+.breeze-tokens-inverted() {
+    .lib-css-if(@slideout__inverted__background, --slideout-bg, ~"var(--slideout-inverted-bg)");
+    .lib-css-if(@slideout__inverted__color, --slideout-color, ~"var(--slideout-inverted-color)");
+}
+
+.breeze-tokens-inverted-reset() {
+    .lib-css-if(@slideout__inverted__background, --slideout-bg, @slideout__background);
+    .lib-css-if(@slideout__inverted__color, --slideout-color, @slideout__color);
 }

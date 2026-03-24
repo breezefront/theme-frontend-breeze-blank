@@ -3,10 +3,11 @@
 
 .breeze-tokens() {
     .lib-css(--overlay-bg, @overlay__background);
+    .lib-css(--overlay-inverted-bg, @overlay__inverted__background);
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--overlay-bg, @overlay__inverted__background);
+    .lib-css-if(@overlay__inverted__background, --overlay-bg, ~"var(--overlay-inverted-bg)");
 }
 
 .breeze-tokens-inverted-reset() {

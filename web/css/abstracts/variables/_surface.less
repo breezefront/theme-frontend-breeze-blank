@@ -1,18 +1,21 @@
 @surface__background: ~"var(--base-bg)";
 @surface__color: ~"var(--base-color)";
 @surface__border-radius: ~"min(@{5}, var(--base-border-radius))";
-@surface__inverted__background: ~"color-mix(in oklch, var(--base-bg) 95%, var(--base-color))";
-@surface__inverted__color: @surface__color;
+@surface__inverted__background: ~"color-mix(in oklch, var(--base-inverted-bg) 95%, var(--base-inverted-color))";
+@surface__inverted__color: ~"var(--base-inverted-color)";
 
 .breeze-tokens() {
     .lib-css(--surface-bg, @surface__background);
     .lib-css(--surface-color, @surface__color);
     .lib-css(--surface-border-radius, @surface__border-radius);
+
+    .lib-css(--surface-inverted-bg, @surface__inverted__background);
+    .lib-css(--surface-inverted-color, @surface__inverted__color);
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--surface-bg, @surface__inverted__background);
-    .lib-css(--surface-color, @surface__inverted__color);
+    .lib-css-if(@surface__inverted__background, --surface-bg, ~"var(--surface-inverted-bg)");
+    .lib-css-if(@surface__inverted__color, --surface-color, ~"var(--surface-inverted-color)");
 }
 
 .breeze-tokens-inverted-reset() {

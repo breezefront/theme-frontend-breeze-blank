@@ -14,10 +14,10 @@
 @input__focus__background: ~"var(--input-bg)";
 @input__focus__color: ~"var(--input-color)";
 @input__focus__border-color: ~"var(--input-border-color)";
-@input__inverted__color: ~"var(--input-color)";
-@input__inverted__background: ~"var(--base-bg)";
+@input__inverted__color: ~"var(--base-inverted-color)";
+@input__inverted__background: ~"var(--base-inverted-bg)";
 @input__inverted__border-color: false;
-@input__inverted__outline-color: false;
+@input__inverted__outline-color: ~"var(--focus-ring-inverted-color)";
 @input__inverted__focus__color: @input__inverted__color;
 @input__inverted__focus__background: @input__inverted__background;
 @input__inverted__focus__border-color: @input__inverted__border-color;
@@ -70,11 +70,11 @@
 @button-secondary__hover__color: @deprecated__button-secondary__hover__text-color; // ~"var(--button-secondary-color)";
 @button-secondary__hover__background: @deprecated__button-secondary__hover__background-color; // ~"color-mix(in oklch, var(--button-secondary-bg) 90%, var(--color-black))";
 @button-secondary__hover__border-color: @button-secondary__border-color;
-@button-secondary__inverted__color: @button-secondary__color;
-@button-secondary__inverted__background: @button-secondary__background;
+@button-secondary__inverted__color: ~"color-mix(in oklch, var(--base-inverted-color) 70%, transparent)";
+@button-secondary__inverted__background: ~"var(--subtle-inverted-color)";
 @button-secondary__inverted__border-color: @button-secondary__border-color;
-@button-secondary__inverted__hover__color: @button-secondary__hover__color;
-@button-secondary__inverted__hover__background: @button-secondary__hover__background;
+@button-secondary__inverted__hover__color: @button-secondary__inverted__color;
+@button-secondary__inverted__hover__background: ~"color-mix(in oklch, var(--button-secondary-inverted-bg) 90%, var(--color-black))";
 
 @button-ghost__color: ~"var(--color-brand)";
 @button-ghost__background: transparent;
@@ -82,10 +82,10 @@
 @button-ghost__hover__color: ~"var(--button-ghost-color)";
 @button-ghost__hover__background: ~"color-mix(in oklch, currentColor 7%, transparent)";
 @button-ghost__hover__border-color: ~"var(--button-ghost-border-color)";
-@button-ghost__inverted__color: ~"var(--base-color)";
+@button-ghost__inverted__color: ~"var(--base-inverted-color)";
 @button-ghost__inverted__background: transparent;
 @button-ghost__inverted__border-color: @button-ghost__inverted__color;
-@button-ghost__inverted__hover__color: @button-ghost__hover__color;
+@button-ghost__inverted__hover__color: ~"var(--button-ghost-inverted-color)";
 @button-ghost__inverted__hover__background: ~"color-mix(in oklch, currentColor 7%, transparent)";
 @button-ghost__inverted__hover__border-color: @button-ghost__inverted__border-color;
 
@@ -166,35 +166,62 @@
     .lib-css(--button-ghost-hover-bg, @button-ghost__hover__background);
     .lib-css(--button-ghost-hover-color, @button-ghost__hover__color);
     .lib-css(--button-ghost-hover-border-color, @button-ghost__hover__border-color);
+
+    .lib-css(--input-inverted-color, @input__inverted__color);
+    .lib-css(--input-inverted-bg, @input__inverted__background);
+    .lib-css(--input-inverted-border-color, @input__inverted__border-color);
+    .lib-css(--input-inverted-outline-color, @input__inverted__outline-color);
+    .lib-css(--input-inverted-focus-bg, @input__inverted__focus__background);
+    .lib-css(--input-inverted-focus-color, @input__inverted__focus__color);
+    .lib-css(--input-inverted-focus-border-color, @input__inverted__focus__border-color);
+
+    .lib-css(--button-inverted-bg, @button__inverted__background);
+    .lib-css(--button-inverted-color, @button__inverted__color);
+    .lib-css(--button-inverted-border-color, @button__inverted__border-color);
+    .lib-css(--button-inverted-hover-bg, @button__inverted__hover__background);
+    .lib-css(--button-inverted-hover-color, @button__inverted__hover__color);
+
+    .lib-css(--button-secondary-inverted-bg, @button-secondary__inverted__background);
+    .lib-css(--button-secondary-inverted-color, @button-secondary__inverted__color);
+    .lib-css(--button-secondary-inverted-border-color, @button-secondary__inverted__border-color);
+    .lib-css(--button-secondary-inverted-hover-bg, @button-secondary__inverted__hover__background);
+    .lib-css(--button-secondary-inverted-hover-color, @button-secondary__inverted__hover__color);
+
+    .lib-css(--button-ghost-inverted-bg, @button-ghost__inverted__background);
+    .lib-css(--button-ghost-inverted-color, @button-ghost__inverted__color);
+    .lib-css(--button-ghost-inverted-border-color, @button-ghost__inverted__border-color);
+    .lib-css(--button-ghost-inverted-hover-bg, @button-ghost__inverted__hover__background);
+    .lib-css(--button-ghost-inverted-hover-color, @button-ghost__inverted__hover__color);
+    .lib-css(--button-ghost-inverted-hover-border-color, @button-ghost__inverted__hover__border-color);
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--input-color, @input__inverted__color);
-    .lib-css(--input-bg, @input__inverted__background);
-    .lib-css(--input-border-color, @input__inverted__border-color);
-    .lib-css(--input-outline-color, @input__inverted__outline-color);
-    .lib-css(--input-focus-bg, @input__inverted__focus__background);
-    .lib-css(--input-focus-color, @input__inverted__focus__color);
-    .lib-css(--input-focus-border-color, @input__inverted__focus__border-color);
+    .lib-css-if(@input__inverted__color, --input-color, ~"var(--input-inverted-color)");
+    .lib-css-if(@input__inverted__background, --input-bg, ~"var(--input-inverted-bg)");
+    .lib-css-if(@input__inverted__border-color, --input-border-color, ~"var(--input-inverted-border-color)");
+    .lib-css-if(@input__inverted__outline-color, --input-outline-color, ~"var(--input-inverted-outline-color)");
+    .lib-css-if(@input__inverted__focus__background, --input-focus-bg, ~"var(--input-inverted-focus-bg)");
+    .lib-css-if(@input__inverted__focus__color, --input-focus-color, ~"var(--input-inverted-focus-color)");
+    .lib-css-if(@input__inverted__focus__border-color, --input-focus-border-color, ~"var(--input-inverted-focus-border-color)");
 
-    .lib-css(--button-bg, @button__inverted__background);
-    .lib-css(--button-color, @button__inverted__color);
-    .lib-css(--button-border-color, @button__inverted__border-color);
-    .lib-css(--button-hover-bg, @button__inverted__hover__background);
-    .lib-css(--button-hover-color, @button__inverted__hover__color);
+    .lib-css-if(@button__inverted__background, --button-bg, ~"var(--button-inverted-bg)");
+    .lib-css-if(@button__inverted__color, --button-color, ~"var(--button-inverted-color)");
+    .lib-css-if(@button__inverted__border-color, --button-border-color, ~"var(--button-inverted-border-color)");
+    .lib-css-if(@button__inverted__hover__background, --button-hover-bg, ~"var(--button-inverted-hover-bg)");
+    .lib-css-if(@button__inverted__hover__color, --button-hover-color, ~"var(--button-inverted-hover-color)");
 
-    .lib-css(--button-secondary-bg, @button-secondary__inverted__background);
-    .lib-css(--button-secondary-color, @button-secondary__inverted__color);
-    .lib-css(--button-secondary-border-color, @button-secondary__inverted__border-color);
-    .lib-css(--button-secondary-hover-bg, @button-secondary__inverted__hover__background);
-    .lib-css(--button-secondary-hover-color, @button-secondary__inverted__hover__color);
+    .lib-css-if(@button-secondary__inverted__background, --button-secondary-bg, ~"var(--button-secondary-inverted-bg)");
+    .lib-css-if(@button-secondary__inverted__color, --button-secondary-color, ~"var(--button-secondary-inverted-color)");
+    .lib-css-if(@button-secondary__inverted__border-color, --button-secondary-border-color, ~"var(--button-secondary-inverted-border-color)");
+    .lib-css-if(@button-secondary__inverted__hover__background, --button-secondary-hover-bg, ~"var(--button-secondary-inverted-hover-bg)");
+    .lib-css-if(@button-secondary__inverted__hover__color, --button-secondary-hover-color, ~"var(--button-secondary-inverted-hover-color)");
 
-    .lib-css(--button-ghost-bg, @button-ghost__inverted__background);
-    .lib-css(--button-ghost-color, @button-ghost__inverted__color);
-    .lib-css(--button-ghost-border-color, @button-ghost__inverted__border-color);
-    .lib-css(--button-ghost-hover-bg, @button-ghost__inverted__hover__background);
-    .lib-css(--button-ghost-hover-color, @button-ghost__inverted__hover__color);
-    .lib-css(--button-ghost-hover-border-color, @button-ghost__inverted__hover__border-color);
+    .lib-css-if(@button-ghost__inverted__background, --button-ghost-bg, ~"var(--button-ghost-inverted-bg)");
+    .lib-css-if(@button-ghost__inverted__color, --button-ghost-color, ~"var(--button-ghost-inverted-color)");
+    .lib-css-if(@button-ghost__inverted__border-color, --button-ghost-border-color, ~"var(--button-ghost-inverted-border-color)");
+    .lib-css-if(@button-ghost__inverted__hover__background, --button-ghost-hover-bg, ~"var(--button-ghost-inverted-hover-bg)");
+    .lib-css-if(@button-ghost__inverted__hover__color, --button-ghost-hover-color, ~"var(--button-ghost-inverted-hover-color)");
+    .lib-css-if(@button-ghost__inverted__hover__border-color, --button-ghost-hover-border-color, ~"var(--button-ghost-inverted-hover-border-color)");
 }
 
 .breeze-tokens-inverted-reset() {

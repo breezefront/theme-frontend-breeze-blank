@@ -41,8 +41,10 @@
     .lib-css(--swatch-box-shadow, @swatch__box-shadow);
     .lib-css(--swatch-border-radius, @swatch__border-radius);
     .lib-css(--swatch-text-border-radius, @swatch__text__border-radius);
+
+    .lib-css(--swatch-inverted-color, @swatch__inverted__color);
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--swatch-color, @swatch__inverted__color);
+    .lib-css-if(@swatch__inverted__color, --swatch-color, ~"var(--swatch-inverted-color)");
 }

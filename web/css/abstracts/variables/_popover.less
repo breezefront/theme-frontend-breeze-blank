@@ -8,9 +8,9 @@
 @popover__shadow: ~"var(--shadow-lg)";
 @popover__filter: false;
 
-@popover__inverted__background: ~"var(--surface-bg)";
-@popover__inverted__color: ~"var(--surface-color)";
-@popover__inverted__border-color: ~"var(--subtle-color)";
+@popover__inverted__background: ~"var(--surface-inverted-bg)";
+@popover__inverted__color: ~"var(--surface-inverted-color)";
+@popover__inverted__border-color: ~"var(--subtle-inverted-color)";
 
 .breeze-tokens() {
     --popover-width: @popover__width;
@@ -21,12 +21,16 @@
     .lib-css(--popover-border-color, @popover__border-color);
     .lib-css(--popover-border-radius, @popover__border-radius);
     .lib-css(--popover-box-shadow, @popover__shadow);
+
+    .lib-css(--popover-inverted-bg, @popover__inverted__background);
+    .lib-css(--popover-inverted-color, @popover__inverted__color);
+    .lib-css(--popover-inverted-border-color, @popover__inverted__border-color);
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--popover-bg, @popover__inverted__background);
-    .lib-css(--popover-color, @popover__inverted__color);
-    .lib-css(--popover-border-color, @popover__inverted__border-color);
+    .lib-css-if(@popover__inverted__background, --popover-bg, ~"var(--popover-inverted-bg)");
+    .lib-css-if(@popover__inverted__color, --popover-color, ~"var(--popover-inverted-color)");
+    .lib-css-if(@popover__inverted__border-color, --popover-border-color, ~"var(--popover-inverted-border-color)");
 }
 
 .breeze-tokens-inverted-reset() {

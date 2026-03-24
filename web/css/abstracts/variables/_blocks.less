@@ -115,12 +115,15 @@
     .lib-css(--block-title-color, @block-title__color);
     .lib-css(--block-title-bg, @block-title__background);
     .lib-css(--block-content-bg, @block-content__background);
+    .lib-css(--block-title-inverted-color, @block-title__inverted__color);
+    .lib-css(--block-title-inverted-bg, @block-title__inverted__background);
+    .lib-css(--block-content-inverted-bg, @block-content__inverted__background);
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--block-title-color, @block-title__inverted__color);
-    .lib-css(--block-title-bg, @block-title__inverted__background);
-    .lib-css(--block-content-bg, @block-content__inverted__background);
+    .lib-css-if(@block-title__inverted__color, --block-title-color, ~"var(--block-title-inverted-color)");
+    .lib-css-if(@block-title__inverted__background, --block-title-bg, ~"var(--block-title-inverted-bg)");
+    .lib-css-if(@block-content__inverted__background, --block-content-bg, ~"var(--block-content-inverted-bg)");
 }
 
 .breeze-tokens-inverted-reset() {

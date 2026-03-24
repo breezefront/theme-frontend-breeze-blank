@@ -33,24 +33,24 @@
 @base__inverted__background: ~"var(--color-neutral-900)";
 
 @body__background: ~"var(--base-bg)";
-@body__inverted__background: @body__background;
+@body__inverted__background: ~"var(--base-inverted-bg)";
 
 @dark__background: ~"var(--color-neutral-900)";
 
 @muted__color: ~"color-mix(in oklch, var(--base-color) 63%, transparent)";
 @muted__background: ~"color-mix(in oklch, var(--base-color) 5%, transparent)";
-@muted__inverted__color: ~"color-mix(in oklch, var(--base-color) 50%, transparent)";
-@muted__inverted__background: @muted__background;
+@muted__inverted__color: ~"color-mix(in oklch, var(--base-inverted-color) 50%, transparent)";
+@muted__inverted__background: ~"color-mix(in oklch, var(--base-inverted-color) 5%, transparent)";
 
 @subtle__color: ~"color-mix(in oklch, var(--base-color) 10%, transparent)";
 @subtle__background: ~"color-mix(in oklch, var(--base-color) 2.5%, transparent)";
-@subtle__inverted__color: @subtle__color;
-@subtle__inverted__background: @subtle__background;
+@subtle__inverted__color: ~"color-mix(in oklch, var(--base-inverted-color) 10%, transparent)";
+@subtle__inverted__background: ~"color-mix(in oklch, var(--base-inverted-color) 2.5%, transparent)";
 
 @focus-ring__width: 2px;
 @focus-ring__offset: 2px;
 @focus-ring__color: ~"var(--color-brand)";
-@focus-ring__inverted__color: ~"var(--color-brand)";
+@focus-ring__inverted__color: ~"var(--color-inverted-brand)";
 
 @selection__color: false;
 @selection__background: false;
@@ -58,7 +58,7 @@
 @headings__font-family: false;
 @headings__text-transform: false;
 @headings__color: ~"var(--base-color)";
-@headings__inverted__color: @headings__color;
+@headings__inverted__color: ~"var(--base-inverted-color)";
 @headings-primary__strong__font-weight: 700;
 @headings-secondary__strong__font-weight: 600;
 
@@ -116,7 +116,7 @@
 @link__text-decoration: none;
 @link__hover__text-decoration: underline;
 @link__color: ~"var(--color-blue)";
-@link__inverted__color: ~"var(--color-blue)";
+@link__inverted__color: ~"var(--color-inverted-blue)";
 
 @clamp__color: ~"var(--base-color)";
 @clamp__bg: ~"var(--base-bg)";
@@ -157,19 +157,30 @@
 
     .lib-css(--clamp-color, @clamp__color);
     .lib-css(--clamp-bg, @clamp__bg);
+
+    .lib-css(--base-inverted-color, @base__inverted__color);
+    .lib-css(--base-inverted-bg, @base__inverted__background);
+    .lib-css(--body-inverted-bg, @body__inverted__background);
+    .lib-css(--muted-inverted-color, @muted__inverted__color);
+    .lib-css(--muted-inverted-bg, @muted__inverted__background);
+    .lib-css(--subtle-inverted-color, @subtle__inverted__color);
+    .lib-css(--subtle-inverted-bg, @subtle__inverted__background);
+    .lib-css(--focus-ring-inverted-color, @focus-ring__inverted__color);
+    .lib-css(--link-inverted-color, @link__inverted__color);
+    .lib-css(--headings-inverted-color, @headings__inverted__color);
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--base-color, @base__inverted__color);
-    .lib-css(--base-bg, @base__inverted__background);
-    .lib-css(--body-bg, @body__inverted__background);
-    .lib-css(--muted-color, @muted__inverted__color);
-    .lib-css(--muted-bg, @muted__inverted__background);
-    .lib-css(--subtle-color, @subtle__inverted__color);
-    .lib-css(--subtle-bg, @subtle__inverted__background);
-    .lib-css(--focus-ring-color, @focus-ring__inverted__color);
-    .lib-css(--link-color, @link__inverted__color);
-    .lib-css(--headings-color, @headings__inverted__color);
+    .lib-css-if(@base__inverted__color, --base-color, ~"var(--base-inverted-color)");
+    .lib-css-if(@base__inverted__background, --base-bg, ~"var(--base-inverted-bg)");
+    .lib-css-if(@body__inverted__background, --body-bg, ~"var(--body-inverted-bg)");
+    .lib-css-if(@muted__inverted__color, --muted-color, ~"var(--muted-inverted-color)");
+    .lib-css-if(@muted__inverted__background, --muted-bg, ~"var(--muted-inverted-bg)");
+    .lib-css-if(@subtle__inverted__color, --subtle-color, ~"var(--subtle-inverted-color)");
+    .lib-css-if(@subtle__inverted__background, --subtle-bg, ~"var(--subtle-inverted-bg)");
+    .lib-css-if(@focus-ring__inverted__color, --focus-ring-color, ~"var(--focus-ring-inverted-color)");
+    .lib-css-if(@link__inverted__color, --link-color, ~"var(--link-inverted-color)");
+    .lib-css-if(@headings__inverted__color, --headings-color, ~"var(--headings-inverted-color)");
 }
 
 .breeze-tokens-inverted-reset() {

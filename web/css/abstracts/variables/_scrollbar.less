@@ -11,12 +11,16 @@
     .lib-css(--scrollbar-bg, @scrollbar-track__background);
     .lib-css(--scrollbar-color, @scrollbar-thumb__background);
     .lib-css(--scrollbar-hover-color, @scrollbar-thumb__hover__background);
+
+    .lib-css(--scrollbar-inverted-bg, @scrollbar-track__inverted__background);
+    .lib-css(--scrollbar-inverted-color, @scrollbar-thumb__inverted__background);
+    .lib-css(--scrollbar-inverted-hover-color, @scrollbar-thumb__inverted__hover__background);
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--scrollbar-bg, @scrollbar-track__inverted__background);
-    .lib-css(--scrollbar-color, @scrollbar-thumb__inverted__background);
-    .lib-css(--scrollbar-hover-color, @scrollbar-thumb__inverted__hover__background);
+    .lib-css-if(@scrollbar-track__inverted__background, --scrollbar-bg, ~"var(--scrollbar-inverted-bg)");
+    .lib-css-if(@scrollbar-thumb__inverted__background, --scrollbar-color, ~"var(--scrollbar-inverted-color)");
+    .lib-css-if(@scrollbar-thumb__inverted__hover__background, --scrollbar-hover-color, ~"var(--scrollbar-inverted-hover-color)");
 }
 
 .breeze-tokens-inverted-reset() {

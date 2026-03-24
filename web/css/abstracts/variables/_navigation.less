@@ -1,5 +1,5 @@
-@navigation__color: @navigation__text-color;
-@navigation__inverted__color: @navigation__color;
+@navigation__color: @deprecated__navigation__text-color; // ~"var(--base-color)";
+@navigation__inverted__color: ~"var(--base-inverted-color)";
 @navigation__media-desktop: @media-sm;
 @navigation__media-mobile: @media-sm-down;
 @navigation__media-wrap: ~"@{navigation__media-desktop} and (max-width: @{md-max})";
@@ -41,7 +41,7 @@
 @navigation-dropdown-level0__left: 0;
 @navigation-dropdown-level0__right: auto;
 
-@navigation-dropdown__inverted__border-color: ~"var(--popover-border-color)";
+@navigation-dropdown__inverted__border-color: ~"var(--popover-inverted-border-color)";
 
 .breeze-tokens() {
     // this prop is used by menu.js component
@@ -57,14 +57,20 @@
     .lib-css(--navigation-dropdown-border-color, @navigation-dropdown__border-color);
     .lib-css(--navigation-dropdown-border-radius, @navigation-dropdown__border-radius);
     .lib-css(--navigation-dropdown-shadow, @navigation-dropdown__shadow);
+
+    .lib-css(--navigation-inverted-color, @navigation__inverted__color);
+    .lib-css(--navigation-item-level0-inverted-color, @navigation-item-level0__inverted__color);
+    .lib-css(--navigation-item-level0-inverted-opened-color, @navigation-item-level0__inverted__opened__color);
+    .lib-css(--navigation-item-level0-inverted-active-color, @navigation-item-level0__inverted__active__color);
+    .lib-css(--navigation-dropdown-inverted-border-color, @navigation-dropdown__inverted__border-color);
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--navigation-color, @navigation__inverted__color);
-    .lib-css(--navigation-item-level0-color, @navigation-item-level0__inverted__color);
-    .lib-css(--navigation-item-level0-opened-color, @navigation-item-level0__inverted__opened__color);
-    .lib-css(--navigation-item-level0-active-color, @navigation-item-level0__inverted__active__color);
-    .lib-css(--navigation-dropdown-border-color, @navigation-dropdown__inverted__border-color);
+    .lib-css-if(@navigation__inverted__color, --navigation-color, ~"var(--navigation-inverted-color)");
+    .lib-css-if(@navigation-item-level0__inverted__color, --navigation-item-level0-color, ~"var(--navigation-item-level0-inverted-color)");
+    .lib-css-if(@navigation-item-level0__inverted__opened__color, --navigation-item-level0-opened-color, ~"var(--navigation-item-level0-inverted-opened-color)");
+    .lib-css-if(@navigation-item-level0__inverted__active__color, --navigation-item-level0-active-color, ~"var(--navigation-item-level0-inverted-active-color)");
+    .lib-css-if(@navigation-dropdown__inverted__border-color, --navigation-dropdown-border-color, ~"var(--navigation-dropdown-inverted-border-color)");
 }
 
 .breeze-tokens-inverted-reset() {

@@ -9,11 +9,13 @@
     .lib-css(--dropdown-item-hover-bg, @dropdown-item__hover__background);
     .lib-css(--dropdown-item-hover-color, @dropdown-item__hover__color);
     .lib-css(--dropdown-item-border-radius, @dropdown-item__border-radius);
+    .lib-css(--dropdown-item-inverted-hover-bg, @dropdown-item__inverted__hover__background);
+    .lib-css(--dropdown-item-inverted-hover-color, @dropdown-item__inverted__hover__color);
 }
 
 .breeze-tokens-inverted() {
-    .lib-css(--dropdown-item-hover-bg, @dropdown-item__inverted__hover__background);
-    .lib-css(--dropdown-item-hover-color, @dropdown-item__inverted__hover__color);
+    .lib-css(--dropdown-item-hover-bg, ~"var(--dropdown-item-inverted-hover-bg)");
+    .lib-css(--dropdown-item-hover-color, ~"var(--dropdown-item-inverted-hover-color)");
 }
 
 .breeze-tokens-inverted-reset() {
