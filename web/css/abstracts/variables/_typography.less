@@ -124,6 +124,8 @@
 @clamp__font-family: @font-family__base;
 @clamp__font-size: @font-size__base;
 @clamp__text-decoration: underline;
+@clamp__inverted__color: ~"var(--base-inverted-color)";
+@clamp__inverted__bg: ~"var(--base-inverted-bg)";
 
 .breeze-tokens() {
     .lib-css(--base-font-family, @base__font-family);
@@ -168,6 +170,8 @@
     .lib-css(--focus-ring-inverted-color, @focus-ring__inverted__color);
     .lib-css(--link-inverted-color, @link__inverted__color);
     .lib-css(--headings-inverted-color, @headings__inverted__color);
+    .lib-css(--clamp-inverted-color, @clamp__inverted__color);
+    .lib-css(--clamp-inverted-bg, @clamp__inverted__bg);
 }
 
 .breeze-tokens-inverted() {
@@ -181,6 +185,8 @@
     .lib-css-if(@focus-ring__inverted__color, --focus-ring-color, ~"var(--focus-ring-inverted-color)");
     .lib-css-if(@link__inverted__color, --link-color, ~"var(--link-inverted-color)");
     .lib-css-if(@headings__inverted__color, --headings-color, ~"var(--headings-inverted-color)");
+    .lib-css-if(@clamp__inverted__color, --clamp-color, ~"var(--clamp-inverted-color)");
+    .lib-css-if(@clamp__inverted__bg, --clamp-bg, ~"var(--clamp-inverted-bg)");
 }
 
 .breeze-tokens-inverted-reset() {
