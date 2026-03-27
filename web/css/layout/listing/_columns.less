@@ -1,0 +1,54 @@
+& when (@critical) {
+    :root {
+        & when not (@listing-grid__media-sm__columns = false) {
+            @media @media-sm {
+                .lib-css(--listing-grid-columns, ~"var(--listing-grid-media-sm-columns)");
+            }
+        }
+        & when not (@listing-grid__media-md__columns = false) {
+            @media @media-md {
+                .lib-css(--listing-grid-columns, ~"var(--listing-grid-media-md-columns)");
+            }
+        }
+        & when not (@listing-grid__media-lg__columns = false) {
+            @media @media-lg {
+                .lib-css(--listing-grid-columns, ~"var(--listing-grid-media-lg-columns)");
+            }
+        }
+        & when not (@listing-grid__media-xl__columns = false) {
+            @media @media-xl {
+                .lib-css(--listing-grid-columns, ~"var(--listing-grid-media-xl-columns)");
+            }
+        }
+    }
+
+    .page-layout-1column {
+        & when not (@listing-grid__media-md__1column__columns = false) {
+            @media @media-md {
+                .lib-css(--listing-grid-columns, ~"var(--listing-grid-media-md-1column-columns)");
+            }
+        }
+        & when not (@listing-grid__media-lg__1column__columns = false) {
+            @media @media-lg {
+                .lib-css(--listing-grid-columns, ~"var(--listing-grid-media-lg-1column-columns)");
+            }
+        }
+        & when not (@listing-grid__media-xl__1column__columns = false) {
+            @media @media-xl {
+                .lib-css(--listing-grid-columns, ~"var(--listing-grid-media-xl-1column-columns)");
+            }
+        }
+    }
+    .page-layout-3columns {
+        & when not (@listing-grid__media-lg__3columns__columns = false) {
+            @media @media-lg {
+                .lib-css(--listing-grid-columns, ~"var(--listing-grid-media-lg-3columns-columns)");
+            }
+        }
+        & when not (@listing-grid__media-xl__3columns__columns = false) {
+            @media @media-xl {
+                .lib-css(--listing-grid-columns, ~"var(--listing-grid-media-xl-3columns-columns)");
+            }
+        }
+    }
+}

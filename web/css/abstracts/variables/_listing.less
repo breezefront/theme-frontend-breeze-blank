@@ -147,29 +147,27 @@
 @listing-list-rows__margin: false;
 
 .breeze-tokens() {
-    --listing-grid-gap: @listing-grid__gap;
-    --listing-grid-row-gap: @listing-grid__row-gap;
-    --listing-grid-columns: @listing-grid__columns;
-    --listing-grid-item-padding: @listing-grid-item__padding;
-    --listing-grid-item-margin: @listing-grid-item__margin;
-
-    @media @media-sm {
-        .lib-css(--listing-grid-columns, @listing-grid__media-sm__columns);
-    }
-    @media @media-md {
-        .lib-css(--listing-grid-columns, @listing-grid__media-md__columns);
-    }
-    @media @media-lg {
-        .lib-css(--listing-grid-columns, @listing-grid__media-lg__columns);
-    }
-    @media @media-xl {
-        .lib-css(--listing-grid-columns, @listing-grid__media-xl__columns);
-    }
     @media @media-hover {
         & when (@listing-grid-item-swatches__position = absolute) {
             --swatches-over-image: true;
         }
     }
+
+    --listing-grid-gap: @listing-grid__gap;
+    --listing-grid-row-gap: @listing-grid__row-gap;
+    --listing-grid-columns: @listing-grid__columns;
+    .lib-css(--listing-grid-media-sm-columns, @listing-grid__media-sm__columns);
+    .lib-css(--listing-grid-media-md-columns, @listing-grid__media-md__columns);
+    .lib-css(--listing-grid-media-lg-columns, @listing-grid__media-lg__columns);
+    .lib-css(--listing-grid-media-xl-columns, @listing-grid__media-xl__columns);
+    .lib-css(--listing-grid-media-md-1column-columns, @listing-grid__media-md__1column__columns);
+    .lib-css(--listing-grid-media-lg-1column-columns, @listing-grid__media-lg__1column__columns);
+    .lib-css(--listing-grid-media-xl-1column-columns, @listing-grid__media-xl__1column__columns);
+    .lib-css(--listing-grid-media-lg-3columns-columns, @listing-grid__media-lg__3columns__columns);
+    .lib-css(--listing-grid-media-xl-3columns-columns, @listing-grid__media-xl__3columns__columns);
+
+    --listing-grid-item-padding: @listing-grid-item__padding;
+    --listing-grid-item-margin: @listing-grid-item__margin;
 
     .lib-css(--image-border-radius, @listing-grid-item-image__border-radius);
     .lib-css(--tocart-abs-color, @listing-grid-item-tocart__absolute__color);
