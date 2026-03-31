@@ -15,14 +15,16 @@ $_helper = $parentBlock->getData('outputHelper');
 $_product = $block->getProduct();
 ?>
 
-<?php $_productNameStripped = $parentBlock->stripTags($_product->getName(), null, true); ?>
-<div class="product description product-item-description">
-    <?= /* @noEscape */ $_helper->productAttribute(
-        $_product,
-        $_product->getShortDescription(),
-        'short_description'
-    ) ?>
-    <a href="<?= $escaper->escapeUrl($_product->getProductUrl()) ?>"
-       title="<?= /* @noEscape */ $_productNameStripped ?>"
-       class="action more"><?= $escaper->escapeHtml(__('Learn More')) ?></a>
-</div>
+<?php
+    $_productNameStripped = $parentBlock->stripTags($_product->getName(), null, true);
+    $_productDescription = $_product->getShortDescription();
+?>
+
+<?php if ($_productDescription) : ?>
+    <div class="product description product-item-description">
+        <?= /* @noEscape */ $_helper->productAttribute($_product, $_productDescription, 'short_description') ?>
+        <a href="<?= $escaper->escapeUrl($_product->getProductUrl()) ?>"
+           title="<?= /* @noEscape */ $_productNameStripped ?>"
+           class="action more"><?= $escaper->escapeHtml(__('Learn More')) ?></a>
+    </div>
+<?php endif ?>
