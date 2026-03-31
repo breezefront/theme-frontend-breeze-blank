@@ -267,6 +267,28 @@
                 <var name="height">180</var> <!-- number -->
             </var>
         </var>
+        <var name="listing">
+            <var name="grid">
+                <var name="details">
+                    <var name="name">100</var>
+                    <var name="reviews">200</var>
+                    <var name="price">300</var>
+                    <var name="details">400</var>
+                    <var name="actions">500</var>
+                    <var name="description">0</var> <!-- 0 is for no output -->
+                </var>
+            </var>
+            <var name="list">
+                <var name="details">
+                    <var name="name">100</var>
+                    <var name="reviews">200</var>
+                    <var name="price">300</var>
+                    <var name="details">400</var>
+                    <var name="actions">500</var>
+                    <var name="description">600</var>
+                </var>
+            </var>
+        </var>
     </vars>
     <vars module="Magento_ConfigurableProduct">
         <var name="gallery_switch_strategy">prepend</var> <!-- prepend/replace -->

@@ -1,0 +1,23 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
+ */
+
+/** @var \Magento\Catalog\Block\Product\ListProduct $parentBlock */
+$parentBlock = $this->getParentBlock();
+
+/** @var \Magento\Catalog\Helper\Output $_helper */
+$_helper = $parentBlock->getData('outputHelper');
+
+/** @var \Magento\Catalog\Model\Product $_product */
+$_product = $block->getProduct();
+?>
+
+<strong class="product name product-item-name">
+    <a class="product-item-link"
+       href="<?= $escaper->escapeUrl($_product->getProductUrl()) ?>">
+        <?=/* @noEscape */ $_helper->productAttribute($_product, $_product->getName(), 'name')?>
+    </a>
+</strong>

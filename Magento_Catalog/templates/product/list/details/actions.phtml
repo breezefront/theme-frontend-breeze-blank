@@ -1,0 +1,68 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
+ */
+
+use Magento\Framework\App\Action\Action;
+
+/** @var \Magento\Catalog\Block\Product\ListProduct $parentBlock */
+$parentBlock = $this->getParentBlock();
+
+/** @var \Magento\Catalog\Helper\Output $_helper */
+$_helper = $parentBlock->getData('outputHelper');
+
+/** @var \Magento\Catalog\Model\Product $_product */
+$_product = $block->getProduct();
+?>
+
+<div class="product-item-inner">
+    <div class="product actions product-item-actions">
+        <div class="actions-primary">
+            <?php if ($_product->isSaleable()):?>
+                <?php $postParams = $parentBlock->getAddToCartPostParams($_product); ?>
+                <form data-role="tocart-form"
+                      data-product-sku="<?= $escaper->escapeHtml($_product->getSku()) ?>"
+                      action="<?= $escaper->escapeUrl($postParams['action']) ?>"
+                      data-mage-init='{"catalogAddToCart": {}}'
+                      method="post">
+                    <?php $options = $parentBlock->getData('viewModel')->getOptionsData($_product); ?>
+                    <?php foreach ($options as $optionItem): ?>
+                        <input type="hidden"
+                               name="<?= $escaper->escapeHtml($optionItem['name']) ?>"
+                               value="<?= $escaper->escapeHtml($optionItem['value']) ?>">
+                    <?php endforeach; ?>
+                    <input type="hidden"
+                           name="product"
+                           value="<?= /* @noEscape */ $postParams['data']['product'] ?>">
+                    <input type="hidden"
+                           name="<?= /* @noEscape */ Action::PARAM_NAME_URL_ENCODED ?>"
+                           value="<?=
+                           /* @noEscape */ $postParams['data'][Action::PARAM_NAME_URL_ENCODED]
+                            ?>">
+                    <?= $parentBlock->getBlockHtml('formkey') ?>
+                    <button type="submit"
+                            title="<?= $escaper->escapeHtmlAttr(__('Add to Cart')) ?>"
+                            class="action tocart primary"
+                            disabled>
+                        <span><?= $escaper->escapeHtml(__('Add to Cart')) ?></span>
+                    </button>
+                </form>
+            <?php else:?>
+                <?php if ($_product->isAvailable()):?>
+                    <div class="stock available">
+                        <span><?= $escaper->escapeHtml(__('In stock')) ?></span></div>
+                <?php else:?>
+                    <div class="stock unavailable">
+                        <span><?= $escaper->escapeHtml(__('Out of stock')) ?></span></div>
+                <?php endif; ?>
+            <?php endif; ?>
+        </div>
+        <div data-role="add-to-links" class="actions-secondary">
+            <?php if ($addToBlock = $parentBlock->getChildBlock('addto')): ?>
+                <?= $addToBlock->setProduct($_product)->getChildHtml() ?>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+/**
+ * Product list template
+ *
+ * @var $block \Magento\Catalog\Block\Product\ListProduct
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
+ */
+?>
+<?php
+$_productCollection = $block->getLoadedProductCollection();
+/** @var \Magento\Catalog\Helper\Output $_helper */
+$_helper = $block->getData('outputHelper');
+?>
+<?php if (!$_productCollection->count()): ?>
+    <div class="message info empty">
+        <div><?= $escaper->escapeHtml(__('We can\'t find products matching the selection.')) ?></div>
+    </div>
+<?php else: ?>
+    <?= $block->getToolbarHtml() ?>
+    <?= $block->getAdditionalHtml() ?>
+    <?php
+    if ($block->getMode() === 'grid') {
+        $viewMode = 'grid';
+        $imageDisplayArea = 'category_page_grid';
+    } else {
+        $viewMode = 'list';
+        $imageDisplayArea = 'category_page_list';
+    }
+
+    $details = $block->getVar("listing/{$viewMode}/details", 'Magento_Catalog');
+    asort($details);
+    ?>
+    <div class="products wrapper <?= /* @noEscape */ $viewMode ?> products-<?= /* @noEscape */ $viewMode ?>">
+        <ol class="products list items product-items">
+            <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
+            <?php foreach ($_productCollection as $_product): ?>
+            <li class="item product product-item">
+                <div class="product-item-info"
+                     id="product-item-info_<?= /* @noEscape */ $_product->getId() ?>"
+                     data-container="product-<?= /* @noEscape */ $viewMode ?>">
+                    <?php
+                    $productImage = $block->getImage($_product, $imageDisplayArea);
+                    ?>
+                    <?php // Product Image ?>
+                    <a href="<?= $escaper->escapeUrl($_product->getProductUrl()) ?>"
+                       class="product photo product-item-photo"
+                       tabindex="-1">
+                        <?= $productImage->toHtml() ?>
+                    </a>
+                    <div class="product details product-item-details">
+                        <?php foreach ($details as $code => $flag) : ?>
+                            <?php if (!$flag) continue; ?>
+                            <?php
+                                $child = $block->getLayout()
+                                    ->createBlock('Magento\Framework\View\Element\Template')
+                                    ->setTemplate("Magento_Catalog::product/list/details/{$code}.phtml")
+                                    ->setProduct($_product);
+
+                                $block->setChild("details_{$code}", $child);
+
+                                echo $child->toHtml();
+                            ?>
+                        <?php endforeach ?>
+                    </div>
+                </div>
+            </li>
+            <?php endforeach; ?>
+        </ol>
+    </div>
+    <?= $block->getChildBlock('toolbar')->setIsBottom(true)->toHtml() ?>
+    <?php // phpcs:ignore Magento2.Legacy.PhtmlTemplate ?>
+<?php endif; ?>
