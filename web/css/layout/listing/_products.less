@@ -53,9 +53,12 @@
     }
     .product-item-description {
         &:extend(.breeze-prose all);
-        > :first-child,
-        > :first-child > :first-child {
+        > :first-child {
             margin-top: 0;
+        }
+        li {
+            margin-top: 0;
+            margin-bottom: 0;
         }
     }
     .actions-primary {
