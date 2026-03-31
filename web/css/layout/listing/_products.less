@@ -53,6 +53,10 @@
     }
     .product-item-description {
         &:extend(.breeze-prose all);
+        > :first-child,
+        > :first-child > :first-child {
+            margin-top: 0;
+        }
     }
     .actions-primary {
         .stock {
