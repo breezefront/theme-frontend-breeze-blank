@@ -104,10 +104,11 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            .product-item-name,
-            .price-box,
-            .product-reviews-summary {
-                margin-bottom: @1;
+            > * {
+                .lib-css(margin-bottom, @listing-item-details__gap);
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
         .towishlist,
@@ -235,7 +236,7 @@
                 }
             }
             .product-item-inner {
-                padding-top: @1;
+                padding-top: @0-5;
                 display: flex;
                 flex-direction: column;
                 gap: @1;
