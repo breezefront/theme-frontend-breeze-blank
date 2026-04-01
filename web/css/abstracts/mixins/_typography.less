@@ -88,7 +88,12 @@
         font-family: @clamp__font-family;
         color: var(--clamp-color);
         text-decoration: @clamp__text-decoration;
-        background: ~"linear-gradient(to top, var(--clamp-bg), color-mix(in oklch, var(--clamp-bg) 40%, transparent))";
+        background: linear-gradient(
+            to top,
+            var(--clamp-bg),
+            color-mix(in oklch, var(--clamp-bg) 40%, transparent) 85%,
+            transparent
+        );
         position: absolute;
         bottom: 0;
         outline-offset: -2px;
