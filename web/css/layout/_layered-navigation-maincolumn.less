@@ -1,0 +1,111 @@
+.column.main {
+    .block.filter {
+        .filter-options-content {
+            .breeze-dropdown();
+            &[aria-hidden=false] {
+                .breeze-dropdown-visible();
+            }
+            .item {
+                .breeze-dropdown-item();
+            }
+        }
+    }
+}
+
+& when (@critical) {
+    @media @media-md {
+        .column.main .block.filter {
+            margin-bottom: @4;
+
+            .filter-title {
+                display: none;
+            }
+
+            .filter-current {
+                display: inline-flex;
+                align-items: flex-start;
+                gap: @3;
+                .margin-right(@2);
+                &-subtitle {
+                    padding: @1 0;
+                    flex-shrink: 0;
+                    &::after {
+                        content: ':';
+                    }
+                }
+                .items {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: @2;
+                }
+                li {
+                    padding: @1 @3;
+                    background: var(--muted-bg);
+                    border-radius: @96;
+                }
+                ~ .filter-options {
+                    margin-top: @1;
+                }
+            }
+            .filter-actions {
+                display: inline-flex;
+            }
+
+            .filter-options {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: @3;
+
+                &-item {
+                    margin: 0;
+                    border: 0;
+                    position: relative;
+                }
+
+                a {
+                    display: block;
+                }
+                .item > a {
+                    flex-grow: 1;
+                }
+
+                &-title {
+                    &::after {
+                        opacity: 0.3;
+                    }
+                }
+
+                &-content {
+                    display: block !important;
+                    height: auto;
+                    width: @52;
+                    .right(auto);
+                    .left(-9999px);
+                    .margin-left(-@24);
+
+                    &[aria-hidden=false] {
+                        .left(50%);
+                    }
+
+                    > :first-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+& when not (@critical) {
+    @media @media-md {
+        .column.main .block.filter {
+            .filter-options-content {
+                .lib-css(box-shadow, @dropdown__shadow);
+
+                .item {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
