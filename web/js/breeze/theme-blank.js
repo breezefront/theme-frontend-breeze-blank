@@ -1,46 +1,40 @@
-(function () {
+define(['mage/utils/wrapper'], (wrapper) => {
     'use strict';
 
     $.mixin('collapsible', {
-        isLayeredNavigation: function () {
-            return this.element.hasClass('filter') &&
-                this.element.has('.filter-options').length;
-        },
-
         create: function (original) {
-            if (this.isLayeredNavigation()) {
-                this.filters = this.element.find('.filter-content');
-                this.focusTrap = this.createFocusTrap(this.filters);
-                this._on(document, 'breeze:resize-x', () => {
-                    if (this.filters.css('position') !== 'fixed') {
-                        this.close();
-                    }
-                });
+            if (this.element.hasClass('filter') && this.element.has('.filter-options').length) {
+                this.prepareForLayeredNavigation();
             }
-
             original();
         },
 
-        open: function (original) {
-            if (this.isLayeredNavigation()) {
-                if (!this.filters || this.filters.css('visibility') !== 'hidden') {
+        prepareForLayeredNavigation: function () {
+            this.open = wrapper.wrap(this.open, function (o) {
+                if (!this.filters) {
+                    this.filters = this.element.find('.filter-content');
+                    this.focusTrap = this.createFocusTrap(this.filters);
+                    this._on(document, 'breeze:resize-x', () => {
+                        if (this.filters.css('position') !== 'fixed') {
+                            this.close();
+                        }
+                    });
+                }
+
+                if (this.filters.css('visibility') !== 'hidden') {
                     return;
                 }
 
                 $.breeze.scrollbar.hide();
                 this.filters.one('transitionend', this.focusTrap.activate);
-            }
+                o();
+            });
 
-            original();
-        },
-
-        close: function (original) {
-            if (this.isLayeredNavigation()) {
+            this.close = wrapper.wrap(this.close, function (o) {
                 $.breeze.scrollbar.reset();
-                this.focusTrap.deactivate();
-            }
-
-            original();
+                this.focusTrap?.deactivate();
+                o();
+            });
         }
     });
 
@@ -112,4 +106,4 @@
                 }
             });
     });
-})();
+});
