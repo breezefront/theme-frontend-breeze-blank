@@ -1,4 +1,7 @@
-define(['mage/utils/wrapper'], (wrapper) => {
+define([
+    'mage/utils/wrapper',
+    'mage/translate'
+], (wrapper, $t) => {
     'use strict';
 
     $.mixin('collapsible', {
@@ -10,10 +13,18 @@ define(['mage/utils/wrapper'], (wrapper) => {
         },
 
         prepareForLayeredNavigation: function () {
+            this.isDropdown = () => this.filters.css('--layered-navigation-mode') === 'dropdown';
+
             this.open = wrapper.wrap(this.open, function (o) {
                 if (!this.filters) {
                     this.filters = this.element.find('.filter-content');
+                    this.filters.append(`
+                        <button type="button" class="button-close">
+                            <span>${$t('Close')}</span>
+                        </button>
+                    `);
                     this.focusTrap = this.createFocusTrap(this.filters);
+                    this._on('click .filter-content > .button-close', this.close);
                     this._on(document, 'breeze:resize-x', () => {
                         if (this.filters.css('position') !== 'fixed') {
                             this.close();
@@ -25,8 +36,11 @@ define(['mage/utils/wrapper'], (wrapper) => {
                     return;
                 }
 
-                $.breeze.scrollbar.hide();
-                this.filters.one('transitionend', this.focusTrap.activate);
+                if (this.filters.css('--layered-navigation-mode') === 'slideout') {
+                    $.breeze.scrollbar.hide();
+                    this.filters.one('transitionend', this.focusTrap.activate);
+                }
+
                 o();
             });
 

@@ -1,3 +1,4 @@
+& when (@layered-maincolumn__mode = horizontal) {
 @media @media-md {
     .column.main .block.filter {
         .filter-options-content {
@@ -105,4 +106,88 @@
             }
         }
     }
+}
+}
+
+& when (@layered-maincolumn__mode = dropdown) {
+@media @media-md {
+    .column.main .block.filter {
+        .filter-content {
+            .breeze-popover();
+        }
+        &.active {
+            .filter-content {
+                .breeze-popover-visible();
+            }
+        }
+    }
+}
+
+@media @media-md {
+    .column.main .block.filter .filter-title {
+        .layered-navigation-title-as-button();
+    }
+}
+
+& when (@critical) {
+    @media @media-md {
+        .column.main .block.filter {
+            .filter-title {
+                position: absolute;
+                z-index: var(--filter-title-z-index, 10); // must be higher than 5 to cover addto links
+                top: 0;
+                margin: 0;
+                max-width: @layered-sidebar-title__md-down__max-width;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .filter-subtitle,
+            .filter-current-subtitle {
+                .breeze-block-sidebar-title();
+                display: block;
+                padding-top: 0;
+            }
+            .filter-current ~ .filter-subtitle {
+                display: none;
+            }
+            .filter-content {
+                --layered-navigation-mode: dropdown;
+                margin: 0 !important;
+                > .button-close {
+                    display: block;
+                    position: absolute;
+                    top: 10px;
+                    right: 5px;
+                }
+            }
+        }
+        .page-with-filter {
+            .toolbar {
+                .modes {
+                    .margin-left(@layered-toolbar-modes__md-down__margin-left); // make some space for toggler
+                }
+            }
+        }
+    }
+}
+
+& when not (@critical) {
+    @media @media-md {
+        .column.main .block.filter {
+            .filter-title {
+                cursor: pointer;
+            }
+            .filter-content {
+                --popover-width: 20rem;
+                .right(auto);
+                .left(0);
+            }
+        }
+        @starting-style {
+            .column.main .block.filter.active .filter-content {
+                .breeze-popover-starting-style();
+            }
+        }
+    }
+}
 }
