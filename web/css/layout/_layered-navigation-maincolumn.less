@@ -137,9 +137,6 @@
                 z-index: var(--filter-title-z-index, 10); // must be higher than 5 to cover addto links
                 top: 0;
                 margin: 0;
-                max-width: @layered-sidebar-title__md-down__max-width;
-                white-space: nowrap;
-                overflow: hidden;
             }
             .filter-subtitle,
             .filter-current-subtitle {
@@ -164,7 +161,7 @@
         .page-with-filter {
             .toolbar {
                 .modes {
-                    .margin-left(@layered-toolbar-modes__md-down__margin-left); // make some space for toggler
+                    .margin-left(@layered-title-as-button__preserved-space);
                 }
             }
         }

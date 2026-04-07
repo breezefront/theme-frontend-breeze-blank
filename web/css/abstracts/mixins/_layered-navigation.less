@@ -4,13 +4,15 @@
     }
 
     & when (@critical) {
+        .padding(@layered-title-as-button__padding);
+        .lib-css(max-width, @layered-title-as-button__max-width);
         border: 0;
-        .padding(@2 @1 @2 0);
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: @1;
         white-space: nowrap;
+        overflow: hidden;
 
         &::before {
             width: @6;
