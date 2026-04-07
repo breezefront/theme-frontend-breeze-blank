@@ -25,8 +25,13 @@ define([
                     `);
                     this.focusTrap = this.createFocusTrap(this.filters);
                     this._on('click .filter-content > .button-close', this.close);
+                    this._on(document, 'keyup', (e) => {
+                        if (e.code === 'Escape' && this.isActive()) {
+                            this.close();
+                        }
+                    });
                     this._on(document, 'breeze:resize-x', () => {
-                        if (this.filters.css('position') !== 'fixed') {
+                        if (this.isActive() && this.filters.css('position') !== 'fixed') {
                             this.close();
                         }
                     });
