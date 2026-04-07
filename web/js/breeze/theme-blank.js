@@ -13,12 +13,12 @@ define([
         },
 
         prepareForLayeredNavigation: function () {
-            this.isDropdown = () => this.filters.css('--layered-navigation-mode') === 'dropdown';
+            this.isDropdown = () => this.filters?.css('--layered-navigation-mode') === 'dropdown';
 
             this.open = wrapper.wrap(this.open, function (o) {
                 if (!this.filters) {
                     this.filters = this.element.find('.filter-content');
-                    this.filters.append(`
+                    this.filters.prepend(`
                         <button type="button" class="button-close">
                             <span>${$t('Close')}</span>
                         </button>
