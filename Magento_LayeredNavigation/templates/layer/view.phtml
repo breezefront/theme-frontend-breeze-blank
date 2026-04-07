@@ -20,8 +20,11 @@
     }
 
     $name = $block->getNameInLayout();
+    $maincolumnMode = $block->getMaincolumnMode();
     $parentName = $this->getLayout()->getParentName($name);
-    if (strpos($parentName, 'sidebar') === false) {
+    if (!in_array($maincolumnMode, ['dropdown', 'slideout']) &&
+        !str_contains($parentName, 'sidebar')
+    ) {
         $isExpanded = false;
     }
 ?>

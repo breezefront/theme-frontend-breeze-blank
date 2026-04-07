@@ -138,24 +138,8 @@
                 top: 0;
                 margin: 0;
             }
-            .filter-subtitle,
-            .filter-current-subtitle {
-                .breeze-block-sidebar-title();
-                display: block;
-                padding-top: 0;
-            }
-            .filter-current ~ .filter-subtitle {
-                display: none;
-            }
             .filter-content {
                 --layered-navigation-mode: dropdown;
-                margin: 0 !important;
-                > .button-close {
-                    display: block;
-                    position: absolute;
-                    top: 10px;
-                    right: 5px;
-                }
             }
         }
         .page-with-filter {
@@ -178,6 +162,22 @@
                 --popover-width: 20rem;
                 .right(auto);
                 .left(0);
+                margin: 0 !important;
+                > .button-close {
+                    display: block;
+                    position: absolute;
+                    top: 10px;
+                    right: 5px;
+                }
+            }
+            .filter-subtitle,
+            .filter-current-subtitle {
+                .breeze-block-sidebar-title();
+                display: block;
+                padding-top: 0;
+            }
+            .filter-current ~ .filter-subtitle {
+                display: none;
             }
         }
         @starting-style {
