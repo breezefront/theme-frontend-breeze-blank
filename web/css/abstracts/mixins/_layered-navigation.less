@@ -1,16 +1,18 @@
 .layered-navigation-title-as-button {
     &::before {
-        .breeze-icon(@layered-title-as-button__icon, @5);
+        .breeze-icon(@layered-title-as-button-icon__mask, @layered-title-as-button-icon__size);
     }
 
     & when (@critical) {
         .padding(@layered-title-as-button__padding);
         .lib-css(max-width, @layered-title-as-button__max-width);
+        .lib-css(font-size, @layered-title-as-button__font-size);
+        .lib-css(font-weight, @layered-title-as-button__font-weight);
         border: 0;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: @1;
+        .lib-css(gap, @layered-title-as-button__gap);
         white-space: nowrap;
         overflow: hidden;
 
