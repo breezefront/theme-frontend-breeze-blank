@@ -287,7 +287,7 @@
         }
         .action.select {
             &:extend(.breeze-button-reset all);
-            &:extend(.breeze-link all);
+            color: var(--link-color) !important;
         }
     }
 }
@@ -311,10 +311,19 @@
         a.action,
         button.action {
             &:extend(.transition all);
-            &:hover {
-                color: var(--addto-link-hover-color);
-                background: var(--addto-link-hover-bg);
-                .lib-css(text-decoration, @product-addto-link__hover__text-decoration);
+            @media @media-hover {
+                &:hover {
+                    color: var(--addto-link-hover-color);
+                    background: var(--addto-link-hover-bg);
+                    .lib-css(text-decoration, @product-addto-link__hover__text-decoration);
+                }
+            }
+        }
+    }
+    .block.related {
+        @media @media-hover {
+            .action.select:hover {
+                text-decoration: underline !important;
             }
         }
     }
