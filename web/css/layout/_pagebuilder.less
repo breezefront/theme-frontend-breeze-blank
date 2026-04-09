@@ -341,35 +341,6 @@
         row-gap: var(--gap-y, var(--gap, 0px));
     }
 
-    .pagebuilder-gap (@i) when (@i <= 8) {
-        .pagebuilder-column-group {
-            .gap-@{i},
-            &.gap-@{i} {
-                --gap: ~"@{@{i}}";
-            }
-
-            & when (@i = 2) {
-                .gap,
-                &.gap {
-                    --gap: ~"@{@{i}}";
-                }
-            }
-        }
-        .pagebuilder-gap(@i + 1);
-    }
-    .pagebuilder-gap(0);
-
-    .pagebuilder-y-gap (@i) when (@i <= 8) {
-        .pagebuilder-column-group {
-            .gap-y-@{i},
-            &.gap-y-@{i} {
-                --gap-y: ~"@{@{i}}";
-            }
-        }
-        .pagebuilder-y-gap(@i + 1);
-    }
-    .pagebuilder-y-gap(0);
-
     @media @media-md-down {
         .pagebuilder-column-group,
         .pagebuilder-column-line {
