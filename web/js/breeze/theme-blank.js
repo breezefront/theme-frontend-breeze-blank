@@ -50,8 +50,10 @@ define([
             });
 
             this.close = wrapper.wrap(this.close, function (o) {
-                $.breeze.scrollbar.reset();
-                this.focusTrap?.deactivate();
+                if (this.isActive()) {
+                    $.breeze.scrollbar.reset();
+                    this.focusTrap?.deactivate();
+                }
                 o();
             });
         }
