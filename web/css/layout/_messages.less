@@ -1,26 +1,10 @@
-& when (@critical) {
-    & when (@message__position = fixed) {
-        .breeze.breeze-theme #maincontent > .page.messages {
-            position: fixed;
-            .lib-css(z-index, @message__fixed__z-index);
-            .lib-css(top, @message__fixed__top);
-            .lib-css(left, @message__fixed__left);
-            .lib-css(right, @message__fixed__right);
-            .lib-css(bottom, @message__fixed__bottom);
-            pointer-events: none;
-
-            & when (@message__fixed__container) {
-                .messages {
-                    &:extend(.container all);
-                }
-            }
-
-            .message {
-                opacity: 0;
-            }
-        }
+& when (@message__position = fixed) {
+    .breeze.breeze-theme #maincontent > .page.messages {
+        &:extend(.messages-fixed-position all);
     }
+}
 
+& when (@critical) {
     .message:where(.warning, .success, .notice, .error, .info) {
         display: flex;
         align-items: flex-start;
@@ -139,81 +123,20 @@
             }
         }
     }
-
-    & when (@message__position = fixed) {
-        .breeze.breeze-theme #maincontent > .page.messages {
-            .message {
-                &:extend(.transition all);
-                .lib-css(transform, @message__fixed__hidden__transform);
-                position: relative;
-
-                // See messages.js in breeze-module
-                &.shown {
-                    opacity: 1;
-                    .lib-css(transform, @message__fixed__visible__transform);
-                    pointer-events: all;
-                    & when not (@message__fixed__hide-delay = false) {
-                        animation: .3s ease-in-out @message__fixed__hide-delay forwards message-hide;
-                    }
-                }
-
-                & when not (@message__fixed__hide-delay = false) {
-                    .button-close::after {
-                        content: '';
-                        position: absolute;
-                        .right(-@1-5);
-                        bottom: 0;
-                        width: 3px;
-                        height: 100%;
-                        opacity: 0;
-                        background-color: currentColor;
-                        .lib-css(border-radius, @message__fixed__hide-progress__border-radius);
-                        animation: @message__fixed__hide-delay - @message__fixed__hide-progress__delay
-                                   linear
-                                   @message__fixed__hide-progress__delay
-                                   forwards
-                                   message-progress;
-                    }
-                    &:hover,
-                    &:hover .button-close::after {
-                        animation-play-state: paused;
-                    }
-                }
-            }
+    @keyframes message-hide {
+        100% {
+            .lib-css(transform, @message__fixed__hidden__transform);
+            opacity: 0;
+            visibility: hidden;
         }
-
-        & when not (@message__fixed__hide-delay = false) {
-            @keyframes message-hide {
-                100% {
-                    .lib-css(transform, @message__fixed__hidden__transform);
-                    opacity: 0;
-                    visibility: hidden;
-                }
-            }
-            @keyframes moz-message-hide {
-                0% {
-                    .lib-css(transform, @message__fixed__visible__transform);
-                }
-                93% {
-                    .lib-css(transform, @message__fixed__visible__transform);
-                    opacity: 1;
-                    visibility: visible;
-                }
-                100% {
-                    .lib-css(transform, @message__fixed__hidden__transform);
-                    opacity: 0;
-                    visibility: hidden;
-                }
-            }
-            @keyframes message-progress {
-                0% {
-                    opacity: .5;
-                }
-                100% {
-                    height: 0;
-                    opacity: 0.1;
-                }
-            }
+    }
+    @keyframes message-progress {
+        0% {
+            opacity: .5;
+        }
+        100% {
+            height: 0;
+            opacity: 0.1;
         }
     }
 }

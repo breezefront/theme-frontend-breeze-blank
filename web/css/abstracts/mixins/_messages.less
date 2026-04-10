@@ -1,0 +1,61 @@
+.messages-fixed-position {
+    & when (@critical) {
+        position: fixed;
+        .lib-css(z-index, @message__fixed__z-index);
+        .lib-css(top, @message__fixed__top);
+        .lib-css(left, @message__fixed__left);
+        .lib-css(right, @message__fixed__right);
+        .lib-css(bottom, @message__fixed__bottom);
+        pointer-events: none;
+
+        & when (@message__fixed__container) {
+            .messages {
+                &:extend(.container all);
+            }
+        }
+
+        .message {
+            opacity: 0;
+        }
+    }
+    & when not (@critical) {
+        .message {
+            &:extend(.transition all);
+            .lib-css(transform, @message__fixed__hidden__transform);
+            position: relative;
+
+            // See messages.js in breeze-module
+            &.shown {
+                opacity: 1;
+                .lib-css(transform, @message__fixed__visible__transform);
+                pointer-events: all;
+                & when not (@message__fixed__hide-delay = false) {
+                    animation: .3s ease-in-out @message__fixed__hide-delay forwards message-hide;
+                }
+            }
+
+            & when not (@message__fixed__hide-delay = false) {
+                .button-close::after {
+                    content: '';
+                    position: absolute;
+                    .right(-@1-5);
+                    bottom: 0;
+                    width: 3px;
+                    height: 100%;
+                    opacity: 0;
+                    background-color: currentColor;
+                    .lib-css(border-radius, @message__fixed__hide-progress__border-radius);
+                    animation: @message__fixed__hide-delay - @message__fixed__hide-progress__delay
+                               linear
+                               @message__fixed__hide-progress__delay
+                               forwards
+                               message-progress;
+                }
+                &:hover,
+                &:hover .button-close::after {
+                    animation-play-state: paused;
+                }
+            }
+        }
+    }
+}
