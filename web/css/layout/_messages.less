@@ -168,7 +168,11 @@
                         opacity: 0;
                         background-color: currentColor;
                         .lib-css(border-radius, @message__fixed__hide-progress__border-radius);
-                        animation: @message__fixed__hide-progress__duration linear @message__fixed__hide-progress__delay forwards message-progress;
+                        animation: @message__fixed__hide-delay - @message__fixed__hide-progress__delay
+                                   linear
+                                   @message__fixed__hide-progress__delay
+                                   forwards
+                                   message-progress;
                     }
                     &:hover,
                     &:hover .button-close::after {
