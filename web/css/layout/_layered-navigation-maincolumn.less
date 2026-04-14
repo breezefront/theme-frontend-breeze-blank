@@ -112,7 +112,6 @@
 & when (@layered-maincolumn__mode = dropdown) {
 @media @media-md {
     .column.main .block.filter {
-        position: relative;
         .filter-content {
             .breeze-popover();
         }
@@ -131,6 +130,9 @@
 }
 
 & when (@critical) {
+    .column.main .block.filter {
+        position: relative;
+    }
     @media @media-md {
         .column.main .block.filter {
             .filter-title {
