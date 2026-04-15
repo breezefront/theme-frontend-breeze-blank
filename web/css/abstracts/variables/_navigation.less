@@ -35,6 +35,7 @@
 @navigation-dropdown__border: false;
 @navigation-dropdown__border-color: ~"var(--popover-border-color)";
 @navigation-dropdown__border-radius: ~"var(--popover-border-radius)";
+@navigation-dropdown__background: ~"var(--popover-bg)";
 @navigation-dropdown__shadow: ~"var(--popover-box-shadow)";
 @navigation-dropdown__top: ~"-@{0-5} !important";
 @navigation-dropdown__left: ~"calc(100% - @{4-5}) !important";
@@ -42,6 +43,7 @@
 @navigation-dropdown-level0__right: auto;
 
 @navigation-dropdown__inverted__border-color: ~"var(--popover-inverted-border-color)";
+@navigation-dropdown__inverted__background: ~"var(--popover-inverted-bg)";
 
 .breeze-tokens() {
     // this prop is used by menu.js component
@@ -57,12 +59,14 @@
     .lib-css(--navigation-dropdown-border-color, @navigation-dropdown__border-color);
     .lib-css(--navigation-dropdown-border-radius, @navigation-dropdown__border-radius);
     .lib-css(--navigation-dropdown-shadow, @navigation-dropdown__shadow);
+    .lib-css(--navigation-dropdown-bg, @navigation-dropdown__background);
 
     .lib-css(--navigation-inverted-color, @navigation__inverted__color);
     .lib-css(--navigation-item-level0-inverted-color, @navigation-item-level0__inverted__color);
     .lib-css(--navigation-item-level0-inverted-opened-color, @navigation-item-level0__inverted__opened__color);
     .lib-css(--navigation-item-level0-inverted-active-color, @navigation-item-level0__inverted__active__color);
     .lib-css(--navigation-dropdown-inverted-border-color, @navigation-dropdown__inverted__border-color);
+    .lib-css(--navigation-dropdown-inverted-bg, @navigation-dropdown__inverted__background);
 }
 
 .breeze-tokens-inverted() {
@@ -71,6 +75,7 @@
     .lib-css-if(@navigation-item-level0__inverted__opened__color, --navigation-item-level0-opened-color, ~"var(--navigation-item-level0-inverted-opened-color)");
     .lib-css-if(@navigation-item-level0__inverted__active__color, --navigation-item-level0-active-color, ~"var(--navigation-item-level0-inverted-active-color)");
     .lib-css-if(@navigation-dropdown__inverted__border-color, --navigation-dropdown-border-color, ~"var(--navigation-dropdown-inverted-border-color)");
+    .lib-css-if(@navigation-dropdown__inverted__background, --navigation-dropdown-bg, ~"var(--navigation-dropdown-inverted-bg)");
 }
 
 .breeze-tokens-inverted-reset() {
@@ -79,4 +84,5 @@
     .lib-css-if(@navigation-item-level0__inverted__opened__color, --navigation-item-level0-opened-color, @navigation-item-level0__opened__color);
     .lib-css-if(@navigation-item-level0__inverted__active__color, --navigation-item-level0-active-color, @navigation-item-level0__active__color);
     .lib-css-if(@navigation-dropdown__inverted__border-color, --navigation-dropdown-border-color, @navigation-dropdown__border-color);
+    .lib-css-if(@navigation-dropdown__inverted__background, --navigation-dropdown-bg, @navigation-dropdown__background);
 }

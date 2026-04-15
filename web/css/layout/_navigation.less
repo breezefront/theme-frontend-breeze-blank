@@ -96,7 +96,9 @@
 
     .navigation {
         color: var(--navigation-color);
-        .lib-css(--base-color, @navigation__color);
+        & when not (@navigation__color = ~"var(--base-color)") {
+            .lib-css(--base-color, @navigation__color);
+        }
         .lib-css(--surface-color, currentColor);
         .lib-css(--popover-color, currentColor);
 
@@ -110,6 +112,11 @@
             .lib-css(text-transform, @navigation-item-level0__text-transform);
             .lib-css(text-shadow, @navigation-item-level0__text-shadow);
             .padding(@navigation-item-level0__padding);
+        }
+
+        .submenu {
+            .lib-css(--surface-color, currentColor);
+            .lib-css(--popover-color, currentColor);
         }
 
         @media @navigation__media-desktop {
@@ -146,15 +153,18 @@
             .navigation {
                 & when (@header__dark = deep) {
                     .breeze-invert-colors();
+                    color: var(--navigation-color, var(--base-color));
                 }
             }
             li {
                 & when (@header__dark = true) {
                     > .level-top {
                         .breeze-invert-colors();
+                        color: var(--navigation-item-level0-color, var(--navigation-color, var(--base-color)));
                     }
                     ul {
                         .breeze-invert-colors-reset();
+                        color: var(--navigation-color, var(--base-color));
                     }
                 }
             }
@@ -301,7 +311,7 @@
             }
             li > a.level-top:hover,
             .opened > a.level-top {
-                color: var(--navigation-item-level0-opened-color);
+                color: var(--navigation-item-level0-opened-color, var(--navigation-item-level0-color, var(--navigation-color, var(--base-color))));
                 background: var(--navigation-item-level0-opened-background);
             }
 
@@ -309,7 +319,7 @@
             li.has-active {
                 > a.level-top,
                 > a.level-top:hover {
-                    color: var(--navigation-item-level0-active-color);
+                    color: var(--navigation-item-level0-active-color, var(--navigation-item-level0-color, var(--navigation-color, var(--base-color))));
                     background: var(--navigation-item-level0-active-background);
                 }
             }
@@ -340,6 +350,7 @@
                 border-color: var(--navigation-dropdown-border-color);
                 border-radius: var(--navigation-dropdown-border-radius);
                 box-shadow: var(--navigation-dropdown-shadow);
+                background: var(--navigation-dropdown-bg);
 
                 .submenu {
                     .lib-css(top, @navigation-dropdown__top);
