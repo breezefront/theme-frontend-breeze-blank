@@ -7,6 +7,8 @@ Breeze-based theme.
  - [Demo](https://breeze.swissupdemo.com/breeze_blank/)
  - [Screenshots](https://breezefront.com/screenshots#breeze-blank)
 
+[![Sandbox](https://try.merchantduo.com/_sandbox/button)](https://try.merchantduo.com/_sandbox/setup?template=breeze_blank)
+
 ## Installation
 
 ```bash
