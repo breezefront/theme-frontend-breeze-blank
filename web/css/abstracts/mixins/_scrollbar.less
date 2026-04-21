@@ -5,14 +5,14 @@
         height: @scrollbar__width;
     }
     &::-webkit-scrollbar-track {
-        background: var(--scrollbar-bg, transparent);
+        background: var(--scrollbar-bg);
         border-radius: @scrollbar__border-radius;
     }
     &::-webkit-scrollbar-thumb {
-        background: var(--scrollbar-color, var(--muted-color));
+        background: var(--scrollbar-color);
         border-radius: @scrollbar__border-radius;
         &:hover {
-            background: var(--scrollbar-hover-color, color-mix(in oklch, var(--scrollbar-color, var(--muted-color)) 80%, var(--color-black)));
+            background: var(--scrollbar-hover-color);
         }
     }
 }
