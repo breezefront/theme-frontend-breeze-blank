@@ -90,7 +90,18 @@
     }
 }
 
-.breeze-button-primary {}
+.breeze-button-primary {
+    & when (@critical) {
+        --button-bg: var(--button-primary-bg);
+        --button-color: var(--button-primary-color);
+        --button-border-color: var(--button-primary-border-color);
+    }
+    & when not (@critical) {
+        --button-hover-bg: var(--button-primary-hover-bg);
+        --button-hover-color: var(--button-primary-hover-color);
+        --button-hover-border-color: var(--button-primary-hover-border-color);
+    }
+}
 
 .breeze-button-secondary {
     & when (@critical) {

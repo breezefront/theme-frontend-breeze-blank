@@ -149,6 +149,13 @@
     .lib-css(--button-hover-color, @button__hover__color);
     .lib-css(--button-hover-border-color, @button__hover__border-color);
 
+    .lib-css(--button-primary-bg, @button__background);
+    .lib-css(--button-primary-color, @button__color);
+    .lib-css(--button-primary-border-color, @button__border-color);
+    .lib-css(--button-primary-hover-bg, @button__hover__background);
+    .lib-css(--button-primary-hover-color, @button__hover__color);
+    .lib-css(--button-primary-hover-border-color, @button__hover__border-color);
+
     .lib-css(--button-secondary-bg, @button-secondary__background);
     .lib-css(--button-secondary-color, @button-secondary__color);
     .lib-css(--button-secondary-border-color, @button-secondary__border-color);
@@ -209,6 +216,12 @@
     .lib-css-if(@button__inverted__border-color, --button-border-color, ~"var(--button-inverted-border-color)");
     .lib-css-if(@button__inverted__hover__background, --button-hover-bg, ~"var(--button-inverted-hover-bg)");
     .lib-css-if(@button__inverted__hover__color, --button-hover-color, ~"var(--button-inverted-hover-color)");
+
+    .lib-css-if(@button__inverted__background, --button-primary-bg, ~"var(--button-inverted-bg)");
+    .lib-css-if(@button__inverted__color, --button-primary-color, ~"var(--button-inverted-color)");
+    .lib-css-if(@button__inverted__border-color, --button-primary-border-color, ~"var(--button-inverted-border-color)");
+    .lib-css-if(@button__inverted__hover__background, --button-primary-hover-bg, ~"var(--button-inverted-hover-bg)");
+    .lib-css-if(@button__inverted__hover__color, --button-primary-hover-color, ~"var(--button-inverted-hover-color)");
 
     .lib-css-if(@button-secondary__inverted__background, --button-secondary-bg, ~"var(--button-secondary-inverted-bg)");
     .lib-css-if(@button-secondary__inverted__color, --button-secondary-color, ~"var(--button-secondary-inverted-color)");
