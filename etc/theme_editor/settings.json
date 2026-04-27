@@ -2,10 +2,79 @@
   "version": "1.0",
   "sections": [
     {
-      "id": "typography",
-      "name": "Typography",
-      "order": 20,
+      "id": "layout",
+      "name": "Layout",
+      "order": 5,
       "settings": [
+        {
+          "id": "page-max-width",
+          "label": "Page Max Width",
+          "type": "range",
+          "default": "3000px",
+          "unit": "px",
+          "min": 1024,
+          "max": 3000,
+          "property": "--page-max-width"
+        },
+        {
+          "id": "page-box-shadow-spread",
+          "label": "Page Shadow",
+          "type": "range",
+          "default": "0px",
+          "unit": "px",
+          "min": 0,
+          "max": 40,
+          "property": "--page-box-shadow-spread"
+        },
+        {
+          "id": "page-bg",
+          "label": "Page Background",
+          "type": "color",
+          "default": "#ffffff00",
+          "property": "--page-bg",
+          "palette": "default"
+        },
+        {
+          "id": "container-max-width",
+          "label": "Container Max Width",
+          "type": "range",
+          "default": "1260px",
+          "unit": "px",
+          "min": 980,
+          "max": 3000,
+          "property": "--container-max-width"
+        }
+      ]
+    },
+    {
+      "id": "colors",
+      "name": "Colors",
+      "order": 10,
+      "settings": [
+        {
+          "id": "body-bg",
+          "label": "Body Background",
+          "type": "color",
+          "default": "#ffffff",
+          "property": "--body-bg",
+          "palette": "default"
+        },
+        {
+          "id": "surface-bg",
+          "label": "Elevated Surfaces Background",
+          "type": "color",
+          "default": "#ffffff",
+          "property": "--surface-bg",
+          "palette": "default"
+        },
+        {
+          "id": "popover-bg",
+          "label": "Popover Background",
+          "type": "color",
+          "default": "#ffffff",
+          "property": "--popover-bg",
+          "palette": "default"
+        },
         {
           "id": "base-color",
           "label": "Text Color",
@@ -21,6 +90,238 @@
           "default": "#3160e2",
           "property": "--link-color",
           "palette": "default"
+        },
+        {
+          "id": "focus-ring-color",
+          "label": "Focus Ring Color",
+          "type": "color",
+          "default": "#3160e2",
+          "property": "--focus-ring-color",
+          "palette": "default"
+        },
+        {
+          "id": "header-colors",
+          "type": "heading",
+          "label": "Header"
+        },
+        {
+          "id": "header-panel-bg",
+          "label": "Header Top Panel Background",
+          "type": "color",
+          "default": "#ffffff",
+          "property": "--header-panel-bg",
+          "palette": "default"
+        },
+        {
+          "id": "header-panel-color",
+          "label": "Header Top Panel Text Color",
+          "type": "color",
+          "default": "#1e2939",
+          "property": "--header-panel-color",
+          "palette": "default"
+        },
+        {
+          "id": "header-bg",
+          "label": "Header Background",
+          "type": "color",
+          "default": "#ffffff",
+          "property": "--header-bg",
+          "palette": "default"
+        },
+        {
+          "id": "header-color",
+          "label": "Header Text Color",
+          "type": "color",
+          "default": "#1e2939",
+          "property": "--header-color",
+          "palette": "default"
+        },
+        {
+          "id": "navigation-colors",
+          "type": "heading",
+          "label": "Navigation"
+        },
+        {
+          "id": "navigation-item-level0-color",
+          "label": "First Level Navigation Text Color",
+          "type": "color",
+          "default": "#1e2939",
+          "property": "--navigation-item-level0-color",
+          "palette": "default"
+        },
+        {
+          "id": "navigation-color",
+          "label": "Navigation Dropdown Text Color",
+          "type": "color",
+          "default": "#1e2939",
+          "property": "--navigation-color",
+          "palette": "default"
+        },
+        {
+          "id": "navigation-dropdown-bg",
+          "label": "Navigation Dropdown Background",
+          "type": "color",
+          "default": "#ffffff",
+          "property": "--navigation-dropdown-bg",
+          "palette": "default"
+        },
+        {
+          "id": "navigation-dropdown-border-color",
+          "label": "Navigation Dropdown Border Color",
+          "type": "color",
+          "default": "#1e29391a",
+          "property": "--navigation-dropdown-border-color",
+          "palette": "default"
+        },
+        {
+          "id": "footer-colors",
+          "type": "heading",
+          "label": "Footer"
+        },
+        {
+          "id": "footer-bg",
+          "label": "Footer Background",
+          "type": "color",
+          "default": "#ffffff",
+          "property": "--footer-middle-bg",
+          "palette": "default"
+        },
+        {
+          "id": "buttons-colors",
+          "type": "heading",
+          "label": "Buttons"
+        },
+        {
+          "id": "button-bg",
+          "label": "Primary Button Background",
+          "type": "color",
+          "default": "#155dfc",
+          "property": "--button-bg",
+          "palette": "default"
+        },
+        {
+          "id": "button-hover-bg",
+          "label": "Primary Button Hover Background",
+          "type": "color",
+          "default": "#1150db",
+          "property": "--button-hover-bg",
+          "palette": "default"
+        },
+        {
+          "id": "button-color",
+          "label": "Primary Button Color",
+          "type": "color",
+          "default": "#ffffff",
+          "property": "--button-color",
+          "palette": "default"
+        },
+        {
+          "id": "button-secondary-bg",
+          "label": "Secondary Button Background",
+          "type": "color",
+          "default": "#1e29391a",
+          "property": "--button-secondary-bg",
+          "palette": "default"
+        },
+        {
+          "id": "button-secondary-color",
+          "label": "Secondary Button Color",
+          "type": "color",
+          "default": "#1e2939b3",
+          "property": "--button-secondary-color",
+          "palette": "default"
+        },
+        {
+          "id": "inputs-colors",
+          "type": "heading",
+          "label": "Inputs"
+        },
+        {
+          "id": "input-color",
+          "label": "Input Text Color",
+          "type": "color",
+          "default": "#1e2939",
+          "property": "--input-color",
+          "palette": "default"
+        },
+        {
+          "id": "input-bg",
+          "label": "Input Background",
+          "type": "color",
+          "default": "#ffffff",
+          "property": "--input-bg",
+          "palette": "default"
+        },
+        {
+          "id": "input-border-color",
+          "label": "Input Border Color",
+          "type": "color",
+          "default": "#1e29394d",
+          "property": "--input-border-color",
+          "palette": "default"
+        },
+        {
+          "id": "input-outline-color",
+          "label": "Input Focus Ring Color",
+          "type": "color",
+          "default": "#3160e2",
+          "property": "--input-outline-color",
+          "palette": "default"
+        },
+        {
+          "id": "checkbox-color",
+          "label": "Checkbox Color",
+          "type": "color",
+          "default": "#3160e2",
+          "property": "--checkbox-color",
+          "palette": "default"
+        }
+      ]
+    },
+    {
+      "id": "typography",
+      "name": "Typography",
+      "order": 20,
+      "settings": [
+        {
+          "id": "primary-font",
+          "label": "Primary Font",
+          "type": "font_picker",
+          "default": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+          "property": "--primary-font",
+          "font_palette": "default"
+        },
+        {
+          "id": "secondary-font",
+          "label": "Secondary Font",
+          "type": "font_picker",
+          "default": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+          "property": "--secondary-font",
+          "font_palette": "default"
+        },
+        {
+          "id": "utility-font",
+          "label": "Utility Font",
+          "type": "font_picker",
+          "default": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+          "property": "--utility-font",
+          "font_palette": "default"
+        },
+        {
+          "id": "base-font-family",
+          "label": "Base Font",
+          "type": "font_picker",
+          "default": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+          "property": "--base-font-family",
+          "font_palette": "default"
+        },
+        {
+          "id": "headings-font-family",
+          "label": "Headings Font",
+          "type": "font_picker",
+          "default": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+          "property": "--headings-font-family",
+          "font_palette": "default"
         },
         {
           "id": "font-size",
@@ -45,41 +346,69 @@
       ]
     },
     {
-      "id": "buttons",
-      "name": "Buttons",
-      "order": 30,
+      "id": "border-radius",
+      "name": "Border Radius",
+      "order": 40,
       "settings": [
         {
-          "id": "button-bg",
-          "label": "Primary Button Background",
-          "type": "color",
-          "default": "#155dfc",
-          "property": "--button-bg",
-          "palette": "default"
+          "id": "base-border-radius",
+          "label": "Base Border Radius",
+          "type": "range",
+          "default": "0px",
+          "unit": "px",
+          "min": 0,
+          "max": 30,
+          "property": "--base-border-radius"
         },
         {
-          "id": "button-color",
-          "label": "Primary Button Color",
-          "type": "color",
-          "default": "#ffffff",
-          "property": "--button-color",
-          "palette": "default"
+          "id": "button-border-radius",
+          "label": "Button Border Radius",
+          "type": "range",
+          "default": "0px",
+          "unit": "px",
+          "min": 0,
+          "max": 30,
+          "property": "--button-border-radius"
         },
         {
-          "id": "button-secondary-bg",
-          "label": "Secondary Button Background",
-          "type": "color",
-          "default": "#e5e7eb",
-          "property": "--button-secondary-bg",
-          "palette": "default"
+          "id": "input-border-radius",
+          "label": "Input Border Radius",
+          "type": "range",
+          "default": "0px",
+          "unit": "px",
+          "min": 0,
+          "max": 30,
+          "property": "--input-border-radius"
         },
         {
-          "id": "button-secondary-color",
-          "label": "Secondary Button Color",
-          "type": "color",
-          "default": "#464f5d",
-          "property": "--button-secondary-color",
-          "palette": "default"
+          "id": "surface-border-radius",
+          "label": "Surface Border Radius",
+          "type": "range",
+          "default": "0px",
+          "unit": "px",
+          "min": 0,
+          "max": 30,
+          "property": "--surface-border-radius"
+        },
+        {
+          "id": "popover-border-radius",
+          "label": "Dropdown Border Radius",
+          "type": "range",
+          "default": "0px",
+          "unit": "px",
+          "min": 0,
+          "max": 30,
+          "property": "--popover-border-radius"
+        },
+        {
+          "id": "modal-border-radius",
+          "label": "Modal Border Radius",
+          "type": "range",
+          "default": "0px",
+          "unit": "px",
+          "min": 0,
+          "max": 30,
+          "property": "--modal-border-radius"
         }
       ]
     }
@@ -230,6 +559,86 @@
           ]
         }
       }
+    }
+  },
+  "font_palettes": {
+    "default": {
+      "id": "default",
+      "label": "Default Font Palette",
+      "options": [
+        { "value": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'", "label": "System UI" },
+        { "value": "Arial, sans-serif", "label": "Arial" },
+        { "value": "'Helvetica Neue', Helvetica, sans-serif", "label": "Helvetica Neue" },
+        { "value": "Georgia, serif", "label": "Georgia" },
+        { "value": "'Times New Roman', serif", "label": "Times New Roman" },
+        { "value": "Verdana, sans-serif", "label": "Verdana" },
+        { "value": "'Courier New', monospace", "label": "Courier New" },
+        {
+          "value": "'Roboto', sans-serif",
+          "label": "Roboto",
+          "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        },
+        {
+          "value": "'Open Sans', sans-serif",
+          "label": "Open Sans",
+          "url": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+        },
+        {
+          "value": "'Lato', sans-serif",
+          "label": "Lato",
+          "url": "https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+        },
+        {
+          "value": "'Montserrat', sans-serif",
+          "label": "Montserrat",
+          "url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+        },
+        {
+          "value": "'Poppins', sans-serif",
+          "label": "Poppins",
+          "url": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+        },
+        {
+          "value": "'Nunito', sans-serif",
+          "label": "Nunito",
+          "url": "https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+        },
+        {
+          "value": "'Raleway', sans-serif",
+          "label": "Raleway",
+          "url": "https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+        },
+        {
+          "value": "'Playfair Display', serif",
+          "label": "Playfair Display",
+          "url": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+        },
+        {
+          "value": "'Merriweather', serif",
+          "label": "Merriweather",
+          "url": "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+        }
+      ],
+      "fonts": [
+        {
+          "id": "primary",
+          "label": "Primary",
+          "property": "--primary-font",
+          "default": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+        },
+        {
+          "id": "secondary",
+          "label": "Secondary",
+          "property": "--secondary-font",
+          "default": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+        },
+        {
+          "id": "utility",
+          "label": "Utility",
+          "property": "--utility-font",
+          "default": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+        }
+      ]
     }
   }
 }
