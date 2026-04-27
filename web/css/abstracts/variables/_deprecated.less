@@ -67,7 +67,7 @@
 @scrollbar-thumb__dark__background-color: @scrollbar-thumb__inverted__background;
 
 @input__text-color: ~"var(--base-color)";                               // @input__color
-@input__background-color: ~"var(--base-bg)";                            // @input__background
+@input__background-color: ~"var(--page-bg, var(--base-bg))";            // @input__background
 @input__inverted__background-color: @input__inverted__background;
 @input__inverted__background-alpha: 0;
 @input__inverted__border-alpha: .5;
@@ -150,41 +150,3 @@
     --z-layer-bg: var(--popover-bg);
     --z-layer-color: var(--popover-color);
 }
-
-// Alias some deprecations to make them clearly visible in source code
-// We are using them to minimize BC issues
-@deprecated__theme__brand-color: @theme__brand-color;
-
-@deprecated__base__text-color: @base__text-color;
-@deprecated__base__background-color: @base__background-color;
-
-@deprecated__message-success__text-color: @message-success__text-color;
-@deprecated__message-info__text-color: @message-info__text-color;
-@deprecated__message-error__text-color: @message-error__text-color;
-
-@deprecated__input__text-color: @input__text-color;
-@deprecated__input__background-color: @input__background-color;
-
-@deprecated__button__text-color: @button__text-color;
-@deprecated__button__background-color: @button__background-color;
-@deprecated__button__hover__text-color: @button__hover__text-color;
-@deprecated__button__hover__background-color: @button__hover__background-color;
-
-@deprecated__button-secondary__text-color: @button-secondary__text-color;
-@deprecated__button-secondary__background-color: @button-secondary__background-color;
-@deprecated__button-secondary__hover__text-color: @button-secondary__hover__text-color;
-@deprecated__button-secondary__hover__background-color: @button-secondary__hover__background-color;
-
-@deprecated__navigation__text-color: @navigation__text-color;
-
-@deprecated__listing-grid__media-md-1column__columns: @listing-grid__media-md-1column__columns;
-@deprecated__listing-grid__media-lg-1column__columns: @listing-grid__media-lg-1column__columns;
-@deprecated__listing-grid__media-xl-1column__columns: @listing-grid__media-xl-1column__columns;
-@deprecated__listing-grid__media-lg-3columns__columns: @listing-grid__media-lg-3columns__columns;
-@deprecated__listing-grid__media-xl-3columns__columns: @listing-grid__media-xl-3columns__columns;
-@deprecated__listing-grid-item-tocart__absolute__text-color: @listing-grid-item-tocart__absolute__text-color;
-@deprecated__listing-grid-item-tocart__absolute__background-color: @listing-grid-item-tocart__absolute__background-color;
-
-@deprecated__rating__color: @rating__color;
-
-@deprecated__footer-newsletter-input__background-color: @footer-newsletter-input__background-color;
