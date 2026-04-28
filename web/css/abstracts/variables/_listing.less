@@ -42,14 +42,14 @@
 @listing-grid-item__align-items: false;
 @listing-grid-item__max-width: 400px;
 @listing-grid-item__padding: 0px;
-@listing-grid-item__margin: 0px;
+@listing-grid-item__margin: -@listing-grid-item__padding;
 @listing-grid-item__border-radius: @product-image__border-radius;
 @listing-grid-item__box-shadow: false;
 @listing-grid-item__background: ~"var(--page-bg, var(--base-bg))";
 @listing-grid-item__hover__box-shadow: false;
 @listing-grid-item__hover__background: false;
 @listing-grid-item__hover__padding: @listing-grid-item__padding;
-@listing-grid-item__hover__margin: @listing-grid-item__margin;
+@listing-grid-item__hover__margin: -@listing-grid-item__hover__padding;
 
 @listing-grid-item-image__border-radius: @listing-grid-item__border-radius;
 
@@ -126,6 +126,7 @@
 // @listing-grid-item__box-shadow: ~"var(--shadow-lg-around)";
 // @listing-grid-item__padding: @3;
 // @listing-grid-item__margin: 0px;
+// @listing-grid-item__hover__margin: 0px;
 
 // ----------------------------------------------
 // Preset: hover-card;
@@ -133,7 +134,6 @@
 // ----------------------------------------------
 // @listing-grid-item__reveal-on-hover: true;
 // @listing-grid-item__hover__padding: @3;
-// @listing-grid-item__hover__margin: -@listing-grid-item__hover__padding;
 // @listing-grid-item__hover__box-shadow: ~"var(--shadow-lg-around)";
 
 @listing-list__gap: @3;
