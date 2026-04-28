@@ -32,19 +32,19 @@
         text-transform: var(--headings-text-transform);
     }
 
-    :where(h1, .h1, h2, .h2, h3, .h3) {
+    :where(h1, h2, h3), .h1, .h2, .h3 {
         strong {
             font-weight: var(--headings-primary-strong-font-weight);
         }
     }
 
-    :where(h4, .h4, h5, .h5, h6, .h6, .heading) {
+    :where(h4, h5, h6), .h4, .h5, .h6, .heading {
         strong {
             font-weight: var(--headings-secondary-strong-font-weight);
         }
     }
 
-    :where(h1, .h1) {
+    :where(h1), .h1 {
         .lib-css(--headings-font-size, @h1__font-size);
         .lib-css(--headings-font-weight, @h1__font-weight);
         .lib-css(--headings-letter-spacing, @h1__letter-spacing);
@@ -55,7 +55,7 @@
             .lib-css(margin-top, @h1__margin-top);
         }
     }
-    :where(h2, .h2) {
+    :where(h2), .h2 {
         .lib-css(--headings-font-size, @h2__font-size);
         .lib-css(--headings-font-weight, @h2__font-weight);
         .lib-css(--headings-letter-spacing, @h2__letter-spacing);
@@ -66,7 +66,7 @@
             .lib-css(margin-top, @h2__margin-top);
         }
     }
-    :where(h3, .h3) {
+    :where(h3), .h3 {
         .lib-css(--headings-font-size, @h3__font-size);
         .lib-css(--headings-font-weight, @h3__font-weight);
         .lib-css(--headings-letter-spacing, @h3__letter-spacing);
@@ -77,7 +77,7 @@
             .lib-css(margin-top, @h3__margin-top);
         }
     }
-    :where(h4, .h4) {
+    :where(h4), .h4 {
         .lib-css(--headings-font-size, @h4__font-size);
         .lib-css(--headings-font-weight, @h4__font-weight);
         .lib-css(--headings-letter-spacing, @h4__letter-spacing);
@@ -88,7 +88,7 @@
             .lib-css(margin-top, @h4__margin-top);
         }
     }
-    :where(h5, .h5) {
+    :where(h5), .h5 {
         .lib-css(--headings-font-size, @h5__font-size);
         .lib-css(--headings-font-weight, @h5__font-weight);
         .lib-css(--headings-letter-spacing, @h5__letter-spacing);
@@ -99,7 +99,7 @@
             .lib-css(margin-top, @h5__margin-top);
         }
     }
-    :where(h6, .h6) {
+    :where(h6), .h6 {
         .lib-css(--headings-font-size, @h6__font-size);
         .lib-css(--headings-font-weight, @h6__font-weight);
         .lib-css(--headings-letter-spacing, @h6__letter-spacing);
