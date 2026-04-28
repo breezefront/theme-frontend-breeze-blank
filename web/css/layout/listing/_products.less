@@ -311,6 +311,8 @@
             }
             .product-item-info {
                 gap: @listing-list-item__gap;
+                .lib-css(background, @listing-list-item__background);
+                .lib-css(padding, @listing-list-item__padding);
                 @media @media-lg {
                     .lib-css(gap, @listing-list-item__lg__gap);
                 }
