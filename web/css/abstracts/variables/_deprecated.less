@@ -14,21 +14,21 @@
 // .icon.rounded class no longer adds padding. Add `p-3` class manually.
 // .icon.small.rounded class no longer adds padding. Add `p-2` class manually.
 
-@theme__brand-color: @blue-600;                         // @color__brand;
-@theme__brand-hover-color: false;                       // removed
-@theme__dark-color: @color__neutral-900;                // @dark__background
-@theme__dark__brand-color: @color__brand;               // @color__inverted__brand
-@brand__color: @color__brand;                           // @color__brand;
-@brand__hover__color: false;                            // removed
-@divider__color: ~"var(--subtle-color)";
-@z-layer__background: ~"var(--surface-bg)";
-@z-layer__color: ~"var(--surface-color)";
-@z-layer__dark__background-color: ~"var(--surface-bg)";
+@theme__brand-color: @color__brand;
+@theme__brand-hover-color: false; // removed
+@theme__dark-color: @dark__background;
+@theme__dark__brand-color: @color__inverted__brand;
+@brand__color: @color__brand;
+@brand__hover__color: false; // removed
+@divider__color: @subtle__color;
+@z-layer__background: @surface__background;
+@z-layer__color: @surface__color;
+@z-layer__dark__background-color: @surface__inverted__background;
 
-@dark__gray-800: lighten(@gray-900, 2.5%);              // ~"var(--color-base)"
-@dark__blue: lighten(@blue-700, 25%);                   // @color__inverted__blue
-@dark__green: lighten(@green-700, 35%);                 // @color__inverted__green
-@dark__red: lighten(@red-700, 30%);                     // @color__inverted__red
+@dark__gray-800: @base__inverted__color;
+@dark__blue: @color__inverted__blue;
+@dark__green: @color__inverted__green;
+@dark__red: @color__inverted__red;
 
 @blue: @color__blue;
 @blue__muted: false;        // removed
@@ -39,9 +39,9 @@
 @yellow: @color__yellow;
 @yellow__muted: false;      // removed
 
-@base__text-color: ~"var(--color-neutral-800)";         // @base__color;
-@base__background-color: ~"var(--color-white)";         // @base__background
-@base__inverted__text-alpha: .85;                       // removed
+@base__text-color: @base__color;
+@base__background-color: @base__background;
+@base__inverted__text-alpha: .85; // removed
 @base__inverted__text-color: @base__inverted__color;
 @base__dark__text-color: @base__inverted__color;
 @base__dark__background-color: @base__inverted__background;
@@ -53,10 +53,10 @@
 
 @muted__background-color: @muted__background;
 @muted__inverted__background-color: @muted__inverted__background;
-@muted__inverted__background-alpha: 1;
+@muted__inverted__background-alpha: 1; // removed
 @muted__dark__background-color: @muted__inverted__background;
 
-@link__inverted__text-color: @blue-300;
+@link__inverted__text-color: @link__inverted__color;
 
 @message__background: ~"var(--message-bg)"; // removed
 @message__color: ~"var(--message-color)";   // removed
@@ -69,7 +69,7 @@
 @message-error__background-color: @message-error__background;
 
 @headings__text-color: @headings__color;
-@headings__text-alpha: 1;
+@headings__text-alpha: 1; // removed
 @headings__inverted__text-color: @base__inverted__color;
 @headings__dark__text-color: @base__inverted__color;
 
@@ -78,38 +78,38 @@
 @scrollbar-track__dark__background-color: @scrollbar-track__inverted__background;
 @scrollbar-thumb__dark__background-color: @scrollbar-thumb__inverted__background;
 
-@input__text-color: ~"var(--base-color)";                               // @input__color
-@input__background-color: ~"var(--page-bg, var(--base-bg))";            // @input__background
+@input__text-color: @input__color;
+@input__background-color: @input__background;
 @input__inverted__background-color: @input__inverted__background;
-@input__inverted__background-alpha: 0;
-@input__inverted__border-alpha: .5;
+@input__inverted__background-alpha: 0; // removed
+@input__inverted__border-alpha: .5;    // removed
 @input__dark__border-color: @input__inverted__border-color;
 
-@button__text-color: ~"var(--color-white)";
-@button__background-color: ~"var(--color-brand)";
-@button__hover__text-color: ~"var(--button-color)";
-@button__hover__background-color: ~"color-mix(in oklch, var(--button-bg) 90%, var(--color-black))";
-@button__inverted__background-color: false;
-@button__inverted__text-color: false;
+@button__text-color: @button__color;
+@button__background-color: @button__background;
+@button__hover__text-color: @button__hover__color;
+@button__hover__background-color: @button__hover__background;
+@button__inverted__background-color: @button__inverted__background;
+@button__inverted__text-color: @button__inverted__color;
 @button__inverted__hover__background-color: @button__inverted__background-color;
 
-@button-secondary__text-color: ~"color-mix(in oklch, var(--base-color) 70%, transparent)";
-@button-secondary__background-color: ~"var(--subtle-color)";
-@button-secondary__hover__text-color: ~"var(--button-secondary-color)";
-@button-secondary__hover__background-color: ~"color-mix(in oklch, var(--button-secondary-bg) 90%, var(--color-black))";
+@button-secondary__text-color: @button-secondary__color;
+@button-secondary__background-color: @button-secondary__background;
+@button-secondary__hover__text-color: @button-secondary__hover__color;
+@button-secondary__hover__background-color: @button-secondary__hover__background;
 @button-secondary__inverted__text-color: @button-secondary__text-color;
 @button-secondary__inverted__background-color: @button-secondary__background-color;
 @button-secondary__inverted__hover__background-color: @button-secondary__hover__background-color;
 @button-secondary__dark__text-color: @button-secondary__inverted__text-color;
 @button-secondary__dark__background-color: @button-secondary__inverted__background-color;
 
-@dropdown__border: 1px solid @dropdown__border-color;   // removed
-@dropdown__shadow: @shadow-lg;                          // replaced with @popover_shadow
-@dropdown__filter: false;                               // replaced with @popover_filter
-@dropdown__border-color: @popover__border-color;        // replaced with @popover_border-color
-@dropdown__border-radius: @popover__border-radius;      // replaced with @popover_border-radius
+@dropdown__border: 1px solid @dropdown__border-color; // removed
+@dropdown__shadow: @popover__shadow;
+@dropdown__filter: @popover__filter;
+@dropdown__border-color: @popover__border-color;
+@dropdown__border-radius: @popover__border-radius;
 
-@breadcrumbs__min-height: @10;                          // removed
+@breadcrumbs__min-height: @10; // removed
 
 @block-title__text-color: @block-title__color;
 @block-title__background-color: @block-title__background;
@@ -119,38 +119,38 @@
 
 @block-content__background-color: @block-content__background;
 
-@navigation__text-color: ~"var(--base-color)";      // @navigation__color
-@minisearch-input__background-color: false;         // @minisearch-input__background
-@minisearch-button__text-color: false;              // @minisearch-button__color
-@minisearch-button__background-color: false;        // @minisearch-button__background
-@minisearch-button__focus__background-color: false; // @minisearch-button__focus__background
+@navigation__text-color: @navigation__color;
+@minisearch-input__background-color: @minisearch-input__background;
+@minisearch-button__text-color: @minisearch-button__color;
+@minisearch-button__background-color: @minisearch-button__background;
+@minisearch-button__focus__background-color: false; // removed
 
 @layered-sidebar-title__md-down__max-width: @layered-title-as-button__max-width;
 @layered-toolbar-modes__md-down__margin-left: @layered-title-as-button__preserved-space;
 
-@listing-grid__media-md-1column__columns: 4;        // @listing-grid__media-md__1column__columns
-@listing-grid__media-lg-1column__columns: 5;        // @listing-grid__media-lg__1column__columns
-@listing-grid__media-xl-1column__columns: false;    // @listing-grid__media-xl__1column__columns
-@listing-grid__media-lg-3columns__columns: 3;       // @listing-grid__media-lg__3columns__columns
-@listing-grid__media-xl-3columns__columns: false;   // @listing-grid__media-xl__3columns__columns
-@listing-grid-item-tocart__absolute__text-color: false;
-@listing-grid-item-tocart__absolute__background-color: false; // @listing-grid-item-tocart__absolute__background
-@listing-grid-item-tocart__absolute__background-alpha: false;
-@listing-grid-item-tocart__absolute__hover__background-alpha: false;
+@listing-grid__media-md-1column__columns: @listing-grid__media-md__1column__columns;
+@listing-grid__media-lg-1column__columns: @listing-grid__media-lg__1column__columns;
+@listing-grid__media-xl-1column__columns: @listing-grid__media-xl__1column__columns;
+@listing-grid__media-lg-3columns__columns: @listing-grid__media-lg__3columns__columns;
+@listing-grid__media-xl-3columns__columns: @listing-grid__media-xl__3columns__columns;
+@listing-grid-item-tocart__absolute__text-color: @listing-grid-item-tocart__absolute__color;
+@listing-grid-item-tocart__absolute__background-color: @listing-grid-item-tocart__absolute__background;
+@listing-grid-item-tocart__absolute__background-alpha: false;           // removed
+@listing-grid-item-tocart__absolute__hover__background-alpha: false;    // removed
 
 @product-stock-available__color: @product-stock__available__color;
 @product-stock-available__background: @product-stock__available__background;
 @product-stock-unavailable__color: @product-stock__unavailable__color;
 @product-stock-unavailable__background: @product-stock__unavailable__background;
 
-@rating__color: false; // @rating-icon__color
+@rating__color: @rating-icon__color;
 
 @tab-toggler__horizontal-active__border-color: @tab-toggler__horizontal__active__border-color;
 @tab-toggler-inner__horizontal-active__background: @tab-toggler-inner__horizontal__active__background;
 @tab-toggler__accordion-active__color: @tab-toggler__accordion__active__color;
 @tab-toggler__accordion-active__background: @tab-toggler__accordion__active__background;
 
-@footer-newsletter-input__background-color: false; // @footer-newsletter-input__background
+@footer-newsletter-input__background-color: @footer-newsletter-input__background;
 
 .breeze-z-layer-starting-style {
     .breeze-popover-starting-style();
