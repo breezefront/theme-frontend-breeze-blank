@@ -24,13 +24,6 @@
 @color__inverted__red: @red-500;
 @color__inverted__yellow: @color__yellow;
 
-@color__info: ~"var(--color-blue)";
-@color__success: ~"var(--color-green)";
-@color__danger: ~"var(--color-red)";
-@color__inverted__info: ~"var(--color-inverted-blue)";
-@color__inverted__success: ~"var(--color-inverted-green)";
-@color__inverted__danger: ~"var(--color-inverted-red)";
-
 .breeze-tokens() {
     .lib-css(--color-brand, @color__brand);
     .lib-css(--color-white, @color__white);
@@ -50,18 +43,12 @@
     .lib-css(--color-green, @color__green);
     .lib-css(--color-red, @color__red);
     .lib-css(--color-yellow, @color__yellow);
-    .lib-css(--color-info, @color__info);
-    .lib-css(--color-success, @color__success);
-    .lib-css(--color-danger, @color__danger);
 
     .lib-css(--color-inverted-brand, @color__inverted__brand);
     .lib-css(--color-inverted-blue, @color__inverted__blue);
     .lib-css(--color-inverted-green, @color__inverted__green);
     .lib-css(--color-inverted-red, @color__inverted__red);
     .lib-css(--color-inverted-yellow, @color__inverted__yellow);
-    .lib-css(--color-inverted-info, @color__inverted__info);
-    .lib-css(--color-inverted-success, @color__inverted__success);
-    .lib-css(--color-inverted-danger, @color__inverted__danger);
 }
 
 .breeze-tokens-inverted() {
@@ -70,9 +57,6 @@
     .lib-css-if(@color__inverted__green, --color-green, ~"var(--color-inverted-green)");
     .lib-css-if(@color__inverted__red, --color-red, ~"var(--color-inverted-red)");
     .lib-css-if(@color__inverted__yellow, --color-yellow, ~"var(--color-inverted-yellow)");
-    .lib-css-if(@color__inverted__info, --color-info, ~"var(--color-inverted-info)");
-    .lib-css-if(@color__inverted__success, --color-success, ~"var(--color-inverted-success)");
-    .lib-css-if(@color__inverted__danger, --color-danger, ~"var(--color-inverted-danger)");
 }
 .breeze-tokens-inverted-reset() {
     .lib-css-if(@color__inverted__brand, --color-brand, @color__brand);
@@ -80,7 +64,4 @@
     .lib-css-if(@color__inverted__green, --color-green, @color__green);
     .lib-css-if(@color__inverted__red, --color-red, @color__red);
     .lib-css-if(@color__inverted__yellow, --color-yellow, @color__yellow);
-    .lib-css-if(@color__inverted__info, --color-info, @color__info);
-    .lib-css-if(@color__inverted__success, --color-success, @color__success);
-    .lib-css-if(@color__inverted__danger, --color-danger, @color__danger);
 }

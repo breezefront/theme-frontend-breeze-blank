@@ -39,10 +39,6 @@
 @yellow: @color__yellow;
 @yellow__muted: false;      // removed
 
-@info__color: @color__info;
-@success__color: @color__success;
-@danger__color: @color__danger;
-
 @base__text-color: ~"var(--color-neutral-800)";         // @base__color;
 @base__background-color: ~"var(--color-white)";         // @base__background
 @base__inverted__text-alpha: .85;                       // removed
@@ -62,15 +58,15 @@
 
 @link__inverted__text-color: @blue-300;
 
-@message__background: ~"var(--message-bg)";
-@message__color: ~"var(--message-color)";
-@message__border-color: ~"var(--message-border-color, var(--message-color))";
-@message-success__text-color: ~"var(--color-success)";
-@message-success__background-color: false;
-@message-info__text-color: ~"var(--color-info)";
-@message-info__background-color: false;
-@message-error__text-color: ~"var(--color-danger)";
-@message-error__background-color: false;
+@message__background: ~"var(--message-bg)"; // removed
+@message__color: ~"var(--message-color)";   // removed
+@message__border-color: ~"var(--message-border-color, var(--message-color))"; // removed
+@message-success__text-color: @message-success__color;
+@message-success__background-color: @message-success__background;
+@message-info__text-color: @message-info__color;
+@message-info__background-color: @message-info__background;
+@message-error__text-color: @message-error__color;
+@message-error__background-color: @message-error__background;
 
 @headings__text-color: @headings__color;
 @headings__text-alpha: 1;

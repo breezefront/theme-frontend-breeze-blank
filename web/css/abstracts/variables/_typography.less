@@ -37,6 +37,21 @@
 
 @dark__background: ~"var(--color-neutral-900)";
 
+@info__color: ~"var(--color-blue)";
+@info__background: ~"color-mix(in oklch, var(--info-color) 7%, var(--page-bg, var(--base-bg)))";
+@info__inverted__color: ~"var(--color-inverted-blue)";
+@info__inverted__background: ~"color-mix(in oklch, var(--info-inverted-color) 15%, var(--page-inverted-bg, var(--base-inverted-bg)))";
+
+@success__color: ~"var(--color-green)";
+@success__background: ~"color-mix(in oklch, var(--success-color) 7%, var(--page-bg, var(--base-bg)))";
+@success__inverted__color: ~"var(--color-inverted-green)";
+@success__inverted__background: ~"color-mix(in oklch, var(--success-inverted-color) 15%, var(--page-inverted-bg, var(--base-inverted-bg)))";
+
+@danger__color: ~"var(--color-red)";
+@danger__background: ~"color-mix(in oklch, var(--danger-color) 7%, var(--page-bg, var(--base-bg)))";
+@danger__inverted__color: ~"var(--color-inverted-red)";
+@danger__inverted__background: ~"color-mix(in oklch, var(--danger-inverted-color) 15%, var(--page-inverted-bg, var(--base-inverted-bg)))";
+
 @muted__color: ~"color-mix(in oklch, var(--base-color) 63%, transparent)";
 @muted__background: ~"color-mix(in oklch, var(--base-color) 5%, transparent)";
 @muted__inverted__color: ~"color-mix(in oklch, var(--base-inverted-color) 50%, transparent)";
@@ -139,6 +154,15 @@
     .lib-css(--body-bg, @body__background);
     .lib-css(--dark-bg, @dark__background);
 
+    .lib-css(--info-color, @info__color);
+    .lib-css(--info-bg, @info__background);
+
+    .lib-css(--success-color, @success__color);
+    .lib-css(--success-bg, @success__background);
+
+    .lib-css(--danger-color, @danger__color);
+    .lib-css(--danger-bg, @danger__background);
+
     .lib-css(--muted-color, @muted__color);
     .lib-css(--muted-bg, @muted__background);
 
@@ -163,6 +187,12 @@
     .lib-css(--base-inverted-color, @base__inverted__color);
     .lib-css(--base-inverted-bg, @base__inverted__background);
     .lib-css(--body-inverted-bg, @body__inverted__background);
+    .lib-css(--info-inverted-color, @info__inverted__color);
+    .lib-css(--info-inverted-bg, @info__inverted__background);
+    .lib-css(--success-inverted-color, @success__inverted__color);
+    .lib-css(--success-inverted-bg, @success__inverted__background);
+    .lib-css(--danger-inverted-color, @danger__inverted__color);
+    .lib-css(--danger-inverted-bg, @danger__inverted__background);
     .lib-css(--muted-inverted-color, @muted__inverted__color);
     .lib-css(--muted-inverted-bg, @muted__inverted__background);
     .lib-css(--subtle-inverted-color, @subtle__inverted__color);
@@ -178,6 +208,12 @@
     .lib-css-if(@base__inverted__color, --base-color, ~"var(--base-inverted-color)");
     .lib-css-if(@base__inverted__background, --base-bg, ~"var(--base-inverted-bg)");
     .lib-css-if(@body__inverted__background, --body-bg, ~"var(--body-inverted-bg)");
+    .lib-css-if(@info__inverted__color, --info-color, ~"var(--info-inverted-color)");
+    .lib-css-if(@info__inverted__background, --info-bg, ~"var(--info-inverted-bg)");
+    .lib-css-if(@success__inverted__color, --success-color, ~"var(--success-inverted-color)");
+    .lib-css-if(@success__inverted__background, --success-bg, ~"var(--success-inverted-bg)");
+    .lib-css-if(@danger__inverted__color, --danger-color, ~"var(--danger-inverted-color)");
+    .lib-css-if(@danger__inverted__background, --danger-bg, ~"var(--danger-inverted-bg)");
     .lib-css-if(@muted__inverted__color, --muted-color, ~"var(--muted-inverted-color)");
     .lib-css-if(@muted__inverted__background, --muted-bg, ~"var(--muted-inverted-bg)");
     .lib-css-if(@subtle__inverted__color, --subtle-color, ~"var(--subtle-inverted-color)");
@@ -193,6 +229,12 @@
     .lib-css-if(@base__inverted__color, --base-color, @base__color);
     .lib-css-if(@base__inverted__background, --base-bg, @base__background);
     .lib-css-if(@body__inverted__background, --body-bg, @body__background);
+    .lib-css-if(@info__inverted__color, --info-color, @info__color);
+    .lib-css-if(@info__inverted__background, --info-bg, @info__background);
+    .lib-css-if(@success__inverted__color, --success-color, @success__color);
+    .lib-css-if(@success__inverted__background, --success-color, @success__background);
+    .lib-css-if(@danger__inverted__color, --danger-color, @danger__color);
+    .lib-css-if(@danger__inverted__background, --danger-bg, @danger__background);
     .lib-css-if(@muted__inverted__color, --muted-color, @muted__color);
     .lib-css-if(@muted__inverted__background, --muted-bg, @muted__background);
     .lib-css-if(@subtle__inverted__color, --subtle-color, @subtle__color);

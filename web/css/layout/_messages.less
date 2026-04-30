@@ -66,17 +66,9 @@
         display: none;
     }
     .message:where(.warning, .success, .notice, .error, .info) {
-        color: var(--message-color, var(--base-color));
-        background: var(--message-bg, color-mix(
-            in srgb,
-            var(--message-color, var(--base-color)) 7%,
-            var(--base-bg)
-        ));
-        border-color: var(--message-border-color, color-mix(
-            in srgb,
-            var(--message-color, var(--base-color)) 15%,
-            var(--base-bg)
-        ));
+        color: var(--message-color);
+        background: var(--message-bg);
+        border-color: var(--message-border-color);
         &::before {
             background: var(--message-icon-bg);
         }
