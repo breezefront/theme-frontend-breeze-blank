@@ -1,5 +1,14 @@
 @color__brand: @blue-600;
+@color__brand-2: false;
+@color__brand-3: false;
+@color__brand-4: false;
+@color__brand-5: false;
+
 @color__inverted__brand: @color__brand;
+@color__inverted__brand-2: false;
+@color__inverted__brand-3: false;
+@color__inverted__brand-4: false;
+@color__inverted__brand-5: false;
 
 @color__white: @white;
 @color__black: @black;
@@ -26,6 +35,10 @@
 
 .breeze-tokens() {
     .lib-css(--color-brand, @color__brand);
+    .lib-css(--color-brand-2, @color__brand-2);
+    .lib-css(--color-brand-3, @color__brand-3);
+    .lib-css(--color-brand-4, @color__brand-4);
+    .lib-css(--color-brand-5, @color__brand-5);
     .lib-css(--color-white, @color__white);
     .lib-css(--color-black, @color__black);
     .lib-css(--color-neutral-50, @color__neutral-50);
@@ -45,6 +58,10 @@
     .lib-css(--color-yellow, @color__yellow);
 
     .lib-css(--color-inverted-brand, @color__inverted__brand);
+    .lib-css(--color-inverted-brand-2, @color__inverted__brand-2);
+    .lib-css(--color-inverted-brand-3, @color__inverted__brand-3);
+    .lib-css(--color-inverted-brand-4, @color__inverted__brand-4);
+    .lib-css(--color-inverted-brand-5, @color__inverted__brand-5);
     .lib-css(--color-inverted-blue, @color__inverted__blue);
     .lib-css(--color-inverted-green, @color__inverted__green);
     .lib-css(--color-inverted-red, @color__inverted__red);
@@ -53,6 +70,10 @@
 
 .breeze-tokens-inverted() {
     .lib-css-if(@color__inverted__brand, --color-brand, ~"var(--color-inverted-brand)");
+    .lib-css-if(@color__inverted__brand-2, --color-brand-2, ~"var(--color-inverted-brand-2)");
+    .lib-css-if(@color__inverted__brand-3, --color-brand-3, ~"var(--color-inverted-brand-3)");
+    .lib-css-if(@color__inverted__brand-4, --color-brand-4, ~"var(--color-inverted-brand-4)");
+    .lib-css-if(@color__inverted__brand-5, --color-brand-5, ~"var(--color-inverted-brand-5)");
     .lib-css-if(@color__inverted__blue, --color-blue, ~"var(--color-inverted-blue)");
     .lib-css-if(@color__inverted__green, --color-green, ~"var(--color-inverted-green)");
     .lib-css-if(@color__inverted__red, --color-red, ~"var(--color-inverted-red)");
@@ -60,6 +81,10 @@
 }
 .breeze-tokens-inverted-reset() {
     .lib-css-if(@color__inverted__brand, --color-brand, @color__brand);
+    .lib-css-if(@color__inverted__brand-2, --color-brand-2, @color__brand-2);
+    .lib-css-if(@color__inverted__brand-3, --color-brand-3, @color__brand-3);
+    .lib-css-if(@color__inverted__brand-4, --color-brand-4, @color__brand-4);
+    .lib-css-if(@color__inverted__brand-5, --color-brand-5, @color__brand-5);
     .lib-css-if(@color__inverted__blue, --color-blue, @color__blue);
     .lib-css-if(@color__inverted__green, --color-green, @color__green);
     .lib-css-if(@color__inverted__red, --color-red, @color__red);
