@@ -248,7 +248,7 @@
           "id": "input-bg",
           "label": "Input Background",
           "type": "color",
-          "default": "#ffffff",
+          "default": "#ffffff00",
           "property": "--input-bg",
           "palette": "default"
         },
