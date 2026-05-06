@@ -1,5 +1,7 @@
 & when (@critical) {
     :root {
+        --listing-grid-columns: var(--listing-grid-media-all-columns);
+
         & when not (@listing-grid__media-sm__columns = false) {
             @media @media-sm {
                 .lib-css(--listing-grid-columns, ~"var(--listing-grid-media-sm-columns)");
