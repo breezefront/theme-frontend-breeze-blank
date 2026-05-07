@@ -203,7 +203,7 @@
                 width: 100%;
                 flex-direction: column;
                 background: var(--listing-grid-item-bg, var(--listing-item-bg));
-                .lib-css(border-radius, @listing-grid-item__border-radius);
+                border-radius: var(--listing-grid-item-border-radius, var(--listing-item-border-radius));
                 padding: var(--listing-grid-item-padding);
             }
             @media @media-hover {
@@ -316,6 +316,7 @@
             .product-item-info {
                 gap: @listing-list-item__gap;
                 background: var(--listing-list-item-bg, var(--listing-item-bg));
+                border-radius: var(--listing-list-item-border-radius, var(--listing-item-border-radius));
                 .lib-css(padding, @listing-list-item__padding);
                 @media @media-lg {
                     .lib-css(gap, @listing-list-item__lg__gap);

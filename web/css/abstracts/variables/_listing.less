@@ -2,6 +2,7 @@
 @listing-item__out-of-stock__opacity: false;
 
 @listing-item__background: ~"var(--page-bg, var(--base-bg))";
+@listing-item__border-radius: @product-image__border-radius;
 
 @listing-item-name__color: false;
 @listing-item-name__font-weight: false;
@@ -45,7 +46,7 @@
 @listing-grid-item__max-width: 400px;
 @listing-grid-item__padding: 0px;
 @listing-grid-item__margin: -@listing-grid-item__padding;
-@listing-grid-item__border-radius: @product-image__border-radius;
+@listing-grid-item__border-radius: @listing-item__border-radius;
 @listing-grid-item__box-shadow: false;
 @listing-grid-item__background: false;
 @listing-grid-item__hover__box-shadow: false;
@@ -141,6 +142,7 @@
 @listing-list__gap: @3;
 @listing-list__lg__gap: false;
 @listing-list__divider: 1px solid ~"var(--subtle-color)";
+@listing-list-item__border-radius: false;
 @listing-list-item__gap: @3;
 @listing-list-item__lg__gap: false;
 @listing-list-item__background: false;
@@ -159,6 +161,7 @@
     }
 
     .lib-css(--listing-item-bg, @listing-item__background);
+    .lib-css(--listing-item-border-radius, @listing-item__border-radius);
 
     --listing-grid-gap: @listing-grid__gap;
     --listing-grid-row-gap: @listing-grid__row-gap;
@@ -175,11 +178,13 @@
 
     --listing-grid-item-padding: @listing-grid-item__padding;
     --listing-grid-item-margin: @listing-grid-item__margin;
+    .lib-css(--listing-grid-item-border-radius, @listing-grid-item__border-radius);
     .lib-css(--listing-grid-item-bg, @listing-grid-item__background);
     .lib-css(--listing-grid-item-hover-padding, @listing-grid-item__hover__padding);
     .lib-css(--listing-grid-item-hover-margin, @listing-grid-item__hover__margin);
 
     .lib-css(--listing-list-item-bg, @listing-list-item__background);
+    .lib-css(--listing-list-item-border-radius, @listing-list-item__border-radius);
 
     .lib-css(--image-border-radius, @listing-grid-item-image__border-radius);
     .lib-css(--tocart-abs-color, @listing-grid-item-tocart__absolute__color);
