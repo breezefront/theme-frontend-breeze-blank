@@ -25,7 +25,10 @@
 @navigation-item-level0__inverted__opened__color: @navigation-item-level0__inverted__color;
 @navigation-item-level0__inverted__active__color: @navigation-item-level0__inverted__opened__color;
 
+@navigation-item__opened__color: @navigation__color;
 @navigation-item__opened__background: @dropdown-item__hover__background;
+@navigation-item__inverted__opened__color: @navigation__inverted__color;
+@navigation-item__inverted__opened__background: @dropdown-item__inverted__hover__background;
 
 @navigation-caret__right: @0-5;
 @navigation-caret__opacity: false;
@@ -50,6 +53,10 @@
     --navigation-media-mobile: @navigation__media-mobile;
 
     .lib-css(--navigation-color, @navigation__color);
+
+    .lib-css(--navigation-item-opened-color, @navigation-item__opened__color);
+    .lib-css(--navigation-item-opened-bg, @navigation-item__opened__background);
+
     .lib-css(--navigation-item-level0-border-radius, @navigation-item-level0__border-radius);
     .lib-css(--navigation-item-level0-color, @navigation-item-level0__color);
     .lib-css(--navigation-item-level0-opened-color, @navigation-item-level0__opened__color);
@@ -62,6 +69,8 @@
     .lib-css(--navigation-dropdown-bg, @navigation-dropdown__background);
 
     .lib-css(--navigation-inverted-color, @navigation__inverted__color);
+    .lib-css(--navigation-item-inverted-opened-color, @navigation-item__inverted__opened__color);
+    .lib-css(--navigation-item-inverted-opened-bg, @navigation-item__inverted__opened__background);
     .lib-css(--navigation-item-level0-inverted-color, @navigation-item-level0__inverted__color);
     .lib-css(--navigation-item-level0-inverted-opened-color, @navigation-item-level0__inverted__opened__color);
     .lib-css(--navigation-item-level0-inverted-active-color, @navigation-item-level0__inverted__active__color);
@@ -71,6 +80,8 @@
 
 .breeze-tokens-inverted() {
     .lib-css-if(@navigation__inverted__color, --navigation-color, ~"var(--navigation-inverted-color)");
+    .lib-css-if(@navigation-item__inverted__opened__color, --navigation-item-opened-color, ~"var(--navigation-item-inverted-opened-color)");
+    .lib-css-if(@navigation-item__inverted__opened__background, --navigation-item-opened-bg, ~"var(--navigation-item-inverted-opened-bg)");
     .lib-css-if(@navigation-item-level0__inverted__color, --navigation-item-level0-color, ~"var(--navigation-item-level0-inverted-color)");
     .lib-css-if(@navigation-item-level0__inverted__opened__color, --navigation-item-level0-opened-color, ~"var(--navigation-item-level0-inverted-opened-color)");
     .lib-css-if(@navigation-item-level0__inverted__active__color, --navigation-item-level0-active-color, ~"var(--navigation-item-level0-inverted-active-color)");
@@ -80,6 +91,8 @@
 
 .breeze-tokens-inverted-reset() {
     .lib-css-if(@navigation__inverted__color, --navigation-color, @navigation__color);
+    .lib-css-if(@navigation-item__inverted__opened__color, --navigation-item-opened-color, @navigation-item__opened__color);
+    .lib-css-if(@navigation-item__inverted__opened__background, --navigation-item-opened-bg, @navigation-item__opened__background);
     .lib-css-if(@navigation-item-level0__inverted__color, --navigation-item-level0-color, @navigation-item-level0__color);
     .lib-css-if(@navigation-item-level0__inverted__opened__color, --navigation-item-level0-opened-color, @navigation-item-level0__opened__color);
     .lib-css-if(@navigation-item-level0__inverted__active__color, --navigation-item-level0-active-color, @navigation-item-level0__active__color);
