@@ -41,6 +41,7 @@
 @header-mobile-panel__border: 1px solid var(--subtle-color);
 @header-mobile-panel__border-width: 1px 0 0 0;
 @header-mobile-panel__background: false;
+@header-mobile-panel__color: false;
 @header-mobile-panel-link__opacity: .7;
 @header-mobile-panel-switcher-label__display: none;
 
@@ -60,4 +61,7 @@
     & when (@header-panel__dark) and (@header-panel__background = false) {
         --header-panel-bg: var(--dark-bg);
     }
+
+    .lib-css(--header-mobile-panel-bg, @header-mobile-panel__background);
+    .lib-css(--header-mobile-panel-color, @header-mobile-panel__color);
 }
