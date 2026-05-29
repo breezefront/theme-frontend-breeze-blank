@@ -179,6 +179,10 @@
             }
         }
     }
+
+    .col.actions .modal-body-content:has(.cancel-order-reason) {
+        display: none;
+    }
 }
 
 & when not (@critical) {
@@ -193,6 +197,12 @@
             .subtitle {
                 display: none;
             }
+        }
+    }
+
+    .modal-popup:has(.cancel-order-reason) {
+        .modal-header h1 {
+            display: none;
         }
     }
 }
