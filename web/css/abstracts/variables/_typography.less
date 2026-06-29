@@ -23,8 +23,8 @@
 @font-mono:  ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 @base__font-family: @font-sans;
-@base__font-size: @font-size__base;
-@base__line-height: @line-height__base;
+@base__font-size: ~"var(--font-size-base)";
+@base__line-height: ~"var(--line-height-base)";
 @base__color: ~"var(--color-neutral-800)";
 @base__background: ~"var(--color-white)";
 @base__scroll-margin-top: 0px;
@@ -77,33 +77,33 @@
 @headings-primary__strong__font-weight: 700;
 @headings-secondary__strong__font-weight: 600;
 
-@h1__font-size: @font-size__4xl;
 @h1__font-weight: bold;
-@h1__line-height: @line-height__4xl;
+@h1__font-size: ~"var(--font-size-4xl)";
+@h1__line-height: ~"var(--line-height-4xl)";
 @h1__text-transform: false;
 @h1__letter-spacing: false;
 @h1__margin-top: @8;
 @h1__margin-bottom: @4;
 
-@h2__font-size: @font-size__3xl;
 @h2__font-weight: 600;
-@h2__line-height: @line-height__3xl;
+@h2__font-size: ~"var(--font-size-3xl)";
+@h2__line-height: ~"var(--line-height-3xl)";
 @h2__text-transform: false;
 @h2__letter-spacing: false;
 @h2__margin-top: @8;
 @h2__margin-bottom: @4;
 
-@h3__font-size: @font-size__2xl;
 @h3__font-weight: 600;
-@h3__line-height: @line-height__2xl;
+@h3__font-size: ~"var(--font-size-2xl)";
+@h3__line-height: ~"var(--line-height-2xl)";
 @h3__text-transform: false;
 @h3__letter-spacing: false;
 @h3__margin-top: @4;
 @h3__margin-bottom: @2;
 
-@h4__font-size: @font-size__xl;
 @h4__font-weight: 600;
-@h4__line-height: @line-height__xl;
+@h4__font-size: ~"var(--font-size-xl)";
+@h4__line-height: ~"var(--line-height-xl)";
 @h4__text-transform: false;
 @h4__letter-spacing: false;
 @h4__margin-top: false;
@@ -125,8 +125,8 @@
 @h6__margin-top: false;
 @h6__margin-bottom: @1;
 
-@prose__font-size: @font-size__lg;
-@prose__line-height: @line-height__lg;
+@prose__font-size: ~"var(--font-size-lg)";
+@prose__line-height: ~"var(--line-height-lg)";
 
 @link__text-decoration: none;
 @link__hover__text-decoration: underline;
@@ -137,12 +137,32 @@
 @clamp__bg: ~"var(--base-bg)";
 @clamp__font-weight: 600;
 @clamp__font-family: @font-family__base;
-@clamp__font-size: @font-size__base;
+@clamp__font-size: ~"var(--font-size-base)";
 @clamp__text-decoration: underline;
 @clamp__inverted__color: ~"var(--base-inverted-color)";
 @clamp__inverted__bg: ~"var(--base-inverted-bg)";
 
 .breeze-tokens() {
+    --font-size-xs: @font-size__xs;
+    --font-size-sm: @font-size__sm;
+    --font-size-base: @font-size__base;
+    --font-size-lg: @font-size__lg;
+    --font-size-xl: @font-size__xl;
+    --font-size-2xl: @font-size__2xl;
+    --font-size-3xl: @font-size__3xl;
+    --font-size-4xl: @font-size__4xl;
+    --font-size-5xl: @font-size__5xl;
+
+    --line-height-xs: @line-height__xs;
+    --line-height-sm: @line-height__sm;
+    --line-height-base: @line-height__base;
+    --line-height-lg: @line-height__lg;
+    --line-height-xl: @line-height__xl;
+    --line-height-2xl: @line-height__2xl;
+    --line-height-3xl: @line-height__3xl;
+    --line-height-4xl: @line-height__4xl;
+    --line-height-5xl: @line-height__5xl;
+
     .lib-css(--base-font-family, @base__font-family);
     .lib-css(--base-font-size, @base__font-size);
     .lib-css(--base-line-height, @base__line-height);
@@ -180,6 +200,42 @@
     .lib-css(--headings-text-transform, @headings__text-transform);
     .lib-css(--headings-primary-strong-font-weight, @headings-primary__strong__font-weight);
     .lib-css(--headings-secondary-strong-font-weight, @headings-secondary__strong__font-weight);
+
+    .lib-css(--h1-font-size, @h1__font-size);
+    .lib-css(--h1-font-weight, @h1__font-weight);
+    .lib-css(--h1-letter-spacing, @h1__letter-spacing);
+    .lib-css(--h1-line-height, @h1__line-height);
+    .lib-css(--h1-text-transform, @h1__text-transform);
+
+    .lib-css(--h2-font-size, @h2__font-size);
+    .lib-css(--h2-font-weight, @h2__font-weight);
+    .lib-css(--h2-letter-spacing, @h2__letter-spacing);
+    .lib-css(--h2-line-height, @h2__line-height);
+    .lib-css(--h2-text-transform, @h2__text-transform);
+
+    .lib-css(--h3-font-size, @h3__font-size);
+    .lib-css(--h3-font-weight, @h3__font-weight);
+    .lib-css(--h3-letter-spacing, @h3__letter-spacing);
+    .lib-css(--h3-line-height, @h3__line-height);
+    .lib-css(--h3-text-transform, @h3__text-transform);
+
+    .lib-css(--h4-font-size, @h4__font-size);
+    .lib-css(--h4-font-weight, @h4__font-weight);
+    .lib-css(--h4-letter-spacing, @h4__letter-spacing);
+    .lib-css(--h4-line-height, @h4__line-height);
+    .lib-css(--h4-text-transform, @h4__text-transform);
+
+    .lib-css(--h5-font-size, @h5__font-size);
+    .lib-css(--h5-font-weight, @h5__font-weight);
+    .lib-css(--h5-letter-spacing, @h5__letter-spacing);
+    .lib-css(--h5-line-height, @h5__line-height);
+    .lib-css(--h5-text-transform, @h5__text-transform);
+
+    .lib-css(--h6-font-size, @h6__font-size);
+    .lib-css(--h6-font-weight, @h6__font-weight);
+    .lib-css(--h6-letter-spacing, @h6__letter-spacing);
+    .lib-css(--h6-line-height, @h6__line-height);
+    .lib-css(--h6-text-transform, @h6__text-transform);
 
     .lib-css(--clamp-color, @clamp__color);
     .lib-css(--clamp-bg, @clamp__bg);

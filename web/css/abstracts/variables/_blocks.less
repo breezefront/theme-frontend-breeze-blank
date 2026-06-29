@@ -1,8 +1,8 @@
 // Common block styles
 @block__indent: @6;
-@block-title__line-height: @7;
+@block-title__line-height: ~"var(--line-height-lg)";
 @block-title__font-family: false;
-@block-title__font-size: @4-5;
+@block-title__font-size: ~"var(--font-size-lg)";
 @block-title__font-weight: 500;
 @block-title__text-transform: false;
 @block-title__padding: @2 0;
@@ -21,11 +21,11 @@
 @block-content__border-width: false;
 
 // Blocks inside content column
-@content-block-title__line-height: false;
-@content-block-title__font-family: false;
-@content-block-title__font-size: false;
-@content-block-title__font-weight: false;
-@content-block-title__text-transform: false;
+@content-block-title__line-height: @block-title__line-height;
+@content-block-title__font-family: @block-title__font-family;
+@content-block-title__font-size: @block-title__font-size;
+@content-block-title__font-weight: @block-title__font-weight;
+@content-block-title__text-transform: @block-title__text-transform;
 @content-block-title__padding: false;
 @content-block-title__margin: false;
 @content-block-title__color: false;
@@ -37,11 +37,11 @@
 @content-block-content__border-width: false;
 
 // Blocks in content column at account page
-@account-block-title__line-height: @7;
-@account-block-title__font-family: false;
-@account-block-title__font-size: @4-5;
-@account-block-title__font-weight: 500;
-@account-block-title__text-transform: none;
+@account-block-title__line-height: @content-block-title__line-height;
+@account-block-title__font-family: @content-block-title__font-family;
+@account-block-title__font-size: @content-block-title__font-size;
+@account-block-title__font-weight: @content-block-title__font-weight;
+@account-block-title__text-transform: @content-block-title__text-transform;
 @account-block-title__padding: @2 @4;
 @account-block-title__margin: 0;
 @account-block-title__color: false;
@@ -54,11 +54,11 @@
 
 // Homepage, catalog product view, .block-hero classes
 @hero-block-title__text-align: false;
-@hero-block-title__line-height: false;
-@hero-block-title__font-family: false;
-@hero-block-title__font-size: false;
-@hero-block-title__font-weight: false;
-@hero-block-title__text-transform: false;
+@hero-block-title__line-height: @content-block-title__line-height;
+@hero-block-title__font-family: @content-block-title__font-family;
+@hero-block-title__font-size: @content-block-title__font-size;
+@hero-block-title__font-weight: @content-block-title__font-weight;
+@hero-block-title__text-transform: @content-block-title__text-transform;
 @hero-block-title__letter-spacing: false;
 @hero-block-title__padding: false;
 @hero-block-title__margin: false;
@@ -77,12 +77,12 @@
 @hero-block-content__border-width: false;
 
 // Homepage blocks
-@hero-block-cms-title__text-align: false;
-@hero-block-cms-title__line-height: false;
-@hero-block-cms-title__font-family: false;
-@hero-block-cms-title__font-size: false;
-@hero-block-cms-title__font-weight: false;
-@hero-block-cms-title__text-transform: false;
+@hero-block-cms-title__text-align: @hero-block-title__text-align;
+@hero-block-cms-title__line-height: @hero-block-title__line-height;
+@hero-block-cms-title__font-family: @hero-block-title__font-family;
+@hero-block-cms-title__font-size: @hero-block-title__font-size;
+@hero-block-cms-title__font-weight: @hero-block-title__font-weight;
+@hero-block-cms-title__text-transform: @hero-block-title__text-transform;
 @hero-block-cms-title__padding: false;
 @hero-block-cms-title__margin: false;
 @hero-block-cms-title__border: false;
@@ -103,21 +103,44 @@
 @boxed-block__border: 1px solid var(--subtle-color);
 @boxed-block__border-width: false;
 @boxed-block__border-radius: ~"var(--surface-border-radius)";
-@boxed-block-title__font-family: false;
-@boxed-block-title__font-size: false;
-@boxed-block-title__font-weight: false;
-@boxed-block-title__text-transform: false;
+@boxed-block-title__font-family: @content-block-title__font-family;
+@boxed-block-title__font-size: @content-block-title__font-size;
+@boxed-block-title__font-weight: @account-block-title__font-weight;
+@boxed-block-title__text-transform: @content-block-title__text-transform;
 @boxed-block-title__text-align: false;
 @boxed-block-title__border: false;
 @boxed-block-title__border-width: false;
 
 .breeze-tokens() {
+    .lib-css(--block-title-font-family, @block-title__font-family);
+    .lib-css(--block-title-font-size, @block-title__font-size);
+    .lib-css(--block-title-font-weight, @block-title__font-weight);
+    .lib-css(--block-title-line-height, @block-title__line-height);
+    .lib-css(--block-title-text-transform, @block-title__text-transform);
     .lib-css(--block-title-color, @block-title__color);
     .lib-css(--block-title-bg, @block-title__background);
-    .lib-css(--block-content-bg, @block-content__background);
     .lib-css(--block-title-inverted-color, @block-title__inverted__color);
     .lib-css(--block-title-inverted-bg, @block-title__inverted__background);
+    .lib-css(--block-content-bg, @block-content__background);
     .lib-css(--block-content-inverted-bg, @block-content__inverted__background);
+
+    .lib-css(--content-block-title-font-family, @content-block-title__font-family);
+    .lib-css(--content-block-title-font-size, @content-block-title__font-size);
+    .lib-css(--content-block-title-font-weight, @content-block-title__font-weight);
+    .lib-css(--content-block-title-line-height, @content-block-title__line-height);
+    .lib-css(--content-block-title-text-transform, @content-block-title__text-transform);
+
+    .lib-css(--hero-block-title-font-family, @hero-block-title__font-family);
+    .lib-css(--hero-block-title-font-size, @hero-block-title__font-size);
+    .lib-css(--hero-block-title-font-weight, @hero-block-title__font-weight);
+    .lib-css(--hero-block-title-line-height, @hero-block-title__line-height);
+    .lib-css(--hero-block-title-text-transform, @hero-block-title__text-transform);
+
+    .lib-css(--hero-block-cms-title-font-family, @hero-block-cms-title__font-family);
+    .lib-css(--hero-block-cms-title-font-size, @hero-block-cms-title__font-size);
+    .lib-css(--hero-block-cms-title-font-weight, @hero-block-cms-title__font-weight);
+    .lib-css(--hero-block-cms-title-line-height, @hero-block-cms-title__line-height);
+    .lib-css(--hero-block-cms-title-text-transform, @hero-block-cms-title__text-transform);
 }
 
 .breeze-tokens-inverted() {
