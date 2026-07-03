@@ -113,17 +113,6 @@ define([
 
         $('.mobile-header-panel')
             .trigger('contentUpdated')
-            .find('[id],[for]')
-            .each((i, el) => {
-                el = $(el);
-
-                if (el.attr('for')) {
-                    el.attr('for', el.attr('for') + '_clone');
-                }
-
-                if (el.attr('id')) {
-                    el.attr('id', el.attr('id') + '_clone');
-                }
-            });
+            .suffixIds('_clone');
     });
 });
