@@ -9,7 +9,6 @@ define([
             .clone()
             .removeClass('header panel')
             .addClass('mobile-header-panel')
-            .data('breeze-temporary', true)
             .appendTo($('.navigation-section'));
     }
 });
