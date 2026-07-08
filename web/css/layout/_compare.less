@@ -1,10 +1,10 @@
 & when (@critical) {
     .table-comparison {
-        width: auto;
         th.remove {
             &:extend(.breeze-sr-only);
         }
         th.label {
+            .text-align(right);
             .lib-css(width, @compare-table-label__width);
         }
         td.product {
