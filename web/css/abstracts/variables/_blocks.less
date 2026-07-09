@@ -21,11 +21,11 @@
 @block-content__border-width: false;
 
 // Blocks inside content column
-@content-block-title__line-height: @block-title__line-height;
-@content-block-title__font-family: @block-title__font-family;
-@content-block-title__font-size: @block-title__font-size;
-@content-block-title__font-weight: @block-title__font-weight;
-@content-block-title__text-transform: @block-title__text-transform;
+@content-block-title__line-height: ~"var(--block-title-line-height)";
+@content-block-title__font-family: ~"var(--block-title-font-family)";
+@content-block-title__font-size: ~"var(--block-title-font-size)";
+@content-block-title__font-weight: ~"var(--block-title-font-weight)";
+@content-block-title__text-transform: ~"var(--block-title-text-transform)";
 @content-block-title__padding: false;
 @content-block-title__margin: false;
 @content-block-title__color: false;
@@ -37,11 +37,11 @@
 @content-block-content__border-width: false;
 
 // Blocks in content column at account page
-@account-block-title__line-height: @content-block-title__line-height;
-@account-block-title__font-family: @content-block-title__font-family;
-@account-block-title__font-size: @content-block-title__font-size;
-@account-block-title__font-weight: @content-block-title__font-weight;
-@account-block-title__text-transform: @content-block-title__text-transform;
+@account-block-title__line-height: ~"var(--content-block-title-line-height)";
+@account-block-title__font-family: ~"var(--content-block-title-font-family)";
+@account-block-title__font-size: ~"var(--content-block-title-font-size)";
+@account-block-title__font-weight: ~"var(--content-block-title-font-weight)";
+@account-block-title__text-transform: ~"var(--content-block-title-text-transform)";
 @account-block-title__padding: @2 @4;
 @account-block-title__margin: 0;
 @account-block-title__color: false;
@@ -54,11 +54,11 @@
 
 // Homepage, catalog product view, .block-hero classes
 @hero-block-title__text-align: false;
-@hero-block-title__line-height: @content-block-title__line-height;
-@hero-block-title__font-family: @content-block-title__font-family;
-@hero-block-title__font-size: @content-block-title__font-size;
-@hero-block-title__font-weight: @content-block-title__font-weight;
-@hero-block-title__text-transform: @content-block-title__text-transform;
+@hero-block-title__line-height: ~"var(--content-block-title-line-height)";
+@hero-block-title__font-family: ~"var(--content-block-title-font-family)";
+@hero-block-title__font-size: ~"var(--content-block-title-font-size)";
+@hero-block-title__font-weight: ~"var(--content-block-title-font-weight)";
+@hero-block-title__text-transform: ~"var(--content-block-title-text-transform)";
 @hero-block-title__letter-spacing: false;
 @hero-block-title__padding: false;
 @hero-block-title__margin: false;
@@ -78,11 +78,11 @@
 
 // Homepage blocks
 @hero-block-cms-title__text-align: @hero-block-title__text-align;
-@hero-block-cms-title__line-height: @hero-block-title__line-height;
-@hero-block-cms-title__font-family: @hero-block-title__font-family;
-@hero-block-cms-title__font-size: @hero-block-title__font-size;
-@hero-block-cms-title__font-weight: @hero-block-title__font-weight;
-@hero-block-cms-title__text-transform: @hero-block-title__text-transform;
+@hero-block-cms-title__line-height: ~"var(--hero-block-title-line-height)";
+@hero-block-cms-title__font-family: ~"var(--hero-block-title-font-family)";
+@hero-block-cms-title__font-size: ~"var(--hero-block-title-font-size)";
+@hero-block-cms-title__font-weight: ~"var(--hero-block-title-font-weight)";
+@hero-block-cms-title__text-transform: ~"var(--hero-block-title-text-transform)";
 @hero-block-cms-title__padding: false;
 @hero-block-cms-title__margin: false;
 @hero-block-cms-title__border: false;
