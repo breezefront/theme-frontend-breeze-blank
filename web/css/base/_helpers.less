@@ -78,6 +78,13 @@
     .capitalize { text-transform: capitalize; }
     .select-none { user-select: none; }
 
+    .border {
+        &-base { border: 1px solid var(--base-color); }
+        &-brand { border: 1px solid var(--color-brand); }
+        &-muted { border: 1px solid var(--muted-color); }
+        &-subtle { border: 1px solid var(--subtle-color); }
+    }
+
     .rounded {
         border-radius: @1;
         &-sm { border-radius: @0-5; }
