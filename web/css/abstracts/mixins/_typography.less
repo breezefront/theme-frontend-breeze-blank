@@ -120,9 +120,11 @@
 .breeze-link {
     color: var(--link-color);
     text-decoration: @link__text-decoration;
-    &:hover {
-        color: var(--link-color-hover, var(--link-color));
-        text-decoration: @link__hover__text-decoration;
+    @media @media-hover {
+        &:hover {
+            color: var(--link-color-hover, var(--link-color));
+            text-decoration: @link__hover__text-decoration;
+        }
     }
 }
 
