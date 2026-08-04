@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="category.products.list">
+            <block name="product.list.banners">
+                <arguments>
+                    <argument name="banner_positions" xsi:type="array">
+                        <item name="product.list.banner.1" xsi:type="number">1</item>
+                        <item name="product.list.banner.2" xsi:type="number">7</item>
+                        <item name="product.list.banner.3" xsi:type="number">9</item>
+                        <item name="product.list.banner.4" xsi:type="number">15</item>
+                    </argument>
+                </arguments>
+                <container name="product.list.banner.1" label="Product List Banner 1"/>
+                <container name="product.list.banner.2" label="Product List Banner 2"/>
+                <container name="product.list.banner.3" label="Product List Banner 3"/>
+                <container name="product.list.banner.4" label="Product List Banner 4"/>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

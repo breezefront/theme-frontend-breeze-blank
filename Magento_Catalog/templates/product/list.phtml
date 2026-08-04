@@ -17,6 +17,18 @@
 $_productCollection = $block->getLoadedProductCollection();
 /** @var \Magento\Catalog\Helper\Output $_helper */
 $_helper = $block->getData('outputHelper');
+
+$banners = [];
+if ($bannerWrapper = $block->getChildBlock('product.list.banners')) {
+    $bannerPositions = $bannerWrapper->getBannerPositions();
+    foreach ($bannerWrapper->getChildNames() as $containerName) {
+        $index = $bannerPositions[$containerName] ?? 1;
+        if ($index > -1) {
+            $banners[$index] ??= [];
+            $banners[$index][] = $containerName;
+        }
+    }
+}
 ?>
 <?php if (!$_productCollection->count()): ?>
     <div class="message info empty">
@@ -41,6 +53,20 @@ $_helper = $block->getData('outputHelper');
         <ol class="products list items product-items">
             <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
             <?php foreach ($_productCollection as $_product): ?>
+
+            <?php $bannerPosition ??= 0; $bannerPosition++ ?>
+            <?php while (isset($banners[$bannerPosition])) : // make sure no products between 1 and 2 ?>
+                <?php foreach ($banners[$bannerPosition] as $containerName) : ?>
+                    <?php $bannerHtml = trim($bannerWrapper->getChildHtml($containerName)) ?>
+                    <?php if ($bannerHtml) : ?>
+                        <li class="item product product-item">
+                            <?= /* @noEscape */ $bannerHtml ?>
+                        </li>
+                    <?php endif ?>
+                <?php endforeach ?>
+                <?php $bannerPosition++ ?>
+            <?php endwhile ?>
+
             <li class="item product product-item">
                 <div class="product-item-info"
                      id="product-item-info_<?= /* @noEscape */ $_product->getId() ?>"
