@@ -5,9 +5,6 @@
  */
 ?>
 <?php
-
-use Swissup\Easybanner\Block\Placeholder;
-
 /**
  * Product list template
  *
@@ -20,9 +17,6 @@ use Swissup\Easybanner\Block\Placeholder;
 $_productCollection = $block->getLoadedProductCollection();
 /** @var \Magento\Catalog\Helper\Output $_helper */
 $_helper = $block->getData('outputHelper');
-
-$canShowBanners = class_exists(Placeholder::class) && $block->getData('can_show_banners');
-$bannerIndexes = $canShowBanners ? $block->getData('banner_indexes') : [];
 ?>
 <?php if (!$_productCollection->count()): ?>
     <div class="message info empty">
@@ -46,15 +40,7 @@ $bannerIndexes = $canShowBanners ? $block->getData('banner_indexes') : [];
     <div class="products wrapper <?= /* @noEscape */ $viewMode ?> products-<?= /* @noEscape */ $viewMode ?>">
         <ol class="products list items product-items">
             <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
-            <?php $bannerIndex = 0; foreach ($_productCollection as $_product): $bannerIndex++; ?>
-            <?php while ($canShowBanners && in_array($bannerIndex, $bannerIndexes)): ?>
-                <?php $html = $block->getLayout()->createBlock(Placeholder::class)->setPlaceholder("listing_{$block->getMode()}")->toHtml(); ?>
-                <?php if (!empty(trim($html))): ?>
-                    <li class="item easybanner-placeholder">
-                        <?= /* @noEscape */ $html ?>
-                    </li>
-                <?php endif; ?>
-            <?php $bannerIndex++; endwhile; ?>
+            <?php foreach ($_productCollection as $_product): ?>
             <li class="item product product-item">
                 <div class="product-item-info"
                      id="product-item-info_<?= /* @noEscape */ $_product->getId() ?>"
