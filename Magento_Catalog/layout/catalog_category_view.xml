@@ -10,12 +10,14 @@
                         <item name="product.list.banner.2" xsi:type="number">7</item>
                         <item name="product.list.banner.3" xsi:type="number">9</item>
                         <item name="product.list.banner.4" xsi:type="number">15</item>
+                        <item name="product.list.banner.5" xsi:type="number">17</item>
                     </argument>
                 </arguments>
                 <container name="product.list.banner.1" label="Product List Banner 1"/>
                 <container name="product.list.banner.2" label="Product List Banner 2"/>
                 <container name="product.list.banner.3" label="Product List Banner 3"/>
                 <container name="product.list.banner.4" label="Product List Banner 4"/>
+                <container name="product.list.banner.5" label="Product List Banner 5"/>
             </block>
         </referenceBlock>
     </body>
