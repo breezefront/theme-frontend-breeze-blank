@@ -88,9 +88,9 @@
 
         <!-- Footer -->
         <referenceContainer name="footer-container">
-            <container name="footer-top" htmlTag="div" htmlClass="footer-top"/>
-            <container name="footer-middle" htmlTag="div" htmlClass="footer-middle"/>
-            <container name="footer-bottom" htmlTag="div" htmlClass="footer-bottom"/>
+            <container name="footer-top" label="Footer Top" htmlTag="div" htmlClass="footer-top"/>
+            <container name="footer-middle" label="Footer Middle" htmlTag="div" htmlClass="footer-middle"/>
+            <container name="footer-bottom" label="Footer Bottom" htmlTag="div" htmlClass="footer-bottom"/>
         </referenceContainer>
         <move element="footer" destination="footer-middle"/>
     </body>
