@@ -1,22 +1,5 @@
-// Module styles
+//@magento_import 'breeze/_checkout-critical.less';
 //@magento_import 'breeze/_checkout.less';
+@import 'includes/_checkout.less';
 
-@import (reference) 'abstracts/_all.less';
-
-@import 'layout/checkout/_address.less';
-@import 'layout/checkout/_auth.less';
-@import 'layout/checkout/_billing.less';
-@import 'layout/checkout/_layout.less';
-@import 'layout/checkout/_loader.less';
-@import 'layout/checkout/_progress-bar.less';
-@import 'layout/checkout/_shipping.less';
-@import 'layout/checkout/_store-pickup.less';
-@import 'layout/checkout/_summary.less';
-
-@import 'vendor/_luma.less';
-
-@import '_theme-checkout.less'; // Custom theme entry point 1
-@import '_extend-checkout.less'; // Custom theme entry point 2
-@import '_custom-checkout.less'; // End-user customizations
-
-@import (reference) 'abstracts/variables/_system.less';
+@critical: true;
